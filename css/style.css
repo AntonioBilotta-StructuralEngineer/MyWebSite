@@ -97,6 +97,7 @@ body.border-dark .menu-btn > .lines > span{
 	overflow:hidden;
 }
 .menu:hover,
+.menu:focus,
 .menu-btn:hover + .menu{
 	width:300px;
 }
