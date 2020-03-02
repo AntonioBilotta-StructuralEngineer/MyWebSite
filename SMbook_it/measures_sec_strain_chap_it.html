@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-03-02T15:07:53+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="it-IT">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Solid Mechanics - misure di deformazione</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Torna alla pagina dei contenuti</a><div class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+\newcommand{\tens}[1]{\boldsymbol{#1}}
+\newcommand{\mat}[1]{\left[\boldsymbol{#1}\right]}
+\newcommand{\matWp}[2]{\left[\boldsymbol{#1}_{#2}\right]}
+\newcommand{\tensQ}[1]{\pmb{\mathbb{#1}}}
+\newcommand{\tensQc}[1]{\mathbb{#1}}
+
+\newcommand{\transp}[1]{{#1}^{\textrm{T}}}
+\newcommand{\veczero}{\vec{0}}
+\newcommand{\body}{\Omega}
+\newcommand{\calvec}[1]{\boldsymbol{\mathcal{#1}}}
+\newcommand{\commadiff}[2]{{#1,}_{#2}}
+\newcommand{\regulardiff}[2]{ \frac{\partial#1}{\partial#2} }
+\newcommand{\func}[2]{#1\left(#2\right)}
+\newcommand{\transp}[1]{{#1}^{\text{T}}}
+\newcommand{\transpm}[1]{{#1}^{-\text{T}}}
+\newcommand{\trace}[1]{\text{tr}#1}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="./images/sm_logo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="solid_mechanics_book_it.html"><span class="title">Introduzione alla meccanica dei solidi</span></a></h1>
+<p class="byline">Antonio Bilotta</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contenuti</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="solid_mechnics_book_index_it.html" title="Indice">Indice</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="principal_directions_sec_strain_chap_it.html" title="Precedente">Prec</a><a id="upbutton" class="up-button button toolbar-item" href="chap_strain_it.html" title="Sopra">Su</a><a id="nextbutton" class="next-button button toolbar-item" href="infinitesimal_sec_strain_chap_it.html" title="Successivo">Succ</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contenuti</button><a class="previous-button toolbar-item button" href="principal_directions_sec_strain_chap_it.html" title="Precedente">Prec</a><a class="up-button button toolbar-item" href="chap_strain_it.html" title="Sopra">Su</a><a class="next-button button toolbar-item" href="infinitesimal_sec_strain_chap_it.html" title="Successivo">Succ</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="front_matter_it.html" data-scroll="front_matter_it"><span class="title">Copertina</span></a><ul>
+<li><a href="front_colophon_it.html" data-scroll="front_colophon_it">Colofone</a></li>
+<li><a href="author_bio_it.html" data-scroll="author_bio_it">Biografia dell'autore</a></li>
+<li><a href="dedication_it.html" data-scroll="dedication_it">Dedica</a></li>
+<li><a href="acknowledgement_it.html" data-scroll="acknowledgement_it">Ringraziamenti</a></li>
+<li><a href="preface_it.html" data-scroll="preface_it">Prefazione</a></li>
+</ul>
+</li>
+<li class="link part"><a href="continuum_mechanics_it.html" data-scroll="continuum_mechanics_it"><span class="codenumber">I</span> <span class="title">meccanica del continuo</span></a></li>
+<li class="link">
+<a href="chap_strain_it.html" data-scroll="chap_strain_it"><span class="codenumber">1</span> <span class="title">cinematica dei corpi</span></a><ul>
+<li><a href="configurations_sec_strain_chap_it.html" data-scroll="configurations_sec_strain_chap_it">configurazioni</a></li>
+<li><a href="transformations_sec_strain_chap_it.html" data-scroll="transformations_sec_strain_chap_it">trasformazioni</a></li>
+<li><a href="gradient_sec_strain_chap_it.html" data-scroll="gradient_sec_strain_chap_it">gradiente della trasformazione</a></li>
+<li><a href="displacement_sec_strain_chap_it.html" data-scroll="displacement_sec_strain_chap_it">il campo di spostamento</a></li>
+<li><a href="determinant_sec_strain_chap_it.html" data-scroll="determinant_sec_strain_chap_it">determinante del gradiente della trasformazione</a></li>
+<li><a href="polar_sec_strain_chap_it.html" data-scroll="polar_sec_strain_chap_it">decomposizione polare</a></li>
+<li><a href="principal_directions_sec_strain_chap_it.html" data-scroll="principal_directions_sec_strain_chap_it">tensore di deformazione \(\tens{U}\) e direzioni principali (trasformazione degli elementi di linea)</a></li>
+<li><a href="measures_sec_strain_chap_it.html" data-scroll="measures_sec_strain_chap_it" class="active">misure di deformazione</a></li>
+<li><a href="infinitesimal_sec_strain_chap_it.html" data-scroll="infinitesimal_sec_strain_chap_it">tensore della deformazione infinitesima</a></li>
+<li><a href="exercises_sec_strain_chap_it.html" data-scroll="exercises_sec_strain_chap_it">esercizi</a></li>
+<li><a href="answers_sec_strain_chap_it.html" data-scroll="answers_sec_strain_chap_it">risposte ad alcuni degli esercizi proposti</a></li>
+<li><a href="refs_strain_chap_it.html" data-scroll="refs_strain_chap_it">riferimenti e letture suggerite</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap_stress_it.html" data-scroll="chap_stress_it"><span class="codenumber">2</span> <span class="title">forze, equilibrio e tensione</span></a><ul>
+<li><a href="basics_sec_stress_chap_it.html" data-scroll="basics_sec_stress_chap_it">l'ipotesi di continuità</a></li>
+<li><a href="equilibrium_sec_stress_chap_it.html" data-scroll="equilibrium_sec_stress_chap_it">equazioni di equilibrio</a></li>
+<li><a href="stress_sec_stress_chap_it.html" data-scroll="stress_sec_stress_chap_it">il tensore della tensione di Cauchy</a></li>
+<li><a href="stress_analysis_sec_stress_chap_it.html" data-scroll="stress_analysis_sec_stress_chap_it">analisi dello stato di tensione</a></li>
+<li><a href="plv_sec_stress_chap_it.html" data-scroll="plv_sec_stress_chap_it">principio dei lavori virtuali</a></li>
+<li><a href="exercises_sec_stress_chap_it.html" data-scroll="exercises_sec_stress_chap_it">esercizi</a></li>
+<li><a href="answers_sec_stress_chap_it.html" data-scroll="answers_sec_stress_chap_it">risposte ad alcuni degli esercizi proposti</a></li>
+<li><a href="refs_stress_chap_it.html" data-scroll="refs_stress_chap_it">riferimenti e letture suggerite</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap_elasticity_it.html" data-scroll="chap_elasticity_it"><span class="codenumber">3</span> <span class="title">comportamento elastico</span></a><ul>
+<li><a href="motivations_sec_elasticity_chap_it.html" data-scroll="motivations_sec_elasticity_chap_it">motivazione</a></li>
+<li><a href="uniaxial_sec_elasticity_chap_it.html" data-scroll="uniaxial_sec_elasticity_chap_it">stati uniassiali</a></li>
+<li><a href="multiaxial_sec_elasticity_chap_it.html" data-scroll="multiaxial_sec_elasticity_chap_it">stati pluriassiali</a></li>
+<li><a href="problem_sec_elasticity_chap_it.html" data-scroll="problem_sec_elasticity_chap_it">il problema elastico</a></li>
+<li><a href="stretched_beam_sec_elasticity_chap_it.html" data-scroll="stretched_beam_sec_elasticity_chap_it">modelli monodimensionali: trave tesa</a></li>
+<li><a href="bent_beam_sec_elasticity_chap_it.html" data-scroll="bent_beam_sec_elasticity_chap_it">modelli monodimensionali: trave inflessa</a></li>
+<li><a href="stretched_beam_applications_sec_elasticity_chap_it.html" data-scroll="stretched_beam_applications_sec_elasticity_chap_it">applicazioni del modello di trave tesa</a></li>
+<li><a href="bent_beam_applications_sec_elasticity_chap_it.html" data-scroll="bent_beam_applications_sec_elasticity_chap_it">applicazioni del modello di trave inflessa</a></li>
+<li><a href="exercises_sec_elasticity_chap_it.html" data-scroll="exercises_sec_elasticity_chap_it">esercizi</a></li>
+<li><a href="answers_sec_elasticity_chap_it.html" data-scroll="answers_sec_elasticity_chap_it">risposte ad alcuni degli esercizi proposti</a></li>
+<li><a href="refs_elasticity_chap_it.html" data-scroll="refs_elasticity_chap_it">riferimenti e letture suggerite</a></li>
+</ul>
+</li>
+<li class="link part"><a href="beams_systems_it.html" data-scroll="beams_systems_it"><span class="codenumber">II</span> <span class="title">sistemi rigidi</span></a></li>
+<li class="link">
+<a href="rigid_body_kinematics_chap_it.html" data-scroll="rigid_body_kinematics_chap_it"><span class="codenumber">4</span> <span class="title">cinematica</span></a><ul>
+<li><a href="description_sec_rigid_body_kinematics_chap_it.html" data-scroll="description_sec_rigid_body_kinematics_chap_it">descrizione cinematica di base</a></li>
+<li><a href="constraints_sec_rigid_body_kinematics_chap_it.html" data-scroll="constraints_sec_rigid_body_kinematics_chap_it">vincoli</a></li>
+<li><a href="analysis_sec_rigid_body_kinematics_chap_it.html" data-scroll="analysis_sec_rigid_body_kinematics_chap_it">analisi cinematica</a></li>
+<li><a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html" data-scroll="analysis_examples_sec_rigid_body_kinematics_chap_it">applicazione dell'analisi cinematica ai sistemi di corpi rigidi</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="rigid_body_statics_chap_it.html" data-scroll="rigid_body_statics_chap_it"><span class="codenumber">5</span> <span class="title">statica</span></a><ul>
+<li><a href="equilibrium_sec_rigid_body_statics_chap_it.html" data-scroll="equilibrium_sec_rigid_body_statics_chap_it">equazioni di equilibrio</a></li>
+<li><a href="planecase_sec_rigid_body_statics_chap_it.html" data-scroll="planecase_sec_rigid_body_statics_chap_it">il caso piano</a></li>
+<li><a href="constraints_sec_rigid_body_statics_chap_it.html" data-scroll="constraints_sec_rigid_body_statics_chap_it">vincoli</a></li>
+<li><a href="free_body_sec_rigid_body_statics_chap_it.html" data-scroll="free_body_sec_rigid_body_statics_chap_it">diagrammi di corpo libero</a></li>
+<li><a href="analysis_sec_rigid_body_statics_chap_it.html" data-scroll="analysis_sec_rigid_body_statics_chap_it">analisi statica</a></li>
+<li><a href="analysis_examples_sec_rigid_body_statics_chap_it.html" data-scroll="analysis_examples_sec_rigid_body_statics_chap_it">applicazione dell'analisi statica ai sistemi di corpi rigidi</a></li>
+<li><a href="sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_it">sollecitazioni</a></li>
+<li><a href="indefinte_sec_rigid_body_statics_chap_it.html" data-scroll="indefinte_sec_rigid_body_statics_chap_it">equazioni indefinite di equilibrio per la trave piana</a></li>
+<li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it">calcolo e diagrammi delle sollecitazioni</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter_it.html" data-scroll="backmatter_it"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="solid_mechnics_book_index_it.html" data-scroll="solid_mechnics_book_index_it"><span class="title">Indice</span></a></li>
+<li class="link"><a href="back_colophon_it.html" data-scroll="back_colophon_it"><span class="title">Colofone</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Scritto con PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="measures_sec_strain_chap_it"><h2 class="heading hide-type">
+<span class="type">Sezione</span> <span class="codenumber">1.8</span> <span class="title">misure di deformazione</span>
+</h2>
+<a href="measures_sec_strain_chap_it.html" class="permalink">¶</a><p id="p-141">Quanto descritto in <a class="xref" data-knowl="./knowl/pol_dec_insight.html" title="Approfondimento 1.6.4: come ricostruire la decomposizione polare del gradiente della trasformazione">Approfondimento 1.6.4</a> ha consentito di discutere più in dettaglio l'operazione di decomposizione polare, operazione che svolge un ruolo fondamentale sia nella descrizione generale della cinematica dei corpi sia nella costruzione di modelli strutturali, specialmente di tipo non lineare. Ma certamente non rappresentata una modalità pratica per risalire al solo contenuto deformativo del gradiente della trasformazione. Nasce quindi la necessità di individuare una maniera alternativa per risalire al solo contenuto deformativo del tensore \(\tens{F}\) filtrando la rotazione in essa contenuta.</p>
+<section class="subsection" id="subsection-9"><h3 class="heading hide-type">
+<span class="type">Sottosezione</span> <span class="codenumber">1.8.1</span> <span class="title">tensore di deformazione di Cauchy-Green</span>
+</h3>
+<p id="p-142">Si consideri il seguente prodotto</p>
+<div class="displaymath">
+\begin{equation*}
+\transp{\tens{F}}\,\tens{F}\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">Applicando la decomposizione polare destra si ottiene</p>
+<div class="displaymath">
+\begin{equation*}
+\transp{\tens{F}}\,\tens{F} = \transp{\left(\tens{R}\tens{U}\right)}\, \tens{R}\tens{U} = \transp{\tens{U}}\transp{\tens{R}}  \, \tens{R}\tens{U} = \tens{U}\,\tens{U} = \tens{U}^2\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">risultato che mostra come il prodotto \(\transp{\tens{F}}\,\tens{F}\) contenga solo il contributo deformativo legato ad \(\tens{U}\text{.}\) Tale prodotto</p>
+<div class="displaymath">
+\begin{equation}
+\tens{C} = \transp{\tens{F}}\,\tens{F}\,,\tag{1.8.1}
+\end{equation}
+</div>
+<p data-braille="continuation">prende il nome di <em class="emphasis">tensore destro di Cauchy-Green</em> e , come \(\tens{U}\text{,}\) è simmetrico e definito positivo. Esso costituisce una misura importante della deformazione.</p>
+<article class="remark remark-like" id="remark-8"><h6 class="heading">
+<span class="type">Commento</span><span class="space"> </span><span class="codenumber">1.8.1</span><span class="period">.</span>
+</h6>
+<p id="p-143">Si potrebbe pensare che, noto \(\tens{U}^2\text{,}\) la semplice operazione \(\tens{U}=\sqrt{\tens{C}}\) consenta la valutazione di \(\tens{U}\text{.}\) L'operazione è possibile ma non è banale perché richiede la valutazione degli autovalori e degli autovettori di \(\tens{C}\text{.}\) Per tale ragione nelle misure di deformazione si utilizza direttamente il tensore \(\tens{C}\) o altre grandezze derivate.</p></article><p id="p-144">In maniera analoga si perviene al <em class="emphasis">tensore sinistro di Cauchy-Green</em>, ovvero</p>
+<div class="displaymath">
+\begin{equation*}
+\tens{F}\,\transp{\tens{F}} = \tens{V}\tens{R} \, \transp{\left(\tens{V}\tens{R}\right)} = \tens{V}\tens{R} \, \transp{\tens{R}} \transp{\tens{V}} = \tens{V}\,\tens{V} = \tens{V}^2\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">da cui</p>
+<div class="displaymath">
+\begin{equation}
+\tens{B} = \tens{F}\,\transp{\tens{F}}\,,\tag{1.8.2}
+\end{equation}
+</div>
+<article class="remark remark-like" id="remark-9"><h6 class="heading">
+<span class="type">Commento</span><span class="space"> </span><span class="codenumber">1.8.2</span><span class="period">.</span>
+</h6>
+<p id="p-145">Tra i due tensori di Cauchy-Green, \(\tens{C}\) è più utilizzato nella meccanica dei solidi perché agisce sulla posizione del punto espressa nella configurazione di riferimento.</p></article><article class="insight remark-like" id="insight-3"><h6 class="heading">
+<span class="type">Approfondimento</span><span class="space"> </span><span class="codenumber">1.8.3</span><span class="period">.</span><span class="space"> </span><span class="title">interpretazione delle componenti del tensore \(\tens{C}\).</span>
+</h6>
+<p id="p-146">La generica componente del tensore \(\tens{C}\) è esprimibile come segue</p>
+<div class="displaymath">
+\begin{equation*}
+C_{ij} = \vec{e}_i \cdot \tens{C}\vec{e}_j\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">Si consideri quindi prima il caso \(i=j\) relativo alle componenti del tensore situate sulla diagonale principale. Effettuando i seguenti passaggi</p>
+<div class="displaymath">
+\begin{equation}
+C_{ii} = \vec{e}_i \cdot \tens{C}\vec{e}_i = \vec{e}_i \cdot \transp{\tens{F}}\tens{F}\vec{e}_i = \tens{F}\vec{e}_i \cdot \tens{F}\vec{e}_i = \| \tens{F}\vec{e}_i\|^2\,,\label{Cii_pre_eq}\tag{1.8.3}
+\end{equation}
+</div>
+<p data-braille="continuation">si può constatare che la componente \(ii\) sulla diagonale pricipale rappresenta il quadrato della norma del vettore trasformato. Dal momento che il vettore \(\vec{e}_i\) è di lunghezza unitaria, la componente \(C_{ii}\) è quindi il quadrato dell'allungamento lungo la direzione \(\vec{e}_i\text{.}\) Quindi si può stabilire quanto segue</p>
+<div class="displaymath">
+\begin{equation}
+C_{ii} = \vec{e}_i \cdot \tens{C}\vec{e}_i = \func{\lambda}{\vec{e}_i}^2\,,\label{Cii_eq}\tag{1.8.4}
+\end{equation}
+</div>
+<p data-braille="continuation">dove con \(\func{\lambda}{\vec{e}_i}\) si è indicato l'<em class="emphasis">allungamento lungo la direzione \(\vec{e}_i\)</em>. Ovviamente nel caso di forma diagonale del tensore \(\tens{C}\) tale allungamento coincide con il corrispondente autovalore di \(\tens{U}\text{.}\)</p>
+<p id="p-147">Per le componenti fuori dalla diagonale principale si ottiene</p>
+<div class="displaymath">
+\begin{equation*}
+C_{ij} = \vec{e}_i \cdot \tens{C}\vec{e}_j = \vec{e}_i \cdot \transp{\tens{F}}\tens{F}\vec{e}_j = \tens{F}\vec{e}_i \cdot \tens{F}\vec{e}_j = \cos{\func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}} \| \tens{F}\vec{e}_i\|\, \| \tens{F}\vec{e}_j\|\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">dove \(\func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}\) rappresenta l'angolo formato dalla trasformata delle due direzioni \(\vec{e}_i\) e \(\vec{e}_j\text{.}\) Tale relazione, utilizzando la <a class="xref" data-knowl="./knowl/Cii_pre_eq.html" title="Equazione 1.8.3">(1.8.3)</a>, diventa</p>
+<div class="displaymath">
+\begin{equation*}
+C_{ij} = \cos{\func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}} \sqrt{\vec{e}_i \cdot \tens{C}\vec{e}_i} \, \sqrt{\vec{e}_j \cdot \tens{C}\vec{e}_j}\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">risultato che mostra come la generica componente \(C_{ij}\) dipenda, oltre che dagli allungamenti lungo le direzioni \(\vec{e}_i\) ed \(\vec{e}_j\text{,}\) principalmente dall'angolo formato dai trasformati dei vettori. Tale dipendenza, introducendo l'angolo</p>
+<div class="displaymath">
+\begin{equation}
+\func{\gamma}{\vec{e}_i,\vec{e}_j} = \func{\Theta}{\vec{e}_i,\vec{e}_j} - \func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j} = \frac{\pi}{2} - \func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}\,,\tag{1.8.5}
+\end{equation}
+</div>
+<p data-braille="continuation">ovvero l'angolo dato dalla differenza fra gli angoli formati da \(\vec{e}_i\) ed \(\vec{e}_j\) prima e dopo la trasformazione, può essere riformulata come seguey</p>
+<div class="displaymath">
+\begin{align*}
+C_{ij} \amp = \cos{\left(\frac{\pi}{2} - \func{\gamma}{\vec{e}_i,\vec{e}_j}\right)} \sqrt{\vec{e}_i \cdot \tens{C}\vec{e}_i} \, \sqrt{\vec{e}_j \cdot \tens{C}\vec{e}_j}\,,\\
+\amp = \sin{\func{\gamma}{\vec{e}_i,\vec{e}_j}} \sqrt{\vec{e}_i \cdot \tens{C}\vec{e}_i} \, \sqrt{\vec{e}_j \cdot \tens{C}\vec{e}_j}\,,
+\end{align*}
+</div>
+<p data-braille="continuation">da cui, per la <a class="xref" data-knowl="./knowl/Cii_eq.html" title="Equazione 1.8.4">(1.8.4)</a>, si ottiene</p>
+<div class="displaymath">
+\begin{equation}
+C_{ij} = \sin{\func{\gamma}{\vec{e}_i,\vec{e}_j}}\, \func{\lambda}{\vec{e}_i} \, \func{\lambda}{\vec{e}_j}\,.\label{Cij_eq}\tag{1.8.6}
+\end{equation}
+</div>
+<p data-braille="continuation">La quantità \(\func{\gamma}{\vec{e}_i,\vec{e}_j}\) prende il nome di <em class="emphasis">angolo di taglio</em> o, più semplicemente, <em class="emphasis">taglio</em>. Nei casi in cui \(\func{\gamma}{\vec{e}_i,\vec{e}_j}\) è nullo, ovvero l'angolo formato dalle direzioni \(\vec{e}_i\) ed \(\vec{e}_j\) non varia, la componennte fuori diagonale \(C_{ij}\) è nulla.</p></article></section><section class="subsection" id="subsection-10"><h3 class="heading hide-type">
+<span class="type">Sottosezione</span> <span class="codenumber">1.8.2</span> <span class="title">tensore della deformazione di Green-Lagrange</span>
+</h3>
+<p id="p-148">Una misura di deformazione molto utilizzata si basa sulla differenza dei quadrati delle lunghezze nella configurazione attuale ed in quella di riferimento. In particolare si ricava quanto segue</p>
+<div class="displaymath">
+\begin{align*}
+\frac{1}{2}\left(\|d\vec{x}\|^2 - \|d\vec{X}\|^2\right) \amp = \frac{1}{2}\left(d\vec{x}\cdot d\vec{x} - d\vec{X}\cdot d\vec{X}\right)\,,\\
+\amp = \frac{1}{2}\left( (\tens{F} d\vec{X})\cdot(\tens{F} d\vec{X}) - d\vec{X}\cdot d\vec{X}\right) \,,\\
+\amp = \frac{1}{2}\left( d\vec{X}\cdot(\transp{\tens{F}}\,\tens{F} d\vec{X}) - d\vec{X}\cdot(\tens{I}\, d\vec{X})\right) \,,\\
+\amp = d\vec{X}\cdot \frac{1}{2}\left( \transp{\tens{F}}\,\tens{F} - \tens{I}\right)d\vec{X}\,.
+\end{align*}
+</div>
+<p data-braille="continuation">Si perviene alla definizione del seguente tensore</p>
+<div class="displaymath">
+\begin{equation}
+\tens{E} = \frac{1}{2}\left( \transp{\tens{F}}\,\tens{F} - \tens{I}\right) = \frac{1}{2}\left(\tens{C} - \tens{I}\right)\tag{1.8.7}
+\end{equation}
+</div>
+<p data-braille="continuation">noto come <em class="emphasis">tensore della deformazione di Green-Lagrange</em> (l'utilizzo del fattore \(\frac{1}{2}\) diverrà chiaro nel seguito). Il tensore \(\tens{E}\) è simmetrico ma non è definito positivo.</p>
+<article class="remark remark-like" id="remark-10"><h6 class="heading">
+<span class="type">Commento</span><span class="space"> </span><span class="codenumber">1.8.4</span><span class="period">.</span>
+</h6>
+<p id="p-149">Il tensore \(\tens{C} = \tens{U}^2\) è definito positivo in quanto correlato al quadrato del fattore di scala con il quale viene modificata la lunghezza del generico segmento \(d\vec{X}\text{.}\) Nel campo delle deformazioni ammissibili, tale fattore di scala, come per aree e volumi, non può annullarsi. Con il tensore di Green-Lagrange si introduce una misura dell'allungamento del segmento \(d\vec{X}\) rispetto alla sua dimensione iniziale, rendendo possibile quindi valori negativi della misura di Green-Lagrange quando il segmento si accorcia, ovvero valori nulli quando la lunghezza del segmento non cambia.</p></article></section><section class="subsection" id="subsection-11"><h3 class="heading hide-type">
+<span class="type">Sottosezione</span> <span class="codenumber">1.8.3</span> <span class="title">tensori della deformazione e gradiente del campo di spostamento</span>
+</h3>
+<p id="p-150">I modelli meccanici che verranno discussi durante il corso tipicamente vengono formulati utilizzando come ente cinematico il campo di spostamento che, si ricorda, è definito come \(\vec{u} = \vec{x}-\vec{X}\text{.}\) Da cui \(\tens{F} = \tens{I}+\tens{\nabla u}\text{.}\) Pertanto il tensore di Green-Lagrange è esprimibile come</p>
+<div class="displaymath">
+\begin{align*}
+\tens{E} \amp = \frac{1}{2}\left( \transp{\tens{F}}\,\tens{F} - \tens{I}\right)\,,\\
+\amp = \frac{1}{2}\left( \transp{(\tens{I}+\tens{\nabla u})}\,(\tens{I}+\tens{\nabla u}) - \tens{I}\right)\,,\\
+\amp = \frac{1}{2}\left(\tens{I}+\tens{\nabla u} + \transp{\tens{\nabla u}} +  \transp{\tens{\nabla u}}\,\tens{\nabla u} - \tens{I}\right)\,,\\
+\amp = \frac{1}{2}\left(\tens{\nabla u} + \transp{\tens{\nabla u}}\right) + \frac{1}{2} \transp{\tens{\nabla u}}\,\tens{\nabla u} \,.
+\end{align*}
+</div>
+<p data-braille="continuation">Pertanto, in termini di gradiente dello spostamento, il tensore della deformazione di Green-Lagrange ha la seguente espressione</p>
+<div class="displaymath">
+\begin{equation}
+\tens{E} = \frac{1}{2}\left(\tens{\nabla u} + \transp{\tens{\nabla u}}\right) + \frac{1}{2} \transp{\tens{\nabla u}}\,\tens{\nabla u} \,.\tag{1.8.8}
+\end{equation}
+</div>
+<p id="p-151">Analogamente anche \(\tens{C}\) può essere espresso rispetto al gradiente dello spostamento, ovvero</p>
+<div class="displaymath">
+\begin{equation*}
+\tens{C} = \transp{\tens{F}}\tens{F} = \transp{(\tens{I}+\tens{\nabla u})} (\tens{I}+\tens{\nabla u})\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">da cui si ottiene</p>
+<div class="displaymath">
+\begin{equation}
+\tens{C} = \tens{I}+ \tens{\nabla u} + \transp{\tens{\nabla u}} +  \transp{\tens{\nabla u}}\,\tens{\nabla u}\,.\tag{1.8.9}
+\end{equation}
+</div></section></section></div></main>
+</div>
+</body>
+</html>

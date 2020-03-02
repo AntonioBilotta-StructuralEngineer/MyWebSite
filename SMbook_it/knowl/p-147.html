@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-03-02T15:07:56+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragrafo</span></h6>
+<p>Per le componenti fuori dalla diagonale principale si ottiene</p>
+<div class="displaymath">
+\begin{equation*}
+C_{ij} = \vec{e}_i \cdot \tens{C}\vec{e}_j = \vec{e}_i \cdot \transp{\tens{F}}\tens{F}\vec{e}_j = \tens{F}\vec{e}_i \cdot \tens{F}\vec{e}_j = \cos{\func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}} \| \tens{F}\vec{e}_i\|\, \| \tens{F}\vec{e}_j\|\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">dove \(\func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}\) rappresenta l'angolo formato dalla trasformata delle due direzioni \(\vec{e}_i\) e \(\vec{e}_j\text{.}\) Tale relazione, utilizzando la <a class="xref" data-knowl="./knowl/Cii_pre_eq.html" title="Equazione 1.8.3">(1.8.3)</a>, diventa</p>
+<div class="displaymath">
+\begin{equation*}
+C_{ij} = \cos{\func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}} \sqrt{\vec{e}_i \cdot \tens{C}\vec{e}_i} \, \sqrt{\vec{e}_j \cdot \tens{C}\vec{e}_j}\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">risultato che mostra come la generica componente \(C_{ij}\) dipenda, oltre che dagli allungamenti lungo le direzioni \(\vec{e}_i\) ed \(\vec{e}_j\text{,}\) principalmente dall'angolo formato dai trasformati dei vettori. Tale dipendenza, introducendo l'angolo</p>
+<div class="displaymath">
+\begin{equation}
+\func{\gamma}{\vec{e}_i,\vec{e}_j} = \func{\Theta}{\vec{e}_i,\vec{e}_j} - \func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j} = \frac{\pi}{2} - \func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}\,,\tag{1.8.5}
+\end{equation}
+</div>
+<p data-braille="continuation">ovvero l'angolo dato dalla differenza fra gli angoli formati da \(\vec{e}_i\) ed \(\vec{e}_j\) prima e dopo la trasformazione, può essere riformulata come seguey</p>
+<div class="displaymath">
+\begin{align*}
+C_{ij} \amp = \cos{\left(\frac{\pi}{2} - \func{\gamma}{\vec{e}_i,\vec{e}_j}\right)} \sqrt{\vec{e}_i \cdot \tens{C}\vec{e}_i} \, \sqrt{\vec{e}_j \cdot \tens{C}\vec{e}_j}\,,\\
+\amp = \sin{\func{\gamma}{\vec{e}_i,\vec{e}_j}} \sqrt{\vec{e}_i \cdot \tens{C}\vec{e}_i} \, \sqrt{\vec{e}_j \cdot \tens{C}\vec{e}_j}\,,
+\end{align*}
+</div>
+<p data-braille="continuation">da cui, per la <a class="xref" data-knowl="./knowl/Cii_eq.html" title="Equazione 1.8.4">(1.8.4)</a>, si ottiene</p>
+<div class="displaymath">
+\begin{equation}
+C_{ij} = \sin{\func{\gamma}{\vec{e}_i,\vec{e}_j}}\, \func{\lambda}{\vec{e}_i} \, \func{\lambda}{\vec{e}_j}\,.\tag{1.8.6}
+\end{equation}
+</div>
+<p data-braille="continuation">La quantità \(\func{\gamma}{\vec{e}_i,\vec{e}_j}\) prende il nome di <em class="emphasis">angolo di taglio</em> o, più semplicemente, <em class="emphasis">taglio</em>. Nei casi in cui \(\func{\gamma}{\vec{e}_i,\vec{e}_j}\) è nullo, ovvero l'angolo formato dalle direzioni \(\vec{e}_i\) ed \(\vec{e}_j\) non varia, la componennte fuori diagonale \(C_{ij}\) è nulla.</p>
+<span class="incontext"><a href="measures_sec_strain_chap_it.html#p-147">in-context</a></span>
+</body>
+</html>

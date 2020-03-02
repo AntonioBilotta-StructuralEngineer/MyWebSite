@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-03-02T15:07:55+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="it-IT">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Solid Mechanics - equazioni indefinite di equilibrio per la trave piana</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Torna alla pagina dei contenuti</a><div class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+\newcommand{\tens}[1]{\boldsymbol{#1}}
+\newcommand{\mat}[1]{\left[\boldsymbol{#1}\right]}
+\newcommand{\matWp}[2]{\left[\boldsymbol{#1}_{#2}\right]}
+\newcommand{\tensQ}[1]{\pmb{\mathbb{#1}}}
+\newcommand{\tensQc}[1]{\mathbb{#1}}
+
+\newcommand{\transp}[1]{{#1}^{\textrm{T}}}
+\newcommand{\veczero}{\vec{0}}
+\newcommand{\body}{\Omega}
+\newcommand{\calvec}[1]{\boldsymbol{\mathcal{#1}}}
+\newcommand{\commadiff}[2]{{#1,}_{#2}}
+\newcommand{\regulardiff}[2]{ \frac{\partial#1}{\partial#2} }
+\newcommand{\func}[2]{#1\left(#2\right)}
+\newcommand{\transp}[1]{{#1}^{\text{T}}}
+\newcommand{\transpm}[1]{{#1}^{-\text{T}}}
+\newcommand{\trace}[1]{\text{tr}#1}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="./images/sm_logo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="solid_mechanics_book_it.html"><span class="title">Introduzione alla meccanica dei solidi</span></a></h1>
+<p class="byline">Antonio Bilotta</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contenuti</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="solid_mechnics_book_index_it.html" title="Indice">Indice</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sollecitazioni_sec_rigid_body_statics_chap_it.html" title="Precedente">Prec</a><a id="upbutton" class="up-button button toolbar-item" href="rigid_body_statics_chap_it.html" title="Sopra">Su</a><a id="nextbutton" class="next-button button toolbar-item" href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html" title="Successivo">Succ</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contenuti</button><a class="previous-button toolbar-item button" href="sollecitazioni_sec_rigid_body_statics_chap_it.html" title="Precedente">Prec</a><a class="up-button button toolbar-item" href="rigid_body_statics_chap_it.html" title="Sopra">Su</a><a class="next-button button toolbar-item" href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html" title="Successivo">Succ</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="front_matter_it.html" data-scroll="front_matter_it"><span class="title">Copertina</span></a><ul>
+<li><a href="front_colophon_it.html" data-scroll="front_colophon_it">Colofone</a></li>
+<li><a href="author_bio_it.html" data-scroll="author_bio_it">Biografia dell'autore</a></li>
+<li><a href="dedication_it.html" data-scroll="dedication_it">Dedica</a></li>
+<li><a href="acknowledgement_it.html" data-scroll="acknowledgement_it">Ringraziamenti</a></li>
+<li><a href="preface_it.html" data-scroll="preface_it">Prefazione</a></li>
+</ul>
+</li>
+<li class="link part"><a href="continuum_mechanics_it.html" data-scroll="continuum_mechanics_it"><span class="codenumber">I</span> <span class="title">meccanica del continuo</span></a></li>
+<li class="link">
+<a href="chap_strain_it.html" data-scroll="chap_strain_it"><span class="codenumber">1</span> <span class="title">cinematica dei corpi</span></a><ul>
+<li><a href="configurations_sec_strain_chap_it.html" data-scroll="configurations_sec_strain_chap_it">configurazioni</a></li>
+<li><a href="transformations_sec_strain_chap_it.html" data-scroll="transformations_sec_strain_chap_it">trasformazioni</a></li>
+<li><a href="gradient_sec_strain_chap_it.html" data-scroll="gradient_sec_strain_chap_it">gradiente della trasformazione</a></li>
+<li><a href="displacement_sec_strain_chap_it.html" data-scroll="displacement_sec_strain_chap_it">il campo di spostamento</a></li>
+<li><a href="determinant_sec_strain_chap_it.html" data-scroll="determinant_sec_strain_chap_it">determinante del gradiente della trasformazione</a></li>
+<li><a href="polar_sec_strain_chap_it.html" data-scroll="polar_sec_strain_chap_it">decomposizione polare</a></li>
+<li><a href="principal_directions_sec_strain_chap_it.html" data-scroll="principal_directions_sec_strain_chap_it">tensore di deformazione \(\tens{U}\) e direzioni principali (trasformazione degli elementi di linea)</a></li>
+<li><a href="measures_sec_strain_chap_it.html" data-scroll="measures_sec_strain_chap_it">misure di deformazione</a></li>
+<li><a href="infinitesimal_sec_strain_chap_it.html" data-scroll="infinitesimal_sec_strain_chap_it">tensore della deformazione infinitesima</a></li>
+<li><a href="exercises_sec_strain_chap_it.html" data-scroll="exercises_sec_strain_chap_it">esercizi</a></li>
+<li><a href="answers_sec_strain_chap_it.html" data-scroll="answers_sec_strain_chap_it">risposte ad alcuni degli esercizi proposti</a></li>
+<li><a href="refs_strain_chap_it.html" data-scroll="refs_strain_chap_it">riferimenti e letture suggerite</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap_stress_it.html" data-scroll="chap_stress_it"><span class="codenumber">2</span> <span class="title">forze, equilibrio e tensione</span></a><ul>
+<li><a href="basics_sec_stress_chap_it.html" data-scroll="basics_sec_stress_chap_it">l'ipotesi di continuità</a></li>
+<li><a href="equilibrium_sec_stress_chap_it.html" data-scroll="equilibrium_sec_stress_chap_it">equazioni di equilibrio</a></li>
+<li><a href="stress_sec_stress_chap_it.html" data-scroll="stress_sec_stress_chap_it">il tensore della tensione di Cauchy</a></li>
+<li><a href="stress_analysis_sec_stress_chap_it.html" data-scroll="stress_analysis_sec_stress_chap_it">analisi dello stato di tensione</a></li>
+<li><a href="plv_sec_stress_chap_it.html" data-scroll="plv_sec_stress_chap_it">principio dei lavori virtuali</a></li>
+<li><a href="exercises_sec_stress_chap_it.html" data-scroll="exercises_sec_stress_chap_it">esercizi</a></li>
+<li><a href="answers_sec_stress_chap_it.html" data-scroll="answers_sec_stress_chap_it">risposte ad alcuni degli esercizi proposti</a></li>
+<li><a href="refs_stress_chap_it.html" data-scroll="refs_stress_chap_it">riferimenti e letture suggerite</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap_elasticity_it.html" data-scroll="chap_elasticity_it"><span class="codenumber">3</span> <span class="title">comportamento elastico</span></a><ul>
+<li><a href="motivations_sec_elasticity_chap_it.html" data-scroll="motivations_sec_elasticity_chap_it">motivazione</a></li>
+<li><a href="uniaxial_sec_elasticity_chap_it.html" data-scroll="uniaxial_sec_elasticity_chap_it">stati uniassiali</a></li>
+<li><a href="multiaxial_sec_elasticity_chap_it.html" data-scroll="multiaxial_sec_elasticity_chap_it">stati pluriassiali</a></li>
+<li><a href="problem_sec_elasticity_chap_it.html" data-scroll="problem_sec_elasticity_chap_it">il problema elastico</a></li>
+<li><a href="stretched_beam_sec_elasticity_chap_it.html" data-scroll="stretched_beam_sec_elasticity_chap_it">modelli monodimensionali: trave tesa</a></li>
+<li><a href="bent_beam_sec_elasticity_chap_it.html" data-scroll="bent_beam_sec_elasticity_chap_it">modelli monodimensionali: trave inflessa</a></li>
+<li><a href="stretched_beam_applications_sec_elasticity_chap_it.html" data-scroll="stretched_beam_applications_sec_elasticity_chap_it">applicazioni del modello di trave tesa</a></li>
+<li><a href="bent_beam_applications_sec_elasticity_chap_it.html" data-scroll="bent_beam_applications_sec_elasticity_chap_it">applicazioni del modello di trave inflessa</a></li>
+<li><a href="exercises_sec_elasticity_chap_it.html" data-scroll="exercises_sec_elasticity_chap_it">esercizi</a></li>
+<li><a href="answers_sec_elasticity_chap_it.html" data-scroll="answers_sec_elasticity_chap_it">risposte ad alcuni degli esercizi proposti</a></li>
+<li><a href="refs_elasticity_chap_it.html" data-scroll="refs_elasticity_chap_it">riferimenti e letture suggerite</a></li>
+</ul>
+</li>
+<li class="link part"><a href="beams_systems_it.html" data-scroll="beams_systems_it"><span class="codenumber">II</span> <span class="title">sistemi rigidi</span></a></li>
+<li class="link">
+<a href="rigid_body_kinematics_chap_it.html" data-scroll="rigid_body_kinematics_chap_it"><span class="codenumber">4</span> <span class="title">cinematica</span></a><ul>
+<li><a href="description_sec_rigid_body_kinematics_chap_it.html" data-scroll="description_sec_rigid_body_kinematics_chap_it">descrizione cinematica di base</a></li>
+<li><a href="constraints_sec_rigid_body_kinematics_chap_it.html" data-scroll="constraints_sec_rigid_body_kinematics_chap_it">vincoli</a></li>
+<li><a href="analysis_sec_rigid_body_kinematics_chap_it.html" data-scroll="analysis_sec_rigid_body_kinematics_chap_it">analisi cinematica</a></li>
+<li><a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html" data-scroll="analysis_examples_sec_rigid_body_kinematics_chap_it">applicazione dell'analisi cinematica ai sistemi di corpi rigidi</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="rigid_body_statics_chap_it.html" data-scroll="rigid_body_statics_chap_it"><span class="codenumber">5</span> <span class="title">statica</span></a><ul>
+<li><a href="equilibrium_sec_rigid_body_statics_chap_it.html" data-scroll="equilibrium_sec_rigid_body_statics_chap_it">equazioni di equilibrio</a></li>
+<li><a href="planecase_sec_rigid_body_statics_chap_it.html" data-scroll="planecase_sec_rigid_body_statics_chap_it">il caso piano</a></li>
+<li><a href="constraints_sec_rigid_body_statics_chap_it.html" data-scroll="constraints_sec_rigid_body_statics_chap_it">vincoli</a></li>
+<li><a href="free_body_sec_rigid_body_statics_chap_it.html" data-scroll="free_body_sec_rigid_body_statics_chap_it">diagrammi di corpo libero</a></li>
+<li><a href="analysis_sec_rigid_body_statics_chap_it.html" data-scroll="analysis_sec_rigid_body_statics_chap_it">analisi statica</a></li>
+<li><a href="analysis_examples_sec_rigid_body_statics_chap_it.html" data-scroll="analysis_examples_sec_rigid_body_statics_chap_it">applicazione dell'analisi statica ai sistemi di corpi rigidi</a></li>
+<li><a href="sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_it">sollecitazioni</a></li>
+<li><a href="indefinte_sec_rigid_body_statics_chap_it.html" data-scroll="indefinte_sec_rigid_body_statics_chap_it" class="active">equazioni indefinite di equilibrio per la trave piana</a></li>
+<li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it">calcolo e diagrammi delle sollecitazioni</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter_it.html" data-scroll="backmatter_it"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="solid_mechnics_book_index_it.html" data-scroll="solid_mechnics_book_index_it"><span class="title">Indice</span></a></li>
+<li class="link"><a href="back_colophon_it.html" data-scroll="back_colophon_it"><span class="title">Colofone</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Scritto con PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="indefinte_sec_rigid_body_statics_chap_it"><h2 class="heading hide-type">
+<span class="type">Sezione</span> <span class="codenumber">5.8</span> <span class="title">equazioni indefinite di equilibrio per la trave piana</span>
+</h2>
+<a href="indefinte_sec_rigid_body_statics_chap_it.html" class="permalink">¶</a><p id="p-462">Le equazioni indefinite di equilibrio per la trave sono già state trattate nella <a href="stretched_beam_sec_elasticity_chap_it.html" class="internal" title="Sezione 3.5: modelli monodimensionali: trave tesa">Sezione 3.5</a> e nella <a href="bent_beam_sec_elasticity_chap_it.html" class="internal" title="Sezione 3.6: modelli monodimensionali: trave inflessa">Sezione 3.6</a> nel contesto più ampio che ha portato alla costruzione di un modello completo di trave piana elastica. In questa sede le equazioni vengono ricavate per altra via e l'unica differenza consiste nell'esplicitazione della componente di sollecitazione data dal taglio.</p>
+<section class="subsection" id="subsection-116"><h3 class="heading hide-type">
+<span class="type">Sottosezione</span> <span class="codenumber">5.8.1</span> <span class="title">formulazione del problema</span>
+</h3>
+<figure class="figure figure-like" id="indefinite_trave_piana_fig"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/indefinite_trave_piana.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.8.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-463">All'interno di una trave soggetta a condizioni di carico generiche, si supponga di isolare un tratto di trave di lunghezza infinitesima \(dx\text{.}\) Il tratto di trave così individuato è soggetto ad una serie di azioni illustrate nella figura successiva e che, per chiarezza, vengono di seguito elencate:</p>
+<ul class="disc">
+<li id="li-142">le componenti di sollecitazione, \(N(x)\text{,}\) \(T(x)\) e \(M(x)\text{,}\) relative all'ascissa \(x\text{;}\)</li>
+<li id="li-143">le componenti di sollecitazione, \(N(x+dx)\text{,}\) \(T(x+dx)\) e \(M(x+dx)\text{,}\) relative all'ascissa \(x+dx\text{;}\)</li>
+<li id="li-144">il carico assiale ripartito per unità di lunghezza \(p(x)\text{;}\)</li>
+<li id="li-145">il carico trasversale ripartito per unità di lunghezza \(q(x)\text{.}\)</li>
+</ul></section><section class="subsection" id="subsection-117"><h3 class="heading hide-type">
+<span class="type">Sottosezione</span> <span class="codenumber">5.8.2</span> <span class="title">condizioni di equilibrio</span>
+</h3>
+<p id="p-464">Lo schema ottenuto è essenzialmente un diagramma di corpo libero per il quale è possibile imporre le seguenti equazioni di equilibrio (il polo utilizzato per l'equilibrio alla rotazione è posto all'ascissa \(x+dx\))</p>
+<div class="displaymath">
+\begin{align}
+-N(x) + N(x+dx) + p(x)dx \amp = 0\,,\tag{5.8.1}\\
+-T(x) + T(x+dx) + q(x)dx \amp = 0\,,\tag{5.8.2}\\
+-T(x)\,dx - M(x) + q(x)\frac{dx^2}{2} + M(x+dx) \amp = 0\,.\tag{5.8.3}
+\end{align}
+</div>
+<p data-braille="continuation">L'ipotesi di continuità del solido mono-dimensionale e delle grandezze su di esso definite, consente di effettuare uno sviluppo in serie di Taylor troncato al primo ordine delle sollecitazioni valutate sulla sezione \(x+dx\) e di ottenere quindi</p>
+<div class="displaymath">
+\begin{align}
+-N(x) + \underbrace{N(x) + \regulardiff{N}{x}\,dx}_{N(x+dx)} + p(x)dx \amp = 0\,,\tag{5.8.4}\\
+-T(x) + \underbrace{T(x) + \regulardiff{T}{x}\,dx}_{T(x+dx)} + q(x)dx \amp = 0\,,\tag{5.8.5}\\
+-T(x)\,dx - M(x) + q(x)\frac{dx^2}{2} + \underbrace{M(x) + \regulardiff{M}{x}\,dx}_{M(x+dx)} \amp = 0\,.\tag{5.8.6}
+\end{align}
+</div>
+<p data-braille="continuation">dove le quantità \(\regulardiff{N}{x}\text{,}\) \(\regulardiff{T}{x}\) e \(\regulardiff{M}{x}\) indicano le derivate delle sollecitazioni rispetto all'ascissa \(x\text{.}\) Facendo le dovute semplificazioni e trascurando il termine \(q(x)\frac{dx^2}{2}\) perché di ordine superiore al primo, si ottengono le equazioni indefinite di equilibrio per la trave piana di seguito elencate.</p>
+<article class="assemblage assemblage-like" id="assemblage-45"><ul id="p-465" class="disc">
+<li id="li-146">
+<em class="alert">Equilibrio in direzione assiale:</em><div class="displaymath">
+\begin{equation}
+\regulardiff{N}{x} + p(x) = 0\,.\tag{5.8.7}
+\end{equation}
+</div>
+</li>
+<li id="li-147">
+<em class="alert">Equilibrio in direzione trasversale:</em><div class="displaymath">
+\begin{equation}
+\regulardiff{T}{x} + q(x) = 0\,.\tag{5.8.8}
+\end{equation}
+</div>
+</li>
+<li id="li-148">
+<em class="alert">Equilibrio alla rotazione:</em><div class="displaymath">
+\begin{equation}
+\regulardiff{M}{x} - T = 0\,.\tag{5.8.9}
+\end{equation}
+</div>
+</li>
+</ul></article></section><section class="subsection" id="subsection-118"><h3 class="heading hide-type">
+<span class="type">Sottosezione</span> <span class="codenumber">5.8.3</span> <span class="title">integrali generali</span>
+</h3>
+<p id="p-466">L'integrazione delle equazioni indefinite di equilibrio fornisce i seguenti integrali generali validi su tratti di trave lungo i quali le sollecitazioni sono analitiche nella variabile \(x\text{:}\)</p>
+<div class="displaymath">
+\begin{align}
+N(x) \amp = -\int p(x) dx + a \,,\label{general_N_eq}\tag{5.8.10}\\
+T(x) \amp = -\int q(x) dx + b \,,\label{general_T_eq}\tag{5.8.11}\\
+M(x) \amp = \int\left(-\int q(x) dx\right)dx + b\,x + c \,.\label{general_M_eq}\tag{5.8.12}
+\end{align}
+</div>
+<p data-braille="continuation">Le costanti di integrazione \(a\text{,}\) \(b\) e \(c\) sono da valutare sulla base delle condizioni al contorno assegnate.</p>
+<article class="assemblage assemblage-like" id="assemblage-46"><h6 class="heading"><span class="title">caso \(p(x)=0\) e \(q(x)=0\).</span></h6>
+<p id="p-467">Al fine di illustrare la valutazione delle costanti d'integrazione si consideri il seguente schema di corpo libero. <figure class="figure figure-like" id="schema1bis_fig"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/schema1bis.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.8.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p id="p-468">Per l'assenza di carichi ripartiti gli integrali generali forniscono</p>
+<div class="displaymath">
+\begin{align*}
+N(x) \amp =  a \,,\\
+T(x) \amp =  b \,,\\
+M(x) \amp =  b\,x + c \,.
+\end{align*}
+</div>
+<p data-braille="continuation">Quindi si ha un andamento constante per \(N\) e \(T\) e lineare per \(M\text{.}\) Imponendo le condizioni al contorno</p>
+<div class="displaymath">
+\begin{equation*}
+N(0) = F\,,\quad T(0) = F\,, \quad M(0) = -Fl\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">si ottiene</p>
+<div class="displaymath">
+\begin{equation*}
+a = F\,,\quad b = F\,, \quad c = -Fl\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">Quindi l'espressione analitica delle componenti di sollecitazione diventa</p>
+<div class="displaymath">
+\begin{align*}
+N(x) \amp =  F \,,\\
+T(x) \amp =  F \,,\\
+M(x) \amp =  F\,x - Fl \,.
+\end{align*}
+</div>
+<p data-braille="continuation">Si sarebbe ottenuto lo stesso risultato utilizzando le condizioni al contorno</p>
+<div class="displaymath">
+\begin{equation*}
+N(l) = F\,,\quad T(l) = F\,, \quad M(l) = 0\,.
+\end{equation*}
+</div></article></section><section class="subsection" id="subsection-119"><h3 class="heading hide-type">
+<span class="type">Sottosezione</span> <span class="codenumber">5.8.4</span> <span class="title">integrali generali per carichi ripartiti costanti</span>
+</h3>
+<figure class="figure figure-like" id="schema_generico_fig"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/schema_generico.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.8.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-469">Lo schema riporta il caso di una trave di cui sono noti i valori delle componenti di sollecitazione all'estremo \(x=0\) ed è soggetta a carichi ripartiti costanti. In tal caso gli integrali generali <a class="xref" data-knowl="./knowl/general_N_eq.html" title="Equazione 5.8.10">(5.8.10)</a>, <a class="xref" data-knowl="./knowl/general_T_eq.html" title="Equazione 5.8.11">(5.8.11)</a> e <a class="xref" data-knowl="./knowl/general_M_eq.html" title="Equazione 5.8.12">(5.8.12)</a> assumono le seguenti espressioni</p>
+<div class="displaymath">
+\begin{align}
+N(x) \amp = -p\,x + N(0) \,,\label{general_const_N_eq}\tag{5.8.13}\\
+T(x) \amp = -q\,x + T(0) \,,\label{general_const_T_eq}\tag{5.8.14}\\
+M(x) \amp = -q \frac{x^2}{2} + T(0)\,x + M(0) \,.\label{general_const_M_eq}\tag{5.8.15}
+\end{align}
+</div>
+<p data-braille="continuation">Espressioni che evidenziano un andamento lineare per sforzo normale e taglio e parabolico per il momento flettente.</p></section></section></div></main>
+</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-03-02T15:07:55+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragrafo</span></h6>
+<p>Istruzioni MATLAB per la trasformazione \(x_1 = X_1^3\,,\; x_2 = X_2^3\text{.}\) <figure class="listing figure-like"><pre class="console"><b>syms T1(X1, X2);
+T1(X1, X2) = X1^3; 
+
+syms T2(X1, X2);
+T2(X1, X2) = X2^3; 
+
+syms detF(X1, X2);
+detF(X1,X2) = diff(T1, X1)*diff(T2, X2) - diff(T1, X2)*diff(T2, X1);
+
+x = linspace(-5, 5, 50);
+y = linspace(-5, 5, 50);
+[X,Y] = meshgrid(x,y);
+
+surface(X,Y,detF(X,Y))
+</b></pre>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.5.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<span class="incontext"><a href="determinant_sec_strain_chap_it.html#p-74">in-context</a></span>
+</body>
+</html>

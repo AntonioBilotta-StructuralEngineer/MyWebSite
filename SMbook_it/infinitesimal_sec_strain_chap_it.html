@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-03-02T15:07:53+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="it-IT">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Solid Mechanics - tensore della deformazione infinitesima</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Torna alla pagina dei contenuti</a><div class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+\newcommand{\tens}[1]{\boldsymbol{#1}}
+\newcommand{\mat}[1]{\left[\boldsymbol{#1}\right]}
+\newcommand{\matWp}[2]{\left[\boldsymbol{#1}_{#2}\right]}
+\newcommand{\tensQ}[1]{\pmb{\mathbb{#1}}}
+\newcommand{\tensQc}[1]{\mathbb{#1}}
+
+\newcommand{\transp}[1]{{#1}^{\textrm{T}}}
+\newcommand{\veczero}{\vec{0}}
+\newcommand{\body}{\Omega}
+\newcommand{\calvec}[1]{\boldsymbol{\mathcal{#1}}}
+\newcommand{\commadiff}[2]{{#1,}_{#2}}
+\newcommand{\regulardiff}[2]{ \frac{\partial#1}{\partial#2} }
+\newcommand{\func}[2]{#1\left(#2\right)}
+\newcommand{\transp}[1]{{#1}^{\text{T}}}
+\newcommand{\transpm}[1]{{#1}^{-\text{T}}}
+\newcommand{\trace}[1]{\text{tr}#1}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="./images/sm_logo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="solid_mechanics_book_it.html"><span class="title">Introduzione alla meccanica dei solidi</span></a></h1>
+<p class="byline">Antonio Bilotta</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contenuti</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="solid_mechnics_book_index_it.html" title="Indice">Indice</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="measures_sec_strain_chap_it.html" title="Precedente">Prec</a><a id="upbutton" class="up-button button toolbar-item" href="chap_strain_it.html" title="Sopra">Su</a><a id="nextbutton" class="next-button button toolbar-item" href="exercises_sec_strain_chap_it.html" title="Successivo">Succ</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contenuti</button><a class="previous-button toolbar-item button" href="measures_sec_strain_chap_it.html" title="Precedente">Prec</a><a class="up-button button toolbar-item" href="chap_strain_it.html" title="Sopra">Su</a><a class="next-button button toolbar-item" href="exercises_sec_strain_chap_it.html" title="Successivo">Succ</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="front_matter_it.html" data-scroll="front_matter_it"><span class="title">Copertina</span></a><ul>
+<li><a href="front_colophon_it.html" data-scroll="front_colophon_it">Colofone</a></li>
+<li><a href="author_bio_it.html" data-scroll="author_bio_it">Biografia dell'autore</a></li>
+<li><a href="dedication_it.html" data-scroll="dedication_it">Dedica</a></li>
+<li><a href="acknowledgement_it.html" data-scroll="acknowledgement_it">Ringraziamenti</a></li>
+<li><a href="preface_it.html" data-scroll="preface_it">Prefazione</a></li>
+</ul>
+</li>
+<li class="link part"><a href="continuum_mechanics_it.html" data-scroll="continuum_mechanics_it"><span class="codenumber">I</span> <span class="title">meccanica del continuo</span></a></li>
+<li class="link">
+<a href="chap_strain_it.html" data-scroll="chap_strain_it"><span class="codenumber">1</span> <span class="title">cinematica dei corpi</span></a><ul>
+<li><a href="configurations_sec_strain_chap_it.html" data-scroll="configurations_sec_strain_chap_it">configurazioni</a></li>
+<li><a href="transformations_sec_strain_chap_it.html" data-scroll="transformations_sec_strain_chap_it">trasformazioni</a></li>
+<li><a href="gradient_sec_strain_chap_it.html" data-scroll="gradient_sec_strain_chap_it">gradiente della trasformazione</a></li>
+<li><a href="displacement_sec_strain_chap_it.html" data-scroll="displacement_sec_strain_chap_it">il campo di spostamento</a></li>
+<li><a href="determinant_sec_strain_chap_it.html" data-scroll="determinant_sec_strain_chap_it">determinante del gradiente della trasformazione</a></li>
+<li><a href="polar_sec_strain_chap_it.html" data-scroll="polar_sec_strain_chap_it">decomposizione polare</a></li>
+<li><a href="principal_directions_sec_strain_chap_it.html" data-scroll="principal_directions_sec_strain_chap_it">tensore di deformazione \(\tens{U}\) e direzioni principali (trasformazione degli elementi di linea)</a></li>
+<li><a href="measures_sec_strain_chap_it.html" data-scroll="measures_sec_strain_chap_it">misure di deformazione</a></li>
+<li><a href="infinitesimal_sec_strain_chap_it.html" data-scroll="infinitesimal_sec_strain_chap_it" class="active">tensore della deformazione infinitesima</a></li>
+<li><a href="exercises_sec_strain_chap_it.html" data-scroll="exercises_sec_strain_chap_it">esercizi</a></li>
+<li><a href="answers_sec_strain_chap_it.html" data-scroll="answers_sec_strain_chap_it">risposte ad alcuni degli esercizi proposti</a></li>
+<li><a href="refs_strain_chap_it.html" data-scroll="refs_strain_chap_it">riferimenti e letture suggerite</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap_stress_it.html" data-scroll="chap_stress_it"><span class="codenumber">2</span> <span class="title">forze, equilibrio e tensione</span></a><ul>
+<li><a href="basics_sec_stress_chap_it.html" data-scroll="basics_sec_stress_chap_it">l'ipotesi di continuità</a></li>
+<li><a href="equilibrium_sec_stress_chap_it.html" data-scroll="equilibrium_sec_stress_chap_it">equazioni di equilibrio</a></li>
+<li><a href="stress_sec_stress_chap_it.html" data-scroll="stress_sec_stress_chap_it">il tensore della tensione di Cauchy</a></li>
+<li><a href="stress_analysis_sec_stress_chap_it.html" data-scroll="stress_analysis_sec_stress_chap_it">analisi dello stato di tensione</a></li>
+<li><a href="plv_sec_stress_chap_it.html" data-scroll="plv_sec_stress_chap_it">principio dei lavori virtuali</a></li>
+<li><a href="exercises_sec_stress_chap_it.html" data-scroll="exercises_sec_stress_chap_it">esercizi</a></li>
+<li><a href="answers_sec_stress_chap_it.html" data-scroll="answers_sec_stress_chap_it">risposte ad alcuni degli esercizi proposti</a></li>
+<li><a href="refs_stress_chap_it.html" data-scroll="refs_stress_chap_it">riferimenti e letture suggerite</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap_elasticity_it.html" data-scroll="chap_elasticity_it"><span class="codenumber">3</span> <span class="title">comportamento elastico</span></a><ul>
+<li><a href="motivations_sec_elasticity_chap_it.html" data-scroll="motivations_sec_elasticity_chap_it">motivazione</a></li>
+<li><a href="uniaxial_sec_elasticity_chap_it.html" data-scroll="uniaxial_sec_elasticity_chap_it">stati uniassiali</a></li>
+<li><a href="multiaxial_sec_elasticity_chap_it.html" data-scroll="multiaxial_sec_elasticity_chap_it">stati pluriassiali</a></li>
+<li><a href="problem_sec_elasticity_chap_it.html" data-scroll="problem_sec_elasticity_chap_it">il problema elastico</a></li>
+<li><a href="stretched_beam_sec_elasticity_chap_it.html" data-scroll="stretched_beam_sec_elasticity_chap_it">modelli monodimensionali: trave tesa</a></li>
+<li><a href="bent_beam_sec_elasticity_chap_it.html" data-scroll="bent_beam_sec_elasticity_chap_it">modelli monodimensionali: trave inflessa</a></li>
+<li><a href="stretched_beam_applications_sec_elasticity_chap_it.html" data-scroll="stretched_beam_applications_sec_elasticity_chap_it">applicazioni del modello di trave tesa</a></li>
+<li><a href="bent_beam_applications_sec_elasticity_chap_it.html" data-scroll="bent_beam_applications_sec_elasticity_chap_it">applicazioni del modello di trave inflessa</a></li>
+<li><a href="exercises_sec_elasticity_chap_it.html" data-scroll="exercises_sec_elasticity_chap_it">esercizi</a></li>
+<li><a href="answers_sec_elasticity_chap_it.html" data-scroll="answers_sec_elasticity_chap_it">risposte ad alcuni degli esercizi proposti</a></li>
+<li><a href="refs_elasticity_chap_it.html" data-scroll="refs_elasticity_chap_it">riferimenti e letture suggerite</a></li>
+</ul>
+</li>
+<li class="link part"><a href="beams_systems_it.html" data-scroll="beams_systems_it"><span class="codenumber">II</span> <span class="title">sistemi rigidi</span></a></li>
+<li class="link">
+<a href="rigid_body_kinematics_chap_it.html" data-scroll="rigid_body_kinematics_chap_it"><span class="codenumber">4</span> <span class="title">cinematica</span></a><ul>
+<li><a href="description_sec_rigid_body_kinematics_chap_it.html" data-scroll="description_sec_rigid_body_kinematics_chap_it">descrizione cinematica di base</a></li>
+<li><a href="constraints_sec_rigid_body_kinematics_chap_it.html" data-scroll="constraints_sec_rigid_body_kinematics_chap_it">vincoli</a></li>
+<li><a href="analysis_sec_rigid_body_kinematics_chap_it.html" data-scroll="analysis_sec_rigid_body_kinematics_chap_it">analisi cinematica</a></li>
+<li><a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html" data-scroll="analysis_examples_sec_rigid_body_kinematics_chap_it">applicazione dell'analisi cinematica ai sistemi di corpi rigidi</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="rigid_body_statics_chap_it.html" data-scroll="rigid_body_statics_chap_it"><span class="codenumber">5</span> <span class="title">statica</span></a><ul>
+<li><a href="equilibrium_sec_rigid_body_statics_chap_it.html" data-scroll="equilibrium_sec_rigid_body_statics_chap_it">equazioni di equilibrio</a></li>
+<li><a href="planecase_sec_rigid_body_statics_chap_it.html" data-scroll="planecase_sec_rigid_body_statics_chap_it">il caso piano</a></li>
+<li><a href="constraints_sec_rigid_body_statics_chap_it.html" data-scroll="constraints_sec_rigid_body_statics_chap_it">vincoli</a></li>
+<li><a href="free_body_sec_rigid_body_statics_chap_it.html" data-scroll="free_body_sec_rigid_body_statics_chap_it">diagrammi di corpo libero</a></li>
+<li><a href="analysis_sec_rigid_body_statics_chap_it.html" data-scroll="analysis_sec_rigid_body_statics_chap_it">analisi statica</a></li>
+<li><a href="analysis_examples_sec_rigid_body_statics_chap_it.html" data-scroll="analysis_examples_sec_rigid_body_statics_chap_it">applicazione dell'analisi statica ai sistemi di corpi rigidi</a></li>
+<li><a href="sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_it">sollecitazioni</a></li>
+<li><a href="indefinte_sec_rigid_body_statics_chap_it.html" data-scroll="indefinte_sec_rigid_body_statics_chap_it">equazioni indefinite di equilibrio per la trave piana</a></li>
+<li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it">calcolo e diagrammi delle sollecitazioni</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter_it.html" data-scroll="backmatter_it"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="solid_mechnics_book_index_it.html" data-scroll="solid_mechnics_book_index_it"><span class="title">Indice</span></a></li>
+<li class="link"><a href="back_colophon_it.html" data-scroll="back_colophon_it"><span class="title">Colofone</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Scritto con PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="infinitesimal_sec_strain_chap_it"><h2 class="heading hide-type">
+<span class="type">Sezione</span> <span class="codenumber">1.9</span> <span class="title">tensore della deformazione infinitesima</span>
+</h2>
+<a href="infinitesimal_sec_strain_chap_it.html" class="permalink">¶</a><p id="p-152">Accade spesso nelle applicazioni che l'entità del gradiente dello spostamento sia piccola. In questi casi il contributo dipendente da \(\transp{\tens{\nabla u}}\,\tens{\nabla u}\) e presente sia nel tensore \(\tens{E}\) sia nel tensore \(\tens{C}\) diventa trascurabile. Pertanto il tensore della deformazione di Green-Lagrange conciderà con il <em class="emphasis">tensore della deformazione infinitesima</em> \(\tens{\varepsilon}\)</p>
+<div class="displaymath">
+\begin{equation}
+\lim_{\|\tens{\nabla u}\| \rightarrow 0} \tens{E} = \tens{\varepsilon} =  \frac{1}{2}\left(\tens{\nabla u} + \transp{\tens{\nabla u}}\right)\,,\label{infinitesima_1_eq}\tag{1.9.1}
+\end{equation}
+</div>
+<p data-braille="continuation">mentre il tensore di Cauchy assumerà la seguente espressione</p>
+<div class="displaymath">
+\begin{equation}
+\lim_{\|\tens{\nabla u}\| \rightarrow 0} \tens{C} = \tens{I}+ \tens{\nabla u} + \transp{\tens{\nabla u}}\,.\label{infinitesima_2_eq}\tag{1.9.2}
+\end{equation}
+</div>
+<section class="subsection" id="subsection-12"><h3 class="heading hide-type">
+<span class="type">Sottosezione</span> <span class="codenumber">1.9.1</span> <span class="title">moti infinitesimi</span>
+</h3>
+<p id="p-153">Come premessa si ricordano le espressione esplicite del campo di spostamento \(\vec{u}\)</p>
+<div class="displaymath">
+\begin{gather*}
+\func{u_1}{X_1, X_2, X_3}\,,\\
+\func{u_2}{X_1, X_2, X_3}\,,\\
+\func{u_3}{X_1, X_2, X_3}\,,
+\end{gather*}
+</div>
+<p data-braille="continuation">e del relativo gradiente \(\tens{\nabla u}\)</p>
+<div class="displaymath">
+\begin{equation}
+\mat{\nabla u} =
+\left[\begin{array}{ccc}
+\regulardiff{u_1}{X_1} \amp \regulardiff{u_1}{X_2} \amp \regulardiff{u_1}{X_3}\\
+\regulardiff{u_2}{X_1} \amp \regulardiff{u_2}{X_2} \amp \regulardiff{u_2}{X_3}\\
+\regulardiff{u_3}{X_1} \amp \regulardiff{u_3}{X_2} \amp \regulardiff{u_3}{X_3}
+\end{array}\right]\,.\tag{1.9.3}
+\end{equation}
+</div>
+<p data-braille="continuation">La seguente decomposizione di \(\tens{\nabla u}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\tens{\nabla u} = \underbrace{\frac{1}{2}\left(\tens{\nabla u} + \transp{\tens{\nabla u}}\right)}_{\text{sym}\tens{\nabla u}} +  \underbrace{\frac{1}{2}\left(\tens{\nabla u} - \transp{\tens{\nabla u}}\right)}_{\text{skew}\tens{\nabla u}}\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">in generale applicabile a tutti i tensori, consente di inserire in un quadro più generale il tensore della deformazione infinitesima prima introdotto ed il ruolo giocato da  \(\tens{\nabla u}\) nella descrizione dei moti infinitesimi. Per moti infinitesemi intenderemo quindi i moti caretterizzati dalla condizione \(\|\tens{\nabla u}\| \rightarrow 0\text{.}\)</p>
+<ul class="disc">
+<li id="li-24">La parte simmetrica, \(\text{sym}\tens{\nabla u}\text{,}\) che in forma matriciale è esprimibile come<div class="displaymath">
+\begin{equation}
+\mat{\varepsilon} = \text{sym}\mat{\nabla u}=
+\left[\begin{array}{ccc}
+\regulardiff{u_1}{X_1} \amp \frac{1}{2}\left(\regulardiff{u_1}{X_2}+\regulardiff{u_2}{X_1}\right) \amp \frac{1}{2}\left(\regulardiff{u_1}{X_3}+\regulardiff{u_3}{X_1}\right)\\
+\frac{1}{2}\left(\regulardiff{u_2}{X_1}+\regulardiff{u_1}{X_2}\right) \amp \regulardiff{u_2}{X_2} \amp  \frac{1}{2}\left(\regulardiff{u_2}{X_3}+\regulardiff{u_3}{X_2}\right)\\
+\frac{1}{2}\left(\regulardiff{u_3}{X_1}+\regulardiff{u_1}{X_3}\right) \amp \frac{1}{2}\left(\regulardiff{u_3}{X_2}+\regulardiff{u_2}{X_3}\right) \amp \regulardiff{u_3}{X_3}
+\end{array}\right]\,,\label{mat_symDu_eq}\tag{1.9.4}
+\end{equation}
+</div>fornisce il tensore della deformazione infinitesima \(\tens{\varepsilon}\text{.}\) La notazione utilizzata per le singole componenti del tensore è<div class="displaymath">
+\begin{equation}
+\mat{\varepsilon} = 
+\left[\begin{array}{ccc}
+\varepsilon_{11} \amp \varepsilon_{12} \amp \varepsilon_{13}\\
+\varepsilon_{21} \amp \varepsilon_{22} \amp \varepsilon_{23}\\
+\varepsilon_{31} \amp \varepsilon_{32} \amp \varepsilon_{33}
+\end{array}\right]\,.\tag{1.9.5}
+\end{equation}
+</div>
+</li>
+<li id="li-25">La parte emisimmetrica, \(\text{skew}\tens{\nabla u}\text{,}\) che in forma matriciale è esprimibile come<div class="displaymath">
+\begin{equation}
+\text{skew}\mat{\nabla u}=
+\left[\begin{array}{ccc}
+0 \amp \frac{1}{2}\left(\regulardiff{u_1}{X_2}-\regulardiff{u_2}{X_1}\right) \amp \frac{1}{2}\left(\regulardiff{u_1}{X_3}-\regulardiff{u_3}{X_1}\right)\\
+\frac{1}{2}\left(\regulardiff{u_2}{X_1}-\regulardiff{u_1}{X_2}\right) \amp 0 \amp  \frac{1}{2}\left(\regulardiff{u_2}{X_3}-\regulardiff{u_3}{X_2}\right)\\
+\frac{1}{2}\left(\regulardiff{u_3}{X_1}-\regulardiff{u_1}{X_3}\right) \amp \frac{1}{2}\left(\regulardiff{u_3}{X_2}-\regulardiff{u_2}{X_3}\right) \amp 0
+\end{array}\right]\,,\tag{1.9.6}
+\end{equation}
+</div>fornisce il <em class="emphasis">tensore della rotazione infinitesima</em>.</li>
+<li id="li-26">Nel caso di <em class="emphasis">moto infinitesimo</em> generico<div class="displaymath">
+\begin{equation}
+\text{sym}\tens{\nabla u} \neq \tens{0}\,,\quad \text{skew}\tens{\nabla u} \neq \tens{0}.\tag{1.9.7}
+\end{equation}
+</div>
+</li>
+<li id="li-27">Nel caso di <em class="emphasis">moto rigido infinitesimo</em><div class="displaymath">
+\begin{equation}
+\text{sym}\tens{\nabla u} = \tens{0}\,,\quad \text{skew}\tens{\nabla u} \neq \tens{0}.\tag{1.9.8}
+\end{equation}
+</div>
+</li>
+</ul></section><article class="insight remark-like" id="insight-4"><h6 class="heading">
+<span class="type">Approfondimento</span><span class="space"> </span><span class="codenumber">1.9.1</span><span class="period">.</span><span class="space"> </span><span class="title">interpretazione delle componenti del tensore della deformazione infinitesima.</span>
+</h6>
+<p id="p-154">Al fine di individuare il significato delle componenti del tensore \(\tens{\varepsilon}\) conviene richiamare l'espressione del tensore \(\tens{C}\) rispetto al gradiente delo spostamento, ovvero</p>
+<div class="displaymath">
+\begin{equation*}
+\tens{C} = \tens{I}+ \tens{\nabla u} + \transp{\tens{\nabla u}} +  \transp{\tens{\nabla u}}\,\tens{\nabla u}\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">da cui, effetuando i calcoli, ad esempio con le seguenti istruzioni MATLAB</p>
+<figure class="listing figure-like" id="listing-24"><pre class="console"><b>syms u1_X1 u1_X2 u1_X3 u2_X1 u2_X2 u2_X3 u3_X1 u3_X2 u3_X3
+Du = [u1_X1 u1_X2 u1_X3;u2_X1 u2_X2 u2_X3; u3_X1 u3_X2 u3_X3]
+C = diag([1 1 1]) + Du + transpose(Du) + transpose(Du)*Du
+C(1,1)
+C(1,2)
+</b></pre>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.9.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-155">si possono ricavare le espressioni di una componente sulla diagonale ed una fuori dalla diagonale</p>
+<div class="displaymath">
+\begin{align*}
+C_{11} \amp = \left( 1 + \frac{\partial u_1}{\partial X_1} \right)^2 + \left(\frac{\partial u_1}{\partial X_2}\right)^2 + \left(\frac{\partial u_1}{\partial X_3}\right)^2\,,\\
+C_{12} \amp = \frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1} + \frac{\partial u_1}{\partial X_1}\frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1}\frac{\partial u_2}{\partial X_2} + \frac{\partial u_3}{\partial X_1}\frac{\partial u_3}{\partial X_2} \,.
+\end{align*}
+</div>
+<p data-braille="continuation">Per la componente sulla diagonale, utilizzando il risultato <a class="xref" data-knowl="./knowl/Cii_eq.html" title="Equazione 1.8.4">(1.8.4)</a> ottenuto per la componente sulla diagonale di \(\tens{C}\text{,}\) si può scrivere</p>
+<div class="displaymath">
+\begin{equation*}
+\func{\lambda}{\vec{e}_1}^2 =  \left( 1 + \underbrace{\frac{\partial u_1}{\partial X_1}}_{\varepsilon_{11}} \right)^2 + \underbrace{\left(\frac{\partial u_1}{\partial X_2}\right)^2 + \left(\frac{\partial u_1}{\partial X_3}\right)^2}_{\text{trascurabili nel caso infinitesimo}}\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">Da cui si ricava</p>
+<div class="displaymath">
+\begin{equation}
+\varepsilon_{11} \approx \func{\lambda}{\vec{e}_1} - 1\,.\label{small_normal_strain_eq}\tag{1.9.9}
+\end{equation}
+</div>
+<p data-braille="continuation">Analogo risultato vale per le altre componenti di \(\tens{\varepsilon}\) sulla diagonale.</p>
+<p id="p-156">Per la componente fuori dalla diagonale, utilizzando il risultato <a class="xref" data-knowl="./knowl/Cij_eq.html" title="Equazione 1.8.6">(1.8.6)</a>, si ha</p>
+<div class="displaymath">
+\begin{equation*}
+\sin{\func{\gamma}{\vec{e}_1,\vec{e}_2}}\, \underbrace{\func{\lambda}{\vec{e}_1} \, \func{\lambda}{\vec{e}_2}}_{\approx 1} = \underbrace{\frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1}}_{2\,\varepsilon_{12}} + \underbrace{\frac{\partial u_1}{\partial X_1}\frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1}\frac{\partial u_2}{\partial X_2} + \frac{\partial u_3}{\partial X_1}\frac{\partial u_3}{\partial X_2}}_{\text{trascurabili nel caso infinitesimo}}\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">e quindi</p>
+<div class="displaymath">
+\begin{equation}
+\varepsilon_{12} \approx \frac{1}{2}\, \sin{\func{\gamma}{\vec{e}_1,\vec{e}_2}} \approx  \frac{1}{2}\, \func{\gamma}{\vec{e}_1,\vec{e}_2}\,.\label{small_shear_eq}\tag{1.9.10}
+\end{equation}
+</div></article><article class="insight remark-like" id="small_rotations_insight"><h6 class="heading">
+<span class="type">Approfondimento</span><span class="space"> </span><span class="codenumber">1.9.3</span><span class="period">.</span><span class="space"> </span><span class="title">rotazioni infinitesime.</span>
+</h6>
+<p id="p-157">Per spiegare la denominazione "rotazione infinitesima" che è stata data alla parte emisimmetrica del gradiente dello spostamento conviene discutere in concreto una trasformazione caratterizzata solo da una semplice rotazione. A tal fine si consideri una rotazione intorno all'asse \(\vec{e}_3\text{.}\) La parte significativa della trasformazione può essere discussa direttamente direttamente nel piano con</p>
+<div class="displaymath">
+\begin{align*}
+x_1 \amp = X_1\cos{\alpha} - X_2\sin{\alpha}\,,\\
+x_2 \amp = X_1\sin{\alpha} + X_2\cos{\alpha}\,.
+\end{align*}
+</div>
+<p data-braille="continuation">Il campo di spostamento associato è</p>
+<div class="displaymath">
+\begin{align*}
+u_1 = x_1 - X_1 \amp = (X_1\cos{\alpha} - X_2\sin{\alpha}) - X_1\,,\\
+u_2 = x_2 - X_2 \amp = (X_1\sin{\alpha} + X_2\cos{\alpha}) - X_2\,.
+\end{align*}
+</div>
+<p data-braille="continuation">Con tali dati è possibile calcolare il gradiente della trasformazione che, nel caso specifico, è composto solo dalla rotazione</p>
+<div class="displaymath">
+\begin{equation*}
+\tens{F} = \tens{R}\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">dove, come già discusso nelle sezioni precedenti,</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{R} =
+\left[\begin{array}{cc}
+\cos{\alpha} \amp -\sin{\alpha} \\
+\sin{\alpha} \amp \cos{\alpha}
+\end{array}\right]\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">Inoltre</p>
+<div class="displaymath">
+\begin{equation*}
+\tens{F} = \tens{I} + \tens{\nabla u}\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">e quindi</p>
+<div class="displaymath">
+\begin{equation}
+\tens{R} = \tens{I} + \tens{\nabla u} =  \tens{I} + \text{sym}\tens{\nabla u} + \text{skew}\tens{\nabla u}\,.\label{rotation_eq}\tag{1.9.11}
+\end{equation}
+</div>
+<p data-braille="continuation">Risultato che evidenzia la decomposizione del gradiente dello spostamento con</p>
+<div class="displaymath">
+\begin{equation*}
+\text{sym}\mat{\nabla u} =
+\left[\begin{array}{cc}
+\cos{\alpha} - 1 \amp 0 \\
+0 \amp \cos{\alpha} - 1 
+\end{array}\right]\,,\quad
+\text{skew}\mat{\nabla u} =
+\left[\begin{array}{cc}
+0 \amp -\sin{\alpha} \\
+\sin{\alpha} \amp 0 
+\end{array}\right]\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">ma ancora del tutto generico e che non fa riferimento agli spostamenti infinitesimi.</p>
+<p id="p-158">Ipotizzare spostamenti infinitesimi equivale ad assumere valori dell'angolo \(\alpha\) molto piccoli, \(\alpha \ll 1\text{,}\) ovvero \(\cos{\alpha}\approx 1\) e \(\sin{\alpha} \approx \alpha\text{.}\) Da cui deriva</p>
+<div class="displaymath">
+\begin{equation*}
+\text{sym}\mat{\nabla u} \approx \mat{0}
+\,,\quad
+\text{skew}\mat{\nabla u} \approx
+\left[\begin{array}{cc}
+0 \amp -\alpha \\
+\alpha \amp 0 
+\end{array}\right]\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">Pertanto nel caso di spostamenti infinitesi la relazione <a class="xref" data-knowl="./knowl/rotation_eq.html" title="Equazione 1.9.11">(1.9.11)</a> può essere riscritta come segue</p>
+<div class="displaymath">
+\begin{equation}
+\tens{R} \approx \tens{I} + \text{skew}\tens{\nabla u}\,.\label{rotation_infinitesima_eq}\tag{1.9.12}
+\end{equation}
+</div>
+<figure class="figure figure-like" id="figure-6"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/infinitesimal_rotation.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.9.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-159">La Figura illustra graficamente il risultato ottenuto mostrando anche in che relazione stanno il vettore ottenuto applicando \(\tens{R}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\tens{R}\vec{X}
+\end{equation*}
+</div>
+<p data-braille="continuation">e il vettore ottenuto applicando l'approssimazione di \(\tens{R}\) data da \((\tens{I} + \text{skew}\tens{\nabla u})\)</p>
+<div class="displaymath">
+\begin{equation*}
+(\tens{I} + \text{skew}\tens{\nabla u})\vec{X} = \vec{X} + \text{skew}\tens{\nabla u}\,\vec{X}\,.
+\end{equation*}
+</div></article><article class="insight remark-like" id="skew_tensor_insight"><h6 class="heading">
+<span class="type">Approfondimento</span><span class="space"> </span><span class="codenumber">1.9.5</span><span class="period">.</span>
+</h6>
+<p id="p-160">Dato un tensore \(\tens{W}\) emisimmetrico, la cui forma matriciale ad esso associata per definizione sarà</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{W} =
+\left[\begin{array}{ccc}
+0 \amp W_{12} \amp W_{13}\\
+-W_{12} \amp 0 \amp W_{23}\\
+-W_{13} \amp -W_{23} \amp 0 
+\end{array}\right]\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">si può verificare come la sua applicazione ad un vettore \(\vec{v}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\left[\begin{array}{ccc}
+0 \amp W_{12} \amp W_{13}\\
+-W_{12} \amp 0 \amp W_{23}\\
+-W_{13} \amp -W_{23} \amp 0 
+\end{array}\right]
+\left[\begin{array}{c}
+v_1\\
+v_2\\
+v_3
+\end{array}\right]
+=
+\left[\begin{array}{c}
+W_{12}v_2 + W_{13}v_3 \\
+-W_{12}v_1 + W_{23}v_3\\
+-W_{13}v_1 -W_{23}v_2
+\end{array}\right]
+\end{equation*}
+</div>
+<p data-braille="continuation">equivalga a calcolare il seguente prodotto vettoriale</p>
+<div class="displaymath">
+\begin{equation*}
+\left[\begin{array}{c}
+\omega_1\\
+\omega_2\\
+\omega_3
+\end{array}\right]
+\times
+\left[\begin{array}{c}
+v_1\\
+v_2\\
+v_3
+\end{array}\right]
+=
+\left[\begin{array}{c}
+\omega_2 v_3 - \omega_3 v_2\\
+\omega_3 v_1 - \omega_1 v_3\\
+\omega_1 v_2 - \omega_2 v_1
+\end{array}\right]
+\end{equation*}
+</div>
+<p data-braille="continuation">dove le componenti di \(\vec{\omega}\) sono messe in corrispondenza con le componenti di \(\tens{W}\) nel modo seguente</p>
+<div class="displaymath">
+\begin{equation}
+\omega_{1} = -W_{23}\,,\quad \omega_{2} = W_{13}\,,\quad \omega_{3} = -W_{12}\,.\tag{1.9.13}
+\end{equation}
+</div>
+<p data-braille="continuation">Quindi, noto \(\vec{\omega}\text{,}\) \(\tens{W}\) può essere espresso come segue</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{W} =
+\left[\begin{array}{ccc}
+0 \amp -\omega_{3} \amp \omega_{2}\\
+\omega_{3} \amp 0 \amp -\omega_{1}\\
+-\omega_{2} \amp \omega_{1} \amp 0 
+\end{array}\right]\,.
+\end{equation*}
+</div>
+<p id="p-161">Pertanto si ha</p>
+<div class="displaymath">
+\begin{equation}
+\tens{W}\vec{v} = \vec{\omega} \times \vec{v}\,,\tag{1.9.14}
+\end{equation}
+</div>
+<p data-braille="continuation">e \(\omega\) è il vettore assiale associato al tensore emisimmetrico \(\tens{W}\text{.}\) L'aggettivo assiale deriva dal fatto che \(\omega\) individua l'asse di una rotazione intorno al quale si effettua la rotazione infinitesima.</p></article></section></div></main>
+</div>
+</body>
+</html>

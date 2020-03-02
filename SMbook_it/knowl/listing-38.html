@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-03-02T15:07:57+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<figure class="listing figure-like"><pre class="console"><b>syms w(x) EJ F l;
+ode = EJ*diff(w,x,4) == 0;
+D1w = diff(w,x,1);
+D2w = diff(w,x,2);
+D3w = diff(w,x,3);
+cond1 = w(0) == 0;
+cond2 = D1w(0) == 0;
+cond3 = -EJ*D3w(l) == F;
+cond4 = -EJ*D2w(l) == 0;
+conds = [cond1 cond2 cond3 cond4];
+sol = dsolve(ode,conds)
+M = -EJ*diff(sol,x,2)
+</b></pre>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.8.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure><span class="incontext"><a href="bent_beam_applications_sec_elasticity_chap_it.html#listing-38">in-context</a></span>
+</body>
+</html>

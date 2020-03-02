@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-03-02T15:07:57+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragrafo</span></h6>
+<p>Nel seguito vengono riportate le istruzioni MATLAB per il calcolo della risultante e del baricentro per alcune tipologie di carico ripartito. <figure class="listing figure-like"><pre class="console"><b>% carico ripartito costante
+syms q l x;
+carico(x, q) = q;
+np = 100;
+xv = 0:1/np:1;
+qv = carico(xv, 1);
+plot(xv,qv,'r','LineWidth',2)
+
+
+Rq = int(carico(x, q), x, 0, l)
+xq = int(carico(x, q)*x, x, 0, l)/Rq
+</b></pre>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">5.7.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure> <figure class="listing figure-like"><pre class="console"><b>% carico ripartito lineare
+syms q l x;
+carico(x, q, l) = q/l*x;
+np = 100;
+xv = 0:1/np:1;
+qv = carico(xv, 1, 1);
+plot(xv,qv,'r','LineWidth',2)
+
+Rq = int(carico(x, q, l), x, 0, l)
+xq = int(carico(x, q, l)*x, x, 0, l)/Rq
+</b></pre>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">5.7.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure> <figure class="listing figure-like"><pre class="console"><b>% carico ripartito parabolico
+syms q l x;
+carico(x, q, l) = q/l^2*x^2;
+np = 100;
+xv = 0:1/np:1;
+qv = carico(xv, 1, 1);
+plot(xv,qv,'r','LineWidth',2)
+
+Rq = int(carico(x, q, l), x, 0, l)
+xq = int(carico(x, q, l)*x, x, 0, l)/Rq
+</b></pre>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">5.7.9<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<span class="incontext"><a href="sollecitazioni_sec_rigid_body_statics_chap_it.html#p-461">in-context</a></span>
+</body>
+</html>

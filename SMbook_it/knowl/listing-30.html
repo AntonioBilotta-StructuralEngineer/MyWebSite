@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-03-02T15:07:56+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<figure class="listing figure-like"><pre class="console"><b>Edef(t) = 1/2*om^2*m*u(t)^2;
+Ekin(t) = 1/2*m*diff(u,t)^2;
+
+dd=Edef(tt);
+kk=Ekin(tt);
+
+scale = 5*u0 / (Edef(0)+Ekin(0));
+plot(tt,uu,'k',tt,dd*scale,'r',tt,kk*scale,'b','LineWidth',2)
+legend('spost.','en. def.','en. cinet.')
+</b></pre>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.2.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure><span class="incontext"><a href="uniaxial_sec_elasticity_chap_it.html#listing-30">in-context</a></span>
+</body>
+</html>

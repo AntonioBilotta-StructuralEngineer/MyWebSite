@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-03-02T15:07:57+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<figure class="listing figure-like"><pre class="console"><b>syms ua(x) ub(x) EA F l a;
+Dua = diff(ua);
+Dub = diff(ub);
+ode1 = EA*diff(ua,x,2) == 0;
+ode2 = EA*diff(ub,x,2) == 0;
+odes = [ode1; ode2];
+cond1 = ua(0) == 0;
+cond2 = ub(l) == 0;
+cond3 = ua(a) == ub(a);
+cond4 = EA*Dua(a) - EA*Dub(a) == F;
+conds = [cond1 cond2 cond3 cond4];
+sols = dsolve(odes,conds);
+sols.ua
+sols.ub
+</b></pre>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.7.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure><span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#listing-36">in-context</a></span>
+</body>
+</html>

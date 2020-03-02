@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-03-02T15:07:57+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<figure class="listing figure-like"><pre class="console"><b>% carico ripartito parabolico
+syms q l x;
+carico(x, q, l) = q/l^2*x^2;
+np = 100;
+xv = 0:1/np:1;
+qv = carico(xv, 1, 1);
+plot(xv,qv,'r','LineWidth',2)
+
+Rq = int(carico(x, q, l), x, 0, l)
+xq = int(carico(x, q, l)*x, x, 0, l)/Rq
+</b></pre>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">5.7.9<span class="period">.</span></span><span class="space"> </span></figcaption></figure><span class="incontext"><a href="sollecitazioni_sec_rigid_body_statics_chap_it.html#listing-56">in-context</a></span>
+</body>
+</html>

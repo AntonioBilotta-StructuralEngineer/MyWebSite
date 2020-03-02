@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-03-02T15:07:58+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragrafo</span></h6>
+<p><figure class="listing figure-like"><pre class="console"><b>% diagramma del taglio
+syms T_ac(x,F) T_cb(x,F);
+T_ac(x,F) = F/2;
+T_cb(x,F) = -F/2;
+
+np = 50;
+Xv = 0:0.5/np:0.5;
+Tv_ac = T_ac(Xv, 1);
+Tv_cb = T_cb(Xv, 1);
+
+Xv_ac = Xv;
+Xv_cb = 0.5:0.5/np:1;
+Beam = zeros(1, np+1);
+
+plot(Xv_ac,Tv_ac,'b', Xv_ac,Beam,'k', ...
+Xv_cb,Tv_cb,'b', Xv_cb,Beam,'k', 'LineWidth',2)
+set(gca, 'Ylim', [-1 1])
+
+
+% diagramma del momento flettente
+syms M_ac(x,F) M_cb(x,F,l);
+M_ac(x,F) = F/2*x;
+M_cb(x,F,l) = -F/2*x+F*l/4;
+
+np = 50;
+Xv = 0:0.5/np:0.5;
+Mv_ac = M_ac(Xv, 1);
+Mv_cb = M_cb(Xv, 1, 1);
+
+Xv_ac = Xv;
+Xv_cb = 0.5:0.5/np:1;
+Beam = zeros(1, np+1);
+
+plot(Xv_ac,Mv_ac,'r', Xv_ac,Beam,'k', ...
+Xv_cb,Mv_cb,'r', Xv_cb,Beam,'k', 'LineWidth',2)
+set(gca, 'Ylim', [-1 1])
+set(gca, 'YDir','reverse')
+</b></pre>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">5.9.11<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<span class="incontext"><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html#p-488">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-03-02T15:07:55+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="it-IT">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Solid Mechanics - vincoli</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Torna alla pagina dei contenuti</a><div class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+\newcommand{\tens}[1]{\boldsymbol{#1}}
+\newcommand{\mat}[1]{\left[\boldsymbol{#1}\right]}
+\newcommand{\matWp}[2]{\left[\boldsymbol{#1}_{#2}\right]}
+\newcommand{\tensQ}[1]{\pmb{\mathbb{#1}}}
+\newcommand{\tensQc}[1]{\mathbb{#1}}
+
+\newcommand{\transp}[1]{{#1}^{\textrm{T}}}
+\newcommand{\veczero}{\vec{0}}
+\newcommand{\body}{\Omega}
+\newcommand{\calvec}[1]{\boldsymbol{\mathcal{#1}}}
+\newcommand{\commadiff}[2]{{#1,}_{#2}}
+\newcommand{\regulardiff}[2]{ \frac{\partial#1}{\partial#2} }
+\newcommand{\func}[2]{#1\left(#2\right)}
+\newcommand{\transp}[1]{{#1}^{\text{T}}}
+\newcommand{\transpm}[1]{{#1}^{-\text{T}}}
+\newcommand{\trace}[1]{\text{tr}#1}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="./images/sm_logo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="solid_mechanics_book_it.html"><span class="title">Introduzione alla meccanica dei solidi</span></a></h1>
+<p class="byline">Antonio Bilotta</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contenuti</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="solid_mechnics_book_index_it.html" title="Indice">Indice</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="planecase_sec_rigid_body_statics_chap_it.html" title="Precedente">Prec</a><a id="upbutton" class="up-button button toolbar-item" href="rigid_body_statics_chap_it.html" title="Sopra">Su</a><a id="nextbutton" class="next-button button toolbar-item" href="free_body_sec_rigid_body_statics_chap_it.html" title="Successivo">Succ</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contenuti</button><a class="previous-button toolbar-item button" href="planecase_sec_rigid_body_statics_chap_it.html" title="Precedente">Prec</a><a class="up-button button toolbar-item" href="rigid_body_statics_chap_it.html" title="Sopra">Su</a><a class="next-button button toolbar-item" href="free_body_sec_rigid_body_statics_chap_it.html" title="Successivo">Succ</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="front_matter_it.html" data-scroll="front_matter_it"><span class="title">Copertina</span></a><ul>
+<li><a href="front_colophon_it.html" data-scroll="front_colophon_it">Colofone</a></li>
+<li><a href="author_bio_it.html" data-scroll="author_bio_it">Biografia dell'autore</a></li>
+<li><a href="dedication_it.html" data-scroll="dedication_it">Dedica</a></li>
+<li><a href="acknowledgement_it.html" data-scroll="acknowledgement_it">Ringraziamenti</a></li>
+<li><a href="preface_it.html" data-scroll="preface_it">Prefazione</a></li>
+</ul>
+</li>
+<li class="link part"><a href="continuum_mechanics_it.html" data-scroll="continuum_mechanics_it"><span class="codenumber">I</span> <span class="title">meccanica del continuo</span></a></li>
+<li class="link">
+<a href="chap_strain_it.html" data-scroll="chap_strain_it"><span class="codenumber">1</span> <span class="title">cinematica dei corpi</span></a><ul>
+<li><a href="configurations_sec_strain_chap_it.html" data-scroll="configurations_sec_strain_chap_it">configurazioni</a></li>
+<li><a href="transformations_sec_strain_chap_it.html" data-scroll="transformations_sec_strain_chap_it">trasformazioni</a></li>
+<li><a href="gradient_sec_strain_chap_it.html" data-scroll="gradient_sec_strain_chap_it">gradiente della trasformazione</a></li>
+<li><a href="displacement_sec_strain_chap_it.html" data-scroll="displacement_sec_strain_chap_it">il campo di spostamento</a></li>
+<li><a href="determinant_sec_strain_chap_it.html" data-scroll="determinant_sec_strain_chap_it">determinante del gradiente della trasformazione</a></li>
+<li><a href="polar_sec_strain_chap_it.html" data-scroll="polar_sec_strain_chap_it">decomposizione polare</a></li>
+<li><a href="principal_directions_sec_strain_chap_it.html" data-scroll="principal_directions_sec_strain_chap_it">tensore di deformazione \(\tens{U}\) e direzioni principali (trasformazione degli elementi di linea)</a></li>
+<li><a href="measures_sec_strain_chap_it.html" data-scroll="measures_sec_strain_chap_it">misure di deformazione</a></li>
+<li><a href="infinitesimal_sec_strain_chap_it.html" data-scroll="infinitesimal_sec_strain_chap_it">tensore della deformazione infinitesima</a></li>
+<li><a href="exercises_sec_strain_chap_it.html" data-scroll="exercises_sec_strain_chap_it">esercizi</a></li>
+<li><a href="answers_sec_strain_chap_it.html" data-scroll="answers_sec_strain_chap_it">risposte ad alcuni degli esercizi proposti</a></li>
+<li><a href="refs_strain_chap_it.html" data-scroll="refs_strain_chap_it">riferimenti e letture suggerite</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap_stress_it.html" data-scroll="chap_stress_it"><span class="codenumber">2</span> <span class="title">forze, equilibrio e tensione</span></a><ul>
+<li><a href="basics_sec_stress_chap_it.html" data-scroll="basics_sec_stress_chap_it">l'ipotesi di continuità</a></li>
+<li><a href="equilibrium_sec_stress_chap_it.html" data-scroll="equilibrium_sec_stress_chap_it">equazioni di equilibrio</a></li>
+<li><a href="stress_sec_stress_chap_it.html" data-scroll="stress_sec_stress_chap_it">il tensore della tensione di Cauchy</a></li>
+<li><a href="stress_analysis_sec_stress_chap_it.html" data-scroll="stress_analysis_sec_stress_chap_it">analisi dello stato di tensione</a></li>
+<li><a href="plv_sec_stress_chap_it.html" data-scroll="plv_sec_stress_chap_it">principio dei lavori virtuali</a></li>
+<li><a href="exercises_sec_stress_chap_it.html" data-scroll="exercises_sec_stress_chap_it">esercizi</a></li>
+<li><a href="answers_sec_stress_chap_it.html" data-scroll="answers_sec_stress_chap_it">risposte ad alcuni degli esercizi proposti</a></li>
+<li><a href="refs_stress_chap_it.html" data-scroll="refs_stress_chap_it">riferimenti e letture suggerite</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap_elasticity_it.html" data-scroll="chap_elasticity_it"><span class="codenumber">3</span> <span class="title">comportamento elastico</span></a><ul>
+<li><a href="motivations_sec_elasticity_chap_it.html" data-scroll="motivations_sec_elasticity_chap_it">motivazione</a></li>
+<li><a href="uniaxial_sec_elasticity_chap_it.html" data-scroll="uniaxial_sec_elasticity_chap_it">stati uniassiali</a></li>
+<li><a href="multiaxial_sec_elasticity_chap_it.html" data-scroll="multiaxial_sec_elasticity_chap_it">stati pluriassiali</a></li>
+<li><a href="problem_sec_elasticity_chap_it.html" data-scroll="problem_sec_elasticity_chap_it">il problema elastico</a></li>
+<li><a href="stretched_beam_sec_elasticity_chap_it.html" data-scroll="stretched_beam_sec_elasticity_chap_it">modelli monodimensionali: trave tesa</a></li>
+<li><a href="bent_beam_sec_elasticity_chap_it.html" data-scroll="bent_beam_sec_elasticity_chap_it">modelli monodimensionali: trave inflessa</a></li>
+<li><a href="stretched_beam_applications_sec_elasticity_chap_it.html" data-scroll="stretched_beam_applications_sec_elasticity_chap_it">applicazioni del modello di trave tesa</a></li>
+<li><a href="bent_beam_applications_sec_elasticity_chap_it.html" data-scroll="bent_beam_applications_sec_elasticity_chap_it">applicazioni del modello di trave inflessa</a></li>
+<li><a href="exercises_sec_elasticity_chap_it.html" data-scroll="exercises_sec_elasticity_chap_it">esercizi</a></li>
+<li><a href="answers_sec_elasticity_chap_it.html" data-scroll="answers_sec_elasticity_chap_it">risposte ad alcuni degli esercizi proposti</a></li>
+<li><a href="refs_elasticity_chap_it.html" data-scroll="refs_elasticity_chap_it">riferimenti e letture suggerite</a></li>
+</ul>
+</li>
+<li class="link part"><a href="beams_systems_it.html" data-scroll="beams_systems_it"><span class="codenumber">II</span> <span class="title">sistemi rigidi</span></a></li>
+<li class="link">
+<a href="rigid_body_kinematics_chap_it.html" data-scroll="rigid_body_kinematics_chap_it"><span class="codenumber">4</span> <span class="title">cinematica</span></a><ul>
+<li><a href="description_sec_rigid_body_kinematics_chap_it.html" data-scroll="description_sec_rigid_body_kinematics_chap_it">descrizione cinematica di base</a></li>
+<li><a href="constraints_sec_rigid_body_kinematics_chap_it.html" data-scroll="constraints_sec_rigid_body_kinematics_chap_it">vincoli</a></li>
+<li><a href="analysis_sec_rigid_body_kinematics_chap_it.html" data-scroll="analysis_sec_rigid_body_kinematics_chap_it">analisi cinematica</a></li>
+<li><a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html" data-scroll="analysis_examples_sec_rigid_body_kinematics_chap_it">applicazione dell'analisi cinematica ai sistemi di corpi rigidi</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="rigid_body_statics_chap_it.html" data-scroll="rigid_body_statics_chap_it"><span class="codenumber">5</span> <span class="title">statica</span></a><ul>
+<li><a href="equilibrium_sec_rigid_body_statics_chap_it.html" data-scroll="equilibrium_sec_rigid_body_statics_chap_it">equazioni di equilibrio</a></li>
+<li><a href="planecase_sec_rigid_body_statics_chap_it.html" data-scroll="planecase_sec_rigid_body_statics_chap_it">il caso piano</a></li>
+<li><a href="constraints_sec_rigid_body_statics_chap_it.html" data-scroll="constraints_sec_rigid_body_statics_chap_it" class="active">vincoli</a></li>
+<li><a href="free_body_sec_rigid_body_statics_chap_it.html" data-scroll="free_body_sec_rigid_body_statics_chap_it">diagrammi di corpo libero</a></li>
+<li><a href="analysis_sec_rigid_body_statics_chap_it.html" data-scroll="analysis_sec_rigid_body_statics_chap_it">analisi statica</a></li>
+<li><a href="analysis_examples_sec_rigid_body_statics_chap_it.html" data-scroll="analysis_examples_sec_rigid_body_statics_chap_it">applicazione dell'analisi statica ai sistemi di corpi rigidi</a></li>
+<li><a href="sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_it">sollecitazioni</a></li>
+<li><a href="indefinte_sec_rigid_body_statics_chap_it.html" data-scroll="indefinte_sec_rigid_body_statics_chap_it">equazioni indefinite di equilibrio per la trave piana</a></li>
+<li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it">calcolo e diagrammi delle sollecitazioni</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter_it.html" data-scroll="backmatter_it"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="solid_mechnics_book_index_it.html" data-scroll="solid_mechnics_book_index_it"><span class="title">Indice</span></a></li>
+<li class="link"><a href="back_colophon_it.html" data-scroll="back_colophon_it"><span class="title">Colofone</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Scritto con PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="constraints_sec_rigid_body_statics_chap_it"><h2 class="heading hide-type">
+<span class="type">Sezione</span> <span class="codenumber">5.3</span> <span class="title">vincoli</span>
+</h2>
+<a href="constraints_sec_rigid_body_statics_chap_it.html" class="permalink">¶</a><p id="p-424">Un corpo o un sistema di corpi tipicamente è soggetto sia ai carichi applicati sia a delle assegnate condizioni di vincolo. Da un punto di vista statico i vincoli vengono trattati rappresentando l’azione esercitata dal vincolo in termini di forze o coppie denominate <em class="alert">reazioni vincolari</em>. Tale procedura, come vedremo, consente di ottenere il <em class="alert">diagramma di corpo libero</em> mediante il quale il corpo viene rappresentato sotto l'azione di due gruppi di enti statici: le azioni applicate e le reazioni vincolari.</p>
+<p id="p-425">Nel caso piano, in generale, un vincolo applicato può dar luogo a 3 componenti di reazione:</p>
+<div class="displaymath">
+\begin{align*}
+H \amp\quad \text{componente orizzontale,}\\
+V \amp\quad \text{componente verticale,}\\
+\mathcal{M}\amp\quad \text{componente coppia.}
+\end{align*}
+</div>
+<p data-braille="continuation">Dove \(H\) e \(V\) sono le componenti di una forza di reazione, \(\vec{R}\text{,}\) appartenente al piano di lavoro. La presenza, in un punto del corpo, di tutte e 3 le componenti o soltanto di alcune di queste dipende dal tipo di vincolo applicato.</p>
+<section class="subsection" id="subsection-101"><h3 class="heading hide-type">
+<span class="type">Sottosezione</span> <span class="codenumber">5.3.1</span> <span class="title">assenza di vincolo</span>
+</h3>
+<p id="p-426">È il caso banale in cui in un punto non vi è alcun vincolo applicato, di conseguenza non sarà possibile l'insorgere di componenti di reazione differenti da zero:</p>
+<div class="displaymath">
+\begin{equation}
+H=0 \,, \quad V=0 \,,\quad \mathcal{M} = 0\,.\tag{5.3.1}
+\end{equation}
+</div></section><section class="subsection" id="subsection-102"><h3 class="heading hide-type">
+<span class="type">Sottosezione</span> <span class="codenumber">5.3.2</span> <span class="title">vincoli semplici</span>
+</h3>
+<section class="subsubsection" id="subsubsection-24"><h4 class="heading hide-type">
+<span class="type">Sottosottosezione</span> <span class="codenumber">5.3.2.1</span> <span class="title">carrello</span>
+</h4>
+<figure class="figure figure-like" id="carrello_statica_fig"><div class="image-box" style="width: 52%; margin-left: 24%; margin-right: 24%;"><img src="images/vincolosemplice_carrello_statica.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.3.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-427">La presenza del carrello determina, dal punto di vista statico, soltanto una forza di reazione, \(\vec{R}\text{,}\) diretta secondo l'asse del carrello. Quindi delle tre componenti di reazione solo le prime due possono essere diverse da zero</p>
+<div class="displaymath">
+\begin{equation}
+H \neq 0 \,, \quad V \neq 0 \,,\quad \mathcal{M} = 0\,.\tag{5.3.2}
+\end{equation}
+</div>
+<p data-braille="continuation">Inoltre è nota la direzione della forza di reazione e quindi le due componenti \(H\) e \(V\) non sono fra loro indipendenti ma legate dalla relazione</p>
+<div class="displaymath">
+\begin{equation}
+\frac{V}{H} = \tan{\alpha}\,.\tag{5.3.3}
+\end{equation}
+</div>
+<p id="p-428">Ovviamente nel caso cui il carrello abbia asse orizzontale solo \(H\) può essere diversa da zero:</p>
+<div class="displaymath">
+\begin{equation}
+H \neq 0 \,, \quad V = 0 \,,\quad \mathcal{M} = 0\,.\tag{5.3.4}
+\end{equation}
+</div>
+<p data-braille="continuation">e nel caso di asse verticale invece</p>
+<div class="displaymath">
+\begin{equation}
+H = 0 \,, \quad V \neq 0 \,,\quad \mathcal{M} = 0\,.\tag{5.3.5}
+\end{equation}
+</div></section><section class="subsubsection" id="subsubsection-25"><h4 class="heading hide-type">
+<span class="type">Sottosottosezione</span> <span class="codenumber">5.3.2.2</span> <span class="title">doppio bipendolo</span>
+</h4>
+<p id="p-429">Il doppio bipendolo vincola la rotazione di corpo rigido del corpo rendendo possibile, dal punto di vista statico, solo l'insorgere della componente coppia della reazione vincolare. Pertanto si avrà</p>
+<div class="displaymath">
+\begin{equation}
+H = 0 \,, \quad V = 0 \,,\quad \mathcal{M} \neq 0\,.\tag{5.3.6}
+\end{equation}
+</div></section></section><section class="subsection" id="subsection-103"><h3 class="heading hide-type">
+<span class="type">Sottosezione</span> <span class="codenumber">5.3.3</span> <span class="title">vincoli doppi</span>
+</h3>
+<section class="subsubsection" id="subsubsection-26"><h4 class="heading hide-type">
+<span class="type">Sottosottosezione</span> <span class="codenumber">5.3.3.1</span> <span class="title">cerniera</span>
+</h4>
+<p id="p-430">La presenza della cerniera rende possibile, come nel caso del carrello, la presenza di una forza di reazione, \(\vec{R}\text{,}\) la cui direzione non è nota a priori. Pertanto avremo le due componenti di reazione, orizzontale e verticale, eventualmente non nulle e indipendenti</p>
+<div class="displaymath">
+\begin{equation}
+H \neq 0 \,, \quad V \neq 0 \,,\quad \mathcal{M} = 0\,.\tag{5.3.7}
+\end{equation}
+</div></section><section class="subsubsection" id="subsubsection-27"><h4 class="heading hide-type">
+<span class="type">Sottosottosezione</span> <span class="codenumber">5.3.3.2</span> <span class="title">bipendolo</span>
+</h4>
+<p id="p-431">Il bipendolo per le componenti orizzontale e verticale si comporta come il carrello. Il vincolo ulteriore sulla rotazione determina anche la presenza della componte coppia. Pertanto si avrà</p>
+<div class="displaymath">
+\begin{equation}
+H \neq 0 \,, \quad V \neq 0 \,,\quad \mathcal{M} \neq 0\,,\tag{5.3.8}
+\end{equation}
+</div>
+<p data-braille="continuation">dove</p>
+<div class="displaymath">
+\begin{equation}
+\frac{V}{H} = \tan{\alpha}\,.\tag{5.3.9}
+\end{equation}
+</div>
+<p id="p-432">Anche per il bipendolo se l'asse è orizzontale solo \(H\) può essere diversa da zero:</p>
+<div class="displaymath">
+\begin{equation}
+H \neq 0 \,, \quad V = 0 \,,\quad \mathcal{M} \neq 0\,.\tag{5.3.10}
+\end{equation}
+</div>
+<p data-braille="continuation">e nel caso di asse verticale invece</p>
+<div class="displaymath">
+\begin{equation}
+H = 0 \,, \quad V \neq 0 \,,\quad \mathcal{M} \neq 0\,.\tag{5.3.11}
+\end{equation}
+</div></section></section><section class="subsection" id="subsection-104"><h3 class="heading hide-type">
+<span class="type">Sottosezione</span> <span class="codenumber">5.3.4</span> <span class="title">vincoli tripli</span>
+</h3>
+<section class="subsubsection" id="subsubsection-28"><h4 class="heading hide-type">
+<span class="type">Sottosottosezione</span> <span class="codenumber">5.3.4.1</span> <span class="title">incastro</span>
+</h4>
+<p id="p-433">L'incastro determina l'insorgere di una reazione vicolare avente le 3 componenti tutte eventualmente non nulle e indipendenti</p>
+<div class="displaymath">
+\begin{equation}
+H \neq 0 \,, \quad V \neq 0 \,,\quad \mathcal{M} \neq 0\,.\tag{5.3.12}
+\end{equation}
+</div></section></section><section class="subsection" id="subsection-105"><h3 class="heading hide-type">
+<span class="type">Sottosezione</span> <span class="codenumber">5.3.5</span> <span class="title">riepilogo</span>
+</h3>
+<p id="p-434">Le figure successive illustrano per il caso piano la rappresentazione grafica dei vincoli e l'eventuale presenza delle componenti di reazione \(H\text{,}\) \(V\) e \(\mathcal{M}\text{.}\)</p>
+<figure class="figure figure-like" id="statica_vicoli_semplici_fig"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/statica_vincoli_semplici.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.3.2<span class="period">.</span></span><span class="space"> </span>Vincoli semplici.</figcaption></figure><figure class="figure figure-like" id="statica_vicoli_doppi_fig"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/statica_vincoli_doppi.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.3.3<span class="period">.</span></span><span class="space"> </span>Vincoli doppi.</figcaption></figure><figure class="figure figure-like" id="statica_vicoli_tripli_fig"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/statica_vincoli_tripli.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.3.4<span class="period">.</span></span><span class="space"> </span>Vincoli tripli.</figcaption></figure><article class="note remark-like" id="note-4"><h6 class="heading">
+<span class="type">Nota</span><span class="space"> </span><span class="codenumber">5.3.5</span><span class="period">.</span>
+</h6>I vincoli "carrello" e "bipendolo" possono essere rappresentati mediante un'inclinazione differente da \(0\) e \(\pi/2\text{,}\) in tal caso la rotazione del simbolo ha anche un preciso significato meccanico in quanto la forza da essi esercitata è ruotata dello stesso angolo, dando luogo a componenti orizzontale e verticale eventualmente ambedue diverse da zero. Gli altri vincoli invece esercitano comunque le componenti di reazione indicate nelle figure indipendentemente da una eventuale rotazione applicata nella loro rappresentazione grafica.</article></section><section class="subsection" id="subsection-106"><h3 class="heading hide-type">
+<span class="type">Sottosezione</span> <span class="codenumber">5.3.6</span> <span class="title">vincoli interni</span>
+</h3>
+<p id="p-435">I vincoli interni prescrivono, a differenza dai vincoli esterni, condizioni cinematiche nei punti di contatto tra uno o più corpi. Pertanto, da un punto di vista statico, vengono trattati in termini di reazioni vincolari scambiate dai corpi interessati dalla condizione di vincolo. In figura viene illustrato uno dei casi più ricorrenti, ovvero il caso della cerniera interna.</p>
+<figure class="figure figure-like" id="statica_cerniera_interna_fig"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/cernierainterna.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.3.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure></section></section></div></main>
+</div>
+</body>
+</html>

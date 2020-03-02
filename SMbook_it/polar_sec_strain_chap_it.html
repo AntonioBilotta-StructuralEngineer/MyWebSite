@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-03-02T15:07:53+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="it-IT">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Solid Mechanics - decomposizione polare</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Torna alla pagina dei contenuti</a><div class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+\newcommand{\tens}[1]{\boldsymbol{#1}}
+\newcommand{\mat}[1]{\left[\boldsymbol{#1}\right]}
+\newcommand{\matWp}[2]{\left[\boldsymbol{#1}_{#2}\right]}
+\newcommand{\tensQ}[1]{\pmb{\mathbb{#1}}}
+\newcommand{\tensQc}[1]{\mathbb{#1}}
+
+\newcommand{\transp}[1]{{#1}^{\textrm{T}}}
+\newcommand{\veczero}{\vec{0}}
+\newcommand{\body}{\Omega}
+\newcommand{\calvec}[1]{\boldsymbol{\mathcal{#1}}}
+\newcommand{\commadiff}[2]{{#1,}_{#2}}
+\newcommand{\regulardiff}[2]{ \frac{\partial#1}{\partial#2} }
+\newcommand{\func}[2]{#1\left(#2\right)}
+\newcommand{\transp}[1]{{#1}^{\text{T}}}
+\newcommand{\transpm}[1]{{#1}^{-\text{T}}}
+\newcommand{\trace}[1]{\text{tr}#1}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="./images/sm_logo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="solid_mechanics_book_it.html"><span class="title">Introduzione alla meccanica dei solidi</span></a></h1>
+<p class="byline">Antonio Bilotta</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contenuti</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="solid_mechnics_book_index_it.html" title="Indice">Indice</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="determinant_sec_strain_chap_it.html" title="Precedente">Prec</a><a id="upbutton" class="up-button button toolbar-item" href="chap_strain_it.html" title="Sopra">Su</a><a id="nextbutton" class="next-button button toolbar-item" href="principal_directions_sec_strain_chap_it.html" title="Successivo">Succ</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contenuti</button><a class="previous-button toolbar-item button" href="determinant_sec_strain_chap_it.html" title="Precedente">Prec</a><a class="up-button button toolbar-item" href="chap_strain_it.html" title="Sopra">Su</a><a class="next-button button toolbar-item" href="principal_directions_sec_strain_chap_it.html" title="Successivo">Succ</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="front_matter_it.html" data-scroll="front_matter_it"><span class="title">Copertina</span></a><ul>
+<li><a href="front_colophon_it.html" data-scroll="front_colophon_it">Colofone</a></li>
+<li><a href="author_bio_it.html" data-scroll="author_bio_it">Biografia dell'autore</a></li>
+<li><a href="dedication_it.html" data-scroll="dedication_it">Dedica</a></li>
+<li><a href="acknowledgement_it.html" data-scroll="acknowledgement_it">Ringraziamenti</a></li>
+<li><a href="preface_it.html" data-scroll="preface_it">Prefazione</a></li>
+</ul>
+</li>
+<li class="link part"><a href="continuum_mechanics_it.html" data-scroll="continuum_mechanics_it"><span class="codenumber">I</span> <span class="title">meccanica del continuo</span></a></li>
+<li class="link">
+<a href="chap_strain_it.html" data-scroll="chap_strain_it"><span class="codenumber">1</span> <span class="title">cinematica dei corpi</span></a><ul>
+<li><a href="configurations_sec_strain_chap_it.html" data-scroll="configurations_sec_strain_chap_it">configurazioni</a></li>
+<li><a href="transformations_sec_strain_chap_it.html" data-scroll="transformations_sec_strain_chap_it">trasformazioni</a></li>
+<li><a href="gradient_sec_strain_chap_it.html" data-scroll="gradient_sec_strain_chap_it">gradiente della trasformazione</a></li>
+<li><a href="displacement_sec_strain_chap_it.html" data-scroll="displacement_sec_strain_chap_it">il campo di spostamento</a></li>
+<li><a href="determinant_sec_strain_chap_it.html" data-scroll="determinant_sec_strain_chap_it">determinante del gradiente della trasformazione</a></li>
+<li><a href="polar_sec_strain_chap_it.html" data-scroll="polar_sec_strain_chap_it" class="active">decomposizione polare</a></li>
+<li><a href="principal_directions_sec_strain_chap_it.html" data-scroll="principal_directions_sec_strain_chap_it">tensore di deformazione \(\tens{U}\) e direzioni principali (trasformazione degli elementi di linea)</a></li>
+<li><a href="measures_sec_strain_chap_it.html" data-scroll="measures_sec_strain_chap_it">misure di deformazione</a></li>
+<li><a href="infinitesimal_sec_strain_chap_it.html" data-scroll="infinitesimal_sec_strain_chap_it">tensore della deformazione infinitesima</a></li>
+<li><a href="exercises_sec_strain_chap_it.html" data-scroll="exercises_sec_strain_chap_it">esercizi</a></li>
+<li><a href="answers_sec_strain_chap_it.html" data-scroll="answers_sec_strain_chap_it">risposte ad alcuni degli esercizi proposti</a></li>
+<li><a href="refs_strain_chap_it.html" data-scroll="refs_strain_chap_it">riferimenti e letture suggerite</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap_stress_it.html" data-scroll="chap_stress_it"><span class="codenumber">2</span> <span class="title">forze, equilibrio e tensione</span></a><ul>
+<li><a href="basics_sec_stress_chap_it.html" data-scroll="basics_sec_stress_chap_it">l'ipotesi di continuità</a></li>
+<li><a href="equilibrium_sec_stress_chap_it.html" data-scroll="equilibrium_sec_stress_chap_it">equazioni di equilibrio</a></li>
+<li><a href="stress_sec_stress_chap_it.html" data-scroll="stress_sec_stress_chap_it">il tensore della tensione di Cauchy</a></li>
+<li><a href="stress_analysis_sec_stress_chap_it.html" data-scroll="stress_analysis_sec_stress_chap_it">analisi dello stato di tensione</a></li>
+<li><a href="plv_sec_stress_chap_it.html" data-scroll="plv_sec_stress_chap_it">principio dei lavori virtuali</a></li>
+<li><a href="exercises_sec_stress_chap_it.html" data-scroll="exercises_sec_stress_chap_it">esercizi</a></li>
+<li><a href="answers_sec_stress_chap_it.html" data-scroll="answers_sec_stress_chap_it">risposte ad alcuni degli esercizi proposti</a></li>
+<li><a href="refs_stress_chap_it.html" data-scroll="refs_stress_chap_it">riferimenti e letture suggerite</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap_elasticity_it.html" data-scroll="chap_elasticity_it"><span class="codenumber">3</span> <span class="title">comportamento elastico</span></a><ul>
+<li><a href="motivations_sec_elasticity_chap_it.html" data-scroll="motivations_sec_elasticity_chap_it">motivazione</a></li>
+<li><a href="uniaxial_sec_elasticity_chap_it.html" data-scroll="uniaxial_sec_elasticity_chap_it">stati uniassiali</a></li>
+<li><a href="multiaxial_sec_elasticity_chap_it.html" data-scroll="multiaxial_sec_elasticity_chap_it">stati pluriassiali</a></li>
+<li><a href="problem_sec_elasticity_chap_it.html" data-scroll="problem_sec_elasticity_chap_it">il problema elastico</a></li>
+<li><a href="stretched_beam_sec_elasticity_chap_it.html" data-scroll="stretched_beam_sec_elasticity_chap_it">modelli monodimensionali: trave tesa</a></li>
+<li><a href="bent_beam_sec_elasticity_chap_it.html" data-scroll="bent_beam_sec_elasticity_chap_it">modelli monodimensionali: trave inflessa</a></li>
+<li><a href="stretched_beam_applications_sec_elasticity_chap_it.html" data-scroll="stretched_beam_applications_sec_elasticity_chap_it">applicazioni del modello di trave tesa</a></li>
+<li><a href="bent_beam_applications_sec_elasticity_chap_it.html" data-scroll="bent_beam_applications_sec_elasticity_chap_it">applicazioni del modello di trave inflessa</a></li>
+<li><a href="exercises_sec_elasticity_chap_it.html" data-scroll="exercises_sec_elasticity_chap_it">esercizi</a></li>
+<li><a href="answers_sec_elasticity_chap_it.html" data-scroll="answers_sec_elasticity_chap_it">risposte ad alcuni degli esercizi proposti</a></li>
+<li><a href="refs_elasticity_chap_it.html" data-scroll="refs_elasticity_chap_it">riferimenti e letture suggerite</a></li>
+</ul>
+</li>
+<li class="link part"><a href="beams_systems_it.html" data-scroll="beams_systems_it"><span class="codenumber">II</span> <span class="title">sistemi rigidi</span></a></li>
+<li class="link">
+<a href="rigid_body_kinematics_chap_it.html" data-scroll="rigid_body_kinematics_chap_it"><span class="codenumber">4</span> <span class="title">cinematica</span></a><ul>
+<li><a href="description_sec_rigid_body_kinematics_chap_it.html" data-scroll="description_sec_rigid_body_kinematics_chap_it">descrizione cinematica di base</a></li>
+<li><a href="constraints_sec_rigid_body_kinematics_chap_it.html" data-scroll="constraints_sec_rigid_body_kinematics_chap_it">vincoli</a></li>
+<li><a href="analysis_sec_rigid_body_kinematics_chap_it.html" data-scroll="analysis_sec_rigid_body_kinematics_chap_it">analisi cinematica</a></li>
+<li><a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html" data-scroll="analysis_examples_sec_rigid_body_kinematics_chap_it">applicazione dell'analisi cinematica ai sistemi di corpi rigidi</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="rigid_body_statics_chap_it.html" data-scroll="rigid_body_statics_chap_it"><span class="codenumber">5</span> <span class="title">statica</span></a><ul>
+<li><a href="equilibrium_sec_rigid_body_statics_chap_it.html" data-scroll="equilibrium_sec_rigid_body_statics_chap_it">equazioni di equilibrio</a></li>
+<li><a href="planecase_sec_rigid_body_statics_chap_it.html" data-scroll="planecase_sec_rigid_body_statics_chap_it">il caso piano</a></li>
+<li><a href="constraints_sec_rigid_body_statics_chap_it.html" data-scroll="constraints_sec_rigid_body_statics_chap_it">vincoli</a></li>
+<li><a href="free_body_sec_rigid_body_statics_chap_it.html" data-scroll="free_body_sec_rigid_body_statics_chap_it">diagrammi di corpo libero</a></li>
+<li><a href="analysis_sec_rigid_body_statics_chap_it.html" data-scroll="analysis_sec_rigid_body_statics_chap_it">analisi statica</a></li>
+<li><a href="analysis_examples_sec_rigid_body_statics_chap_it.html" data-scroll="analysis_examples_sec_rigid_body_statics_chap_it">applicazione dell'analisi statica ai sistemi di corpi rigidi</a></li>
+<li><a href="sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_it">sollecitazioni</a></li>
+<li><a href="indefinte_sec_rigid_body_statics_chap_it.html" data-scroll="indefinte_sec_rigid_body_statics_chap_it">equazioni indefinite di equilibrio per la trave piana</a></li>
+<li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it">calcolo e diagrammi delle sollecitazioni</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter_it.html" data-scroll="backmatter_it"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="solid_mechnics_book_index_it.html" data-scroll="solid_mechnics_book_index_it"><span class="title">Indice</span></a></li>
+<li class="link"><a href="back_colophon_it.html" data-scroll="back_colophon_it"><span class="title">Colofone</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Scritto con PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="polar_sec_strain_chap_it"><h2 class="heading hide-type">
+<span class="type">Sezione</span> <span class="codenumber">1.6</span> <span class="title">decomposizione polare</span>
+</h2>
+<a href="polar_sec_strain_chap_it.html" class="permalink">¶</a><p id="p-78"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><iframe id="video-5" width="456" height="256" allowfullscreen="" src="https://www.youtube.com/embed/wel_JSrvreo?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></p>
+<p id="p-79">La possibilità che una data trasformazione lineare possa essere il risultato della composizione di più trasformazioni lineari e la considerazione fisica che il moto di un corpo si compone di trasformazioni elementari come la <em class="emphasis">rotazione</em> e la <em class="emphasis">deformazione pura</em>, portano al seguente risultato fondamentale formalizzato in termini di teorema.</p>
+<article class="paragraphs" id="paragraphs-1"><h5 class="heading"><span class="title">Teorema di decomposizione polare.</span></h5>
+<p id="p-80">Dato il gradiente della deformazione \(\func{\tens{F}}{\vec{X}}\text{,}\) in ogni punto del corpo soggetto al moto esiste un'unica <em class="emphasis">decomposizione polare</em> definita come segue</p>
+<div class="displaymath">
+\begin{equation}
+\tens{F} = \tens{R}\tens{U} = \tens{V}\tens{R}.\label{polar_dec_eq}\tag{1.6.1}
+\end{equation}
+</div>
+<p data-braille="continuation">\(\tens{R}\) è il <em class="emphasis">tensore di rotazione</em>, quindi un tensore ortogonale proprio, che soddisfa la relazione</p>
+<div class="displaymath">
+\begin{equation}
+\transp{\tens{R}}\tens{R} = \tens{I}\,.\tag{1.6.2}
+\end{equation}
+</div>
+<p data-braille="continuation">\(\tens{U}\) e \(\tens{V}\) sono, rispettivamente, il <em class="emphasis">tensore destro di deformazione</em> e il <em class="emphasis">tensore sinistro di deformazione</em>. Tali tensori sono tensori sono <em class="emphasis">unici</em>, <em class="emphasis">definiti positivi</em> e <em class="emphasis">simmetrici</em>. Il fatto che \(\tens{U}\) e \(\tens{V}\) siano definiti positivi impone che per qualsiasi vettore \(\vec{v} \neq \vec0\) sia soddisfatta la proprietà</p>
+<div class="displaymath">
+\begin{equation}
+\vec{v} \cdot \left(\tens{U} \vec{v} \right) &gt; 0 \,,\qquad
+\vec{v} \cdot \left(\tens{V} \vec{v} \right) &gt; 0\,,\tag{1.6.3}
+\end{equation}
+</div>
+<p data-braille="continuation">mentre la simmetria impone che</p>
+<div class="displaymath">
+\begin{equation}
+\tens{U} = \transp{\tens{U}}\,,\qquad \tens{V} = \transp{\tens{V}}\,.\tag{1.6.4}
+\end{equation}
+</div></article><article class="remark remark-like" id="remark-3"><h6 class="heading">
+<span class="type">Commento</span><span class="space"> </span><span class="codenumber">1.6.1</span><span class="period">.</span>
+</h6>
+<p id="p-81">Applicando la decomposizione polare destra alla relazione <a class="xref" data-knowl="./knowl/dX_to_dx_eq.html" title="Equazione 1.3.9">(1.3.9)</a> si ottiene</p>
+<div class="displaymath">
+\begin{equation}
+d\vec{x} = \tens{F}\, d\vec{X} = \tens{R}\, \left(\tens{U}\, d\vec{X}\right) \,,\tag{1.6.5}
+\end{equation}
+</div>
+<p data-braille="continuation">che evidenzia come il vettore \(d\vec{X}\) venga prima deformato e poi ruotato. Applicando invece la decomposisione polare sinistra si ottiene</p>
+<div class="displaymath">
+\begin{equation}
+d\vec{x} = \tens{F}\, d\vec{X} = \tens{V}\, \left(\tens{R}\, d\vec{X}\right) \,,\tag{1.6.6}
+\end{equation}
+</div>
+<p data-braille="continuation">da interpretare come sequenza di deformazione di \(d\vec{X}\) seguita da una rotazione. Il teorema di decomposizione polare coglie quindi le trasformazioni elementari, rotazione e deformazione pura, che compongono \(\tens{F}\) e mette in evidenza la non commutatività delle due trasformazioni.</p></article><article class="remark remark-like" id="rotation_remark"><h6 class="heading">
+<span class="type">Commento</span><span class="space"> </span><span class="codenumber">1.6.2</span><span class="period">.</span><span class="space"> </span><span class="title">tensori di rotazione.</span>
+</h6>
+<p id="p-82">Abbiamo già più volte incontrato il tensore 2D relativo ad una rotazione in sento antiorario di \(90^o\) che in termini matriciali ha la seguente espressione</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{R}_{90^o} = 
+\left[\begin{array}{cc}
+0 &amp; -1 \\ 1 &amp; 0
+\end{array}\right]\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">Per tale tensore è facile verificare le seguenti proprietà</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{R}_{90^o}^{-1} = 
+\left[\begin{array}{cc}
+0 \amp 1 \\ -1 \amp 0
+\end{array}\right] = \transp{\mat{R}_{90^o}}\,,\quad
+\transp{\tens{R}_{90^o}}\,\tens{R}_{90^o}= \tens{I}\,,\quad
+\det{\tens{R}_{90^o}} = 1\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">Le proprietà elencate non sono specifiche del particolare tensore considerato ma sono soddisfatte da tutti i tensori di rotazione, qualsiasi sia l'entità dell'angolo di rotazione. Al fine di verificare ciò, si consideri la trasformazione lineare che ruota di un generico angolo \(\theta\) un vettore assegnato \(\vec{X}\text{.}\) <p id="p-83"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><iframe id="video-6" width="456" height="256" allowfullscreen="" src="https://www.youtube.com/embed/CHisivWic3Q?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></p> Come mostrato si ottiene il seguente risultato</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{\chi}_{\theta}\left(\vec{X} \right) = 
+\left[\begin{array}{c}
+X_1\cos{\theta} - X_2\sin{\theta} \\ X_1\sin{\theta} + X_2\cos{\theta}
+\end{array}\right] =
+\left[\begin{array}{cc}
+\cos{\theta} \amp -\sin{\theta} \\ \sin{\theta} \amp \cos{\theta}
+\end{array}\right]
+\left[\begin{array}{c}
+X_1 \\ X_2
+\end{array}\right]\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">È facile verificare le proprietà</p>
+<div class="displaymath">
+\begin{equation*}
+\transp{\tens{R}}\,\tens{R} = \tens{I}\,,\quad
+\det{\tens{R}} = 1\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">con le quali si definiscono i <em class="emphasis">tensori ortogonali propri</em>. La condizione appena scritta consente di ottenere</p>
+<div class="displaymath">
+\begin{equation*}
+\det{\tens{F}} = \det{(\tens{R}\,\tens{U})} = \det{\tens{R}}\,\det{\tens{U}} = \det{\tens{U}}\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">relazione che conferma il fatto che il cambio di volume non può che essere legato unicamente alla parte \(\tens{U}\) della trasformazione. È anche facile verificare che</p>
+<div class="displaymath">
+\begin{equation*}
+\det{\tens{U}} = \det{\tens{V}}\,.
+\end{equation*}
+</div></article><article class="remark remark-like" id="remark-5"><h6 class="heading">
+<span class="type">Commento</span><span class="space"> </span><span class="codenumber">1.6.3</span><span class="period">.</span><span class="space"> </span><span class="title">tensori definiti positivi.</span>
+</h6>
+<p id="p-84">Se un tensore simmetrico \(\tens{T}\) verifica la condizione</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{v} \cdot \tens{T} \vec{v} &gt; 0\,,\quad \forall \vec{v} \neq \vec0
+\end{equation*}
+</div>
+<p data-braille="continuation">allora il tensore è definito positivo. Da un punto di vista geometrico tale condizione è facilmente interpretabile come segue: ogni volta che si applica la trasformazione lineare \(\tens{T}\) a qualsiasi vettore non nullo, si ottiene un vettore \(\tens{T}\vec{v}\) che forma con il vettore di partenza \(\vec{v}\) un angolo inferiore a \(\pi/2\text{,}\) condizione che ha comunque, molto spesso, un significato fisico ben preciso.</p>
+<p id="p-85">Sulla condizione di positività verrà fornito un ulteriore approfondimento quando si parlerà di autovalori ed autovettori.</p></article><article class="insight remark-like" id="pol_dec_insight"><h6 class="heading">
+<span class="type">Approfondimento</span><span class="space"> </span><span class="codenumber">1.6.4</span><span class="period">.</span><span class="space"> </span><span class="title">come ricostruire la decomposizione polare del gradiente della trasformazione.</span>
+</h6>
+<p id="p-86">Il problema di risalire ai tensori \(\tens{U}\) e \(\tens{R}\) a partire dal gradiente \(\tens{F}\) può essere affrontato nel modo seguente (la procedura è analoga nel caso di \(\tens{V}\) e \(\tens{R}\)). Si assuma di avere valutato, per semplicità in 2D, il gradiente dellla trasformazione e che la sua espressione valga</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{F} =
+\left[\begin{array}{cc} b_1 \amp b_2 \\ b_3  \amp b_4  \end{array}\right]\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">Per il teorema di decomposizione polare si ha che</p>
+<div class="displaymath">
+\begin{equation*}
+\tens{R}\,\tens{U} = \tens{F}\,
+\end{equation*}
+</div>
+<p data-braille="continuation">esplicitabile in termini matriciali come segue</p>
+<div class="displaymath">
+\begin{equation*}
+\left[\begin{array}{cc} \alpha \amp \beta \\ \beta  \amp \gamma  \end{array}\right]
+\left[\begin{array}{cc} c \amp -s \\ s  \amp c  \end{array}\right] =
+\left[\begin{array}{cc} b_1 \amp b_2 \\ b_3  \amp b_4  \end{array}\right]\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">ovvero</p>
+<div class="displaymath">
+\begin{equation*}
+\left[\begin{array}{cc} (\alpha\,c +\beta\,s) \amp (-\alpha\,s+\beta\,c) \\ (\beta\,c +\gamma\,s) \amp (-\beta\,s+\gamma\,c)  \end{array}\right]
+=
+\left[\begin{array}{cc} b_1 \amp b_2 \\ b_3  \amp b_4  \end{array}\right]\,.
+\end{equation*}
+</div>
+<p id="p-87">Quanto ottenuto equivale a scrivere le seguenti 4 equazioni</p>
+<div class="displaymath">
+\begin{gather*}
+(\alpha\,c +\beta\,s)= b_1\,,\\
+(-\alpha\,s+\beta\,c)= b_2\,,\\
+(\beta\,c +\gamma\,s)= b_3\,,\\
+(-\beta\,s+\gamma\,c)= b_4\,,
+\end{gather*}
+</div>
+<p data-braille="continuation">dove i coefficienti \(b_1\text{,}\) \(b_2\text{,}\) \(b_3\) e \(b_4\) sono noti mentre \(\alpha\text{,}\) \(\beta\text{,}\) \(\gamma\text{,}\) \(c\) e \(s\) sono incogniti. Pertano le 4 equazioni equazioni ottenute sono 4 equazioni non lineari rispetto alle 5 incognite elencate, ovvero le 3 componenti di \(\tens{U}\) e le 2 componenti, coseno e seno dell'angolo di rotazione, di \(\tens{R}\text{.}\) Per risolvere tale problema occorre una quinta equazione. La condizione</p>
+<div class="displaymath">
+\begin{equation*}
+\det{\mat{R}} = 1
+\end{equation*}
+</div>
+<p data-braille="continuation">fornisce l'equazione cercata</p>
+<div class="displaymath">
+\begin{equation*}
+c^2 + s^2 = 1\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">Pertanto il sistema nonlineare di equazioni da risolvere diventa</p>
+<div class="displaymath">
+\begin{gather*}
+(\alpha\,c +\beta\,s)= b_1\,,\\
+(-\alpha\,s+\beta\,c)= b_2\,,\\
+(\beta\,c +\gamma\,s)= b_3\,,\\
+(-\beta\,s+\gamma\,c)= b_4\,,\\
+c^2 + s^2 = 1\,.
+\end{gather*}
+</div>
+<p id="p-88">Nel segutio viene riportata la soluzione delle precedenti equazioni nel caso delle semplici trasformazioni già considerate negli esempi precedenti. Ovviamente la soluzione del sistema nonlineare di equazioni non sarebbe richiesta nei primi tre casi in quanto la semplice osservazione della <em class="emphasis">forma</em> del gradiente consente di ricostruirne alla decomposizione polare. A scopo dimostrativo si effetuano comunque i calcoli in tutti casi considerati utilizzando come al solito una serie di istruzioni MATLAB. Nel caso della Trasformazione 1 il calcolo viene riportato descrivendo con maggiore dettaglio le operazioni svolte, negli altri casi si riportano le operazioni effettuate in forma più schematica.</p></article><article class="assemblage assemblage-like" id="assemblage-9"><h6 class="heading"><span class="title">Trasformazione 1.</span></h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:45%;justify-content:flex-start;"><p id="p-89"><img src="images/90degreesRotation.png" style="width: 100%; height: auto;" alt=""></p></div>
+<div class="sbspanel" style="width:20%;justify-content:flex-start;"><div class="displaymath" id="p-90">
+\begin{equation*}
+\mat{F} =
+\left[\begin{array}{cc} 0 \amp -1 \\ 1  \amp 0  \end{array}\right]
+\end{equation*}
+</div></div>
+<div class="sbspanel" style="width:35%;justify-content:flex-start;"><div class="displaymath" id="p-91">
+\begin{gather*}
+(\alpha\,c +\beta\,s)= 0\,,\\
+(-\alpha\,s+\beta\,c)= -1\,,\\
+(\beta\,c +\gamma\,s)= 1\,,\\
+(-\beta\,s+\gamma\,c)= 0\,,\\
+c^2 + s^2 = 1\,.
+\end{gather*}
+</div></div>
+</div></div>
+<p id="p-92">Se si assume di collocare le 5 incognite in un vettore ordinato come segue</p>
+<div class="displaymath">
+\begin{equation*}
+x(1) = \alpha\,,\;
+x(2) = \beta\,,\;
+x(3) = \gamma\,,\;
+x(4) = c\,,\;
+x(5) = s\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">le istruzioni MATLAB possono essere definite come segue <figure class="listing figure-like" id="listing-15"><pre class="console"><b>funT1 = @(x) ...
+[x(1)*x(4) + x(2)*x(5); ...
+-x(1)*x(5) + x(2)*x(4) + 1; ...
+x(2)*x(4) + x(3)*x(5) - 1; ...
+-x(2)*x(5) + x(3)*x(4); ...
+x(4)^2 + x(5)^2 - 1];
+
+guess = [1, 1, 1, 1, 1];
+fsolve(@funT1, guess)
+</b></pre>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.6.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure> pervendendo al seguente seguente output <figure class="listing figure-like" id="listing-16"><pre class="console"><b>Equation solved.
+
+fsolve completed because the vector of function values is near zero
+as measured by the value of the function tolerance, and
+the problem appears regular as measured by the gradient.
+
+&lt;stopping criteria details&gt;
+
+ans =
+
+    1.0000    0.0000    1.0000    0.0000    1.0000
+</b></pre>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.6.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Pertanto si ottiene il risultato atteso</p>
+<div class="displaymath">
+\begin{equation*}
+x(1) = \alpha= 1\,,\quad
+x(2) = \beta = 0\,,\quad
+x(3) = \gamma = 1\,,
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+x(4) = c=0\,,\quad
+x(5) = s=1\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">ovvero</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{U} = \left[\begin{array}{cc} 1 \amp 0 \\ 0  \amp 1  \end{array}\right]\,,\quad
+\mat{R} = \left[\begin{array}{cc} 0 \amp -1 \\ 1  \amp 0  \end{array}\right]\,.
+\end{equation*}
+</div></article><article class="assemblage assemblage-like" id="assemblage-10"><h6 class="heading"><span class="title">Trasformazione 2.</span></h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:45%;justify-content:flex-start;"><p id="p-93"><img src="images/RightExtension.png" style="width: 100%; height: auto;" alt=""></p></div>
+<div class="sbspanel" style="width:20%;justify-content:flex-start;"><div class="displaymath" id="p-94">
+\begin{equation*}
+\mat{F} =
+\left[\begin{array}{cc} 2 \amp 0 \\ 0  \amp 1  \end{array}\right]
+\end{equation*}
+</div></div>
+<div class="sbspanel" style="width:35%;justify-content:flex-start;"><div class="displaymath" id="p-95">
+\begin{gather*}
+(\alpha\,c +\beta\,s)= 2\,,\\
+(-\alpha\,s+\beta\,c)= 0\,,\\
+(\beta\,c +\gamma\,s)= 0\,,\\
+(-\beta\,s+\gamma\,c)= 1\,,\\
+c^2 + s^2 = 1\,.
+\end{gather*}
+</div></div>
+</div></div>
+<p id="p-96">Istruzioni MATLAB <figure class="listing figure-like" id="listing-17"><pre class="console"><b>funT2 = @(x) ...
+[x(1)*x(4) + x(2)*x(5) - 2; ...
+-x(1)*x(5) + x(2)*x(4); ...
+x(2)*x(4) + x(3)*x(5); ...
+-x(2)*x(5) + x(3)*x(4) - 1; ...
+x(4)^2 + x(5)^2 - 1];
+
+guess = [1, 1, 1, 1, 1];
+fsolve(@funT2, guess)
+</b></pre>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.6.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Risultato</p>
+<div class="displaymath">
+\begin{equation*}
+x(1) = \alpha= 2\,,\quad
+x(2) = \beta = 0\,,\quad
+x(3) = \gamma = 1\,,
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+x(4) = c=1\,,\quad
+x(5) = s=0\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">ovvero</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{U} = \left[\begin{array}{cc} 2 \amp 0 \\ 0  \amp 1  \end{array}\right]\,,\quad
+\mat{R} = \left[\begin{array}{cc} 1 \amp 0 \\ 0  \amp 1  \end{array}\right]\,.
+\end{equation*}
+</div></article><article class="assemblage assemblage-like" id="assemblage-11"><h6 class="heading"><span class="title">Trasformazione 3.</span></h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:45%;justify-content:flex-start;"><p id="p-97"><img src="images/UpExtension.png" style="width: 100%; height: auto;" alt=""></p></div>
+<div class="sbspanel" style="width:20%;justify-content:flex-start;"><div class="displaymath" id="p-98">
+\begin{equation*}
+\mat{F} =
+\left[\begin{array}{cc} 1 \amp 0 \\ 0  \amp 1.5  \end{array}\right]
+\end{equation*}
+</div></div>
+<div class="sbspanel" style="width:35%;justify-content:flex-start;"><div class="displaymath" id="p-99">
+\begin{gather*}
+(\alpha\,c +\beta\,s)= 1\,,\\
+(-\alpha\,s+\beta\,c)= 0\,,\\
+(\beta\,c +\gamma\,s)= 0\,,\\
+(-\beta\,s+\gamma\,c)= 1.5\,,\\
+c^2 + s^2 = 1\,.
+\end{gather*}
+</div></div>
+</div></div>
+<p id="p-100">Istruzioni MATLAB <figure class="listing figure-like" id="listing-18"><pre class="console"><b>funT3 = @(x) ...
+[x(1)*x(4) + x(2)*x(5) - 1; ...
+-x(1)*x(5) + x(2)*x(4); ...
+x(2)*x(4) + x(3)*x(5); ...
+-x(2)*x(5) + x(3)*x(4) - 1.5; ...
+x(4)^2 + x(5)^2 - 1];
+
+guess = [1, 1, 1, 1, 1];
+fsolve(@funT3, guess)
+</b></pre>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.6.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Risultato</p>
+<div class="displaymath">
+\begin{equation*}
+x(1) = \alpha= 1\,,\quad
+x(2) = \beta = 0\,,\quad
+x(3) = \gamma = 1.5\,,
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+x(4) = c=1\,,\quad
+x(5) = s=0\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">ovvero</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{U} = \left[\begin{array}{cc} 1 \amp 0 \\ 0  \amp 1.5  \end{array}\right]\,,\quad
+\mat{R} = \left[\begin{array}{cc} 1 \amp 0 \\ 0  \amp 1  \end{array}\right]\,.
+\end{equation*}
+</div></article><article class="assemblage assemblage-like" id="assemblage-12"><h6 class="heading"><span class="title">Trasformazione 4.</span></h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:45%;justify-content:flex-start;"><p id="p-101"><img src="images/RightShear.png" style="width: 100%; height: auto;" alt=""></p></div>
+<div class="sbspanel" style="width:20%;justify-content:flex-start;"><div class="displaymath" id="p-102">
+\begin{equation*}
+\mat{F} =
+\left[\begin{array}{cc} 1 \amp 1 \\ 0  \amp 1  \end{array}\right]
+\end{equation*}
+</div></div>
+<div class="sbspanel" style="width:35%;justify-content:flex-start;"><div class="displaymath" id="p-103">
+\begin{gather*}
+(\alpha\,c +\beta\,s)= 1\,,\\
+(-\alpha\,s+\beta\,c)= 1\,,\\
+(\beta\,c +\gamma\,s)= 0\,,\\
+(-\beta\,s+\gamma\,c)= 1\,,\\
+c^2 + s^2 = 1\,.
+\end{gather*}
+</div></div>
+</div></div>
+<p id="p-104">Istruzioni MATLAB <figure class="listing figure-like" id="listing-19"><pre class="console"><b>funT4 = @(x) ...
+[x(1)*x(4) + x(2)*x(5) - 1; ...
+-x(1)*x(5) + x(2)*x(4) - 1; ...
+x(2)*x(4) + x(3)*x(5); ...
+-x(2)*x(5) + x(3)*x(4) - 1; ...
+x(4)^2 + x(5)^2 - 1];
+
+guess = [1, 1, 1, 1, 1];
+fsolve(@funT4, guess)
+</b></pre>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.6.9<span class="period">.</span></span><span class="space"> </span></figcaption></figure> In questo caso il risultato è più interessante dei casi precedenti. In particolare si ha</p>
+<div class="displaymath">
+\begin{equation*}
+x(1) = \alpha= 1.3416\,,\quad
+x(2) = \beta = 0.4472\,,\quad
+x(3) = \gamma =  0.8944\,,
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+x(4) = c=0.8944\,,\quad
+x(5) = s=-0.4472\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">ovvero</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{U} = \left[\begin{array}{cc} 1.3416 \amp  0.4472 \\  0.4472  \amp  0.8944  \end{array}\right]\,,\quad
+\mat{R} = \left[\begin{array}{cc}  0.8944 \amp 0.4472 \\ -0.4472  \amp  0.8944  \end{array}\right]\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">Risultato che può essere rappresentato graficamente ricordando il significato delle colonne di \(\mat{U}\) e \(\mat{R}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{U} = \left[\begin{array}{cc} \func{\vec{\chi}_{\tens{U}}}{\vec{e}_1} \amp \func{\vec{\chi}_{\tens{U}}}{\vec{e}_2} \end{array}\right]\,,\quad
+\mat{R} = \left[\begin{array}{cc} \func{\vec{\chi}_{\tens{R}}}{\vec{e}_1} \amp \func{\vec{\chi}_{\tens{R}}}{\vec{e}_2}  \end{array}\right]\,.
+\end{equation*}
+</div></article></section></div></main>
+</div>
+</body>
+</html>

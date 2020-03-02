@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-03-02T15:07:55+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="assemblage assemblage-like"><h6 class="heading"><span class="title">alcune trasformazioni di base.</span></h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:3.75%;margin-right:3.75%;">
+<div class="sbspanel" style="width:43.2432432432432%;justify-content:flex-start;">
+<p>Trasformazione 1 (rotazione di 90 gradi in senso antiorario)</p>
+<div class="displaymath">
+\begin{equation*}
+\left[\begin{array}{c}x_1\\x_2\end{array}\right] =
+\func{\vec{\chi}}{\left[\begin{array}{c}X_1\\X_2\end{array}\right]} =
+\left[\begin{array}{c}-X_2\\X_1\end{array}\right]
+\end{equation*}
+</div>
+</div>
+<div class="sbspanel" style="width:48.6486486486486%;justify-content:flex-start;"><img src="images/90degreesRotation.png" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<p>Istruzioni per la definizione della funzione MATLAB associata alla trasformazione assegnata e per il suo utilizzo. <figure class="listing figure-like"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
+
+X = [1; 2];
+T1(X)
+</b></pre>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.2.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:3.75%;margin-right:3.75%;">
+<div class="sbspanel" style="width:43.2432432432432%;justify-content:flex-start;">
+<p>Trasformazione 2 (estensione orizzontale)</p>
+<div class="displaymath">
+\begin{equation*}
+\left[\begin{array}{c}x_1\\x_2\end{array}\right] =
+\func{\vec{\chi}}{\left[\begin{array}{c}X_1\\X_2\end{array}\right]} =
+\left[\begin{array}{c}2\,X_1\\X_2\end{array}\right]
+\end{equation*}
+</div>
+</div>
+<div class="sbspanel" style="width:48.6486486486486%;justify-content:flex-start;"><img src="images/RightExtension.png" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<p>Istruzioni MATLAB. <figure class="listing figure-like"><pre class="console"><b>T2 = @(X) [2*X(1); X(2)];
+
+X = [1; -1];
+T2(X)
+</b></pre>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.2.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:3.75%;margin-right:3.75%;">
+<div class="sbspanel" style="width:43.2432432432432%;justify-content:flex-start;">
+<p>Trasformazione 3 (estensione verticale)</p>
+<div class="displaymath">
+\begin{equation*}
+\left[\begin{array}{c}x_1\\x_2\end{array}\right] =
+\func{\vec{\chi}}{\left[\begin{array}{c}X_1\\X_2\end{array}\right]} =
+\left[\begin{array}{c}X_1\\1.5\,X_2\end{array}\right]
+\end{equation*}
+</div>
+</div>
+<div class="sbspanel" style="width:48.6486486486486%;justify-content:flex-start;"><img src="images/UpExtension.png" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<p>Istruzioni MATLAB <figure class="listing figure-like"><pre class="console"><b>T3 = @(X) [X(1); 1.5*X(2)];
+
+v = [4; 10];
+T3(v)
+</b></pre>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.2.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:3.75%;margin-right:3.75%;">
+<div class="sbspanel" style="width:43.2432432432432%;justify-content:flex-start;">
+<p>Trasformazione 4 (taglio a destra)</p>
+<div class="displaymath">
+\begin{equation*}
+\left[\begin{array}{c}x_1\\x_2\end{array}\right] =
+\func{\vec{\chi}}{\left[\begin{array}{c}X_1\\X_2\end{array}\right]} =
+\left[\begin{array}{c}X_1+X_2\\X_2\end{array}\right]
+\end{equation*}
+</div>
+</div>
+<div class="sbspanel" style="width:48.6486486486486%;justify-content:flex-start;"><img src="images/RightShear.png" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<p>Istruzioni MATLAB <figure class="listing figure-like"><pre class="console"><b>T4 = @(X) [X(1)+X(2); X(2)];
+
+u = [10; -1];
+T4(u)
+</b></pre>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.2.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><span class="incontext"><a href="transformations_sec_strain_chap_it.html#assemblage-2">in-context</a></span>
+</body>
+</html>

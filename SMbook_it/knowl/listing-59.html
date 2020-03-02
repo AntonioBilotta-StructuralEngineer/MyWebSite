@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-03-02T15:07:58+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<figure class="listing figure-like"><pre class="console"><b>% diagramma dello sforzo normale
+syms N(x);
+N(x) = 0;
+
+np = 100;
+Xv = 0:1/np:1;
+Nv = N(Xv);
+Beam = zeros(1, np+1);
+
+plot(Xv,Nv,'g',Xv,Beam,'k','LineWidth',2)
+set(gca, 'Ylim', [-1 1])
+
+
+% diagramma del taglio
+syms T(x,q,l);
+T(x,q,l) = -q*x+q*l/2;
+
+np = 100;
+Xv = 0:1/np:1;
+Tv = T(Xv, 1, 1);
+Beam = zeros(1, np+1);
+
+plot(Xv,Tv,'b',Xv,Beam,'k','LineWidth',2)
+set(gca, 'Ylim', [-1 1])
+
+
+% diagramma del momento flettente
+syms M(x,q,l);
+M(x,q,l) = q*l/2*x - q*l*x^2/2;
+
+np = 100;
+Xv = 0:1/np:1;
+Mv = M(Xv, 1, 1);
+Beam = zeros(1, np+1);
+
+plot(Xv,Mv,'r',Xv,Beam,'k','LineWidth',2)
+set(gca, 'Ylim', [-1 1])
+set(gca, 'YDir','reverse')
+</b></pre>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">5.9.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure><span class="incontext"><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html#listing-59">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-03-02T15:07:55+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="insight remark-like"><h6 class="heading">
+<span class="type">Approfondimento</span><span class="space"> </span><span class="codenumber">1.7.7</span><span class="period">.</span><span class="space"> </span><span class="title">il polinomio caratteristico.</span>
+</h6>
+<p>La valutazione degli autovalori ed autovettori associati al tensore \(\tens{U}\) passa attraverso la soluzione della seguente equazione cubica</p>
+<div class="displaymath">
+\begin{equation*}
+-\lambda^3 + \func{I_1}{\tens{U}} \lambda^2 - \func{I_2}{\tens{U}} \lambda + \func{I_3}{\tens{U}} = 0\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">dove compare il polinomio caratteristico il quale dipendende da tre quantità che prendono il nome di <em class="emphasis">invarianti</em> del tensore \(\tens{U}\text{.}\) Il termine invariante sta ad indicare che tali valori non cambiano al variare del sistema di riferimento rispetto al quale viene rappresentato \(\tens{U}\text{.}\) Si riportano le espressioni da utilizzare per il calcolo degli invarianti nel caso il tensore \(\tens{U}\) sia espresso alle direzioni principali e nel caso generico.</p>
+<ul class="disc">
+<li>
+<em class="emphasis">Primo invariante</em><div class="displaymath">
+\begin{equation}
+\func{I_1}{\tens{U}} = \lambda_1 + \lambda_2 + \lambda_3 = \trace{\tens{U}}\,,\tag{1.7.8}
+\end{equation}
+</div>dove compare la <em class="emphasis">traccia</em> del tensore ovvero la somma dei coefficienti appartenenti alla diagonale principale.</li>
+<li>
+<em class="emphasis">Secondo invariante</em><div class="displaymath">
+\begin{equation}
+\func{I_2}{\tens{U}} = \lambda_1\, \lambda_2 + \lambda_2\, \lambda_3 + \lambda_3\, \lambda_1 = \frac{1}{2}\left[(\trace{\tens{U}})^2 - \trace{\tens{U}^2}\right]\,.\tag{1.7.9}
+\end{equation}
+</div>
+</li>
+<li>
+<em class="emphasis">Terzo invariante</em><div class="displaymath">
+\begin{equation}
+\func{I_3}{\tens{U}} = \lambda_1\, \lambda_2\, \lambda_3 = \det{\tens{U}}\,.\tag{1.7.10}
+\end{equation}
+</div>
+</li>
+</ul>
+<article class="assemblage assemblage-like"><p>Si verifichi che gli invarianti calcolati su \(\tens{U}\) nella forma diagonale</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{U} =
+\left[\begin{array}{ccc}
+2 \amp 0 \amp 0\\
+0 \amp 5 \amp 0\\
+0 \amp 0 \amp 7\\
+\end{array}\right]\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">e nella forma</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{U} =
+\left[\begin{array}{ccc}
+5.2500 \amp  -1.0607 \amp  -1.7500 \\
+-1.0607 \amp   3.5000 \amp  -1.0607 \\
+-1.7500 \amp  -1.0607  \amp  5.2500
+\end{array}\right]\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">non cambiano.</p>
+<p>Si riportano le istruzioni MATLAB utilizzabili per la verifica.</p>
+<p><figure class="listing figure-like"><pre class="console"><b>lam1 = 2;
+lam2 = 5;
+lam3 = 7;
+I1 = lam1 + lam2 + lam3
+I2 = lam1*lam2 + lam2*lam3 + lam3*lam1
+I3 = lam1*lam2*lam3
+U = ...
+[5.2500 -1.0607 -1.7500; ...
+-1.0607 3.5000 -1.0607; ...
+-1.7500 -1.0607 5.2500];
+I1 = trace(U)
+I2 = 1/2*(trace(U)^2 - trace(U*U))
+I3 = det(U)
+</b></pre>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.7.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></article><span class="incontext"><a href="principal_directions_sec_strain_chap_it.html#insight-2">in-context</a></span>
+</body>
+</html>

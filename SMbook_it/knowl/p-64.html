@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-03-02T15:07:55+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragrafo</span></h6>
+<p>Istruzioni MATLAB per la Trasformazione 3. <figure class="listing figure-like"><pre class="console"><b>T3 = @(X) [X(1); 1.5*X(2)];
+F = [T3([1; 0]) T3([0; 1])]
+Grad_u = F - diag([1 1])
+
+u3 = @(X) T3(X) - X;
+Grad_u = [u3([1; 0]) u3([0; 1])]
+</b></pre>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.4.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<span class="incontext"><a href="displacement_sec_strain_chap_it.html#p-64">in-context</a></span>
+</body>
+</html>

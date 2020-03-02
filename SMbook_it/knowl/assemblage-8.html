@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-03-02T15:07:55+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="assemblage assemblage-like"><h6 class="heading"><span class="title">calcolo del determinate di trasformazioni e relativa verifica di ammissibilità.</span></h6>
+<p>Per le trasformazioni bidimensionali considerate anche negli esempi precedenti si riportano le istruzioni MATLAB per il calcolo del determinante e, e per la verifica di ammissibità della trasformazione, si ricava anche un plottaggio del valore del determinante sul dominio definito da \(-5 &lt;  X_1 &lt; 5\text{,}\) \(-5 &lt;  X_2 &lt; 5\text{.}\)</p>
+<p>Istruzioni MATLAB per la Trasformazione 1. <figure class="listing figure-like"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
+F = [T1([1; 0]) T1([0; 1])];
+syms detF(X1, X2);
+detF(X1, X2) = det(F);
+
+x = linspace(-5, 5, 50);
+y = linspace(-5, 5, 50);
+[X,Y] = meshgrid(x,y);
+
+surface(X,Y,detF(X,Y))
+</b></pre>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.5.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p>Analoghe istruzioni possono essere individuate anche per le Trasformazioni 2, 3 e 4 che verificano anch'esse la condizione di ammissibilità essendo caratterizzate da un determinante costante e maggiore di zero.</p>
+<p>Istruzioni MATLAB per la trasformazione \(x_1 = X_1^3\,,\; x_2 = X_2^3\text{.}\) <figure class="listing figure-like"><pre class="console"><b>syms T1(X1, X2);
+T1(X1, X2) = X1^3; 
+
+syms T2(X1, X2);
+T2(X1, X2) = X2^3; 
+
+syms detF(X1, X2);
+detF(X1,X2) = diff(T1, X1)*diff(T2, X2) - diff(T1, X2)*diff(T2, X1);
+
+x = linspace(-5, 5, 50);
+y = linspace(-5, 5, 50);
+[X,Y] = meshgrid(x,y);
+
+surface(X,Y,detF(X,Y))
+</b></pre>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.5.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p>Il risultato delle precedenti istruzioni fornisce il seguente plottaggio <figure class="figure figure-like"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="images/nolin_transf_det.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.5.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure> con il quale si può verificare che lungo gli assi coordinati \(X_1 = 0\) e \(X_2 = 0\) la trasformazione ha determinante nullo e quindi non è ammissibile (si rammenti a riguardo la presenza delle cuspidi nei plottaggi mostrati nell'esempio <a class="xref" data-knowl="./knowl/nolin_transf_example.html" title="Assemblaggio: valutazione del gradiente (trasformazioni non lineari)">Assemblaggio </a>).</p></article><span class="incontext"><a href="determinant_sec_strain_chap_it.html#assemblage-8">in-context</a></span>
+</body>
+</html>

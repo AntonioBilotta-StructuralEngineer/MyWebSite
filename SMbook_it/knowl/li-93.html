@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-03-02T15:07:56+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="li"><h6 class="heading">
+<span class="type">Articolo</span><span class="period">.</span>
+</h6>Per definizione di potenziale elastico, la relazione fra generica componente di tensione \(\sigma_{ij}\) e l'energia elastica può essere scritta come<div class="displaymath">
+\begin{equation}
+\sigma_{ij} = \frac{\partial \Phi}{\partial \varepsilon_{ij}}\,.\tag{3.3.5}
+\end{equation}
+</div>Derivando ulteriormente tale relazione ed utilizzando la relazione <a class="xref" data-knowl="./knowl/components_costitutivo_continuo_eq.html" title="Equazione 3.3.1">(3.3.1)</a> si ottiene<div class="displaymath">
+\begin{equation*}
+\frac{\partial}{\partial \varepsilon_{hk}} \left(\frac{\partial \Phi}{\partial \varepsilon_{ij}}\right) =
+\frac{\partial}{\partial \varepsilon_{hk}} \left(\sigma_{ij}\right) =
+\frac{\partial}{\partial \varepsilon_{hk}} \left(\sum_{h,k=1 \dots 3}\mathbb{C}_{ijhk}\varepsilon_{hk} \right) =
+\mathbb{C}_{ijhk} 
+\,.
+\end{equation*}
+</div>Pertanto il generico coefficiente del tensore costitutivo è legato all'energia elastica dalla relazione<div class="displaymath">
+\begin{equation}
+\mathbb{C}_{ijhk} = \frac{\partial}{\partial \varepsilon_{hk}} \left(\frac{\partial \Phi}{\partial \varepsilon_{ij}}\right)\,.\tag{3.3.6}
+\end{equation}
+</div>Osservando che scambiando l'ordine di derivazione il risultato non cambia<div class="displaymath">
+\begin{equation*}
+\mathbb{C}_{ijhk}
+= \frac{\partial}{\partial \varepsilon_{hk}} \left(\frac{\partial \Phi}{\partial \varepsilon_{ij}}\right)
+= \frac{\partial}{\partial \varepsilon_{ij}} \left(\frac{\partial \Phi}{\partial \varepsilon_{hk}}\right)
+= \frac{\partial}{\partial \varepsilon_{ij}} \left(\sigma_{hk} \right)
+= \mathbb{C}_{hkij}\,,
+\end{equation*}
+</div>si ottiene il soddisfacimento della condizione<div class="displaymath">
+\begin{equation}
+\mathbb{C}_{ijhk} = \mathbb{C}_{hkij}\tag{3.3.7}
+\end{equation}
+</div>nota come <em class="alert">simmetria maggiore</em> del tensore costitutivo \(\tensQ{C}\text{.}\)</article><span class="incontext"><a href="multiaxial_sec_elasticity_chap_it.html#li-93">in-context</a></span>
+</body>
+</html>
