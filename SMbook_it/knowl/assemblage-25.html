@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-04T11:52:50+01:00    *-->
+<!--*    on 2020-03-25T11:02:08+01:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,13 +12,13 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="assemblage assemblage-like"><h6 class="heading"><span class="title">soluzione tramite MATLAB.</span></h6>
-<p>L'integrale generale può essere calcolato utilizzando le seguenti istruzioni. <figure class="listing figure-like"><pre class="console"><b>syms u(x) EA;
+<article class="assemblage-like"><h6 class="heading"><span class="title">soluzione tramite MATLAB.</span></h6>
+<p>L'integrale generale può essere calcolato utilizzando le seguenti istruzioni. <figure class="figure-like"><pre class="console"><b>syms u(x) EA;
 ode = EA*diff(u,x,2) == 0
 dsolve(ode)
 </b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.7.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<p>La soluzione che verifica anche le condizioni al contorno assegnate si ottiene invece con le seguenti istruzioni. <figure class="listing figure-like"><pre class="console"><b>syms u(x) EA F l;
+<figcaption><span class="type">Listato</span> <span class="codenumber">3.7.2.</span> </figcaption></figure></p>
+<p>La soluzione che verifica anche le condizioni al contorno assegnate si ottiene invece con le seguenti istruzioni. <figure class="figure-like"><pre class="console"><b>syms u(x) EA F l;
 Du = diff(u);
 ode = EA*diff(u,x,2) == 0;
 cond1 = u(0) == 0;
@@ -26,6 +26,6 @@ cond2 = EA*Du(l) == F;
 conds = [cond1 cond2];
 dsolve(ode,conds)
 </b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.7.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#assemblage-25">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">3.7.3.</span> </figcaption></figure></p></article><span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#assemblage-25">in-context</a></span>
 </body>
 </html>

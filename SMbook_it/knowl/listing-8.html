@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-04T11:52:49+01:00    *-->
+<!--*    on 2020-03-25T11:02:06+01:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,36 +12,40 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<figure class="listing figure-like"><pre class="console"><b>N=60;
+<figure class="figure-like"><pre class="console"><b>N=60;
 angle=linspace(0,2*pi,N);
 
 radius=1.0;
 c1X=radius*cos(angle);
 c1Y=radius*sin(angle);
-c1Z=linspace(0,0,N);
 c1x=c1X.^3;
 c1y=c1Y.^3;
-c1z=c1Z;
 
 radius=0.5;
 c2X=radius*cos(angle);
 c2Y=radius*sin(angle);
-c2Z=linspace(0,0,N);
 c2x=c2X.^3;
 c2y=c2Y.^3;
-c2z=c2Z;
 
 radius=1.5;
 c3X=radius*cos(angle);
 c3Y=radius*sin(angle);
-c3Z=linspace(0,0,N);
 c3x=c3X.^3;
 c3y=c3Y.^3;
-c3z=c1Z;
 
-plot3(c1X,c1Y,c1Z,'-b',c1x,c1y,c1z,'-b',c2X,c2Y,c2Z,...
-'-r',c2x,c2y,c2z,'-r',c3X,c3Y,c3Z,'-m',c3x,c3y,c3z,'-m')
+hold on
+% circonferenza (r=1) con deformata
+plot(c1X,c1Y,'b-')
+plot(c1x,c1y,'b-')
+
+% circonferenza (r=0.5) con deformata
+plot(c2X,c2Y,'r-')
+plot(c2x,c2y,'r-')
+
+% circonferenza (r=1.5) con deformata
+plot(c3X,c3Y,'m-')
+plot(c3x,c3y,'m-')
 </b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.3.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><span class="incontext"><a href="gradient_sec_strain_chap_it.html#listing-8">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">1.3.1.</span> </figcaption></figure><span class="incontext"><a href="gradient_sec_strain_chap_it.html#listing-8">in-context</a></span>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-04T11:52:48+01:00    *-->
+<!--*    on 2020-03-25T11:02:06+01:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -24,7 +24,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -41,17 +41,21 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.12;
+</script>
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Torna alla pagina dei contenuti</a><div class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
@@ -194,41 +198,41 @@ MathJax.Hub.Config({
 f\left[q_1, \dots, q_n, \dot{q}_1, \dots, \dot{q}_n, t\right] \leq 0.\tag{4.2.1}
 \end{equation}
 </div>
-<p data-braille="continuation">Dove compaiono, oltre alle coordinate lagrangiane, anche le loro derivate, \(\dot{q}_1, \dots, \dot{q}_n\text{,}\) rispetto al tempo.</p>
+<p>Dove compaiono, oltre alle coordinate lagrangiane, anche le loro derivate, \(\dot{q}_1, \dots, \dot{q}_n\text{,}\) rispetto al tempo.</p>
 <p id="p-375">Per gli sviluppi successivi è sufficiente considerare solo vincoli <em class="emphasis">fissi</em> (indipendenti dal tempo), <em class="emphasis">bilateri</em> (la condizione di vincolo si esprime mediante il segno di uguaglianza) e non <em class="emphasis">monolateri</em> (espressi mediante i segni di disegueglianza), <em class="emphasis">olonomi</em> (indipendenti dalle velocità) e non <em class="emphasis">sclerolonomi</em> (dipendenti dalle velocità) e <em class="emphasis">privi di attrito</em> (consentono completamente ciò che non vincolano), ovvero</p>
 <div class="displaymath">
 \begin{equation}
 f\left[q_1, q_2, \dots, q_n\right] = 0.\label{constraint_eq}\tag{4.2.2}
 \end{equation}
 </div>
-<p data-braille="continuation">La relazione appena scritta è in generale non lineare. Nel seguito si opererà nell'ambito di una cinematica del I\(^o\) ordine pertanto si opererà sempre con condizioni di vincolo di tipo lineare come di seguito descritto per i vincoli maggiormente utilizzati nelle applicazioni.</p>
+<p>La relazione appena scritta è in generale non lineare. Nel seguito si opererà nell'ambito di una cinematica del I\(^o\) ordine pertanto si opererà sempre con condizioni di vincolo di tipo lineare come di seguito descritto per i vincoli maggiormente utilizzati nelle applicazioni.</p>
 <section class="subsection" id="subsection-87"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">4.2.1</span> <span class="title">vincoli esterni semplici</span>
 </h3>
 <section class="subsubsection" id="subsubsection-18"><h4 class="heading hide-type">
 <span class="type">Sottosottosezione</span> <span class="codenumber">4.2.1.1</span> <span class="title">carrello</span>
 </h4>
-<figure class="figure figure-like" id="carrello_fig"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/vincolosemplice_carrello.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">4.2.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-376">Il carrello impone che lo spostamento del punto in cui è applicato può avvenire solo in direzione ortogonale all'asse del carrello:</p>
+<figure class="figure-like" id="carrello_fig"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/vincolosemplice_carrello.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span> <span class="codenumber">4.2.1.</span> </figcaption></figure><p id="p-376">Il carrello impone che lo spostamento del punto in cui è applicato può avvenire solo in direzione ortogonale all'asse del carrello:</p>
 <div class="displaymath">
 \begin{equation}
 \vec{u}_A \cdot \vec{n} = 0\label{carrello_eq}\tag{4.2.3}
 \end{equation}
 </div>
-<p data-braille="continuation">dove</p>
+<p>dove</p>
 <div class="displaymath">
 \begin{equation*}
 \vec{u}_A = \left[\begin{array}{c} u_{1A} \\ u_{2A}\end{array}\right] \,, \quad
 \vec{n} = \left[\begin{array}{c} \cos{\alpha} \\ \sin{\alpha}\end{array}\right]
 \end{equation*}
 </div>
-<p data-braille="continuation">Nei casi particolari in cui l'asse del carrello è orizzontale, \(\alpha=0\) oppure \(\alpha=\pi\text{,}\) allora la condizione <a class="xref" data-knowl="./knowl/carrello_eq.html" title="Equazione 4.2.3">(4.2.3)</a> fornisce</p>
+<p>Nei casi particolari in cui l'asse del carrello è orizzontale, \(\alpha=0\) oppure \(\alpha=\pi\text{,}\) allora la condizione <a data-knowl="./knowl/carrello_eq.html" title="Equazione 4.2.3">(4.2.3)</a> fornisce</p>
 <div class="displaymath">
 \begin{equation}
 u_{1A}  = 0\,.\tag{4.2.4}
 \end{equation}
 </div>
-<p data-braille="continuation">Se invece l'asse è verticale, \(\alpha=\pi/2\) oppure \(\alpha=-\pi/2\text{,}\) la condizione vincolare diviene</p>
+<p>Se invece l'asse è verticale, \(\alpha=\pi/2\) oppure \(\alpha=-\pi/2\text{,}\) la condizione vincolare diviene</p>
 <div class="displaymath">
 \begin{equation}
 u_{2A}  = 0\,.\tag{4.2.5}
@@ -236,24 +240,23 @@ u_{2A}  = 0\,.\tag{4.2.5}
 </div></section><section class="subsubsection" id="subsubsection-19"><h4 class="heading hide-type">
 <span class="type">Sottosottosezione</span> <span class="codenumber">4.2.1.2</span> <span class="title">doppio bipendolo</span>
 </h4>
-<figure class="figure figure-like" id="doppiobipendolo_fig"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/vincolosemplice_doppiobipendolo.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">4.2.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-377">Il doppio bipendolo impone che la rotazione del punto di applicazione sia nulla, ovvero</p>
+<figure class="figure-like" id="doppiobipendolo_fig"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/vincolosemplice_doppiobipendolo.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span> <span class="codenumber">4.2.2.</span> </figcaption></figure><p id="p-377">Il doppio bipendolo impone che la rotazione del punto di applicazione sia nulla, ovvero</p>
 <div class="displaymath">
 \begin{equation}
 \varphi_{A}  = 0\,.\tag{4.2.6}
 \end{equation}
 </div>
-<p data-braille="continuation"><article class="warning remark-like" id="warning-1"><h6 class="heading">
-<span class="type">Avvertenza</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="period">.</span>
-</h6>
+<p><article class="remark-like" id="warning-1"><h6 class="heading">
+<span class="type">Avvertenza</span> <span class="codenumber">4.2.3</span>.</h6>
 <p id="p-378">Nel caso di corpo rigido la rotazione non può variare da punto a punto e, pertanto, bloccare la rotazione in un punto vuol dire bloccarla su tutto il corpo. Detto in altro parole, per la cinematica di corpo rigido il punto di applicazione del vincolo non ha nessuna rilevanza.</p></article></p></section></section><section class="subsection" id="subsection-88"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">4.2.2</span> <span class="title">vincoli esterni doppi</span>
 </h3>
 <section class="subsubsection" id="subsubsection-20"><h4 class="heading hide-type">
 <span class="type">Sottosottosezione</span> <span class="codenumber">4.2.2.1</span> <span class="title">cerniera o appoggio</span>
 </h4>
-<figure class="figure figure-like" id="cerniera_fig"><div class="image-box" style="width: 43%; margin-left: 28.5%; margin-right: 28.5%;"><img src="images/vincolodoppio_cerniera.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">4.2.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-379">La cerniera impone che nel punto di applicazione il vettore spostamento sia nullo</p>
+<figure class="figure-like" id="cerniera_fig"><div class="image-box" style="width: 43%; margin-left: 28.5%; margin-right: 28.5%;"><img src="images/vincolodoppio_cerniera.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span> <span class="codenumber">4.2.4.</span> </figcaption></figure><p id="p-379">La cerniera impone che nel punto di applicazione il vettore spostamento sia nullo</p>
 <div class="displaymath">
 \begin{equation}
 \vec{u}_A = \vec0\,.\tag{4.2.7}
@@ -261,8 +264,8 @@ u_{2A}  = 0\,.\tag{4.2.5}
 </div></section><section class="subsubsection" id="subsubsection-21"><h4 class="heading hide-type">
 <span class="type">Sottosottosezione</span> <span class="codenumber">4.2.2.2</span> <span class="title">bipendolo</span>
 </h4>
-<figure class="figure figure-like" id="bipendolo_fig"><div class="image-box" style="width: 55%; margin-left: 22.5%; margin-right: 22.5%;"><img src="images/vincolodoppio_bipendolo.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">4.2.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-380">Il bipendolo impone le condizioni</p>
+<figure class="figure-like" id="bipendolo_fig"><div class="image-box" style="width: 55%; margin-left: 22.5%; margin-right: 22.5%;"><img src="images/vincolodoppio_bipendolo.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span> <span class="codenumber">4.2.5.</span> </figcaption></figure><p id="p-380">Il bipendolo impone le condizioni</p>
 <div class="displaymath">
 \begin{equation}
 \begin{split}
@@ -271,14 +274,14 @@ u_{2A}  = 0\,.\tag{4.2.5}
 \end{split}\tag{4.2.8}
 \end{equation}
 </div>
-<p data-braille="continuation">Nel caso in cui l'asse del bipendolo sia orizzontale o verticale vale quanto già detto per il carrello.</p></section></section><section class="subsection" id="subsection-89"><h3 class="heading hide-type">
+<p>Nel caso in cui l'asse del bipendolo sia orizzontale o verticale vale quanto già detto per il carrello.</p></section></section><section class="subsection" id="subsection-89"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">4.2.3</span> <span class="title">vincoli esterni tripli</span>
 </h3>
 <section class="subsubsection" id="subsubsection-22"><h4 class="heading hide-type">
 <span class="type">Sottosottosezione</span> <span class="codenumber">4.2.3.1</span> <span class="title">incastro</span>
 </h4>
-<figure class="figure figure-like" id="incastro_fig"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/vincolotriplo_incastro.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">4.2.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-381">Infine l'incastro impone</p>
+<figure class="figure-like" id="incastro_fig"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/vincolotriplo_incastro.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span> <span class="codenumber">4.2.6.</span> </figcaption></figure><p id="p-381">Infine l'incastro impone</p>
 <div class="displaymath">
 \begin{equation}
 \begin{split}
@@ -293,13 +296,15 @@ u_{2A}  = 0\,.\tag{4.2.5}
 <section class="subsubsection" id="subsubsection-23"><h4 class="heading hide-type">
 <span class="type">Sottosottosezione</span> <span class="codenumber">4.2.4.1</span> <span class="title">cerniera interna</span>
 </h4>
-<figure class="figure figure-like" id="cerniera_interna_fig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/vincolointerno_cerniera.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">4.2.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-383">La presenza del vincolo interno è esprimibile mediante la condizione</p>
+<figure class="figure-like" id="cerniera_interna_fig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/vincolointerno_cerniera.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span> <span class="codenumber">4.2.7.</span> </figcaption></figure><p id="p-383">La presenza del vincolo interno è esprimibile mediante la condizione</p>
 <div class="displaymath">
 \begin{equation}
 \vec{u}_{A} = \vec{u}_{A'}\,.\tag{4.2.10}
 \end{equation}
 </div></section></section></section></div></main>
 </div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.12/login.js"></script>
 </body>
 </html>

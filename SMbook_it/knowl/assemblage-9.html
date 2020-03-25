@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-04T11:52:49+01:00    *-->
+<!--*    on 2020-03-25T11:02:07+01:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,7 +12,7 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="assemblage assemblage-like"><h6 class="heading"><span class="title">Trasformazione 1.</span></h6>
+<article class="assemblage-like"><h6 class="heading"><span class="title">Trasformazione 1.</span></h6>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <div class="sbspanel" style="width:45%;justify-content:flex-start;"><p><img src="images/90degreesRotation.png" style="width: 100%; height: auto;" alt=""></p></div>
 <div class="sbspanel" style="width:20%;justify-content:flex-start;"><div class="displaymath">
@@ -41,7 +41,7 @@ x(4) = c\,,\;
 x(5) = s\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">le istruzioni MATLAB possono essere definite come segue <figure class="listing figure-like"><pre class="console"><b>funT1 = @(x) ...
+<p>le istruzioni MATLAB possono essere definite come segue <figure class="figure-like"><pre class="console"><b>funT1 = @(x) ...
 [x(1)*x(4) + x(2)*x(5); ...
 -x(1)*x(5) + x(2)*x(4) + 1; ...
 x(2)*x(4) + x(3)*x(5) - 1; ...
@@ -51,7 +51,7 @@ x(4)^2 + x(5)^2 - 1];
 guess = [1, 1, 1, 1, 1];
 fsolve(@funT1, guess)
 </b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.6.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure> pervendendo al seguente seguente output <figure class="listing figure-like"><pre class="console"><b>Equation solved.
+<figcaption><span class="type">Listato</span> <span class="codenumber">1.6.5.</span> </figcaption></figure> pervendendo al seguente seguente output <figure class="figure-like"><pre class="console"><b>Equation solved.
 
 fsolve completed because the vector of function values is near zero
 as measured by the value of the function tolerance, and
@@ -63,7 +63,7 @@ ans =
 
     1.0000    0.0000    1.0000    0.0000    1.0000
 </b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.6.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Pertanto si ottiene il risultato atteso</p>
+<figcaption><span class="type">Listato</span> <span class="codenumber">1.6.6.</span> </figcaption></figure> Pertanto si ottiene il risultato atteso</p>
 <div class="displaymath">
 \begin{equation*}
 x(1) = \alpha= 1\,,\quad
@@ -77,7 +77,7 @@ x(4) = c=0\,,\quad
 x(5) = s=1\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">ovvero</p>
+<p>ovvero</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{U} = \left[\begin{array}{cc} 1 \amp 0 \\ 0  \amp 1  \end{array}\right]\,,\quad

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-04T11:52:47+01:00    *-->
+<!--*    on 2020-03-25T11:02:05+01:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -24,7 +24,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -41,17 +41,21 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.12;
+</script>
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Torna alla pagina dei contenuti</a><div class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
@@ -189,8 +193,8 @@ MathJax.Hub.Config({
 <span class="type">Sezione</span> <span class="codenumber">3.2</span> <span class="title">stati uniassiali</span>
 </h2>
 <a href="uniaxial_sec_elasticity_chap_it.html" class="permalink">¶</a><p id="p-259">La trattazione elastica degli stati uniassiali, ovvero stati di tensione e deformazione in cui sono presenti soltanto una componente di tensione e la componente associata di deformazione, sono modellabili tramite un'applicazione diretta della legge di Hooke.</p>
-<article class="insight remark-like" id="insight-8"><h6 class="heading">
-<span class="type">Approfondimento</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">legge di Hooke.</span>
+<article class="remark-like" id="insight-8"><h6 class="heading">
+<span class="type">Approfondimento</span> <span class="codenumber">3.2.1</span>. <span class="title">legge di Hooke.</span>
 </h6>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
 <div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;">
@@ -200,34 +204,33 @@ MathJax.Hub.Config({
 F = k\,x\,.\label{Hookes_eq}\tag{3.2.1}
 \end{equation}
 </div>
-<p data-braille="continuation">\(k\;\left[\frac{\text{N}}{\text{m}}\right]\) prende il nome di <em class="alert">rigidezza</em> ed è un fattore costante e <em class="alert">positivo</em> caratteristico della molla, \(x\;\left[\text{m}\right]\) è l'allungamento che subisce la molla (nel caso di \(x\) negativo la molla subisce un accorciamento).</p>
+<p>\(k\;\left[\frac{\text{N}}{\text{m}}\right]\) prende il nome di <em class="alert">rigidezza</em> ed è un fattore costante e <em class="alert">positivo</em> caratteristico della molla, \(x\;\left[\text{m}\right]\) è l'allungamento che subisce la molla (nel caso di \(x\) negativo la molla subisce un accorciamento).</p>
 </div>
-<div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;"><figure class="figure figure-like" id="figure-20"><img src="images/Hookes-law-springs.png" style="width: 100%; height: auto;" alt=""><figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">3.2.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></div>
+<div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;"><figure class="figure-like" id="figure-20"><img src="images/Hookes-law-springs.png" style="width: 100%; height: auto;" alt=""><figcaption><span class="type">Figura</span> <span class="codenumber">3.2.2.</span> </figcaption></figure></div>
 </div></div>
 <p id="p-261">La legge prende il nome dal fisico britannico del XVII secolo Robert Hooke che rese pubblica per la prima volta la legge nel 1676 come un anagramma latino. Successivamente, nel 1678, pubblicò la soluzione del suo anagramma come: <em class="emphasis">ut tensio, sic vis</em> (l'estensione è proporzionale alla forza).</p>
-<p id="p-262">Al fine di evidenziare il concetto di <em class="alert">energia elastica</em> immagazzinata dalla molla per effetto dell'allungamento \(x\) si consideri il seguente schema meccanico dove sono state messe in evidenza tutte le forze che agiscono (per semplicità si supponga di effetuare l'esperimento in assenza di gravità<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-3" id="fn-3"><sup> 1 </sup></a> e di forze dissipative) su un corpo di massa \(m\) e vincolato da una molla di rigidezza \(k\text{.}\)</p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn">In effetti se si tenesse conto anche della gravità la natura dell'equazione risultante non cambiarebbe.</div></div>
-<figure class="figure figure-like" id="figure-21"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/simple_oscillator.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">3.2.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-263">A causa dello spostamento \(x\) misurato a partire dalla posizione di equilibrio, il corpo è soggetto alla forza d'inerzia \(m\,\frac{d^2 x}{dt^2}\) e alla forza elastica \(k\,x\) dirette come indicato in figura. Per l'equilibrio del sistema si ha</p>
+<p id="p-262">Al fine di evidenziare il concetto di <em class="alert">energia elastica</em> immagazzinata dalla molla per effetto dell'allungamento \(x\) si consideri il seguente schema meccanico dove sono state messe in evidenza tutte le forze che agiscono (per semplicità si supponga di effetuare l'esperimento in assenza di gravità<a data-knowl="" class="id-ref" data-refid="hk-fn-3" id="fn-3"><sup> 1 </sup></a><span id="hk-fn-3" class="hidden-content tex2jax_ignore"><span class="footnote">In effetti se si tenesse conto anche della gravità la natura dell'equazione risultante non cambiarebbe.</span></span> e di forze dissipative) su un corpo di massa \(m\) e vincolato da una molla di rigidezza \(k\text{.}\)</p>
+<figure class="figure-like" id="figure-21"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/simple_oscillator.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span> <span class="codenumber">3.2.3.</span> </figcaption></figure><p id="p-263">A causa dello spostamento \(x\) misurato a partire dalla posizione di equilibrio, il corpo è soggetto alla forza d'inerzia \(m\,\frac{d^2 x}{dt^2}\) e alla forza elastica \(k\,x\) dirette come indicato in figura. Per l'equilibrio del sistema si ha</p>
 <div class="displaymath">
 \begin{equation*}
 -m\,\frac{d^2 x}{dt^2} - k\,x = 0\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">ovvero, introducendo la quantità \(\omega = \sqrt{\frac{k}{m}}\text{,}\)</p>
+<p>ovvero, introducendo la quantità \(\omega = \sqrt{\frac{k}{m}}\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{d^2 x}{dt^2} + \omega^2\,x = 0\,.
 \end{equation*}
 </div>
-<p data-braille="continuation">L'equazione differenziale ottenuta caratterizza un sistema che, in meccanica, viene denominato <em class="emphasis">oscillatore armonico semplice</em>. La soluzione dell'equazione differenziale è descritta dalla funzione</p>
+<p>L'equazione differenziale ottenuta caratterizza un sistema che, in meccanica, viene denominato <em class="emphasis">oscillatore armonico semplice</em>. La soluzione dell'equazione differenziale è descritta dalla funzione</p>
 <div class="displaymath">
 \begin{equation*}
 \func{x}{t} = \func{x}{0}\,\cos{(\omega\,t)} + \frac{1}{\omega}\func{\frac{dx}{dt}}{0}\,\sin{(\omega\,t)} \,,
 \end{equation*}
 </div>
-<p data-braille="continuation">dove \(\func{x}{0}\) e \(\func{\frac{dx}{dt}}{0}\) rappresentano le condizioni iniziali. \(\omega\) prende il nome di pulsazione e viene misurata in \(\left[\frac{\text{rad}}{\text{s}}\right]\text{.}\)</p>
-<article class="assemblage assemblage-like" id="assemblage-17"><p id="p-264">A scopo esemplificativo si riportano le istruzioni MATLAB utilizzabili per il plottaggio della funzione sulla base dei seguenti dati: \(\omega = 2\pi\;\left[\frac{\text{rad}}{\text{s}}\right]\text{,}\) \(m=10\;\left[\text{kg}\right]\text{,}\) \(\func{x}{0}= 1 \; \left[\text{m}\right]\) e \(\func{\frac{dx}{dt}}{0}= 10 \; \left[\frac{\text{m}}{\text{s}}\right]\text{.}\) <figure class="listing figure-like" id="listing-29"><pre class="console"><b>om = 2*pi;
+<p>dove \(\func{x}{0}\) e \(\func{\frac{dx}{dt}}{0}\) rappresentano le condizioni iniziali. \(\omega\) prende il nome di pulsazione e viene misurata in \(\left[\frac{\text{rad}}{\text{s}}\right]\text{.}\)</p>
+<article class="assemblage-like" id="assemblage-17"><p id="p-264">A scopo esemplificativo si riportano le istruzioni MATLAB utilizzabili per il plottaggio della funzione sulla base dei seguenti dati: \(\omega = 2\pi\;\left[\frac{\text{rad}}{\text{s}}\right]\text{,}\) \(m=10\;\left[\text{kg}\right]\text{,}\) \(\func{x}{0}= 1 \; \left[\text{m}\right]\) e \(\func{\frac{dx}{dt}}{0}= 10 \; \left[\frac{\text{m}}{\text{s}}\right]\text{.}\) <figure class="figure-like" id="listing-29"><pre class="console"><b>om = 2*pi;
 u0 = 1;
 v0 = 10;
 m = 10;
@@ -238,15 +241,15 @@ tt=linspace(0,3,201);
 uu=u(tt);
 plot(tt,uu,'k','LineWidth',2)
 </b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.2.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-265">L'andamento perfettamente oscillatario della soluzione sempre rispetto agli stessi estremi viene determinato della conservazione dell'<em class="emphasis">energia potenziale totale</em></p>
+<figcaption><span class="type">Listato</span> <span class="codenumber">3.2.4.</span> </figcaption></figure></p></article><p id="p-265">L'andamento perfettamente oscillatario della soluzione sempre rispetto agli stessi estremi viene determinato della conservazione dell'<em class="emphasis">energia potenziale totale</em></p>
 <div class="displaymath">
 \begin{equation*}
 \Pi = \underbrace{\frac{1}{2}k\,x^2}_{\text{energia elastica}} + \underbrace{\frac{1}{2}m\,\left(\frac{dx}{dt}\right)^2}_{\text{energia cinetica}}
 \end{equation*}
 </div>
-<p data-braille="continuation">data dalla somma di <em class="emphasis">energia elastica</em> e <em class="emphasis">energia cinetica</em>. L'energia potenziale totale, in assenza di fenomeni dissipativi, si mantiene sempre costante.</p>
-<article class="assemblage assemblage-like" id="assemblage-18"><p id="p-266">La seguente figura <figure class="figure figure-like" id="figure-22"><div class="image-box" style="width: 85%; margin-left: 7.5%; margin-right: 7.5%;"><img src="images/armonico_semplice.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">3.2.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure> ottenuta con le istruzioni MATLAB <figure class="listing figure-like" id="listing-30"><pre class="console"><b>Edef(t) = 1/2*om^2*m*u(t)^2;
+<p>data dalla somma di <em class="emphasis">energia elastica</em> e <em class="emphasis">energia cinetica</em>. L'energia potenziale totale, in assenza di fenomeni dissipativi, si mantiene sempre costante.</p>
+<article class="assemblage-like" id="assemblage-18"><p id="p-266">La seguente figura <figure class="figure-like" id="figure-22"><div class="image-box" style="width: 85%; margin-left: 7.5%; margin-right: 7.5%;"><img src="images/armonico_semplice.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span> <span class="codenumber">3.2.5.</span> </figcaption></figure> ottenuta con le istruzioni MATLAB <figure class="figure-like" id="listing-30"><pre class="console"><b>Edef(t) = 1/2*om^2*m*u(t)^2;
 Ekin(t) = 1/2*m*diff(u,t)^2;
 
 dd=Edef(tt);
@@ -256,7 +259,7 @@ scale = 5*u0 / (Edef(0)+Ekin(0));
 plot(tt,uu,'k',tt,dd*scale,'r',tt,kk*scale,'b','LineWidth',2)
 legend('spost.','en. def.','en. cinet.')
 </b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.2.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure> evidenzia in forma grafica la continua trasformazione dell'energia di deformazione della molla in energia cinetica del corpo e viceversa. Energia di deformazione (colore rosso) che oscilla fra lo zero fra il valore massimo che si ha quando il valore assoluto dello spostamento (colore nero) è massimo, allo stesso istante la velocità è nulla. Al contrario l'energia cinematica (colore blu) è massima quando il valore assoluto dello velocità è massima, quando allo stesso istante lo spostamento è nullo.</p></article><p id="p-267">Per concludere si osserva che l'energia elastica agisce come un potenziale per la forza elastica della molla in quanto quest'ultima può essere ottenuta per derivazione dell'energia, ovvero</p>
+<figcaption><span class="type">Listato</span> <span class="codenumber">3.2.6.</span> </figcaption></figure> evidenzia in forma grafica la continua trasformazione dell'energia di deformazione della molla in energia cinetica del corpo e viceversa. Energia di deformazione (colore rosso) che oscilla fra lo zero fra il valore massimo che si ha quando il valore assoluto dello spostamento (colore nero) è massimo, allo stesso istante la velocità è nulla. Al contrario l'energia cinematica (colore blu) è massima quando il valore assoluto dello velocità è massima, quando allo stesso istante lo spostamento è nullo.</p></article><p id="p-267">Per concludere si osserva che l'energia elastica agisce come un potenziale per la forza elastica della molla in quanto quest'ultima può essere ottenuta per derivazione dell'energia, ovvero</p>
 <div class="displaymath">
 \begin{equation*}
 F = \frac{d}{dx}\left( \frac{1}{2}k\,x^2 \right) = k\, x\,.
@@ -265,8 +268,8 @@ F = \frac{d}{dx}\left( \frac{1}{2}k\,x^2 \right) = k\, x\,.
 <span class="type">Sottosezione</span> <span class="codenumber">3.2.1</span> <span class="title">prova uniassiale a trazione o compressione</span>
 </h3>
 <p id="p-268">La seguente figura illustra il risultato di un prova di carico uniassiale effettuata su una barra di acciaio. Per risultato della prova si intende la curva riportata in figura, curva che rappresenta la <em class="emphasis">risposta meccanica</em>, ovvero il valore della tensione nel materiale, al crescere della deformazione applicata. È evidente come sia articolata e variabile la risposta del materiale e come sia non banale l'individuazione di un <em class="emphasis">modello matematico/numerico</em> in grado di riprodurre il risultato prodotto dalla prova di carico, risultato che può essere schematicamente riepilogato come segue (per l'acciaio, e in generale per i materiali metallici, quanto riportato in figura viene generalemente assunto come valido sia in regime di trazione e sia in regime di compressione).</p>
-<figure class="figure figure-like" id="figure-23"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="images/Hookes-law-stress-strain-curve.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">3.2.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure><ul id="p-269" class="disc">
+<figure class="figure-like" id="figure-23"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="images/Hookes-law-stress-strain-curve.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span> <span class="codenumber">3.2.7.</span> </figcaption></figure><ul id="p-269" class="disc">
 <li id="li-88">La risposta del materiale inizialmente è lineare.</li>
 <li id="li-89">Esiste un limite alla fase lineare (Proportional limit) superato il quale la risposta tende a mantenersi costante stazionando nella fase denominata di <em class="emphasis">snervamento</em> (Yield Point).</li>
 <li id="li-90">Successivamente comincia la fase di <em class="emphasis">incrudimento</em> (Strain Hardening) che termina con il raggiungimento del <em class="emphasis">carico limite</em> (Ultimate Strength) del materiale.</li>
@@ -278,7 +281,7 @@ F = \frac{d}{dx}\left( \frac{1}{2}k\,x^2 \right) = k\, x\,.
 \sigma = E\,\varepsilon\,,\tag{3.2.2}
 \end{equation}
 </div>
-<p data-braille="continuation">e che sia possibile definire un'energia elastica che agisce come potenziale per la tensione</p>
+<p>e che sia possibile definire un'energia elastica che agisce come potenziale per la tensione</p>
 <div class="displaymath">
 \begin{equation}
 \Phi = \frac{1}{2} \sigma \varepsilon= \frac{1}{2}E\,\varepsilon^2 = \func{\Phi}{\varepsilon}
@@ -286,13 +289,13 @@ F = \frac{d}{dx}\left( \frac{1}{2}k\,x^2 \right) = k\, x\,.
 \frac{d\func{\Phi}{\varepsilon}}{d\varepsilon} = E\,\varepsilon = \sigma\,,\tag{3.2.3}
 \end{equation}
 </div>
-<p data-braille="continuation">inoltre</p>
+<p>inoltre</p>
 <div class="displaymath">
 \begin{equation}
 \frac{d^2\func{\Phi}{\varepsilon}}{d\varepsilon^2} = E\,.\tag{3.2.4}
 \end{equation}
 </div>
-<p data-braille="continuation">È possibile anche effettuare una formulazione <em class="emphasis">complementare</em> dell'energia elastica, ovvero esprimerla rispetto alla tensione</p>
+<p>È possibile anche effettuare una formulazione <em class="emphasis">complementare</em> dell'energia elastica, ovvero esprimerla rispetto alla tensione</p>
 <div class="displaymath">
 \begin{equation}
 \Phi = \frac{1}{2} \sigma \varepsilon= \frac{1}{2}\frac{\sigma^2}{E} = \func{\Phi}{\sigma}
@@ -300,7 +303,7 @@ F = \frac{d}{dx}\left( \frac{1}{2}k\,x^2 \right) = k\, x\,.
 \frac{d\func{\Phi}{\sigma}}{d\sigma} = \frac{\sigma}{E} = \varepsilon\,,\tag{3.2.5}
 \end{equation}
 </div>
-<p data-braille="continuation">da cui</p>
+<p>da cui</p>
 <div class="displaymath">
 \begin{equation}
 \frac{d^2\func{\Phi}{\sigma}}{d\sigma^2} = \frac{1}{E}\,.\tag{3.2.6}
@@ -315,118 +318,120 @@ F = \frac{d}{dx}\left( \frac{1}{2}k\,x^2 \right) = k\, x\,.
 \left[ \text{GPa} \right]\,.
 \end{equation*}
 </div>
-<p data-braille="continuation">Nella seguente tabella si riporta il valore del modulo di Young per alcuni materiali utilizzati nelle applicazioni ingegneristiche.</p>
-<figure class="table figure-like" id="table-1"><table>
+<p>Nella seguente tabella si riporta il valore del modulo di Young per alcuni materiali utilizzati nelle applicazioni ingegneristiche.</p>
+<figure class="figure-like" id="table-1"><table>
 <tr>
 <td class="l m b1 r0 l0 t0 lines">Materiale</td>
 <td class="l m b1 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b1 r0 l0 t0 lines" data-braille="last-cell">\(E\;\left[\text{GPa}\right]\)</td>
+<td class="l m b1 r0 l0 t0 lines">\(E\;\left[\text{GPa}\right]\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">gomma</td>
 <td class="l m b0 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(0.01-0.1\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(0.01-0.1\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">teflon</td>
 <td class="l m b0 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(0.5\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(0.5\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">PET</td>
 <td class="l m b0 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(2-2.7\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(2-2.7\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">legno</td>
 <td class="l m b0 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(11\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(11\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">ossa umane</td>
 <td class="l m b0 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(14\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(14\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">calcestruzzo</td>
 <td class="l m b0 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(15-30\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(15-30\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">vetro</td>
 <td class="l m b0 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(50-90\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(50-90\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">alluminio</td>
 <td class="l m b0 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(70\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(70\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">acciaio</td>
 <td class="l m b0 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(200\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(200\)</td>
 </tr>
 </table>
-<figcaption><span class="type">Tabella</span><span class="space"> </span><span class="codenumber">3.2.8<span class="period">.</span></span><span class="space"> </span>Valori approssimati del modulo di Young per alcuni materiali</figcaption></figure></section><section class="subsection" id="shear_subsecuniaxial_sec_elasticity_chap_it"><h3 class="heading hide-type">
+<figcaption><span class="type">Tabella</span> <span class="codenumber">3.2.8.</span> Valori approssimati del modulo di Young per alcuni materiali</figcaption></figure></section><section class="subsection" id="shear_subsecuniaxial_sec_elasticity_chap_it"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">3.2.2</span> <span class="title">prova uniassiale a taglio</span>
 </h3>
-<a href="uniaxial_sec_elasticity_chap_it.html#shear_subsecuniaxial_sec_elasticity_chap_it" class="permalink">¶</a><p id="p-272">Quanto osservato per la prova uniassiale a trazione si verifica anche nelle prove uniassiali che coninvolgono componenti tangenziali di tensione e di deformazione. Anche in questo caso esiste una prima parte della risposta che può essere descritta con la legge di Hooke. Cambia comunque il coefficiente di proporzionalità. In particolare si ottiene che il legame tra componente di tensione tangenziale \(\tau\) e componente di deformazione a taglio \(\gamma\) (si veda la <a class="xref" data-knowl="./knowl/small_shear_eq.html" title="Equazione 1.9.10">(1.9.10)</a>) può essere formulato come segue</p>
+<a href="uniaxial_sec_elasticity_chap_it.html#shear_subsecuniaxial_sec_elasticity_chap_it" class="permalink">¶</a><p id="p-272">Quanto osservato per la prova uniassiale a trazione si verifica anche nelle prove uniassiali che coninvolgono componenti tangenziali di tensione e di deformazione. Anche in questo caso esiste una prima parte della risposta che può essere descritta con la legge di Hooke. Cambia comunque il coefficiente di proporzionalità. In particolare si ottiene che il legame tra componente di tensione tangenziale \(\tau\) e componente di deformazione a taglio \(\gamma\) (si veda la <a data-knowl="./knowl/small_shear_eq.html" title="Equazione 1.9.10">(1.9.10)</a>) può essere formulato come segue</p>
 <div class="displaymath">
 \begin{equation}
 \tau = G\,\gamma\,,\tag{3.2.7}
 \end{equation}
 </div>
-<p data-braille="continuation">dove \(G\) prende il nome di <em class="emphasis">modulo a taglio</em>.</p>
+<p>dove \(G\) prende il nome di <em class="emphasis">modulo a taglio</em>.</p>
 <p id="p-273">Nella seguente tabella si riporta il valore del modulo a taglio per alcuni materiali.</p>
-<figure class="table figure-like" id="table-2"><table>
+<figure class="figure-like" id="table-2"><table>
 <tr>
 <td class="l m b1 r0 l0 t0 lines">Materiale</td>
 <td class="l m b1 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b1 r0 l0 t0 lines" data-braille="last-cell">\(G\;\left[\text{GPa}\right]\)</td>
+<td class="l m b1 r0 l0 t0 lines">\(G\;\left[\text{GPa}\right]\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">gomma</td>
 <td class="l m b0 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(0.0006\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(0.0006\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">PET</td>
 <td class="l m b0 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(0.117\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(0.117\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">alluminio</td>
 <td class="l m b0 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(25\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(25\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">vetro</td>
 <td class="l m b0 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(26\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(26\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">titanio</td>
 <td class="l m b0 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(41\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(41\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">ferro</td>
 <td class="l m b0 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(52\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(52\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">acciaio</td>
 <td class="l m b0 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(79\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(79\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">diamante</td>
 <td class="l m b0 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(478\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(478\)</td>
 </tr>
 </table>
-<figcaption><span class="type">Tabella</span><span class="space"> </span><span class="codenumber">3.2.9<span class="period">.</span></span><span class="space"> </span>Valori approssimati del modulo a taglio per alcuni materiali</figcaption></figure></section></section></div></main>
+<figcaption><span class="type">Tabella</span> <span class="codenumber">3.2.9.</span> Valori approssimati del modulo a taglio per alcuni materiali</figcaption></figure></section></section></div></main>
 </div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.12/login.js"></script>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-04T11:52:50+01:00    *-->
+<!--*    on 2020-03-25T11:02:08+01:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -23,7 +23,7 @@
 \end{array}\tag{3.3.11}
 \end{equation}
 </div>
-<p data-braille="continuation">Si osserva come tale risultato costituisca la forma inversa del legame elastico per la parte relativa alle componenti normali. Per ottenere i coefficienti elastici che legano le componenti di tensione alle componenti di deformazione, conviene visualizzare il legame nella seguente forma matriciale</p>
+<p>Si osserva come tale risultato costituisca la forma inversa del legame elastico per la parte relativa alle componenti normali. Per ottenere i coefficienti elastici che legano le componenti di tensione alle componenti di deformazione, conviene visualizzare il legame nella seguente forma matriciale</p>
 <div class="displaymath">
 \begin{equation*}
 \left[\begin{array}{c}\varepsilon_{11} \\ \varepsilon_{22} \\ \varepsilon_{33}\end{array}\right] =
@@ -35,11 +35,11 @@
 \left[\begin{array}{c}\sigma_{11} \\ \sigma_{22} \\ \sigma_{33}\end{array}\right]
 \end{equation*}
 </div>
-<p data-braille="continuation">ed utilizzare le seguenti istruzioni MATLAB per invertire la matrice messa in evidenza. <figure class="listing figure-like"><pre class="console"><b>syms E ni;
+<p>ed utilizzare le seguenti istruzioni MATLAB per invertire la matrice messa in evidenza. <figure class="figure-like"><pre class="console"><b>syms E ni;
 M = [1/E -ni/E -ni/E; -ni/E 1/E  -ni/E; -ni/E -ni/E 1/E]
 inv(M)
 </b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.3.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Si ottiene quindi</p>
+<figcaption><span class="type">Listato</span> <span class="codenumber">3.3.2.</span> </figcaption></figure> Si ottiene quindi</p>
 <div class="displaymath">
 \begin{equation}
 \left[\begin{array}{c}\sigma_{11} \\ \sigma_{22} \\ \sigma_{33}\end{array}\right] =
@@ -52,7 +52,7 @@ inv(M)
 \left[\begin{array}{c}\varepsilon_{11} \\ \varepsilon_{22} \\ \varepsilon_{33}\end{array}\right]\,.\tag{3.3.12}
 \end{equation}
 </div>
-<p data-braille="continuation">Risultato che consente di individuare i coefficienti costitutivi non nulli relativi alle componenti normali del tensore della tensione, ovvero</p>
+<p>Risultato che consente di individuare i coefficienti costitutivi non nulli relativi alle componenti normali del tensore della tensione, ovvero</p>
 <div class="displaymath">
 \begin{gather}
 \mathbb{C}_{1111} = \mathbb{C}_{2222} = \mathbb{C}_{3333} = \frac{E(1-\nu)}{(1+\nu)(1-2\nu)}\,,\tag{3.3.13}\\

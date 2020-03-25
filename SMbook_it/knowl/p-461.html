@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-04T11:52:51+01:00    *-->
+<!--*    on 2020-03-25T11:02:09+01:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,7 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Nel seguito vengono riportate le istruzioni MATLAB per il calcolo della risultante e del baricentro per alcune tipologie di carico ripartito. <figure class="listing figure-like"><pre class="console"><b>% carico ripartito costante
+<p>Nel seguito vengono riportate le istruzioni MATLAB per il calcolo della risultante e del baricentro per alcune tipologie di carico ripartito. <figure class="figure-like"><pre class="console"><b>% carico ripartito costante
 syms q l x;
 carico(x, q) = q;
 np = 100;
@@ -25,7 +25,7 @@ plot(xv,qv,'r','LineWidth',2)
 Rq = int(carico(x, q), x, 0, l)
 xq = int(carico(x, q)*x, x, 0, l)/Rq
 </b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">5.7.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure> <figure class="listing figure-like"><pre class="console"><b>% carico ripartito lineare
+<figcaption><span class="type">Listato</span> <span class="codenumber">5.7.7.</span> </figcaption></figure> <figure class="figure-like"><pre class="console"><b>% carico ripartito lineare
 syms q l x;
 carico(x, q, l) = q/l*x;
 np = 100;
@@ -36,7 +36,7 @@ plot(xv,qv,'r','LineWidth',2)
 Rq = int(carico(x, q, l), x, 0, l)
 xq = int(carico(x, q, l)*x, x, 0, l)/Rq
 </b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">5.7.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure> <figure class="listing figure-like"><pre class="console"><b>% carico ripartito parabolico
+<figcaption><span class="type">Listato</span> <span class="codenumber">5.7.8.</span> </figcaption></figure> <figure class="figure-like"><pre class="console"><b>% carico ripartito parabolico
 syms q l x;
 carico(x, q, l) = q/l^2*x^2;
 np = 100;
@@ -47,7 +47,7 @@ plot(xv,qv,'r','LineWidth',2)
 Rq = int(carico(x, q, l), x, 0, l)
 xq = int(carico(x, q, l)*x, x, 0, l)/Rq
 </b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">5.7.9<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<figcaption><span class="type">Listato</span> <span class="codenumber">5.7.9.</span> </figcaption></figure></p>
 <span class="incontext"><a href="sollecitazioni_sec_rigid_body_statics_chap_it.html#p-461">in-context</a></span>
 </body>
 </html>
