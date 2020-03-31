@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:08+01:00    *-->
+<!--*    on 2020-03-31T11:53:47+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,13 +13,25 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Prendendo quindi come riferimento l'asse della trave potremo calcolare la componente di deformazione \(\varepsilon_{33}\text{,}\) qui indicata semplicemente come  \(\varepsilon\text{,}\) derivando semplicemente la variabile di spostamento lungo l'asse</p>
+<p>L'eguaglianza fra lavoro interno e lavoro esterno diventa pertanto</p>
 <div class="displaymath">
 \begin{equation}
-\varepsilon = \frac{du}{dx}\,.\tag{3.5.2}
+\begin{split}
+-\func{M}{l} \func{\frac{d \delta w}{dx}}{l} + \func{M}{0} \func{\frac{d \delta w}{dx}}{0}  + \func{\frac{d M}{dx}}{l}\func{\delta w}{l} - \func{\frac{d M}{dx}}{0}  \func{\delta w}{0} +\\ - \int_{l} \frac{d^2 M}{dx^2}  \delta w \,dx
+= \int_{l} \func{q}{x}\,\func{\delta w}{x}\, dx + V_{0} \,\func{\delta w}{0} +  V_{l} \,\func{\delta w}{l} +\\ - \mathcal{M}_{0} \,\func{\frac{d\delta w}{dx}}{0} -  \mathcal{M}_{l} \,\func{\frac{d\delta w}{dx}}{l}\,,\quad \forall\,\delta w\,.
+\end{split}\tag{3.6.15}
 \end{equation}
 </div>
-<p>Al momento, come nella soluzione 3D di riferimento, \(u\) è variabile lungo l'asse e la deformazione \(\varepsilon\) è costante.</p>
-<span class="incontext"><a href="stretched_beam_sec_elasticity_chap_it.html#p-311">in-context</a></span>
+<p>Da cui si ricavano le seguenti equazioni</p>
+<div class="displaymath">
+\begin{align}
+\delta w:\amp \quad \frac{d^2 M}{dx^2}  + \func{q}{x} = 0\,,\;\; 0 \leq x \leq l  \tag{3.6.16}\\
+\func{\delta w}{0}:\amp \quad \func{\frac{d M}{dx}}{0}  = -V_0\,,\;\;  x = 0  \tag{3.6.17}\\
+\func{\delta w}{l}:\amp \quad \func{\frac{d M}{dx}}{l}  = V_l\,,\;\; x = l  \tag{3.6.18}\\
+\func{\frac{d\delta w}{dx}}{0}:\amp \quad \func{M}{0}  = -\mathcal{M}_0\,,\;\;  x = 0  \tag{3.6.19}\\
+\func{\frac{d\delta w}{dx}}{l}:\amp \quad \func{M}{l}  = \mathcal{M}_l\,,\;\;  x = l  \tag{3.6.20}
+\end{align}
+</div>
+<span class="incontext"><a href="bent_beam_sec_elasticity_chap_it.html#p-311">in-context</a></span>
 </body>
 </html>

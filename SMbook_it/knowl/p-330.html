@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:08+01:00    *-->
+<!--*    on 2020-03-31T11:53:47+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,70 +13,21 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<ul class="disc">
-<li>Carichi<div class="displaymath">
+<p>Per lo schema assegnato l'equazione differenziale <a data-knowl="./knowl/bent_beam_navier.html" title="Equazione 3.6.34">(3.6.34)</a> fornisce</p>
+<div class="displaymath">
 \begin{equation*}
-\func{q}{x}\quad \mathcal{M}_0 \quad \mathcal{M}_l \quad V_0 \quad V_l
+-EJ\,\frac{d^4w}{dx^4} + q = 0\,,
 \end{equation*}
 </div>
-</li>
-<li>Incognite<div class="displaymath">
-\begin{equation*}
-\func{w}{x}\quad\func{\chi}{x}\quad\func{M}{x}
-\end{equation*}
+<p>dove il carico ripartito ha un valore costante. Anche in questo caso le condizioni al contorno sono di tipo cinematico all'estremo \(x=0\) e di tipo statico all'estremo \(x=l\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+\amp \func{w}{0} = 0\,,\\
+\amp \func{\frac{dw}{dx}}{0} = 0\,,\\
+\amp \func{\frac{d M}{dx}}{l} = \frac{d}{dx}\left(-EJ\,\func{\frac{d^2w}{dx^2}}{l}\right) = -EJ\,\func{\frac{d^3w}{dx^3}}{l}  = 0\,,\\
+\amp \func{M}{l} = -EJ\,\func{\frac{d^2w}{dx^2}}{l} = 0\,.
+\end{align*}
 </div>
-</li>
-<li>Lavoro interno<div class="displaymath">
-\begin{equation}
-L_i = \int_{l} M \chi \,dx\,.\tag{3.6.21}
-\end{equation}
-</div>
-</li>
-<li>Lavoro esterno<div class="displaymath">
-\begin{equation}
-\begin{split}
-L_e = \int_{l} \func{q}{x}\,\func{w}{x}\, dx + V_{0} \,\func{w}{0} +  V_{l} \,\func{w}{l} +\\ - \mathcal{M}_{0} \,\func{\frac{dw}{dx}}{0} -  \mathcal{M}_{l} \,\func{\frac{dw}{dx}}{l} \,.
-\end{split}\tag{3.6.22}
-\end{equation}
-</div>
-</li>
-<li>Legame spostamento-deformazione<div class="displaymath">
-\begin{equation}
-\chi = - \frac{d^2 w}{dx^2}\tag{3.6.23}
-\end{equation}
-</div>
-</li>
-<li>Legame elastico<div class="displaymath">
-\begin{equation}
-M = EJ\,\chi\tag{3.6.24}
-\end{equation}
-</div>
-</li>
-<li>Equazioni di equilibrio<div class="displaymath">
-\begin{equation}
-\frac{d^2 M}{dx^2}  + \func{q}{x} = 0\tag{3.6.25}
-\end{equation}
-</div>
-</li>
-<li>Eventuali condizioni al contorno di tipo statico<div class="displaymath">
-\begin{align}
-\func{\frac{d M}{dx}}{0} \amp= -V_0\tag{3.6.26}\\
-\func{\frac{d M}{dx}}{l} \amp= V_l\tag{3.6.27}\\
-\func{M}{0}  \amp= -\mathcal{M}_0 \tag{3.6.28}\\
-\func{M}{l}  \amp= \mathcal{M}_l \tag{3.6.29}
-\end{align}
-</div>
-</li>
-<li>Eventuali condizioni al contorno di tipo cinematico<div class="displaymath">
-\begin{align}
-\func{w}{0} \amp=  \bar{w}_{0}\tag{3.6.30}\\
-\func{w}{l} \amp=  \bar{w}_{l}\tag{3.6.31}\\
--\func{\frac{dw}{dx}}{0} \amp= \bar{\varphi}_0\tag{3.6.32}\\
--\func{\frac{dw}{dx}}{l} \amp= \bar{\varphi}_l\tag{3.6.33}
-\end{align}
-</div>
-</li>
-</ul>
-<span class="incontext"><a href="bent_beam_sec_elasticity_chap_it.html#p-330">in-context</a></span>
+<span class="incontext"><a href="bent_beam_applications_sec_elasticity_chap_it.html#p-330">in-context</a></span>
 </body>
 </html>

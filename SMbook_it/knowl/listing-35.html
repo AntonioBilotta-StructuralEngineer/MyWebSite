@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:08+01:00    *-->
+<!--*    on 2020-03-31T11:53:47+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,14 +12,19 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<figure class="figure-like"><pre class="console"><b>syms u(x) EA F l;
-Du = diff(u);
-ode = EA*diff(u,x,2) == 0;
-cond1 = u(0) == 0;
-cond2 = EA*Du(l) == F;
-conds = [cond1 cond2];
-dsolve(ode,conds)
+<figure class="figure-like"><pre class="console"><b>syms w(x);
+EJ = 1;
+F = 1;
+l = 1;
+w(x)=F/6/EJ*(-x^3+3*l*x^2);
+
+np = 100;
+Xv = 0:1/np:1;
+wv = w(Xv);
+Beam = zeros(1, np+1);
+plot(Xv,wv,'r',Xv,Beam,'k','LineWidth',2)
+set(gca, 'YDir','reverse')
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">3.7.3.</span> </figcaption></figure><span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#listing-35">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">3.8.3.</span> </figcaption></figure><span class="incontext"><a href="bent_beam_applications_sec_elasticity_chap_it.html#listing-35">in-context</a></span>
 </body>
 </html>

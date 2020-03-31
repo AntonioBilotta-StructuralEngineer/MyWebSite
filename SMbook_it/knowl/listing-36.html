@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:08+01:00    *-->
+<!--*    on 2020-03-31T11:53:47+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,21 +12,30 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<figure class="figure-like"><pre class="console"><b>syms ua(x) ub(x) EA F l a;
-Dua = diff(ua);
-Dub = diff(ub);
-ode1 = EA*diff(ua,x,2) == 0;
-ode2 = EA*diff(ub,x,2) == 0;
-odes = [ode1; ode2];
-cond1 = ua(0) == 0;
-cond2 = ub(l) == 0;
-cond3 = ua(a) == ub(a);
-cond4 = EA*Dua(a) - EA*Dub(a) == F;
+<figure class="figure-like"><pre class="console"><b>syms w(x) EJ q l;
+ode = -EJ*diff(w,x,4) + q == 0;
+D1w = diff(w,x,1);
+D2w = diff(w,x,2);
+D3w = diff(w,x,3);
+cond1 = w(0) == 0;
+cond2 = D1w(0) == 0;
+cond3 = -EJ*D3w(l) == 0;
+cond4 = -EJ*D2w(l) == 0;
 conds = [cond1 cond2 cond3 cond4];
-sols = dsolve(odes,conds);
-sols.ua
-sols.ub
+sol(x,EJ,q,l) = dsolve(ode,conds)
+M(x,EJ,q,l) = -EJ*diff(sol,x,2)
+
+np = 100;
+Xv = 0:1/np:1;
+wv = sol(Xv,1,1,1);
+Beam = zeros(1, np+1);
+plot(Xv,wv,'r',Xv,Beam,'k','LineWidth',2)
+set(gca, 'YDir','reverse')
+
+Mv = M(Xv,1,1,1);
+plot(Xv,Mv,'b',Xv,Beam,'k','LineWidth',2)
+set(gca, 'YDir','reverse')
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">3.7.5.</span> </figcaption></figure><span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#listing-36">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">3.8.5.</span> </figcaption></figure><span class="incontext"><a href="bent_beam_applications_sec_elasticity_chap_it.html#listing-36">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:08+01:00    *-->
+<!--*    on 2020-03-31T11:53:47+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,30 +12,11 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<figure class="figure-like"><pre class="console"><b>syms w(x) EJ q l;
-ode = -EJ*diff(w,x,4) + q == 0;
-D1w = diff(w,x,1);
-D2w = diff(w,x,2);
-D3w = diff(w,x,3);
-cond1 = w(0) == 0;
-cond2 = D1w(0) == 0;
-cond3 = -EJ*D3w(l) == 0;
-cond4 = -EJ*D2w(l) == 0;
-conds = [cond1 cond2 cond3 cond4];
-sol(x,EJ,q,l) = dsolve(ode,conds)
-M(x,EJ,q,l) = -EJ*diff(sol,x,2)
-
-np = 100;
-Xv = 0:1/np:1;
-wv = sol(Xv,1,1,1);
-Beam = zeros(1, np+1);
-plot(Xv,wv,'r',Xv,Beam,'k','LineWidth',2)
-set(gca, 'YDir','reverse')
-
-Mv = M(Xv,1,1,1);
-plot(Xv,Mv,'b',Xv,Beam,'k','LineWidth',2)
-set(gca, 'YDir','reverse')
+<figure class="figure-like"><pre class="console"><b>syms l;
+A = [1 0 0; 0 1 0; 0 1 l];
+b = [0; 0; l/10];
+linsolve(A,b)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">3.8.5.</span> </figcaption></figure><span class="incontext"><a href="bent_beam_applications_sec_elasticity_chap_it.html#listing-40">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">4.4.6.</span> </figcaption></figure><span class="incontext"><a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html#listing-40">in-context</a></span>
 </body>
 </html>

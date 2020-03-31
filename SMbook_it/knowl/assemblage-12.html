@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:07+01:00    *-->
+<!--*    on 2020-03-31T11:53:45+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,62 +12,44 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="assemblage-like"><h6 class="heading"><span class="title">Trasformazione 4.</span></h6>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:45%;justify-content:flex-start;"><p><img src="images/RightShear.png" style="width: 100%; height: auto;" alt=""></p></div>
-<div class="sbspanel" style="width:20%;justify-content:flex-start;"><div class="displaymath">
+<article class="assemblage-like"><p>Si verifichi che gli invarianti calcolati su \(\tens{U}\) nella forma diagonale</p>
+<div class="displaymath">
 \begin{equation*}
-\mat{F} =
-\left[\begin{array}{cc} 1 \amp 1 \\ 0  \amp 1  \end{array}\right]
+\mat{U} =
+\left[\begin{array}{ccc}
+2 \amp 0 \amp 0\\
+0 \amp 5 \amp 0\\
+0 \amp 0 \amp 7\\
+\end{array}\right]\,,
 \end{equation*}
-</div></div>
-<div class="sbspanel" style="width:35%;justify-content:flex-start;"><div class="displaymath">
-\begin{gather*}
-(\alpha\,c +\beta\,s)= 1\,,\\
-(-\alpha\,s+\beta\,c)= 1\,,\\
-(\beta\,c +\gamma\,s)= 0\,,\\
-(-\beta\,s+\gamma\,c)= 1\,,\\
-c^2 + s^2 = 1\,.
-\end{gather*}
-</div></div>
-</div></div>
-<p>Istruzioni MATLAB <figure class="figure-like"><pre class="console"><b>funT4 = @(x) ...
-[x(1)*x(4) + x(2)*x(5) - 1; ...
--x(1)*x(5) + x(2)*x(4) - 1; ...
-x(2)*x(4) + x(3)*x(5); ...
--x(2)*x(5) + x(3)*x(4) - 1; ...
-x(4)^2 + x(5)^2 - 1];
-
-guess = [1, 1, 1, 1, 1];
-fsolve(@funT4, guess)
+</div>
+<p>e nella forma</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{U} =
+\left[\begin{array}{ccc}
+5.2500 \amp  -1.0607 \amp  -1.7500 \\
+-1.0607 \amp   3.5000 \amp  -1.0607 \\
+-1.7500 \amp  -1.0607  \amp  5.2500
+\end{array}\right]\,,
+\end{equation*}
+</div>
+<p>non cambiano.</p>
+<p>Si riportano le istruzioni MATLAB utilizzabili per la verifica.</p>
+<p><figure class="figure-like"><pre class="console"><b>lam1 = 2;
+lam2 = 5;
+lam3 = 7;
+I1 = lam1 + lam2 + lam3
+I2 = lam1*lam2 + lam2*lam3 + lam3*lam1
+I3 = lam1*lam2*lam3
+U = ...
+[5.2500 -1.0607 -1.7500; ...
+-1.0607 3.5000 -1.0607; ...
+-1.7500 -1.0607 5.2500];
+I1 = trace(U)
+I2 = 1/2*(trace(U)^2 - trace(U*U))
+I3 = det(U)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.6.9.</span> </figcaption></figure> In questo caso il risultato è più interessante dei casi precedenti. In particolare si ha</p>
-<div class="displaymath">
-\begin{equation*}
-x(1) = \alpha= 1.3416\,,\quad
-x(2) = \beta = 0.4472\,,\quad
-x(3) = \gamma =  0.8944\,,
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-x(4) = c=0.8944\,,\quad
-x(5) = s=-0.4472\,,
-\end{equation*}
-</div>
-<p>ovvero</p>
-<div class="displaymath">
-\begin{equation*}
-\mat{U} = \left[\begin{array}{cc} 1.3416 \amp  0.4472 \\  0.4472  \amp  0.8944  \end{array}\right]\,,\quad
-\mat{R} = \left[\begin{array}{cc}  0.8944 \amp 0.4472 \\ -0.4472  \amp  0.8944  \end{array}\right]\,.
-\end{equation*}
-</div>
-<p>Risultato che può essere rappresentato graficamente ricordando il significato delle colonne di \(\mat{U}\) e \(\mat{R}\)</p>
-<div class="displaymath">
-\begin{equation*}
-\mat{U} = \left[\begin{array}{cc} \func{\vec{\chi}_{\tens{U}}}{\vec{e}_1} \amp \func{\vec{\chi}_{\tens{U}}}{\vec{e}_2} \end{array}\right]\,,\quad
-\mat{R} = \left[\begin{array}{cc} \func{\vec{\chi}_{\tens{R}}}{\vec{e}_1} \amp \func{\vec{\chi}_{\tens{R}}}{\vec{e}_2}  \end{array}\right]\,.
-\end{equation*}
-</div></article><span class="incontext"><a href="polar_sec_strain_chap_it.html#assemblage-12">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">1.7.8.</span> </figcaption></figure></p></article><span class="incontext"><a href="principal_directions_sec_strain_chap_it.html#assemblage-12">in-context</a></span>
 </body>
 </html>

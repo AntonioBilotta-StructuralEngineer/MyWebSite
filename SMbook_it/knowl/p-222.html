@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:07+01:00    *-->
+<!--*    on 2020-03-31T11:53:46+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,18 +13,19 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Per la discussione dello stato di taglio “puro” occorre lasciare il punto di vista dato dalle direzioni principali e parlare direttamente di uno stato tensionale caratterizzato dalla seguente rappresentazione per componenti</p>
-<div class="displaymath">
-\begin{equation*}
-\mat{\sigma} =
-\left[\begin{array}{ccc}
-0  \amp \tau \amp 0 \\
-\tau \amp 0 \amp 0 \\
-0 \amp 0 \amp 0
-\end{array}\right]\,.
-\end{equation*}
-</div>
-<p>In tal caso, sempre relativamente al sistema di riferimento \(\vec{e}_1\text{,}\) \(\vec{e}_2\text{,}\) \(\vec{e}_3\) utilizzato, si parlerà di stato di taglio “puro” in quanto l'unica componente non nulla del tensore è \(\sigma_{12}=\sigma_{21}=\tau\text{.}\)</p>
-<span class="incontext"><a href="stress_analysis_sec_stress_chap_it.html#p-222">in-context</a></span>
+<p>Risposta all'esercizio della <a href="exercises_sec_stress_chap_it.html#stress_ex_1" class="internal" title="Sottosezione 2.6.3">Sottosezione 2.6.3</a>. <figure class="figure-like"><pre class="console"><b>sig = @(x) ...
+[5*x(2)*x(3) 3*x(2)^2 0;
+3*x(2)^2 0 -x(1);
+0 -x(1) 0];
+
+n = @(x) ...
+[2*x(1)/sqrt((2*x(1))^2+(2*x(2))^2+1);
+2*x(2)/sqrt((2*x(1))^2+(2*x(2))^2+1);
+1/sqrt((2*x(1))^2+(2*x(2))^2+1)];
+
+t = sig([1/2; sqrt(3)/2; -1])*n([1/2; sqrt(3)/2; -1])
+</b></pre>
+<figcaption><span class="type">Listato</span> <span class="codenumber">2.7.1.</span> </figcaption></figure> Si osserva che, come al solito, le precedenti istruzioni non rappresentano l'unico modo possibile per ottenere il risultato richiesto.</p>
+<span class="incontext"><a href="answers_sec_stress_chap_it.html#p-222">in-context</a></span>
 </body>
 </html>

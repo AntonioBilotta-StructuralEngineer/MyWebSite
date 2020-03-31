@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:07+01:00    *-->
+<!--*    on 2020-03-31T11:53:45+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,16 +12,20 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<figure class="figure-like"><pre class="console"><b>funT3 = @(x) ...
-[x(1)*x(4) + x(2)*x(5) - 1; ...
--x(1)*x(5) + x(2)*x(4); ...
-x(2)*x(4) + x(3)*x(5); ...
--x(2)*x(5) + x(3)*x(4) - 1.5; ...
-x(4)^2 + x(5)^2 - 1];
-
-guess = [1, 1, 1, 1, 1];
-fsolve(@funT3, guess)
+<figure class="figure-like"><pre class="console"><b>lam1 = 2;
+lam2 = 5;
+lam3 = 7;
+I1 = lam1 + lam2 + lam3
+I2 = lam1*lam2 + lam2*lam3 + lam3*lam1
+I3 = lam1*lam2*lam3
+U = ...
+[5.2500 -1.0607 -1.7500; ...
+-1.0607 3.5000 -1.0607; ...
+-1.7500 -1.0607 5.2500];
+I1 = trace(U)
+I2 = 1/2*(trace(U)^2 - trace(U*U))
+I3 = det(U)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.6.8.</span> </figcaption></figure><span class="incontext"><a href="polar_sec_strain_chap_it.html#listing-18">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">1.7.8.</span> </figcaption></figure><span class="incontext"><a href="principal_directions_sec_strain_chap_it.html#listing-18">in-context</a></span>
 </body>
 </html>

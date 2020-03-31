@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:08+01:00    *-->
+<!--*    on 2020-03-31T11:53:47+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,11 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Inoltre, a differenza della soluzione 3d di riferimento, la scelta dei carichi ammissibili determina per \(\func{u}{x}\) un andamento non non più limitato alla sola variabilità lineare. Anche lo sforzo normale e la deformazione assiale, costanti nella soluzione di riferimento, diventano anch'essi funzioni generiche del tipo \(\func{N}{x}\) e \(\func{\varepsilon}{x}\text{.}\)</p>
-<span class="incontext"><a href="stretched_beam_sec_elasticity_chap_it.html#p-316">in-context</a></span>
+<p>L'integrale generale può essere calcolato utilizzando le seguenti istruzioni. <figure class="figure-like"><pre class="console"><b>syms u(x) EA;
+ode = EA*diff(u,x,2) == 0
+dsolve(ode)
+</b></pre>
+<figcaption><span class="type">Listato</span> <span class="codenumber">3.7.2.</span> </figcaption></figure></p>
+<span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#p-316">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:09+01:00    *-->
+<!--*    on 2020-03-31T11:53:48+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,16 +12,13 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="assemblage-like"><p>Si può quindi procedere con il calcolo del rango della matrice nel modo seguente. <figure class="figure-like"><pre class="console"><b>syms l;
-A = [
-1 0 2*l 0 0 0; ... 
-0 1 0 0 0 0; ... 
-1 0 0 -1 0 0; ...
-0 1 2*l 0 -1 l; ...
-0 0 0 0 1 0; ...
-];
-rank(A)
+<article class="assemblage-like"><p>Si riportano le istruzioni MATLAB per la verifica del risultato: calcolo del rango della matrice statica e calcolo delle reazioni vincolari incognite. <figure class="figure-like"><pre class="console"><b>syms l F
+B = [0 0 1; 1 0 0; -l 1 0]
+rango = rank(B)
+
+f = [0; -F; F*l/2]
+r = linsolve(B, -f)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">4.4.16.</span> </figcaption></figure></p></article><span class="incontext"><a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html#assemblage-37">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">5.6.5.</span> </figcaption></figure></p></article><span class="incontext"><a href="analysis_examples_sec_rigid_body_statics_chap_it.html#assemblage-37">in-context</a></span>
 </body>
 </html>

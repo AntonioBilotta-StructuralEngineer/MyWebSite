@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:07+01:00    *-->
+<!--*    on 2020-03-31T11:53:46+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,24 +12,28 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="assemblage-like"><p>A partire dall'espressione di \(\tens{U}\) ottenuta nell'esempio precedente, ovvero</p>
-<div class="displaymath">
-\begin{equation*}
-\mat{U} =
-\left[\begin{array}{ccc}
-5.2500 \amp  -1.0607 \amp  -1.7500 \\
--1.0607 \amp   3.5000 \amp  -1.0607 \\
--1.7500 \amp  -1.0607  \amp  5.2500
-\end{array}\right]\,,
-\end{equation*}
+<article class="assemblage-like"><ul class="disc">
+<li>
+<em class="alert">Equazioni di equilibrio</em> (<a href="chap_stress_it.html" class="internal" title="Capitolo 2: forze, equilibrio e tensione">Capitolo 2</a>)<div class="displaymath">
+\begin{equation}
+\text{div}\tens{\sigma} + \vec{b} = \vec0\,.\tag{3.4.1}
+\end{equation}
 </div>
-<p>si calcolino con MATLAB gli autovalori ed autovettori.</p>
-<p><figure class="figure-like"><pre class="console"><b>U = ...
-[5.2500 -1.0607 -1.7500; ...
--1.0607 3.5000 -1.0607; ...
--1.7500 -1.0607 5.2500];
-[V, D] = eig(U)
-</b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.7.6.</span> </figcaption></figure></p></article><span class="incontext"><a href="principal_directions_sec_strain_chap_it.html#assemblage-15">in-context</a></span>
+</li>
+<li>
+<em class="alert">Legame deformazione-spostamento</em> (<a href="chap_strain_it.html" class="internal" title="Capitolo 1: cinematica dei corpi">Capitolo 1</a>)<div class="displaymath">
+\begin{equation}
+\tens{\varepsilon} = \text{sym}\tens{\nabla u}\,.\tag{3.4.2}
+\end{equation}
+</div>
+</li>
+<li>
+<em class="alert">Legame elastico</em> (<a href="chap_elasticity_it.html" class="internal" title="Capitolo 3: comportamento elastico">Capitolo 3</a>)<div class="displaymath">
+\begin{equation}
+\tens{\sigma} = \tensQ{C}:\tens{\varepsilon}\,.\tag{3.4.3}
+\end{equation}
+</div>
+</li>
+</ul></article><span class="incontext"><a href="problem_sec_elasticity_chap_it.html#assemblage-15">in-context</a></span>
 </body>
 </html>

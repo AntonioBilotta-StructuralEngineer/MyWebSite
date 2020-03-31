@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:07+01:00    *-->
+<!--*    on 2020-03-31T11:53:46+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,18 +12,10 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<figure class="figure-like"><pre class="console"><b>sig = @(x) ...
-[5*x(2)*x(3) 3*x(2)^2 0;
-3*x(2)^2 0 -x(1);
-0 -x(1) 0];
-
-n = @(x) ...
-[2*x(1)/sqrt((2*x(1))^2+(2*x(2))^2+1);
-2*x(2)/sqrt((2*x(1))^2+(2*x(2))^2+1);
-1/sqrt((2*x(1))^2+(2*x(2))^2+1)];
-
-t = sig([1/2; sqrt(3)/2; -1])*n([1/2; sqrt(3)/2; -1])
+<figure class="figure-like"><pre class="console"><b>syms E ni;
+M = [1/E -ni/E -ni/E; -ni/E 1/E  -ni/E; -ni/E -ni/E 1/E]
+inv(M)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">2.7.1.</span> </figcaption></figure><span class="incontext"><a href="answers_sec_stress_chap_it.html#listing-27">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">3.3.2.</span> </figcaption></figure><span class="incontext"><a href="multiaxial_sec_elasticity_chap_it.html#listing-27">in-context</a></span>
 </body>
 </html>

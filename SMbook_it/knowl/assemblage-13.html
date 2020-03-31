@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:07+01:00    *-->
+<!--*    on 2020-03-31T11:53:46+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,49 +12,17 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="assemblage-like"><p>Assumendo per \(\tens{U}\) la seguente forma diagonale</p>
-<div class="displaymath">
-\begin{equation*}
-\mat{U} =
-\left[\begin{array}{ccc}
-2 \amp 0 \amp 0\\
-0 \amp 5 \amp 0\\
-0 \amp 0 \amp 7\\
-\end{array}\right]\,,
-\end{equation*}
-</div>
-<p>si calcoli l'espressione che assume \(\tens{U}\) rispetto ad una base ottenuta dalle direzioni principali applicando, in successione, le seguenti rotazioni</p>
-<div class="displaymath">
-\begin{equation*}
-\matWp{R}{1} = 
-\left[\begin{array}{ccc}
-\cos{\frac{\pi}{4}} \amp -\sin{\frac{\pi}{4}} \amp 0\\
-\sin{\frac{\pi}{4}} \amp \cos{\frac{\pi}{4}} \amp 0\\
-0 \amp 0 \amp 1\\
-\end{array}\right]\,,
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-\matWp{R}{2} = 
-\left[\begin{array}{ccc}
-\cos{\frac{\pi}{4}}  \amp 0 \amp -\sin{\frac{\pi}{4}}\\
-0 \amp 1 \amp 0\\
-\sin{\frac{\pi}{4}} \amp 0 \amp \cos{\frac{\pi}{4}}\\
-\end{array}\right]\,.
-\end{equation*}
-</div>
-<p>Le seguenti istruzioni MATLAB consentono di calcolare quanto richiesto. <figure class="figure-like"><pre class="console"><b>R1 = [cos(pi/4) -sin(pi/4) 0; sin(pi/4) cos(pi/4) 0; 0 0 1];
-R2 = [cos(pi/4) 0 -sin(pi/4); 0 1 0; sin(pi/4) 0 cos(pi/4)];
-u1 = R2*R1*[1; 0; 0];
-u2 = R2*R1*[0; 1; 0];
-u3 = R2*R1*[0; 0; 1];
-lam1 = 2;
-lam2 = 5;
-lam3 = 7;
-U = lam1*u1*transpose(u1) + lam2*u2*transpose(u2) + ...
-lam3*u3*transpose(u3)
+<article class="assemblage-like"><p>A scopo esemplificativo si riportano le istruzioni MATLAB utilizzabili per il plottaggio della funzione sulla base dei seguenti dati: \(\omega = 2\pi\;\left[\frac{\text{rad}}{\text{s}}\right]\text{,}\) \(m=10\;\left[\text{kg}\right]\text{,}\) \(\func{x}{0}= 1 \; \left[\text{m}\right]\) e \(\func{\frac{dx}{dt}}{0}= 10 \; \left[\frac{\text{m}}{\text{s}}\right]\text{.}\) <figure class="figure-like"><pre class="console"><b>om = 2*pi;
+u0 = 1;
+v0 = 10;
+m = 10;
+syms t 
+u(t) = u0*cos(om*t)+v0/om*sin(om*t);
+
+tt=linspace(0,3,201);
+uu=u(tt);
+plot(tt,uu,'k','LineWidth',2)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.7.3.</span> </figcaption></figure></p></article><span class="incontext"><a href="principal_directions_sec_strain_chap_it.html#assemblage-13">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">3.2.4.</span> </figcaption></figure></p></article><span class="incontext"><a href="uniaxial_sec_elasticity_chap_it.html#assemblage-13">in-context</a></span>
 </body>
 </html>

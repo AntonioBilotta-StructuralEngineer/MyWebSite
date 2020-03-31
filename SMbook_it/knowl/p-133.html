@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:07+01:00    *-->
+<!--*    on 2020-03-31T11:53:45+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,18 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Lo scenario tipico è, comunque, ribaltato. Ovvero dato il tensore \(\tens{U}\) si vogliono valutare gli allungamenti e le direzioni principali. Risolvere tale quesito vuol dire calcolare gli autovalori e gli autovettori della matrice associata al tensore \(\tens{U}\text{.}\) Nella presente sezione non verrà presentata la procedura da utilizzare nella soluzione del problema agli autovalori perché questa costituisce un argomento che sicuramente è già stato oggetto di studio in corsi precedenti e per il quale la letteratura disponibile, anche in rete, è vasta. In questa sede si è ritenuto più importante mettere in evidenza il significato meccanico di autovalori ed autovettori, significato ampiamente discusso nelle sezioni precedenti.</p>
-<span class="incontext"><a href="principal_directions_sec_strain_chap_it.html#p-133">in-context</a></span>
+<p>Accade spesso nelle applicazioni che l'entità del gradiente dello spostamento sia piccola. In questi casi il contributo dipendente da \(\transp{\tens{\nabla u}}\,\tens{\nabla u}\) e presente sia nel tensore \(\tens{E}\) sia nel tensore \(\tens{C}\) diventa trascurabile. Pertanto il tensore della deformazione di Green-Lagrange conciderà con il <em class="emphasis">tensore della deformazione infinitesima</em> \(\tens{\varepsilon}\)</p>
+<div class="displaymath">
+\begin{equation}
+\lim_{\|\tens{\nabla u}\| \rightarrow 0} \tens{E} = \tens{\varepsilon} =  \frac{1}{2}\left(\tens{\nabla u} + \transp{\tens{\nabla u}}\right)\,,\tag{1.9.1}
+\end{equation}
+</div>
+<p>mentre il tensore di Cauchy assumerà la seguente espressione</p>
+<div class="displaymath">
+\begin{equation}
+\lim_{\|\tens{\nabla u}\| \rightarrow 0} \tens{C} = \tens{I}+ \tens{\nabla u} + \transp{\tens{\nabla u}}\,.\tag{1.9.2}
+\end{equation}
+</div>
+<span class="incontext"><a href="infinitesimal_sec_strain_chap_it.html#p-133">in-context</a></span>
 </body>
 </html>

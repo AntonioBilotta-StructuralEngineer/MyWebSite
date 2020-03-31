@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:07+01:00    *-->
+<!--*    on 2020-03-31T11:53:46+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,13 +13,45 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Quanto discusso nella sezione <a href="principal_directions_sec_strain_chap_it.html" class="internal" title="Sezione 1.7: tensore di deformazione \(\tens{U}\) e direzioni principali (trasformazione degli elementi di linea)">Sezione 1.7</a> relativa alle direzioni principali del tensore \(\tens{U}\) è applicabile in larga parte anche al tensore della tensione \(\tens{\sigma}\text{.}\) Ambedue i tensori sono simmetrici e l'unico fondamentale distinguo che occorre effettuare è che, a differenza di \(\tens{U}\text{,}\) \(\tens{\sigma}\) non è definito positivo. Pertanto in questo caso gli autovalori, che individuano adesso le <em class="emphasis">tensioni principali</em> del tensore, potranno essere anche nulli o negativi. Comunque la simmetria di \(\tens{\sigma}\) consente la seguente rappresentazione spettrale del tensore</p>
+<p>La equazione integrale di partenza può quindi essere riscritta come segue</p>
 <div class="displaymath">
 \begin{equation}
-\tens{\sigma} = \sigma_1\,\vec{s}_1 \otimes \vec{s}_1 + \sigma_2\,\vec{s}_2 \otimes \vec{s}_2 + \sigma_3\,\vec{s}_3 \otimes \vec{s}_3\,,\tag{2.4.3}
+\int_{\body} \left(\text{div}\left(\tens{\sigma}\vec{v}\right) - \tens{\sigma} : \tens{\nabla v} + \vec{b} \cdot \vec{v} \right)  \,dv= 0\,,\quad \forall\vec{v}\,.\tag{2.5.2}
 \end{equation}
 </div>
-<p>dove le <em class="emphasis">direzioni principali</em> \(\vec{s}_1\text{,}\) \(\vec{s}_2\text{,}\) \(\vec{s}_3\) sono gli autovettori di \(\tens{\sigma}\text{,}\) i quali costituiscono una terna ortonormale, e \(\sigma_1\text{,}\) \(\sigma_2\text{,}\) \(\sigma_3\) sono le tensioni principali.</p>
-<span class="incontext"><a href="stress_analysis_sec_stress_chap_it.html#p-212">in-context</a></span>
+<p>Il primo integrale, applicando in successione Teorema della divergenza e Teorema della tensione di Cauchy, diventa</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{\body} \text{div}\left(\tens{\sigma}\vec{v}\right)\, dv = 
+\int_{\partial\body} \tens{\sigma}\vec{v} \cdot \vec{n}\,ds =
+\int_{\partial\body} \vec{v} \cdot \tens{\sigma}\vec{n}\,ds =
+\int_{\partial\body} \vec{t} \cdot \vec{v}\,ds \,.
+\end{equation*}
+</div>
+<p>Quindi l'equazione <a data-knowl="./knowl/continuum_plv_2_eq.html" title="Equazione 2.5.2">(2.5.2)</a> diventa</p>
+<div class="displaymath">
+\begin{equation}
+\int_{\partial\body} \vec{t} \cdot \vec{v}\,ds - \int_{\body} \tens{\sigma} : \tens{\nabla v}\,dv + \int_{\body}  \vec{b} \cdot \vec{v} \,dv = 0\,,\quad \forall\vec{v}\,.\tag{2.5.3}
+\end{equation}
+</div>
+<p>Per la decomposizione di \(\tens{\nabla v}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\tens{\nabla v} = \text{sym}\tens{\nabla v} + \text{skew}\tens{\nabla v}
+\end{equation*}
+</div>
+<p>e la simmetria di \(\tens{\sigma}\) si ha</p>
+<div class="displaymath">
+\begin{equation*}
+\tens{\sigma} : \tens{\nabla v} =  \tens{\sigma} : \text{sym}\tens{\nabla v}\,.
+\end{equation*}
+</div>
+<p>Si arriva quindi alla seguente espressione finale della forma integrale delle equazioni indefinite di equilibrio <a data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equazione 2.3.10">(2.3.10)</a>:</p>
+<div class="displaymath">
+\begin{equation}
+\int_{\partial\body} \vec{t} \cdot \vec{v}\,ds + \int_{\body}  \vec{b} \cdot \vec{v} \,dv = \int_{\body} \tens{\sigma} : \text{sym}\tens{\nabla v}\,dv \,,\quad \forall\vec{v}\,.\tag{2.5.4}
+\end{equation}
+</div>
+<span class="incontext"><a href="plv_sec_stress_chap_it.html#p-212">in-context</a></span>
 </body>
 </html>

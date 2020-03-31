@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:07+01:00    *-->
+<!--*    on 2020-03-31T11:53:46+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,55 +13,18 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Nell'equazione <a data-knowl="./knowl/motiv_static_eq.html" title="Equazione 3.1.2">(3.1.2)</a> le incognite sono le 6 componenti indipendenti del tensore della tensione mentre le equazioni a disposizione sono soltanto 3. Posta in questi termini la ricerca della soluzione non sarebbe neanche proponibile. Comunque, data la semplicità dei dati del problema si può tentare la strada di assumere una forma per il tensore della tensione e verificare se si riescono a soddisfare tutte le equazioni di equilibrio, indefinite e sul contorno. In particolare si assuma per \(\tens{\sigma}\) la forma seguente</p>
-<div class="displaymath">
-\begin{equation}
-\mat{\sigma} =
-\left[\begin{array}{ccc}
-0 \amp 0 \amp 0\\
-0 \amp 0 \amp 0\\
-0 \amp 0 \amp \kappa
-\end{array}\right]\tag{3.1.10}
-\end{equation}
-</div>
-<p>valida su tutto il dominio e con \(\kappa\) una costante generica. Si verifica facilmente il soddisfacimento delle <a data-knowl="./knowl/motiv_static_components_eq.html" title="Equazione 3.1.3">(3.1.3)</a>, infatti</p>
-<div class="displaymath">
-\begin{equation*}
-\begin{array}{l}
-\frac{\partial\, 0}{\partial\, X_1} + \frac{\partial\, 0}{\partial\, X_2} + \frac{\partial\, 0}{\partial\, X_3} = 0\\
-\frac{\partial\, 0}{\partial\, X_1} + \frac{\partial\, 0}{\partial\, X_2} + \frac{\partial\, 0}{\partial\, X_3} = 0\\
-\frac{\partial\, 0}{\partial\, X_1} + \frac{\partial\, 0}{\partial\, X_2} + \frac{\partial\, \kappa}{\partial\, X_3} = 0
-\end{array}
-\quad\;\text{in}\;\body_0\,.
-\end{equation*}
-</div>
-<p>È verificato anche il soddisfacimento della <a data-knowl="./knowl/motiv_bc3_eq.html" title="Equazione 3.1.6">(3.1.6)</a>, infatti</p>
-<div class="displaymath">
-\begin{equation*}
-\left[\begin{array}{ccc}
-0 \amp 0 \amp 0\\
-0 \amp 0 \amp 0\\
-0 \amp 0 \amp \kappa
-\end{array}\right]
-\left[\begin{array}{r}n_1\\n_2\\0\end{array}\right] =
-\left[\begin{array}{r}0\\0\\0\end{array}\right] \,.
-\end{equation*}
-</div>
-<p>Mentre imponendo la <a data-knowl="./knowl/motiv_bc1_eq.html" title="Equazione 3.1.4">(3.1.4)</a>, ugualmente con la  <a data-knowl="./knowl/motiv_bc2_eq.html" title="Equazione 3.1.5">(3.1.5)</a>, si ottiene</p>
-<div class="displaymath">
-\begin{equation*}
-\left[\begin{array}{ccc}
-0 \amp 0 \amp 0\\
-0 \amp 0 \amp 0\\
-0 \amp 0 \amp \kappa
-\end{array}\right]
-\left[\begin{array}{r}0 \\ 0\\-1\end{array}\right] =
-\left[\begin{array}{r}0\\0\\-\bar{t}\end{array}\right]
-\quad \rightarrow \quad
-\kappa = \bar{t}
-\,.
-\end{equation*}
-</div>
-<span class="incontext"><a href="motivations_sec_elasticity_chap_it.html#p-248">in-context</a></span>
+<p>La seguente figura <figure class="figure-like"><div class="image-box" style="width: 85%; margin-left: 7.5%; margin-right: 7.5%;"><img src="images/armonico_semplice.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span> <span class="codenumber">3.2.5.</span> </figcaption></figure> ottenuta con le istruzioni MATLAB <figure class="figure-like"><pre class="console"><b>Edef(t) = 1/2*om^2*m*u(t)^2;
+Ekin(t) = 1/2*m*diff(u,t)^2;
+
+dd=Edef(tt);
+kk=Ekin(tt);
+
+scale = 5*u0 / (Edef(0)+Ekin(0));
+plot(tt,uu,'k',tt,dd*scale,'r',tt,kk*scale,'b','LineWidth',2)
+legend('spost.','en. def.','en. cinet.')
+</b></pre>
+<figcaption><span class="type">Listato</span> <span class="codenumber">3.2.6.</span> </figcaption></figure> evidenzia in forma grafica la continua trasformazione dell'energia di deformazione della molla in energia cinetica del corpo e viceversa. Energia di deformazione (colore rosso) che oscilla fra lo zero fra il valore massimo che si ha quando il valore assoluto dello spostamento (colore nero) è massimo, allo stesso istante la velocità è nulla. Al contrario l'energia cinematica (colore blu) è massima quando il valore assoluto dello velocità è massima, quando allo stesso istante lo spostamento è nullo.</p>
+<span class="incontext"><a href="uniaxial_sec_elasticity_chap_it.html#p-248">in-context</a></span>
 </body>
 </html>

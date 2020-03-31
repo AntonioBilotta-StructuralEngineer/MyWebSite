@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:06+01:00    *-->
+<!--*    on 2020-03-31T11:53:44+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -192,12 +192,12 @@ var js_version = 0.12;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="analysis_examples_sec_rigid_body_kinematics_chap_it"><h2 class="heading hide-type">
 <span class="type">Sezione</span> <span class="codenumber">4.4</span> <span class="title">applicazione dell'analisi cinematica ai sistemi di corpi rigidi</span>
 </h2>
-<a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html" class="permalink">¶</a><section class="subsection" id="subsection-93"><h3 class="heading hide-type">
+<a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html" class="permalink">¶</a><section class="subsection" id="subsection-94"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">4.4.1</span> <span class="title">trave appoggiata</span>
 </h3>
-<p id="p-388">Si effettui l'analisi cinematica della seguente trave di lunghezza pari a \(l\text{.}\) <figure class="figure-like" id="trave_appoggiata_cinematica_fig"><div class="image-box" style="width: 42%; margin-left: 29%; margin-right: 29%;"><img src="images/trave_appoggiata_cinematica.png" style="width: 100%; height: auto;" alt=""></div>
+<p id="p-370">Si effettui l'analisi cinematica della seguente trave di lunghezza pari a \(l\text{.}\) <figure class="figure-like" id="trave_appoggiata_cinematica_fig"><div class="image-box" style="width: 42%; margin-left: 29%; margin-right: 29%;"><img src="images/trave_appoggiata_cinematica.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figura</span> <span class="codenumber">4.4.1.</span> </figcaption></figure></p>
-<p id="p-389">La “lettura” delle condizioni di vincolo assegnate fornisce</p>
+<p id="p-371">La “lettura” delle condizioni di vincolo assegnate fornisce</p>
 <div class="displaymath">
 \begin{gather*}
 \vec{u}_A = \vec0\,,\\
@@ -212,7 +212,7 @@ u_{2A} = 0\,,\\
 u_{2B} = 0\,.
 \end{gather*}
 </div>
-<p id="p-390">Per l'unico corpo rigido in esame si scelga come polo il punto \(A\text{,}\) pertanto i 3 parametri lagrangiani (\(n=3\)) utilizzabili per la descrizione cinematica del sistema sono: <figure class="figure-like" id="trave_appoggiata_cinematica_parametri_lagrangiani_fig"><div class="image-box" style="width: 42%; margin-left: 29%; margin-right: 29%;"><img src="images/trave_appoggiata_cinematica_parametri_lagrangiani.png" style="width: 100%; height: auto;" alt=""></div>
+<p id="p-372">Per l'unico corpo rigido in esame si scelga come polo il punto \(A\text{,}\) pertanto i 3 parametri lagrangiani (\(n=3\)) utilizzabili per la descrizione cinematica del sistema sono: <figure class="figure-like" id="trave_appoggiata_cinematica_parametri_lagrangiani_fig"><div class="image-box" style="width: 42%; margin-left: 29%; margin-right: 29%;"><img src="images/trave_appoggiata_cinematica_parametri_lagrangiani.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figura</span> <span class="codenumber">4.4.2.</span> </figcaption></figure> Utilizzando l'equazione <a data-knowl="./knowl/mat_small_rigid_u_eq.html" title="Equazione 4.1.5">(4.1.5)</a> le condizioni di vincolo possono essere espresse rispetto alle coordinate lagrangiane scelte</p>
 <div class="displaymath">
 \begin{gather*}
@@ -233,17 +233,17 @@ u_{2A} + \varphi_{A} l = 0\,.
 \underbrace{\left[\begin{array}{c} 0 \\ 0 \\ 0 \end{array}\right]}_{\vec{d}}.
 \end{equation*}
 </div>
-<article class="assemblage-like" id="assemblage-31"><p id="p-391">Prima di procedere con la soluzione del sistema è possibile classificare il sistema calcolando il rango della matrice cinematica mediante le seguenti istruzioni MATLAB. <figure class="figure-like" id="listing-42"><pre class="console"><b>syms l;
+<article class="assemblage-like" id="assemblage-27"><p id="p-373">Prima di procedere con la soluzione del sistema è possibile classificare il sistema calcolando il rango della matrice cinematica mediante le seguenti istruzioni MATLAB. <figure class="figure-like" id="listing-38"><pre class="console"><b>syms l;
 A = [1 0 0; 0 1 0; 0 1 l];
 rank(A)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">4.4.3.</span> </figcaption></figure></p></article><p id="p-392">Dal momento che il \(\textrm{min}(m,n) = 3 == \textrm{rango}\mat{A}\) e \(n == m\) allora il sistema è cinematicamente determinato. La soluzione del sistema lineare fornisce infine i valori assunti dai parametri lagrangiani \(u_{1A}\text{,}\) \(u_{2A}\) e \(\varphi_{A}\) i quali in questo caso sono identicamente nulli.</p>
-<article class="assemblage-like" id="assemblage-32"><p id="p-393"><figure class="figure-like" id="listing-43"><pre class="console"><b>syms l;
+<figcaption><span class="type">Listato</span> <span class="codenumber">4.4.3.</span> </figcaption></figure></p></article><p id="p-374">Dal momento che il \(\textrm{min}(m,n) = 3 == \textrm{rango}\mat{A}\) e \(n == m\) allora il sistema è cinematicamente determinato. La soluzione del sistema lineare fornisce infine i valori assunti dai parametri lagrangiani \(u_{1A}\text{,}\) \(u_{2A}\) e \(\varphi_{A}\) i quali in questo caso sono identicamente nulli.</p>
+<article class="assemblage-like" id="assemblage-28"><p id="p-375"><figure class="figure-like" id="listing-39"><pre class="console"><b>syms l;
 A = [1 0 0; 0 1 0; 0 1 l];
 b = [0; 0; 0];
 linsolve(A,b)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">4.4.4.</span> </figcaption></figure></p></article><p id="p-394">Si supponga di modificare il problema assegnato nel modo seguente. <figure class="figure-like" id="trave_appoggiata_cinematica_bis_fig"><div class="image-box" style="width: 61%; margin-left: 19.5%; margin-right: 19.5%;"><img src="images/trave_appoggiata_cinematica_bis.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Listato</span> <span class="codenumber">4.4.4.</span> </figcaption></figure></p></article><p id="p-376">Si supponga di modificare il problema assegnato nel modo seguente. <figure class="figure-like" id="trave_appoggiata_cinematica_bis_fig"><div class="image-box" style="width: 61%; margin-left: 19.5%; margin-right: 19.5%;"><img src="images/trave_appoggiata_cinematica_bis.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figura</span> <span class="codenumber">4.4.5.</span> </figcaption></figure> In tal caso occorre modificare semplicemente la condizione vincolare per il carrello posto nel punto \(B\) ovvero</p>
 <div class="displaymath">
 \begin{equation*}
@@ -263,17 +263,17 @@ u_{2B} = l/10\,.
 \end{equation*}
 </div>
 <p>La soluzione del sistema lineare fornisce i nuovi valori assunti dai parametri lagrangiani \(u_{1A}\text{,}\) \(u_{2A}\) e \(\varphi_{A}\text{.}\)</p>
-<article class="assemblage-like" id="assemblage-33"><p id="p-395">Le istruzioni MATLAB utilizzabili in questo caso sono le seguenti. <figure class="figure-like" id="listing-44"><pre class="console"><b>syms l;
+<article class="assemblage-like" id="assemblage-29"><p id="p-377">Le istruzioni MATLAB utilizzabili in questo caso sono le seguenti. <figure class="figure-like" id="listing-40"><pre class="console"><b>syms l;
 A = [1 0 0; 0 1 0; 0 1 l];
 b = [0; 0; l/10];
 linsolve(A,b)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">4.4.6.</span> </figcaption></figure></p></article></section><section class="subsection" id="subsection-94"><h3 class="heading hide-type">
+<figcaption><span class="type">Listato</span> <span class="codenumber">4.4.6.</span> </figcaption></figure></p></article></section><section class="subsection" id="subsection-95"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">4.4.2</span> <span class="title">arco a tre cerniere</span>
 </h3>
-<p id="p-396">Si effettui l'analisi cinematica del seguente sistema. <figure class="figure-like" id="arcoatrecerniere_cinematica_fig"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="images/arcoatrecerniere_cinematica.png" style="width: 100%; height: auto;" alt=""></div>
+<p id="p-378">Si effettui l'analisi cinematica del seguente sistema. <figure class="figure-like" id="arcoatrecerniere_cinematica_fig"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="images/arcoatrecerniere_cinematica.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figura</span> <span class="codenumber">4.4.7.</span> </figcaption></figure></p>
-<p id="p-397">La “lettura” delle condizioni di vincolo assegnate fornisce</p>
+<p id="p-379">La “lettura” delle condizioni di vincolo assegnate fornisce</p>
 <div class="displaymath">
 \begin{gather*}
 \vec{u}_A = \vec{0}\,,\\
@@ -292,7 +292,7 @@ u_{1C} = 0\,,\\
 u_{2C} = 0\,.
 \end{gather*}
 </div>
-<p id="p-398">I corpi rigidi in esame sono due: per il corpo \(AB\) si sceglie come polo il punto \(A\) e per il secondo corpo si sceglie il punto \(B'\text{.}\) Pertanto i 6 parametri lagrangiani (\(n=6\)) utilizzabili per la descrizione cinematica del sistema sono: <figure class="figure-like" id="arcoatrecerniere_cinematica_parametri_lagrangiani_fig"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/arcoatrecerniere_cinematica_parametri_lagrangiani.png" style="width: 100%; height: auto;" alt=""></div>
+<p id="p-380">I corpi rigidi in esame sono due: per il corpo \(AB\) si sceglie come polo il punto \(A\) e per il secondo corpo si sceglie il punto \(B'\text{.}\) Pertanto i 6 parametri lagrangiani (\(n=6\)) utilizzabili per la descrizione cinematica del sistema sono: <figure class="figure-like" id="arcoatrecerniere_cinematica_parametri_lagrangiani_fig"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/arcoatrecerniere_cinematica_parametri_lagrangiani.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figura</span> <span class="codenumber">4.4.8.</span> </figcaption></figure> Utilizzando l'equazione <a data-knowl="./knowl/mat_small_rigid_u_eq.html" title="Equazione 4.1.5">(4.1.5)</a> le condizioni di vincolo possono essere espresse rispetto alle coordinate lagrangiane scelte, in particolare:</p>
 <div class="displaymath">
 \begin{gather*}
@@ -319,7 +319,7 @@ u_{2B'} + \varphi_{B'} 2l = 0\,.
 \underbrace{\left[\begin{array}{c} 0 \\ 0 \\ 0 \\ 0 \\ 0 \\ 0 \end{array}\right]}_{\vec{d}}.
 \end{equation*}
 </div>
-<article class="assemblage-like" id="assemblage-34"><p id="p-399">Al fine di classificare il sistema si calcola il rango della matrice cinematica. <figure class="figure-like" id="listing-45"><pre class="console"><b>syms l;
+<article class="assemblage-like" id="assemblage-30"><p id="p-381">Al fine di classificare il sistema si calcola il rango della matrice cinematica. <figure class="figure-like" id="listing-41"><pre class="console"><b>syms l;
 A = [
 1 0 0 0 0 0; ... 
 0 1 0 0 0 0; ... 
@@ -330,8 +330,8 @@ A = [
 ];
 rank(A)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">4.4.9.</span> </figcaption></figure></p></article><p id="p-400">Dal momento che il \(\textrm{min}(m,n) = 6 == \textrm{rango}\mat{A}\) e \(n == m\) allora il sistema è cinematicamente determinato. La soluzione del sistema lineare fornisce i valori assunti dai parametri lagrangiani \(u_{1A}\text{,}\) \(u_{2A}\text{,}\) \(\varphi_{A}\text{,}\) \(u_{1B'}\text{,}\) \(u_{2B'}\text{,}\) \(\varphi_{B'}\text{.}\)</p>
-<article class="assemblage-like" id="assemblage-35"><p id="p-401"><figure class="figure-like" id="listing-46"><pre class="console"><b>syms l;
+<figcaption><span class="type">Listato</span> <span class="codenumber">4.4.9.</span> </figcaption></figure></p></article><p id="p-382">Dal momento che il \(\textrm{min}(m,n) = 6 == \textrm{rango}\mat{A}\) e \(n == m\) allora il sistema è cinematicamente determinato. La soluzione del sistema lineare fornisce i valori assunti dai parametri lagrangiani \(u_{1A}\text{,}\) \(u_{2A}\text{,}\) \(\varphi_{A}\text{,}\) \(u_{1B'}\text{,}\) \(u_{2B'}\text{,}\) \(\varphi_{B'}\text{.}\)</p>
+<article class="assemblage-like" id="assemblage-31"><p id="p-383"><figure class="figure-like" id="listing-42"><pre class="console"><b>syms l;
 A = [
 1 0 0 0 0 0; ... 
 0 1 0 0 0 0; ... 
@@ -343,8 +343,8 @@ A = [
 b = [0; 0; 0; 0; 0; 0];
 linsolve(A,b)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">4.4.10.</span> </figcaption></figure></p></article><p id="p-402">Anche in questo caso la soluzione di un sistema cinematicamente determinato rispetto ad un vettore dei termini noti identicamente nullo fornisce ancora la soluzione banale.</p>
-<p id="p-403">Si può ottenere un risultato più interessante assumendo una condizione di spostamento assegnato non nullo su uno o più gradi di vincolo. Ad esempio: <figure class="figure-like" id="arcoatrecerniere_cinematica_bis_fig"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="images/arcoatrecerniere_cinematica_bis.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Listato</span> <span class="codenumber">4.4.10.</span> </figcaption></figure></p></article><p id="p-384">Anche in questo caso la soluzione di un sistema cinematicamente determinato rispetto ad un vettore dei termini noti identicamente nullo fornisce ancora la soluzione banale.</p>
+<p id="p-385">Si può ottenere un risultato più interessante assumendo una condizione di spostamento assegnato non nullo su uno o più gradi di vincolo. Ad esempio: <figure class="figure-like" id="arcoatrecerniere_cinematica_bis_fig"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="images/arcoatrecerniere_cinematica_bis.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figura</span> <span class="codenumber">4.4.11.</span> </figcaption></figure> In tal caso la forma matriciale delle condizioni vincolari fornisce</p>
 <div class="displaymath">
 \begin{equation*}
@@ -360,7 +360,7 @@ linsolve(A,b)
 \underbrace{\left[\begin{array}{c} l/4 \\ 0 \\ 0 \\ 0 \\ 0 \\ 0 \end{array}\right]}_{\vec{d}}\,.
 \end{equation*}
 </div>
-<article class="assemblage-like" id="assemblage-36"><p id="p-404">La soluzione può essere calcolata utilizzando le seguenti istruzioni MATLAB. <figure class="figure-like" id="listing-47"><pre class="console"><b>syms l;
+<article class="assemblage-like" id="assemblage-32"><p id="p-386">La soluzione può essere calcolata utilizzando le seguenti istruzioni MATLAB. <figure class="figure-like" id="listing-43"><pre class="console"><b>syms l;
 A = [
 1 0 0 0 0 0; ... 
 0 1 0 0 0 0; ... 
@@ -372,13 +372,13 @@ A = [
 b = [l/4; 0; 0; 0; 0; 0];
 linsolve(A,b)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">4.4.12.</span> </figcaption></figure></p></article><p id="p-405">La rappresentazione grafica del campo di spostamento si ottiene valutando lo spostamento dei posti alle estremità dei tratti rettilinei ottenendo quanto segue. <figure class="figure-like" id="arcoatrecerniere_cinematica_bis_soluzione_fig"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="images/arcoatrecerniere_cinematica_bis_soluzione.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">4.4.13.</span> </figcaption></figure></p></section><section class="subsection" id="subsection-95"><h3 class="heading hide-type">
+<figcaption><span class="type">Listato</span> <span class="codenumber">4.4.12.</span> </figcaption></figure></p></article><p id="p-387">La rappresentazione grafica del campo di spostamento si ottiene valutando lo spostamento dei posti alle estremità dei tratti rettilinei ottenendo quanto segue. <figure class="figure-like" id="arcoatrecerniere_cinematica_bis_soluzione_fig"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="images/arcoatrecerniere_cinematica_bis_soluzione.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span> <span class="codenumber">4.4.13.</span> </figcaption></figure></p></section><section class="subsection" id="subsection-96"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">4.4.3</span> <span class="title">esempio di schema labile</span>
 </h3>
-<p id="p-406">Si effettui l'analisi cinematica del seguente sistema. <figure class="figure-like" id="arcoatrecerniere_labile_fig"><div class="image-box" style="width: 57%; margin-left: 21.5%; margin-right: 21.5%;"><img src="images/arcoatrecerniere_labile.png" style="width: 100%; height: auto;" alt=""></div>
+<p id="p-388">Si effettui l'analisi cinematica del seguente sistema. <figure class="figure-like" id="arcoatrecerniere_labile_fig"><div class="image-box" style="width: 57%; margin-left: 21.5%; margin-right: 21.5%;"><img src="images/arcoatrecerniere_labile.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figura</span> <span class="codenumber">4.4.14.</span> </figcaption></figure></p>
-<p id="p-407">Le condizioni di vincolo assegnate sono esprimibili nel modo seguente</p>
+<p id="p-389">Le condizioni di vincolo assegnate sono esprimibili nel modo seguente</p>
 <div class="displaymath">
 \begin{gather*}
 \vec{u}_A = \vec{0}\,,\\
@@ -395,7 +395,7 @@ u_{2C} = u_{2C'}\,,\\
 u_{2E} = 0\,.
 \end{gather*}
 </div>
-<p id="p-408">Per i due corpi rigidi in esame si scelgono come poli i punti B e D riferendo quindi la cinematica ai seguenti 6 parametri lagrangiani (\(n=6\)): <figure class="figure-like" id="arcoatrecerniere_labile_parametri_lagrangiani_fig"><div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="images/arcoatrecerniere_labile_parametri_lagrangiani.png" style="width: 100%; height: auto;" alt=""></div>
+<p id="p-390">Per i due corpi rigidi in esame si scelgono come poli i punti B e D riferendo quindi la cinematica ai seguenti 6 parametri lagrangiani (\(n=6\)): <figure class="figure-like" id="arcoatrecerniere_labile_parametri_lagrangiani_fig"><div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="images/arcoatrecerniere_labile_parametri_lagrangiani.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figura</span> <span class="codenumber">4.4.15.</span> </figcaption></figure> Utilizzando sempre il modello di moto piano rappresentato dall'equazione <a data-knowl="./knowl/mat_small_rigid_u_eq.html" title="Equazione 4.1.5">(4.1.5)</a> le condizioni di vincolo possono essere espresse rispetto alle coordinate lagrangiane scelte ottenendo quanto segue,</p>
 <div class="displaymath">
 \begin{gather*}
@@ -420,7 +420,7 @@ u_{2D} = 0\,.
 \underbrace{\left[\begin{array}{c} 0 \\ 0 \\ 0 \\ 0 \\ 0 \end{array}\right]}_{\vec{d}}.
 \end{equation*}
 </div>
-<article class="assemblage-like" id="assemblage-37"><p id="p-409">Si può quindi procedere con il calcolo del rango della matrice nel modo seguente. <figure class="figure-like" id="listing-48"><pre class="console"><b>syms l;
+<article class="assemblage-like" id="assemblage-33"><p id="p-391">Si può quindi procedere con il calcolo del rango della matrice nel modo seguente. <figure class="figure-like" id="listing-44"><pre class="console"><b>syms l;
 A = [
 1 0 2*l 0 0 0; ... 
 0 1 0 0 0 0; ... 
@@ -430,7 +430,7 @@ A = [
 ];
 rank(A)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">4.4.16.</span> </figcaption></figure></p></article><p id="p-410">In questo caso il \(\textrm{rango}\mat{A} == \textrm{min}(m,n) = 5\) e \(m &lt; n\) pertanto il sistema è labile e caratterizzato da infinite soluzioni. Per descrivere tutte le soluzioni possibili si scelga come parametro la rotazione \(\varphi_{B}\) che viene eliminata dal gruppo delle incognite da calcolare. In tal modo il sistema può essere riscritto come segue</p>
+<figcaption><span class="type">Listato</span> <span class="codenumber">4.4.16.</span> </figcaption></figure></p></article><p id="p-392">In questo caso il \(\textrm{rango}\mat{A} == \textrm{min}(m,n) = 5\) e \(m &lt; n\) pertanto il sistema è labile e caratterizzato da infinite soluzioni. Per descrivere tutte le soluzioni possibili si scelga come parametro la rotazione \(\varphi_{B}\) che viene eliminata dal gruppo delle incognite da calcolare. In tal modo il sistema può essere riscritto come segue</p>
 <div class="displaymath">
 \begin{equation*}
 \left[\begin{array}{ccccc}
@@ -444,7 +444,7 @@ rank(A)
 \left[\begin{array}{c} -2l\,\varphi_{B} \\ 0 \\ 0 \\ -2l\,\varphi_{B} \\ 0 \end{array}\right].
 \end{equation*}
 </div>
-<article class="assemblage-like" id="assemblage-38"><p id="p-411">Le seguenti istruzioni MATLAB consentono di calcolare la soluzione cercata. <figure class="figure-like" id="listing-49"><pre class="console"><b>syms l k;
+<article class="assemblage-like" id="assemblage-34"><p id="p-393">Le seguenti istruzioni MATLAB consentono di calcolare la soluzione cercata. <figure class="figure-like" id="listing-45"><pre class="console"><b>syms l k;
 A = [
 1 0 0 0 0; ... 
 0 1 0 0 0; ... 
@@ -455,7 +455,7 @@ A = [
 b = [-2*l*k; 0; 0; -2*l*k; 0];
 linsolve(A,b)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">4.4.17.</span> </figcaption></figure></p></article><p id="p-412">Le infinite soluzioni calcolate sono</p>
+<figcaption><span class="type">Listato</span> <span class="codenumber">4.4.17.</span> </figcaption></figure></p></article><p id="p-394">Le infinite soluzioni calcolate sono</p>
 <div class="displaymath">
 \begin{gather*}
 u_{1B} = -\varphi_{B} 2l \,,\\

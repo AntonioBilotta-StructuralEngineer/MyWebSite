@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:07+01:00    *-->
+<!--*    on 2020-03-31T11:53:45+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,39 +13,21 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p><figure class="figure-like"><pre class="console"><b>Q1 = [1 -1 -1 1 1; 1 1 -1 -1 1];
-Q2 = [1 0 -1 0 1; 0 1 0 -1 0];
-
-x = Q1(1,:);
-y = Q1(2,:);
-
-pbaspect([1 1 1])
-line(x,y,'Color','red','LineWidth',2)
-
-x = Q2(1,:);
-y = Q2(2,:);
-line(x,y,'Color','blue','LineWidth',2)
-
-
-u1 = [1/sqrt(2); 1/sqrt(2)];
-u2 = [-1/sqrt(2); 1/sqrt(2)];
-syms U(lam) 
-U(lam) = [u1 u2]*diag([1.2*lam lam])*transpose([u1 u2]);
-
-
-for v = 1.1:0.1:1.5
-  UQ1 = U(v)*Q1;
-  x = UQ1(1,:);
-  y = UQ1(2,:);
-  line(x,y,'Color','red','LineWidth',2)
-
-  UQ2 = U(v)*Q2;
-  x = UQ2(1,:);
-  y = UQ2(2,:);
-  line(x,y,'Color','blue','LineWidth',2)
-end
-</b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.7.5.</span> </figcaption></figure></p>
-<span class="incontext"><a href="principal_directions_sec_strain_chap_it.html#p-131">in-context</a></span>
+<p>I modelli meccanici che verranno discussi durante il corso tipicamente vengono formulati utilizzando come ente cinematico il campo di spostamento che, si ricorda, è definito come \(\vec{u} = \vec{x}-\vec{X}\text{.}\) Da cui \(\tens{F} = \tens{I}+\tens{\nabla u}\text{.}\) Pertanto il tensore di Green-Lagrange è esprimibile come</p>
+<div class="displaymath">
+\begin{align*}
+\tens{E} \amp = \frac{1}{2}\left( \transp{\tens{F}}\,\tens{F} - \tens{I}\right)\,,\\
+\amp = \frac{1}{2}\left( \transp{(\tens{I}+\tens{\nabla u})}\,(\tens{I}+\tens{\nabla u}) - \tens{I}\right)\,,\\
+\amp = \frac{1}{2}\left(\tens{I}+\tens{\nabla u} + \transp{\tens{\nabla u}} +  \transp{\tens{\nabla u}}\,\tens{\nabla u} - \tens{I}\right)\,,\\
+\amp = \frac{1}{2}\left(\tens{\nabla u} + \transp{\tens{\nabla u}}\right) + \frac{1}{2} \transp{\tens{\nabla u}}\,\tens{\nabla u} \,.
+\end{align*}
+</div>
+<p>Pertanto, in termini di gradiente dello spostamento, il tensore della deformazione di Green-Lagrange ha la seguente espressione</p>
+<div class="displaymath">
+\begin{equation}
+\tens{E} = \frac{1}{2}\left(\tens{\nabla u} + \transp{\tens{\nabla u}}\right) + \frac{1}{2} \transp{\tens{\nabla u}}\,\tens{\nabla u} \,.\tag{1.8.8}
+\end{equation}
+</div>
+<span class="incontext"><a href="measures_sec_strain_chap_it.html#p-131">in-context</a></span>
 </body>
 </html>

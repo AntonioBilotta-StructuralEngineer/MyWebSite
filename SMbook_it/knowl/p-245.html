@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:07+01:00    *-->
+<!--*    on 2020-03-31T11:53:46+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,25 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>La descrizione geometrica appena data riguarda solo la configurazione di riferimento \(\body_0\) a cui tipicamente si riferisce la descrizione cinematica dei corpi così come presentato nel  <a href="chap_strain_it.html" class="internal" title="Capitolo 1: cinematica dei corpi">Capitolo 1</a>. La scrittura delle equazioni equilibrio, si veda al riguardo il <a href="chap_stress_it.html" class="internal" title="Capitolo 2: forze, equilibrio e tensione">Capitolo 2</a>, viene invece effettuta rispetto alla configurazione corrente \(\body\text{.}\) La seguente discussione quindi dovrebbe tenere conto di tale situazione richiedendo anche l'introduzione di ulteriori concetti che esulano dalla presente trattazione introduttiva di Meccanica dei solidi.</p>
-<span class="incontext"><a href="motivations_sec_elasticity_chap_it.html#p-245">in-context</a></span>
+<p>A causa dello spostamento \(x\) misurato a partire dalla posizione di equilibrio, il corpo è soggetto alla forza d'inerzia \(m\,\frac{d^2 x}{dt^2}\) e alla forza elastica \(k\,x\) dirette come indicato in figura. Per l'equilibrio del sistema si ha</p>
+<div class="displaymath">
+\begin{equation*}
+-m\,\frac{d^2 x}{dt^2} - k\,x = 0\,,
+\end{equation*}
+</div>
+<p>ovvero, introducendo la quantità \(\omega = \sqrt{\frac{k}{m}}\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{d^2 x}{dt^2} + \omega^2\,x = 0\,.
+\end{equation*}
+</div>
+<p>L'equazione differenziale ottenuta caratterizza un sistema che, in meccanica, viene denominato <em class="emphasis">oscillatore armonico semplice</em>. La soluzione dell'equazione differenziale è descritta dalla funzione</p>
+<div class="displaymath">
+\begin{equation*}
+\func{x}{t} = \func{x}{0}\,\cos{(\omega\,t)} + \frac{1}{\omega}\func{\frac{dx}{dt}}{0}\,\sin{(\omega\,t)} \,,
+\end{equation*}
+</div>
+<p>dove \(\func{x}{0}\) e \(\func{\frac{dx}{dt}}{0}\) rappresentano le condizioni iniziali. \(\omega\) prende il nome di pulsazione e viene misurata in \(\left[\frac{\text{rad}}{\text{s}}\right]\text{.}\)</p>
+<span class="incontext"><a href="uniaxial_sec_elasticity_chap_it.html#p-245">in-context</a></span>
 </body>
 </html>

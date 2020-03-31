@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:07+01:00    *-->
+<!--*    on 2020-03-31T11:53:46+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,23 +13,38 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Dato il seguente stato di tensione</p>
+<p>La trasformazione associata è</p>
 <div class="displaymath">
-\begin{equation*}
-\mat{\sigma} = \left[\begin{array}{ccc}
-1 \amp 4 \amp -2 \\
-4 \amp 0 \amp 0 \\
--2 \amp 0 \amp 3
-\end{array}
-\right]\,,
-\end{equation*}
+\begin{align}
+x_1 \amp = \func{\chi_1}{X_1, X_2, X_3} = X_1\,,\tag{3.1.12}\\
+x_2 \amp = \func{\chi_3}{X_1, X_2, X_3} = X_2\,,\tag{3.1.13}\\
+x_3 \amp = \func{\chi_3}{X_1, X_2, X_3} = \lambda\,X_3\,,\tag{3.1.14}
+\end{align}
 </div>
-<p>si calcoli quanto segue:</p>
-<ol class="decimal">
-<li>le componenti del vettore di trazione \(\vec{t}_{\vec{n}}\) relativo un piano passante per il punto dato e parallelo al piano \(2x_1 + 3x_2+x_3 = 5\text{;}\)</li>
-<li>la lunghezza di \(\vec{t}_{\vec{n}}\) e l'angolo che forma con la normale al piano;</li>
-<li>le componenti del tensore di tensione \(\tilde{\vec{\sigma}}\) rispetto ad una nuova base ortonormale \(\{\tilde{\vec{e}}_a\}\text{,}\) \(a=1,2,3\text{,}\) ottenuta ruotando di \(\pi/2\) la base di partenza intorno all'asse \(\vec{e}_3\text{.}\)</li>
-</ol>
-<span class="incontext"><a href="exercises_sec_stress_chap_it.html#p-233">in-context</a></span>
+<p>dove \(\lambda\) è un parametro generico eventualmente da determinare. Il campo di spostamento \(\vec{u}\) ha componenti</p>
+<div class="displaymath">
+\begin{align}
+u_1 \amp = x_1 - X_1 = 0\,,\tag{3.1.15}\\
+u_2 \amp = x_2 - X_2 = 0\,,\tag{3.1.16}\\
+u_3 \amp = x_3 - X_3 = (\lambda - 1)X_3\,,\tag{3.1.17}
+\end{align}
+</div>
+<p>e il gradiente associato è</p>
+<div class="displaymath">
+\begin{equation}
+\mat{\nabla u} =
+\left[\begin{array}{ccc}
+\regulardiff{u_1}{X_1} \amp \regulardiff{u_1}{X_2} \amp \regulardiff{u_1}{X_3}\\
+\regulardiff{u_2}{X_1} \amp \regulardiff{u_2}{X_2} \amp \regulardiff{u_2}{X_3}\\
+\regulardiff{u_3}{X_1} \amp \regulardiff{u_3}{X_2} \amp \regulardiff{u_3}{X_3}
+\end{array}\right] =
+\left[\begin{array}{ccc}
+0 \amp 0 \amp 0\\
+0 \amp 0 \amp 0\\
+0 \amp 0 \amp (\lambda - 1)
+\end{array}\right]\,.\tag{3.1.18}
+\end{equation}
+</div>
+<span class="incontext"><a href="motivations_sec_elasticity_chap_it.html#p-233">in-context</a></span>
 </body>
 </html>

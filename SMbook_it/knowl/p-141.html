@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:07+01:00    *-->
+<!--*    on 2020-03-31T11:53:46+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,77 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Quanto descritto in <a data-knowl="./knowl/pol_dec_insight.html" title="Approfondimento 1.6.4: come ricostruire la decomposizione polare del gradiente della trasformazione">Approfondimento 1.6.4</a> ha consentito di discutere più in dettaglio l'operazione di decomposizione polare, operazione che svolge un ruolo fondamentale sia nella descrizione generale della cinematica dei corpi sia nella costruzione di modelli strutturali, specialmente di tipo non lineare. Ma certamente non rappresentata una modalità pratica per risalire al solo contenuto deformativo del gradiente della trasformazione. Nasce quindi la necessità di individuare una maniera alternativa per risalire al solo contenuto deformativo del tensore \(\tens{F}\) filtrando la rotazione in essa contenuta.</p>
-<span class="incontext"><a href="measures_sec_strain_chap_it.html#p-141">in-context</a></span>
+<p>Dato un tensore \(\tens{W}\) emisimmetrico, la cui forma matriciale ad esso associata per definizione sarà</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{W} =
+\left[\begin{array}{ccc}
+0 \amp W_{12} \amp W_{13}\\
+-W_{12} \amp 0 \amp W_{23}\\
+-W_{13} \amp -W_{23} \amp 0 
+\end{array}\right]\,,
+\end{equation*}
+</div>
+<p>si può verificare come la sua applicazione ad un vettore \(\vec{v}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\left[\begin{array}{ccc}
+0 \amp W_{12} \amp W_{13}\\
+-W_{12} \amp 0 \amp W_{23}\\
+-W_{13} \amp -W_{23} \amp 0 
+\end{array}\right]
+\left[\begin{array}{c}
+v_1\\
+v_2\\
+v_3
+\end{array}\right]
+=
+\left[\begin{array}{c}
+W_{12}v_2 + W_{13}v_3 \\
+-W_{12}v_1 + W_{23}v_3\\
+-W_{13}v_1 -W_{23}v_2
+\end{array}\right]
+\end{equation*}
+</div>
+<p>equivalga a calcolare il seguente prodotto vettoriale</p>
+<div class="displaymath">
+\begin{equation*}
+\left[\begin{array}{c}
+\omega_1\\
+\omega_2\\
+\omega_3
+\end{array}\right]
+\times
+\left[\begin{array}{c}
+v_1\\
+v_2\\
+v_3
+\end{array}\right]
+=
+\left[\begin{array}{c}
+\omega_2 v_3 - \omega_3 v_2\\
+\omega_3 v_1 - \omega_1 v_3\\
+\omega_1 v_2 - \omega_2 v_1
+\end{array}\right]
+\end{equation*}
+</div>
+<p>dove le componenti di \(\vec{\omega}\) sono messe in corrispondenza con le componenti di \(\tens{W}\) nel modo seguente</p>
+<div class="displaymath">
+\begin{equation}
+\omega_{1} = -W_{23}\,,\quad \omega_{2} = W_{13}\,,\quad \omega_{3} = -W_{12}\,.\tag{1.9.13}
+\end{equation}
+</div>
+<p>Quindi, noto \(\vec{\omega}\text{,}\) \(\tens{W}\) può essere espresso come segue</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{W} =
+\left[\begin{array}{ccc}
+0 \amp -\omega_{3} \amp \omega_{2}\\
+\omega_{3} \amp 0 \amp -\omega_{1}\\
+-\omega_{2} \amp \omega_{1} \amp 0 
+\end{array}\right]\,.
+\end{equation*}
+</div>
+<span class="incontext"><a href="infinitesimal_sec_strain_chap_it.html#p-141">in-context</a></span>
 </body>
 </html>

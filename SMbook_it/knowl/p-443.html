@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:09+01:00    *-->
+<!--*    on 2020-03-31T11:53:48+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,41 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Si consideri una trave vincolata nella maniera indicata in figura e soggetta ad una forza verticale in mezzeria. La stessa figura riporta anche il diagramma di corpo libero ottenuto rimuovendo la cerniera e il carrello facendo seguire l'applicazione delle relative componenti di reazione vincolare (\(m=3\)).</p>
-<span class="incontext"><a href="analysis_examples_sec_rigid_body_statics_chap_it.html#p-443">in-context</a></span>
+<p>Nel seguito vengono riportate le istruzioni MATLAB per il calcolo della risultante e del baricentro per alcune tipologie di carico ripartito. <figure class="figure-like"><pre class="console"><b>% carico ripartito costante
+syms q l x;
+carico(x, q) = q;
+np = 100;
+xv = 0:1/np:1;
+qv = carico(xv, 1);
+plot(xv,qv,'r','LineWidth',2)
+
+
+Rq = int(carico(x, q), x, 0, l)
+xq = int(carico(x, q)*x, x, 0, l)/Rq
+</b></pre>
+<figcaption><span class="type">Listato</span> <span class="codenumber">5.7.7.</span> </figcaption></figure> <figure class="figure-like"><pre class="console"><b>% carico ripartito lineare
+syms q l x;
+carico(x, q, l) = q/l*x;
+np = 100;
+xv = 0:1/np:1;
+qv = carico(xv, 1, 1);
+plot(xv,qv,'r','LineWidth',2)
+
+Rq = int(carico(x, q, l), x, 0, l)
+xq = int(carico(x, q, l)*x, x, 0, l)/Rq
+</b></pre>
+<figcaption><span class="type">Listato</span> <span class="codenumber">5.7.8.</span> </figcaption></figure> <figure class="figure-like"><pre class="console"><b>% carico ripartito parabolico
+syms q l x;
+carico(x, q, l) = q/l^2*x^2;
+np = 100;
+xv = 0:1/np:1;
+qv = carico(xv, 1, 1);
+plot(xv,qv,'r','LineWidth',2)
+
+Rq = int(carico(x, q, l), x, 0, l)
+xq = int(carico(x, q, l)*x, x, 0, l)/Rq
+</b></pre>
+<figcaption><span class="type">Listato</span> <span class="codenumber">5.7.9.</span> </figcaption></figure></p>
+<span class="incontext"><a href="sollecitazioni_sec_rigid_body_statics_chap_it.html#p-443">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:07+01:00    *-->
+<!--*    on 2020-03-31T11:53:46+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,24 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Si riportano le istruzioni MATLAB utilizzabili per la verifica.</p>
-<span class="incontext"><a href="principal_directions_sec_strain_chap_it.html#p-139">in-context</a></span>
+<p>Ipotizzare spostamenti infinitesimi equivale ad assumere valori dell'angolo \(\alpha\) molto piccoli, \(\alpha \ll 1\text{,}\) ovvero \(\cos{\alpha}\approx 1\) e \(\sin{\alpha} \approx \alpha\text{.}\) Da cui deriva</p>
+<div class="displaymath">
+\begin{equation*}
+\text{sym}\mat{\nabla u} \approx \mat{0}
+\,,\quad
+\text{skew}\mat{\nabla u} \approx
+\left[\begin{array}{cc}
+0 \amp -\alpha \\
+\alpha \amp 0 
+\end{array}\right]\,.
+\end{equation*}
+</div>
+<p>Pertanto nel caso di spostamenti infinitesi la relazione <a data-knowl="./knowl/rotation_eq.html" title="Equazione 1.9.11">(1.9.11)</a> può essere riscritta come segue</p>
+<div class="displaymath">
+\begin{equation}
+\tens{R} \approx \tens{I} + \text{skew}\tens{\nabla u}\,.\tag{1.9.12}
+\end{equation}
+</div>
+<span class="incontext"><a href="infinitesimal_sec_strain_chap_it.html#p-139">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:07+01:00    *-->
+<!--*    on 2020-03-31T11:53:45+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,18 +12,38 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<figure class="figure-like"><pre class="console"><b>Equation solved.
+<figure class="figure-like"><pre class="console"><b>Q1 = [1 -1 -1 1 1; 1 1 -1 -1 1];
+Q2 = [1 0 -1 0 1; 0 1 0 -1 0];
 
-fsolve completed because the vector of function values is near zero
-as measured by the value of the function tolerance, and
-the problem appears regular as measured by the gradient.
+x = Q1(1,:);
+y = Q1(2,:);
 
-&lt;stopping criteria details&gt;
+pbaspect([1 1 1])
+line(x,y,'Color','red','LineWidth',2)
 
-ans =
+x = Q2(1,:);
+y = Q2(2,:);
+line(x,y,'Color','blue','LineWidth',2)
 
-    1.0000    0.0000    1.0000    0.0000    1.0000
+
+u1 = [1/sqrt(2); 1/sqrt(2)];
+u2 = [-1/sqrt(2); 1/sqrt(2)];
+syms U(lam) 
+U(lam) = [u1 u2]*diag([1.2*lam lam])*transpose([u1 u2]);
+
+
+for v = 1.1:0.1:1.5
+  UQ1 = U(v)*Q1;
+  x = UQ1(1,:);
+  y = UQ1(2,:);
+  line(x,y,'Color','red','LineWidth',2)
+
+  UQ2 = U(v)*Q2;
+  x = UQ2(1,:);
+  y = UQ2(2,:);
+  line(x,y,'Color','blue','LineWidth',2)
+end
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.6.6.</span> </figcaption></figure><span class="incontext"><a href="polar_sec_strain_chap_it.html#listing-16">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">1.7.5.</span> </figcaption></figure><span class="incontext"><a href="principal_directions_sec_strain_chap_it.html#listing-16">in-context</a></span>
 </body>
 </html>

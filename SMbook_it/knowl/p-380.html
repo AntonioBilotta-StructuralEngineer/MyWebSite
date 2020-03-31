@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:09+01:00    *-->
+<!--*    on 2020-03-31T11:53:47+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,16 +13,33 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Il bipendolo impone le condizioni</p>
+<p>I corpi rigidi in esame sono due: per il corpo \(AB\) si sceglie come polo il punto \(A\) e per il secondo corpo si sceglie il punto \(B'\text{.}\) Pertanto i 6 parametri lagrangiani (\(n=6\)) utilizzabili per la descrizione cinematica del sistema sono: <figure class="figure-like"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/arcoatrecerniere_cinematica_parametri_lagrangiani.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span> <span class="codenumber">4.4.8.</span> </figcaption></figure> Utilizzando l'equazione <a data-knowl="./knowl/mat_small_rigid_u_eq.html" title="Equazione 4.1.5">(4.1.5)</a> le condizioni di vincolo possono essere espresse rispetto alle coordinate lagrangiane scelte, in particolare:</p>
 <div class="displaymath">
-\begin{equation}
-\begin{split}
-\vec{u}_A \cdot \vec{n} &amp;= 0 \,,\\
-\varphi_{A}  &amp;= 0\,.
-\end{split}\tag{4.2.8}
-\end{equation}
+\begin{gather*}
+u_{1A} = 0\,,\\
+u_{2A} = 0\,,\\
+u_{1A} = u_{1B'}\,,\\
+u_{2A} + \varphi_{A} 2l = u_{2B'}\,,\\
+u_{1B'} + \varphi_{B'} l = 0\,,\\
+u_{2B'} + \varphi_{B'} 2l = 0\,.
+\end{gather*}
 </div>
-<p>Nel caso in cui l'asse del bipendolo sia orizzontale o verticale vale quanto già detto per il carrello.</p>
-<span class="incontext"><a href="constraints_sec_rigid_body_kinematics_chap_it.html#p-380">in-context</a></span>
+<p>In forma matriciale si ottiene</p>
+<div class="displaymath">
+\begin{equation*}
+\underbrace{\left[\begin{array}{cccccc}
+1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 0 &amp; -1 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 2l &amp; 0 &amp; -1 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; l\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 2l
+\end{array}\right]}_{\mat{A}}
+\underbrace{\left[\begin{array}{c} u_{1A} \\ u_{2A} \\ \varphi_{A} \\ u_{1B'} \\ u_{2B'} \\ \varphi_{B'} \end{array}\right]}_{\vec{q}} =
+\underbrace{\left[\begin{array}{c} 0 \\ 0 \\ 0 \\ 0 \\ 0 \\ 0 \end{array}\right]}_{\vec{d}}.
+\end{equation*}
+</div>
+<span class="incontext"><a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html#p-380">in-context</a></span>
 </body>
 </html>

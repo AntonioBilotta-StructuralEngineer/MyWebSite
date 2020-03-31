@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:06+01:00    *-->
+<!--*    on 2020-03-31T11:53:45+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -192,14 +192,14 @@ var js_version = 0.12;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it"><h2 class="heading hide-type">
 <span class="type">Sezione</span> <span class="codenumber">5.9</span> <span class="title">calcolo e diagrammi delle sollecitazioni</span>
 </h2>
-<a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html" class="permalink">¶</a><p id="p-470">L'analisi statica presentata nelle sezioni precedenti consente di valutare le reazioni vincolari per un sistema isostatico. A partire da questa informazione e utilizzando gli integrali generali <a data-knowl="./knowl/general_const_N_eq.html" title="Equazione 5.8.13">(5.8.13)</a>, <a data-knowl="./knowl/general_const_T_eq.html" title="Equazione 5.8.14">(5.8.14)</a> e <a data-knowl="./knowl/general_const_M_eq.html" title="Equazione 5.8.15">(5.8.15)</a> è possibile procedere con il calcolo delle sollecitazioni per sistemi di travi soggetti a forze/coppie generiche e carichi ripartiti al più costanti (per carichi ripartiti di tipo generico occorre utilizzare le <a data-knowl="./knowl/general_N_eq.html" title="Equazione 5.8.10">(5.8.10)</a>, <a data-knowl="./knowl/general_T_eq.html" title="Equazione 5.8.11">(5.8.11)</a> e <a data-knowl="./knowl/general_M_eq.html" title="Equazione 5.8.12">(5.8.12)</a>).</p>
-<p id="p-471">La procedura di calcolo delle sollecitazioni verrà illustrata discutendo alcuni esempi ed utilizzando MATLAB per lo svolgimento dei calcoli richiesti e la visualizzazione dei risultati. Data la semplicità degli schemi considerati il calcolo esplicito delle reazioni vincolari viene omesso.</p>
-<section class="subsection" id="subsection-120"><h3 class="heading hide-type">
+<a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html" class="permalink">¶</a><p id="p-452">L'analisi statica presentata nelle sezioni precedenti consente di valutare le reazioni vincolari per un sistema isostatico. A partire da questa informazione e utilizzando gli integrali generali <a data-knowl="./knowl/general_const_N_eq.html" title="Equazione 5.8.13">(5.8.13)</a>, <a data-knowl="./knowl/general_const_T_eq.html" title="Equazione 5.8.14">(5.8.14)</a> e <a data-knowl="./knowl/general_const_M_eq.html" title="Equazione 5.8.15">(5.8.15)</a> è possibile procedere con il calcolo delle sollecitazioni per sistemi di travi soggetti a forze/coppie generiche e carichi ripartiti al più costanti (per carichi ripartiti di tipo generico occorre utilizzare le <a data-knowl="./knowl/general_N_eq.html" title="Equazione 5.8.10">(5.8.10)</a>, <a data-knowl="./knowl/general_T_eq.html" title="Equazione 5.8.11">(5.8.11)</a> e <a data-knowl="./knowl/general_M_eq.html" title="Equazione 5.8.12">(5.8.12)</a>).</p>
+<p id="p-453">La procedura di calcolo delle sollecitazioni verrà illustrata discutendo alcuni esempi ed utilizzando MATLAB per lo svolgimento dei calcoli richiesti e la visualizzazione dei risultati. Data la semplicità degli schemi considerati il calcolo esplicito delle reazioni vincolari viene omesso.</p>
+<section class="subsection" id="subsection-121"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">5.9.1</span> <span class="title"></span>
 </h3>
-<p id="p-472">Si consideri il seguente schema di corpo di libero di cui è facile verificare il soddisfacimento delle condizioni di equilibrio.</p>
-<figure class="figure-like" id="figure-85"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/schema1bis.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">5.9.1.</span> </figcaption></figure><p id="p-473">Risultano chiari dallo schema i valori assunti dalle sollecitazioni per \(x=0\text{,}\) ovvero</p>
+<p id="p-454">Si consideri il seguente schema di corpo di libero di cui è facile verificare il soddisfacimento delle condizioni di equilibrio.</p>
+<figure class="figure-like" id="figure-86"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/schema1bis.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span> <span class="codenumber">5.9.1.</span> </figcaption></figure><p id="p-455">Risultano chiari dallo schema i valori assunti dalle sollecitazioni per \(x=0\text{,}\) ovvero</p>
 <div class="displaymath">
 \begin{equation*}
 N(0) = F\,,\quad T(0) = F\,,\quad  M(0) = -F l\,.
@@ -211,7 +211,7 @@ N(0) = F\,,\quad T(0) = F\,,\quad  M(0) = -F l\,.
 N(x) = F\,,\quad T(x) = F\,,\quad  M(x) = -F l + F\,x\,.
 \end{equation*}
 </div>
-<article class="assemblage-like" id="assemblage-47"><p id="p-474">Le sollecitazioni così ottenute possono essere visualizzate utilizzando le seguenti istruzioni MATLAB. <figure class="figure-like" id="listing-57"><pre class="console"><b>% diagramma dello sforzo normale
+<article class="assemblage-like" id="assemblage-43"><p id="p-456">Le sollecitazioni così ottenute possono essere visualizzate utilizzando le seguenti istruzioni MATLAB. <figure class="figure-like" id="listing-53"><pre class="console"><b>% diagramma dello sforzo normale
 syms N(x, F);
 N(x,F) = F;
 
@@ -250,26 +250,26 @@ plot(Xv,Mv,'r',Xv,Beam,'k','LineWidth',2)
 set(gca, 'Ylim', [-1 1])
 set(gca, 'YDir','reverse')
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">5.9.2.</span> </figcaption></figure></p></article><p id="p-475">Si ottengono in tal modo i seguenti grafici relativi a sforzo normale (verde), taglio (blu) e momento flettente (rosso).</p>
+<figcaption><span class="type">Listato</span> <span class="codenumber">5.9.2.</span> </figcaption></figure></p></article><p id="p-457">Si ottengono in tal modo i seguenti grafici relativi a sforzo normale (verde), taglio (blu) e momento flettente (rosso).</p>
 <div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/sollecitazioni_ex1_N.png" style="width: 100%; height: auto;" alt=""></div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
 <div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;"><img src="images/sollecitazioni_ex1_T.png" style="width: 100%; height: auto;" alt=""></div>
 <div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;"><img src="images/sollecitazioni_ex1_M.png" style="width: 100%; height: auto;" alt=""></div>
 </div></div>
-<p id="p-476">Si noti come la rappresentazione del momento flettente venga effettuata cambiando il verso dell'asse verticale del diagramma. Tale scelta viene utilizzata nella pratica professionale per "visualizzare" quale dei due lembi della trave, inferiore o superiore, è soggetto a trazione.</p></section><section class="subsection" id="subsection-121"><h3 class="heading hide-type">
+<p id="p-458">Si noti come la rappresentazione del momento flettente venga effettuata cambiando il verso dell'asse verticale del diagramma. Tale scelta viene utilizzata nella pratica professionale per "visualizzare" quale dei due lembi della trave, inferiore o superiore, è soggetto a trazione.</p></section><section class="subsection" id="subsection-122"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">5.9.2</span> <span class="title"></span>
 </h3>
-<p id="p-477">Si consideri il seguente schema relativo ad una mensola soggetta ad un carico ripartito.</p>
-<figure class="figure-like" id="figure-86"><div class="image-box" style="width: 38%; margin-left: 31%; margin-right: 31%;"><img src="images/mensola_con_carico_ripartito.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">5.9.3.</span> </figcaption></figure><p id="p-478">Lo schema di corpo libero e il relativo calcolo delle reazioni vincolari forniscono il seguente risultato.</p>
-<figure class="figure-like" id="figure-87"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/mensola_con_carico_ripartito_calcolo_reazioni.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">5.9.4.</span> </figcaption></figure><p id="p-479">Informazione utilizzabile nella scrittura degli integrali generali <a data-knowl="./knowl/general_const_N_eq.html" title="Equazione 5.8.13">(5.8.13)</a>, <a data-knowl="./knowl/general_const_T_eq.html" title="Equazione 5.8.14">(5.8.14)</a>, <a data-knowl="./knowl/general_const_M_eq.html" title="Equazione 5.8.15">(5.8.15)</a>, ed ottenere la seguente espressione delle sollecitazioni lungo l'asse della trave.</p>
+<p id="p-459">Si consideri il seguente schema relativo ad una mensola soggetta ad un carico ripartito.</p>
+<figure class="figure-like" id="figure-87"><div class="image-box" style="width: 38%; margin-left: 31%; margin-right: 31%;"><img src="images/mensola_con_carico_ripartito.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span> <span class="codenumber">5.9.3.</span> </figcaption></figure><p id="p-460">Lo schema di corpo libero e il relativo calcolo delle reazioni vincolari forniscono il seguente risultato.</p>
+<figure class="figure-like" id="figure-88"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/mensola_con_carico_ripartito_calcolo_reazioni.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span> <span class="codenumber">5.9.4.</span> </figcaption></figure><p id="p-461">Informazione utilizzabile nella scrittura degli integrali generali <a data-knowl="./knowl/general_const_N_eq.html" title="Equazione 5.8.13">(5.8.13)</a>, <a data-knowl="./knowl/general_const_T_eq.html" title="Equazione 5.8.14">(5.8.14)</a>, <a data-knowl="./knowl/general_const_M_eq.html" title="Equazione 5.8.15">(5.8.15)</a>, ed ottenere la seguente espressione delle sollecitazioni lungo l'asse della trave.</p>
 <div class="displaymath">
 \begin{equation*}
 N(x) = 0\,,\quad T(x) = -q\,x + ql \,,\quad  M(x) = -ql^2/2 + ql\,x - q\,x^2/2 \,.
 \end{equation*}
 </div>
-<article class="assemblage-like" id="assemblage-48"><p id="p-480">Le sollecitazioni così ottenute possono essere visualizzate utilizzando le seguenti istruzioni MATLAB. <figure class="figure-like" id="listing-58"><pre class="console"><b>% diagramma dello sforzo normale
+<article class="assemblage-like" id="assemblage-44"><p id="p-462">Le sollecitazioni così ottenute possono essere visualizzate utilizzando le seguenti istruzioni MATLAB. <figure class="figure-like" id="listing-54"><pre class="console"><b>% diagramma dello sforzo normale
 syms N(x);
 N(x) = 0;
 
@@ -312,14 +312,14 @@ set(gca, 'YDir','reverse')
 <div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
 <div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;"><img src="images/sollecitazioni_ex2_T.png" style="width: 100%; height: auto;" alt=""></div>
 <div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;"><img src="images/sollecitazioni_ex2_M.png" style="width: 100%; height: auto;" alt=""></div>
-</div></div></section><section class="subsection" id="subsection-122"><h3 class="heading hide-type">
+</div></div></section><section class="subsection" id="subsection-123"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">5.9.3</span> <span class="title"></span>
 </h3>
-<p id="p-481">Si consideri la seguente trave appoggiata soggetta ad un carico ripartito.</p>
-<figure class="figure-like" id="figure-88"><div class="image-box" style="width: 38%; margin-left: 31%; margin-right: 31%;"><img src="images/trave_appoggiata_con_carico_ripartito.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">5.9.6.</span> </figcaption></figure><p id="p-482">Lo schema di corpo libero e il relativo calcolo delle reazioni vincolari forniscono il seguente risultato.</p>
-<figure class="figure-like" id="figure-89"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/trave_appoggiata_con_carico_ripartito_calcolo_reazioni.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">5.9.7.</span> </figcaption></figure><p id="p-483">La soluzione ottenuta dal calcolo delle reazioni vincolari consente la scrittura delle seguenti condizioni relative all'estremo \(A\) della trave</p>
+<p id="p-463">Si consideri la seguente trave appoggiata soggetta ad un carico ripartito.</p>
+<figure class="figure-like" id="figure-89"><div class="image-box" style="width: 38%; margin-left: 31%; margin-right: 31%;"><img src="images/trave_appoggiata_con_carico_ripartito.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span> <span class="codenumber">5.9.6.</span> </figcaption></figure><p id="p-464">Lo schema di corpo libero e il relativo calcolo delle reazioni vincolari forniscono il seguente risultato.</p>
+<figure class="figure-like" id="figure-90"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/trave_appoggiata_con_carico_ripartito_calcolo_reazioni.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span> <span class="codenumber">5.9.7.</span> </figcaption></figure><p id="p-465">La soluzione ottenuta dal calcolo delle reazioni vincolari consente la scrittura delle seguenti condizioni relative all'estremo \(A\) della trave</p>
 <div class="displaymath">
 \begin{equation*}
 N(0) = 0\,,\quad T(0) = ql/2\,,\quad  M(0) = 0\,,
@@ -331,7 +331,7 @@ N(0) = 0\,,\quad T(0) = ql/2\,,\quad  M(0) = 0\,,
 N(x) = 0\,,\quad T(x) = -q\,x + ql/2 \,,\quad  M(x) = ql/2\,x - q\,x^2/2 \,.
 \end{equation*}
 </div>
-<article class="assemblage-like" id="assemblage-49"><p id="p-484">Le istruzioni MATLAB da utilizzare per diagrammare le componenti di sollecitazione sono formulabili come di seguto riportato. <figure class="figure-like" id="listing-59"><pre class="console"><b>% diagramma dello sforzo normale
+<article class="assemblage-like" id="assemblage-45"><p id="p-466">Le istruzioni MATLAB da utilizzare per diagrammare le componenti di sollecitazione sono formulabili come di seguto riportato. <figure class="figure-like" id="listing-55"><pre class="console"><b>% diagramma dello sforzo normale
 syms N(x);
 N(x) = 0;
 
@@ -374,14 +374,14 @@ set(gca, 'YDir','reverse')
 <div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
 <div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;"><img src="images/sollecitazioni_ex3_T.png" style="width: 100%; height: auto;" alt=""></div>
 <div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;"><img src="images/sollecitazioni_ex3_M.png" style="width: 100%; height: auto;" alt=""></div>
-</div></div></section><section class="subsection" id="subsection-123"><h3 class="heading hide-type">
+</div></div></section><section class="subsection" id="subsection-124"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">5.9.4</span> <span class="title"></span>
 </h3>
-<p id="p-485">Si consideri la seguente trave appoggiata soggetta ad una forza concentrata in mezzeria.</p>
-<figure class="figure-like" id="figure-90"><div class="image-box" style="width: 38%; margin-left: 31%; margin-right: 31%;"><img src="images/trave_appoggiata_con_forza_concentrata.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">5.9.9.</span> </figcaption></figure><p id="p-486">Si riporta anche in questo caso il diagramma di corpo libero utilizzato per il calcolo delle reazioni vincolari insieme al risultato ottenuto dal calcolo.</p>
-<figure class="figure-like" id="figure-91"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/trave_appoggiata_con_forza_concentrata_calcolo_reazioni.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">5.9.10.</span> </figcaption></figure><p id="p-487">Rispetto ai casi precedenti, il caso in esame è comunque differente poiché la forza concentrata in mezzeria determina una discontinuità del taglio \(T(x)\) e quindi, essendo \(dM/dx=T\text{,}\) anche una discontinuità della derivata del momento flettente. Pertanto gli integrali generali  <a data-knowl="./knowl/general_const_N_eq.html" title="Equazione 5.8.13">(5.8.13)</a>, <a data-knowl="./knowl/general_const_T_eq.html" title="Equazione 5.8.14">(5.8.14)</a> e <a data-knowl="./knowl/general_const_M_eq.html" title="Equazione 5.8.15">(5.8.15)</a> non sono applicabili direttamente al tratto di trave \(AB\) ma devono essere applicati separatamente ai tratti di trave \(AC\) e  \(CB\text{.}\) In tal modo si ottengono due rappresentazioni delle sollecitazioni \(T(x)\) e \(M(x)\text{,}\) una rappresentazione valida per il tratto \(AC\) ed un'altra per il tratto \(CB\text{.}\)</p>
+<p id="p-467">Si consideri la seguente trave appoggiata soggetta ad una forza concentrata in mezzeria.</p>
+<figure class="figure-like" id="figure-91"><div class="image-box" style="width: 38%; margin-left: 31%; margin-right: 31%;"><img src="images/trave_appoggiata_con_forza_concentrata.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span> <span class="codenumber">5.9.9.</span> </figcaption></figure><p id="p-468">Si riporta anche in questo caso il diagramma di corpo libero utilizzato per il calcolo delle reazioni vincolari insieme al risultato ottenuto dal calcolo.</p>
+<figure class="figure-like" id="figure-92"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/trave_appoggiata_con_forza_concentrata_calcolo_reazioni.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span> <span class="codenumber">5.9.10.</span> </figcaption></figure><p id="p-469">Rispetto ai casi precedenti, il caso in esame è comunque differente poiché la forza concentrata in mezzeria determina una discontinuità del taglio \(T(x)\) e quindi, essendo \(dM/dx=T\text{,}\) anche una discontinuità della derivata del momento flettente. Pertanto gli integrali generali  <a data-knowl="./knowl/general_const_N_eq.html" title="Equazione 5.8.13">(5.8.13)</a>, <a data-knowl="./knowl/general_const_T_eq.html" title="Equazione 5.8.14">(5.8.14)</a> e <a data-knowl="./knowl/general_const_M_eq.html" title="Equazione 5.8.15">(5.8.15)</a> non sono applicabili direttamente al tratto di trave \(AB\) ma devono essere applicati separatamente ai tratti di trave \(AC\) e  \(CB\text{.}\) In tal modo si ottengono due rappresentazioni delle sollecitazioni \(T(x)\) e \(M(x)\text{,}\) una rappresentazione valida per il tratto \(AC\) ed un'altra per il tratto \(CB\text{.}\)</p>
 <ul class="disc">
 <li id="li-149">Tratto \(AC\text{,}\) \(0 \leq x \leq l/2\text{:}\)<div class="displaymath">
 \begin{align*}
@@ -412,7 +412,7 @@ M_{CB}(x) &amp;= -F/2\,x + Fl/4\,.
 </div>
 </li>
 </ul>
-<article class="assemblage-like" id="assemblage-50"><p id="p-488"><figure class="figure-like" id="listing-60"><pre class="console"><b>% diagramma del taglio
+<article class="assemblage-like" id="assemblage-46"><p id="p-470"><figure class="figure-like" id="listing-56"><pre class="console"><b>% diagramma del taglio
 syms T_ac(x,F) T_cb(x,F);
 T_ac(x,F) = F/2;
 T_cb(x,F) = -F/2;

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:07+01:00    *-->
+<!--*    on 2020-03-31T11:53:46+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,42 +12,31 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<figure class="figure-like"><pre class="console"><b>% primo quesito
-x = sym('x', [3 1]);
-sig = sym('s', [3 3]);
-sig(1,1) = x(2);
-sig(1,2) = x(3);
-sig(1,3) = 0;
-sig(2,1) = x(3);
-sig(2,2) = x(1);
-sig(2,3) = 0;
-sig(3,1) = 0;
-sig(3,2) = 0;
-syms rho g;
-sig(3,3) = rho*g*x(3);
-sig
+<figure class="figure-like"><pre class="console"><b>syms t E ni;
+X = sym('X', [1 3]);
+u = sym('u', [1 3]);
+u(1) = -ni*t/E * X(1);
+u(2) = -ni*t/E * X(2);
+u(3) = t/E * X(3);
 
-b = sym('b', [3 1]);
-b(1) = 0;
-b(2) = 0;
-b(3) = -rho*g;
-b
+Du = [transpose(gradient(u(1), X)); ...
+transpose(gradient(u(2), X)); transpose(gradient(u(3), X))];
 
-divergence(sig(1,1:3), x) + b(1)
-divergence(sig(2,1:3), x) + b(2)
-divergence(sig(3,1:3), x) + b(3)
+symDu = 1/2*(Du+transpose(Du))
 
-% secondo quesito
-t1 = subs(sig, {x(1), x(2), x(3)}, {1, 1, 1})*[1; 0; 0]
-t2 = subs(sig, {x(1), x(2), x(3)}, {1, 1, 1})*[0; 1; 0]
-t3 = subs(sig, {x(1), x(2), x(3)}, {1, 1, 1})*[0; 0; 1]
-t_1 = subs(sig, {x(1), x(2), x(3)}, {0, 0, 0})*[-1; 0; 0]
-t_2 = subs(sig, {x(1), x(2), x(3)}, {0, 0, 0})*[0; -1; 0]
-t_3 = subs(sig, {x(1), x(2), x(3)}, {0, 0, 0})*[0; 0; -1]
+Voigt_eps = [symDu(1,1); symDu(2,2); symDu(3,3); ...
+2*symDu(2,3); 2*symDu(3,1); 2*symDu(1,2)];
 
-% terzo quesito
-b*(1*1*1) + t3*(1*1)
+Voigt_C = E/((1+ni)*(1-2*ni))*[(1-ni) ni ni 0 0 0; ...
+ ni (1-ni) ni 0 0 0; ...
+ ni ni (1-ni) 0 0 0; ...
+ 0 0 0 (1-2*ni)/2 0 0; ...
+ 0 0 0 0 (1-2*ni)/2 0; ...
+ 0 0 0 0 0 (1-2*ni)/2];
+
+Voigt_sig = Voigt_C*Voigt_eps;
+simplify(Voigt_sig)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">2.7.2.</span> </figcaption></figure><span class="incontext"><a href="answers_sec_stress_chap_it.html#listing-28">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">3.4.2.</span> </figcaption></figure><span class="incontext"><a href="problem_sec_elasticity_chap_it.html#listing-28">in-context</a></span>
 </body>
 </html>

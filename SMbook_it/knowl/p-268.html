@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:08+01:00    *-->
+<!--*    on 2020-03-31T11:53:46+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,21 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>La seguente figura illustra il risultato di un prova di carico uniassiale effettuata su una barra di acciaio. Per risultato della prova si intende la curva riportata in figura, curva che rappresenta la <em class="emphasis">risposta meccanica</em>, ovvero il valore della tensione nel materiale, al crescere della deformazione applicata. È evidente come sia articolata e variabile la risposta del materiale e come sia non banale l'individuazione di un <em class="emphasis">modello matematico/numerico</em> in grado di riprodurre il risultato prodotto dalla prova di carico, risultato che può essere schematicamente riepilogato come segue (per l'acciaio, e in generale per i materiali metallici, quanto riportato in figura viene generalemente assunto come valido sia in regime di trazione e sia in regime di compressione).</p>
-<span class="incontext"><a href="uniaxial_sec_elasticity_chap_it.html#p-268">in-context</a></span>
+<p>Per completezza si fornisce anche un riepilogo del legame elastico ed isotropo utilizzando il formato tensoriale.</p>
+<div class="displaymath">
+\begin{equation}
+\tens{\sigma} = \tensQ{C}:\tens{\varepsilon} \tag{3.3.22}
+\end{equation}
+</div>
+<p>dove le componenti non nulle del tensore \(\tensQ{C}\) sono</p>
+<div class="displaymath">
+\begin{align}
+\amp\mathbb{C}_{1111} = \mathbb{C}_{2222} = \mathbb{C}_{3333} = \frac{E(1-\nu)}{(1+\nu)(1-2\nu)}\,,\tag{3.3.23}\\
+\amp\mathbb{C}_{1122} = \mathbb{C}_{1133} = \mathbb{C}_{2233} =\tag{3.3.24}\\
+\amp\mathbb{C}_{2211} = \mathbb{C}_{3311} = \mathbb{C}_{3322} = \frac{E\,\nu}{(1+\nu)(1-2\nu)}\,,\tag{3.3.25}\\
+\amp\mathbb{C}_{2323} = \mathbb{C}_{3131} = \mathbb{C}_{1212} = 2\,G\,.\tag{3.3.26}
+\end{align}
+</div>
+<span class="incontext"><a href="multiaxial_sec_elasticity_chap_it.html#p-268">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:07+01:00    *-->
+<!--*    on 2020-03-31T11:53:46+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,20 +12,18 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<figure class="figure-like"><pre class="console"><b>lam1 = 2;
-lam2 = 5;
-lam3 = 7;
-I1 = lam1 + lam2 + lam3
-I2 = lam1*lam2 + lam2*lam3 + lam3*lam1
-I3 = lam1*lam2*lam3
-U = ...
-[5.2500 -1.0607 -1.7500; ...
--1.0607 3.5000 -1.0607; ...
--1.7500 -1.0607 5.2500];
-I1 = trace(U)
-I2 = 1/2*(trace(U)^2 - trace(U*U))
-I3 = det(U)
+<figure class="figure-like"><pre class="console"><b>sig = @(x) ...
+[5*x(2)*x(3) 3*x(2)^2 0;
+3*x(2)^2 0 -x(1);
+0 -x(1) 0];
+
+n = @(x) ...
+[2*x(1)/sqrt((2*x(1))^2+(2*x(2))^2+1);
+2*x(2)/sqrt((2*x(1))^2+(2*x(2))^2+1);
+1/sqrt((2*x(1))^2+(2*x(2))^2+1)];
+
+t = sig([1/2; sqrt(3)/2; -1])*n([1/2; sqrt(3)/2; -1])
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.7.8.</span> </figcaption></figure><span class="incontext"><a href="principal_directions_sec_strain_chap_it.html#listing-23">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">2.7.1.</span> </figcaption></figure><span class="incontext"><a href="answers_sec_stress_chap_it.html#listing-23">in-context</a></span>
 </body>
 </html>

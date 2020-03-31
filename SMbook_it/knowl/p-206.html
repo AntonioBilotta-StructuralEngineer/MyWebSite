@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:07+01:00    *-->
+<!--*    on 2020-03-31T11:53:46+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,15 +13,33 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<ul class="disc">
-<li>Le equazioni <a data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equazione 2.3.10">(2.3.10)</a> non determinano in maniera completa il campo di tensione di Cauchy per un corpo in equilibrio. In particolare si hanno 3 equazioni differenziali per determinare, per la simmetria del tensore, le \(6\) componenti incognite di \(\tens{\sigma}\text{.}\) Come si vedrà nel seguito tale inconveniente verrà risolto caratterizzando il comportamento costitutivo del materiale di cui è composto il corpo. Comportamento da ricostruire per via sperimentale e riferendosi alla media delle grandezze in gioco. Si ricorda che l'approccio macroscopico non si basa su una precisa descrizione della micro-struttura interna della materia.</li>
-<li>Le condizioni al contorno da associare alle equazioni differenziali <a data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equazione 2.3.10">(2.3.10)</a> saranno determinate mettendo in relazione la tensione incognita \(\tens{\sigma}\) e le trazioni assegnate, \(\bar{\vec{t}}\text{,}\) sul contorno del corpo \(\body\) cui le equazioni di equilibriio si riferiscono. Tale relazione viene stabilita mediante la <a data-knowl="./knowl/T_cauchy_stress_eq.html" title="Equazione 2.3.9">(2.3.9)</a> che fornisce<div class="displaymath">
-\begin{equation}
-\tens{\sigma}\,\vec{n} = \bar{\vec{t}}\,, \text{su}\;\partial\body\,.\tag{2.3.12}
-\end{equation}
-</div>Tali equazioni costituiscono le <em class="emphasis">condizioni al contorno</em> di tipo <em class="emphasis">naturale</em> per il problema differenziale <a data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equazione 2.3.10">(2.3.10)</a>.</li>
-<li>Alla base della derivazione delle equazioni  <a data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equazione 2.3.10">(2.3.10)</a> vi è l'ipotesi di continuità del campo vettoriale \(\vec{b}\) e l'ipotesi di differenziabilità del campo tensoriale \(\tens{\sigma}\text{.}\) Ipotesi che consentono, come visto, di passare da equazioni in forma integrale ad equazioni in forma locale.</li>
-</ul>
-<span class="incontext"><a href="stress_sec_stress_chap_it.html#p-206">in-context</a></span>
+<p>fornisce</p>
+<div class="displaymath">
+\begin{equation*}
+\sigma_1 = \tau\,,\quad\sigma_2 = -\tau\,,\quad\sigma_3 = 0\,,
+\end{equation*}
+</div>
+<p>e</p>
+<div class="displaymath">
+\begin{equation*}
+\matWp{s}{1} = 
+\left[\begin{array}{c}
+1/\sqrt{2} \\ 1/\sqrt{2} \\0
+\end{array}\right]
+\,,\quad
+\matWp{s}{2} = 
+\left[\begin{array}{c}
+-1/\sqrt{2} \\ 1/\sqrt{2} \\0
+\end{array}\right]
+\,,\quad
+\matWp{s}{3} = 
+\left[\begin{array}{c}
+0 \\ 0 \\ 1
+\end{array}\right]
+\,.
+\end{equation*}
+</div>
+<p>Quindi le direzioni principali sono ruotate di \(\pi/4\) intorno all'asse \(\vec{e}_3\) (si riportano gli autovettori normalizzati anche se, nel caso di calcolo simbolico, MATLAB non fornisce autovettori normalizzati).</p>
+<span class="incontext"><a href="stress_analysis_sec_stress_chap_it.html#p-206">in-context</a></span>
 </body>
 </html>

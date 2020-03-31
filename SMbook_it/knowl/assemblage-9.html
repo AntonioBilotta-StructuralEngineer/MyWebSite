@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:07+01:00    *-->
+<!--*    on 2020-03-31T11:53:45+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,77 +12,49 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="assemblage-like"><h6 class="heading"><span class="title">Trasformazione 1.</span></h6>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:45%;justify-content:flex-start;"><p><img src="images/90degreesRotation.png" style="width: 100%; height: auto;" alt=""></p></div>
-<div class="sbspanel" style="width:20%;justify-content:flex-start;"><div class="displaymath">
-\begin{equation*}
-\mat{F} =
-\left[\begin{array}{cc} 0 \amp -1 \\ 1  \amp 0  \end{array}\right]
-\end{equation*}
-</div></div>
-<div class="sbspanel" style="width:35%;justify-content:flex-start;"><div class="displaymath">
-\begin{gather*}
-(\alpha\,c +\beta\,s)= 0\,,\\
-(-\alpha\,s+\beta\,c)= -1\,,\\
-(\beta\,c +\gamma\,s)= 1\,,\\
-(-\beta\,s+\gamma\,c)= 0\,,\\
-c^2 + s^2 = 1\,.
-\end{gather*}
-</div></div>
-</div></div>
-<p>Se si assume di collocare le 5 incognite in un vettore ordinato come segue</p>
+<article class="assemblage-like"><p>Assumendo per \(\tens{U}\) la seguente forma diagonale</p>
 <div class="displaymath">
 \begin{equation*}
-x(1) = \alpha\,,\;
-x(2) = \beta\,,\;
-x(3) = \gamma\,,\;
-x(4) = c\,,\;
-x(5) = s\,,
+\mat{U} =
+\left[\begin{array}{ccc}
+2 \amp 0 \amp 0\\
+0 \amp 5 \amp 0\\
+0 \amp 0 \amp 7\\
+\end{array}\right]\,,
 \end{equation*}
 </div>
-<p>le istruzioni MATLAB possono essere definite come segue <figure class="figure-like"><pre class="console"><b>funT1 = @(x) ...
-[x(1)*x(4) + x(2)*x(5); ...
--x(1)*x(5) + x(2)*x(4) + 1; ...
-x(2)*x(4) + x(3)*x(5) - 1; ...
--x(2)*x(5) + x(3)*x(4); ...
-x(4)^2 + x(5)^2 - 1];
-
-guess = [1, 1, 1, 1, 1];
-fsolve(@funT1, guess)
+<p>si calcoli l'espressione che assume \(\tens{U}\) rispetto ad una base ottenuta dalle direzioni principali applicando, in successione, le seguenti rotazioni</p>
+<div class="displaymath">
+\begin{equation*}
+\matWp{R}{1} = 
+\left[\begin{array}{ccc}
+\cos{\frac{\pi}{4}} \amp -\sin{\frac{\pi}{4}} \amp 0\\
+\sin{\frac{\pi}{4}} \amp \cos{\frac{\pi}{4}} \amp 0\\
+0 \amp 0 \amp 1\\
+\end{array}\right]\,,
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\matWp{R}{2} = 
+\left[\begin{array}{ccc}
+\cos{\frac{\pi}{4}}  \amp 0 \amp -\sin{\frac{\pi}{4}}\\
+0 \amp 1 \amp 0\\
+\sin{\frac{\pi}{4}} \amp 0 \amp \cos{\frac{\pi}{4}}\\
+\end{array}\right]\,.
+\end{equation*}
+</div>
+<p>Le seguenti istruzioni MATLAB consentono di calcolare quanto richiesto. <figure class="figure-like"><pre class="console"><b>R1 = [cos(pi/4) -sin(pi/4) 0; sin(pi/4) cos(pi/4) 0; 0 0 1];
+R2 = [cos(pi/4) 0 -sin(pi/4); 0 1 0; sin(pi/4) 0 cos(pi/4)];
+u1 = R2*R1*[1; 0; 0];
+u2 = R2*R1*[0; 1; 0];
+u3 = R2*R1*[0; 0; 1];
+lam1 = 2;
+lam2 = 5;
+lam3 = 7;
+U = lam1*u1*transpose(u1) + lam2*u2*transpose(u2) + ...
+lam3*u3*transpose(u3)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.6.5.</span> </figcaption></figure> pervendendo al seguente seguente output <figure class="figure-like"><pre class="console"><b>Equation solved.
-
-fsolve completed because the vector of function values is near zero
-as measured by the value of the function tolerance, and
-the problem appears regular as measured by the gradient.
-
-&lt;stopping criteria details&gt;
-
-ans =
-
-    1.0000    0.0000    1.0000    0.0000    1.0000
-</b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.6.6.</span> </figcaption></figure> Pertanto si ottiene il risultato atteso</p>
-<div class="displaymath">
-\begin{equation*}
-x(1) = \alpha= 1\,,\quad
-x(2) = \beta = 0\,,\quad
-x(3) = \gamma = 1\,,
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-x(4) = c=0\,,\quad
-x(5) = s=1\,,
-\end{equation*}
-</div>
-<p>ovvero</p>
-<div class="displaymath">
-\begin{equation*}
-\mat{U} = \left[\begin{array}{cc} 1 \amp 0 \\ 0  \amp 1  \end{array}\right]\,,\quad
-\mat{R} = \left[\begin{array}{cc} 0 \amp -1 \\ 1  \amp 0  \end{array}\right]\,.
-\end{equation*}
-</div></article><span class="incontext"><a href="polar_sec_strain_chap_it.html#assemblage-9">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">1.7.3.</span> </figcaption></figure></p></article><span class="incontext"><a href="principal_directions_sec_strain_chap_it.html#assemblage-9">in-context</a></span>
 </body>
 </html>

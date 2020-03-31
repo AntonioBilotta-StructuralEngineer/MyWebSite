@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:08+01:00    *-->
+<!--*    on 2020-03-31T11:53:47+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,26 +13,21 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Anche per la trave inflessa, come già fatto per la trave tesa, il modello non si limita a trattare solo i carichi esterni relativi alla soluzione 3D presa come riferimento, carichi raffigurati qui di seguito. <figure class="figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/trave_inflessa_carichi_3D.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">3.6.3.</span> </figcaption></figure> Si ammette invece un'assegnazione dei carichi esterni del tipo mostrato in nella seguente Figura. <figure class="figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/trave_inflessa_carichi.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">3.6.4.</span> </figcaption></figure> Si introduce quindi il carico per unità di lughezza \(\func{q}{x}\text{,}\) carico trasversale all'asse della trave e diretto come indicato in Figura. Su ciascuno estremo della trave si ha una coppia concentrata ed una forza concentrata verticale. Il lavoro esterno assume quindi la seguente espressione</p>
+<p>L'applicazione dell'equazione di equilibrio <a data-knowl="./knowl/bent_beam_navier.html" title="Equazione 3.6.34">(3.6.34)</a> allo schema sopra riportato fornisce</p>
 <div class="displaymath">
 \begin{equation*}
-L_e = \int_{l} \func{q}{x}\,\func{w}{x}\, dx + V_{0} \,\func{w}{0} +  V_{l} \,\func{w}{l} + \mathcal{M}_{0} \,\func{\varphi}{0} +  \mathcal{M}_{l} \,\func{\varphi}{l}\,,
+EJ\,\frac{d^4w}{dx^4} = 0\,.
 \end{equation*}
 </div>
-<p>dove le coppie di estremit compiono lavoro sulle rotazioni della trave, rotazioni che sono legate allo spostamento trasversale \(\func{w}{x}\) mediante la relazione</p>
+<p>Equazione differenziale del 4\(^o\) ordine a cui occorre associare le condizioni al contorno che, nel caso in esame, sono di tipo cinematico all'estremo \(x=0\) e di tipo statico all'estremo \(x=l\text{:}\)</p>
 <div class="displaymath">
-\begin{equation}
-\varphi = -\frac{dw}{dx}\,.\tag{3.6.11}
-\end{equation}
+\begin{align*}
+\amp \func{w}{0} = 0\,,\\
+\amp \func{\frac{dw}{dx}}{0} = 0\,,\\
+\amp \func{\frac{d M}{dx}}{l} = \frac{d}{dx}\left(-EJ\,\func{\frac{d^2w}{dx^2}}{l}\right) = -EJ\,\func{\frac{d^3w}{dx^3}}{l}  = F\,,\\
+\amp \func{M}{l} = -EJ\,\func{\frac{d^2w}{dx^2}}{l} = 0\,.
+\end{align*}
 </div>
-<p>Da cui si ricava la seguente espressione del lavoro esterno</p>
-<div class="displaymath">
-\begin{equation*}
-L_e = \int_{l} \func{q}{x}\,\func{w}{x}\, dx + V_{0} \,\func{w}{0} +  V_{l} \,\func{w}{l} - \mathcal{M}_{0} \,\func{\frac{dw}{dx}}{0} -  \mathcal{M}_{l} \,\func{\frac{dw}{dx}}{l}\,.
-\end{equation*}
-</div>
-<span class="incontext"><a href="bent_beam_sec_elasticity_chap_it.html#p-326">in-context</a></span>
+<span class="incontext"><a href="bent_beam_applications_sec_elasticity_chap_it.html#p-326">in-context</a></span>
 </body>
 </html>

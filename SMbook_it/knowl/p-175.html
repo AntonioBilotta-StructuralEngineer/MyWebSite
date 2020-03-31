@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:07+01:00    *-->
+<!--*    on 2020-03-31T11:53:46+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,21 +13,22 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Si consideri il seguente campo di spostamento</p>
+<p>Tali condizioni, per l'ipotesi di continuità, non valgono solo per il corpo \(\body\) in esame ma anche per qualsiasi sottoinsieme estratto dal corpo principale. <figure class="figure-like"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="images/continuo_in_due.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span> <span class="codenumber">2.2.1.</span> </figcaption></figure> Tale operazione di separazione, tipica della meccanica dei solidi, viene effetuata utilizzando delle superfici immaginarie con cui viene tagliato il corpo di partenza. In particolare, si veda la figura, per le due parti di corpo così ottenute si potranno scrivere le seguenti coppie di equazioni</p>
 <div class="displaymath">
-\begin{align*}
-u_1 \amp= 3.5 \; 10^{-3} X_1 + 2.0 \; 10^{-3} X_2\,,\\
-u_2 \amp= 1.0 \; 10^{-3} X_1 - 0.5 \; 10^{-3} X_2\,,\\
-u_3 \amp= 0 \,.
-\end{align*}
+\begin{align}
+\int_{\omega} \vec{b} \, dv + \int_{\partial\omega} \vec{t}_{\omega} \, ds \amp = \vec0\,,\tag{2.2.3}\\
+\int_{\omega} \vec{x} \times \vec{b} \, dv + \int_{\partial\omega} \vec{x} \times \vec{t}_{\omega} \, ds \amp = \vec0 \,.\tag{2.2.4}
+\end{align}
 </div>
-<ol class="decimal">
-<li>Determinare il tensore della deformazione infinitesima \(\tens{\varepsilon}\text{.}\)</li>
-<li>Determinare le deformazioni principali \(\varepsilon_i\) (\(i=1 \dots 3\))  e le direzioni principali di \(\tens{\varepsilon}\text{.}\)</li>
-<li>Calcolare gli allungamenti \(\lambda_i\) (\(i=1 \dots 3\)) e le direzioni principali del tensore \(\tens{U}\text{.}\)</li>
-<li>Confrontare  \(\varepsilon_i\) e \(\lambda_i\) sulla base dell'equazione <a data-knowl="./knowl/small_normal_strain_eq.html" title="Equazione 1.9.9">(1.9.9)</a>.</li>
-<li>Confrontare le direzioni principali di \(\tens{\varepsilon}\) con le direzioni principali \(\tens{U}\text{.}\)</li>
-</ol>
-<span class="incontext"><a href="exercises_sec_strain_chap_it.html#p-175">in-context</a></span>
+<p>e</p>
+<div class="displaymath">
+\begin{align}
+\int_{\bar{\omega}} \vec{b} \, dv + \int_{\partial\bar{\omega}} \vec{t}_{\bar{\omega}} \, ds  + \int_{\partial\body} \vec{t} \, ds \amp = \vec0\,,\tag{2.2.5}\\
+\int_{\bar{\omega}} \vec{x} \times \vec{b} \, dv + \int_{\partial\bar{\omega}} \vec{x} \times \vec{t}_{\bar{\omega}} \, ds + \int_{\partial\body} \vec{x} \times \vec{t} \, ds \amp = \vec0 \,.\tag{2.2.6}
+\end{align}
+</div>
+<p>dove \(\vec{t}_{\omega}\) rappresenta l'azione esercitata su \(\omega\) dall'altra parte di dominio \(\bar{\omega}\) e, al contrario, \(\vec{t}_{\bar{\omega}}\) rappresenta l'azione esercitata su \(\bar{\omega}\) dall'altra parte \(\omega\text{.}\)</p>
+<span class="incontext"><a href="equilibrium_sec_stress_chap_it.html#p-175">in-context</a></span>
 </body>
 </html>

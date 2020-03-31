@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:07+01:00    *-->
+<!--*    on 2020-03-31T11:53:46+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,13 +13,26 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p><figure class="figure-like"><pre class="console"><b>U = ...
-[5.2500 -1.0607 -1.7500; ...
--1.0607 3.5000 -1.0607; ...
--1.7500 -1.0607 5.2500];
-[V, D] = eig(U)
-</b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.7.6.</span> </figcaption></figure></p>
-<span class="incontext"><a href="principal_directions_sec_strain_chap_it.html#p-136">in-context</a></span>
+<p>si possono ricavare le espressioni di una componente sulla diagonale ed una fuori dalla diagonale</p>
+<div class="displaymath">
+\begin{align*}
+C_{11} \amp = \left( 1 + \frac{\partial u_1}{\partial X_1} \right)^2 + \left(\frac{\partial u_1}{\partial X_2}\right)^2 + \left(\frac{\partial u_1}{\partial X_3}\right)^2\,,\\
+C_{12} \amp = \frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1} + \frac{\partial u_1}{\partial X_1}\frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1}\frac{\partial u_2}{\partial X_2} + \frac{\partial u_3}{\partial X_1}\frac{\partial u_3}{\partial X_2} \,.
+\end{align*}
+</div>
+<p>Per la componente sulla diagonale, utilizzando il risultato <a data-knowl="./knowl/Cii_eq.html" title="Equazione 1.8.4">(1.8.4)</a> ottenuto per la componente sulla diagonale di \(\tens{C}\text{,}\) si può scrivere</p>
+<div class="displaymath">
+\begin{equation*}
+\func{\lambda}{\vec{e}_1}^2 =  \left( 1 + \underbrace{\frac{\partial u_1}{\partial X_1}}_{\varepsilon_{11}} \right)^2 + \underbrace{\left(\frac{\partial u_1}{\partial X_2}\right)^2 + \left(\frac{\partial u_1}{\partial X_3}\right)^2}_{\text{trascurabili nel caso infinitesimo}}\,.
+\end{equation*}
+</div>
+<p>Da cui si ricava</p>
+<div class="displaymath">
+\begin{equation}
+\varepsilon_{11} \approx \func{\lambda}{\vec{e}_1} - 1\,.\tag{1.9.9}
+\end{equation}
+</div>
+<p>Analogo risultato vale per le altre componenti di \(\tens{\varepsilon}\) sulla diagonale.</p>
+<span class="incontext"><a href="infinitesimal_sec_strain_chap_it.html#p-136">in-context</a></span>
 </body>
 </html>

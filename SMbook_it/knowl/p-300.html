@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:08+01:00    *-->
+<!--*    on 2020-03-31T11:53:47+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,18 +13,64 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>In conclusione il campo di tensione che soddisfa tutte le quazioni di equilibrio in gioco è</p>
-<div class="displaymath">
+<ul class="disc">
+<li>Carichi<div class="displaymath">
+\begin{equation*}
+\func{p}{x}\quad H_0 \quad H_l
+\end{equation*}
+</div>
+</li>
+<li>Incognite<div class="displaymath">
+\begin{equation*}
+\func{u}{x}\quad\func{\varepsilon}{x}\quad\func{N}{x}
+\end{equation*}
+</div>
+</li>
+<li>Lavoro interno<div class="displaymath">
 \begin{equation}
-\mat{\sigma} =
-\left[\begin{array}{ccc}
-0 \amp 0 \amp 0\\
-0 \amp 0 \amp 0\\
-0 \amp 0 \amp \frac{\bar{t}}{H/2}\,X_2
-\end{array}\right]\,.\tag{3.4.17}
+L_i = \int_{l} N \varepsilon \,dx\,.\tag{3.5.12}
 \end{equation}
 </div>
-<p>Quindi la soluzione statica è data da uno stato di trazione pura nella direzione \(X_3\) distribuito linearmente lungo l'asse \(X_2\text{.}\) Per maggiore comodità degli sviluppi successivi continueremo ad utilizzare l'espressione \(\sigma_{33}=\kappa\,X_2\) ricordando comunque che \(\kappa=\frac{\bar{t}}{H/2}\text{.}\)</p>
-<span class="incontext"><a href="problem_sec_elasticity_chap_it.html#p-300">in-context</a></span>
+</li>
+<li>Lavoro esterno<div class="displaymath">
+\begin{equation}
+L_e = \int_{l} \func{p}{x}\,\func{u}{x}\, dx + H_{0} \,\func{u}{0} +  H_{l} \,\func{u}{l}\,.\tag{3.5.13}
+\end{equation}
+</div>
+</li>
+<li>Legame spostamento-deformazione<div class="displaymath">
+\begin{equation}
+\varepsilon = \frac{du}{dx}\tag{3.5.14}
+\end{equation}
+</div>
+</li>
+<li>Legame elastico<div class="displaymath">
+\begin{equation}
+N = EA\,\varepsilon\tag{3.5.15}
+\end{equation}
+</div>
+</li>
+<li>Equazioni di equilibrio<div class="displaymath">
+\begin{equation}
+\frac{dN}{d x} + p = 0\tag{3.5.16}
+\end{equation}
+</div>
+</li>
+<li>Eventuali condizioni al contorno di tipo statico<div class="displaymath">
+\begin{align}
+\func{N}{0} \amp=  -H_{0}\tag{3.5.17}\\
+\func{N}{l} \amp=  H_{l}\tag{3.5.18}
+\end{align}
+</div>
+</li>
+<li>Eventuali condizioni al contorno di tipo cinematico<div class="displaymath">
+\begin{align}
+\func{u}{0} \amp=  \bar{u}_{0}\tag{3.5.19}\\
+\func{u}{l} \amp=  \bar{u}_{l}\tag{3.5.20}
+\end{align}
+</div>
+</li>
+</ul>
+<span class="incontext"><a href="stretched_beam_sec_elasticity_chap_it.html#p-300">in-context</a></span>
 </body>
 </html>

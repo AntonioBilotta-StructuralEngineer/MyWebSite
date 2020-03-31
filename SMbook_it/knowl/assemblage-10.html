@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:07+01:00    *-->
+<!--*    on 2020-03-31T11:53:45+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,55 +12,53 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="assemblage-like"><h6 class="heading"><span class="title">Trasformazione 2.</span></h6>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:45%;justify-content:flex-start;"><p><img src="images/RightExtension.png" style="width: 100%; height: auto;" alt=""></p></div>
-<div class="sbspanel" style="width:20%;justify-content:flex-start;"><div class="displaymath">
+<article class="assemblage-like"><p>Al fine di verificare come il tensore \(\tens{U}\) agisca in modo differente sulle direzioni principali e sulle direzioni individuate dal riferimento standard, si consideri il seguente stato piano caratterizzato dalla seguente forma diagonale di \(\tens{U}\)</p>
+<div class="displaymath">
 \begin{equation*}
-\mat{F} =
-\left[\begin{array}{cc} 2 \amp 0 \\ 0  \amp 1  \end{array}\right]
+\mat{U} =
+\left[\begin{array}{cc}
+1.2\lambda \amp 0\\
+0 \amp \lambda
+\end{array}\right]\,.
 \end{equation*}
-</div></div>
-<div class="sbspanel" style="width:35%;justify-content:flex-start;"><div class="displaymath">
-\begin{gather*}
-(\alpha\,c +\beta\,s)= 2\,,\\
-(-\alpha\,s+\beta\,c)= 0\,,\\
-(\beta\,c +\gamma\,s)= 0\,,\\
-(-\beta\,s+\gamma\,c)= 1\,,\\
-c^2 + s^2 = 1\,.
-\end{gather*}
-</div></div>
-</div></div>
-<p>Istruzioni MATLAB <figure class="figure-like"><pre class="console"><b>funT2 = @(x) ...
-[x(1)*x(4) + x(2)*x(5) - 2; ...
--x(1)*x(5) + x(2)*x(4); ...
-x(2)*x(4) + x(3)*x(5); ...
--x(2)*x(5) + x(3)*x(4) - 1; ...
-x(4)^2 + x(5)^2 - 1];
+</div>
+<p>Si assuma per le direzioni principali un'inclinazione di \(\pi/4\) e si applichi quindi il tensore della deformazione ai due quadrati, rappresentati nella seguente figura. Il quadrato di colore rosso ha lati allineati con il riferimento standard, il quadrato di colore blu ha invece lati allineati con le direzioni principali.</p>
+<p><figure class="figure-like"><div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="images/Squares.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span> <span class="codenumber">1.7.4.</span> </figcaption></figure></p>
+<p>L'applicazione del tensore viene effettuata facendo crescere il parametro \(\lambda\text{,}\) da cui dipendono i due autovalori del tensore, dal valore \(1.1\) al valore \(1.5\text{.}\)</p>
+<p>Si riportano le istruzioni MATLAB utilizzabili per il calcolo e la visualizzazione delle deformate dei due quadrati a partire dalle configurazioni iniziali.</p>
+<p><figure class="figure-like"><pre class="console"><b>Q1 = [1 -1 -1 1 1; 1 1 -1 -1 1];
+Q2 = [1 0 -1 0 1; 0 1 0 -1 0];
 
-guess = [1, 1, 1, 1, 1];
-fsolve(@funT2, guess)
+x = Q1(1,:);
+y = Q1(2,:);
+
+pbaspect([1 1 1])
+line(x,y,'Color','red','LineWidth',2)
+
+x = Q2(1,:);
+y = Q2(2,:);
+line(x,y,'Color','blue','LineWidth',2)
+
+
+u1 = [1/sqrt(2); 1/sqrt(2)];
+u2 = [-1/sqrt(2); 1/sqrt(2)];
+syms U(lam) 
+U(lam) = [u1 u2]*diag([1.2*lam lam])*transpose([u1 u2]);
+
+
+for v = 1.1:0.1:1.5
+  UQ1 = U(v)*Q1;
+  x = UQ1(1,:);
+  y = UQ1(2,:);
+  line(x,y,'Color','red','LineWidth',2)
+
+  UQ2 = U(v)*Q2;
+  x = UQ2(1,:);
+  y = UQ2(2,:);
+  line(x,y,'Color','blue','LineWidth',2)
+end
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.6.7.</span> </figcaption></figure> Risultato</p>
-<div class="displaymath">
-\begin{equation*}
-x(1) = \alpha= 2\,,\quad
-x(2) = \beta = 0\,,\quad
-x(3) = \gamma = 1\,,
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-x(4) = c=1\,,\quad
-x(5) = s=0\,,
-\end{equation*}
-</div>
-<p>ovvero</p>
-<div class="displaymath">
-\begin{equation*}
-\mat{U} = \left[\begin{array}{cc} 2 \amp 0 \\ 0  \amp 1  \end{array}\right]\,,\quad
-\mat{R} = \left[\begin{array}{cc} 1 \amp 0 \\ 0  \amp 1  \end{array}\right]\,.
-\end{equation*}
-</div></article><span class="incontext"><a href="polar_sec_strain_chap_it.html#assemblage-10">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">1.7.5.</span> </figcaption></figure></p></article><span class="incontext"><a href="principal_directions_sec_strain_chap_it.html#assemblage-10">in-context</a></span>
 </body>
 </html>

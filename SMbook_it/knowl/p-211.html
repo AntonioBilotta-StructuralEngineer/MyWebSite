@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:07+01:00    *-->
+<!--*    on 2020-03-31T11:53:46+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,25 +13,16 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Quanto discusso per le componenti del tensore vale anche per una giacitura generica \(\vec{n}\text{.}\) Come stabilito dal Teorema della tensione di Cauchy si ha</p>
+<p>Nei passaggi precedenti vengono trasferite derivate dal tensore \(\tens{\sigma}\) al campo di spostamento \(\vec{v}\text{.}\) Le derivate su \(\tens{\sigma}\) sono effettuate rispetto alle coordinate \(x_1\text{,}\) \(x_2\) e \(x_3\) relative alla configurazione corrente, pertanto in tale contesto per gradiente dello spostamento si intende</p>
 <div class="displaymath">
 \begin{equation*}
-\vec{t}_{\vec{n}} = \tens{\sigma}\,\vec{n}\,.
+\mat{\nabla v} = \left[\begin{array}{ccc}
+\regulardiff{u_1}{x_1} \amp \regulardiff{u_1}{x_2} \amp \regulardiff{u_1}{x_3}\\
+\regulardiff{u_2}{x_1} \amp \regulardiff{u_2}{x_2} \amp \regulardiff{u_2}{x_3}\\
+\regulardiff{u_3}{x_1} \amp \regulardiff{u_3}{x_2} \amp \regulardiff{u_3}{x_3}
+\end{array}\right]\,.
 \end{equation*}
 </div>
-<p>Da cui si può calcolare la componente normale della trazione</p>
-<div class="displaymath">
-\begin{equation}
-\sigma = \vec{t}_{\vec{n}} \cdot \vec{n} = \tens{\sigma}\,\vec{n} \cdot \vec{n}\tag{2.4.1}
-\end{equation}
-</div>
-<p>e la componente tangenziale relativa ad una direzione \(\vec{m}\) ortogonale ad \(\vec{n}\)</p>
-<div class="displaymath">
-\begin{equation}
-\tau = \vec{t}_{\vec{n}} \cdot \vec{m} = \tens{\sigma}\,\vec{n} \cdot \vec{m} \,.\tag{2.4.2}
-\end{equation}
-</div>
-<p>Per denotare le due componenti si è utilizzata la convenzione, spesso adottata in ambito ingegneristico, che indica le componenti normale e tangenziale rispettivamente con i simboli \(\sigma\) e \(\tau\text{.}\) Il vettore \(\vec{m}\text{,}\) come \(\vec{n}\text{,}\) è un vettore di lunghezza unitaria.</p>
-<span class="incontext"><a href="stress_analysis_sec_stress_chap_it.html#p-211">in-context</a></span>
+<span class="incontext"><a href="plv_sec_stress_chap_it.html#p-211">in-context</a></span>
 </body>
 </html>

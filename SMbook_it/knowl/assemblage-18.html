@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:08+01:00    *-->
+<!--*    on 2020-03-31T11:53:47+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,17 +12,64 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="assemblage-like"><p>La seguente figura <figure class="figure-like"><div class="image-box" style="width: 85%; margin-left: 7.5%; margin-right: 7.5%;"><img src="images/armonico_semplice.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">3.2.5.</span> </figcaption></figure> ottenuta con le istruzioni MATLAB <figure class="figure-like"><pre class="console"><b>Edef(t) = 1/2*om^2*m*u(t)^2;
-Ekin(t) = 1/2*m*diff(u,t)^2;
-
-dd=Edef(tt);
-kk=Ekin(tt);
-
-scale = 5*u0 / (Edef(0)+Ekin(0));
-plot(tt,uu,'k',tt,dd*scale,'r',tt,kk*scale,'b','LineWidth',2)
-legend('spost.','en. def.','en. cinet.')
-</b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">3.2.6.</span> </figcaption></figure> evidenzia in forma grafica la continua trasformazione dell'energia di deformazione della molla in energia cinetica del corpo e viceversa. Energia di deformazione (colore rosso) che oscilla fra lo zero fra il valore massimo che si ha quando il valore assoluto dello spostamento (colore nero) è massimo, allo stesso istante la velocità è nulla. Al contrario l'energia cinematica (colore blu) è massima quando il valore assoluto dello velocità è massima, quando allo stesso istante lo spostamento è nullo.</p></article><span class="incontext"><a href="uniaxial_sec_elasticity_chap_it.html#assemblage-18">in-context</a></span>
+<article class="assemblage-like"><p><figure class="figure-like"><table>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines">solido teso</td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines">solido inflesso</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(\sigma_{33}\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(\kappa\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(\kappa\,X_2\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(\varepsilon_{11}\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(-\nu\kappa/E\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(-\nu\kappa\,X_2/E\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(\varepsilon_{22}\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(-\nu\kappa/E\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(-\nu\kappa\,X_2/E\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(\varepsilon_{33}\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(\kappa/E\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(\kappa\,X_2/E\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(u_{1}\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(-\nu\kappa\,X_1/E\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(-\nu\kappa\,X_1X_2/E\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(u_{2}\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(-\nu\kappa\,X_2/E\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(-\kappa\left[X_3^2 +\nu\left(X_2^2 - X_1^2 \right)\right] /(2E)\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(u_{3}\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(\kappa\,X_3/E\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(\kappa\,X_2X_3/E\)</td>
+</tr>
+</table>
+<figcaption><span class="type">Tabella</span> <span class="codenumber">3.4.6.</span> </figcaption></figure></p></article><span class="incontext"><a href="problem_sec_elasticity_chap_it.html#assemblage-18">in-context</a></span>
 </body>
 </html>

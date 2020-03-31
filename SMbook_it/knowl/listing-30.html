@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:08+01:00    *-->
+<!--*    on 2020-03-31T11:53:47+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,16 +12,10 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<figure class="figure-like"><pre class="console"><b>Edef(t) = 1/2*om^2*m*u(t)^2;
-Ekin(t) = 1/2*m*diff(u,t)^2;
-
-dd=Edef(tt);
-kk=Ekin(tt);
-
-scale = 5*u0 / (Edef(0)+Ekin(0));
-plot(tt,uu,'k',tt,dd*scale,'r',tt,kk*scale,'b','LineWidth',2)
-legend('spost.','en. def.','en. cinet.')
+<figure class="figure-like"><pre class="console"><b>syms u(x) EA;
+ode = EA*diff(u,x,2) == 0
+dsolve(ode)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">3.2.6.</span> </figcaption></figure><span class="incontext"><a href="uniaxial_sec_elasticity_chap_it.html#listing-30">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">3.7.2.</span> </figcaption></figure><span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#listing-30">in-context</a></span>
 </body>
 </html>

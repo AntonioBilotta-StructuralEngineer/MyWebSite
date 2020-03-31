@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:08+01:00    *-->
+<!--*    on 2020-03-31T11:53:47+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,64 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Analizzando il problema nel piano \((\vec{e}_1,\vec{e}_2)\) si calcoli quanto segue: tensioni principali e direzioni principali; il tensore della tensione rispetto ad un riferimento inclinato di 30\(^o\) rispetto alle direzioni principali.</p>
-<span class="incontext"><a href="exercises_sec_elasticity_chap_it.html#p-353">in-context</a></span>
+<p>Il generico tensore di rotazione ha una rappresentazione del tipo, si veda il <a data-knowl="./knowl/rotation_remark.html" title="Commento 1.6.2: tensori di rotazione">Commento 1.6.2</a>,</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{R} =
+\left[\begin{array}{cc}
+\cos{\alpha} \amp -\sin{\alpha} \\
+\sin{\alpha} \amp \cos{\alpha}
+\end{array}\right]\,,
+\end{equation*}
+</div>
+<p>espressione non lineare per la presenza delle funzioni trigonometriche. Ma si è anche visto che nel caso di spostamenti infinitesimi, si veda l'<a data-knowl="./knowl/small_rotations_insight.html" title="Approfondimento 1.9.3: rotazioni infinitesime">Approfondimento 1.9.3</a>, il tensore di rotazione assume la seguente espressione</p>
+<div class="displaymath">
+\begin{equation*}
+\tens{R} \approx \tens{I} + \text{skew}\tens{\nabla u}\,,
+\end{equation*}
+</div>
+<p>dove</p>
+<div class="displaymath">
+\begin{equation*}
+\text{skew}\mat{\nabla u} \approx
+\left[\begin{array}{cc}
+0 \amp -\alpha \\
+\alpha \amp 0 
+\end{array}\right]\,.
+\end{equation*}
+</div>
+<p>Pertanto, nel caso di spostamenti infinitesimi, la relazione <a data-knowl="./knowl/rigid_u_eq.html" title="Equazione 4.1.3">(4.1.3)</a> diventa</p>
+<div class="displaymath">
+\begin{align*}
+\vec{u} \amp = \vec{u}_o + \left(\tens{R} - \tens{I}\right)\left(\vec{X}-\vec{X}_o\right)\\
+\amp = \vec{u}_o + \left(\tens{I} + \text{skew}\tens{\nabla u} - \tens{I}\right)\left(\vec{X}-\vec{X}_o\right)\\
+\amp = \vec{u}_o + \text{skew}\tens{\nabla u}\,\left(\vec{X}-\vec{X}_o\right)\,,
+\end{align*}
+</div>
+<p>e quindi</p>
+<div class="displaymath">
+\begin{equation}
+\vec{u} = \vec{u}_o + \text{skew}\tens{\nabla u}\,\left(\vec{X}-\vec{X}_o\right)\,.\tag{4.1.4}
+\end{equation}
+</div>
+<p>La rapresentazione per componenti fornisce</p>
+<div class="displaymath">
+\begin{equation}
+\left[\begin{array}{c}
+u_1 \\ u_2
+\end{array}\right] =
+\left[\begin{array}{c}
+{u_1}_o \\ {u_2}_o
+\end{array}\right] +
+\left[\begin{array}{cc}
+0 \amp -\alpha \\
+\alpha \amp 0 
+\end{array}\right]
+\left[\begin{array}{c}
+\left(X_1 - {X_1}_o\right) \\ \left(X_2 - {X_2}_o\right)
+\end{array}\right]\,.\tag{4.1.5}
+\end{equation}
+</div>
+<span class="incontext"><a href="description_sec_rigid_body_kinematics_chap_it.html#p-353">in-context</a></span>
 </body>
 </html>

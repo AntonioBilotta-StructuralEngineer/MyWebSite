@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:09+01:00    *-->
+<!--*    on 2020-03-31T11:53:48+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,18 +13,15 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Per il calcolo del rango della matrice statica si possono utilizzare le seguenti istruzioni MATLAB. <figure class="figure-like"><pre class="console"><b>syms l
-B = [
-1 0 1 0 0 0;
-0 1 0 1 0 0;
-0 0 0 2*l 0 0;
-0 0 -1 0 1 0;
-0 0 0 -1 0 1;
-0 0 l 0 0 2*l
-]
-rango = rank(B)
-</b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">5.6.7.</span> </figcaption></figure></p>
-<span class="incontext"><a href="analysis_examples_sec_rigid_body_statics_chap_it.html#p-451">in-context</a></span>
+<p>Lo schema riporta il caso di una trave di cui sono noti i valori delle componenti di sollecitazione all'estremo \(x=0\) ed è soggetta a carichi ripartiti costanti. In tal caso gli integrali generali <a data-knowl="./knowl/general_N_eq.html" title="Equazione 5.8.10">(5.8.10)</a>, <a data-knowl="./knowl/general_T_eq.html" title="Equazione 5.8.11">(5.8.11)</a> e <a data-knowl="./knowl/general_M_eq.html" title="Equazione 5.8.12">(5.8.12)</a> assumono le seguenti espressioni</p>
+<div class="displaymath">
+\begin{align}
+N(x) \amp = -p\,x + N(0) \,,\tag{5.8.13}\\
+T(x) \amp = -q\,x + T(0) \,,\tag{5.8.14}\\
+M(x) \amp = -q \frac{x^2}{2} + T(0)\,x + M(0) \,.\tag{5.8.15}
+\end{align}
+</div>
+<p>Espressioni che evidenziano un andamento lineare per sforzo normale e taglio e parabolico per il momento flettente.</p>
+<span class="incontext"><a href="indefinte_sec_rigid_body_statics_chap_it.html#p-451">in-context</a></span>
 </body>
 </html>

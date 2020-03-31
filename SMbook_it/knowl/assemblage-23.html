@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:08+01:00    *-->
+<!--*    on 2020-03-31T11:53:47+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,63 +12,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="assemblage-like"><ul class="disc">
-<li>Carichi<div class="displaymath">
-\begin{equation*}
-\func{p}{x}\quad H_0 \quad H_l
-\end{equation*}
-</div>
-</li>
-<li>Incognite<div class="displaymath">
-\begin{equation*}
-\func{u}{x}\quad\func{\varepsilon}{x}\quad\func{N}{x}
-\end{equation*}
-</div>
-</li>
-<li>Lavoro interno<div class="displaymath">
-\begin{equation}
-L_i = \int_{l} N \varepsilon \,dx\,.\tag{3.5.12}
-\end{equation}
-</div>
-</li>
-<li>Lavoro esterno<div class="displaymath">
-\begin{equation}
-L_e = \int_{l} \func{p}{x}\,\func{u}{x}\, dx + H_{0} \,\func{u}{0} +  H_{l} \,\func{u}{l}\,.\tag{3.5.13}
-\end{equation}
-</div>
-</li>
-<li>Legame spostamento-deformazione<div class="displaymath">
-\begin{equation}
-\varepsilon = \frac{du}{dx}\tag{3.5.14}
-\end{equation}
-</div>
-</li>
-<li>Legame elastico<div class="displaymath">
-\begin{equation}
-N = EA\,\varepsilon\tag{3.5.15}
-\end{equation}
-</div>
-</li>
-<li>Equazioni di equilibrio<div class="displaymath">
-\begin{equation}
-\frac{dN}{d x} + p = 0\tag{3.5.16}
-\end{equation}
-</div>
-</li>
-<li>Eventuali condizioni al contorno di tipo statico<div class="displaymath">
-\begin{align}
-\func{N}{0} \amp=  -H_{0}\tag{3.5.17}\\
-\func{N}{l} \amp=  H_{l}\tag{3.5.18}
-\end{align}
-</div>
-</li>
-<li>Eventuali condizioni al contorno di tipo cinematico<div class="displaymath">
-\begin{align}
-\func{u}{0} \amp=  \bar{u}_{0}\tag{3.5.19}\\
-\func{u}{l} \amp=  \bar{u}_{l}\tag{3.5.20}
-\end{align}
-</div>
-</li>
-</ul></article><span class="incontext"><a href="stretched_beam_sec_elasticity_chap_it.html#assemblage-23">in-context</a></span>
+<article class="assemblage-like"><p>Seguono le istruzione MATLAB per il calcolo della soluzione \(\func{u}{x}\text{.}\) <figure class="figure-like"><pre class="console"><b>syms u(x) EA p l;
+ode = EA*diff(u,x,2) + p*sin(2*pi*x/l) == 0;
+cond1 = u(0) == 0;
+cond2 = u(l) == 0;
+conds = [cond1 cond2];
+sol = dsolve(ode,conds)
+N = EA*diff(sol,x)
+</b></pre>
+<figcaption><span class="type">Listato</span> <span class="codenumber">3.7.8.</span> </figcaption></figure></p></article><span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#assemblage-23">in-context</a></span>
 </body>
 </html>

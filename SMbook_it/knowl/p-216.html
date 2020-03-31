@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:07+01:00    *-->
+<!--*    on 2020-03-31T11:53:46+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,35 +13,18 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Anche in questo caso, come già discusso nel capitolo dedicato alla cinematica, la soluzione del problema agli autovalori richiede la soluzione di una equazione cubica esprimibile come segue</p>
+<p>Si consideri lo stato tensionale definito come segue</p>
 <div class="displaymath">
 \begin{equation*}
--\sigma^3 + \func{I_1}{\tens{\sigma}} \sigma^2 - \func{I_2}{\tens{\sigma}} \sigma + \func{I_3}{\tens{\sigma}} = 0\,,
+\mat{\sigma} = \left[\begin{array}{ccc}
+5x_2x_3 \amp 3x_2^2 \amp 0 \\
+3x_2^2 \amp 0 \amp -x_1 \\
+0 \amp -x_1 \amp 0
+\end{array}
+\right]\,.
 \end{equation*}
 </div>
-<p>dove compaiono gli invarianti del tensore \(\tens{\sigma}\text{,}\) ovvero le quantità che sono indipendenti dal sistema di riferimento rispetto al quale viene rappresentato \(\tens{\sigma}\text{.}\) Gli invarianti di \(\tens{\sigma}\) sono calcolabili con le seguenti coppie di espressioni, dove ogni coppia contiene la formula da utilizzare nel caso in cui il tensore \(\tens{\sigma}\) sia espresso rispetto alle direzioni principali e la formula da utilizzare nel caso generico.</p>
-<ul class="disc">
-<li>
-<em class="emphasis">Primo invariante</em><div class="displaymath">
-\begin{equation}
-\func{I_1}{\tens{\sigma}} = \sigma_1 + \sigma_2 + \sigma_3 = \trace{\tens{\sigma}}\,,\tag{2.4.4}
-\end{equation}
-</div>dove compare la <em class="emphasis">traccia</em> del tensore ovvero la somma dei coefficienti appartenenti alla diagonale principale.</li>
-<li>
-<em class="emphasis">Secondo invariante</em><div class="displaymath">
-\begin{equation}
-\func{I_2}{\tens{\sigma}} = \sigma_1\, \sigma_2 + \sigma_2\, \sigma_3 + \sigma_3\, \sigma_1 = \frac{1}{2}\left[(\trace{\tens{\sigma}})^2 - \trace{\tens{\sigma}^2}\right]\,.\tag{2.4.5}
-\end{equation}
-</div>
-</li>
-<li>
-<em class="emphasis">Terzo invariante</em><div class="displaymath">
-\begin{equation}
-\func{I_3}{\tens{\sigma}} = \sigma_1\, \sigma_2\, \sigma_3 = \det{\tens{\sigma}}\,.\tag{2.4.6}
-\end{equation}
-</div>
-</li>
-</ul>
-<span class="incontext"><a href="stress_analysis_sec_stress_chap_it.html#p-216">in-context</a></span>
+<p>Si calcolino le componenti del vettore di trazione nel punto di coordinate \((1/2, \sqrt{3}/2, -1)\) sulla superficie di equazione \(x_1^2 +x_2^2 + x_3=0\text{.}\) <em class="emphasis">Suggerimento</em>: la normale ad una superficie si ottiene calcolandone il gradiente.</p>
+<span class="incontext"><a href="exercises_sec_stress_chap_it.html#p-216">in-context</a></span>
 </body>
 </html>

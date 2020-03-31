@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:08+01:00    *-->
+<!--*    on 2020-03-31T11:53:47+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,35 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Nel caso del solido prismatico semplicemente teso l'asse della trave si deforma come indicato in Figura, ovvero subisce un semplice allungamento o accorciamento. In Figura viene anche evidenziata la notazione che correntemente si utilizza per tale modello monodimensionale.</p>
-<span class="incontext"><a href="stretched_beam_sec_elasticity_chap_it.html#p-310">in-context</a></span>
+<p>Per il nostro modello di trave inflessa il principio dei lavori è formulabile come segue</p>
+<div class="displaymath">
+\begin{equation}
+\delta L_i =  \delta L_e\,,\quad \forall\,\delta w\,.\tag{3.6.12}
+\end{equation}
+</div>
+<p>Dove</p>
+<div class="displaymath">
+\begin{equation}
+\delta L_i = \int_{l} M \delta\chi \,dx\,, \quad \left(\delta\chi=- \frac{d^2 \delta w}{dx^2}\right)\tag{3.6.13}
+\end{equation}
+</div>
+<p>e</p>
+<div class="displaymath">
+\begin{equation}
+\begin{split}
+\delta L_e = \int_{l} \func{q}{x}\,\func{\delta w}{x}\, dx +\amp \\ + V_{0} \,\func{\delta w}{0} +  V_{l} \,\func{\delta w}{l}\amp - \mathcal{M}_{0} \,\func{\frac{d\delta w}{dx}}{0} -  \mathcal{M}_{l} \,\func{\frac{d\delta w}{dx}}{l}\,.
+\end{split}\tag{3.6.14}
+\end{equation}
+</div>
+<p>A questo punto occorre applicare due volte l'integrazione per parti al lavoro interno al fine di estrarre le equazioni di equilibrio e le condizioni al contorno di tipo statico. La doppia integrazione per parti fornisce</p>
+<div class="displaymath">
+\begin{align*}
+\delta L_i \amp = \int_{l} M  \left(- \frac{d^2 \delta w}{dx^2}\right) \,dx \\
+\amp = \left[-M \frac{d \delta w}{dx} \right]_0^l + \int_{l} \frac{d M}{dx}  \frac{d \delta w}{dx} \,dx \\
+\amp = \left[-M \frac{d \delta w}{dx} \right]_0^l + \left[\frac{d M}{dx} \delta w\right]_0^l - \int_{l} \frac{d^2 M}{dx^2}  \delta w \,dx \\
+\amp = -\func{M}{l} \func{\frac{d \delta w}{dx}}{l} + \func{M}{0} \func{\frac{d \delta w}{dx}}{0}  + \func{\frac{d M}{dx}}{l}\func{\delta w}{l} - \func{\frac{d M}{dx}}{0}  \func{\delta w}{0} - \int_{l} \frac{d^2 M}{dx^2}  \delta w \,dx\,. 
+\end{align*}
+</div>
+<span class="incontext"><a href="bent_beam_sec_elasticity_chap_it.html#p-310">in-context</a></span>
 </body>
 </html>

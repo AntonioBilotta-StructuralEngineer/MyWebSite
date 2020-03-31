@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:09+01:00    *-->
+<!--*    on 2020-03-31T11:53:48+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,18 +13,38 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Anche per il bipendolo se l'asse è orizzontale solo \(H\) può essere diversa da zero:</p>
+<p>Il sistema è costituito da due corpi (\(n=6\)), consentendo la scrittura di due gruppi di equazioni: le equazioni di equilibrio per il corpo \(AB\) (polo in \(A\))</p>
 <div class="displaymath">
-\begin{equation}
-H \neq 0 \,, \quad V = 0 \,,\quad \mathcal{M} \neq 0\,.\tag{5.3.10}
-\end{equation}
+\begin{align*}
+H_A + H_B \amp = 0\,,\\
+V_A + V_B - F \amp = 0\,,\\
+V_{B} 2l - F l \amp = 0\,,
+\end{align*}
 </div>
-<p>e nel caso di asse verticale invece</p>
+<p>e quelle per il corpo \(BC\) (polo in \(D\))</p>
 <div class="displaymath">
-\begin{equation}
-H = 0 \,, \quad V \neq 0 \,,\quad \mathcal{M} \neq 0\,.\tag{5.3.11}
-\end{equation}
+\begin{align*}
+H_C - H_B + F \amp = 0\,,\\
+V_C - V_B \amp = 0\,,\\
+H_{B} l + V_C 2l \amp = 0\,.
+\end{align*}
 </div>
-<span class="incontext"><a href="constraints_sec_rigid_body_statics_chap_it.html#p-432">in-context</a></span>
+<p>Equazioni riscrivibili nella seguente forma matriciale</p>
+<div class="displaymath">
+\begin{equation*}
+\underbrace{\left[\begin{array}{ccccc}
+1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 2l &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; -1 &amp; 0 &amp; 1 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; -1 &amp; 0 &amp; 1\\
+0 &amp; 0 &amp; l &amp; 0 &amp; 0 &amp; 2l
+\end{array}\right]}_{\mat{B}}
+\underbrace{\left[\begin{array}{c} H_A \\ V_A \\ H_B \\ V_B \\ H_C \\ V_C  \end{array}\right]}_{\vec{r}} +
+\underbrace{\left[\begin{array}{c} 0 \\ -F \\ -Fl \\ F \\ 0 \\ 0 \end{array}\right]}_{\vec{f}} =
+\left[\begin{array}{c} 0 \\ 0 \\ 0 \\ 0 \\ 0 \\ 0 \end{array}\right]\,.
+\end{equation*}
+</div>
+<span class="incontext"><a href="analysis_examples_sec_rigid_body_statics_chap_it.html#p-432">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:09+01:00    *-->
+<!--*    on 2020-03-31T11:53:48+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,38 +13,40 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Il sistema è costituito da due corpi (\(n=6\)), consentendo la scrittura di due gruppi di equazioni: le equazioni di equilibrio per il corpo \(AB\) (polo in \(A\))</p>
+<p>Per l'assenza di carichi ripartiti gli integrali generali forniscono</p>
 <div class="displaymath">
 \begin{align*}
-H_A + H_B \amp = 0\,,\\
-V_A + V_B - F \amp = 0\,,\\
-V_{B} 2l - F l \amp = 0\,,
+N(x) \amp =  a \,,\\
+T(x) \amp =  b \,,\\
+M(x) \amp =  b\,x + c \,.
 \end{align*}
 </div>
-<p>e quelle per il corpo \(BC\) (polo in \(D\))</p>
-<div class="displaymath">
-\begin{align*}
-H_C - H_B + F \amp = 0\,,\\
-V_C - V_B \amp = 0\,,\\
-H_{B} l + V_C 2l \amp = 0\,.
-\end{align*}
-</div>
-<p>Equazioni riscrivibili nella seguente forma matriciale</p>
+<p>Quindi si ha un andamento constante per \(N\) e \(T\) e lineare per \(M\text{.}\) Imponendo le condizioni al contorno</p>
 <div class="displaymath">
 \begin{equation*}
-\underbrace{\left[\begin{array}{ccccc}
-1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0\\
-0 &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 0\\
-0 &amp; 0 &amp; 0 &amp; 2l &amp; 0 &amp; 0\\
-0 &amp; 0 &amp; -1 &amp; 0 &amp; 1 &amp; 0\\
-0 &amp; 0 &amp; 0 &amp; -1 &amp; 0 &amp; 1\\
-0 &amp; 0 &amp; l &amp; 0 &amp; 0 &amp; 2l
-\end{array}\right]}_{\mat{B}}
-\underbrace{\left[\begin{array}{c} H_A \\ V_A \\ H_B \\ V_B \\ H_C \\ V_C  \end{array}\right]}_{\vec{r}} +
-\underbrace{\left[\begin{array}{c} 0 \\ -F \\ -Fl \\ F \\ 0 \\ 0 \end{array}\right]}_{\vec{f}} =
-\left[\begin{array}{c} 0 \\ 0 \\ 0 \\ 0 \\ 0 \\ 0 \end{array}\right]\,.
+N(0) = F\,,\quad T(0) = F\,, \quad M(0) = -Fl\,,
 \end{equation*}
 </div>
-<span class="incontext"><a href="analysis_examples_sec_rigid_body_statics_chap_it.html#p-450">in-context</a></span>
+<p>si ottiene</p>
+<div class="displaymath">
+\begin{equation*}
+a = F\,,\quad b = F\,, \quad c = -Fl\,.
+\end{equation*}
+</div>
+<p>Quindi l'espressione analitica delle componenti di sollecitazione diventa</p>
+<div class="displaymath">
+\begin{align*}
+N(x) \amp =  F \,,\\
+T(x) \amp =  F \,,\\
+M(x) \amp =  F\,x - Fl \,.
+\end{align*}
+</div>
+<p>Si sarebbe ottenuto lo stesso risultato utilizzando le condizioni al contorno</p>
+<div class="displaymath">
+\begin{equation*}
+N(l) = F\,,\quad T(l) = F\,, \quad M(l) = 0\,.
+\end{equation*}
+</div>
+<span class="incontext"><a href="indefinte_sec_rigid_body_statics_chap_it.html#p-450">in-context</a></span>
 </body>
 </html>

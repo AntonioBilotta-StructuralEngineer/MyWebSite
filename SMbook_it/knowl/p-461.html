@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:09+01:00    *-->
+<!--*    on 2020-03-31T11:53:48+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,41 +13,12 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Nel seguito vengono riportate le istruzioni MATLAB per il calcolo della risultante e del baricentro per alcune tipologie di carico ripartito. <figure class="figure-like"><pre class="console"><b>% carico ripartito costante
-syms q l x;
-carico(x, q) = q;
-np = 100;
-xv = 0:1/np:1;
-qv = carico(xv, 1);
-plot(xv,qv,'r','LineWidth',2)
-
-
-Rq = int(carico(x, q), x, 0, l)
-xq = int(carico(x, q)*x, x, 0, l)/Rq
-</b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">5.7.7.</span> </figcaption></figure> <figure class="figure-like"><pre class="console"><b>% carico ripartito lineare
-syms q l x;
-carico(x, q, l) = q/l*x;
-np = 100;
-xv = 0:1/np:1;
-qv = carico(xv, 1, 1);
-plot(xv,qv,'r','LineWidth',2)
-
-Rq = int(carico(x, q, l), x, 0, l)
-xq = int(carico(x, q, l)*x, x, 0, l)/Rq
-</b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">5.7.8.</span> </figcaption></figure> <figure class="figure-like"><pre class="console"><b>% carico ripartito parabolico
-syms q l x;
-carico(x, q, l) = q/l^2*x^2;
-np = 100;
-xv = 0:1/np:1;
-qv = carico(xv, 1, 1);
-plot(xv,qv,'r','LineWidth',2)
-
-Rq = int(carico(x, q, l), x, 0, l)
-xq = int(carico(x, q, l)*x, x, 0, l)/Rq
-</b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">5.7.9.</span> </figcaption></figure></p>
-<span class="incontext"><a href="sollecitazioni_sec_rigid_body_statics_chap_it.html#p-461">in-context</a></span>
+<p>Informazione utilizzabile nella scrittura degli integrali generali <a data-knowl="./knowl/general_const_N_eq.html" title="Equazione 5.8.13">(5.8.13)</a>, <a data-knowl="./knowl/general_const_T_eq.html" title="Equazione 5.8.14">(5.8.14)</a>, <a data-knowl="./knowl/general_const_M_eq.html" title="Equazione 5.8.15">(5.8.15)</a>, ed ottenere la seguente espressione delle sollecitazioni lungo l'asse della trave.</p>
+<div class="displaymath">
+\begin{equation*}
+N(x) = 0\,,\quad T(x) = -q\,x + ql \,,\quad  M(x) = -ql^2/2 + ql\,x - q\,x^2/2 \,.
+\end{equation*}
+</div>
+<span class="incontext"><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html#p-461">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:07+01:00    *-->
+<!--*    on 2020-03-31T11:53:45+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,75 +13,58 @@
 </head>
 <body>
 <article class="remark-like"><h6 class="heading">
-<span class="type">Approfondimento</span> <span class="codenumber">1.7.7</span>. <span class="title">il polinomio caratteristico.</span>
+<span class="type">Approfondimento</span> <span class="codenumber">1.8.3</span>. <span class="title">interpretazione delle componenti del tensore \(\tens{C}\).</span>
 </h6>
-<p>La valutazione degli autovalori ed autovettori associati al tensore \(\tens{U}\) passa attraverso la soluzione della seguente equazione cubica</p>
+<p>La generica componente del tensore \(\tens{C}\) è esprimibile come segue</p>
 <div class="displaymath">
 \begin{equation*}
--\lambda^3 + \func{I_1}{\tens{U}} \lambda^2 - \func{I_2}{\tens{U}} \lambda + \func{I_3}{\tens{U}} = 0\,,
+C_{ij} = \vec{e}_i \cdot \tens{C}\vec{e}_j\,.
 \end{equation*}
 </div>
-<p>dove compare il polinomio caratteristico il quale dipendende da tre quantità che prendono il nome di <em class="emphasis">invarianti</em> del tensore \(\tens{U}\text{.}\) Il termine invariante sta ad indicare che tali valori non cambiano al variare del sistema di riferimento rispetto al quale viene rappresentato \(\tens{U}\text{.}\) Si riportano le espressioni da utilizzare per il calcolo degli invarianti nel caso il tensore \(\tens{U}\) sia espresso alle direzioni principali e nel caso generico.</p>
-<ul class="disc">
-<li>
-<em class="emphasis">Primo invariante</em><div class="displaymath">
+<p>Si consideri quindi prima il caso \(i=j\) relativo alle componenti del tensore situate sulla diagonale principale. Effettuando i seguenti passaggi</p>
+<div class="displaymath">
 \begin{equation}
-\func{I_1}{\tens{U}} = \lambda_1 + \lambda_2 + \lambda_3 = \trace{\tens{U}}\,,\tag{1.7.8}
-\end{equation}
-</div>dove compare la <em class="emphasis">traccia</em> del tensore ovvero la somma dei coefficienti appartenenti alla diagonale principale.</li>
-<li>
-<em class="emphasis">Secondo invariante</em><div class="displaymath">
-\begin{equation}
-\func{I_2}{\tens{U}} = \lambda_1\, \lambda_2 + \lambda_2\, \lambda_3 + \lambda_3\, \lambda_1 = \frac{1}{2}\left[(\trace{\tens{U}})^2 - \trace{\tens{U}^2}\right]\,.\tag{1.7.9}
+C_{ii} = \vec{e}_i \cdot \tens{C}\vec{e}_i = \vec{e}_i \cdot \transp{\tens{F}}\tens{F}\vec{e}_i = \tens{F}\vec{e}_i \cdot \tens{F}\vec{e}_i = \| \tens{F}\vec{e}_i\|^2\,,\tag{1.8.3}
 \end{equation}
 </div>
-</li>
-<li>
-<em class="emphasis">Terzo invariante</em><div class="displaymath">
+<p>si può constatare che la componente \(ii\) sulla diagonale pricipale rappresenta il quadrato della norma del vettore trasformato. Dal momento che il vettore \(\vec{e}_i\) è di lunghezza unitaria, la componente \(C_{ii}\) è quindi il quadrato dell'allungamento lungo la direzione \(\vec{e}_i\text{.}\) Quindi si può stabilire quanto segue</p>
+<div class="displaymath">
 \begin{equation}
-\func{I_3}{\tens{U}} = \lambda_1\, \lambda_2\, \lambda_3 = \det{\tens{U}}\,.\tag{1.7.10}
+C_{ii} = \vec{e}_i \cdot \tens{C}\vec{e}_i = \func{\lambda}{\vec{e}_i}^2\,,\tag{1.8.4}
 \end{equation}
 </div>
-</li>
-</ul>
-<article class="assemblage-like"><p>Si verifichi che gli invarianti calcolati su \(\tens{U}\) nella forma diagonale</p>
+<p>dove con \(\func{\lambda}{\vec{e}_i}\) si è indicato l'<em class="emphasis">allungamento lungo la direzione \(\vec{e}_i\)</em>. Ovviamente nel caso di forma diagonale del tensore \(\tens{C}\) tale allungamento coincide con il corrispondente autovalore di \(\tens{U}\text{.}\)</p>
+<p>Per le componenti fuori dalla diagonale principale si ottiene</p>
 <div class="displaymath">
 \begin{equation*}
-\mat{U} =
-\left[\begin{array}{ccc}
-2 \amp 0 \amp 0\\
-0 \amp 5 \amp 0\\
-0 \amp 0 \amp 7\\
-\end{array}\right]\,,
+C_{ij} = \vec{e}_i \cdot \tens{C}\vec{e}_j = \vec{e}_i \cdot \transp{\tens{F}}\tens{F}\vec{e}_j = \tens{F}\vec{e}_i \cdot \tens{F}\vec{e}_j = \cos{\func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}} \| \tens{F}\vec{e}_i\|\, \| \tens{F}\vec{e}_j\|\,,
 \end{equation*}
 </div>
-<p>e nella forma</p>
+<p>dove \(\func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}\) rappresenta l'angolo formato dalla trasformata delle due direzioni \(\vec{e}_i\) e \(\vec{e}_j\text{.}\) Tale relazione, utilizzando la <a data-knowl="./knowl/Cii_pre_eq.html" title="Equazione 1.8.3">(1.8.3)</a>, diventa</p>
 <div class="displaymath">
 \begin{equation*}
-\mat{U} =
-\left[\begin{array}{ccc}
-5.2500 \amp  -1.0607 \amp  -1.7500 \\
--1.0607 \amp   3.5000 \amp  -1.0607 \\
--1.7500 \amp  -1.0607  \amp  5.2500
-\end{array}\right]\,,
+C_{ij} = \cos{\func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}} \sqrt{\vec{e}_i \cdot \tens{C}\vec{e}_i} \, \sqrt{\vec{e}_j \cdot \tens{C}\vec{e}_j}\,,
 \end{equation*}
 </div>
-<p>non cambiano.</p>
-<p>Si riportano le istruzioni MATLAB utilizzabili per la verifica.</p>
-<p><figure class="figure-like"><pre class="console"><b>lam1 = 2;
-lam2 = 5;
-lam3 = 7;
-I1 = lam1 + lam2 + lam3
-I2 = lam1*lam2 + lam2*lam3 + lam3*lam1
-I3 = lam1*lam2*lam3
-U = ...
-[5.2500 -1.0607 -1.7500; ...
--1.0607 3.5000 -1.0607; ...
--1.7500 -1.0607 5.2500];
-I1 = trace(U)
-I2 = 1/2*(trace(U)^2 - trace(U*U))
-I3 = det(U)
-</b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.7.8.</span> </figcaption></figure></p></article></article><span class="incontext"><a href="principal_directions_sec_strain_chap_it.html#insight-2">in-context</a></span>
+<p>risultato che mostra come la generica componente \(C_{ij}\) dipenda, oltre che dagli allungamenti lungo le direzioni \(\vec{e}_i\) ed \(\vec{e}_j\text{,}\) principalmente dall'angolo formato dai trasformati dei vettori. Tale dipendenza, introducendo l'angolo</p>
+<div class="displaymath">
+\begin{equation}
+\func{\gamma}{\vec{e}_i,\vec{e}_j} = \func{\Theta}{\vec{e}_i,\vec{e}_j} - \func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j} = \frac{\pi}{2} - \func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}\,,\tag{1.8.5}
+\end{equation}
+</div>
+<p>ovvero l'angolo dato dalla differenza fra gli angoli formati da \(\vec{e}_i\) ed \(\vec{e}_j\) prima e dopo la trasformazione, può essere riformulata come seguey</p>
+<div class="displaymath">
+\begin{align*}
+C_{ij} \amp = \cos{\left(\frac{\pi}{2} - \func{\gamma}{\vec{e}_i,\vec{e}_j}\right)} \sqrt{\vec{e}_i \cdot \tens{C}\vec{e}_i} \, \sqrt{\vec{e}_j \cdot \tens{C}\vec{e}_j}\,,\\
+\amp = \sin{\func{\gamma}{\vec{e}_i,\vec{e}_j}} \sqrt{\vec{e}_i \cdot \tens{C}\vec{e}_i} \, \sqrt{\vec{e}_j \cdot \tens{C}\vec{e}_j}\,,
+\end{align*}
+</div>
+<p>da cui, per la <a data-knowl="./knowl/Cii_eq.html" title="Equazione 1.8.4">(1.8.4)</a>, si ottiene</p>
+<div class="displaymath">
+\begin{equation}
+C_{ij} = \sin{\func{\gamma}{\vec{e}_i,\vec{e}_j}}\, \func{\lambda}{\vec{e}_i} \, \func{\lambda}{\vec{e}_j}\,.\tag{1.8.6}
+\end{equation}
+</div>
+<p>La quantità \(\func{\gamma}{\vec{e}_i,\vec{e}_j}\) prende il nome di <em class="emphasis">angolo di taglio</em> o, più semplicemente, <em class="emphasis">taglio</em>. Nei casi in cui \(\func{\gamma}{\vec{e}_i,\vec{e}_j}\) è nullo, ovvero l'angolo formato dalle direzioni \(\vec{e}_i\) ed \(\vec{e}_j\) non varia, la componennte fuori diagonale \(C_{ij}\) è nulla.</p></article><span class="incontext"><a href="measures_sec_strain_chap_it.html#insight-2">in-context</a></span>
 </body>
 </html>

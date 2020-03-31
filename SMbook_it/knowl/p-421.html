@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:09+01:00    *-->
+<!--*    on 2020-03-31T11:53:48+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,32 +13,19 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Data una forza \(\vec{F}\) applicata al punto di coordinate \(\vec{X}\) e dato un polo individuato dalle coordinate \(\vec{X}_o\text{,}\) è possibile valutare il momento di \(\vec{F}\) rispetto al polo scelto calcolando il seguente prodotto vettoriale</p>
+<p>Nell'analisi statica la scrittura delle equazioni di equilibrio è il passaggio fondamentale che in termini generali può essere formalizzato nel modo seguente. Si consideri un sistema caratterizzato da \(n\) condizioni di equilibrio, soggetto ad un sistema di forze assegnato e ad \(m\) componenti di reazione vincolare. Le condizioni di equilibrio possono essere formulate mediante un sistema lineare del seguente tipo</p>
 <div class="displaymath">
 \begin{equation}
-\calvec{M}_o = \left( \vec{X} - \vec{X}_o\right) \times \vec{F}\,,\tag{5.1.10}
+\sum_{j=1}^m B_{ij}  r_j + f_i = 0 \qquad (i=1 \dots n).\tag{5.5.1}
 \end{equation}
 </div>
-<p>dove \(\calvec{M}_o\) è un vettore ortogonale ad ambedue i vettori \(\left( \vec{X} - \vec{X}_o\right)\) e \(\vec{F}\) ed ha modulo</p>
+<p>Dove \(r_j\) è la generica componente di reazione vincolare (forza o coppia), \(f_i\) è la componente di forza o coppia che agisce sulla condizione di equilibrio \(i\)-esima e \(B_{ij}\) è il contributo fornito, per un valore unitario della reazione \(r_j\text{,}\) sulla condizione di equilibrio \(i\)-esimo. In termini matriciali il sistema può essere riscritto come segue:</p>
 <div class="displaymath">
 \begin{equation}
-\|\calvec{M}_o\| = \|\left( \vec{X} - \vec{X}_o\right)\| \|\vec{F}\| \sin{\theta}\,,\tag{5.1.11}
+\mat{B} \vec{r} + \vec{f} = \vec0,\tag{5.5.2}
 \end{equation}
 </div>
-<p>essendo \(\theta\) l'angolo compreso fra i due vettori. La quantità</p>
-<div class="displaymath">
-\begin{equation}
-b = \|\left( \vec{X} - \vec{X}_o\right)\| \sin{\theta}\tag{5.1.12}
-\end{equation}
-</div>
-<p>prende il nome di <em class="emphasis">braccio</em> quantità che non cambia se la forza scorre lungo la sua retta di applicazione: <figure class="figure-like"><div class="image-box" style="width: 55%; margin-left: 22.5%; margin-right: 22.5%;"><img src="images/BraccioDiUnaForza.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">5.1.3.</span> </figcaption></figure></p>
-<div class="displaymath">
-\begin{equation*}
-b = \|\left( \vec{X} - \vec{X}_o\right)\| \sin{\theta} = \|\left( \vec{X}' - \vec{X}_o\right)\| \sin{\theta'}\,.
-\end{equation*}
-</div>
-<p>Quindi \(b\) è la distanza fra il polo \(P_o\) e la retta di applicazione della forza \(\vec{F}\text{.}\) Si osserva anche che se \(\theta=0\) oppure \(\theta=\pi\text{,}\) ovvero i vettori \(\left( \vec{X} - \vec{X}_o\right)\) e \(\vec{F}\) sono paralleli, il momento \(\calvec{M}_o\) è nullo.</p>
-<span class="incontext"><a href="equilibrium_sec_rigid_body_statics_chap_it.html#p-421">in-context</a></span>
+<p>dove \(\mat{B}\text{,}\) di dimensioni \(n \times m\text{,}\) prende il nome di <em class="emphasis">matrice statica</em> del sistema, \(\vec{r}\text{,}\) di dimensione \(m \times 1\text{,}\) è il vettore che raccoglie le componenti di reazione vincolare (le incognite del sistema) e \(\vec{f}\text{,}\) di dimensione \(n \times 1\text{,}\) è il vettore delle azioni esterne assegnate.</p>
+<span class="incontext"><a href="analysis_sec_rigid_body_statics_chap_it.html#p-421">in-context</a></span>
 </body>
 </html>

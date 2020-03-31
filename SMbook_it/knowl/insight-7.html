@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:07+01:00    *-->
+<!--*    on 2020-03-31T11:53:46+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,36 +13,76 @@
 </head>
 <body>
 <article class="remark-like"><h6 class="heading">
-<span class="type">Approfondimento</span> <span class="codenumber">2.4.4</span>. <span class="title">gli invarianti della tensione.</span>
+<span class="type">Approfondimento</span> <span class="codenumber">3.2.1</span>. <span class="title">legge di Hooke.</span>
 </h6>
-<p>Anche in questo caso, come già discusso nel capitolo dedicato alla cinematica, la soluzione del problema agli autovalori richiede la soluzione di una equazione cubica esprimibile come segue</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;">
+<p>La legge di Hooke è una legge della fisica che afferma che la forza \(F\) necessaria per estendere o comprimere una molla di una quantità \(x\) scala linearmente rispetto a tale quantità, cioè</p>
+<div class="displaymath">
+\begin{equation}
+F = k\,x\,.\tag{3.2.1}
+\end{equation}
+</div>
+<p>\(k\;\left[\frac{\text{N}}{\text{m}}\right]\) prende il nome di <em class="alert">rigidezza</em> ed è un fattore costante e <em class="alert">positivo</em> caratteristico della molla, \(x\;\left[\text{m}\right]\) è l'allungamento che subisce la molla (nel caso di \(x\) negativo la molla subisce un accorciamento).</p>
+</div>
+<div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;"><figure class="figure-like"><img src="images/Hookes-law-springs.png" style="width: 100%; height: auto;" alt=""><figcaption><span class="type">Figura</span> <span class="codenumber">3.2.2.</span> </figcaption></figure></div>
+</div></div>
+<p>La legge prende il nome dal fisico britannico del XVII secolo Robert Hooke che rese pubblica per la prima volta la legge nel 1676 come un anagramma latino. Successivamente, nel 1678, pubblicò la soluzione del suo anagramma come: <em class="emphasis">ut tensio, sic vis</em> (l'estensione è proporzionale alla forza).</p>
+<p>Al fine di evidenziare il concetto di <em class="alert">energia elastica</em> immagazzinata dalla molla per effetto dell'allungamento \(x\) si consideri il seguente schema meccanico dove sono state messe in evidenza tutte le forze che agiscono (per semplicità si supponga di effetuare l'esperimento in assenza di gravità<a data-knowl="./knowl/fn-3-hidden.html" title="Nota a piè pagina 3.2.1"><sup> 1 </sup></a> e di forze dissipative) su un corpo di massa \(m\) e vincolato da una molla di rigidezza \(k\text{.}\)</p>
+<figure class="figure-like"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/simple_oscillator.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span> <span class="codenumber">3.2.3.</span> </figcaption></figure><p>A causa dello spostamento \(x\) misurato a partire dalla posizione di equilibrio, il corpo è soggetto alla forza d'inerzia \(m\,\frac{d^2 x}{dt^2}\) e alla forza elastica \(k\,x\) dirette come indicato in figura. Per l'equilibrio del sistema si ha</p>
 <div class="displaymath">
 \begin{equation*}
--\sigma^3 + \func{I_1}{\tens{\sigma}} \sigma^2 - \func{I_2}{\tens{\sigma}} \sigma + \func{I_3}{\tens{\sigma}} = 0\,,
+-m\,\frac{d^2 x}{dt^2} - k\,x = 0\,,
 \end{equation*}
 </div>
-<p>dove compaiono gli invarianti del tensore \(\tens{\sigma}\text{,}\) ovvero le quantità che sono indipendenti dal sistema di riferimento rispetto al quale viene rappresentato \(\tens{\sigma}\text{.}\) Gli invarianti di \(\tens{\sigma}\) sono calcolabili con le seguenti coppie di espressioni, dove ogni coppia contiene la formula da utilizzare nel caso in cui il tensore \(\tens{\sigma}\) sia espresso rispetto alle direzioni principali e la formula da utilizzare nel caso generico.</p>
-<ul class="disc">
-<li>
-<em class="emphasis">Primo invariante</em><div class="displaymath">
-\begin{equation}
-\func{I_1}{\tens{\sigma}} = \sigma_1 + \sigma_2 + \sigma_3 = \trace{\tens{\sigma}}\,,\tag{2.4.4}
-\end{equation}
-</div>dove compare la <em class="emphasis">traccia</em> del tensore ovvero la somma dei coefficienti appartenenti alla diagonale principale.</li>
-<li>
-<em class="emphasis">Secondo invariante</em><div class="displaymath">
-\begin{equation}
-\func{I_2}{\tens{\sigma}} = \sigma_1\, \sigma_2 + \sigma_2\, \sigma_3 + \sigma_3\, \sigma_1 = \frac{1}{2}\left[(\trace{\tens{\sigma}})^2 - \trace{\tens{\sigma}^2}\right]\,.\tag{2.4.5}
-\end{equation}
+<p>ovvero, introducendo la quantità \(\omega = \sqrt{\frac{k}{m}}\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{d^2 x}{dt^2} + \omega^2\,x = 0\,.
+\end{equation*}
 </div>
-</li>
-<li>
-<em class="emphasis">Terzo invariante</em><div class="displaymath">
-\begin{equation}
-\func{I_3}{\tens{\sigma}} = \sigma_1\, \sigma_2\, \sigma_3 = \det{\tens{\sigma}}\,.\tag{2.4.6}
-\end{equation}
+<p>L'equazione differenziale ottenuta caratterizza un sistema che, in meccanica, viene denominato <em class="emphasis">oscillatore armonico semplice</em>. La soluzione dell'equazione differenziale è descritta dalla funzione</p>
+<div class="displaymath">
+\begin{equation*}
+\func{x}{t} = \func{x}{0}\,\cos{(\omega\,t)} + \frac{1}{\omega}\func{\frac{dx}{dt}}{0}\,\sin{(\omega\,t)} \,,
+\end{equation*}
 </div>
-</li>
-</ul></article><span class="incontext"><a href="stress_analysis_sec_stress_chap_it.html#insight-7">in-context</a></span>
+<p>dove \(\func{x}{0}\) e \(\func{\frac{dx}{dt}}{0}\) rappresentano le condizioni iniziali. \(\omega\) prende il nome di pulsazione e viene misurata in \(\left[\frac{\text{rad}}{\text{s}}\right]\text{.}\)</p>
+<article class="assemblage-like"><p>A scopo esemplificativo si riportano le istruzioni MATLAB utilizzabili per il plottaggio della funzione sulla base dei seguenti dati: \(\omega = 2\pi\;\left[\frac{\text{rad}}{\text{s}}\right]\text{,}\) \(m=10\;\left[\text{kg}\right]\text{,}\) \(\func{x}{0}= 1 \; \left[\text{m}\right]\) e \(\func{\frac{dx}{dt}}{0}= 10 \; \left[\frac{\text{m}}{\text{s}}\right]\text{.}\) <figure class="figure-like"><pre class="console"><b>om = 2*pi;
+u0 = 1;
+v0 = 10;
+m = 10;
+syms t 
+u(t) = u0*cos(om*t)+v0/om*sin(om*t);
+
+tt=linspace(0,3,201);
+uu=u(tt);
+plot(tt,uu,'k','LineWidth',2)
+</b></pre>
+<figcaption><span class="type">Listato</span> <span class="codenumber">3.2.4.</span> </figcaption></figure></p></article><p>L'andamento perfettamente oscillatario della soluzione sempre rispetto agli stessi estremi viene determinato della conservazione dell'<em class="emphasis">energia potenziale totale</em></p>
+<div class="displaymath">
+\begin{equation*}
+\Pi = \underbrace{\frac{1}{2}k\,x^2}_{\text{energia elastica}} + \underbrace{\frac{1}{2}m\,\left(\frac{dx}{dt}\right)^2}_{\text{energia cinetica}}
+\end{equation*}
+</div>
+<p>data dalla somma di <em class="emphasis">energia elastica</em> e <em class="emphasis">energia cinetica</em>. L'energia potenziale totale, in assenza di fenomeni dissipativi, si mantiene sempre costante.</p>
+<article class="assemblage-like"><p>La seguente figura <figure class="figure-like"><div class="image-box" style="width: 85%; margin-left: 7.5%; margin-right: 7.5%;"><img src="images/armonico_semplice.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span> <span class="codenumber">3.2.5.</span> </figcaption></figure> ottenuta con le istruzioni MATLAB <figure class="figure-like"><pre class="console"><b>Edef(t) = 1/2*om^2*m*u(t)^2;
+Ekin(t) = 1/2*m*diff(u,t)^2;
+
+dd=Edef(tt);
+kk=Ekin(tt);
+
+scale = 5*u0 / (Edef(0)+Ekin(0));
+plot(tt,uu,'k',tt,dd*scale,'r',tt,kk*scale,'b','LineWidth',2)
+legend('spost.','en. def.','en. cinet.')
+</b></pre>
+<figcaption><span class="type">Listato</span> <span class="codenumber">3.2.6.</span> </figcaption></figure> evidenzia in forma grafica la continua trasformazione dell'energia di deformazione della molla in energia cinetica del corpo e viceversa. Energia di deformazione (colore rosso) che oscilla fra lo zero fra il valore massimo che si ha quando il valore assoluto dello spostamento (colore nero) è massimo, allo stesso istante la velocità è nulla. Al contrario l'energia cinematica (colore blu) è massima quando il valore assoluto dello velocità è massima, quando allo stesso istante lo spostamento è nullo.</p></article><p>Per concludere si osserva che l'energia elastica agisce come un potenziale per la forza elastica della molla in quanto quest'ultima può essere ottenuta per derivazione dell'energia, ovvero</p>
+<div class="displaymath">
+\begin{equation*}
+F = \frac{d}{dx}\left( \frac{1}{2}k\,x^2 \right) = k\, x\,.
+\end{equation*}
+</div></article><span class="incontext"><a href="uniaxial_sec_elasticity_chap_it.html#insight-7">in-context</a></span>
 </body>
 </html>

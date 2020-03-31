@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:07+01:00    *-->
+<!--*    on 2020-03-31T11:53:45+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,30 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>L'individuazione delle direzioni principali del tensore di deformazione consente di ottenenere una rappresentazione “intrinseca” della deformazione a cui è soggetto un generico punto del corpo. L'aggettivazione “intrenseca” si giustifica perché, come vedremo, si ottiene una rappresentazione sia più semplice dello stato deformativo ma, soprattutto, indipendente dal sistema di riferimento utilizzato.</p>
+<p>Infine è interessante osservare come l'espressione <a data-knowl="./knowl/mat_spectral_U_eq.html" title="Equazione 1.7.7">(1.7.7)</a> possa essere scritta nel modo seguente</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{U} =
+\left[\begin{array}{ccc}
+u_{11} \amp u_{12} \amp u_{13}\\
+u_{21} \amp u_{22} \amp u_{23}\\
+u_{31} \amp u_{32} \amp u_{33}
+\end{array}\right] 
+\left[\begin{array}{ccc}
+\lambda_1 \amp 0 \amp 0\\
+0 \amp \lambda_2 \amp 0\\
+0 \amp 0 \amp \lambda_3\\
+\end{array}\right]
+\transp{
+\left[\begin{array}{ccc}
+u_{11} \amp u_{12} \amp u_{13}\\
+u_{21} \amp u_{22} \amp u_{23}\\
+u_{31} \amp u_{32} \amp u_{33}
+\end{array}\right] 
+}\,,
+\end{equation*}
+</div>
+<p>che è la modalità con cui viene valuata l'espressione che assume il tensore \(\tens{U}\) quando si passa dal sistema di coordinate costitutito dalle direzioni pricipali al sistema di coordinate standard \(\vec{e}_1\text{,}\) \(\vec{e}_2\) e \(\vec{e}_3\text{.}\) La matrice utilizzata per la trasformazione viene costruita inserendo nelle colonne i vettori \(\vec{u}_{1}\text{,}\) \(\vec{u}_{2}\) e \(\vec{u}_{3}\)</p>
 <span class="incontext"><a href="principal_directions_sec_strain_chap_it.html#p-105">in-context</a></span>
 </body>
 </html>

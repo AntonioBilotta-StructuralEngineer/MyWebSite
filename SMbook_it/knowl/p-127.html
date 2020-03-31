@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:07+01:00    *-->
+<!--*    on 2020-03-31T11:53:45+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,17 +13,25 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Al fine di verificare come il tensore \(\tens{U}\) agisca in modo differente sulle direzioni principali e sulle direzioni individuate dal riferimento standard, si consideri il seguente stato piano caratterizzato dalla seguente forma diagonale di \(\tens{U}\)</p>
+<p>La generica componente del tensore \(\tens{C}\) è esprimibile come segue</p>
 <div class="displaymath">
 \begin{equation*}
-\mat{U} =
-\left[\begin{array}{cc}
-1.2\lambda \amp 0\\
-0 \amp \lambda
-\end{array}\right]\,.
+C_{ij} = \vec{e}_i \cdot \tens{C}\vec{e}_j\,.
 \end{equation*}
 </div>
-<p>Si assuma per le direzioni principali un'inclinazione di \(\pi/4\) e si applichi quindi il tensore della deformazione ai due quadrati, rappresentati nella seguente figura. Il quadrato di colore rosso ha lati allineati con il riferimento standard, il quadrato di colore blu ha invece lati allineati con le direzioni principali.</p>
-<span class="incontext"><a href="principal_directions_sec_strain_chap_it.html#p-127">in-context</a></span>
+<p>Si consideri quindi prima il caso \(i=j\) relativo alle componenti del tensore situate sulla diagonale principale. Effettuando i seguenti passaggi</p>
+<div class="displaymath">
+\begin{equation}
+C_{ii} = \vec{e}_i \cdot \tens{C}\vec{e}_i = \vec{e}_i \cdot \transp{\tens{F}}\tens{F}\vec{e}_i = \tens{F}\vec{e}_i \cdot \tens{F}\vec{e}_i = \| \tens{F}\vec{e}_i\|^2\,,\tag{1.8.3}
+\end{equation}
+</div>
+<p>si può constatare che la componente \(ii\) sulla diagonale pricipale rappresenta il quadrato della norma del vettore trasformato. Dal momento che il vettore \(\vec{e}_i\) è di lunghezza unitaria, la componente \(C_{ii}\) è quindi il quadrato dell'allungamento lungo la direzione \(\vec{e}_i\text{.}\) Quindi si può stabilire quanto segue</p>
+<div class="displaymath">
+\begin{equation}
+C_{ii} = \vec{e}_i \cdot \tens{C}\vec{e}_i = \func{\lambda}{\vec{e}_i}^2\,,\tag{1.8.4}
+\end{equation}
+</div>
+<p>dove con \(\func{\lambda}{\vec{e}_i}\) si è indicato l'<em class="emphasis">allungamento lungo la direzione \(\vec{e}_i\)</em>. Ovviamente nel caso di forma diagonale del tensore \(\tens{C}\) tale allungamento coincide con il corrispondente autovalore di \(\tens{U}\text{.}\)</p>
+<span class="incontext"><a href="measures_sec_strain_chap_it.html#p-127">in-context</a></span>
 </body>
 </html>

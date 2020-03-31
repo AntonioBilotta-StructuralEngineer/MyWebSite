@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:08+01:00    *-->
+<!--*    on 2020-03-31T11:53:47+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,20 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Le considerazioni precedenti e la necessità di affrontare ingegneristicamente problematiche strutturali riguardanti solidi che dal punto di vista geometrico sono modellabili mediante descrizioni monodimensionali o bidimensionali, hanno portato allo sviluppo di svariati modelli strutturali. Tali modelli consentono di risolvere con un grado di approssimazione accettabile diverse problematiche altrimenti non affrontabili mediante strumenti sia analitici e sia numerici.</p>
-<span class="incontext"><a href="stretched_beam_sec_elasticity_chap_it.html#p-307">in-context</a></span>
+<p>La definizione del legame elastico per il modello monodimensionale si ottiene rielaborando la <a data-knowl="./knowl/trave_inflessa_M.html" title="Equazione 3.6.8">(3.6.8)</a> come segue</p>
+<div class="displaymath">
+\begin{align*}
+M \amp=\int_{A} \sigma\,y \, dS = \int_{A} E\varepsilon \,y \,dS  =  \int_{A} E\left(- y \frac{d^2 w}{dx^2} \right)  \,y \,dS\\
+\amp= E \int_{A} y^2 \,dS \left(- \frac{d^2 w}{dx^2} \right)  = EJ\, \chi \,,
+\end{align*}
+</div>
+<p>e quindi</p>
+<div class="displaymath">
+\begin{equation}
+M = EJ\, \chi \,.\tag{3.6.10}
+\end{equation}
+</div>
+<p>Relazione che evidenzia come il coefficiente di proporzionalità che definisce il legame fra \(M\) ed \(\chi\) sia dato dal prodotto fra il modulo di Young del materiale ed il momento d'inerzia della sezione della trave, \(J =\int_{A} y^2 \,dS\text{.}\)</p>
+<span class="incontext"><a href="bent_beam_sec_elasticity_chap_it.html#p-307">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-25T11:02:07+01:00    *-->
+<!--*    on 2020-03-31T11:53:46+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,19 +13,22 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>L'interazione meccanica fra parti di un corpo o di un corpo con l'ambiente circostante viene descritta mediante forze. Si considerano due tipi forze: forze di volume, che agiscono all'interno del corpo, e forze di superficie, che sono esercitate attraverso una superficie. Per l'ipotesi di continuità, come fatto per la massa, anche per le forze si postula l'esistenza di campi vettoriali che consentono di calcolare la risultante di tutte le forze agenti sul corpo</p>
+<p>Dato un corpo soggetto a dei carichi applicati, una condizione necessaria e sufficiente affinché il corpo sia in equilibrio (soddisfacimento delle <a data-knowl="./knowl/body_equilibrium_1.html" title="Equazione 2.2.1">(2.2.1)</a>, <a data-knowl="./knowl/body_equilibrium_2.html" title="Equazione 2.2.2">(2.2.2)</a>) è che esista un campo tensiorale \(\func{\tens{\sigma}}{\vec{x}}\) tale che</p>
 <div class="displaymath">
 \begin{equation}
-\func{\vec{R}}{\body} = \int_{\body} \vec{b} \, dv + \int_{\partial\body} \vec{t} \, ds \,,\tag{2.1.4}
+\func{\vec{t}}{\vec{x}, \vec{n}} =\func{\tens{\sigma}}{\vec{x}}\,\vec{n}\,,\tag{2.3.9}
 \end{equation}
 </div>
-<p>e il momento risultante (rispetto all'origine) delle forze agenti</p>
 <div class="displaymath">
 \begin{equation}
-\func{\calvec{M}}{\body} = \int_{\body} \vec{x} \times \vec{b} \, dv + \int_{\partial\body} \vec{x} \times \vec{t} \, ds \,.\tag{2.1.5}
+\text{div}\tens{\sigma} + \vec{b} = \vec0\,,\tag{2.3.10}
 \end{equation}
 </div>
-<p>dove \(\partial\body\) denota il contorno di \(\body\) e quindi una superficie, \(\vec{b}\) e \(\vec{t}\) denotano due campi vettoriali che verranno meglio descritti nel seguito e che rappresentano, rispettivamente, una densità di forza di volume o, semplicemente, <em class="emphasis">forza di volume</em> e una densità di forza di superficie che verrà chiamata <em class="emphasis">trazione</em>.</p>
-<span class="incontext"><a href="basics_sec_stress_chap_it.html#p-187">in-context</a></span>
+<div class="displaymath">
+\begin{equation}
+\transp{\tens{\sigma}}=\tens{\sigma}\,.\tag{2.3.11}
+\end{equation}
+</div>
+<span class="incontext"><a href="stress_sec_stress_chap_it.html#p-187">in-context</a></span>
 </body>
 </html>
