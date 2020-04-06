@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:47+02:00    *-->
+<!--*    on 2020-04-06T13:39:58+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,33 +12,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="assemblage-like"><p>Le seguenti istruzioni MATLAB consentono il calcolo della soluzione \(\func{w}{x}\) e del relativo momento flettente  \(\func{M}{x}\text{.}\) <figure class="figure-like"><pre class="console"><b>syms w(x) EJ F l;
-ode = EJ*diff(w,x,4) == 0;
-D1w = diff(w,x,1);
-D2w = diff(w,x,2);
-D3w = diff(w,x,3);
-cond1 = w(0) == 0;
-cond2 = D1w(0) == 0;
-cond3 = -EJ*D3w(l) == F;
-cond4 = -EJ*D2w(l) == 0;
-conds = [cond1 cond2 cond3 cond4];
+<article class="assemblage-like"><p>Seguono le istruzione MATLAB per il calcolo della soluzione \(\func{u}{x}\text{.}\) <figure class="figure-like"><pre class="console"><b>syms u(x) EA p l;
+ode = EA*diff(u,x,2) + p*sin(2*pi*x/l) == 0;
+cond1 = u(0) == 0;
+cond2 = u(l) == 0;
+conds = [cond1 cond2];
 sol = dsolve(ode,conds)
-M = -EJ*diff(sol,x,2)
+N = EA*diff(sol,x)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">3.8.2.</span> </figcaption></figure></p>
-<p>Lo ppostamento dell'asse della trave può essere visualizzato con le seguenti istruzioni MATLAB. <figure class="figure-like"><pre class="console"><b>syms w(x);
-EJ = 1;
-F = 1;
-l = 1;
-w(x)=F/6/EJ*(-x^3+3*l*x^2);
-
-np = 100;
-Xv = 0:1/np:1;
-wv = w(Xv);
-Beam = zeros(1, np+1);
-plot(Xv,wv,'r',Xv,Beam,'k','LineWidth',2)
-set(gca, 'YDir','reverse')
-</b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">3.8.3.</span> </figcaption></figure></p></article><span class="incontext"><a href="bent_beam_applications_sec_elasticity_chap_it.html#assemblage-24">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">3.7.8.</span> </figcaption></figure></p></article><span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#assemblage-24">in-context</a></span>
 </body>
 </html>

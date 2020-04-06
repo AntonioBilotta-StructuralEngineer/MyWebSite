@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:46+02:00    *-->
+<!--*    on 2020-04-06T13:39:57+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,17 +12,10 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<figure class="figure-like"><pre class="console"><b>om = 2*pi;
-u0 = 1;
-v0 = 10;
-m = 10;
-syms t 
-u(t) = u0*cos(om*t)+v0/om*sin(om*t);
-
-tt=linspace(0,3,201);
-uu=u(tt);
-plot(tt,uu,'k','LineWidth',2)
+<figure class="figure-like"><pre class="console"><b>syms t;
+s = [0 t 0; t 0 0; 0 0 0];
+[V, D]=eig(s)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">3.2.4.</span> </figcaption></figure><span class="incontext"><a href="uniaxial_sec_elasticity_chap_it.html#listing-25">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">2.4.8.</span> </figcaption></figure><span class="incontext"><a href="stress_analysis_sec_stress_chap_it.html#listing-25">in-context</a></span>
 </body>
 </html>

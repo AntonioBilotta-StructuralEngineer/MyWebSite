@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:46+02:00    *-->
+<!--*    on 2020-04-06T13:39:57+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,30 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><iframe id="video-12" width="456" height="256" allowfullscreen="" src="https://www.youtube.com/embed/0pJY4FQxGHs?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></p>
+<p>L'applicazione dell'equazione <a data-knowl="./knowl/body_equilibrium_p1_1.html" title="Equazione 2.2.3">(2.2.3)</a> assumendo come sottodominio \(\omega\) il tetraedro di Cauchy illustrato nel video precedente fornisce</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{\omega_{\delta}} \func{\vec{b}}{\vec{x}} \, dv + \int_{\partial\omega_{\delta}} \func{\vec{t}}{\vec{x}, \vec{n}} \, ds = \vec0\,.
+\end{equation*}
+</div>
+<p>Si è già osservato che quando \(\delta \to 0\) la misura del volume \(\omega_{\delta}\) tende a zero molto più rapidamente della misura della superficie \(\partial\omega_{\delta}\text{.}\) Inoltre \(\partial\omega_{\delta} = \Gamma_{\delta}\cup\Gamma_{1}\cup\Gamma_{2}\cup\Gamma_{3}\text{,}\) allora la precedente equazione diventa</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{\Gamma_{\delta}} \func{\vec{t}}{\vec{x}, \vec{n}} \, ds + \int_{\Gamma_{1}}  \func{\vec{t}}{\vec{x}, -\vec{e}_1} \, ds + \int_{\Gamma_{2}} \func{\vec{t}}{\vec{x}, -\vec{e}_2} \, ds + \int_{\Gamma_{3}}  \func{\vec{t}}{\vec{x}, -\vec{e}_3} \, ds  = \vec0\,.
+\end{equation*}
+</div>
+<p>Tendendo conto della relazione geometrica che le faccie \(\Gamma_{1}\text{,}\) \(\Gamma_{2}\) e \(\Gamma_{3}\) alla faccia  \(\Gamma_{\delta}\text{,}\) si ottiene</p>
+<div class="displaymath">
+\begin{equation*}
+\func{\vec{t}}{\vec{x}, \vec{n}}\,\Gamma_{\delta} + \func{\vec{t}}{\vec{x}, -\vec{e}_1} \,\Gamma_{\delta}\,n_1 + \func{\vec{t}}{\vec{x}, -\vec{e}_2} \,\Gamma_{\delta}\,n_2 +  \func{\vec{t}}{\vec{x}, -\vec{e}_3} \,\Gamma_{\delta}\,n_3  = \vec0\,,
+\end{equation*}
+</div>
+<p>e quindi</p>
+<div class="displaymath">
+\begin{equation}
+\func{\vec{t}}{\vec{x}, \vec{n}} = - \func{\vec{t}}{\vec{x}, -\vec{e}_1} \,n_1 - \func{\vec{t}}{\vec{x}, -\vec{e}_2} \,n_2 -  \func{\vec{t}}{\vec{x}, -\vec{e}_3} \,n_3 \,,\tag{2.3.2}
+\end{equation}
+</div>
 <span class="incontext"><a href="stress_sec_stress_chap_it.html#p-184">in-context</a></span>
 </body>
 </html>

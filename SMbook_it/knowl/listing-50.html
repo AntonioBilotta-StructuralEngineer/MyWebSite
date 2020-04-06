@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:48+02:00    *-->
+<!--*    on 2020-04-06T13:39:58+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,18 +12,13 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<figure class="figure-like"><pre class="console"><b>% carico ripartito costante
-syms q l x;
-carico(x, q) = q;
-np = 100;
-xv = 0:1/np:1;
-qv = carico(xv, 1);
-plot(xv,qv,'r','LineWidth',2)
+<figure class="figure-like"><pre class="console"><b>syms l F
+B = [0 0 1; 1 0 0; -l 1 0]
+rango = rank(B)
 
-
-Rq = int(carico(x, q), x, 0, l)
-xq = int(carico(x, q)*x, x, 0, l)/Rq
+f = [0; -F; F*l/2]
+r = linsolve(B, -f)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">5.7.7.</span> </figcaption></figure><span class="incontext"><a href="sollecitazioni_sec_rigid_body_statics_chap_it.html#listing-50">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">5.6.5.</span> </figcaption></figure><span class="incontext"><a href="analysis_examples_sec_rigid_body_statics_chap_it.html#listing-50">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:47+02:00    *-->
+<!--*    on 2020-04-06T13:39:58+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,14 +12,21 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="assemblage-like"><p>Seguono le istruzione MATLAB per il calcolo della soluzione \(\func{u}{x}\text{.}\) <figure class="figure-like"><pre class="console"><b>syms u(x) EA p l;
-ode = EA*diff(u,x,2) + p*sin(2*pi*x/l) == 0;
-cond1 = u(0) == 0;
-cond2 = u(l) == 0;
-conds = [cond1 cond2];
-sol = dsolve(ode,conds)
-N = EA*diff(sol,x)
+<article class="assemblage-like"><p>Si riportano le istruzioni MATLAB utilizzabili per la soluzione del sistema di equazioni differenziali. <figure class="figure-like"><pre class="console"><b>syms ua(x) ub(x) EA F l a;
+Dua = diff(ua);
+Dub = diff(ub);
+ode1 = EA*diff(ua,x,2) == 0;
+ode2 = EA*diff(ub,x,2) == 0;
+odes = [ode1; ode2];
+cond1 = ua(0) == 0;
+cond2 = ub(l) == 0;
+cond3 = ua(a) == ub(a);
+cond4 = EA*Dua(a) - EA*Dub(a) == F;
+conds = [cond1 cond2 cond3 cond4];
+sols = dsolve(odes,conds);
+sols.ua
+sols.ub
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">3.7.8.</span> </figcaption></figure></p></article><span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#assemblage-23">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">3.7.5.</span> </figcaption></figure></p></article><span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#assemblage-23">in-context</a></span>
 </body>
 </html>

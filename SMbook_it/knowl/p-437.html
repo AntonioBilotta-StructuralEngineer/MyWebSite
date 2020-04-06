@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:48+02:00    *-->
+<!--*    on 2020-04-06T13:39:58+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,25 +13,38 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Lo stato di sforzo interno dei solidi mono-dimensionali, o travi, viene caratterizzato valutando in ogni punto le componenti della sollecitazione. Nel caso piano le componenti di sollecitazione sono tre: <em class="alert">sforzo normale (\(N\))</em>, <em class="alert">taglio (\(T\))</em> e <em class="alert">momento flettente (\(M\))</em>. Al fine di arrivare in maniera semmplice ad una definizione delle sollecitazioni, si consideri il seguente diagramma di corpo libero relativo ad un sistema equilibrato di forze. <figure class="figure-like"><div class="image-box" style="width: 43%; margin-left: 28.5%; margin-right: 28.5%;"><img src="images/schema1.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">5.7.1.</span> </figcaption></figure> Si immagini di separare il corpo in due parti mediante un piano passante per un generico punto \(s\) ottenendo i seguenti diagrammi di corpo libero <figure class="figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/schema2.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">5.7.2.</span> </figcaption></figure> dove si è postulato che le due parti si scambino, attraverso la sezione di separazione, delle azioni uguali ed opposte. Tali azioni dovranno essere comunque tali da soddisfare le equazioni di equilibrio su ciascuna parte ottenuta. In particolare, se si considera il tratto di lunghezza \(s\) si ottengono le seguenti equazioni (polo per l'equilibrio alla rotazione posto nell'ascissa \(s\)):</p>
+<p>Il sistema è costituito da due corpi (\(n=6\)), consentendo la scrittura di due gruppi di equazioni: le equazioni di equilibrio per il corpo \(AB\) (polo in \(A\))</p>
 <div class="displaymath">
 \begin{align*}
-N - F \amp = 0\,,\\
--T + F \amp = 0\,,\\
-M - F s + Fl \amp = 0\,.
+H_A + H_B \amp = 0\,,\\
+V_A + V_B - F \amp = 0\,,\\
+V_{B} 2l - F l \amp = 0\,,
 \end{align*}
 </div>
-<p>Sistema che fornisce la seguente soluzione per le componenti, incognite, di sollecitazione</p>
+<p>e quelle per il corpo \(BC\) (polo in \(D\))</p>
 <div class="displaymath">
 \begin{align*}
-N \amp= F\,,\\
-T \amp= F \,,\\
-M \amp= -F(l - s)\,.
+H_C - H_B + F \amp = 0\,,\\
+V_C - V_B \amp = 0\,,\\
+H_{B} l + V_C 2l \amp = 0\,.
 \end{align*}
 </div>
-<p>Lo stesso risultato si otterrebbe applicando le equazioni di equilibrio al tratto di lunghezza \((l-s)\text{.}\)</p>
-<span class="incontext"><a href="sollecitazioni_sec_rigid_body_statics_chap_it.html#p-437">in-context</a></span>
+<p>Equazioni riscrivibili nella seguente forma matriciale</p>
+<div class="displaymath">
+\begin{equation*}
+\underbrace{\left[\begin{array}{ccccc}
+1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 2l &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; -1 &amp; 0 &amp; 1 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; -1 &amp; 0 &amp; 1\\
+0 &amp; 0 &amp; l &amp; 0 &amp; 0 &amp; 2l
+\end{array}\right]}_{\mat{B}}
+\underbrace{\left[\begin{array}{c} H_A \\ V_A \\ H_B \\ V_B \\ H_C \\ V_C  \end{array}\right]}_{\vec{r}} +
+\underbrace{\left[\begin{array}{c} 0 \\ -F \\ -Fl \\ F \\ 0 \\ 0 \end{array}\right]}_{\vec{f}} =
+\left[\begin{array}{c} 0 \\ 0 \\ 0 \\ 0 \\ 0 \\ 0 \end{array}\right]\,.
+\end{equation*}
+</div>
+<span class="incontext"><a href="analysis_examples_sec_rigid_body_statics_chap_it.html#p-437">in-context</a></span>
 </body>
 </html>

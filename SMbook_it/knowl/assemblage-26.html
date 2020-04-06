@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:47+02:00    *-->
+<!--*    on 2020-04-06T13:39:58+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,14 +12,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="assemblage-like"><p>Analogamente anche le istruzioni MATLAB per il calcolo della soluzione si modificano solo nella parte riguardante le condizioni al contorno. <figure class="figure-like"><pre class="console"><b>syms w(x) EJ q l;
+<article class="assemblage-like"><p>Le sopra elencate equazioni, di equilibrio e relative condizioni al contorno, sono formulabili in MATLAB come segue consentendo il calcolo della soluzione \(\func{w}{x}\) e del relativo momento flettente  \(\func{M}{x}\text{.}\) Si forniscono anche le istruzioni per il plottaggio delle due funzioni. <figure class="figure-like"><pre class="console"><b>syms w(x) EJ q l;
 ode = -EJ*diff(w,x,4) + q == 0;
 D1w = diff(w,x,1);
 D2w = diff(w,x,2);
 D3w = diff(w,x,3);
 cond1 = w(0) == 0;
-cond2 = -EJ*D2w(0) == 0;
-cond3 = w(l) == 0;
+cond2 = D1w(0) == 0;
+cond3 = -EJ*D3w(l) == 0;
 cond4 = -EJ*D2w(l) == 0;
 conds = [cond1 cond2 cond3 cond4];
 sol(x,EJ,q,l) = dsolve(ode,conds)
@@ -36,6 +36,6 @@ Mv = M(Xv,1,1,1);
 plot(Xv,Mv,'b',Xv,Beam,'k','LineWidth',2)
 set(gca, 'YDir','reverse')
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">3.8.7.</span> </figcaption></figure></p></article><span class="incontext"><a href="bent_beam_applications_sec_elasticity_chap_it.html#assemblage-26">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">3.8.5.</span> </figcaption></figure></p></article><span class="incontext"><a href="bent_beam_applications_sec_elasticity_chap_it.html#assemblage-26">in-context</a></span>
 </body>
 </html>

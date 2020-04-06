@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:44+02:00    *-->
+<!--*    on 2020-04-06T13:39:55+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -192,14 +192,14 @@ var js_version = 0.12;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="constraints_sec_rigid_body_kinematics_chap_it"><h2 class="heading hide-type">
 <span class="type">Sezione</span> <span class="codenumber">4.2</span> <span class="title">vincoli</span>
 </h2>
-<a href="constraints_sec_rigid_body_kinematics_chap_it.html" class="permalink">¶</a><p id="p-356">Il termine <em class="emphasis">vincolo</em> viene utilizzato per indicare un dispositivo che limita le possibilità di movimento di un sistema di corpi. Un generico sistema, ad esempio un sistema di corpi rigidi, viene descritto mediante \(n\) parametri, \(q_1, \dots q_n\text{,}\) che prendono il nome di <em class="emphasis">coordinate lagrangiane del sistema</em>. In questi termini, la generica condizione di vincolo viene espressa, nella forma più generica, nel modo seguente:</p>
+<a href="constraints_sec_rigid_body_kinematics_chap_it.html" class="permalink">¶</a><p id="p-361">Il termine <em class="emphasis">vincolo</em> viene utilizzato per indicare un dispositivo che limita le possibilità di movimento di un sistema di corpi. Un generico sistema, ad esempio un sistema di corpi rigidi, viene descritto mediante \(n\) parametri, \(q_1, \dots q_n\text{,}\) che prendono il nome di <em class="emphasis">coordinate lagrangiane del sistema</em>. In questi termini, la generica condizione di vincolo viene espressa, nella forma più generica, nel modo seguente:</p>
 <div class="displaymath">
 \begin{equation}
 f\left[q_1, \dots, q_n, \dot{q}_1, \dots, \dot{q}_n, t\right] \leq 0.\tag{4.2.1}
 \end{equation}
 </div>
 <p>Dove compaiono, oltre alle coordinate lagrangiane, anche le loro derivate, \(\dot{q}_1, \dots, \dot{q}_n\text{,}\) rispetto al tempo.</p>
-<p id="p-357">Per gli sviluppi successivi è sufficiente considerare solo vincoli <em class="emphasis">fissi</em> (indipendenti dal tempo), <em class="emphasis">bilateri</em> (la condizione di vincolo si esprime mediante il segno di uguaglianza) e non <em class="emphasis">monolateri</em> (espressi mediante i segni di disegueglianza), <em class="emphasis">olonomi</em> (indipendenti dalle velocità) e non <em class="emphasis">sclerolonomi</em> (dipendenti dalle velocità) e <em class="emphasis">privi di attrito</em> (consentono completamente ciò che non vincolano), ovvero</p>
+<p id="p-362">Per gli sviluppi successivi è sufficiente considerare solo vincoli <em class="emphasis">fissi</em> (indipendenti dal tempo), <em class="emphasis">bilateri</em> (la condizione di vincolo si esprime mediante il segno di uguaglianza) e non <em class="emphasis">monolateri</em> (espressi mediante i segni di disegueglianza), <em class="emphasis">olonomi</em> (indipendenti dalle velocità) e non <em class="emphasis">sclerolonomi</em> (dipendenti dalle velocità) e <em class="emphasis">privi di attrito</em> (consentono completamente ciò che non vincolano), ovvero</p>
 <div class="displaymath">
 \begin{equation}
 f\left[q_1, q_2, \dots, q_n\right] = 0.\label{constraint_eq}\tag{4.2.2}
@@ -213,7 +213,7 @@ f\left[q_1, q_2, \dots, q_n\right] = 0.\label{constraint_eq}\tag{4.2.2}
 <span class="type">Sottosottosezione</span> <span class="codenumber">4.2.1.1</span> <span class="title">carrello</span>
 </h4>
 <figure class="figure-like" id="carrello_fig"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/vincolosemplice_carrello.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">4.2.1.</span> </figcaption></figure><p id="p-358">Il carrello impone che lo spostamento del punto in cui è applicato può avvenire solo in direzione ortogonale all'asse del carrello:</p>
+<figcaption><span class="type">Figura</span> <span class="codenumber">4.2.1.</span> </figcaption></figure><p id="p-363">Il carrello impone che lo spostamento del punto in cui è applicato può avvenire solo in direzione ortogonale all'asse del carrello:</p>
 <div class="displaymath">
 \begin{equation}
 \vec{u}_A \cdot \vec{n} = 0\label{carrello_eq}\tag{4.2.3}
@@ -241,7 +241,7 @@ u_{2A}  = 0\,.\tag{4.2.5}
 <span class="type">Sottosottosezione</span> <span class="codenumber">4.2.1.2</span> <span class="title">doppio bipendolo</span>
 </h4>
 <figure class="figure-like" id="doppiobipendolo_fig"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/vincolosemplice_doppiobipendolo.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">4.2.2.</span> </figcaption></figure><p id="p-359">Il doppio bipendolo impone che la rotazione del punto di applicazione sia nulla, ovvero</p>
+<figcaption><span class="type">Figura</span> <span class="codenumber">4.2.2.</span> </figcaption></figure><p id="p-364">Il doppio bipendolo impone che la rotazione del punto di applicazione sia nulla, ovvero</p>
 <div class="displaymath">
 \begin{equation}
 \varphi_{A}  = 0\,.\tag{4.2.6}
@@ -249,14 +249,14 @@ u_{2A}  = 0\,.\tag{4.2.5}
 </div>
 <p><article class="remark-like" id="warning-1"><h6 class="heading">
 <span class="type">Avvertenza</span> <span class="codenumber">4.2.3</span>.</h6>
-<p id="p-360">Nel caso di corpo rigido la rotazione non può variare da punto a punto e, pertanto, bloccare la rotazione in un punto vuol dire bloccarla su tutto il corpo. Detto in altro parole, per la cinematica di corpo rigido il punto di applicazione del vincolo non ha nessuna rilevanza.</p></article></p></section></section><section class="subsection" id="subsection-89"><h3 class="heading hide-type">
+<p id="p-365">Nel caso di corpo rigido la rotazione non può variare da punto a punto e, pertanto, bloccare la rotazione in un punto vuol dire bloccarla su tutto il corpo. Detto in altro parole, per la cinematica di corpo rigido il punto di applicazione del vincolo non ha nessuna rilevanza.</p></article></p></section></section><section class="subsection" id="subsection-89"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">4.2.2</span> <span class="title">vincoli esterni doppi</span>
 </h3>
 <section class="subsubsection" id="subsubsection-20"><h4 class="heading hide-type">
 <span class="type">Sottosottosezione</span> <span class="codenumber">4.2.2.1</span> <span class="title">cerniera o appoggio</span>
 </h4>
 <figure class="figure-like" id="cerniera_fig"><div class="image-box" style="width: 43%; margin-left: 28.5%; margin-right: 28.5%;"><img src="images/vincolodoppio_cerniera.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">4.2.4.</span> </figcaption></figure><p id="p-361">La cerniera impone che nel punto di applicazione il vettore spostamento sia nullo</p>
+<figcaption><span class="type">Figura</span> <span class="codenumber">4.2.4.</span> </figcaption></figure><p id="p-366">La cerniera impone che nel punto di applicazione il vettore spostamento sia nullo</p>
 <div class="displaymath">
 \begin{equation}
 \vec{u}_A = \vec0\,.\tag{4.2.7}
@@ -265,7 +265,7 @@ u_{2A}  = 0\,.\tag{4.2.5}
 <span class="type">Sottosottosezione</span> <span class="codenumber">4.2.2.2</span> <span class="title">bipendolo</span>
 </h4>
 <figure class="figure-like" id="bipendolo_fig"><div class="image-box" style="width: 55%; margin-left: 22.5%; margin-right: 22.5%;"><img src="images/vincolodoppio_bipendolo.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">4.2.5.</span> </figcaption></figure><p id="p-362">Il bipendolo impone le condizioni</p>
+<figcaption><span class="type">Figura</span> <span class="codenumber">4.2.5.</span> </figcaption></figure><p id="p-367">Il bipendolo impone le condizioni</p>
 <div class="displaymath">
 \begin{equation}
 \begin{split}
@@ -281,7 +281,7 @@ u_{2A}  = 0\,.\tag{4.2.5}
 <span class="type">Sottosottosezione</span> <span class="codenumber">4.2.3.1</span> <span class="title">incastro</span>
 </h4>
 <figure class="figure-like" id="incastro_fig"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/vincolotriplo_incastro.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">4.2.6.</span> </figcaption></figure><p id="p-363">Infine l'incastro impone</p>
+<figcaption><span class="type">Figura</span> <span class="codenumber">4.2.6.</span> </figcaption></figure><p id="p-368">Infine l'incastro impone</p>
 <div class="displaymath">
 \begin{equation}
 \begin{split}
@@ -292,12 +292,12 @@ u_{2A}  = 0\,.\tag{4.2.5}
 </div></section></section><section class="subsection" id="subsection-91"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">4.2.4</span> <span class="title">vincoli interni</span>
 </h3>
-<p id="p-364">L'articolazione di due o più corpi rigidi può essere effettuata mediante dei dispositivi detti vincoli interni. A scopo esemplificativo, evitando di passare in rassegna tutti i possibili casi, si discute solo uno dei casi più ricorrenti.</p>
+<p id="p-369">L'articolazione di due o più corpi rigidi può essere effettuata mediante dei dispositivi detti vincoli interni. A scopo esemplificativo, evitando di passare in rassegna tutti i possibili casi, si discute solo uno dei casi più ricorrenti.</p>
 <section class="subsubsection" id="subsubsection-23"><h4 class="heading hide-type">
 <span class="type">Sottosottosezione</span> <span class="codenumber">4.2.4.1</span> <span class="title">cerniera interna</span>
 </h4>
 <figure class="figure-like" id="cerniera_interna_fig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/vincolointerno_cerniera.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">4.2.7.</span> </figcaption></figure><p id="p-365">La presenza del vincolo interno è esprimibile mediante la condizione</p>
+<figcaption><span class="type">Figura</span> <span class="codenumber">4.2.7.</span> </figcaption></figure><p id="p-370">La presenza del vincolo interno è esprimibile mediante la condizione</p>
 <div class="displaymath">
 \begin{equation}
 \vec{u}_{A} = \vec{u}_{A'}\,.\tag{4.2.10}

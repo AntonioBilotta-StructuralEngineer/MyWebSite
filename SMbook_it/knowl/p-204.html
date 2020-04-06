@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:46+02:00    *-->
+<!--*    on 2020-04-06T13:39:57+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,18 +13,35 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Per la discussione dello stato di taglio “puro” occorre lasciare il punto di vista dato dalle direzioni principali e parlare direttamente di uno stato tensionale caratterizzato dalla seguente rappresentazione per componenti</p>
+<p>Lo stato tensionale che mantiene sempre la stessa forma rispetto a qualsiasi sistema di riferimento è lo stato caratterizzato da tensioni principali che assumono lo stesso valore, ovvero \(\sigma_1 = \sigma_2 = \sigma_3 = p\text{.}\) In tal caso, utilizzando la  <a data-knowl="./knowl/spectral_stress_eq.html" title="Equazione 2.4.3">(2.4.3)</a>, il tensore \(\tens{\sigma}\) assume la seguente forma</p>
+<div class="displaymath">
+\begin{equation*}
+\tens{\sigma} = p\,\vec{e}_1 \otimes \vec{e}_1 + p\,\vec{e}_2 \otimes \vec{e}_2 + p\,\vec{e}_3 \otimes \vec{e}_3\,,
+\end{equation*}
+</div>
+<p>ovvero</p>
+<div class="displaymath">
+\begin{equation*}
+\tens{\sigma} = p \, \tens{I}\,.
+\end{equation*}
+</div>
+<p>La rappresentazione per componenti fornisce anche</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{\sigma} =
+p \left[\begin{array}{ccc}
+1 \amp 0 \amp 0 \\
+0 \amp 1 \amp 0 \\
+0 \amp 0 \amp 1
+\end{array}\right]
+=
 \left[\begin{array}{ccc}
-0  \amp \tau \amp 0 \\
-\tau \amp 0 \amp 0 \\
-0 \amp 0 \amp 0
+p \amp 0 \amp 0 \\
+0 \amp p \amp 0 \\
+0 \amp 0 \amp p
 \end{array}\right]\,.
 \end{equation*}
 </div>
-<p>In tal caso, sempre relativamente al sistema di riferimento \(\vec{e}_1\text{,}\) \(\vec{e}_2\text{,}\) \(\vec{e}_3\) utilizzato, si parlerà di stato di taglio “puro” in quanto l'unica componente non nulla del tensore è \(\sigma_{12}=\sigma_{21}=\tau\text{.}\)</p>
 <span class="incontext"><a href="stress_analysis_sec_stress_chap_it.html#p-204">in-context</a></span>
 </body>
 </html>

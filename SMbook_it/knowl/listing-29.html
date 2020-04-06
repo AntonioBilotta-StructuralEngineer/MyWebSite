@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:47+02:00    *-->
+<!--*    on 2020-04-06T13:39:57+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,31 +12,16 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<figure class="figure-like"><pre class="console"><b>syms E ni k;
-X = sym('X', [1 3]);
-u = sym('u', [1 3]);
-u(1) = -ni*k/E * X(1) * X(2);
-u(2) = -k/(2*E) * ( X(3)^2 + ni*(X(2)^2-X(1)^2) );
-u(3) = k/E * X(2) * X(3);
+<figure class="figure-like"><pre class="console"><b>Edef(t) = 1/2*om^2*m*u(t)^2;
+Ekin(t) = 1/2*m*diff(u,t)^2;
 
-Du = [transpose(gradient(u(1), X)); ...
-transpose(gradient(u(2), X)); transpose(gradient(u(3), X))];
+dd=Edef(tt);
+kk=Ekin(tt);
 
-symDu = 1/2*(Du+transpose(Du))
-
-Voigt_eps = [symDu(1,1); symDu(2,2); symDu(3,3); ...
-2*symDu(2,3); 2*symDu(3,1); 2*symDu(1,2)];
-
-Voigt_C = E/((1+ni)*(1-2*ni))*[(1-ni) ni ni 0 0 0; ...
- ni (1-ni) ni 0 0 0; ...
- ni ni (1-ni) 0 0 0; ...
- 0 0 0 (1-2*ni)/2 0 0; ...
- 0 0 0 0 (1-2*ni)/2 0; ...
- 0 0 0 0 0 (1-2*ni)/2];
-
-Voigt_sig = Voigt_C*Voigt_eps;
-simplify(Voigt_sig)
+scale = 5*u0 / (Edef(0)+Ekin(0));
+plot(tt,uu,'k',tt,dd*scale,'r',tt,kk*scale,'b','LineWidth',2)
+legend('spost.','en. def.','en. cinet.')
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">3.4.5.</span> </figcaption></figure><span class="incontext"><a href="problem_sec_elasticity_chap_it.html#listing-29">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">3.2.6.</span> </figcaption></figure><span class="incontext"><a href="uniaxial_sec_elasticity_chap_it.html#listing-29">in-context</a></span>
 </body>
 </html>

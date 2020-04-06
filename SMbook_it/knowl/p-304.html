@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:47+02:00    *-->
+<!--*    on 2020-04-06T13:39:57+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,28 +13,43 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Il campo di spostamento ottenuto per il solido prismatico inflesso, equazioni <a data-knowl="./knowl/bend_displ_1.html" title="Equazione 3.4.25">(3.4.25)</a>, <a data-knowl="./knowl/bend_displ_2.html" title="Equazione 3.4.26">(3.4.26)</a> e  <a data-knowl="./knowl/bend_displ_3.html" title="Equazione 3.4.27">(3.4.27)</a>, lungo la linea d'asse si riduce a</p>
+<p>A questo punto la definizione del modello è praticamente completa. Manca la definizione delle equazioni di equilibrio alle quali si può arrivare attraverso il principio dei lavori virtuali formulabile come segue</p>
+<div class="displaymath">
+\begin{equation}
+\int_{l} N \delta\varepsilon \,dx = \int_{l} p\,\delta u\, dx + H_{0} \,\func{\delta u}{0} +  H_{l} \,\func{\delta u}{l}\,, \quad \forall\,\delta u \;\left(\delta\varepsilon = \frac{d\delta u}{d x}\right)\,.\tag{3.5.7}
+\end{equation}
+</div>
+<p>La relazione appena scritta, dove si è tralasciato di esplicitare le dipendenze dalla variabile \(x\text{,}\) può essere manipolata effettuando i seguenti passaggi</p>
+<div class="displaymath">
+\begin{align*}
+\int_{l} N \delta\varepsilon \,dx \amp= \int_{l} p\,\delta u\, dx + H_{0} \,\func{\delta u}{0} +  H_{l} \,\func{\delta u}{l}\\
+\int_{l} N \frac{d\delta u}{d x} \,dx \amp= \int_{l} p\,\delta u\, dx + H_{0} \,\func{\delta u}{0} +  H_{l} \,\func{\delta u}{l}\\
+\left[N\,\delta u \right]_0^l - \int_{l}  \frac{dN}{d x}\delta u \,dx \amp= \int_{l} p\,\delta u\, dx + H_{0} \,\func{\delta u}{0} +  H_{l} \,\func{\delta u}{l}\\
+\int_{l}  \frac{dN}{d x}\delta u + \int_{l} p\,\delta u\, dx \,dx \amp= \left[N\,\delta u \right]_0^l - H_{0} \,\func{\delta u}{0} -  H_{l} \,\func{\delta u}{l}\\
+\int_{l} \left( \frac{dN}{d x} + p\right)\delta u\, dx \amp= \func{N}{l}\,\func{\delta u}{l} - \func{N}{0}\,\func{\delta u}{0} - H_{0} \,\func{\delta u}{0} -  H_{l} \,\func{\delta u}{l}\\
+\int_{l} \left( \frac{dN}{d x} + p\right)\delta u\, dx \amp= \left(\func{N}{l}-  H_{l}\right)\func{\delta u}{l} - \left(\func{N}{0} + H_{0} \right)\func{\delta u}{0} 
+\end{align*}
+</div>
+<p>E quindi si ottiene la seguente scrittura del principio dei lavori virtuali in termini di</p>
+<div class="displaymath">
+\begin{equation}
+\int_{l} \left( \frac{dN}{d x} + p\right)\delta u\, dx = \left(\func{N}{l}-  H_{l}\right)\func{\delta u}{l} - \left(\func{N}{0} + H_{0} \right)\func{\delta u}{0}\,,\quad \forall\,\delta u\,.\tag{3.5.8}
+\end{equation}
+</div>
+<p>Il soddisfacimento di tale espressione per qualsiasi spostamento virtuale \(\delta u\) implica il soddisfacimento dell'equazione</p>
+<div class="displaymath">
+\begin{equation}
+\frac{dN}{d x} + p = 0\,,\tag{3.5.9}
+\end{equation}
+</div>
+<p>in ogni punto della linea d'asse e il soddisfacimento delle condizioni al contorno</p>
 <div class="displaymath">
 \begin{align}
-u_{1} \amp = 0\,,\tag{3.6.1}\\
-u_{2} \amp = -\frac{\kappa}{2E}X_3^2\,,\tag{3.6.2}\\
-u_{3} \amp = 0\,,\tag{3.6.3}
+\func{N}{0} \amp=  -H_{0}\,,\tag{3.5.10}\\
+\func{N}{l} \amp=  H_{l}\,,\tag{3.5.11}
 \end{align}
 </div>
-<p>soluzione che stabilisce che la linea d'asse si deforma seguendo una parabola contenuta nel piano \(X_3\text{,}\) \(X_2\) e tutto è determinato solo dallo spostamento \(u_{2}\) diretto trasversalmente all'asse. <figure class="figure-like"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/trave_inflessa_linea_asse.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">3.6.1.</span> </figcaption></figure> Il principale obiettivo rimane comunque quello di descrivere la deformazione \(\varepsilon_{33}\) dipendendente dallo spostamento \(u_3\) che sulla linea d'asse si annulla. La descrizione della componente \(u_3\) è comunque recuperabile osservando che</p>
-<div class="displaymath">
-\begin{equation}
-u_3 = \kappa\,X_2X_3/E = - X_2 \frac{d u_2}{d X_3}\,,\tag{3.6.4}
-\end{equation}
-</div>
-<p>che evidenzia il legame di \(u_3\) con lo spostamento \(u_2\) della linea d'asse. Su tale base si può valutare la componente \(\varepsilon_{33}\) ottenendo</p>
-<div class="displaymath">
-\begin{equation}
-\varepsilon_{33} = \frac{d}{dX_3}\left(u_3\right) = \frac{d}{dX_3}\left(-X_2 \frac{d u_2}{d X_3}\right) = -X_2 \frac{d^2 u_2}{dX_3^2}\,,\tag{3.6.5}
-\end{equation}
-</div>
-<p>relazione che evidenzia il tipo di legame fra \(\varepsilon_{33}\) e la componente di spostamento \(u_{2}\) della linea d'asse.</p>
-<span class="incontext"><a href="bent_beam_sec_elasticity_chap_it.html#p-304">in-context</a></span>
+<p>sugli estremi della linea d'asse.</p>
+<span class="incontext"><a href="stretched_beam_sec_elasticity_chap_it.html#p-304">in-context</a></span>
 </body>
 </html>

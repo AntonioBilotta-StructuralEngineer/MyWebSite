@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:47+02:00    *-->
+<!--*    on 2020-04-06T13:39:58+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,21 +13,21 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>La “lettura” delle condizioni di vincolo assegnate fornisce</p>
+<p>Si consideri un sistema rigido caratterizzato da \(n\) coordinate lagrangiane e soggetto ad \(m\) condizioni di vincolo. Le equazioni di vincolo corrispondente sono esprimibili nel modo seguente</p>
 <div class="displaymath">
-\begin{gather*}
-\vec{u}_A = \vec0\,,\\
-\vec{u}_B \cdot \vec{n}_B = 0\,,
-\end{gather*}
+\begin{equation}
+\sum_{j=1}^n A_{ij}  q_j = d_i \qquad (i=1 \dots m)\,.\tag{4.3.1}
+\end{equation}
 </div>
-<p>dove \(\vec{n}_B = \transp{[0 \; 1]}\text{.}\) Le condizioni sono riscrivibili mediante le seguenti 3 equazioni scalari (\(m=3\)):</p>
+<p>\(d_i\) è il generico <em class="emphasis">cedimento</em> assegnato sul vincolo \(i\)-esimo, \(q_j\) è l'incremento della coordinata lagrangiana \(j\)-esima e \(A_{ij}\) è il contributo di spostamento fornito per un incremento unitario della coordinata \(q_j\) sul vincolo \(i\)-esimo. In termini matriciali le condizioni vincolari sono esprimibili come segue</p>
 <div class="displaymath">
-\begin{gather*}
-u_{1A} = 0\,,\\
-u_{2A} = 0\,,\\
-u_{2B} = 0\,.
-\end{gather*}
+\begin{equation}
+\mat{A} \vec{q} = \vec{d},\tag{4.3.2}
+\end{equation}
 </div>
-<span class="incontext"><a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html#p-371">in-context</a></span>
+<p>dove \(\mat{A}\text{,}\) di dimensioni \(m \times n\text{,}\) è la matrice cinematica del sistema, \(\vec{q}\text{,}\) di dimensione \(n\text{,}\) è il vettore che raccoglie le coordinate lagrangiane e \(\vec{d}\text{,}\) di dimensione \(m\text{,}\) è il vettore dei cedimenti assegnati. <article class="remark-like"><h6 class="heading">
+<span class="type">Nota</span> <span class="codenumber">4.3.1</span>.</h6>
+<p>Le componenti del vettore \(\vec{d}\) possono assumere indifferentemente valori nulli o non nulli. Il caso tipico è comunque il caso di cedimento assegnato nullo.</p></article></p>
+<span class="incontext"><a href="analysis_sec_rigid_body_kinematics_chap_it.html#p-371">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:47+02:00    *-->
+<!--*    on 2020-04-06T13:39:58+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,22 +13,50 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Si riportano le istruzioni MATLAB utilizzabili per la soluzione del sistema di equazioni differenziali. <figure class="figure-like"><pre class="console"><b>syms ua(x) ub(x) EA F l a;
-Dua = diff(ua);
-Dub = diff(ub);
-ode1 = EA*diff(ua,x,2) == 0;
-ode2 = EA*diff(ub,x,2) == 0;
-odes = [ode1; ode2];
-cond1 = ua(0) == 0;
-cond2 = ub(l) == 0;
-cond3 = ua(a) == ub(a);
-cond4 = EA*Dua(a) - EA*Dub(a) == F;
-conds = [cond1 cond2 cond3 cond4];
-sols = dsolve(odes,conds);
-sols.ua
-sols.ub
-</b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">3.7.5.</span> </figcaption></figure></p>
+<p>Per l'assenza di carico ripartito l'equazione da risolvere diventa</p>
+<div class="displaymath">
+\begin{equation*}
+EA\,\frac{d^2u}{dx^2} = 0\,,
+\end{equation*}
+</div>
+<p>che ha come integrale generale</p>
+<div class="displaymath">
+\begin{equation*}
+\func{u}{x} = c_0 + c_1 x\,.
+\end{equation*}
+</div>
+<p>Le costanti d'integrazione sono valutabili imponendo le condizioni al contorno</p>
+<div class="displaymath">
+\begin{align*}
+\amp \func{u}{0} = 0\,,\\
+\amp \func{N}{l} = EA\, \func{\frac{du}{dx}}{l} = F\,.
+\end{align*}
+</div>
+<p>Da cui si ottiene</p>
+<div class="displaymath">
+\begin{equation*}
+c_0 = 0\,, \quad c_1 = \frac{F}{EA}\,.
+\end{equation*}
+</div>
+<p>Quindi il campo di spostamento assume la seguente espressione</p>
+<div class="displaymath">
+\begin{equation*}
+\func{u}{x} = \frac{F}{EA} x\,,
+\end{equation*}
+</div>
+<p>con cui è possibile valutare lo sforzo normale lungo l'asta e, ad esempio, lo spostamento all'estremo libero</p>
+<div class="displaymath">
+\begin{align*}
+\amp \func{N}{x} = EA \func{\frac{du}{dx}}{x} = F\,,\\
+\amp \func{u}{l} = \frac{F}{EA} l\,,
+\end{align*}
+</div>
+<p>quest'ultimo coincide con l'allungamento totale dell'asta valutabile anche come segue</p>
+<div class="displaymath">
+\begin{equation*}
+\Delta l = \int_l \varepsilon \,dx =  \int_l \frac{du}{dx} \,dx =  \int_l \frac{F}{EA} \,dx =  \frac{F}{EA} \int_l \,dx = \frac{F}{EA} l\,.
+\end{equation*}
+</div>
 <span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#p-320">in-context</a></span>
 </body>
 </html>

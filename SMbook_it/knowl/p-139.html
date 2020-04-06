@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:46+02:00    *-->
+<!--*    on 2020-04-06T13:39:56+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,24 +13,76 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Ipotizzare spostamenti infinitesimi equivale ad assumere valori dell'angolo \(\alpha\) molto piccoli, \(\alpha \ll 1\text{,}\) ovvero \(\cos{\alpha}\approx 1\) e \(\sin{\alpha} \approx \alpha\text{.}\) Da cui deriva</p>
+<p>Come premessa si ricordano le espressione esplicite del campo di spostamento \(\vec{u}\)</p>
 <div class="displaymath">
-\begin{equation*}
-\text{sym}\mat{\nabla u} \approx \mat{0}
-\,,\quad
-\text{skew}\mat{\nabla u} \approx
-\left[\begin{array}{cc}
-0 \amp -\alpha \\
-\alpha \amp 0 
-\end{array}\right]\,.
-\end{equation*}
+\begin{gather*}
+\func{u_1}{X_1, X_2, X_3}\,,\\
+\func{u_2}{X_1, X_2, X_3}\,,\\
+\func{u_3}{X_1, X_2, X_3}\,,
+\end{gather*}
 </div>
-<p>Pertanto nel caso di spostamenti infinitesi la relazione <a data-knowl="./knowl/rotation_eq.html" title="Equazione 1.9.11">(1.9.11)</a> può essere riscritta come segue</p>
+<p>e del relativo gradiente \(\tens{\nabla u}\)</p>
 <div class="displaymath">
 \begin{equation}
-\tens{R} \approx \tens{I} + \text{skew}\tens{\nabla u}\,.\tag{1.9.12}
+\mat{\nabla u} =
+\left[\begin{array}{ccc}
+\regulardiff{u_1}{X_1} \amp \regulardiff{u_1}{X_2} \amp \regulardiff{u_1}{X_3}\\
+\regulardiff{u_2}{X_1} \amp \regulardiff{u_2}{X_2} \amp \regulardiff{u_2}{X_3}\\
+\regulardiff{u_3}{X_1} \amp \regulardiff{u_3}{X_2} \amp \regulardiff{u_3}{X_3}
+\end{array}\right]\,.\tag{1.9.3}
 \end{equation}
 </div>
+<p>La seguente decomposizione di \(\tens{\nabla u}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\tens{\nabla u} = \underbrace{\frac{1}{2}\left(\tens{\nabla u} + \transp{\tens{\nabla u}}\right)}_{\text{sym}\tens{\nabla u}} +  \underbrace{\frac{1}{2}\left(\tens{\nabla u} - \transp{\tens{\nabla u}}\right)}_{\text{skew}\tens{\nabla u}}\,,
+\end{equation*}
+</div>
+<p>in generale applicabile a tutti i tensori, consente di inserire in un quadro più generale il tensore della deformazione infinitesima prima introdotto ed il ruolo giocato da  \(\tens{\nabla u}\) nella descrizione dei moti infinitesimi. Per moti infinitesemi intenderemo quindi i moti caretterizzati dalla condizione \(\|\tens{\nabla u}\| \rightarrow 0\text{.}\)</p>
+<ul class="disc">
+<li>La parte simmetrica, \(\text{sym}\tens{\nabla u}\text{,}\) che in forma matriciale è esprimibile come<div class="displaymath">
+\begin{equation}
+\mat{\varepsilon} = \text{sym}\mat{\nabla u}=
+\left[\begin{array}{ccc}
+\regulardiff{u_1}{X_1} \amp \frac{1}{2}\left(\regulardiff{u_1}{X_2}+\regulardiff{u_2}{X_1}\right) \amp \frac{1}{2}\left(\regulardiff{u_1}{X_3}+\regulardiff{u_3}{X_1}\right)\\
+\frac{1}{2}\left(\regulardiff{u_2}{X_1}+\regulardiff{u_1}{X_2}\right) \amp \regulardiff{u_2}{X_2} \amp  \frac{1}{2}\left(\regulardiff{u_2}{X_3}+\regulardiff{u_3}{X_2}\right)\\
+\frac{1}{2}\left(\regulardiff{u_3}{X_1}+\regulardiff{u_1}{X_3}\right) \amp \frac{1}{2}\left(\regulardiff{u_3}{X_2}+\regulardiff{u_2}{X_3}\right) \amp \regulardiff{u_3}{X_3}
+\end{array}\right]\,,\tag{1.9.4}
+\end{equation}
+</div>fornisce il tensore della deformazione infinitesima \(\tens{\varepsilon}\text{.}\) La notazione utilizzata per le singole componenti del tensore è<div class="displaymath">
+\begin{equation}
+\mat{\varepsilon} = 
+\left[\begin{array}{ccc}
+\varepsilon_{11} \amp \varepsilon_{12} \amp \varepsilon_{13}\\
+\varepsilon_{21} \amp \varepsilon_{22} \amp \varepsilon_{23}\\
+\varepsilon_{31} \amp \varepsilon_{32} \amp \varepsilon_{33}
+\end{array}\right]\,.\tag{1.9.5}
+\end{equation}
+</div>
+</li>
+<li>La parte emisimmetrica, \(\text{skew}\tens{\nabla u}\text{,}\) che in forma matriciale è esprimibile come<div class="displaymath">
+\begin{equation}
+\text{skew}\mat{\nabla u}=
+\left[\begin{array}{ccc}
+0 \amp \frac{1}{2}\left(\regulardiff{u_1}{X_2}-\regulardiff{u_2}{X_1}\right) \amp \frac{1}{2}\left(\regulardiff{u_1}{X_3}-\regulardiff{u_3}{X_1}\right)\\
+\frac{1}{2}\left(\regulardiff{u_2}{X_1}-\regulardiff{u_1}{X_2}\right) \amp 0 \amp  \frac{1}{2}\left(\regulardiff{u_2}{X_3}-\regulardiff{u_3}{X_2}\right)\\
+\frac{1}{2}\left(\regulardiff{u_3}{X_1}-\regulardiff{u_1}{X_3}\right) \amp \frac{1}{2}\left(\regulardiff{u_3}{X_2}-\regulardiff{u_2}{X_3}\right) \amp 0
+\end{array}\right]\,,\tag{1.9.6}
+\end{equation}
+</div>fornisce il <em class="emphasis">tensore della rotazione infinitesima</em>.</li>
+<li>Nel caso di <em class="emphasis">moto infinitesimo</em> generico<div class="displaymath">
+\begin{equation}
+\text{sym}\tens{\nabla u} \neq \tens{0}\,,\quad \text{skew}\tens{\nabla u} \neq \tens{0}.\tag{1.9.7}
+\end{equation}
+</div>
+</li>
+<li>Nel caso di <em class="emphasis">moto rigido infinitesimo</em><div class="displaymath">
+\begin{equation}
+\text{sym}\tens{\nabla u} = \tens{0}\,,\quad \text{skew}\tens{\nabla u} \neq \tens{0}.\tag{1.9.8}
+\end{equation}
+</div>
+</li>
+</ul>
 <span class="incontext"><a href="infinitesimal_sec_strain_chap_it.html#p-139">in-context</a></span>
 </body>
 </html>

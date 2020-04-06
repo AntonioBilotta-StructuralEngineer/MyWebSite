@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:47+02:00    *-->
+<!--*    on 2020-04-06T13:39:58+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,17 +12,16 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="assemblage-like"><p>Le seguenti istruzioni MATLAB consentono di calcolare la soluzione cercata. <figure class="figure-like"><pre class="console"><b>syms l k;
+<article class="assemblage-like"><p>Si può quindi procedere con il calcolo del rango della matrice nel modo seguente. <figure class="figure-like"><pre class="console"><b>syms l;
 A = [
-1 0 0 0 0; ... 
-0 1 0 0 0; ... 
-1 0 -1 0 0; ...
-0 1 0 -1 l; ...
-0 0 0 1 0; ...
+1 0 2*l 0 0 0; ... 
+0 1 0 0 0 0; ... 
+1 0 0 -1 0 0; ...
+0 1 2*l 0 -1 l; ...
+0 0 0 0 1 0; ...
 ];
-b = [-2*l*k; 0; 0; -2*l*k; 0];
-linsolve(A,b)
+rank(A)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">4.4.17.</span> </figcaption></figure></p></article><span class="incontext"><a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html#assemblage-34">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">4.4.16.</span> </figcaption></figure></p></article><span class="incontext"><a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html#assemblage-34">in-context</a></span>
 </body>
 </html>

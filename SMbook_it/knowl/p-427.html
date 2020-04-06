@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:48+02:00    *-->
+<!--*    on 2020-04-06T13:39:58+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,14 +13,18 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Anche se l'esempio in esame non lo richiederebbe, per esercizio si riportano le istruzioni MATLAB utilizzabili per il calcolo del rango della matrice statica e delle reazioni vincolari incognite. <figure class="figure-like"><pre class="console"><b>syms l F
-B = [1 0 0; 0 1 1; 0 0 l]
-rango = rank(B)
-
-f = [0; -F; -F*l/2]
-r = linsolve(B, -f)
-</b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">5.6.3.</span> </figcaption></figure></p>
-<span class="incontext"><a href="analysis_examples_sec_rigid_body_statics_chap_it.html#p-427">in-context</a></span>
+<p>L'utilizzo tipico del sistema <a data-knowl="./knowl/rb_balance_eq.html" title="Equazione 5.5.2">(5.5.2)</a> è il calcolo delle reazioni vincolari \(\vec{r}\text{.}\) Ma anche in questo caso, come già fatto per la matrice cinematica, è istruttivo discutere la solvibilità del sistema per ricavarne considerazioni di tipo meccanico. Sia \(p=\text{min}(n, m)\text{,}\) allora possono verificarsi i seguenti casi.</p>
+<ul class="disc">
+<li>\(\text{rango}\mat{B} == p\)<ul class="circle">
+<li>\(n==m\text{:}\) <em class="alert">sistema isostatico</em>, il sistema ammette una soluzione unica;</li>
+<li>\(n&lt;m\text{:}\) <em class="alert">sistema iperstatico</em>, il sistema ammette infinite soluzioni;</li>
+<li>\(n&gt;m\text{:}\) <em class="alert">sistema ipostatico o impossibile</em>, il sistema non ammette soluzioni.</li>
+</ul>
+</li>
+<li>\(\text{rango}\mat{A} &lt; p\)<ul class="circle"><li>
+<em class="alert">sistema degenere</em>.</li></ul>
+</li>
+</ul>
+<span class="incontext"><a href="analysis_sec_rigid_body_statics_chap_it.html#p-427">in-context</a></span>
 </body>
 </html>

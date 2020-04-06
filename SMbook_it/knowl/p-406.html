@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:48+02:00    *-->
+<!--*    on 2020-04-06T13:39:58+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,22 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Un corpo o un sistema di corpi tipicamente è soggetto sia ai carichi applicati sia a delle assegnate condizioni di vincolo. Da un punto di vista statico i vincoli vengono trattati rappresentando l’azione esercitata dal vincolo in termini di forze o coppie denominate <em class="alert">reazioni vincolari</em>. Tale procedura, come vedremo, consente di ottenere il <em class="alert">diagramma di corpo libero</em> mediante il quale il corpo viene rappresentato sotto l'azione di due gruppi di enti statici: le azioni applicate e le reazioni vincolari.</p>
-<span class="incontext"><a href="constraints_sec_rigid_body_statics_chap_it.html#p-406">in-context</a></span>
+<p>Grazie a quest'ultima relazione la <a data-knowl="./knowl/rb_PLV_eq.html" title="Equazione 5.1.3">(5.1.3)</a> può essere riscritta come</p>
+<div class="displaymath">
+\begin{equation}
+\sum_{i=1}^N\vec{F}_i \cdot \left( \delta\vec{u}_o + \delta\varphi\,\tens{W}\left( \vec{X}_i - \vec{X}_o\right) \right) = 0\,, \quad \forall \delta\vec{u}_o,\forall \delta\varphi\tens{W}\tag{5.1.7}
+\end{equation}
+</div>
+<p>e manipolata come segue:</p>
+<div class="displaymath">
+\begin{gather*}
+\sum_{i=1}^N\vec{F}_i \cdot \delta\vec{u}_o  +  \sum_{i=1}^N\vec{F}_i \cdot \delta\varphi\,\tens{W}\left( \vec{X}_i - \vec{X}_o\right) = 0\,,\\
+\sum_{i=1}^N\vec{F}_i \cdot \delta\vec{u}_o  +  \underbrace{\sum_{i=1}^N\vec{F}_i \cdot \delta\varphi\,\vec{w}\times\left( \vec{X}_i - \vec{X}_o\right)}_{\text{proprietà tensori emisimmetrici}} = 0\,,\\
+\sum_{i=1}^N\vec{F}_i \cdot \delta\vec{u}_o  +  \underbrace{\sum_{i=1}^N \delta\varphi\,\vec{w} \cdot\left( \vec{X}_i - \vec{X}_o\right) \times \vec{F}_i}_{\text{proprietà prodotto triplo}} = 0\,,\\
+\left(\sum_{i=1}^N\vec{F}_i\right) \cdot \delta\vec{u}_o  + \delta\varphi\,\vec{w} \cdot \left( \sum_{i=1}^N \left( \vec{X}_i - \vec{X}_o\right) \times \vec{F}_i \right) = 0\,.
+\end{gather*}
+</div>
+<p>Il soddisfacimento di quest'ultima condizione scalare per qualsiasi \(\delta\vec{u}_o\) e qualsiasi \(\delta\varphi\vec{w}\) richiede il soddisfacimento delle seguenti equazioni vettoriali.</p>
+<span class="incontext"><a href="equilibrium_sec_rigid_body_statics_chap_it.html#p-406">in-context</a></span>
 </body>
 </html>

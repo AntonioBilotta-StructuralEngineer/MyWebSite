@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:48+02:00    *-->
+<!--*    on 2020-04-06T13:39:59+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,29 +13,35 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<ul class="disc">
-<li>
-<em class="alert">Equilibrio in direzione assiale:</em><div class="displaymath">
-\begin{equation}
-\regulardiff{N}{x} + p(x) = 0\,.\tag{5.8.7}
-\end{equation}
+<p>Lo schema rappresenta una trave incastrata ad una estremità e soggetta ad un carico ripartito variabile \(q(x)\text{.}\) L'unità di misura del carico ripartito è \(\left[ \frac{F}{L} \right]\text{,}\) per cui si parlerà di carico ripartito per unità di lunghezza. Il diagramma di corpo libero riportato in alto a destra nella figura consente la scrittura delle tre equazioni di equilibrio (orizzontale, verticale e rotazione intorno al punto \(A\)) fornendo:</p>
+<div class="displaymath">
+\begin{align*}
+H_{A} \amp = 0\,,\\
+V_{A} -\int_0^l q(x) dx \amp = 0\,,\\
+\mathcal{M}_{A} - \int_0^l q(x) x dx \amp = 0\,.
+\end{align*}
 </div>
-</li>
-<li>
-<em class="alert">Equilibrio in direzione trasversale:</em><div class="displaymath">
-\begin{equation}
-\regulardiff{T}{x} + q(x) = 0\,.\tag{5.8.8}
-\end{equation}
+<p>È facile rendersi conto che gli integrali presenti nelle equazioni hanno il significato di risultante del carico applicato</p>
+<div class="displaymath">
+\begin{equation*}
+\int_0^l q(x) dx = R_q
+\end{equation*}
 </div>
-</li>
-<li>
-<em class="alert">Equilibrio alla rotazione:</em><div class="displaymath">
-\begin{equation}
-\regulardiff{M}{x} - T = 0\,.\tag{5.8.9}
-\end{equation}
+<p>e momento statico rispetto al punto \(A\)</p>
+<div class="displaymath">
+\begin{equation*}
+\int_0^l q(x)x dx = S_q = R_q x_q,
+\end{equation*}
 </div>
-</li>
-</ul>
-<span class="incontext"><a href="indefinte_sec_rigid_body_statics_chap_it.html#p-447">in-context</a></span>
+<p>dove \(x_q\) rappresenta il baricentro del carico rispetto ad un'asse passante per \(A\text{,}\) si veda l'ulteriore schema di corpo libero riportato in basso a destra nella figura. Pertanto le equazioni di equilibrio possono essere riscritte nel modo seguente:</p>
+<div class="displaymath">
+\begin{align*}
+H_{A} \amp = 0\,,\\
+V_{A} - R_q \amp = 0\,,\\
+\mathcal{M}_{A} - R_q x_q \amp = 0\,.
+\end{align*}
+</div>
+<p>Quindi nei sistemi soggetti a carichi ripartiti è possibile sostituire questi ultimi con le rispettive risultanti posizionate nei baricentri. Si osserva che tale sostituzione è corretta solo per il calcolo delle reazioni vincolari e non per il calcolo delle sollecitazioni che verrà meglio descritto in seguito.</p>
+<span class="incontext"><a href="sollecitazioni_sec_rigid_body_statics_chap_it.html#p-447">in-context</a></span>
 </body>
 </html>

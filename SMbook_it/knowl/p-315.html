@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:47+02:00    *-->
+<!--*    on 2020-04-06T13:39:58+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,50 +13,35 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Per l'assenza di carico ripartito l'equazione da risolvere diventa</p>
+<p>Per il nostro modello di trave inflessa il principio dei lavori è formulabile come segue</p>
 <div class="displaymath">
-\begin{equation*}
-EA\,\frac{d^2u}{dx^2} = 0\,,
-\end{equation*}
+\begin{equation}
+\delta L_i =  \delta L_e\,,\quad \forall\,\delta w\,.\tag{3.6.12}
+\end{equation}
 </div>
-<p>che ha come integrale generale</p>
+<p>Dove</p>
 <div class="displaymath">
-\begin{equation*}
-\func{u}{x} = c_0 + c_1 x\,.
-\end{equation*}
+\begin{equation}
+\delta L_i = \int_{l} M \delta\chi \,dx\,, \quad \left(\delta\chi=- \frac{d^2 \delta w}{dx^2}\right)\tag{3.6.13}
+\end{equation}
 </div>
-<p>Le costanti d'integrazione sono valutabili imponendo le condizioni al contorno</p>
+<p>e</p>
 <div class="displaymath">
-\begin{align*}
-\amp \func{u}{0} = 0\,,\\
-\amp \func{N}{l} = EA\, \func{\frac{du}{dx}}{l} = F\,.
-\end{align*}
+\begin{equation}
+\begin{split}
+\delta L_e = \int_{l} \func{q}{x}\,\func{\delta w}{x}\, dx +\amp \\ + V_{0} \,\func{\delta w}{0} +  V_{l} \,\func{\delta w}{l}\amp - \mathcal{M}_{0} \,\func{\frac{d\delta w}{dx}}{0} -  \mathcal{M}_{l} \,\func{\frac{d\delta w}{dx}}{l}\,.
+\end{split}\tag{3.6.14}
+\end{equation}
 </div>
-<p>Da cui si ottiene</p>
-<div class="displaymath">
-\begin{equation*}
-c_0 = 0\,, \quad c_1 = \frac{F}{EA}\,.
-\end{equation*}
-</div>
-<p>Quindi il campo di spostamento assume la seguente espressione</p>
-<div class="displaymath">
-\begin{equation*}
-\func{u}{x} = \frac{F}{EA} x\,,
-\end{equation*}
-</div>
-<p>con cui è possibile valutare lo sforzo normale lungo l'asta e, ad esempio, lo spostamento all'estremo libero</p>
+<p>A questo punto occorre applicare due volte l'integrazione per parti al lavoro interno al fine di estrarre le equazioni di equilibrio e le condizioni al contorno di tipo statico. La doppia integrazione per parti fornisce</p>
 <div class="displaymath">
 \begin{align*}
-\amp \func{N}{x} = EA \func{\frac{du}{dx}}{x} = F\,,\\
-\amp \func{u}{l} = \frac{F}{EA} l\,,
+\delta L_i \amp = \int_{l} M  \left(- \frac{d^2 \delta w}{dx^2}\right) \,dx \\
+\amp = \left[-M \frac{d \delta w}{dx} \right]_0^l + \int_{l} \frac{d M}{dx}  \frac{d \delta w}{dx} \,dx \\
+\amp = \left[-M \frac{d \delta w}{dx} \right]_0^l + \left[\frac{d M}{dx} \delta w\right]_0^l - \int_{l} \frac{d^2 M}{dx^2}  \delta w \,dx \\
+\amp = -\func{M}{l} \func{\frac{d \delta w}{dx}}{l} + \func{M}{0} \func{\frac{d \delta w}{dx}}{0}  + \func{\frac{d M}{dx}}{l}\func{\delta w}{l} - \func{\frac{d M}{dx}}{0}  \func{\delta w}{0} - \int_{l} \frac{d^2 M}{dx^2}  \delta w \,dx\,. 
 \end{align*}
 </div>
-<p>quest'ultimo coincide con l'allungamento totale dell'asta valutabile anche come segue</p>
-<div class="displaymath">
-\begin{equation*}
-\Delta l = \int_l \varepsilon \,dx =  \int_l \frac{du}{dx} \,dx =  \int_l \frac{F}{EA} \,dx =  \frac{F}{EA} \int_l \,dx = \frac{F}{EA} l\,.
-\end{equation*}
-</div>
-<span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#p-315">in-context</a></span>
+<span class="incontext"><a href="bent_beam_sec_elasticity_chap_it.html#p-315">in-context</a></span>
 </body>
 </html>

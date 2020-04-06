@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:46+02:00    *-->
+<!--*    on 2020-04-06T13:39:57+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,23 +13,24 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Dato il seguente stato di tensione</p>
+<p>Si moltiplichi scalarmente l'equazione <a data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equazione 2.3.10">(2.3.10)</a> per un campo vettoriale generico \(\vec{v}\) e si integri sul corpo in esame \(\body\) (per la continuità tale operazione potrebbe essere effettuata su qualsiasi sottoinsieme di \(\body\)). Dal momento che l'equazione <a data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equazione 2.3.10">(2.3.10)</a> deve essere vera per qualsiasi \(\vec{x}\text{,}\) allora</p>
+<div class="displaymath">
+\begin{equation}
+\int_{\body} \left( \text{div}\tens{\sigma} + \vec{b} \right) \cdot \vec{v} \,dv = 0\,,\quad \forall\vec{v}\,,\tag{2.5.1}
+\end{equation}
+</div>
+<p>dove \(\vec{v}\) è un campo vettoriale continuo e differenziabile definito sul corpo \(\body\text{.}\) Per quanto già mostrato nel video sulla divergenza è possibile scrivere</p>
 <div class="displaymath">
 \begin{equation*}
-\mat{\sigma} = \left[\begin{array}{ccc}
-1 \amp 4 \amp -2 \\
-4 \amp 0 \amp 0 \\
--2 \amp 0 \amp 3
-\end{array}
-\right]\,,
+\text{div}\left(\tens{\sigma}\vec{v}\right) = \text{div}\tens{\sigma} \cdot \vec{v} + \tens{\sigma} : \tens{\nabla v}\,,
 \end{equation*}
 </div>
-<p>si calcoli quanto segue:</p>
-<ol class="decimal">
-<li>le componenti del vettore di trazione \(\vec{t}_{\vec{n}}\) relativo un piano passante per il punto dato e parallelo al piano \(2x_1 + 3x_2+x_3 = 5\text{;}\)</li>
-<li>la lunghezza di \(\vec{t}_{\vec{n}}\) e l'angolo che forma con la normale al piano;</li>
-<li>le componenti del tensore di tensione \(\tilde{\vec{\sigma}}\) rispetto ad una nuova base ortonormale \(\{\tilde{\vec{e}}_a\}\text{,}\) \(a=1,2,3\text{,}\) ottenuta ruotando di \(\pi/2\) la base di partenza intorno all'asse \(\vec{e}_3\text{.}\)</li>
-</ol>
-<span class="incontext"><a href="exercises_sec_stress_chap_it.html#p-215">in-context</a></span>
+<p>da cui si ricava</p>
+<div class="displaymath">
+\begin{equation*}
+\text{div}\tens{\sigma} \cdot \vec{v} = \text{div}\left(\tens{\sigma}\vec{v}\right) - \tens{\sigma} : \tens{\nabla v} \,.
+\end{equation*}
+</div>
+<span class="incontext"><a href="plv_sec_stress_chap_it.html#p-215">in-context</a></span>
 </body>
 </html>

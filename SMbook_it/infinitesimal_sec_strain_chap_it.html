@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:42+02:00    *-->
+<!--*    on 2020-04-06T13:39:53+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -192,7 +192,7 @@ var js_version = 0.12;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="infinitesimal_sec_strain_chap_it"><h2 class="heading hide-type">
 <span class="type">Sezione</span> <span class="codenumber">1.9</span> <span class="title">tensore della deformazione infinitesima</span>
 </h2>
-<a href="infinitesimal_sec_strain_chap_it.html" class="permalink">¶</a><p id="p-133">Accade spesso nelle applicazioni che l'entità del gradiente dello spostamento sia piccola. In questi casi il contributo dipendente da \(\transp{\tens{\nabla u}}\,\tens{\nabla u}\) e presente sia nel tensore \(\tens{E}\) sia nel tensore \(\tens{C}\) diventa trascurabile. Pertanto il tensore della deformazione di Green-Lagrange conciderà con il <em class="emphasis">tensore della deformazione infinitesima</em> \(\tens{\varepsilon}\)</p>
+<a href="infinitesimal_sec_strain_chap_it.html" class="permalink">¶</a><p id="p-138">Accade spesso nelle applicazioni che l'entità del gradiente dello spostamento sia piccola. In questi casi il contributo dipendente da \(\transp{\tens{\nabla u}}\,\tens{\nabla u}\) e presente sia nel tensore \(\tens{E}\) sia nel tensore \(\tens{C}\) diventa trascurabile. Pertanto il tensore della deformazione di Green-Lagrange conciderà con il <em class="emphasis">tensore della deformazione infinitesima</em> \(\tens{\varepsilon}\)</p>
 <div class="displaymath">
 \begin{equation}
 \lim_{\|\tens{\nabla u}\| \rightarrow 0} \tens{E} = \tens{\varepsilon} =  \frac{1}{2}\left(\tens{\nabla u} + \transp{\tens{\nabla u}}\right)\,,\label{infinitesima_1_eq}\tag{1.9.1}
@@ -207,7 +207,7 @@ var js_version = 0.12;
 <section class="subsection" id="subsection-12"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">1.9.1</span> <span class="title">moti infinitesimi</span>
 </h3>
-<p id="p-134">Come premessa si ricordano le espressione esplicite del campo di spostamento \(\vec{u}\)</p>
+<p id="p-139">Come premessa si ricordano le espressione esplicite del campo di spostamento \(\vec{u}\)</p>
 <div class="displaymath">
 \begin{gather*}
 \func{u_1}{X_1, X_2, X_3}\,,\\
@@ -279,20 +279,20 @@ var js_version = 0.12;
 </ul></section><article class="remark-like" id="insight-3"><h6 class="heading">
 <span class="type">Approfondimento</span> <span class="codenumber">1.9.1</span>. <span class="title">interpretazione delle componenti del tensore della deformazione infinitesima.</span>
 </h6>
-<p id="p-135">Al fine di individuare il significato delle componenti del tensore \(\tens{\varepsilon}\) conviene richiamare l'espressione del tensore \(\tens{C}\) rispetto al gradiente delo spostamento, ovvero</p>
+<p id="p-140">Al fine di individuare il significato delle componenti del tensore \(\tens{\varepsilon}\) conviene richiamare l'espressione del tensore \(\tens{C}\) rispetto al gradiente delo spostamento, ovvero</p>
 <div class="displaymath">
 \begin{equation*}
 \tens{C} = \tens{I}+ \tens{\nabla u} + \transp{\tens{\nabla u}} +  \transp{\tens{\nabla u}}\,\tens{\nabla u}\,,
 \end{equation*}
 </div>
 <p>da cui, effetuando i calcoli, ad esempio con le seguenti istruzioni MATLAB</p>
-<figure class="figure-like" id="listing-19"><pre class="console"><b>syms u1_X1 u1_X2 u1_X3 u2_X1 u2_X2 u2_X3 u3_X1 u3_X2 u3_X3
+<figure class="figure-like" id="listing-22"><pre class="console"><b>syms u1_X1 u1_X2 u1_X3 u2_X1 u2_X2 u2_X3 u3_X1 u3_X2 u3_X3
 Du = [u1_X1 u1_X2 u1_X3;u2_X1 u2_X2 u2_X3; u3_X1 u3_X2 u3_X3]
 C = diag([1 1 1]) + Du + transpose(Du) + transpose(Du)*Du
 C(1,1)
 C(1,2)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.9.2.</span> </figcaption></figure><p id="p-136">si possono ricavare le espressioni di una componente sulla diagonale ed una fuori dalla diagonale</p>
+<figcaption><span class="type">Listato</span> <span class="codenumber">1.9.2.</span> </figcaption></figure><p id="p-141">si possono ricavare le espressioni di una componente sulla diagonale ed una fuori dalla diagonale</p>
 <div class="displaymath">
 \begin{align*}
 C_{11} \amp = \left( 1 + \frac{\partial u_1}{\partial X_1} \right)^2 + \left(\frac{\partial u_1}{\partial X_2}\right)^2 + \left(\frac{\partial u_1}{\partial X_3}\right)^2\,,\\
@@ -312,7 +312,7 @@ C_{12} \amp = \frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X
 \end{equation}
 </div>
 <p>Analogo risultato vale per le altre componenti di \(\tens{\varepsilon}\) sulla diagonale.</p>
-<p id="p-137">Per la componente fuori dalla diagonale, utilizzando il risultato <a data-knowl="./knowl/Cij_eq.html" title="Equazione 1.8.6">(1.8.6)</a>, si ha</p>
+<p id="p-142">Per la componente fuori dalla diagonale, utilizzando il risultato <a data-knowl="./knowl/Cij_eq.html" title="Equazione 1.8.6">(1.8.6)</a>, si ha</p>
 <div class="displaymath">
 \begin{equation*}
 \sin{\func{\gamma}{\vec{e}_1,\vec{e}_2}}\, \underbrace{\func{\lambda}{\vec{e}_1} \, \func{\lambda}{\vec{e}_2}}_{\approx 1} = \underbrace{\frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1}}_{2\,\varepsilon_{12}} + \underbrace{\frac{\partial u_1}{\partial X_1}\frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1}\frac{\partial u_2}{\partial X_2} + \frac{\partial u_3}{\partial X_1}\frac{\partial u_3}{\partial X_2}}_{\text{trascurabili nel caso infinitesimo}}\,,
@@ -326,7 +326,7 @@ C_{12} \amp = \frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X
 </div></article><article class="remark-like" id="small_rotations_insight"><h6 class="heading">
 <span class="type">Approfondimento</span> <span class="codenumber">1.9.3</span>. <span class="title">rotazioni infinitesime.</span>
 </h6>
-<p id="p-138">Per spiegare la denominazione "rotazione infinitesima" che è stata data alla parte emisimmetrica del gradiente dello spostamento conviene discutere in concreto una trasformazione caratterizzata solo da una semplice rotazione. A tal fine si consideri una rotazione intorno all'asse \(\vec{e}_3\text{.}\) La parte significativa della trasformazione può essere discussa direttamente direttamente nel piano con</p>
+<p id="p-143">Per spiegare la denominazione "rotazione infinitesima" che è stata data alla parte emisimmetrica del gradiente dello spostamento conviene discutere in concreto una trasformazione caratterizzata solo da una semplice rotazione. A tal fine si consideri una rotazione intorno all'asse \(\vec{e}_3\text{.}\) La parte significativa della trasformazione può essere discussa direttamente direttamente nel piano con</p>
 <div class="displaymath">
 \begin{align*}
 x_1 \amp = X_1\cos{\alpha} - X_2\sin{\alpha}\,,\\
@@ -384,7 +384,7 @@ u_2 = x_2 - X_2 \amp = (X_1\sin{\alpha} + X_2\cos{\alpha}) - X_2\,.
 \end{equation*}
 </div>
 <p>ma ancora del tutto generico e che non fa riferimento agli spostamenti infinitesimi.</p>
-<p id="p-139">Ipotizzare spostamenti infinitesimi equivale ad assumere valori dell'angolo \(\alpha\) molto piccoli, \(\alpha \ll 1\text{,}\) ovvero \(\cos{\alpha}\approx 1\) e \(\sin{\alpha} \approx \alpha\text{.}\) Da cui deriva</p>
+<p id="p-144">Ipotizzare spostamenti infinitesimi equivale ad assumere valori dell'angolo \(\alpha\) molto piccoli, \(\alpha \ll 1\text{,}\) ovvero \(\cos{\alpha}\approx 1\) e \(\sin{\alpha} \approx \alpha\text{.}\) Da cui deriva</p>
 <div class="displaymath">
 \begin{equation*}
 \text{sym}\mat{\nabla u} \approx \mat{0}
@@ -402,8 +402,8 @@ u_2 = x_2 - X_2 \amp = (X_1\sin{\alpha} + X_2\cos{\alpha}) - X_2\,.
 \tens{R} \approx \tens{I} + \text{skew}\tens{\nabla u}\,.\label{rotation_infinitesima_eq}\tag{1.9.12}
 \end{equation}
 </div>
-<figure class="figure-like" id="figure-6"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/infinitesimal_rotation.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">1.9.4.</span> </figcaption></figure><p id="p-140">La Figura illustra graficamente il risultato ottenuto mostrando anche in che relazione stanno il vettore ottenuto applicando \(\tens{R}\)</p>
+<figure class="figure-like" id="figure-8"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/infinitesimal_rotation.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span> <span class="codenumber">1.9.4.</span> </figcaption></figure><p id="p-145">La Figura illustra graficamente il risultato ottenuto mostrando anche in che relazione stanno il vettore ottenuto applicando \(\tens{R}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \tens{R}\vec{X}
@@ -416,7 +416,7 @@ u_2 = x_2 - X_2 \amp = (X_1\sin{\alpha} + X_2\cos{\alpha}) - X_2\,.
 \end{equation*}
 </div></article><article class="remark-like" id="skew_tensor_insight"><h6 class="heading">
 <span class="type">Approfondimento</span> <span class="codenumber">1.9.5</span>.</h6>
-<p id="p-141">Dato un tensore \(\tens{W}\) emisimmetrico, la cui forma matriciale ad esso associata per definizione sarà</p>
+<p id="p-146">Dato un tensore \(\tens{W}\) emisimmetrico, la cui forma matriciale ad esso associata per definizione sarà</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{W} =
@@ -487,7 +487,7 @@ v_3
 \end{array}\right]\,.
 \end{equation*}
 </div>
-<p id="p-142">Pertanto si ha</p>
+<p id="p-147">Pertanto si ha</p>
 <div class="displaymath">
 \begin{equation}
 \tens{W}\vec{v} = \vec{\omega} \times \vec{v}\,,\tag{1.9.14}

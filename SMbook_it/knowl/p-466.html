@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:48+02:00    *-->
+<!--*    on 2020-04-06T13:39:59+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,46 +13,12 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Le istruzioni MATLAB da utilizzare per diagrammare le componenti di sollecitazione sono formulabili come di seguto riportato. <figure class="figure-like"><pre class="console"><b>% diagramma dello sforzo normale
-syms N(x);
-N(x) = 0;
-
-np = 100;
-Xv = 0:1/np:1;
-Nv = N(Xv);
-Beam = zeros(1, np+1);
-
-plot(Xv,Nv,'g',Xv,Beam,'k','LineWidth',2)
-set(gca, 'Ylim', [-1 1])
-
-
-% diagramma del taglio
-syms T(x,q,l);
-T(x,q,l) = -q*x+q*l/2;
-
-np = 100;
-Xv = 0:1/np:1;
-Tv = T(Xv, 1, 1);
-Beam = zeros(1, np+1);
-
-plot(Xv,Tv,'b',Xv,Beam,'k','LineWidth',2)
-set(gca, 'Ylim', [-1 1])
-
-
-% diagramma del momento flettente
-syms M(x,q,l);
-M(x,q,l) = q*l/2*x - q*l*x^2/2;
-
-np = 100;
-Xv = 0:1/np:1;
-Mv = M(Xv, 1, 1);
-Beam = zeros(1, np+1);
-
-plot(Xv,Mv,'r',Xv,Beam,'k','LineWidth',2)
-set(gca, 'Ylim', [-1 1])
-set(gca, 'YDir','reverse')
-</b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">5.9.8.</span> </figcaption></figure></p>
+<p>Informazione utilizzabile nella scrittura degli integrali generali <a data-knowl="./knowl/general_const_N_eq.html" title="Equazione 5.8.13">(5.8.13)</a>, <a data-knowl="./knowl/general_const_T_eq.html" title="Equazione 5.8.14">(5.8.14)</a>, <a data-knowl="./knowl/general_const_M_eq.html" title="Equazione 5.8.15">(5.8.15)</a>, ed ottenere la seguente espressione delle sollecitazioni lungo l'asse della trave.</p>
+<div class="displaymath">
+\begin{equation*}
+N(x) = 0\,,\quad T(x) = -q\,x + ql \,,\quad  M(x) = -ql^2/2 + ql\,x - q\,x^2/2 \,.
+\end{equation*}
+</div>
 <span class="incontext"><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html#p-466">in-context</a></span>
 </body>
 </html>

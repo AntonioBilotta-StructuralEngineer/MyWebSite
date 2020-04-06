@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:42+02:00    *-->
+<!--*    on 2020-04-06T13:39:53+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -264,7 +264,8 @@ d\vec{X} = \func{\tens{F}^{-1}}{\vec{x}}\, d\vec{x}\,.\tag{1.3.11}
 \end{equation}
 </div>
 <p>Tipicamente la valutazione del gradiente della trasformazione inversa non passa attraverso la scrittura esplicita di \(\vec{\chi}^{-1}\) ma si effettua calcolando l'inverso di \(\tens{F}\) per il quale deve essere assicurata l'invertibilità.</p>
-<article class="assemblage-like" id="assemblage-5"><h6 class="heading"><span class="title">valutazione del gradiente (trasformazioni lineari).</span></h6>
+<figure class="figure-like" id="Kinematics_03_fig"><div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="images/Kinematics_03.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span> <span class="codenumber">1.3.1.</span> </figcaption></figure><article class="assemblage-like" id="assemblage-5"><h6 class="heading"><span class="title">valutazione del gradiente (trasformazioni lineari).</span></h6>
 <p id="p-52">Nel caso della Trasformazione 1 già discussa in precedenza esplicitiamo la dipendenza delle singole componenti di \(\vec{x}\) dalle componenti di \(\vec{X}\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
@@ -344,16 +345,16 @@ plot(c2x,c2y,'r-')
 plot(c3X,c3Y,'m-')
 plot(c3x,c3y,'m-')
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.3.1.</span> </figcaption></figure> Istruzioni che consentono di ottenere la seguente figura dove le tre circonferenze, nelle configurazioni di riferimento e corrente, sono rappresentate con i colori rosso per il raggio \(0.5\text{,}\) blu per il raggio \(1.0\) e magenta per il raggio \(1.5\text{.}\) <figure class="figure-like" id="figure-3"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="images/nolin_grad1.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">1.3.2.</span> </figcaption></figure></p>
+<figcaption><span class="type">Listato</span> <span class="codenumber">1.3.2.</span> </figcaption></figure> Istruzioni che consentono di ottenere la seguente figura dove le tre circonferenze, nelle configurazioni di riferimento e corrente, sono rappresentate con i colori rosso per il raggio \(0.5\text{,}\) blu per il raggio \(1.0\) e magenta per il raggio \(1.5\text{.}\) <figure class="figure-like" id="figure-4"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="images/nolin_grad1.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span> <span class="codenumber">1.3.3.</span> </figcaption></figure></p>
 <p id="p-56">Per esercizio e per confrontare la trasformazione non lineare esaminata con più semplici trasformazioni lineari, si suggerisce di effetuare gli stessi calcoli per le Trasformazioni 2, 3 e 4 discusse nelle sezioni precedenti.</p></article><article class="remark-like" id="remark-2"><h6 class="heading">
-<span class="type">Commento</span> <span class="codenumber">1.3.3</span>.</h6>
+<span class="type">Commento</span> <span class="codenumber">1.3.4</span>.</h6>
 <p id="p-57">Nell'esempio precedente sono da segnalare le cuspidi sulle configurazioni ottenute applicando la trasformazione. Si può dire qualcosa a riguardo? La valutazione del gradiente sui punti del cerchio che vengono mappati sugli apici delle cuspidi consentirebbe di fare un ipotesi su cosa avvenga in questi punti. Elementi di valutazione su tale aspetto verranno forniti nella sezione <a href="determinant_sec_strain_chap_it.html" class="internal" title="Sezione 1.5: determinante del gradiente della trasformazione">Sezione 1.5</a>.</p></article><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">1.3.1</span> <span class="title">la nozione di tensore</span>
 </h3>
 <p id="p-58">Introducendo il gradiente della deformazione \(\tens{F}\) abbiamo fatto conoscenza con una categoria di oggetti matematici che vengono denominati <em class="emphasis">tensori del secondo ordine</em> o, semplicemente, <em class="emphasis">tensori</em>, essendo superfluo specificare l'ordine dei tensori che ricorrono più spesso nella meccanica dei solidi. Certamente tale incontro può essere causa di disorientamento, specialmente se si cerca anche di dare una definizione dei tensori nella forma più generale possibile. Pertanto si darà la definizione più correntemente utilizzata in <em class="emphasis">Meccanica dei solidi</em>, definizione anche abbastanza scontata rispetto a quanto detto finora a proposito di trasformazioni lineari.</p>
 <article class="definition-like" id="definition-1"><h6 class="heading">
-<span class="type">Definizione</span> <span class="codenumber">1.3.4</span>.</h6>
+<span class="type">Definizione</span> <span class="codenumber">1.3.5</span>.</h6>
 <p id="p-59">Un tensore del secondo ordine, che in genere indicheremo con lettere maiuscole ed in grassetto (ad esempio \(\tens{A}\text{,}\) \(\tens{B}\text{,}\)  \(\tens{C}\text{,}\)  \(\dots\) ), è una trasformazione lineare che associa ad un generico vettore \(\vec{u}\) un altro vettore \(\vec{v}\text{.}\) Tale operazione di associazione viene indicata abitualmente come segue</p>
 <div class="displaymath">
 \begin{equation}

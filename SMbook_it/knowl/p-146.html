@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:46+02:00    *-->
+<!--*    on 2020-04-06T13:39:56+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,14 +13,77 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Si consideri la seguente trasformazione</p>
+<p>Dato un tensore \(\tens{W}\) emisimmetrico, la cui forma matriciale ad esso associata per definizione sarà</p>
 <div class="displaymath">
-\begin{align*}
-x_1 \amp= X_1^2\,,\\
-x_2 \amp= X_3^2\,,\\
-x_3 \amp= X_2 X_3\,.
-\end{align*}
+\begin{equation*}
+\mat{W} =
+\left[\begin{array}{ccc}
+0 \amp W_{12} \amp W_{13}\\
+-W_{12} \amp 0 \amp W_{23}\\
+-W_{13} \amp -W_{23} \amp 0 
+\end{array}\right]\,,
+\end{equation*}
 </div>
-<span class="incontext"><a href="exercises_sec_strain_chap_it.html#p-146">in-context</a></span>
+<p>si può verificare come la sua applicazione ad un vettore \(\vec{v}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\left[\begin{array}{ccc}
+0 \amp W_{12} \amp W_{13}\\
+-W_{12} \amp 0 \amp W_{23}\\
+-W_{13} \amp -W_{23} \amp 0 
+\end{array}\right]
+\left[\begin{array}{c}
+v_1\\
+v_2\\
+v_3
+\end{array}\right]
+=
+\left[\begin{array}{c}
+W_{12}v_2 + W_{13}v_3 \\
+-W_{12}v_1 + W_{23}v_3\\
+-W_{13}v_1 -W_{23}v_2
+\end{array}\right]
+\end{equation*}
+</div>
+<p>equivalga a calcolare il seguente prodotto vettoriale</p>
+<div class="displaymath">
+\begin{equation*}
+\left[\begin{array}{c}
+\omega_1\\
+\omega_2\\
+\omega_3
+\end{array}\right]
+\times
+\left[\begin{array}{c}
+v_1\\
+v_2\\
+v_3
+\end{array}\right]
+=
+\left[\begin{array}{c}
+\omega_2 v_3 - \omega_3 v_2\\
+\omega_3 v_1 - \omega_1 v_3\\
+\omega_1 v_2 - \omega_2 v_1
+\end{array}\right]
+\end{equation*}
+</div>
+<p>dove le componenti di \(\vec{\omega}\) sono messe in corrispondenza con le componenti di \(\tens{W}\) nel modo seguente</p>
+<div class="displaymath">
+\begin{equation}
+\omega_{1} = -W_{23}\,,\quad \omega_{2} = W_{13}\,,\quad \omega_{3} = -W_{12}\,.\tag{1.9.13}
+\end{equation}
+</div>
+<p>Quindi, noto \(\vec{\omega}\text{,}\) \(\tens{W}\) può essere espresso come segue</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{W} =
+\left[\begin{array}{ccc}
+0 \amp -\omega_{3} \amp \omega_{2}\\
+\omega_{3} \amp 0 \amp -\omega_{1}\\
+-\omega_{2} \amp \omega_{1} \amp 0 
+\end{array}\right]\,.
+\end{equation*}
+</div>
+<span class="incontext"><a href="infinitesimal_sec_strain_chap_it.html#p-146">in-context</a></span>
 </body>
 </html>

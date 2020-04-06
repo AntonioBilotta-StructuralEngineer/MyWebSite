@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:47+02:00    *-->
+<!--*    on 2020-04-06T13:39:58+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,29 +13,20 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Per i due corpi rigidi in esame si scelgono come poli i punti B e D riferendo quindi la cinematica ai seguenti 6 parametri lagrangiani (\(n=6\)): <figure class="figure-like"><div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="images/arcoatrecerniere_labile_parametri_lagrangiani.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">4.4.15.</span> </figcaption></figure> Utilizzando sempre il modello di moto piano rappresentato dall'equazione <a data-knowl="./knowl/mat_small_rigid_u_eq.html" title="Equazione 4.1.5">(4.1.5)</a> le condizioni di vincolo possono essere espresse rispetto alle coordinate lagrangiane scelte ottenendo quanto segue,</p>
-<div class="displaymath">
-\begin{gather*}
-u_{1B} + \varphi_{B} 2l = 0\,,\\
-u_{2B} = 0\,,\\
-u_{1B} = u_{1D}\,,\\
-u_{2B} + \varphi_{B} 2l = u_{2D}-\varphi_{D} l\,,\\
-u_{2D} = 0\,.
-\end{gather*}
-</div>
-<p>La scrittura matriciale del sistema di equazioni di vincolo In forma matriciale fornisce</p>
+<p>Si può ottenere un risultato più interessante assumendo una condizione di spostamento assegnato non nullo su uno o più gradi di vincolo. Ad esempio: <figure class="figure-like"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="images/arcoatrecerniere_cinematica_bis.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span> <span class="codenumber">4.4.11.</span> </figcaption></figure> In tal caso la forma matriciale delle condizioni vincolari fornisce</p>
 <div class="displaymath">
 \begin{equation*}
 \underbrace{\left[\begin{array}{cccccc}
-1 &amp; 0 &amp; 2l &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
 1 &amp; 0 &amp; 0 &amp; -1 &amp; 0 &amp; 0\\
-0 &amp; 1 &amp; 2l &amp; 0 &amp; -1 &amp; l\\
-0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0
+0 &amp; 1 &amp; 2l &amp; 0 &amp; -1 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; l\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 2l
 \end{array}\right]}_{\mat{A}}
-\underbrace{\left[\begin{array}{c} u_{1B} \\ u_{2B} \\ \varphi_{B} \\ u_{1D} \\ u_{2D} \\ \varphi_{D} \end{array}\right]}_{\vec{q}} =
-\underbrace{\left[\begin{array}{c} 0 \\ 0 \\ 0 \\ 0 \\ 0 \end{array}\right]}_{\vec{d}}.
+\underbrace{\left[\begin{array}{c} u_{1A} \\ u_{2A} \\ \varphi_{A} \\ u_{1B'} \\ u_{2B'} \\ \varphi_{B'} \end{array}\right]}_{\vec{q}} =
+\underbrace{\left[\begin{array}{c} l/4 \\ 0 \\ 0 \\ 0 \\ 0 \\ 0 \end{array}\right]}_{\vec{d}}\,.
 \end{equation*}
 </div>
 <span class="incontext"><a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html#p-390">in-context</a></span>

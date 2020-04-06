@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:47+02:00    *-->
+<!--*    on 2020-04-06T13:39:58+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,31 +13,21 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Le sopra elencate equazioni, di equilibrio e relative condizioni al contorno, sono formulabili in MATLAB come segue consentendo il calcolo della soluzione \(\func{w}{x}\) e del relativo momento flettente  \(\func{M}{x}\text{.}\) Si forniscono anche le istruzioni per il plottaggio delle due funzioni. <figure class="figure-like"><pre class="console"><b>syms w(x) EJ q l;
-ode = -EJ*diff(w,x,4) + q == 0;
-D1w = diff(w,x,1);
-D2w = diff(w,x,2);
-D3w = diff(w,x,3);
-cond1 = w(0) == 0;
-cond2 = D1w(0) == 0;
-cond3 = -EJ*D3w(l) == 0;
-cond4 = -EJ*D2w(l) == 0;
-conds = [cond1 cond2 cond3 cond4];
-sol(x,EJ,q,l) = dsolve(ode,conds)
-M(x,EJ,q,l) = -EJ*diff(sol,x,2)
-
-np = 100;
-Xv = 0:1/np:1;
-wv = sol(Xv,1,1,1);
-Beam = zeros(1, np+1);
-plot(Xv,wv,'r',Xv,Beam,'k','LineWidth',2)
-set(gca, 'YDir','reverse')
-
-Mv = M(Xv,1,1,1);
-plot(Xv,Mv,'b',Xv,Beam,'k','LineWidth',2)
-set(gca, 'YDir','reverse')
-</b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">3.8.5.</span> </figcaption></figure></p>
+<p>L'applicazione dell'equazione di equilibrio <a data-knowl="./knowl/bent_beam_navier.html" title="Equazione 3.6.34">(3.6.34)</a> allo schema sopra riportato fornisce</p>
+<div class="displaymath">
+\begin{equation*}
+EJ\,\frac{d^4w}{dx^4} = 0\,.
+\end{equation*}
+</div>
+<p>Equazione differenziale del 4\(^o\) ordine a cui occorre associare le condizioni al contorno che, nel caso in esame, sono di tipo cinematico all'estremo \(x=0\) e di tipo statico all'estremo \(x=l\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+\amp \func{w}{0} = 0\,,\\
+\amp \func{\frac{dw}{dx}}{0} = 0\,,\\
+\amp \func{\frac{d M}{dx}}{l} = \frac{d}{dx}\left(-EJ\,\func{\frac{d^2w}{dx^2}}{l}\right) = -EJ\,\func{\frac{d^3w}{dx^3}}{l}  = F\,,\\
+\amp \func{M}{l} = -EJ\,\func{\frac{d^2w}{dx^2}}{l} = 0\,.
+\end{align*}
+</div>
 <span class="incontext"><a href="bent_beam_applications_sec_elasticity_chap_it.html#p-331">in-context</a></span>
 </body>
 </html>

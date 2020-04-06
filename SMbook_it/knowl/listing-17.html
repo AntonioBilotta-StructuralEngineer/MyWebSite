@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:45+02:00    *-->
+<!--*    on 2020-04-06T13:39:56+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,11 +12,37 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<figure class="figure-like"><pre class="console"><b>U = ...
-[5.2500 -1.0607 -1.7500; ...
--1.0607 3.5000 -1.0607; ...
--1.7500 -1.0607 5.2500];
-[V, D] = eig(U)
+<figure class="figure-like"><pre class="console"><b>Q1 = [1 -1 -1 1 1; 1 1 -1 -1 1];
+Q2 = [1 0 -1 0 1; 0 1 0 -1 0];
+
+x = Q1(1,:);
+y = Q1(2,:);
+
+pbaspect([1 1 1])
+line(x,y,'Color','red','LineWidth',2)
+
+x = Q2(1,:);
+y = Q2(2,:);
+line(x,y,'Color','blue','LineWidth',2)
+
+
+u1 = [1/sqrt(2); 1/sqrt(2)];
+u2 = [-1/sqrt(2); 1/sqrt(2)];
+syms U(lam) 
+U(lam) = [u1 u2]*diag([1.2*lam lam])*transpose([u1 u2]);
+
+
+for v = 1.1:0.1:1.5
+  UQ1 = U(v)*Q1;
+  x = UQ1(1,:);
+  y = UQ1(2,:);
+  line(x,y,'Color','red','LineWidth',2)
+
+  UQ2 = U(v)*Q2;
+  x = UQ2(1,:);
+  y = UQ2(2,:);
+  line(x,y,'Color','blue','LineWidth',2)
+end
 </b></pre>
 <figcaption><span class="type">Listato</span> <span class="codenumber">1.7.6.</span> </figcaption></figure><span class="incontext"><a href="principal_directions_sec_strain_chap_it.html#listing-17">in-context</a></span>
 </body>

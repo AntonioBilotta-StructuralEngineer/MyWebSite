@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:47+02:00    *-->
+<!--*    on 2020-04-06T13:39:58+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,26 +13,21 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Si supponga di modificare il problema assegnato nel modo seguente. <figure class="figure-like"><div class="image-box" style="width: 61%; margin-left: 19.5%; margin-right: 19.5%;"><img src="images/trave_appoggiata_cinematica_bis.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">4.4.5.</span> </figcaption></figure> In tal caso occorre modificare semplicemente la condizione vincolare per il carrello posto nel punto \(B\) ovvero</p>
+<p>La “lettura” delle condizioni di vincolo assegnate fornisce</p>
 <div class="displaymath">
-\begin{equation*}
-u_{2B} = l/10\,.
-\end{equation*}
+\begin{gather*}
+\vec{u}_A = \vec0\,,\\
+\vec{u}_B \cdot \vec{n}_B = 0\,,
+\end{gather*}
 </div>
-<p>Pertanto sul sistema di equazioni da analizzare l'unico effetto è costituito solo dalla modifica del vettore dei termini noti e non si ha nessun effetto sulla classificazione del sistema che resta sempre cinematicamente determinato (la matrice \(A\) non è cambiata!). Pertanto il sistema di equazioni diventa</p>
+<p>dove \(\vec{n}_B = \transp{[0 \; 1]}\text{.}\) Le condizioni sono riscrivibili mediante le seguenti 3 equazioni scalari (\(m=3\)):</p>
 <div class="displaymath">
-\begin{equation*}
-\underbrace{\left[\begin{array}{ccc}
-1 &amp; 0 &amp; 0\\
-0 &amp; 1 &amp; 0\\
-0 &amp; 1 &amp; l
-\end{array}\right]}_{\mat{A}}
-\underbrace{\left[\begin{array}{c} u_{1A} \\ u_{2A} \\ \varphi_{A} \end{array}\right]}_{\vec{q}} =
-\underbrace{\left[\begin{array}{c} 0 \\ 0 \\ l/10 \end{array}\right]}_{\vec{d}}.
-\end{equation*}
+\begin{gather*}
+u_{1A} = 0\,,\\
+u_{2A} = 0\,,\\
+u_{2B} = 0\,.
+\end{gather*}
 </div>
-<p>La soluzione del sistema lineare fornisce i nuovi valori assunti dai parametri lagrangiani \(u_{1A}\text{,}\) \(u_{2A}\) e \(\varphi_{A}\text{.}\)</p>
 <span class="incontext"><a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html#p-376">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:46+02:00    *-->
+<!--*    on 2020-04-06T13:39:57+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,25 +13,18 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>A causa dello spostamento \(x\) misurato a partire dalla posizione di equilibrio, il corpo è soggetto alla forza d'inerzia \(m\,\frac{d^2 x}{dt^2}\) e alla forza elastica \(k\,x\) dirette come indicato in figura. Per l'equilibrio del sistema si ha</p>
+<p>Nelle sezioni successive viene presentata e discussa tale problematica, non nei termini più generali possibili, ma rispetto al contesto in larga parte già utilizzato per il problema sopra esaminato. Ovvero nel contesto di piccoli spostamenti e piccole deformazioni overro l'ambito degli <em class="emphasis">spostamenti infinitesimi</em>. Pertanto verrà stabilito un legame tra la tensione di Cauchy e il tensore della deformazione infinitesima:</p>
 <div class="displaymath">
-\begin{equation*}
--m\,\frac{d^2 x}{dt^2} - k\,x = 0\,,
-\end{equation*}
+\begin{equation}
+\tens{\sigma} = \func{\tens{\sigma}}{\tens{\varepsilon}}\,.\tag{3.1.23}
+\end{equation}
 </div>
-<p>ovvero, introducendo la quantità \(\omega = \sqrt{\frac{k}{m}}\text{,}\)</p>
+<p>Si ricorda che, per spostamenti infinitesimi, il tensore della deformazione infinitesima costituisce un'approssimazione della deformazione di Green-Lagrange, si veda la <a href="infinitesimal_sec_strain_chap_it.html" class="internal" title="Sezione 1.9: tensore della deformazione infinitesima">Sezione 1.9</a>, e che nel calcolo del lavoro interno compare proprio tale tensore. Infatti</p>
 <div class="displaymath">
-\begin{equation*}
-\frac{d^2 x}{dt^2} + \omega^2\,x = 0\,.
-\end{equation*}
+\begin{equation}
+\text{L}_{\text{int}} = \int_{\body_0} \tens{\sigma} : \text{sym}\tens{\nabla u}\,dV = \int_{\body_0} \tens{\sigma} : \tens{\varepsilon}\,dV\,.\tag{3.1.24}
+\end{equation}
 </div>
-<p>L'equazione differenziale ottenuta caratterizza un sistema che, in meccanica, viene denominato <em class="emphasis">oscillatore armonico semplice</em>. La soluzione dell'equazione differenziale è descritta dalla funzione</p>
-<div class="displaymath">
-\begin{equation*}
-\func{x}{t} = \func{x}{0}\,\cos{(\omega\,t)} + \frac{1}{\omega}\func{\frac{dx}{dt}}{0}\,\sin{(\omega\,t)} \,,
-\end{equation*}
-</div>
-<p>dove \(\func{x}{0}\) e \(\func{\frac{dx}{dt}}{0}\) rappresentano le condizioni iniziali. \(\omega\) prende il nome di pulsazione e viene misurata in \(\left[\frac{\text{rad}}{\text{s}}\right]\text{.}\)</p>
-<span class="incontext"><a href="uniaxial_sec_elasticity_chap_it.html#p-245">in-context</a></span>
+<span class="incontext"><a href="motivations_sec_elasticity_chap_it.html#p-245">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:47+02:00    *-->
+<!--*    on 2020-04-06T13:39:58+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,21 +12,20 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="assemblage-like"><p>Si riportano le istruzioni MATLAB utilizzabili per la soluzione del sistema di equazioni differenziali. <figure class="figure-like"><pre class="console"><b>syms ua(x) ub(x) EA F l a;
-Dua = diff(ua);
-Dub = diff(ub);
-ode1 = EA*diff(ua,x,2) == 0;
-ode2 = EA*diff(ub,x,2) == 0;
-odes = [ode1; ode2];
-cond1 = ua(0) == 0;
-cond2 = ub(l) == 0;
-cond3 = ua(a) == ub(a);
-cond4 = EA*Dua(a) - EA*Dub(a) == F;
-conds = [cond1 cond2 cond3 cond4];
-sols = dsolve(odes,conds);
-sols.ua
-sols.ub
+<article class="assemblage-like"><h6 class="heading"><span class="title">soluzione tramite MATLAB.</span></h6>
+<p>L'integrale generale può essere calcolato utilizzando le seguenti istruzioni. <figure class="figure-like"><pre class="console"><b>syms u(x) EA;
+ode = EA*diff(u,x,2) == 0
+dsolve(ode)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">3.7.5.</span> </figcaption></figure></p></article><span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#assemblage-22">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">3.7.2.</span> </figcaption></figure></p>
+<p>La soluzione che verifica anche le condizioni al contorno assegnate si ottiene invece con le seguenti istruzioni. <figure class="figure-like"><pre class="console"><b>syms u(x) EA F l;
+Du = diff(u);
+ode = EA*diff(u,x,2) == 0;
+cond1 = u(0) == 0;
+cond2 = EA*Du(l) == F;
+conds = [cond1 cond2];
+dsolve(ode,conds)
+</b></pre>
+<figcaption><span class="type">Listato</span> <span class="codenumber">3.7.3.</span> </figcaption></figure></p></article><span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#assemblage-22">in-context</a></span>
 </body>
 </html>

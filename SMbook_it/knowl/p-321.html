@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:47+02:00    *-->
+<!--*    on 2020-04-06T13:39:58+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,20 +13,11 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Da cui si ottiene la seguente soluzione in termini di spostamenti incogniti</p>
-<div class="displaymath">
-\begin{align*}
-u_a \amp= \frac{F}{EA}\frac{l-a}{l}\,x\,,\quad 0 \leq x \leq a\,,\\
-u_b \amp= \frac{F}{EA}\frac{l-x}{l}\,a\,,\quad a \leq x \leq l\,.
-\end{align*}
-</div>
-<p>Per derivazione si ottiene la soluzione in termini di sforzi normali sui due domini</p>
-<div class="displaymath">
-\begin{align*}
-N_a \amp= EA\, \frac{du_a}{dx} = F\,\frac{l-a}{l}\,,\quad 0 \leq x \leq a\,,\\
-N_b \amp= EA\, \frac{du_b}{dx} = -F\,\frac{a}{l}\,,\quad a \leq x \leq l\,.
-\end{align*}
-</div>
+<p>L'integrale generale può essere calcolato utilizzando le seguenti istruzioni. <figure class="figure-like"><pre class="console"><b>syms u(x) EA;
+ode = EA*diff(u,x,2) == 0
+dsolve(ode)
+</b></pre>
+<figcaption><span class="type">Listato</span> <span class="codenumber">3.7.2.</span> </figcaption></figure></p>
 <span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#p-321">in-context</a></span>
 </body>
 </html>

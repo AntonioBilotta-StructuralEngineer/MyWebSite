@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:42+02:00    *-->
+<!--*    on 2020-04-06T13:39:53+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -192,11 +192,10 @@ var js_version = 0.12;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="measures_sec_strain_chap_it"><h2 class="heading hide-type">
 <span class="type">Sezione</span> <span class="codenumber">1.8</span> <span class="title">misure di deformazione</span>
 </h2>
-<a href="measures_sec_strain_chap_it.html" class="permalink">¶</a><p id="p-122">Quanto descritto in <span>(((Unresolved xref, reference "pol_dec_insight"; check spelling or use "provisional" attribute)))</span><a href="" class="internal" title=""> </a> ha consentito di discutere più in dettaglio l'operazione di decomposizione polare, operazione che svolge un ruolo fondamentale sia nella descrizione generale della cinematica dei corpi sia nella costruzione di modelli strutturali, specialmente di tipo non lineare. Ma certamente non rappresentata una modalità pratica per risalire al solo contenuto deformativo del gradiente della trasformazione. Nasce quindi la necessità di individuare una maniera alternativa per risalire al solo contenuto deformativo del tensore \(\tens{F}\) filtrando la rotazione in essa contenuta.</p>
-<section class="subsection" id="subsection-9"><h3 class="heading hide-type">
+<a href="measures_sec_strain_chap_it.html" class="permalink">¶</a><section class="subsection" id="subsection-9"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">1.8.1</span> <span class="title">tensore di deformazione di Cauchy-Green</span>
 </h3>
-<p id="p-123">Si consideri il seguente prodotto</p>
+<p id="p-124">Si consideri il seguente prodotto</p>
 <div class="displaymath">
 \begin{equation*}
 \transp{\tens{F}}\,\tens{F}\,.
@@ -217,7 +216,57 @@ var js_version = 0.12;
 <p>prende il nome di <em class="emphasis">tensore destro di Cauchy-Green</em> e , come \(\tens{U}\text{,}\) è simmetrico e definito positivo. Esso costituisce una misura importante della deformazione.</p>
 <article class="remark-like" id="remark-8"><h6 class="heading">
 <span class="type">Commento</span> <span class="codenumber">1.8.1</span>.</h6>
-<p id="p-124">Si potrebbe pensare che, noto \(\tens{U}^2\text{,}\) la semplice operazione \(\tens{U}=\sqrt{\tens{C}}\) consenta la valutazione di \(\tens{U}\text{.}\) L'operazione è possibile ma non è banale perché richiede la valutazione degli autovalori e degli autovettori di \(\tens{C}\text{.}\) Per tale ragione nelle misure di deformazione si utilizza direttamente il tensore \(\tens{C}\) o altre grandezze derivate.</p></article><p id="p-125">In maniera analoga si perviene al <em class="emphasis">tensore sinistro di Cauchy-Green</em>, ovvero</p>
+<p id="p-125">Si potrebbe pensare che, noto \(\tens{U}^2\text{,}\) la semplice operazione \(\tens{U}=\sqrt{\tens{C}}\) consenta la valutazione di \(\tens{U}\text{.}\) L'operazione è possibile ma non è banale perché richiede la valutazione degli autovalori e degli autovettori di \(\tens{C}\text{.}\) Per tale ragione nelle misure di deformazione si utilizza direttamente il tensore \(\tens{C}\) o altre grandezze derivate.</p>
+<article class="assemblage-like" id="assemblage-13"><p id="p-126">Al fine di illustrare comunque la procedura sopra descritta si consideri il seguente gradiente della trasformazione</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{F}=
+\left[ \begin{array}{ccc}
+4.4623 \amp  -3.2249 \amp  -0.4874 \\
+2.9623  \amp  1.7249 \amp  -1.9874 \\
+-1.7500 \amp  -1.0607 \amp   5.2500 
+\end{array}\right]\,.
+\end{equation*}
+</div>
+<p>A partire da tale espressione le seguenti istruzioni MATLAB consentono di valutare gli autovettori e gli autovalori di \(\tens{U}^2\text{.}\)</p>
+<p id="p-127"><figure class="figure-like" id="listing-20"><pre class="console"><b>F = [4.4623   -3.2249   -0.4874;
+2.9623    1.7249   -1.9874;
+-1.7500   -1.0607    5.2500];
+U2 = transpose(F)*F;
+[u, D2] = eig(U2)
+</b></pre>
+<figcaption><span class="type">Listato</span> <span class="codenumber">1.8.2.</span> </figcaption></figure></p>
+<p id="p-128">Le seguenti istruzioni invece, valutando gli allungamenti principali come</p>
+<div class="displaymath">
+\begin{equation*}
+\lambda_1 = \sqrt{D2(1,1)} = 2\,,\quad
+\lambda_2 = \sqrt{D2(2,2)} = 5\,,\quad
+\lambda_3 = \sqrt{D2(3,3)} = 7\,,
+\end{equation*}
+</div>
+<p>e le direzioni principali estraendole dalle colonne della matrice degli autovettori restituita da MATLAB, calcolano il tensore \(\tens{U}\) e quindi con la relazione</p>
+<div class="displaymath">
+\begin{equation*}
+\tens{R} = \tens{F}\tens{U}^{-1}\,,
+\end{equation*}
+</div>
+<p>anche la il tensore di rotazione associato alla decomposizione polare. Si valuta anche \(\tens{V}\) con la relazione</p>
+<div class="displaymath">
+\begin{equation*}
+\tens{V} = \tens{F}\transp{\tens{R}}
+\end{equation*}
+</div>
+<p id="p-129"><figure class="figure-like" id="listing-21"><pre class="console"><b>u1 = u(:,1);
+u2 = u(:,2);
+u3 = u(:,3);
+lam1 = sqrt(D2(1,1));
+lam2 = sqrt(D2(2,2));
+lam3 = sqrt(D2(3,3));
+U = lam1*u1*transpose(u1)+lam2*u2*transpose(u2)+lam3*u3*transpose(u3)
+R = F*inv(U)
+V = F*transpose(R)
+</b></pre>
+<figcaption><span class="type">Listato</span> <span class="codenumber">1.8.3.</span> </figcaption></figure></p></article></article><p id="p-130">In maniera analoga si perviene al <em class="emphasis">tensore sinistro di Cauchy-Green</em>, ovvero</p>
 <div class="displaymath">
 \begin{equation*}
 \tens{F}\,\transp{\tens{F}} = \tens{V}\tens{R} \, \transp{\left(\tens{V}\tens{R}\right)} = \tens{V}\tens{R} \, \transp{\tens{R}} \transp{\tens{V}} = \tens{V}\,\tens{V} = \tens{V}^2\,,
@@ -230,11 +279,11 @@ var js_version = 0.12;
 \end{equation}
 </div>
 <article class="remark-like" id="remark-9"><h6 class="heading">
-<span class="type">Commento</span> <span class="codenumber">1.8.2</span>.</h6>
-<p id="p-126">Tra i due tensori di Cauchy-Green, \(\tens{C}\) è più utilizzato nella meccanica dei solidi perché agisce sulla posizione del punto espressa nella configurazione di riferimento.</p></article><article class="remark-like" id="insight-2"><h6 class="heading">
-<span class="type">Approfondimento</span> <span class="codenumber">1.8.3</span>. <span class="title">interpretazione delle componenti del tensore \(\tens{C}\).</span>
+<span class="type">Commento</span> <span class="codenumber">1.8.4</span>.</h6>
+<p id="p-131">Tra i due tensori di Cauchy-Green, \(\tens{C}\) è più utilizzato nella meccanica dei solidi perché agisce sulla posizione del punto espressa nella configurazione di riferimento.</p></article><article class="remark-like" id="insight-2"><h6 class="heading">
+<span class="type">Approfondimento</span> <span class="codenumber">1.8.5</span>. <span class="title">interpretazione delle componenti del tensore \(\tens{C}\).</span>
 </h6>
-<p id="p-127">La generica componente del tensore \(\tens{C}\) è esprimibile come segue</p>
+<p id="p-132">La generica componente del tensore \(\tens{C}\) è esprimibile come segue</p>
 <div class="displaymath">
 \begin{equation*}
 C_{ij} = \vec{e}_i \cdot \tens{C}\vec{e}_j\,.
@@ -252,8 +301,8 @@ C_{ii} = \vec{e}_i \cdot \tens{C}\vec{e}_i = \vec{e}_i \cdot \transp{\tens{F}}\t
 C_{ii} = \vec{e}_i \cdot \tens{C}\vec{e}_i = \func{\lambda}{\vec{e}_i}^2\,,\label{Cii_eq}\tag{1.8.4}
 \end{equation}
 </div>
-<p>dove con \(\func{\lambda}{\vec{e}_i}\) si è indicato l'<em class="emphasis">allungamento lungo la direzione \(\vec{e}_i\)</em>. Ovviamente nel caso di forma diagonale del tensore \(\tens{C}\) tale allungamento coincide con il corrispondente autovalore di \(\tens{U}\text{.}\)</p>
-<p id="p-128">Per le componenti fuori dalla diagonale principale si ottiene</p>
+<p>dove con \(\func{\lambda}{\vec{e}_i}\) si è indicato l'<em class="emphasis">allungamento lungo la direzione \(\vec{e}_i\)</em>. Ovviamente nel caso di forma diagonale del tensore \(\tens{C}\) tale allungamento coincide con il corrispondente allungamento principale o autovalore di \(\tens{U}\text{.}\)</p>
+<p id="p-133">Per le componenti fuori dalla diagonale principale si ottiene</p>
 <div class="displaymath">
 \begin{equation*}
 C_{ij} = \vec{e}_i \cdot \tens{C}\vec{e}_j = \vec{e}_i \cdot \transp{\tens{F}}\tens{F}\vec{e}_j = \tens{F}\vec{e}_i \cdot \tens{F}\vec{e}_j = \cos{\func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}} \| \tens{F}\vec{e}_i\|\, \| \tens{F}\vec{e}_j\|\,,
@@ -287,7 +336,7 @@ C_{ij} = \sin{\func{\gamma}{\vec{e}_i,\vec{e}_j}}\, \func{\lambda}{\vec{e}_i} \,
 <p>La quantità \(\func{\gamma}{\vec{e}_i,\vec{e}_j}\) prende il nome di <em class="emphasis">angolo di taglio</em> o, più semplicemente, <em class="emphasis">taglio</em>. Nei casi in cui \(\func{\gamma}{\vec{e}_i,\vec{e}_j}\) è nullo, ovvero l'angolo formato dalle direzioni \(\vec{e}_i\) ed \(\vec{e}_j\) non varia, la componennte fuori diagonale \(C_{ij}\) è nulla.</p></article></section><section class="subsection" id="subsection-10"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">1.8.2</span> <span class="title">tensore della deformazione di Green-Lagrange</span>
 </h3>
-<p id="p-129">Una misura di deformazione molto utilizzata si basa sulla differenza dei quadrati delle lunghezze nella configurazione attuale ed in quella di riferimento. In particolare si ricava quanto segue</p>
+<p id="p-134">Una misura di deformazione molto utilizzata si basa sulla differenza dei quadrati delle lunghezze nella configurazione attuale ed in quella di riferimento. In particolare si ricava quanto segue</p>
 <div class="displaymath">
 \begin{align*}
 \frac{1}{2}\left(\|d\vec{x}\|^2 - \|d\vec{X}\|^2\right) \amp = \frac{1}{2}\left(d\vec{x}\cdot d\vec{x} - d\vec{X}\cdot d\vec{X}\right)\,,\\
@@ -304,11 +353,11 @@ C_{ij} = \sin{\func{\gamma}{\vec{e}_i,\vec{e}_j}}\, \func{\lambda}{\vec{e}_i} \,
 </div>
 <p>noto come <em class="emphasis">tensore della deformazione di Green-Lagrange</em> (l'utilizzo del fattore \(\frac{1}{2}\) diverrà chiaro nel seguito). Il tensore \(\tens{E}\) è simmetrico ma non è definito positivo.</p>
 <article class="remark-like" id="remark-10"><h6 class="heading">
-<span class="type">Commento</span> <span class="codenumber">1.8.4</span>.</h6>
-<p id="p-130">Il tensore \(\tens{C} = \tens{U}^2\) è definito positivo in quanto correlato al quadrato del fattore di scala con il quale viene modificata la lunghezza del generico segmento \(d\vec{X}\text{.}\) Nel campo delle deformazioni ammissibili, tale fattore di scala, come per aree e volumi, non può annullarsi. Con il tensore di Green-Lagrange si introduce una misura dell'allungamento del segmento \(d\vec{X}\) rispetto alla sua dimensione iniziale, rendendo possibile quindi valori negativi della misura di Green-Lagrange quando il segmento si accorcia, ovvero valori nulli quando la lunghezza del segmento non cambia.</p></article></section><section class="subsection" id="subsection-11"><h3 class="heading hide-type">
+<span class="type">Commento</span> <span class="codenumber">1.8.6</span>.</h6>
+<p id="p-135">Il tensore \(\tens{C} = \tens{U}^2\) è definito positivo in quanto correlato al quadrato del fattore di scala con il quale viene modificata la lunghezza del generico segmento \(d\vec{X}\text{.}\) Nel campo delle deformazioni ammissibili, tale fattore di scala, come per aree e volumi, non può annullarsi. Con il tensore di Green-Lagrange si introduce una misura dell'allungamento del segmento \(d\vec{X}\) rispetto alla sua dimensione iniziale, rendendo possibile quindi valori negativi della misura di Green-Lagrange quando il segmento si accorcia, ovvero valori nulli quando la lunghezza del segmento non cambia.</p></article></section><section class="subsection" id="subsection-11"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">1.8.3</span> <span class="title">tensori della deformazione e gradiente del campo di spostamento</span>
 </h3>
-<p id="p-131">I modelli meccanici che verranno discussi durante il corso tipicamente vengono formulati utilizzando come ente cinematico il campo di spostamento che, si ricorda, è definito come \(\vec{u} = \vec{x}-\vec{X}\text{.}\) Da cui \(\tens{F} = \tens{I}+\tens{\nabla u}\text{.}\) Pertanto il tensore di Green-Lagrange è esprimibile come</p>
+<p id="p-136">I modelli meccanici che verranno discussi durante il corso tipicamente vengono formulati utilizzando come ente cinematico il campo di spostamento che, si ricorda, è definito come \(\vec{u} = \vec{x}-\vec{X}\text{.}\) Da cui \(\tens{F} = \tens{I}+\tens{\nabla u}\text{.}\) Pertanto il tensore di Green-Lagrange è esprimibile come</p>
 <div class="displaymath">
 \begin{align*}
 \tens{E} \amp = \frac{1}{2}\left( \transp{\tens{F}}\,\tens{F} - \tens{I}\right)\,,\\
@@ -323,7 +372,7 @@ C_{ij} = \sin{\func{\gamma}{\vec{e}_i,\vec{e}_j}}\, \func{\lambda}{\vec{e}_i} \,
 \tens{E} = \frac{1}{2}\left(\tens{\nabla u} + \transp{\tens{\nabla u}}\right) + \frac{1}{2} \transp{\tens{\nabla u}}\,\tens{\nabla u} \,.\tag{1.8.8}
 \end{equation}
 </div>
-<p id="p-132">Analogamente anche \(\tens{C}\) può essere espresso rispetto al gradiente dello spostamento, ovvero</p>
+<p id="p-137">Analogamente anche \(\tens{C}\) può essere espresso rispetto al gradiente dello spostamento, ovvero</p>
 <div class="displaymath">
 \begin{equation*}
 \tens{C} = \transp{\tens{F}}\tens{F} = \transp{(\tens{I}+\tens{\nabla u})} (\tens{I}+\tens{\nabla u})\,,

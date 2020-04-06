@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:48+02:00    *-->
+<!--*    on 2020-04-06T13:39:59+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,45 +12,17 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<figure class="figure-like"><pre class="console"><b>% diagramma dello sforzo normale
-syms N(x);
-N(x) = 0;
-
+<figure class="figure-like"><pre class="console"><b>% carico ripartito parabolico
+syms q l x;
+carico(x, q, l) = q/l^2*x^2;
 np = 100;
-Xv = 0:1/np:1;
-Nv = N(Xv);
-Beam = zeros(1, np+1);
+xv = 0:1/np:1;
+qv = carico(xv, 1, 1);
+plot(xv,qv,'r','LineWidth',2)
 
-plot(Xv,Nv,'g',Xv,Beam,'k','LineWidth',2)
-set(gca, 'Ylim', [-1 1])
-
-
-% diagramma del taglio
-syms T(x,q,l);
-T(x,q,l) = -q*x+q*l/2;
-
-np = 100;
-Xv = 0:1/np:1;
-Tv = T(Xv, 1, 1);
-Beam = zeros(1, np+1);
-
-plot(Xv,Tv,'b',Xv,Beam,'k','LineWidth',2)
-set(gca, 'Ylim', [-1 1])
-
-
-% diagramma del momento flettente
-syms M(x,q,l);
-M(x,q,l) = q*l/2*x - q*l*x^2/2;
-
-np = 100;
-Xv = 0:1/np:1;
-Mv = M(Xv, 1, 1);
-Beam = zeros(1, np+1);
-
-plot(Xv,Mv,'r',Xv,Beam,'k','LineWidth',2)
-set(gca, 'Ylim', [-1 1])
-set(gca, 'YDir','reverse')
+Rq = int(carico(x, q, l), x, 0, l)
+xq = int(carico(x, q, l)*x, x, 0, l)/Rq
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">5.9.8.</span> </figcaption></figure><span class="incontext"><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html#listing-55">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">5.7.9.</span> </figcaption></figure><span class="incontext"><a href="sollecitazioni_sec_rigid_body_statics_chap_it.html#listing-55">in-context</a></span>
 </body>
 </html>

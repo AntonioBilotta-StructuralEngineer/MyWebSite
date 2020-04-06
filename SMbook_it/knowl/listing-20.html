@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:46+02:00    *-->
+<!--*    on 2020-04-06T13:39:56+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,17 +12,12 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<figure class="figure-like"><pre class="console"><b>% terzo quesito
-T = @(X) [4-2*X(1)-X(2); 2+3/2*X(1)-X(2)/2];
-Square_0 = [0 1 1 0 0; 0 0 1 1 0];
-Square=[T(Square_0(:,1)) T(Square_0(:,2)) T(Square_0(:,3)) ...
-T(Square_0(:,4)) T(Square_0(:,5))];
-hold on
-plot(Square_0(1,:), Square_0(2,:), 'k-', "LineWidth", 4)
-plot(Square(1,:), Square(2,:), 'r-', "LineWidth", 2)
-ylim([0 4])
-pbaspect([1 1 1])
+<figure class="figure-like"><pre class="console"><b>F = [4.4623   -3.2249   -0.4874;
+2.9623    1.7249   -1.9874;
+-1.7500   -1.0607    5.2500];
+U2 = transpose(F)*F;
+[u, D2] = eig(U2)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.11.1.</span> </figcaption></figure><span class="incontext"><a href="answers_sec_strain_chap_it.html#listing-20">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">1.8.2.</span> </figcaption></figure><span class="incontext"><a href="measures_sec_strain_chap_it.html#listing-20">in-context</a></span>
 </body>
 </html>

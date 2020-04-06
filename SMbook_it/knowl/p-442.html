@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:48+02:00    *-->
+<!--*    on 2020-04-06T13:39:59+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,35 +13,25 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Lo schema rappresenta una trave incastrata ad una estremità e soggetta ad un carico ripartito variabile \(q(x)\text{.}\) L'unità di misura del carico ripartito è \(\left[ \frac{F}{L} \right]\text{,}\) per cui si parlerà di carico ripartito per unità di lunghezza. Il diagramma di corpo libero riportato in alto a destra nella figura consente la scrittura delle tre equazioni di equilibrio (orizzontale, verticale e rotazione intorno al punto \(A\)) fornendo:</p>
+<p>Lo stato di sforzo interno dei solidi mono-dimensionali, o travi, viene caratterizzato valutando in ogni punto le componenti della sollecitazione. Nel caso piano le componenti di sollecitazione sono tre: <em class="alert">sforzo normale (\(N\))</em>, <em class="alert">taglio (\(T\))</em> e <em class="alert">momento flettente (\(M\))</em>. Al fine di arrivare in maniera semmplice ad una definizione delle sollecitazioni, si consideri il seguente diagramma di corpo libero relativo ad un sistema equilibrato di forze. <figure class="figure-like"><div class="image-box" style="width: 43%; margin-left: 28.5%; margin-right: 28.5%;"><img src="images/schema1.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span> <span class="codenumber">5.7.1.</span> </figcaption></figure> Si immagini di separare il corpo in due parti mediante un piano passante per un generico punto \(s\) ottenendo i seguenti diagrammi di corpo libero <figure class="figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/schema2.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span> <span class="codenumber">5.7.2.</span> </figcaption></figure> dove si è postulato che le due parti si scambino, attraverso la sezione di separazione, delle azioni uguali ed opposte. Tali azioni dovranno essere comunque tali da soddisfare le equazioni di equilibrio su ciascuna parte ottenuta. In particolare, se si considera il tratto di lunghezza \(s\) si ottengono le seguenti equazioni (polo per l'equilibrio alla rotazione posto nell'ascissa \(s\)):</p>
 <div class="displaymath">
 \begin{align*}
-H_{A} \amp = 0\,,\\
-V_{A} -\int_0^l q(x) dx \amp = 0\,,\\
-\mathcal{M}_{A} - \int_0^l q(x) x dx \amp = 0\,.
+N - F \amp = 0\,,\\
+-T + F \amp = 0\,,\\
+M - F s + Fl \amp = 0\,.
 \end{align*}
 </div>
-<p>È facile rendersi conto che gli integrali presenti nelle equazioni hanno il significato di risultante del carico applicato</p>
-<div class="displaymath">
-\begin{equation*}
-\int_0^l q(x) dx = R_q
-\end{equation*}
-</div>
-<p>e momento statico rispetto al punto \(A\)</p>
-<div class="displaymath">
-\begin{equation*}
-\int_0^l q(x)x dx = S_q = R_q x_q,
-\end{equation*}
-</div>
-<p>dove \(x_q\) rappresenta il baricentro del carico rispetto ad un'asse passante per \(A\text{,}\) si veda l'ulteriore schema di corpo libero riportato in basso a destra nella figura. Pertanto le equazioni di equilibrio possono essere riscritte nel modo seguente:</p>
+<p>Sistema che fornisce la seguente soluzione per le componenti, incognite, di sollecitazione</p>
 <div class="displaymath">
 \begin{align*}
-H_{A} \amp = 0\,,\\
-V_{A} - R_q \amp = 0\,,\\
-\mathcal{M}_{A} - R_q x_q \amp = 0\,.
+N \amp= F\,,\\
+T \amp= F \,,\\
+M \amp= -F(l - s)\,.
 \end{align*}
 </div>
-<p>Quindi nei sistemi soggetti a carichi ripartiti è possibile sostituire questi ultimi con le rispettive risultanti posizionate nei baricentri. Si osserva che tale sostituzione è corretta solo per il calcolo delle reazioni vincolari e non per il calcolo delle sollecitazioni che verrà meglio descritto in seguito.</p>
+<p>Lo stesso risultato si otterrebbe applicando le equazioni di equilibrio al tratto di lunghezza \((l-s)\text{.}\)</p>
 <span class="incontext"><a href="sollecitazioni_sec_rigid_body_statics_chap_it.html#p-442">in-context</a></span>
 </body>
 </html>

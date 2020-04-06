@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:46+02:00    *-->
+<!--*    on 2020-04-06T13:39:57+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,17 +12,17 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="assemblage-like"><p>La seguente figura <figure class="figure-like"><div class="image-box" style="width: 85%; margin-left: 7.5%; margin-right: 7.5%;"><img src="images/armonico_semplice.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">3.2.5.</span> </figcaption></figure> ottenuta con le istruzioni MATLAB <figure class="figure-like"><pre class="console"><b>Edef(t) = 1/2*om^2*m*u(t)^2;
-Ekin(t) = 1/2*m*diff(u,t)^2;
+<article class="assemblage-like"><p>A scopo esemplificativo si riportano le istruzioni MATLAB utilizzabili per il plottaggio della funzione sulla base dei seguenti dati: \(\omega = 2\pi\;\left[\frac{\text{rad}}{\text{s}}\right]\text{,}\) \(m=10\;\left[\text{kg}\right]\text{,}\) \(\func{x}{0}= 1 \; \left[\text{m}\right]\) e \(\func{\frac{dx}{dt}}{0}= 10 \; \left[\frac{\text{m}}{\text{s}}\right]\text{.}\) <figure class="figure-like"><pre class="console"><b>om = 2*pi;
+u0 = 1;
+v0 = 10;
+m = 10;
+syms t 
+u(t) = u0*cos(om*t)+v0/om*sin(om*t);
 
-dd=Edef(tt);
-kk=Ekin(tt);
-
-scale = 5*u0 / (Edef(0)+Ekin(0));
-plot(tt,uu,'k',tt,dd*scale,'r',tt,kk*scale,'b','LineWidth',2)
-legend('spost.','en. def.','en. cinet.')
+tt=linspace(0,3,201);
+uu=u(tt);
+plot(tt,uu,'k','LineWidth',2)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">3.2.6.</span> </figcaption></figure> evidenzia in forma grafica la continua trasformazione dell'energia di deformazione della molla in energia cinetica del corpo e viceversa. Energia di deformazione (colore rosso) che oscilla fra lo zero fra il valore massimo che si ha quando il valore assoluto dello spostamento (colore nero) è massimo, allo stesso istante la velocità è nulla. Al contrario l'energia cinematica (colore blu) è massima quando il valore assoluto dello velocità è massima, quando allo stesso istante lo spostamento è nullo.</p></article><span class="incontext"><a href="uniaxial_sec_elasticity_chap_it.html#assemblage-14">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">3.2.4.</span> </figcaption></figure></p></article><span class="incontext"><a href="uniaxial_sec_elasticity_chap_it.html#assemblage-14">in-context</a></span>
 </body>
 </html>

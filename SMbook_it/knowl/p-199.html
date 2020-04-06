@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:46+02:00    *-->
+<!--*    on 2020-04-06T13:39:57+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,35 +13,13 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Lo stato tensionale che mantiene sempre la stessa forma rispetto a qualsiasi sistema di riferimento è lo stato caratterizzato da tensioni principali che assumono lo stesso valore, ovvero \(\sigma_1 = \sigma_2 = \sigma_3 = p\text{.}\) In tal caso, utilizzando la  <a data-knowl="./knowl/spectral_stress_eq.html" title="Equazione 2.4.3">(2.4.3)</a>, il tensore \(\tens{\sigma}\) assume la seguente forma</p>
+<p>Quanto discusso nella sezione <a href="principal_directions_sec_strain_chap_it.html" class="internal" title="Sezione 1.7: tensore di deformazione \(\tens{U}\) e direzioni principali (trasformazione degli elementi di linea)">Sezione 1.7</a> relativa alle direzioni principali del tensore \(\tens{U}\) è applicabile in larga parte anche al tensore della tensione \(\tens{\sigma}\text{.}\) Ambedue i tensori sono simmetrici e l'unico fondamentale distinguo che occorre effettuare è che, a differenza di \(\tens{U}\text{,}\) \(\tens{\sigma}\) non è definito positivo. Pertanto in questo caso gli autovalori, che individuano adesso le <em class="emphasis">tensioni principali</em> del tensore, potranno essere anche nulli o negativi. Comunque la simmetria di \(\tens{\sigma}\) consente la seguente rappresentazione spettrale del tensore</p>
 <div class="displaymath">
-\begin{equation*}
-\tens{\sigma} = p\,\vec{e}_1 \otimes \vec{e}_1 + p\,\vec{e}_2 \otimes \vec{e}_2 + p\,\vec{e}_3 \otimes \vec{e}_3\,,
-\end{equation*}
+\begin{equation}
+\tens{\sigma} = \sigma_1\,\vec{s}_1 \otimes \vec{s}_1 + \sigma_2\,\vec{s}_2 \otimes \vec{s}_2 + \sigma_3\,\vec{s}_3 \otimes \vec{s}_3\,,\tag{2.4.3}
+\end{equation}
 </div>
-<p>ovvero</p>
-<div class="displaymath">
-\begin{equation*}
-\tens{\sigma} = p \, \tens{I}\,.
-\end{equation*}
-</div>
-<p>La rappresentazione per componenti fornisce anche</p>
-<div class="displaymath">
-\begin{equation*}
-\mat{\sigma} =
-p \left[\begin{array}{ccc}
-1 \amp 0 \amp 0 \\
-0 \amp 1 \amp 0 \\
-0 \amp 0 \amp 1
-\end{array}\right]
-=
-\left[\begin{array}{ccc}
-p \amp 0 \amp 0 \\
-0 \amp p \amp 0 \\
-0 \amp 0 \amp p
-\end{array}\right]\,.
-\end{equation*}
-</div>
+<p>dove le <em class="emphasis">direzioni principali</em> \(\vec{s}_1\text{,}\) \(\vec{s}_2\text{,}\) \(\vec{s}_3\) sono gli autovettori di \(\tens{\sigma}\text{,}\) i quali costituiscono una terna ortonormale, e \(\sigma_1\text{,}\) \(\sigma_2\text{,}\) \(\sigma_3\) sono le tensioni principali.</p>
 <span class="incontext"><a href="stress_analysis_sec_stress_chap_it.html#p-199">in-context</a></span>
 </body>
 </html>

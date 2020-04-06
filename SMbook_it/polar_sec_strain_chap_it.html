@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:42+02:00    *-->
+<!--*    on 2020-04-06T13:39:53+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -233,10 +233,12 @@ d\vec{x} = \tens{F}\, d\vec{X} = \tens{R}\, \left(\tens{U}\, d\vec{X}\right) \,,
 d\vec{x} = \tens{F}\, d\vec{X} = \tens{V}\, \left(\tens{R}\, d\vec{X}\right) \,,\tag{1.6.6}
 \end{equation}
 </div>
-<p>da interpretare come sequenza di deformazione di \(d\vec{X}\) seguita da una rotazione. Il teorema di decomposizione polare coglie quindi le trasformazioni elementari, rotazione e deformazione pura, che compongono \(\tens{F}\) e mette in evidenza la non commutatività delle due trasformazioni.</p></article><article class="remark-like" id="rotation_remark"><h6 class="heading">
-<span class="type">Commento</span> <span class="codenumber">1.6.2</span>. <span class="title">tensori di rotazione.</span>
+<p>da interpretare come sequenza di deformazione di \(d\vec{X}\) seguita da una rotazione. Quanto detto viene illustrato dalla seguente figura. <figure class="figure-like" id="figure-6"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/polar_dec.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span> <span class="codenumber">1.6.2.</span> </figcaption></figure> In particolare si illustra il caso in cui il tensore destro della deformazione, \(\tens{U}\text{,}\) produce soltanto un allungamento in direzione orizzonale e, a seguire, il tensore \(\tens{R}\) produce una rotazione di 45\(^o\text{.}\) È evidente che nel caso in cui si applichi prima la rotazione, seconda e terza sequenza di trasformazioni in figura, il tensore della deformazione non può essere lo stesso ma deve essere diverso e pari la tensore sinistro  \(\tens{V}\) il quale consente di ottenere la stessa configurazione finale.</p>
+<p id="p-82">Il teorema di decomposizione polare coglie quindi le trasformazioni elementari, rotazione e deformazione pura, che compongono \(\tens{F}\) e mette in evidenza la non commutatività delle due trasformazioni. Inoltre se \(\tens{R}=\tens{I}\) e quindi \(\tens{F}=\tens{U}=\tens{V}\) la trasformazione, nel punto considerato, è una <em class="emphasis">deformazione pura</em>. Al contrario, \(\tens{U}=\tens{I}=\tens{V}\) e quindi \(\tens{F}=\tens{R}\) la trasformazione, nel punto considerato, è una <em class="emphasis">rotazione rigida</em>.</p></article><article class="remark-like" id="rotation_remark"><h6 class="heading">
+<span class="type">Commento</span> <span class="codenumber">1.6.3</span>. <span class="title">tensori di rotazione.</span>
 </h6>
-<p id="p-82">Abbiamo già più volte incontrato il tensore 2D relativo ad una rotazione in sento antiorario di \(90^o\) che in termini matriciali ha la seguente espressione</p>
+<p id="p-83">Abbiamo già più volte incontrato il tensore 2D relativo ad una rotazione in sento antiorario di \(90^o\) che in termini matriciali ha la seguente espressione</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{R}_{90^o} = 
@@ -256,7 +258,7 @@ d\vec{x} = \tens{F}\, d\vec{X} = \tens{V}\, \left(\tens{R}\, d\vec{X}\right) \,,
 \det{\tens{R}_{90^o}} = 1\,.
 \end{equation*}
 </div>
-<p>Le proprietà elencate non sono specifiche del particolare tensore considerato ma sono soddisfatte da tutti i tensori di rotazione, qualsiasi sia l'entità dell'angolo di rotazione. Al fine di verificare ciò, si consideri la trasformazione lineare che ruota di un generico angolo \(\theta\) un vettore assegnato \(\vec{X}\text{.}\) <p id="p-83"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><iframe id="video-6" width="456" height="256" allowfullscreen="" src="https://www.youtube.com/embed/CHisivWic3Q?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></p> Come mostrato si ottiene il seguente risultato</p>
+<p>Le proprietà elencate non sono specifiche del particolare tensore considerato ma sono soddisfatte da tutti i tensori di rotazione, qualsiasi sia l'entità dell'angolo di rotazione. Al fine di verificare ciò, si consideri la trasformazione lineare che ruota di un generico angolo \(\theta\) un vettore assegnato \(\vec{X}\text{.}\) <p id="p-84"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><iframe id="video-6" width="456" height="256" allowfullscreen="" src="https://www.youtube.com/embed/CHisivWic3Q?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></p> Come mostrato si ottiene il seguente risultato</p>
 <div class="displaymath">
 \begin{equation*}
 \vec{\chi}_{\theta}\left(\vec{X} \right) = 
@@ -290,16 +292,16 @@ X_1 \\ X_2
 \det{\tens{U}} = \det{\tens{V}}\,.
 \end{equation*}
 </div></article><article class="remark-like" id="remark-5"><h6 class="heading">
-<span class="type">Commento</span> <span class="codenumber">1.6.3</span>. <span class="title">tensori definiti positivi.</span>
+<span class="type">Commento</span> <span class="codenumber">1.6.4</span>. <span class="title">tensori definiti positivi.</span>
 </h6>
-<p id="p-84">Se un tensore simmetrico \(\tens{T}\) verifica la condizione</p>
+<p id="p-85">Se un tensore simmetrico \(\tens{T}\) verifica la condizione</p>
 <div class="displaymath">
 \begin{equation*}
 \vec{v} \cdot \tens{T} \vec{v} &gt; 0\,,\quad \forall \vec{v} \neq \vec0
 \end{equation*}
 </div>
 <p>allora il tensore è definito positivo. Da un punto di vista geometrico tale condizione è facilmente interpretabile come segue: ogni volta che si applica la trasformazione lineare \(\tens{T}\) a qualsiasi vettore non nullo, si ottiene un vettore \(\tens{T}\vec{v}\) che forma con il vettore di partenza \(\vec{v}\) un angolo inferiore a \(\pi/2\text{,}\) condizione che ha comunque, molto spesso, un significato fisico ben preciso.</p>
-<p id="p-85">Sulla condizione di positività verrà fornito un ulteriore approfondimento quando si parlerà di autovalori ed autovettori.</p></article></section></div></main>
+<p id="p-86">Sulla condizione di positività verrà fornito un ulteriore approfondimento quando si parlerà di autovalori ed autovettori.</p></article></section></div></main>
 </div>
 <div class="login-link"><span id="loginlogout" class="login">login</span></div>
 <script src="https://pretextbook.org/js/0.12/login.js"></script>

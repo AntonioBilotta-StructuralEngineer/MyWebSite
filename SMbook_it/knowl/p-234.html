@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:46+02:00    *-->
+<!--*    on 2020-04-06T13:39:57+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,38 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Per quanto riguarda la descrizione cinematica del problema non siamo in grado di aggiungere altro. Vediamo quindi se utilizzando un altro strumento introdotto nel <a href="chap_stress_it.html" class="internal" title="Capitolo 2: forze, equilibrio e tensione">Capitolo 2</a>, ovvero il Principio dei lavori virtuali, si riesce a ricavare qualche tipo di informazione sul parametro generico \(\lambda\text{.}\)</p>
+<p>Sulla base dei dati del problema e dell'ipotesi precedente, il problema statico assume la seguente formulazione.</p>
+<ul class="disc">
+<li>Equazioni indefinite di equilibrio sul dominio<div class="displaymath">
+\begin{equation}
+\text{div}\tens{\sigma} = \vec{0}\quad\;\text{in}\;\body_0\,.\tag{3.1.2}
+\end{equation}
+</div>Ovvero, per componenti, le seguenti tre equazioni scalari<div class="displaymath">
+\begin{equation}
+\begin{array}{l}
+\frac{\partial\sigma_{11}}{\partial X_1} + \frac{\partial\sigma_{12}}{\partial X_2} + \frac{\partial\sigma_{13}}{\partial X_3} = 0\\
+\frac{\partial\sigma_{12}}{\partial X_1} + \frac{\partial\sigma_{22}}{\partial X_2} + \frac{\partial\sigma_{23}}{\partial X_3} = 0\\
+\frac{\partial\sigma_{13}}{\partial X_1} + \frac{\partial\sigma_{23}}{\partial X_2} + \frac{\partial\sigma_{33}}{\partial X_3} = 0
+\end{array}
+\quad\;\text{in}\;\body_0\,.\tag{3.1.3}
+\end{equation}
+</div>
+</li>
+<li>Condizioni, di tipo statico, sul contorno<div class="displaymath">
+\begin{align}
+\amp \tens{\sigma}\vec{n}_1 = \vec{t}_1\quad\;\text{su}\;\Sigma_1 \,,\tag{3.1.4}\\
+\amp \tens{\sigma}\vec{n}_2 = \vec{t}_2\quad\;\text{su}\;\Sigma_2 \,,\tag{3.1.5}\\
+\amp \tens{\sigma}\vec{n}_{\Pi} = \vec{0}\quad\;\text{su}\;\Pi \,.\tag{3.1.6}
+\end{align}
+</div>Dove<div class="displaymath">
+\begin{align}
+\Sigma_1:\amp \quad \matWp{n}{1} = \left[\begin{array}{r}0\\0\\-1\end{array}\right]\,,\;\matWp{t}{1} = \left[\begin{array}{r}0\\0\\-\bar{t}\end{array}\right] \,,\tag{3.1.7}\\
+\Sigma_2:\amp \quad \matWp{n}{2} = \left[\begin{array}{r}0\\0\\1\end{array}\right]\,,\;\matWp{t}{2} = \left[\begin{array}{r}0\\0\\\bar{t}\end{array}\right] \,,\tag{3.1.8}\\
+\Pi:\amp \quad \matWp{n}{\Pi} = \left[\begin{array}{r}n_1\\n_2\\0\end{array}\right] \,.\tag{3.1.9}
+\end{align}
+</div>
+</li>
+</ul>
 <span class="incontext"><a href="motivations_sec_elasticity_chap_it.html#p-234">in-context</a></span>
 </body>
 </html>

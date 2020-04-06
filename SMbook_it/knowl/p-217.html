@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:46+02:00    *-->
+<!--*    on 2020-04-06T13:39:57+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,18 +13,45 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Si consideri il tensore</p>
+<p>La equazione integrale di partenza può quindi essere riscritta come segue</p>
+<div class="displaymath">
+\begin{equation}
+\int_{\body} \left(\text{div}\left(\tens{\sigma}\vec{v}\right) - \tens{\sigma} : \tens{\nabla v} + \vec{b} \cdot \vec{v} \right)  \,dv= 0\,,\quad \forall\vec{v}\,.\tag{2.5.2}
+\end{equation}
+</div>
+<p>Il primo integrale, applicando in successione Teorema della divergenza e Teorema della tensione di Cauchy, diventa</p>
 <div class="displaymath">
 \begin{equation*}
-\mat{\sigma} = \left[\begin{array}{ccc}
-7 \amp 0 \amp 14 \\
-0 \amp 8 \amp 0 \\
-14 \amp 0 \amp -4
-\end{array}
-\right]
+\int_{\body} \text{div}\left(\tens{\sigma}\vec{v}\right)\, dv = 
+\int_{\partial\body} \tens{\sigma}\vec{v} \cdot \vec{n}\,ds =
+\int_{\partial\body} \vec{v} \cdot \tens{\sigma}\vec{n}\,ds =
+\int_{\partial\body} \vec{t} \cdot \vec{v}\,ds \,.
 \end{equation*}
 </div>
-<p>e si calcolino le tensioni principali e le direzioni principali.</p>
-<span class="incontext"><a href="exercises_sec_stress_chap_it.html#p-217">in-context</a></span>
+<p>Quindi l'equazione <a data-knowl="./knowl/continuum_plv_2_eq.html" title="Equazione 2.5.2">(2.5.2)</a> diventa</p>
+<div class="displaymath">
+\begin{equation}
+\int_{\partial\body} \vec{t} \cdot \vec{v}\,ds - \int_{\body} \tens{\sigma} : \tens{\nabla v}\,dv + \int_{\body}  \vec{b} \cdot \vec{v} \,dv = 0\,,\quad \forall\vec{v}\,.\tag{2.5.3}
+\end{equation}
+</div>
+<p>Per la decomposizione di \(\tens{\nabla v}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\tens{\nabla v} = \text{sym}\tens{\nabla v} + \text{skew}\tens{\nabla v}
+\end{equation*}
+</div>
+<p>e la simmetria di \(\tens{\sigma}\) si ha</p>
+<div class="displaymath">
+\begin{equation*}
+\tens{\sigma} : \tens{\nabla v} =  \tens{\sigma} : \text{sym}\tens{\nabla v}\,.
+\end{equation*}
+</div>
+<p>Si arriva quindi alla seguente espressione finale della forma integrale delle equazioni indefinite di equilibrio <a data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equazione 2.3.10">(2.3.10)</a>:</p>
+<div class="displaymath">
+\begin{equation}
+\int_{\partial\body} \vec{t} \cdot \vec{v}\,ds + \int_{\body}  \vec{b} \cdot \vec{v} \,dv = \int_{\body} \tens{\sigma} : \text{sym}\tens{\nabla v}\,dv \,,\quad \forall\vec{v}\,.\tag{2.5.4}
+\end{equation}
+</div>
+<span class="incontext"><a href="plv_sec_stress_chap_it.html#p-217">in-context</a></span>
 </body>
 </html>

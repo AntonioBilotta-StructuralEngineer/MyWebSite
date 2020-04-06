@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:46+02:00    *-->
+<!--*    on 2020-04-06T13:39:57+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,34 +13,29 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Ripercorrendo gli stessi passi fatti nella <a href="motivations_sec_elasticity_chap_it.html#motivation_static_subsubsec" class="internal" title="Sottosottosezione 3.1.1.1: assunzione sul campo di tensione e soluzione">Sottosottosezione 3.1.1.1</a> per il solido semplicemente teso, si passa alla verifica o imposizione delle condizione al contorno. In particolare si verifica facilmente il soddisfacimento della <a data-knowl="./knowl/motiv_bc3_eq.html" title="Equazione 3.1.6">(3.1.6)</a>, infatti</p>
+<p>Il legame deformazione-spostamento <a data-knowl="./knowl/ep_2_eq.html" title="Equazione 3.4.2">(3.4.2)</a> consente la determinazione del campo di spostamento. Infatti la scrittura esplicita del legame, si veda la <a data-knowl="./knowl/mat_symDu_eq.html" title="Equazione 1.9.4">(1.9.4)</a>, fornisce</p>
 <div class="displaymath">
-\begin{equation*}
-\left[\begin{array}{ccc}
-0 \amp 0 \amp 0\\
-0 \amp 0 \amp 0\\
-0 \amp 0 \amp \kappa\,X_2
-\end{array}\right]
-\left[\begin{array}{r}n_1\\n_2\\0\end{array}\right] =
-\left[\begin{array}{r}0\\0\\0\end{array}\right] \,.
-\end{equation*}
+\begin{align*}
+\varepsilon_{11} = \frac{\partial u_1}{\partial X_1}\,,\amp\qquad \varepsilon_{23} = \frac{1}{2}\left(\frac{\partial u_2}{\partial X_3} + \frac{\partial u_3}{\partial X_2}\right)\,,\\
+\varepsilon_{22} = \frac{\partial u_2}{\partial X_2}\,,\amp\qquad \varepsilon_{31} = \frac{1}{2}\left(\frac{\partial u_3}{\partial X_1} + \frac{\partial u_1}{\partial X_3}\right)\,,\\
+\varepsilon_{33} = \frac{\partial u_3}{\partial X_3}\,,\amp\qquad \varepsilon_{12} = \frac{1}{2}\left(\frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1}\right)\,.
+\end{align*}
 </div>
-<p>La condizione <a data-knowl="./knowl/motiv_bc1_eq.html" title="Equazione 3.1.4">(3.1.4)</a></p>
+<p>Sostituendo i valori delle componenti di deformazione ricavate nelle <a data-knowl="./knowl/eps33_eq.html" title="Equazione 3.4.7">(3.4.7)</a>-<a data-knowl="./knowl/eps11_eq.html" title="Equazione 3.4.9">(3.4.9)</a> mediante il legame elastico si ottiene</p>
 <div class="displaymath">
-\begin{equation*}
-\left[\begin{array}{ccc}
-0 \amp 0 \amp 0\\
-0 \amp 0 \amp 0\\
-0 \amp 0 \amp \kappa\,X2
-\end{array}\right]
-\left[\begin{array}{r}0 \\ 0\\-1\end{array}\right] =
-\left[\begin{array}{c}0\\0\\-\frac{\bar{t}}{H/2}\,X_2\end{array}\right]
-\quad \rightarrow \quad
-\kappa = \frac{\bar{t}}{H/2}
-\,.
-\end{equation*}
+\begin{align}
+-\nu\,\frac{\bar{t}}{E}\ = \frac{\partial u_1}{\partial X_1}\,,\amp\qquad 0 = \frac{1}{2}\left(\frac{\partial u_2}{\partial X_3} + \frac{\partial u_3}{\partial X_2}\right)\,,\tag{3.4.10}\\
+-\nu\,\frac{\bar{t}}{E}= \frac{\partial u_2}{\partial X_2}\,,\amp\qquad 0 = \frac{1}{2}\left(\frac{\partial u_3}{\partial X_1} + \frac{\partial u_1}{\partial X_3}\right)\,,\tag{3.4.11}\\
+\frac{\bar{t}}{E} = \frac{\partial u_3}{\partial X_3}\,,\amp\qquad 0 = \frac{1}{2}\left(\frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1}\right)\,.\tag{3.4.12}
+\end{align}
 </div>
-<p>Lo stesso risultato verrebbe fornito dalla condizione  <a data-knowl="./knowl/motiv_bc2_eq.html" title="Equazione 3.1.5">(3.1.5)</a>.</p>
+<p>Equazioni per le quali è facile verificare che una soluzione è data da</p>
+<div class="displaymath">
+\begin{equation}
+u_1 = -\nu\,\frac{\bar{t}}{E} \, X_1\,,\quad u_2 = -\nu\,\frac{\bar{t}}{E} \, X_2\,,\quad u_3 = \frac{\bar{t}}{E} \, X_3\,.\tag{3.4.13}
+\end{equation}
+</div>
+<p>Al riguardo si osserva che si parla di <em class="emphasis">una soluzione</em> in quanto sommando a tale campo di spostamento tutti i possibili moti rigidi, che nel problema assegnato non sono esplicitamente eliminati, si otterrebbe sempre la stessa soluzione in termini di campi di tensione e deformazione.</p>
 <span class="incontext"><a href="problem_sec_elasticity_chap_it.html#p-281">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:47+02:00    *-->
+<!--*    on 2020-04-06T13:39:58+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,20 +13,25 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Lo ppostamento dell'asse della trave può essere visualizzato con le seguenti istruzioni MATLAB. <figure class="figure-like"><pre class="console"><b>syms w(x);
-EJ = 1;
-F = 1;
-l = 1;
-w(x)=F/6/EJ*(-x^3+3*l*x^2);
-
-np = 100;
-Xv = 0:1/np:1;
-wv = w(Xv);
-Beam = zeros(1, np+1);
-plot(Xv,wv,'r',Xv,Beam,'k','LineWidth',2)
-set(gca, 'YDir','reverse')
-</b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">3.8.3.</span> </figcaption></figure></p>
-<span class="incontext"><a href="bent_beam_applications_sec_elasticity_chap_it.html#p-328">in-context</a></span>
+<p>La condizione di carico mostrata in Figura può essere descritta come segue</p>
+<div class="displaymath">
+\begin{equation*}
+\func{p}{x} = \bar{p}\,\sin\left(\frac{2\pi\,x}{l}\right)
+\end{equation*}
+</div>
+<p>da cui, tramite l'equazione <a data-knowl="./knowl/stretched_beam_navier.html" title="Equazione 3.5.21">(3.5.21)</a>, si ricava</p>
+<div class="displaymath">
+\begin{equation*}
+EA\,\frac{d^2u}{dx^2} + \bar{p}\,\sin\left(\frac{2\pi\,x}{l}\right) = 0
+\end{equation*}
+</div>
+<p>da soddisfare in ogni punto della trave. Le condizioni al contorno sono</p>
+<div class="displaymath">
+\begin{align*}
+\amp \func{u}{0} = 0\,,\\
+\amp \func{u}{l} = 0\,.
+\end{align*}
+</div>
+<span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#p-328">in-context</a></span>
 </body>
 </html>

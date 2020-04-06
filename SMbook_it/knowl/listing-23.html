@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:46+02:00    *-->
+<!--*    on 2020-04-06T13:39:56+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,18 +12,17 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<figure class="figure-like"><pre class="console"><b>sig = @(x) ...
-[5*x(2)*x(3) 3*x(2)^2 0;
-3*x(2)^2 0 -x(1);
-0 -x(1) 0];
-
-n = @(x) ...
-[2*x(1)/sqrt((2*x(1))^2+(2*x(2))^2+1);
-2*x(2)/sqrt((2*x(1))^2+(2*x(2))^2+1);
-1/sqrt((2*x(1))^2+(2*x(2))^2+1)];
-
-t = sig([1/2; sqrt(3)/2; -1])*n([1/2; sqrt(3)/2; -1])
+<figure class="figure-like"><pre class="console"><b>% terzo quesito
+T = @(X) [4-2*X(1)-X(2); 2+3/2*X(1)-X(2)/2];
+Square_0 = [0 1 1 0 0; 0 0 1 1 0];
+Square=[T(Square_0(:,1)) T(Square_0(:,2)) T(Square_0(:,3)) ...
+T(Square_0(:,4)) T(Square_0(:,5))];
+hold on
+plot(Square_0(1,:), Square_0(2,:), 'k-', "LineWidth", 4)
+plot(Square(1,:), Square(2,:), 'r-', "LineWidth", 2)
+ylim([0 4])
+pbaspect([1 1 1])
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">2.7.1.</span> </figcaption></figure><span class="incontext"><a href="answers_sec_stress_chap_it.html#listing-23">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">1.11.1.</span> </figcaption></figure><span class="incontext"><a href="answers_sec_strain_chap_it.html#listing-23">in-context</a></span>
 </body>
 </html>

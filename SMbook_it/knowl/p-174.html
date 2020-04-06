@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:46+02:00    *-->
+<!--*    on 2020-04-06T13:39:57+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,13 +13,19 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Date le risultanti definite dalle espressioni <a data-knowl="./knowl/body_resultant.html" title="Equazione 2.1.4">(2.1.4)</a> e <a data-knowl="./knowl/body_resultant_moment.html" title="Equazione 2.1.5">(2.1.5)</a>, la condizione di equilibrio statico per un corpo continuo è espressa dalle seguenti equazioni</p>
+<p>L'interazione meccanica fra parti di un corpo o di un corpo con l'ambiente circostante viene descritta mediante forze. Si considerano due tipi forze: forze di volume, che agiscono all'interno del corpo, e forze di superficie, che sono esercitate attraverso una superficie. Per l'ipotesi di continuità, come fatto per la massa, anche per le forze si postula l'esistenza di campi vettoriali che consentono di calcolare la risultante di tutte le forze agenti sul corpo</p>
 <div class="displaymath">
-\begin{align}
-\int_{\body} \vec{b} \, dv + \int_{\partial\body} \vec{t} \, ds \amp = \vec0\,,\tag{2.2.1}\\
-\int_{\body} \vec{x} \times \vec{b} \, dv + \int_{\partial\body} \vec{x} \times \vec{t} \, ds \amp = \vec0 \,.\tag{2.2.2}
-\end{align}
+\begin{equation}
+\func{\vec{R}}{\body} = \int_{\body} \vec{b} \, dv + \int_{\partial\body} \vec{t} \, ds \,,\tag{2.1.4}
+\end{equation}
 </div>
-<span class="incontext"><a href="equilibrium_sec_stress_chap_it.html#p-174">in-context</a></span>
+<p>e il momento risultante (rispetto all'origine) delle forze agenti</p>
+<div class="displaymath">
+\begin{equation}
+\func{\calvec{M}}{\body} = \int_{\body} \vec{x} \times \vec{b} \, dv + \int_{\partial\body} \vec{x} \times \vec{t} \, ds \,.\tag{2.1.5}
+\end{equation}
+</div>
+<p>dove \(\partial\body\) denota il contorno di \(\body\) e quindi una superficie, \(\vec{b}\) e \(\vec{t}\) denotano due campi vettoriali che verranno meglio descritti nel seguito e che rappresentano, rispettivamente, una densità di forza di volume o, semplicemente, <em class="emphasis">forza di volume</em> e una densità di forza di superficie che verrà chiamata <em class="emphasis">trazione</em>.</p>
+<span class="incontext"><a href="basics_sec_stress_chap_it.html#p-174">in-context</a></span>
 </body>
 </html>

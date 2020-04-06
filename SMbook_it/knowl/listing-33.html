@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:47+02:00    *-->
+<!--*    on 2020-04-06T13:39:58+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,14 +12,10 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<figure class="figure-like"><pre class="console"><b>syms u(x) EA p l;
-ode = EA*diff(u,x,2) + p*sin(2*pi*x/l) == 0;
-cond1 = u(0) == 0;
-cond2 = u(l) == 0;
-conds = [cond1 cond2];
-sol = dsolve(ode,conds)
-N = EA*diff(sol,x)
+<figure class="figure-like"><pre class="console"><b>syms u(x) EA;
+ode = EA*diff(u,x,2) == 0
+dsolve(ode)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">3.7.8.</span> </figcaption></figure><span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#listing-33">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">3.7.2.</span> </figcaption></figure><span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#listing-33">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-03-31T11:53:47+02:00    *-->
+<!--*    on 2020-04-06T13:39:57+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,43 +13,28 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>A questo punto la definizione del modello è praticamente completa. Manca la definizione delle equazioni di equilibrio alle quali si può arrivare attraverso il principio dei lavori virtuali formulabile come segue</p>
-<div class="displaymath">
-\begin{equation}
-\int_{l} N \delta\varepsilon \,dx = \int_{l} p\,\delta u\, dx + H_{0} \,\func{\delta u}{0} +  H_{l} \,\func{\delta u}{l}\,, \quad \forall\,\delta u \;\left(\delta\varepsilon = \frac{d\delta u}{d x}\right)\,.\tag{3.5.7}
-\end{equation}
-</div>
-<p>La relazione appena scritta, dove si è tralasciato di esplicitare le dipendenze dalla variabile \(x\text{,}\) può essere manipolata effettuando i seguenti passaggi</p>
+<p>Si può adesso riscrivere l'espressione del lavoro interno <a data-knowl="./knowl/beam_internal_work.html" title="Equazione 3.5.1">(3.5.1)</a> in un formato che si riferisce solo alla linea d'asse della trave, ovvero</p>
 <div class="displaymath">
 \begin{align*}
-\int_{l} N \delta\varepsilon \,dx \amp= \int_{l} p\,\delta u\, dx + H_{0} \,\func{\delta u}{0} +  H_{l} \,\func{\delta u}{l}\\
-\int_{l} N \frac{d\delta u}{d x} \,dx \amp= \int_{l} p\,\delta u\, dx + H_{0} \,\func{\delta u}{0} +  H_{l} \,\func{\delta u}{l}\\
-\left[N\,\delta u \right]_0^l - \int_{l}  \frac{dN}{d x}\delta u \,dx \amp= \int_{l} p\,\delta u\, dx + H_{0} \,\func{\delta u}{0} +  H_{l} \,\func{\delta u}{l}\\
-\int_{l}  \frac{dN}{d x}\delta u + \int_{l} p\,\delta u\, dx \,dx \amp= \left[N\,\delta u \right]_0^l - H_{0} \,\func{\delta u}{0} -  H_{l} \,\func{\delta u}{l}\\
-\int_{l} \left( \frac{dN}{d x} + p\right)\delta u\, dx \amp= \func{N}{l}\,\func{\delta u}{l} - \func{N}{0}\,\func{\delta u}{0} - H_{0} \,\func{\delta u}{0} -  H_{l} \,\func{\delta u}{l}\\
-\int_{l} \left( \frac{dN}{d x} + p\right)\delta u\, dx \amp= \left(\func{N}{l}-  H_{l}\right)\func{\delta u}{l} - \left(\func{N}{0} + H_{0} \right)\func{\delta u}{0} 
+L_i \amp = \int_{\body} \sigma\varepsilon \, dV\\
+\amp = \int_{l}\int_{A} \sigma\varepsilon \, dS \,dx\\
+\amp = \int_{l}\int_{A} \sigma \, dS \varepsilon \,dx\\
+\amp = \int_{l} N \varepsilon \,dx\,,
 \end{align*}
 </div>
-<p>E quindi si ottiene la seguente scrittura del principio dei lavori virtuali in termini di</p>
+<p>e quindi</p>
 <div class="displaymath">
 \begin{equation}
-\int_{l} \left( \frac{dN}{d x} + p\right)\delta u\, dx = \left(\func{N}{l}-  H_{l}\right)\func{\delta u}{l} - \left(\func{N}{0} + H_{0} \right)\func{\delta u}{0}\,,\quad \forall\,\delta u\,.\tag{3.5.8}
+L_i = \int_{l} N \varepsilon \,dx\,.\tag{3.5.3}
 \end{equation}
 </div>
-<p>Il soddisfacimento di tale espressione per qualsiasi spostamento virtuale \(\delta u\) implica il soddisfacimento dell'equazione</p>
+<p>La quantità introdotta</p>
 <div class="displaymath">
 \begin{equation}
-\frac{dN}{d x} + p = 0\,,\tag{3.5.9}
+N =\int_{A} \sigma \, dS\,,\tag{3.5.4}
 \end{equation}
 </div>
-<p>in ogni punto della linea d'asse e il soddisfacimento delle condizioni al contorno</p>
-<div class="displaymath">
-\begin{align}
-\func{N}{0} \amp=  -H_{0}\,,\tag{3.5.10}\\
-\func{N}{l} \amp=  H_{l}\,,\tag{3.5.11}
-\end{align}
-</div>
-<p>sugli estremi della linea d'asse.</p>
+<p>è l'ente statico che nella riduzione monondimensionale compie lavoro sulla deformazione. \(N\) viene denonominata <em class="emphasis">sforzo normale</em> ed ha le dimensioni di una forza, \(\left[\text{F}\right]\text{.}\)</p>
 <span class="incontext"><a href="stretched_beam_sec_elasticity_chap_it.html#p-299">in-context</a></span>
 </body>
 </html>
