@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-04-15T10:49:17+02:00    *-->
+<!--*    on 2020-04-30T08:09:04+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -120,7 +120,7 @@ var js_version = 0.12;
 </li>
 <li class="link part"><a href="continuum_mechanics_it.html" data-scroll="continuum_mechanics_it"><span class="codenumber">I</span> <span class="title">meccanica del continuo</span></a></li>
 <li class="link">
-<a href="chap_strain_it.html" data-scroll="chap_strain_it"><span class="codenumber">1</span> <span class="title">cinematica dei corpi</span></a><ul>
+<a href="strain_chap_it.html" data-scroll="strain_chap_it"><span class="codenumber">1</span> <span class="title">cinematica dei corpi</span></a><ul>
 <li><a href="configurations_sec_strain_chap_it.html" data-scroll="configurations_sec_strain_chap_it">configurazioni</a></li>
 <li><a href="transformations_sec_strain_chap_it.html" data-scroll="transformations_sec_strain_chap_it">trasformazioni</a></li>
 <li><a href="gradient_sec_strain_chap_it.html" data-scroll="gradient_sec_strain_chap_it">gradiente della trasformazione</a></li>
@@ -136,7 +136,7 @@ var js_version = 0.12;
 </ul>
 </li>
 <li class="link">
-<a href="chap_stress_it.html" data-scroll="chap_stress_it"><span class="codenumber">2</span> <span class="title">forze, equilibrio e tensione</span></a><ul>
+<a href="stress_chap_it.html" data-scroll="stress_chap_it"><span class="codenumber">2</span> <span class="title">forze, equilibrio e tensione</span></a><ul>
 <li><a href="basics_sec_stress_chap_it.html" data-scroll="basics_sec_stress_chap_it">l'ipotesi di continuità</a></li>
 <li><a href="equilibrium_sec_stress_chap_it.html" data-scroll="equilibrium_sec_stress_chap_it">equazioni di equilibrio</a></li>
 <li><a href="stress_sec_stress_chap_it.html" data-scroll="stress_sec_stress_chap_it">il tensore della tensione di Cauchy</a></li>
@@ -148,7 +148,7 @@ var js_version = 0.12;
 </ul>
 </li>
 <li class="link">
-<a href="chap_elasticity_it.html" data-scroll="chap_elasticity_it"><span class="codenumber">3</span> <span class="title">comportamento elastico</span></a><ul>
+<a href="elasticity_chap_it.html" data-scroll="elasticity_chap_it"><span class="codenumber">3</span> <span class="title">comportamento elastico</span></a><ul>
 <li><a href="motivations_sec_elasticity_chap_it.html" data-scroll="motivations_sec_elasticity_chap_it">motivazione</a></li>
 <li><a href="uniaxial_sec_elasticity_chap_it.html" data-scroll="uniaxial_sec_elasticity_chap_it">stati uniassiali</a></li>
 <li><a href="multiaxial_sec_elasticity_chap_it.html" data-scroll="multiaxial_sec_elasticity_chap_it">stati pluriassiali</a></li>
@@ -169,6 +169,7 @@ var js_version = 0.12;
 <li><a href="constraints_sec_rigid_body_kinematics_chap_it.html" data-scroll="constraints_sec_rigid_body_kinematics_chap_it">vincoli</a></li>
 <li><a href="analysis_sec_rigid_body_kinematics_chap_it.html" data-scroll="analysis_sec_rigid_body_kinematics_chap_it">analisi cinematica</a></li>
 <li><a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html" data-scroll="analysis_examples_sec_rigid_body_kinematics_chap_it">applicazione dell'analisi cinematica ai sistemi di corpi rigidi</a></li>
+<li><a href="refs_rigid_body_kinematics_chap_it.html" data-scroll="refs_rigid_body_kinematics_chap_it">riferimenti e letture suggerite</a></li>
 </ul>
 </li>
 <li class="link">
@@ -383,7 +384,7 @@ set(gca, 'YDir','reverse')
 <figure class="figure-like" id="figure-94"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/trave_appoggiata_con_forza_concentrata_calcolo_reazioni.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figura</span> <span class="codenumber">5.9.10.</span> </figcaption></figure><p id="p-474">Rispetto ai casi precedenti, il caso in esame è comunque differente poiché la forza concentrata in mezzeria determina una discontinuità del taglio \(T(x)\) e quindi, essendo \(dM/dx=T\text{,}\) anche una discontinuità della derivata del momento flettente. Pertanto gli integrali generali  <a data-knowl="./knowl/general_const_N_eq.html" title="Equazione 5.8.13">(5.8.13)</a>, <a data-knowl="./knowl/general_const_T_eq.html" title="Equazione 5.8.14">(5.8.14)</a> e <a data-knowl="./knowl/general_const_M_eq.html" title="Equazione 5.8.15">(5.8.15)</a> non sono applicabili direttamente al tratto di trave \(AB\) ma devono essere applicati separatamente ai tratti di trave \(AC\) e  \(CB\text{.}\) In tal modo si ottengono due rappresentazioni delle sollecitazioni \(T(x)\) e \(M(x)\text{,}\) una rappresentazione valida per il tratto \(AC\) ed un'altra per il tratto \(CB\text{.}\)</p>
 <ul class="disc">
-<li id="li-149">Tratto \(AC\text{,}\) \(0 \leq x \leq l/2\text{:}\)<div class="displaymath">
+<li id="li-150">Tratto \(AC\text{,}\) \(0 \leq x \leq l/2\text{:}\)<div class="displaymath">
 \begin{align*}
 N_{AC}(0) &amp;= 0\,,\\
 T_{AC}(0) &amp;= F/2\,,\\
@@ -397,7 +398,7 @@ M_{AC}(x) &amp;= F/2\,x\,.
 \end{align*}
 </div>
 </li>
-<li id="li-150">Tratto \(CB\text{,}\) \(0 \leq x \leq l/2\text{:}\)<div class="displaymath">
+<li id="li-151">Tratto \(CB\text{,}\) \(0 \leq x \leq l/2\text{:}\)<div class="displaymath">
 \begin{align*}
 N_{CB}(0) &amp;= 0\,,\\
 T_{CB}(0) &amp;= T_{AC}(l/2) - F=F/2-F=-F/2\,,\\
