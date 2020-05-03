@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-04-30T08:09:07+02:00    *-->
+<!--*    on 2020-05-03T16:58:30+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,15 +13,22 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Nel caso piano, in generale, un vincolo applicato può dar luogo a 3 componenti di reazione:</p>
+<p>Grazie a quest'ultima relazione la <a data-knowl="./knowl/rb_PLV_eq.html" title="Equazione 5.1.3">(5.1.3)</a> può essere riscritta come</p>
 <div class="displaymath">
-\begin{align*}
-H \amp\quad \text{componente orizzontale,}\\
-V \amp\quad \text{componente verticale,}\\
-\mathcal{M}\amp\quad \text{componente coppia.}
-\end{align*}
+\begin{equation}
+\sum_{i=1}^N\vec{F}_i \cdot \left( \delta\vec{u}_o + \delta\varphi\,\tens{W}\left( \vec{X}_i - \vec{X}_o\right) \right) = 0\,, \quad \forall \delta\vec{u}_o,\forall \delta\varphi\tens{W}\tag{5.1.7}
+\end{equation}
 </div>
-<p>Dove \(H\) e \(V\) sono le componenti di una forza di reazione, \(\vec{R}\text{,}\) appartenente al piano di lavoro. La presenza, in un punto del corpo, di tutte e 3 le componenti o soltanto di alcune di queste dipende dal tipo di vincolo applicato.</p>
-<span class="incontext"><a href="constraints_sec_rigid_body_statics_chap_it.html#p-412">in-context</a></span>
+<p>e manipolata come segue:</p>
+<div class="displaymath">
+\begin{gather*}
+\sum_{i=1}^N\vec{F}_i \cdot \delta\vec{u}_o  +  \sum_{i=1}^N\vec{F}_i \cdot \delta\varphi\,\tens{W}\left( \vec{X}_i - \vec{X}_o\right) = 0\,,\\
+\sum_{i=1}^N\vec{F}_i \cdot \delta\vec{u}_o  +  \underbrace{\sum_{i=1}^N\vec{F}_i \cdot \delta\varphi\,\vec{w}\times\left( \vec{X}_i - \vec{X}_o\right)}_{\text{proprietà tensori emisimmetrici}} = 0\,,\\
+\sum_{i=1}^N\vec{F}_i \cdot \delta\vec{u}_o  +  \underbrace{\sum_{i=1}^N \delta\varphi\,\vec{w} \cdot\left( \vec{X}_i - \vec{X}_o\right) \times \vec{F}_i}_{\text{proprietà prodotto triplo}} = 0\,,\\
+\left(\sum_{i=1}^N\vec{F}_i\right) \cdot \delta\vec{u}_o  + \delta\varphi\,\vec{w} \cdot \left( \sum_{i=1}^N \left( \vec{X}_i - \vec{X}_o\right) \times \vec{F}_i \right) = 0\,.
+\end{gather*}
+</div>
+<p>Il soddisfacimento di quest'ultima condizione scalare per qualsiasi \(\delta\vec{u}_o\) e qualsiasi \(\delta\varphi\vec{w}\) richiede il soddisfacimento delle seguenti equazioni vettoriali.</p>
+<span class="incontext"><a href="equilibrium_sec_rigid_body_statics_chap_it.html#p-412">in-context</a></span>
 </body>
 </html>

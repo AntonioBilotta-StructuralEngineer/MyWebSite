@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-04-30T08:09:07+02:00    *-->
+<!--*    on 2020-05-03T16:58:30+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,8 +13,41 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Al fine di illustrare la valutazione delle costanti d'integrazione si consideri il seguente schema di corpo libero. <figure class="figure-like"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/schema1bis.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">5.8.2.</span> </figcaption></figure></p>
-<span class="incontext"><a href="indefinte_sec_rigid_body_statics_chap_it.html#p-454">in-context</a></span>
+<p>Nel seguito vengono riportate le istruzioni MATLAB per il calcolo della risultante e del baricentro per alcune tipologie di carico ripartito. <figure class="figure-like"><pre class="console"><b>% carico ripartito costante
+syms q l x;
+carico(x, q) = q;
+np = 100;
+xv = 0:1/np:1;
+qv = carico(xv, 1);
+plot(xv,qv,'r','LineWidth',2)
+
+
+Rq = int(carico(x, q), x, 0, l)
+xq = int(carico(x, q)*x, x, 0, l)/Rq
+</b></pre>
+<figcaption><span class="type">Listato</span> <span class="codenumber">5.7.7.</span> </figcaption></figure> <figure class="figure-like"><pre class="console"><b>% carico ripartito lineare
+syms q l x;
+carico(x, q, l) = q/l*x;
+np = 100;
+xv = 0:1/np:1;
+qv = carico(xv, 1, 1);
+plot(xv,qv,'r','LineWidth',2)
+
+Rq = int(carico(x, q, l), x, 0, l)
+xq = int(carico(x, q, l)*x, x, 0, l)/Rq
+</b></pre>
+<figcaption><span class="type">Listato</span> <span class="codenumber">5.7.8.</span> </figcaption></figure> <figure class="figure-like"><pre class="console"><b>% carico ripartito parabolico
+syms q l x;
+carico(x, q, l) = q/l^2*x^2;
+np = 100;
+xv = 0:1/np:1;
+qv = carico(xv, 1, 1);
+plot(xv,qv,'r','LineWidth',2)
+
+Rq = int(carico(x, q, l), x, 0, l)
+xq = int(carico(x, q, l)*x, x, 0, l)/Rq
+</b></pre>
+<figcaption><span class="type">Listato</span> <span class="codenumber">5.7.9.</span> </figcaption></figure></p>
+<span class="incontext"><a href="sollecitazioni_sec_rigid_body_statics_chap_it.html#p-454">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-04-30T08:09:08+02:00    *-->
+<!--*    on 2020-05-03T16:58:30+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,45 +12,28 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="assemblage-like"><p>Le sollecitazioni così ottenute possono essere visualizzate utilizzando le seguenti istruzioni MATLAB. <figure class="figure-like"><pre class="console"><b>% diagramma dello sforzo normale
-syms N(x, F);
-N(x,F) = F;
-
-np = 100;
-Xv = 0:1/np:1;
-Nv = N(Xv, 1);
-Beam = zeros(1, np+1);
-
-plot(Xv,Nv,'g',Xv,Beam,'k','LineWidth',2)
-set(gca, 'Ylim', [-1 1])
-
-
-% diagramma del taglio
-syms T(x,F);
-T(x,F) = F;
-
-np = 100;
-Xv = 0:1/np:1;
-Tv = T(Xv, 1);
-Beam = zeros(1, np+1);
-
-plot(Xv,Tv,'b',Xv,Beam,'k','LineWidth',2)
-set(gca, 'Ylim', [-1 1])
-
-
-% diagramma del momento flettente
-syms M(x,F,l);
-M(x,F,l) = -F*l + F*x;
-
-np = 100;
-Xv = 0:1/np:1;
-Mv = M(Xv, 1, 1);
-Beam = zeros(1, np+1);
-
-plot(Xv,Mv,'r',Xv,Beam,'k','LineWidth',2)
-set(gca, 'Ylim', [-1 1])
-set(gca, 'YDir','reverse')
-</b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">5.9.2.</span> </figcaption></figure></p></article><span class="incontext"><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html#assemblage-44">in-context</a></span>
+<article class="assemblage-like"><ul class="disc">
+<li>
+<em class="alert">Equilibrio in direzione assiale:</em><div class="displaymath">
+\begin{equation}
+\regulardiff{N}{x} + p(x) = 0\,.\tag{5.8.7}
+\end{equation}
+</div>
+</li>
+<li>
+<em class="alert">Equilibrio in direzione trasversale:</em><div class="displaymath">
+\begin{equation}
+\regulardiff{T}{x} + q(x) = 0\,.\tag{5.8.8}
+\end{equation}
+</div>
+</li>
+<li>
+<em class="alert">Equilibrio alla rotazione:</em><div class="displaymath">
+\begin{equation}
+\regulardiff{M}{x} - T = 0\,.\tag{5.8.9}
+\end{equation}
+</div>
+</li>
+</ul></article><span class="incontext"><a href="indefinte_sec_rigid_body_statics_chap_it.html#assemblage-44">in-context</a></span>
 </body>
 </html>

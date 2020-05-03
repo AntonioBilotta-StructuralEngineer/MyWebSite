@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-04-30T08:09:07+02:00    *-->
+<!--*    on 2020-05-03T16:58:29+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,10 +12,45 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="assemblage-like"><p>Prima di procedere con la soluzione del sistema è possibile classificare il sistema calcolando il rango della matrice cinematica mediante le seguenti istruzioni MATLAB. <figure class="figure-like"><pre class="console"><b>syms l;
-A = [1 0 0; 0 1 0; 0 1 l];
-rank(A)
+<article class="assemblage-like"><p>Le seguenti istruzioni MATLAB definiscono una funzione per il calcolo dello spostamento rigido nel piano di un punto assegnato, X, rispetto ad un polo generico, X0, ed ai parametri che definiscono la traslazione e la rotazione di un corpo, u0 e phi0. Il corpo in questione è mondimensionale, quindi di tipo trave, ed è individuato da 2 o più punti. Nell'esempio si considera una trave definita da 3 punti e se ne calcola lo spostamento assumendo come polo ciascuno di questi 3 punti. <figure class="figure-like"><pre class="console"><b>% campo di spostamento generico nel piano
+rigidDispl = ...
+    @(u0, phi0, X0, X)...
+    [u0(1)-phi0*(X(2)-X0(2));...
+     u0(2)+phi0*(X(1)-X0(1))];
+
+% descrizione geometrica della trave 
+syms l;
+A = [0; 0];
+B = [l; 0];
+C = [l; l/2];
+
+% campo di spostamento assumendo come polo il punto A
+POLO = A;
+syms phiA;
+phi0 = phiA;
+u0 = sym('uA', [2 1]);
+uA = rigidDispl(u0, phi0, POLO, A);
+uB = rigidDispl(u0, phi0, POLO, B);
+uC = rigidDispl(u0, phi0, POLO, C);
+
+% campo di spostamento assumendo come polo il punto B
+POLO = B;
+syms phiB;
+phi0 = phiB;
+u0 = sym('uB', [2 1]);
+uA = rigidDispl(u0, phi0, POLO, A);
+uB = rigidDispl(u0, phi0, POLO, B);
+uC = rigidDispl(u0, phi0, POLO, C);
+
+% campo di spostamento assumendo come polo il punto C
+POLO = C;
+syms phiC;
+phi0 = phiC;
+u0 = sym('uC', [2 1]);
+uA = rigidDispl(u0, phi0, POLO, A);
+uB = rigidDispl(u0, phi0, POLO, B);
+uC = rigidDispl(u0, phi0, POLO, C);
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">4.4.3.</span> </figcaption></figure></p></article><span class="incontext"><a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html#assemblage-28">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">4.1.2.</span> </figcaption></figure></p></article><span class="incontext"><a href="description_sec_rigid_body_kinematics_chap_it.html#assemblage-28">in-context</a></span>
 </body>
 </html>
