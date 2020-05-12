@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-03T16:58:25+02:00    *-->
+<!--*    on 2020-05-12T10:13:01+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -24,7 +24,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -41,21 +41,17 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.12;
-</script>
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Torna alla pagina dei contenuti</a><div class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
@@ -195,8 +191,8 @@ var js_version = 0.12;
 </h2>
 <a href="basics_sec_stress_chap_it.html" class="permalink">¶</a><p id="p-165">Alla base della <em class="emphasis">meccanica del continuo</em> vi è l'idea di studiare differenti fenomeni fisici senza una precisa conoscenza della micro-struttura interna della materia adottando il punto di vista, così detto, <em class="emphasis">macroscopico</em>. Ovvero si utilizzano una serie di quantità che rappresentano in forma <em class="emphasis">media</em> tutti i processi che avvengono a scala atomica o molecolare.</p>
 <p id="p-166">I sistemi macroscopici così definiti possono essere descritti in maniera efficace utilizzando l'approccio continuo che assume, per il corpo in esame, una distribuzione della materia continua nel spazio e nel tempo. Il corpo è sempre visto come un assemblaggio di singole particelle o <em class="emphasis">punti</em> da non confondere però con i sistemi di masse puntuali della meccanica Newtoniana o i sistemi di particelle della teoria atomica. Tipicamente il punto di un corpo continuo al suo interno nasconde una struttura interna (un accumulo di molecole o atomi ovvero una composizione etrogenea di vari costituenti) di dimensioni sufficientemente piccole se confrontate con la scala del problema in esame. Il comportamento del punto o particella è conseguenza del comportamento collettivo di tutto ciò che, <em class="emphasis">al suo interno</em>, costituisce il punto del continuo.</p>
-<figure class="figure-like" id="macro_fig"><div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="images/macro.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">2.1.1.</span> </figcaption></figure><p id="p-167">La continuità ha come conseguenze: la possibilità di effettuare una associazione <em class="emphasis">uno-a-uno</em> tra i punti del corpo e i punti della regione di spazio euclideo occupata dal corpo; la possibilità di suddividere un corpo in regioni di volume sempre più piccole e di ritrovare sempre le stesse caratteristiche fisiche al diminuire del volume.</p>
+<figure class="figure figure-like" id="macro_fig"><div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="images/macro.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">2.1.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-167">La continuità ha come conseguenze: la possibilità di effettuare una associazione <em class="emphasis">uno-a-uno</em> tra i punti del corpo e i punti della regione di spazio euclideo occupata dal corpo; la possibilità di suddividere un corpo in regioni di volume sempre più piccole e di ritrovare sempre le stesse caratteristiche fisiche al diminuire del volume.</p>
 <p id="p-168">L'analiticità delle funzioni utilizzate per descrivere il fenomeno fisico in esame consente di formulare le leggi fondamentali della meccanica in termini di equazioni differenziali.</p>
 <p id="p-169">L'approccio macroscopico alla base della meccanica del continuo è utilizzabile nello studio di solidi, fluidi e gas.</p>
 <section class="subsection" id="subsection-25"><h3 class="heading hide-type">
@@ -216,15 +212,16 @@ var js_version = 0.12;
 \func{m}{\body} = \int_{\body} \func{\rho}{\vec{x}} dv \,.\tag{2.1.2}
 \end{equation}
 </div>
-<p>Una definizione formale della massa può essere effettuata come segue. Sia \(\vec{x}\) un punto in \(\body\) e sia \(\func{\body_{\delta}}{\vec{x}}\) una famiglia di volumi tali che \(\func{v}{\func{\body_{\delta}}{\vec{x}}} \rightarrow 0\) se \(\delta \rightarrow 0\text{.}\) Allora</p>
+<p data-braille="continuation">Una definizione formale della massa può essere effettuata come segue. Sia \(\vec{x}\) un punto in \(\body\) e sia \(\func{\body_{\delta}}{\vec{x}}\) una famiglia di volumi tali che \(\func{v}{\func{\body_{\delta}}{\vec{x}}} \rightarrow 0\) se \(\delta \rightarrow 0\text{.}\) Allora</p>
 <div class="displaymath">
 \begin{equation}
 \func{\rho}{\vec{x}} = \lim_{\delta \to 0} \frac{\func{m}{\func{\body_{\delta}}{\vec{x}}}}{\func{v}{\func{\body_{\delta}}{\vec{x}}}} \,.\tag{2.1.3}
 \end{equation}
 </div>
-<p>Se tale limite esiste ed è positivo in ogni punto \(\vec{x}\) del corpo allora l'ipotesi di continuità è verificata. Inoltre il limite deve essere sempre lo stesso per qualsiasi famiglia di volumi \(\func{\body_{\delta}}{\vec{x}}\) avente la proprietà descritta.</p>
-<article class="remark-like" id="note-1"><h6 class="heading">
-<span class="type">Nota</span> <span class="codenumber">2.1.2</span>.</h6>
+<p data-braille="continuation">Se tale limite esiste ed è positivo in ogni punto \(\vec{x}\) del corpo allora l'ipotesi di continuità è verificata. Inoltre il limite deve essere sempre lo stesso per qualsiasi famiglia di volumi \(\func{\body_{\delta}}{\vec{x}}\) avente la proprietà descritta.</p>
+<article class="note remark-like" id="note-1"><h6 class="heading">
+<span class="type">Nota</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span>
+</h6>
 <p id="p-172">L'idea moderna del limite di una funzione risale a Bolzano che, nel 1817, introdusse le basi della tecnica epsilon-delta per definire le funzioni continue. Tuttavia, il suo lavoro non era noto durante la sua vita. Il matematico francese Augustin-Louis Cauchy, nel suo libro della Cours d'analyse del 1821, ha discusso di quantità variabili, infinitesimi e limiti e ha definito la continuità di \(y = f(x)\) stabilendo che una variazione infinitesimale in \(x\) produce necessariamente una variazione infinitesimale in \(y\text{.}\)</p>
 <p id="p-173">Cauchy fu il primo a formulare la meccanica del continuo nel XIX secolo.</p></article></section><section class="subsection" id="subsection-27"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">2.1.3</span> <span class="title">forze</span>
@@ -235,15 +232,15 @@ var js_version = 0.12;
 \func{\vec{R}}{\body} = \int_{\body} \vec{b} \, dv + \int_{\partial\body} \vec{t} \, ds \,,\label{body_resultant}\tag{2.1.4}
 \end{equation}
 </div>
-<p>e il momento risultante (rispetto all'origine) delle forze agenti</p>
+<p data-braille="continuation">e il momento risultante (rispetto all'origine) delle forze agenti</p>
 <div class="displaymath">
 \begin{equation}
 \func{\calvec{M}}{\body} = \int_{\body} \vec{x} \times \vec{b} \, dv + \int_{\partial\body} \vec{x} \times \vec{t} \, ds \,.\label{body_resultant_moment}\tag{2.1.5}
 \end{equation}
 </div>
-<p>dove \(\partial\body\) denota il contorno di \(\body\) e quindi una superficie, \(\vec{b}\) e \(\vec{t}\) denotano due campi vettoriali che verranno meglio descritti nel seguito e che rappresentano, rispettivamente, una densità di forza di volume o, semplicemente, <em class="emphasis">forza di volume</em> e una densità di forza di superficie che verrà chiamata <em class="emphasis">trazione</em>.</p>
-<figure class="figure-like" id="continuo_forze_fig"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/continuo_forze.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">2.1.3.</span> </figcaption></figure><section class="subsubsection" id="subsubsection-1"><h4 class="heading hide-type">
+<p data-braille="continuation">dove \(\partial\body\) denota il contorno di \(\body\) e quindi una superficie, \(\vec{b}\) e \(\vec{t}\) denotano due campi vettoriali che verranno meglio descritti nel seguito e che rappresentano, rispettivamente, una densità di forza di volume o, semplicemente, <em class="emphasis">forza di volume</em> e una densità di forza di superficie che verrà chiamata <em class="emphasis">trazione</em>.</p>
+<figure class="figure figure-like" id="continuo_forze_fig"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/continuo_forze.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">2.1.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure><section class="subsubsection" id="subsubsection-1"><h4 class="heading hide-type">
 <span class="type">Sottosottosezione</span> <span class="codenumber">2.1.3.1</span> <span class="title">forza di volume</span>
 </h4>
 <p id="p-175">Le forze di volume non sorgono a causa di contatto fisico fra i corpi ma sono il risultato di un'azione a distanza, ad esempio la forza gravitazionale. Si assume quindi l'esistenza di una campo vettoriale \(\func{\vec{b}}{\vec{x}}\) funzione della posizione del punto \(\vec{x}\) appartenente a \(\body\text{.}\) In maniera analoga a quanto fatto per la densità di massa, è possibile dare una definizione formale di \(\func{\vec{b}}{\vec{x}}\text{:}\)</p>
@@ -252,7 +249,7 @@ var js_version = 0.12;
 \func{\vec{b}}{\vec{x}} = \lim_{\delta \to 0} \frac{\func{\vec{F}}{\func{\body_{\delta}}{\vec{x}}}}{\func{v}{\func{\body_{\delta}}{\vec{x}}}} \,,\tag{2.1.6}
 \end{equation}
 </div>
-<p>dove \(\func{\vec{F}}{\func{\body_{\delta}}{\vec{x}}}\) è una forza a distanza agente sul volume \(\func{\body_{\delta}}{\vec{x}}\text{.}\)</p></section><section class="subsubsection" id="subsubsection-2"><h4 class="heading hide-type">
+<p data-braille="continuation">dove \(\func{\vec{F}}{\func{\body_{\delta}}{\vec{x}}}\) è una forza a distanza agente sul volume \(\func{\body_{\delta}}{\vec{x}}\text{.}\)</p></section><section class="subsubsection" id="subsubsection-2"><h4 class="heading hide-type">
 <span class="type">Sottosottosezione</span> <span class="codenumber">2.1.3.2</span> <span class="title">trazione</span>
 </h4>
 <p id="p-176">La trazione deriva dal contatto fisico tra corpi. Il contatto può avvenire attraverso il contorno \(\partial\body\) del corpo ed in questo caso si avrà una trazione <em class="emphasis">esterna</em>. Oppure, come discuteremo più diffusamente nel seguito, può avvenire attraverso una superficie ideale passante all'interno di un corpo, in questo caso si parlerà di trazione <em class="emphasis">interna</em>. Introduciamo quindi una definizione formale della trazione che ci consetirà di specificare la dipendenza di tale campo vettoriale.</p>
@@ -262,10 +259,8 @@ var js_version = 0.12;
 \func{\vec{t}}{\vec{x},\Gamma_{\delta}} = \lim_{\delta \to 0} \frac{\func{\vec{F}}{\func{\Gamma_{\delta}}{\vec{x}}}}{\func{a}{\func{\Gamma_{\delta}}{\vec{x}}}} \,,\tag{2.1.7}
 \end{equation}
 </div>
-<p>dove \(\func{\vec{F}}{\func{\Gamma_{\delta}}{\vec{x}}}\) è una forza di superficie agente sull'area \(\func{\Gamma_{\delta}}{\vec{x}}\text{.}\) \(\func{\vec{t}}{\vec{x}, \Gamma_{\delta}}\) prende il nome di <em class="emphasis">vettore di trazione</em> dipendente non solo da \(\vec{x}\) ma anche anche dalla famiglia di superfici passante per \(\vec{x}\text{.}\)</p>
+<p data-braille="continuation">dove \(\func{\vec{F}}{\func{\Gamma_{\delta}}{\vec{x}}}\) è una forza di superficie agente sull'area \(\func{\Gamma_{\delta}}{\vec{x}}\text{.}\) \(\func{\vec{t}}{\vec{x}, \Gamma_{\delta}}\) prende il nome di <em class="emphasis">vettore di trazione</em> dipendente non solo da \(\vec{x}\) ma anche anche dalla famiglia di superfici passante per \(\vec{x}\text{.}\)</p>
 <p id="p-178">Un'opportuna definizione di tale dipendenza, elaborata da Cauchy, conduce alla nozione di <em class="emphasis">tensore della tensione di Cauchy</em>.</p></section></section></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.12/login.js"></script>
 </body>
 </html>

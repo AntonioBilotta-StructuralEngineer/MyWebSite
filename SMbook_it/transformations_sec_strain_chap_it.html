@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-03T16:58:24+02:00    *-->
+<!--*    on 2020-05-12T10:13:01+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -24,7 +24,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -41,21 +41,17 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.12;
-</script>
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Torna alla pagina dei contenuti</a><div class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
@@ -193,35 +189,35 @@ var js_version = 0.12;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="transformations_sec_strain_chap_it"><h2 class="heading hide-type">
 <span class="type">Sezione</span> <span class="codenumber">1.2</span> <span class="title">trasformazioni</span>
 </h2>
-<a href="transformations_sec_strain_chap_it.html" class="permalink">¶</a><figure class="figure-like" id="Kinematics_02_fig"><div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="images/Kinematics_02.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">1.2.1.</span> </figcaption></figure><p id="p-22">Si chiamerà <em class="emphasis">moto</em> la trasformazione</p>
+<a href="transformations_sec_strain_chap_it.html" class="permalink">¶</a><figure class="figure figure-like" id="Kinematics_02_fig"><div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="images/Kinematics_02.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.2.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-22">Si chiamerà <em class="emphasis">moto</em> la trasformazione</p>
 <div class="displaymath">
 \begin{equation}
 \vec{x} = \func{\vec{\chi}}{\vec{X}}\,,\label{motion_eq}\tag{1.2.1}
 \end{equation}
 </div>
-<p>valida \(\forall\vec{X} \in \body_0\text{.}\) \(\vec{\chi}\) è una funzione vettoriale che, data una posizione \(\vec{X}\) relativa alla configurazione di riferimento, fornisce la nuova posizione \(\vec{x}\) relativa alla configurazione corrente. La dipendenza fra \(\vec{x}\) e \(\vec{X}\) a volte viene indicata rapidamente come segue</p>
+<p data-braille="continuation">valida \(\forall\vec{X} \in \body_0\text{.}\) \(\vec{\chi}\) è una funzione vettoriale che, data una posizione \(\vec{X}\) relativa alla configurazione di riferimento, fornisce la nuova posizione \(\vec{x}\) relativa alla configurazione corrente. La dipendenza fra \(\vec{x}\) e \(\vec{X}\) a volte viene indicata rapidamente come segue</p>
 <div class="displaymath">
 \begin{equation}
 \vec{x} = \func{\vec{x}}{\vec{X}}\,,\tag{1.2.2}
 \end{equation}
 </div>
-<p>Si assume \(\vec{\chi}\) sufficientemente regolare da consentire la derivazione fino all'ordine desiderato.</p>
+<p data-braille="continuation">Si assume \(\vec{\chi}\) sufficientemente regolare da consentire la derivazione fino all'ordine desiderato.</p>
 <p id="p-23">Si assume inoltre che il moto \(\vec{\chi}\) sia invertibile in maniera unica, ovvero è possibile scrivere</p>
 <div class="displaymath">
 \begin{equation}
 \vec{X} = \func{\vec{\chi}^{-1}}{\vec{x}}\,,\tag{1.2.3}
 \end{equation}
 </div>
-<p>ovvero</p>
+<p data-braille="continuation">ovvero</p>
 <div class="displaymath">
 \begin{equation}
 \vec{X} = \func{\vec{X}}{\vec{x}}\,,\tag{1.2.4}
 \end{equation}
 </div>
-<p>dove il simbolo \(\vec{\chi}^{-1}\) indica il moto inverso che associa alla posizione corrente \(\vec{x}\) la posizione \(\vec{X}\) nella configurazione di riferimento.</p>
+<p data-braille="continuation">dove il simbolo \(\vec{\chi}^{-1}\) indica il moto inverso che associa alla posizione corrente \(\vec{x}\) la posizione \(\vec{X}\) nella configurazione di riferimento.</p>
 <p id="p-24">In generale il moto \(\vec{\chi}\) di un corpo modificherà la posizione, l'orientazione e la forma del corpo. Si dirà quindi <em class="emphasis">deformabile</em> un corpo in grado di modificare la propria forma.</p>
-<article class="assemblage-like" id="assemblage-2"><h6 class="heading"><span class="title">alcune trasformazioni di base.</span></h6>
+<article class="assemblage assemblage-like" id="assemblage-2"><h6 class="heading"><span class="title">alcune trasformazioni di base.</span></h6>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:3.75%;margin-right:3.75%;">
 <div class="sbspanel" style="width:43.2432432432432%;justify-content:flex-start;">
 <p id="p-25">Trasformazione 1 (rotazione di 90 gradi in senso antiorario)</p>
@@ -235,12 +231,12 @@ var js_version = 0.12;
 </div>
 <div class="sbspanel" style="width:48.6486486486486%;justify-content:flex-start;"><img src="images/90degreesRotation.png" style="width: 100%; height: auto;" alt=""></div>
 </div></div>
-<p id="p-26">Istruzioni per la definizione della funzione MATLAB associata alla trasformazione assegnata e per il suo utilizzo. <figure class="figure-like" id="listing-3"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
+<p id="p-26">Istruzioni per la definizione della funzione MATLAB associata alla trasformazione assegnata e per il suo utilizzo. <figure class="listing figure-like" id="listing-3"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
 
 X = [1; 2];
 T1(X)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.2.2.</span> </figcaption></figure></p>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.2.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:3.75%;margin-right:3.75%;">
 <div class="sbspanel" style="width:43.2432432432432%;justify-content:flex-start;">
 <p id="p-27">Trasformazione 2 (estensione orizzontale)</p>
@@ -254,12 +250,12 @@ T1(X)
 </div>
 <div class="sbspanel" style="width:48.6486486486486%;justify-content:flex-start;"><img src="images/RightExtension.png" style="width: 100%; height: auto;" alt=""></div>
 </div></div>
-<p id="p-28">Istruzioni MATLAB. <figure class="figure-like" id="listing-4"><pre class="console"><b>T2 = @(X) [2*X(1); X(2)];
+<p id="p-28">Istruzioni MATLAB. <figure class="listing figure-like" id="listing-4"><pre class="console"><b>T2 = @(X) [2*X(1); X(2)];
 
 X = [1; -1];
 T2(X)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.2.3.</span> </figcaption></figure></p>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.2.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:3.75%;margin-right:3.75%;">
 <div class="sbspanel" style="width:43.2432432432432%;justify-content:flex-start;">
 <p id="p-29">Trasformazione 3 (estensione verticale)</p>
@@ -273,12 +269,12 @@ T2(X)
 </div>
 <div class="sbspanel" style="width:48.6486486486486%;justify-content:flex-start;"><img src="images/UpExtension.png" style="width: 100%; height: auto;" alt=""></div>
 </div></div>
-<p id="p-30">Istruzioni MATLAB <figure class="figure-like" id="listing-5"><pre class="console"><b>T3 = @(X) [X(1); 1.5*X(2)];
+<p id="p-30">Istruzioni MATLAB <figure class="listing figure-like" id="listing-5"><pre class="console"><b>T3 = @(X) [X(1); 1.5*X(2)];
 
 v = [4; 10];
 T3(v)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.2.4.</span> </figcaption></figure></p>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.2.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:3.75%;margin-right:3.75%;">
 <div class="sbspanel" style="width:43.2432432432432%;justify-content:flex-start;">
 <p id="p-31">Trasformazione 4 (taglio a destra)</p>
@@ -292,12 +288,12 @@ T3(v)
 </div>
 <div class="sbspanel" style="width:48.6486486486486%;justify-content:flex-start;"><img src="images/RightShear.png" style="width: 100%; height: auto;" alt=""></div>
 </div></div>
-<p id="p-32">Istruzioni MATLAB <figure class="figure-like" id="listing-6"><pre class="console"><b>T4 = @(X) [X(1)+X(2); X(2)];
+<p id="p-32">Istruzioni MATLAB <figure class="listing figure-like" id="listing-6"><pre class="console"><b>T4 = @(X) [X(1)+X(2); X(2)];
 
 u = [10; -1];
 T4(u)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.2.5.</span> </figcaption></figure></p></article><p id="p-33">Gli esempi precedenti appartengono ad una categoria di trasformazioni molto importanti nella meccanica dei solidi: le <em class="alert">trasformazioni lineari</em>.</p>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.2.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-33">Gli esempi precedenti appartengono ad una categoria di trasformazioni molto importanti nella meccanica dei solidi: le <em class="alert">trasformazioni lineari</em>.</p>
 <p id="p-34"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><iframe id="video-2" width="456" height="256" allowfullscreen="" src="https://www.youtube.com/embed/cDTeaeZaH-c?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></p>
 <p id="p-35">Pertanto nel caso in cui la trasformazione \(\vec{\chi}\) è lineare la sua azione sul vettore \(\vec{X}\) è esplicabile attraverso la matrice \(\mat{M_{\chi}}\) definita come segue</p>
 <div class="displaymath">
@@ -306,13 +302,13 @@ T4(u)
 \left[\begin{array}{ccc} \func{\vec{\chi}}{\vec{e}_1} \amp \func{\vec{\chi}}{\vec{e}_2} \amp \func{\vec{\chi}}{\vec{e}_3}  \end{array}\right]\,,\tag{1.2.5}
 \end{equation}
 </div>
-<p>dove \(\func{\vec{\chi}}{\vec{e}_1}\text{,}\) \(\func{\vec{\chi}}{\vec{e}_2}\) e \(\func{\vec{\chi}}{\vec{e}_3}\) sono i vettori ottenuti applicando la trasformazione \(\vec{\chi}\) ai vettori della base di riferimento. Pertanto la trasformazione di qualsiasi vettore \(\vec{X}\) potrà essere ottenuta in modo equivalente applicando la matrice \(\mat{M_{\chi}}\text{:}\)</p>
+<p data-braille="continuation">dove \(\func{\vec{\chi}}{\vec{e}_1}\text{,}\) \(\func{\vec{\chi}}{\vec{e}_2}\) e \(\func{\vec{\chi}}{\vec{e}_3}\) sono i vettori ottenuti applicando la trasformazione \(\vec{\chi}\) ai vettori della base di riferimento. Pertanto la trasformazione di qualsiasi vettore \(\vec{X}\) potrà essere ottenuta in modo equivalente applicando la matrice \(\mat{M_{\chi}}\text{:}\)</p>
 <div class="displaymath">
 \begin{equation}
 \vec{x} = \func{\vec{\chi}}{\vec{X}} = \mat{M_{\chi}} \vec{X} \,.\tag{1.2.6}
 \end{equation}
 </div>
-<article class="assemblage-like" id="assemblage-3"><h6 class="heading"><span class="title">valutazione della matrice \(\mat{M_{\chi}}\).</span></h6>
+<article class="assemblage assemblage-like" id="assemblage-3"><h6 class="heading"><span class="title">valutazione della matrice \(\mat{M_{\chi}}\).</span></h6>
 <p id="p-36">Nel caso delle trasformazioni lineari già prese in considerazione negli esempi precedenti è facile verificare i seguenti risultati.</p>
 <p id="p-37"><div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
 <div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;">
@@ -354,7 +350,7 @@ T4(u)
 </div>
 </div>
 </div></div></p>
-<p id="p-43">Istruzioni MATLAB per la costruzione delle matrici associate alle trasformazioni. <figure class="figure-like" id="listing-7"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
+<p id="p-43">Istruzioni MATLAB per la costruzione delle matrici associate alle trasformazioni. <figure class="listing figure-like" id="listing-7"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
 T2 = @(X) [2*X(1); X(2)];
 T3 = @(X) [X(1); 1.5*X(2)];
 T4 = @(X) [X(1)+X(2); X(2)];
@@ -364,11 +360,10 @@ M2 = [T2([1; 0]) T2([0; 1])]
 M3 = [T3([1; 0]) T3([0; 1])]
 M4 = [T4([1; 0]) T4([0; 1])]
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.2.6.</span> </figcaption></figure></p></article><article class="remark-like" id="remark-1"><h6 class="heading">
-<span class="type">Commento</span> <span class="codenumber">1.2.7</span>.</h6>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.2.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><article class="remark remark-like" id="remark-1"><h6 class="heading">
+<span class="type">Commento</span><span class="space"> </span><span class="codenumber">1.2.7</span><span class="period">.</span>
+</h6>
 <p id="p-44">È importante sottolineare ancora che è possibile identificare la matrice \(\mat{M_{\chi}}\) solo nel caso di trasformazione lineare. Inoltre, vale anche l'inverso, ovvero l'esistenza di una matrice \(\mat{M_{\chi}}\) utilizzabile per rappresentare una trasformazione implica la linearità della trasformazione.</p></article></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.12/login.js"></script>
 </body>
 </html>

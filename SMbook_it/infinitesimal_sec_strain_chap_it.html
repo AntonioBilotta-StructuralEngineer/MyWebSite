@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-03T16:58:25+02:00    *-->
+<!--*    on 2020-05-12T10:13:01+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -24,7 +24,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -41,21 +41,17 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.12;
-</script>
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Torna alla pagina dei contenuti</a><div class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
@@ -199,7 +195,7 @@ var js_version = 0.12;
 \lim_{\|\tens{\nabla u}\| \rightarrow 0} \tens{E} = \tens{\varepsilon} =  \frac{1}{2}\left(\tens{\nabla u} + \transp{\tens{\nabla u}}\right)\,,\label{infinitesima_1_eq}\tag{1.9.1}
 \end{equation}
 </div>
-<p>mentre il tensore di Cauchy assumerà la seguente espressione</p>
+<p data-braille="continuation">mentre il tensore di Cauchy assumerà la seguente espressione</p>
 <div class="displaymath">
 \begin{equation}
 \lim_{\|\tens{\nabla u}\| \rightarrow 0} \tens{C} = \tens{I}+ \tens{\nabla u} + \transp{\tens{\nabla u}}\,.\label{infinitesima_2_eq}\tag{1.9.2}
@@ -216,7 +212,7 @@ var js_version = 0.12;
 \func{u_3}{X_1, X_2, X_3}\,,
 \end{gather*}
 </div>
-<p>e del relativo gradiente \(\tens{\nabla u}\)</p>
+<p data-braille="continuation">e del relativo gradiente \(\tens{\nabla u}\)</p>
 <div class="displaymath">
 \begin{equation}
 \mat{\nabla u} =
@@ -227,13 +223,13 @@ var js_version = 0.12;
 \end{array}\right]\,.\tag{1.9.3}
 \end{equation}
 </div>
-<p>La seguente decomposizione di \(\tens{\nabla u}\)</p>
+<p data-braille="continuation">La seguente decomposizione di \(\tens{\nabla u}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \tens{\nabla u} = \underbrace{\frac{1}{2}\left(\tens{\nabla u} + \transp{\tens{\nabla u}}\right)}_{\text{sym}\tens{\nabla u}} +  \underbrace{\frac{1}{2}\left(\tens{\nabla u} - \transp{\tens{\nabla u}}\right)}_{\text{skew}\tens{\nabla u}}\,,
 \end{equation*}
 </div>
-<p>in generale applicabile a tutti i tensori, consente di inserire in un quadro più generale il tensore della deformazione infinitesima prima introdotto ed il ruolo giocato da  \(\tens{\nabla u}\) nella descrizione dei moti infinitesimi. Per moti infinitesemi intenderemo quindi i moti caretterizzati dalla condizione \(\|\tens{\nabla u}\| \rightarrow 0\text{.}\)</p>
+<p data-braille="continuation">in generale applicabile a tutti i tensori, consente di inserire in un quadro più generale il tensore della deformazione infinitesima prima introdotto ed il ruolo giocato da  \(\tens{\nabla u}\) nella descrizione dei moti infinitesimi. Per moti infinitesemi intenderemo quindi i moti caretterizzati dalla condizione \(\|\tens{\nabla u}\| \rightarrow 0\text{.}\)</p>
 <ul class="disc">
 <li id="li-24">La parte simmetrica, \(\text{sym}\tens{\nabla u}\text{,}\) che in forma matriciale è esprimibile come<div class="displaymath">
 \begin{equation}
@@ -277,8 +273,8 @@ var js_version = 0.12;
 \end{equation}
 </div>
 </li>
-</ul></section><article class="remark-like" id="insight-3"><h6 class="heading">
-<span class="type">Approfondimento</span> <span class="codenumber">1.9.1</span>. <span class="title">interpretazione delle componenti del tensore della deformazione infinitesima.</span>
+</ul></section><article class="insight remark-like" id="insight-3"><h6 class="heading">
+<span class="type">Approfondimento</span><span class="space"> </span><span class="codenumber">1.9.1</span><span class="period">.</span><span class="space"> </span><span class="title">interpretazione delle componenti del tensore della deformazione infinitesima.</span>
 </h6>
 <p id="p-140">Al fine di individuare il significato delle componenti del tensore \(\tens{\varepsilon}\) conviene richiamare l'espressione del tensore \(\tens{C}\) rispetto al gradiente delo spostamento, ovvero</p>
 <div class="displaymath">
@@ -286,46 +282,46 @@ var js_version = 0.12;
 \tens{C} = \tens{I}+ \tens{\nabla u} + \transp{\tens{\nabla u}} +  \transp{\tens{\nabla u}}\,\tens{\nabla u}\,,
 \end{equation*}
 </div>
-<p>da cui, effetuando i calcoli, ad esempio con le seguenti istruzioni MATLAB</p>
-<figure class="figure-like" id="listing-22"><pre class="console"><b>syms u1_X1 u1_X2 u1_X3 u2_X1 u2_X2 u2_X3 u3_X1 u3_X2 u3_X3
+<p data-braille="continuation">da cui, effetuando i calcoli, ad esempio con le seguenti istruzioni MATLAB</p>
+<figure class="listing figure-like" id="listing-22"><pre class="console"><b>syms u1_X1 u1_X2 u1_X3 u2_X1 u2_X2 u2_X3 u3_X1 u3_X2 u3_X3
 Du = [u1_X1 u1_X2 u1_X3;u2_X1 u2_X2 u2_X3; u3_X1 u3_X2 u3_X3]
 C = diag([1 1 1]) + Du + transpose(Du) + transpose(Du)*Du
 C(1,1)
 C(1,2)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.9.2.</span> </figcaption></figure><p id="p-141">si possono ricavare le espressioni di una componente sulla diagonale ed una fuori dalla diagonale</p>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.9.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-141">si possono ricavare le espressioni di una componente sulla diagonale ed una fuori dalla diagonale</p>
 <div class="displaymath">
 \begin{align*}
 C_{11} \amp = \left( 1 + \frac{\partial u_1}{\partial X_1} \right)^2 + \left(\frac{\partial u_1}{\partial X_2}\right)^2 + \left(\frac{\partial u_1}{\partial X_3}\right)^2\,,\\
 C_{12} \amp = \frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1} + \frac{\partial u_1}{\partial X_1}\frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1}\frac{\partial u_2}{\partial X_2} + \frac{\partial u_3}{\partial X_1}\frac{\partial u_3}{\partial X_2} \,.
 \end{align*}
 </div>
-<p>Per la componente sulla diagonale, utilizzando il risultato <a data-knowl="./knowl/Cii_eq.html" title="Equazione 1.8.4">(1.8.4)</a> ottenuto per la componente sulla diagonale di \(\tens{C}\text{,}\) si può scrivere</p>
+<p data-braille="continuation">Per la componente sulla diagonale, utilizzando il risultato <a class="xref" data-knowl="./knowl/Cii_eq.html" title="Equazione 1.8.4">(1.8.4)</a> ottenuto per la componente sulla diagonale di \(\tens{C}\text{,}\) si può scrivere</p>
 <div class="displaymath">
 \begin{equation*}
 \func{\lambda}{\vec{e}_1}^2 =  \left( 1 + \underbrace{\frac{\partial u_1}{\partial X_1}}_{\varepsilon_{11}} \right)^2 + \underbrace{\left(\frac{\partial u_1}{\partial X_2}\right)^2 + \left(\frac{\partial u_1}{\partial X_3}\right)^2}_{\text{trascurabili nel caso infinitesimo}}\,.
 \end{equation*}
 </div>
-<p>Da cui si ricava</p>
+<p data-braille="continuation">Da cui si ricava</p>
 <div class="displaymath">
 \begin{equation}
 \varepsilon_{11} \approx \func{\lambda}{\vec{e}_1} - 1\,.\label{small_normal_strain_eq}\tag{1.9.9}
 \end{equation}
 </div>
-<p>Analogo risultato vale per le altre componenti di \(\tens{\varepsilon}\) sulla diagonale.</p>
-<p id="p-142">Per la componente fuori dalla diagonale, utilizzando il risultato <a data-knowl="./knowl/Cij_eq.html" title="Equazione 1.8.6">(1.8.6)</a>, si ha</p>
+<p data-braille="continuation">Analogo risultato vale per le altre componenti di \(\tens{\varepsilon}\) sulla diagonale.</p>
+<p id="p-142">Per la componente fuori dalla diagonale, utilizzando il risultato <a class="xref" data-knowl="./knowl/Cij_eq.html" title="Equazione 1.8.6">(1.8.6)</a>, si ha</p>
 <div class="displaymath">
 \begin{equation*}
 \sin{\func{\gamma}{\vec{e}_1,\vec{e}_2}}\, \underbrace{\func{\lambda}{\vec{e}_1} \, \func{\lambda}{\vec{e}_2}}_{\approx 1} = \underbrace{\frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1}}_{2\,\varepsilon_{12}} + \underbrace{\frac{\partial u_1}{\partial X_1}\frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1}\frac{\partial u_2}{\partial X_2} + \frac{\partial u_3}{\partial X_1}\frac{\partial u_3}{\partial X_2}}_{\text{trascurabili nel caso infinitesimo}}\,,
 \end{equation*}
 </div>
-<p>e quindi</p>
+<p data-braille="continuation">e quindi</p>
 <div class="displaymath">
 \begin{equation}
 \varepsilon_{12} \approx \frac{1}{2}\, \sin{\func{\gamma}{\vec{e}_1,\vec{e}_2}} \approx  \frac{1}{2}\, \func{\gamma}{\vec{e}_1,\vec{e}_2}\,.\label{small_shear_eq}\tag{1.9.10}
 \end{equation}
-</div></article><article class="remark-like" id="small_rotations_insight"><h6 class="heading">
-<span class="type">Approfondimento</span> <span class="codenumber">1.9.3</span>. <span class="title">rotazioni infinitesime.</span>
+</div></article><article class="insight remark-like" id="small_rotations_insight"><h6 class="heading">
+<span class="type">Approfondimento</span><span class="space"> </span><span class="codenumber">1.9.3</span><span class="period">.</span><span class="space"> </span><span class="title">rotazioni infinitesime.</span>
 </h6>
 <p id="p-143">Per spiegare la denominazione "rotazione infinitesima" che è stata data alla parte emisimmetrica del gradiente dello spostamento conviene discutere in concreto una trasformazione caratterizzata solo da una semplice rotazione. A tal fine si consideri una rotazione intorno all'asse \(\vec{e}_3\text{.}\) La parte significativa della trasformazione può essere discussa direttamente direttamente nel piano con</p>
 <div class="displaymath">
@@ -334,20 +330,20 @@ x_1 \amp = X_1\cos{\alpha} - X_2\sin{\alpha}\,,\\
 x_2 \amp = X_1\sin{\alpha} + X_2\cos{\alpha}\,.
 \end{align*}
 </div>
-<p>Il campo di spostamento associato è</p>
+<p data-braille="continuation">Il campo di spostamento associato è</p>
 <div class="displaymath">
 \begin{align*}
 u_1 = x_1 - X_1 \amp = (X_1\cos{\alpha} - X_2\sin{\alpha}) - X_1\,,\\
 u_2 = x_2 - X_2 \amp = (X_1\sin{\alpha} + X_2\cos{\alpha}) - X_2\,.
 \end{align*}
 </div>
-<p>Con tali dati è possibile calcolare il gradiente della trasformazione che, nel caso specifico, è composto solo dalla rotazione</p>
+<p data-braille="continuation">Con tali dati è possibile calcolare il gradiente della trasformazione che, nel caso specifico, è composto solo dalla rotazione</p>
 <div class="displaymath">
 \begin{equation*}
 \tens{F} = \tens{R}\,,
 \end{equation*}
 </div>
-<p>dove, come già discusso nelle sezioni precedenti,</p>
+<p data-braille="continuation">dove, come già discusso nelle sezioni precedenti,</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{R} =
@@ -357,19 +353,19 @@ u_2 = x_2 - X_2 \amp = (X_1\sin{\alpha} + X_2\cos{\alpha}) - X_2\,.
 \end{array}\right]\,.
 \end{equation*}
 </div>
-<p>Inoltre</p>
+<p data-braille="continuation">Inoltre</p>
 <div class="displaymath">
 \begin{equation*}
 \tens{F} = \tens{I} + \tens{\nabla u}\,,
 \end{equation*}
 </div>
-<p>e quindi</p>
+<p data-braille="continuation">e quindi</p>
 <div class="displaymath">
 \begin{equation}
 \tens{R} = \tens{I} + \tens{\nabla u} =  \tens{I} + \text{sym}\tens{\nabla u} + \text{skew}\tens{\nabla u}\,.\label{rotation_eq}\tag{1.9.11}
 \end{equation}
 </div>
-<p>Risultato che evidenzia la decomposizione del gradiente dello spostamento con</p>
+<p data-braille="continuation">Risultato che evidenzia la decomposizione del gradiente dello spostamento con</p>
 <div class="displaymath">
 \begin{equation*}
 \text{sym}\mat{\nabla u} =
@@ -384,7 +380,7 @@ u_2 = x_2 - X_2 \amp = (X_1\sin{\alpha} + X_2\cos{\alpha}) - X_2\,.
 \end{array}\right]\,,
 \end{equation*}
 </div>
-<p>ma ancora del tutto generico e che non fa riferimento agli spostamenti infinitesimi.</p>
+<p data-braille="continuation">ma ancora del tutto generico e che non fa riferimento agli spostamenti infinitesimi.</p>
 <p id="p-144">Ipotizzare spostamenti infinitesimi equivale ad assumere valori dell'angolo \(\alpha\) molto piccoli, \(\alpha \ll 1\text{,}\) ovvero \(\cos{\alpha}\approx 1\) e \(\sin{\alpha} \approx \alpha\text{.}\) Da cui deriva</p>
 <div class="displaymath">
 \begin{equation*}
@@ -397,26 +393,27 @@ u_2 = x_2 - X_2 \amp = (X_1\sin{\alpha} + X_2\cos{\alpha}) - X_2\,.
 \end{array}\right]\,.
 \end{equation*}
 </div>
-<p>Pertanto nel caso di spostamenti infinitesi la relazione <a data-knowl="./knowl/rotation_eq.html" title="Equazione 1.9.11">(1.9.11)</a> può essere riscritta come segue</p>
+<p data-braille="continuation">Pertanto nel caso di spostamenti infinitesi la relazione <a class="xref" data-knowl="./knowl/rotation_eq.html" title="Equazione 1.9.11">(1.9.11)</a> può essere riscritta come segue</p>
 <div class="displaymath">
 \begin{equation}
 \tens{R} \approx \tens{I} + \text{skew}\tens{\nabla u}\,.\label{rotation_infinitesima_eq}\tag{1.9.12}
 \end{equation}
 </div>
-<figure class="figure-like" id="figure-8"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/infinitesimal_rotation.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">1.9.4.</span> </figcaption></figure><p id="p-145">La Figura illustra graficamente il risultato ottenuto mostrando anche in che relazione stanno il vettore ottenuto applicando \(\tens{R}\)</p>
+<figure class="figure figure-like" id="figure-8"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/infinitesimal_rotation.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.9.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-145">La Figura illustra graficamente il risultato ottenuto mostrando anche in che relazione stanno il vettore ottenuto applicando \(\tens{R}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \tens{R}\vec{X}
 \end{equation*}
 </div>
-<p>e il vettore ottenuto applicando l'approssimazione di \(\tens{R}\) data da \((\tens{I} + \text{skew}\tens{\nabla u})\)</p>
+<p data-braille="continuation">e il vettore ottenuto applicando l'approssimazione di \(\tens{R}\) data da \((\tens{I} + \text{skew}\tens{\nabla u})\)</p>
 <div class="displaymath">
 \begin{equation*}
 (\tens{I} + \text{skew}\tens{\nabla u})\vec{X} = \vec{X} + \text{skew}\tens{\nabla u}\,\vec{X}\,.
 \end{equation*}
-</div></article><article class="remark-like" id="skew_tensor_insight"><h6 class="heading">
-<span class="type">Approfondimento</span> <span class="codenumber">1.9.5</span>.</h6>
+</div></article><article class="insight remark-like" id="skew_tensor_insight"><h6 class="heading">
+<span class="type">Approfondimento</span><span class="space"> </span><span class="codenumber">1.9.5</span><span class="period">.</span>
+</h6>
 <p id="p-146">Dato un tensore \(\tens{W}\) emisimmetrico, la cui forma matriciale ad esso associata per definizione sarà</p>
 <div class="displaymath">
 \begin{equation*}
@@ -428,7 +425,7 @@ u_2 = x_2 - X_2 \amp = (X_1\sin{\alpha} + X_2\cos{\alpha}) - X_2\,.
 \end{array}\right]\,,
 \end{equation*}
 </div>
-<p>si può verificare come la sua applicazione ad un vettore \(\vec{v}\)</p>
+<p data-braille="continuation">si può verificare come la sua applicazione ad un vettore \(\vec{v}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \left[\begin{array}{ccc}
@@ -449,7 +446,7 @@ W_{12}v_2 + W_{13}v_3 \\
 \end{array}\right]
 \end{equation*}
 </div>
-<p>equivalga a calcolare il seguente prodotto vettoriale</p>
+<p data-braille="continuation">equivalga a calcolare il seguente prodotto vettoriale</p>
 <div class="displaymath">
 \begin{equation*}
 \left[\begin{array}{c}
@@ -471,13 +468,13 @@ v_3
 \end{array}\right]
 \end{equation*}
 </div>
-<p>dove le componenti di \(\vec{\omega}\) sono messe in corrispondenza con le componenti di \(\tens{W}\) nel modo seguente</p>
+<p data-braille="continuation">dove le componenti di \(\vec{\omega}\) sono messe in corrispondenza con le componenti di \(\tens{W}\) nel modo seguente</p>
 <div class="displaymath">
 \begin{equation}
 \omega_{1} = -W_{23}\,,\quad \omega_{2} = W_{13}\,,\quad \omega_{3} = -W_{12}\,.\tag{1.9.13}
 \end{equation}
 </div>
-<p>Quindi, noto \(\vec{\omega}\text{,}\) \(\tens{W}\) può essere espresso come segue</p>
+<p data-braille="continuation">Quindi, noto \(\vec{\omega}\text{,}\) \(\tens{W}\) può essere espresso come segue</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{W} =
@@ -494,9 +491,7 @@ v_3
 \tens{W}\vec{v} = \vec{\omega} \times \vec{v}\,,\tag{1.9.14}
 \end{equation}
 </div>
-<p>e \(\omega\) è il vettore assiale associato al tensore emisimmetrico \(\tens{W}\text{.}\) L'aggettivo assiale deriva dal fatto che \(\omega\) individua l'asse di una rotazione intorno al quale si effettua la rotazione infinitesima.</p></article></section></div></main>
+<p data-braille="continuation">e \(\omega\) è il vettore assiale associato al tensore emisimmetrico \(\tens{W}\text{.}\) L'aggettivo assiale deriva dal fatto che \(\omega\) individua l'asse di una rotazione intorno al quale si effettua la rotazione infinitesima.</p></article></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.12/login.js"></script>
 </body>
 </html>

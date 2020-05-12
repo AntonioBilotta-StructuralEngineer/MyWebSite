@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-03T16:58:30+02:00    *-->
+<!--*    on 2020-05-12T10:13:05+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,16 +12,57 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<figure class="figure-like"><pre class="console"><b>syms l;
-A = [
-1 0 2*l 0 0 0; ... 
-0 1 0 0 0 0; ... 
-1 0 0 -1 0 0; ...
-0 1 2*l 0 -1 l; ...
-0 0 0 0 1 0; ...
-];
-rank(A)
+<figure class="listing figure-like"><pre class="console"><b>% definizione della geometria
+L = 100;
+A = [0; 0]
+B = [2*L; 0]
+C = [2*L; -L]
+D = [4*L; -L]
+beam1 = [A B]
+beam2 = [B C D]
+
+% funzione per il calcolo della posizione di punto
+rigidT = @(u0, X0, phi0, X)[X(1)+u0(1)-phi0*(X(2)-X0(2)); X(2)+u0(2)+phi0*(X(1)-X0(1))];
+
+% nuova configurazione della prima trave (polo in A)
+u0 = [L/4; 0];
+phi0 = 1/4;
+X0 = A;
+TA = rigidT(u0, X0, phi0, A)
+TB = rigidT(u0, X0, phi0, B)
+beam1T = [TA TB]
+
+% nuova configurazione della seconda trave (polo in D)
+u0 = [0; 0];
+phi0 = -1/4;
+X0 = C;
+TC = rigidT(u0, X0, phi0, C)
+TD = rigidT(u0, X0, phi0, D)
+beam1T = [TB TC TD]
+
+% plottaggio
+clf
+
+x = beam1(1,:)
+y = beam1(2,:)
+line(x,y,'LineWidth',2,'Color','black')
+
+x = beam2(1,:)
+y = beam2(2,:)
+line(x,y,'LineWidth',2,'Color','black')
+
+x = beam1T(1,:)
+y = beam1T(2,:)
+line(x,y,'LineWidth',2,'Color','red')
+
+x = beam2T(1,:)
+y = beam2T(2,:)
+line(x,y,'LineWidth',2,'Color','red')
+
+xlim([0 4*L])
+ylim([-L 0.5*l])
+pbaspect([2.667 1 1])
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">4.4.18.</span> </figcaption></figure><span class="incontext"><a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html#listing-49">in-context</a></span>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">4.4.16<span class="period">.</span></span><span class="space"> </span></figcaption></figure><span class="incontext"><a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html#listing-49">in-context</a></span>
 </body>
 </html>

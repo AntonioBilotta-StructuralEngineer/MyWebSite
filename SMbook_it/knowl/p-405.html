@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-03T16:58:30+02:00    *-->
+<!--*    on 2020-05-12T10:13:05+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,18 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Si svolgano gli esercizi precedenti modificando opportunamente il codice MATLAB utilizzato per l'esempio riportato nella <a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html#traveL_cinematica_sec" class="internal" title='Sottosezione 4.4.2: trave ad L "appoggiata"'>Sottosezione 4.4.2</a>.</p>
+<p>Le seguenti istruzioni MATLAB consentono di calcolare la soluzione cercata. <figure class="listing figure-like"><pre class="console"><b>syms l k;
+A = [
+1 0 0 0 0; ... 
+0 1 0 0 0; ... 
+1 0 -1 0 0; ...
+0 1 0 -1 l; ...
+0 0 0 1 0; ...
+];
+b = [-2*l*k; 0; 0; -2*l*k; 0];
+linsolve(A,b)
+</b></pre>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">4.4.20<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <span class="incontext"><a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html#p-405">in-context</a></span>
 </body>
 </html>

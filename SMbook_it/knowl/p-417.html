@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-03T16:58:30+02:00    *-->
+<!--*    on 2020-05-12T10:13:05+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,16 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Un corpo o un sistema di corpi tipicamente è soggetto sia ai carichi applicati sia a delle assegnate condizioni di vincolo. Da un punto di vista statico i vincoli vengono trattati rappresentando l’azione esercitata dal vincolo in termini di forze o coppie denominate <em class="alert">reazioni vincolari</em>. Tale procedura, come vedremo, consente di ottenere il <em class="alert">diagramma di corpo libero</em> mediante il quale il corpo viene rappresentato sotto l'azione di due gruppi di enti statici: le azioni applicate e le reazioni vincolari.</p>
-<span class="incontext"><a href="constraints_sec_rigid_body_statics_chap_it.html#p-417">in-context</a></span>
+<p>Se si considera il caso in cui siano soltanto due le componenti non nulle delle forze applicate e delle posizioni dei punti dello spazio, l'equazione vettoriale <a class="xref" data-knowl="./knowl/rb_statics1_eq.html" title="Equazione 5.1.8">(5.1.8)</a> è esprimibile solo mediante due equazioni scalari e l'equazione vettoriale <a class="xref" data-knowl="./knowl/rb_statics2_eq.html" title="Equazione 5.1.9">(5.1.9)</a> si riduce ad una sola equazione scalare. Ovvero</p>
+<div class="displaymath">
+\begin{gather}
+\sum_{i=1}^N F_{1i} = 0\,,\tag{5.2.1}\\
+\sum_{i=1}^N F_{2i} = 0\,,\tag{5.2.2}\\
+\sum_{i=1}^N \left(  \left( X_{1i} - X_{1o}\right) F_{2i} - \left( X_{2i} - X_{2o}\right) F_{1i} \right) = 0\,.\tag{5.2.3}
+\end{gather}
+</div>
+<p data-braille="continuation">La condizione <a class="xref" data-knowl="./knowl/rb_plane_statics1_eq.html" title="Equazione 5.2.1">(5.2.1)</a> esprime l'annullamento della somma di tutte le forze orizzontali applicate, ovvero le componenti lungo l'asse 1 delle forze applicate. La condizione <a class="xref" data-knowl="./knowl/rb_plane_statics2_eq.html" title="Equazione 5.2.2">(5.2.2)</a> impone l'annullamento della somma di tutte le forze verticali applicate, ovvero le componenti lungo l'asse 2 delle forze applicate. La condizione <a class="xref" data-knowl="./knowl/rb_plane_statics3_eq.html" title="Equazione 5.2.3">(5.2.3)</a> esprime l'annullamento della somma dei momenti esercitati dalle forze orizzontali e verticali rispetto al punto scelto come polo. La seguente figura illustra per il caso di una singola forza il significato dei termini presenti nelle equazioni. <figure class="figure figure-like"><div class="image-box" style="width: 55%; margin-left: 22.5%; margin-right: 22.5%;"><img src="images/statica2D.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.2.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<span class="incontext"><a href="planecase_sec_rigid_body_statics_chap_it.html#p-417">in-context</a></span>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-03T16:58:27+02:00    *-->
+<!--*    on 2020-05-12T10:13:03+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -24,7 +24,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -41,21 +41,17 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.12;
-</script>
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Torna alla pagina dei contenuti</a><div class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
@@ -193,17 +189,17 @@ var js_version = 0.12;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="equilibrium_sec_rigid_body_statics_chap_it"><h2 class="heading hide-type">
 <span class="type">Sezione</span> <span class="codenumber">5.1</span> <span class="title">equazioni di equilibrio</span>
 </h2>
-<a href="equilibrium_sec_rigid_body_statics_chap_it.html" class="permalink">¶</a><p id="p-408">Di equazioni di equilibrio si è già parlato nel <a href="stress_chap_it.html" class="internal" title="Capitolo 2: forze, equilibrio e tensione">Capitolo 2</a> dedicato ai corpi continui. Si potrebbe quindi procedere particolarizzando le equazioni <a data-knowl="./knowl/body_equilibrium_1.html" title="Equazione 2.2.1">(2.2.1)</a> e <a data-knowl="./knowl/body_equilibrium_2.html" title="Equazione 2.2.2">(2.2.2)</a> al caso di sistemi di corpi soggetti a forze di tipo puntuale. Si preferisce invece ricavare le equazioni di equilibrio in maniera autonoma attraverso l'applicazione del principio dei lavori virtuali già discusso per i corpi continui nella <a href="plv_sec_stress_chap_it.html" class="internal" title="Sezione 2.5: principio dei lavori virtuali">Sezione 2.5</a>.</p>
+<a href="equilibrium_sec_rigid_body_statics_chap_it.html" class="permalink">¶</a><p id="p-410">Di equazioni di equilibrio si è già parlato nel <a href="stress_chap_it.html" class="internal" title="Capitolo 2: forze, equilibrio e tensione">Capitolo 2</a> dedicato ai corpi continui. Si potrebbe quindi procedere particolarizzando le equazioni <a class="xref" data-knowl="./knowl/body_equilibrium_1.html" title="Equazione 2.2.1">(2.2.1)</a> e <a class="xref" data-knowl="./knowl/body_equilibrium_2.html" title="Equazione 2.2.2">(2.2.2)</a> al caso di sistemi di corpi soggetti a forze di tipo puntuale. Si preferisce invece ricavare le equazioni di equilibrio in maniera autonoma attraverso l'applicazione del principio dei lavori virtuali già discusso per i corpi continui nella <a href="plv_sec_stress_chap_it.html" class="internal" title="Sezione 2.5: principio dei lavori virtuali">Sezione 2.5</a>.</p>
 <section class="subsection" id="subsection-99"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">5.1.1</span> <span class="title">condizioni di equilibrio statico per un sistema di punti</span>
 </h3>
-<p id="p-409">Si consideri un sistema costituito da \(N\) punti materiali ciascuno di massa \(m_i\text{.}\) Applicando la seconda legge di Newton si ottiene:</p>
+<p id="p-411">Si consideri un sistema costituito da \(N\) punti materiali ciascuno di massa \(m_i\text{.}\) Applicando la seconda legge di Newton si ottiene:</p>
 <div class="displaymath">
 \begin{equation}
 \vec{F}_i = m_i \vec{a}_i\,, \quad i=1 \dots N\,,\label{Newton2ndLaw_eq}\tag{5.1.1}
 \end{equation}
 </div>
-<p>dove \(\vec{a}_i\) è l'accelerazione del generico punto e \(\vec{F}_i\) la forza applicata al punto. In condizioni di equilibrio statico la <a data-knowl="./knowl/Newton2ndLaw_eq.html" title="Equazione 5.1.1">(5.1.1)</a> fornisce</p>
+<p data-braille="continuation">dove \(\vec{a}_i\) è l'accelerazione del generico punto e \(\vec{F}_i\) la forza applicata al punto. In condizioni di equilibrio statico la <a class="xref" data-knowl="./knowl/Newton2ndLaw_eq.html" title="Equazione 5.1.1">(5.1.1)</a> fornisce</p>
 <div class="displaymath">
 \begin{equation}
 \vec{F}_i = \vec0\,, \quad i=1 \dots N\,.\label{StaticNewton2ndLaw_eq}\tag{5.1.2}
@@ -211,19 +207,19 @@ var js_version = 0.12;
 </div></section><section class="subsection" id="subsection-100"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">5.1.2</span> <span class="title">forma scalare delle equazioni di equilibrio</span>
 </h3>
-<p id="p-410">Si consideri per ciascun punto del sistema uno spostamento arbitrario \(\delta\vec{u}_i\text{,}\) e si sommi il prodotto scalare di ogni forza \(\vec{F}_i\) per il corrispondente spostamento introdotto. In virtù della <a data-knowl="./knowl/StaticNewton2ndLaw_eq.html" title="Equazione 5.1.2">(5.1.2)</a> è possibile formulare la seguente equazione scalare:</p>
+<p id="p-412">Si consideri per ciascun punto del sistema uno spostamento arbitrario \(\delta\vec{u}_i\text{,}\) e si sommi il prodotto scalare di ogni forza \(\vec{F}_i\) per il corrispondente spostamento introdotto. In virtù della <a class="xref" data-knowl="./knowl/StaticNewton2ndLaw_eq.html" title="Equazione 5.1.2">(5.1.2)</a> è possibile formulare la seguente equazione scalare:</p>
 <div class="displaymath">
 \begin{equation}
 \sum_{i=1}^N\vec{F}_i \cdot \delta\vec{u}_i = 0\,,\quad \forall \delta\vec{u}_i\,.\label{rb_PLV_eq}\tag{5.1.3}
 \end{equation}
 </div>
-<p>Quanto detto può essere formulato sinteticamente come segue</p>
+<p data-braille="continuation">Quanto detto può essere formulato sinteticamente come segue</p>
 <div class="displaymath">
 \begin{equation}
 \vec{F}_i = \vec0\,, \quad i=1 \dots N \quad\Rightarrow\quad\sum_{i=1}^N\vec{F}_i \cdot \delta\vec{u}_i = 0\,,\quad \forall \delta\vec{u}_i \,.\tag{5.1.4}
 \end{equation}
 </div>
-<p>È facile rendersi conto come sia vero anche l'inverso ovvero</p>
+<p data-braille="continuation">È facile rendersi conto come sia vero anche l'inverso ovvero</p>
 <div class="displaymath">
 \begin{equation}
 \sum_{i=1}^N\vec{F}_i \cdot \delta\vec{u}_i = 0\,,\quad \forall \delta\vec{u}_i \quad\Rightarrow\quad \vec{F}_i = \vec0\,, \quad i=1 \dots N \,.\tag{5.1.5}
@@ -231,19 +227,19 @@ var js_version = 0.12;
 </div></section><section class="subsection" id="subsection-101"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">5.1.3</span> <span class="title">introduzione della cinematica di corpo rigido</span>
 </h3>
-<p id="p-411">Se a questo punto si assume che il sistema di punti in esame siano punti appartenenti ad un corpo rigido allora è possibile esprimere il campo di spostamenti virtuali, si veda l'equazione <a data-knowl="./knowl/W_small_rigid_u_eq.html" title="Equazione 4.1.6">(4.1.6)</a>, nel modo seguente:</p>
+<p id="p-413">Se a questo punto si assume che il sistema di punti in esame siano punti appartenenti ad un corpo rigido allora è possibile esprimere il campo di spostamenti virtuali, si veda l'equazione <a class="xref" data-knowl="./knowl/W_small_rigid_u_eq.html" title="Equazione 4.1.6">(4.1.6)</a>, nel modo seguente:</p>
 <div class="displaymath">
 \begin{equation}
 \delta\vec{u}_i = \delta\vec{u}_o + \delta\varphi\,\tens{W}\left( \vec{X}_i - \vec{X}_o\right).\tag{5.1.6}
 \end{equation}
 </div>
-<p id="p-412">Grazie a quest'ultima relazione la <a data-knowl="./knowl/rb_PLV_eq.html" title="Equazione 5.1.3">(5.1.3)</a> può essere riscritta come</p>
+<p id="p-414">Grazie a quest'ultima relazione la <a class="xref" data-knowl="./knowl/rb_PLV_eq.html" title="Equazione 5.1.3">(5.1.3)</a> può essere riscritta come</p>
 <div class="displaymath">
 \begin{equation}
 \sum_{i=1}^N\vec{F}_i \cdot \left( \delta\vec{u}_o + \delta\varphi\,\tens{W}\left( \vec{X}_i - \vec{X}_o\right) \right) = 0\,, \quad \forall \delta\vec{u}_o,\forall \delta\varphi\tens{W}\tag{5.1.7}
 \end{equation}
 </div>
-<p>e manipolata come segue:</p>
+<p data-braille="continuation">e manipolata come segue:</p>
 <div class="displaymath">
 \begin{gather*}
 \sum_{i=1}^N\vec{F}_i \cdot \delta\vec{u}_o  +  \sum_{i=1}^N\vec{F}_i \cdot \delta\varphi\,\tens{W}\left( \vec{X}_i - \vec{X}_o\right) = 0\,,\\
@@ -252,8 +248,8 @@ var js_version = 0.12;
 \left(\sum_{i=1}^N\vec{F}_i\right) \cdot \delta\vec{u}_o  + \delta\varphi\,\vec{w} \cdot \left( \sum_{i=1}^N \left( \vec{X}_i - \vec{X}_o\right) \times \vec{F}_i \right) = 0\,.
 \end{gather*}
 </div>
-<p>Il soddisfacimento di quest'ultima condizione scalare per qualsiasi \(\delta\vec{u}_o\) e qualsiasi \(\delta\varphi\vec{w}\) richiede il soddisfacimento delle seguenti equazioni vettoriali.</p>
-<article class="assemblage-like" id="assemblage-38"><ul id="p-413" class="disc">
+<p data-braille="continuation">Il soddisfacimento di quest'ultima condizione scalare per qualsiasi \(\delta\vec{u}_o\) e qualsiasi \(\delta\varphi\vec{w}\) richiede il soddisfacimento delle seguenti equazioni vettoriali.</p>
+<article class="assemblage assemblage-like" id="assemblage-39"><ul id="p-415" class="disc">
 <li id="li-131">
 <em class="alert">Annullamento della risultante delle forze applicate</em><div class="displaymath">
 \begin{equation}
@@ -268,9 +264,11 @@ var js_version = 0.12;
 \end{equation}
 </div>
 </li>
-</ul></article><article class="remark-like" id="remark-18"><h6 class="heading">
-<span class="type">Commento</span> <span class="codenumber">5.1.1</span>.</h6>Ciascuna delle equazioni vettoriali <a data-knowl="./knowl/rb_statics1_eq.html" title="Equazione 5.1.8">(5.1.8)</a> e <a data-knowl="./knowl/rb_statics2_eq.html" title="Equazione 5.1.9">(5.1.9)</a> è esprimibile nei termini di tre equazioni scalari associate alle singole componenti dei vettori risultante e momento risultante.</article><article class="remark-like" id="remark-19"><h6 class="heading">
-<span class="type">Commento</span> <span class="codenumber">5.1.2</span>.</h6>La scelta del polo, di coordinate \(\vec{X}_o\) (interno o esterno al corpo in esame), è indifferente, come si può verificare utilizzando un altro polo avente coordinate, ad esempio, \(\vec{X}_{o}+\Delta\vec{X}\text{.}\)<div class="displaymath">
+</ul></article><article class="remark remark-like" id="remark-18"><h6 class="heading">
+<span class="type">Commento</span><span class="space"> </span><span class="codenumber">5.1.1</span><span class="period">.</span>
+</h6>Ciascuna delle equazioni vettoriali <a class="xref" data-knowl="./knowl/rb_statics1_eq.html" title="Equazione 5.1.8">(5.1.8)</a> e <a class="xref" data-knowl="./knowl/rb_statics2_eq.html" title="Equazione 5.1.9">(5.1.9)</a> è esprimibile nei termini di tre equazioni scalari associate alle singole componenti dei vettori risultante e momento risultante.</article><article class="remark remark-like" id="remark-19"><h6 class="heading">
+<span class="type">Commento</span><span class="space"> </span><span class="codenumber">5.1.2</span><span class="period">.</span>
+</h6>La scelta del polo, di coordinate \(\vec{X}_o\) (interno o esterno al corpo in esame), è indifferente, come si può verificare utilizzando un altro polo avente coordinate, ad esempio, \(\vec{X}_{o}+\Delta\vec{X}\text{.}\)<div class="displaymath">
 \begin{equation*}
 \begin{split}
 \sum_{i=1}^N \left( \vec{X}_i - \left(\vec{X}_o+\Delta\vec{X}\right)\right) \times \vec{F}_i = \\
@@ -280,42 +278,40 @@ var js_version = 0.12;
 </div>Dove, nell'ultimo passaggio, è stata utilizzata la condizione di annullamento della risultante.</article></section><section class="subsection" id="subsection-102"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">5.1.4</span> <span class="title">momento di una forza</span>
 </h3>
-<p id="p-414">Data una forza \(\vec{F}\) applicata al punto di coordinate \(\vec{X}\) e dato un polo individuato dalle coordinate \(\vec{X}_o\text{,}\) è possibile valutare il momento di \(\vec{F}\) rispetto al polo scelto calcolando il seguente prodotto vettoriale</p>
+<p id="p-416">Data una forza \(\vec{F}\) applicata al punto di coordinate \(\vec{X}\) e dato un polo individuato dalle coordinate \(\vec{X}_o\text{,}\) è possibile valutare il momento di \(\vec{F}\) rispetto al polo scelto calcolando il seguente prodotto vettoriale</p>
 <div class="displaymath">
 \begin{equation}
 \calvec{M}_o = \left( \vec{X} - \vec{X}_o\right) \times \vec{F}\,,\tag{5.1.10}
 \end{equation}
 </div>
-<p>dove \(\calvec{M}_o\) è un vettore ortogonale ad ambedue i vettori \(\left( \vec{X} - \vec{X}_o\right)\) e \(\vec{F}\) ed ha modulo</p>
+<p data-braille="continuation">dove \(\calvec{M}_o\) è un vettore ortogonale ad ambedue i vettori \(\left( \vec{X} - \vec{X}_o\right)\) e \(\vec{F}\) ed ha modulo</p>
 <div class="displaymath">
 \begin{equation}
 \|\calvec{M}_o\| = \|\left( \vec{X} - \vec{X}_o\right)\| \|\vec{F}\| \sin{\theta}\,,\tag{5.1.11}
 \end{equation}
 </div>
-<p>essendo \(\theta\) l'angolo compreso fra i due vettori. La quantità</p>
+<p data-braille="continuation">essendo \(\theta\) l'angolo compreso fra i due vettori. La quantità</p>
 <div class="displaymath">
 \begin{equation}
 b = \|\left( \vec{X} - \vec{X}_o\right)\| \sin{\theta}\tag{5.1.12}
 \end{equation}
 </div>
-<p>prende il nome di <em class="emphasis">braccio</em> quantità che non cambia se la forza scorre lungo la sua retta di applicazione: <figure class="figure-like" id="force_arm_fig"><div class="image-box" style="width: 55%; margin-left: 22.5%; margin-right: 22.5%;"><img src="images/BraccioDiUnaForza.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">5.1.3.</span> </figcaption></figure></p>
+<p data-braille="continuation">prende il nome di <em class="emphasis">braccio</em> quantità che non cambia se la forza scorre lungo la sua retta di applicazione: <figure class="figure figure-like" id="force_arm_fig"><div class="image-box" style="width: 55%; margin-left: 22.5%; margin-right: 22.5%;"><img src="images/BraccioDiUnaForza.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.1.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <div class="displaymath">
 \begin{equation*}
 b = \|\left( \vec{X} - \vec{X}_o\right)\| \sin{\theta} = \|\left( \vec{X}' - \vec{X}_o\right)\| \sin{\theta'}\,.
 \end{equation*}
 </div>
-<p>Quindi \(b\) è la distanza fra il polo \(P_o\) e la retta di applicazione della forza \(\vec{F}\text{.}\) Si osserva anche che se \(\theta=0\) oppure \(\theta=\pi\text{,}\) ovvero i vettori \(\left( \vec{X} - \vec{X}_o\right)\) e \(\vec{F}\) sono paralleli, il momento \(\calvec{M}_o\) è nullo.</p>
-<article class="remark-like" id="note-3"><h6 class="heading">
-<span class="type">Nota</span> <span class="codenumber">5.1.4</span>. <span class="title">definizione di una coppia.</span>
-</h6> Si consideri un generico corpo rigido soggetto a due forze aventi risultante nulla così come mostrato nella seguente figura. <figure class="figure-like" id="couple_fig"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="images/couple.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">5.1.5.</span> </figcaption></figure> In questo caso si potrà dire che il corpo è soggetto soltanto ad una <em class="emphasis">coppia</em> avente modulo<div class="displaymath">
+<p data-braille="continuation">Quindi \(b\) è la distanza fra il polo \(P_o\) e la retta di applicazione della forza \(\vec{F}\text{.}\) Si osserva anche che se \(\theta=0\) oppure \(\theta=\pi\text{,}\) ovvero i vettori \(\left( \vec{X} - \vec{X}_o\right)\) e \(\vec{F}\) sono paralleli, il momento \(\calvec{M}_o\) è nullo.</p>
+<article class="note remark-like" id="note-3"><h6 class="heading">
+<span class="type">Nota</span><span class="space"> </span><span class="codenumber">5.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">definizione di una coppia.</span>
+</h6> Si consideri un generico corpo rigido soggetto a due forze aventi risultante nulla così come mostrato nella seguente figura. <figure class="figure figure-like" id="couple_fig"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="images/couple.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.1.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure> In questo caso si potrà dire che il corpo è soggetto soltanto ad una <em class="emphasis">coppia</em> avente modulo<div class="displaymath">
 \begin{equation*}
 \| \calvec{M}_o \| = \|\vec{F}\|\, b
 \end{equation*}
 </div>essendo \(b\) la distanza fra le due rette che sostengono le forze assegnate. Stabilita quindi l'origine dell'ente statico coppia, nulla vieta l'assegnazione diretta di una coppia applicata ad un corpo rigido come ulteriore carico agente sul corpo, senza la necessità di specificare le forze che l'hanno prodotta. Infatti tali forze darebbero comunque un contributo nullo all'equilibrio alla traslazione del corpo. Si fa notare inoltre che l'assegnazione della coppia non richiede anche la specifica di un punto di applicazione.</article></section></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.12/login.js"></script>
 </body>
 </html>

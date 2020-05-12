@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-03T16:58:28+02:00    *-->
+<!--*    on 2020-05-12T10:13:04+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,8 +12,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="remark-like"><h6 class="heading">
-<span class="type">Approfondimento</span> <span class="codenumber">1.9.1</span>. <span class="title">interpretazione delle componenti del tensore della deformazione infinitesima.</span>
+<article class="insight remark-like"><h6 class="heading">
+<span class="type">Approfondimento</span><span class="space"> </span><span class="codenumber">1.9.1</span><span class="period">.</span><span class="space"> </span><span class="title">interpretazione delle componenti del tensore della deformazione infinitesima.</span>
 </h6>
 <p>Al fine di individuare il significato delle componenti del tensore \(\tens{\varepsilon}\) conviene richiamare l'espressione del tensore \(\tens{C}\) rispetto al gradiente delo spostamento, ovvero</p>
 <div class="displaymath">
@@ -21,40 +21,40 @@
 \tens{C} = \tens{I}+ \tens{\nabla u} + \transp{\tens{\nabla u}} +  \transp{\tens{\nabla u}}\,\tens{\nabla u}\,,
 \end{equation*}
 </div>
-<p>da cui, effetuando i calcoli, ad esempio con le seguenti istruzioni MATLAB</p>
-<figure class="figure-like"><pre class="console"><b>syms u1_X1 u1_X2 u1_X3 u2_X1 u2_X2 u2_X3 u3_X1 u3_X2 u3_X3
+<p data-braille="continuation">da cui, effetuando i calcoli, ad esempio con le seguenti istruzioni MATLAB</p>
+<figure class="listing figure-like"><pre class="console"><b>syms u1_X1 u1_X2 u1_X3 u2_X1 u2_X2 u2_X3 u3_X1 u3_X2 u3_X3
 Du = [u1_X1 u1_X2 u1_X3;u2_X1 u2_X2 u2_X3; u3_X1 u3_X2 u3_X3]
 C = diag([1 1 1]) + Du + transpose(Du) + transpose(Du)*Du
 C(1,1)
 C(1,2)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.9.2.</span> </figcaption></figure><p>si possono ricavare le espressioni di una componente sulla diagonale ed una fuori dalla diagonale</p>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.9.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p>si possono ricavare le espressioni di una componente sulla diagonale ed una fuori dalla diagonale</p>
 <div class="displaymath">
 \begin{align*}
 C_{11} \amp = \left( 1 + \frac{\partial u_1}{\partial X_1} \right)^2 + \left(\frac{\partial u_1}{\partial X_2}\right)^2 + \left(\frac{\partial u_1}{\partial X_3}\right)^2\,,\\
 C_{12} \amp = \frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1} + \frac{\partial u_1}{\partial X_1}\frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1}\frac{\partial u_2}{\partial X_2} + \frac{\partial u_3}{\partial X_1}\frac{\partial u_3}{\partial X_2} \,.
 \end{align*}
 </div>
-<p>Per la componente sulla diagonale, utilizzando il risultato <a data-knowl="./knowl/Cii_eq.html" title="Equazione 1.8.4">(1.8.4)</a> ottenuto per la componente sulla diagonale di \(\tens{C}\text{,}\) si può scrivere</p>
+<p data-braille="continuation">Per la componente sulla diagonale, utilizzando il risultato <a class="xref" data-knowl="./knowl/Cii_eq.html" title="Equazione 1.8.4">(1.8.4)</a> ottenuto per la componente sulla diagonale di \(\tens{C}\text{,}\) si può scrivere</p>
 <div class="displaymath">
 \begin{equation*}
 \func{\lambda}{\vec{e}_1}^2 =  \left( 1 + \underbrace{\frac{\partial u_1}{\partial X_1}}_{\varepsilon_{11}} \right)^2 + \underbrace{\left(\frac{\partial u_1}{\partial X_2}\right)^2 + \left(\frac{\partial u_1}{\partial X_3}\right)^2}_{\text{trascurabili nel caso infinitesimo}}\,.
 \end{equation*}
 </div>
-<p>Da cui si ricava</p>
+<p data-braille="continuation">Da cui si ricava</p>
 <div class="displaymath">
 \begin{equation}
 \varepsilon_{11} \approx \func{\lambda}{\vec{e}_1} - 1\,.\tag{1.9.9}
 \end{equation}
 </div>
-<p>Analogo risultato vale per le altre componenti di \(\tens{\varepsilon}\) sulla diagonale.</p>
-<p>Per la componente fuori dalla diagonale, utilizzando il risultato <a data-knowl="./knowl/Cij_eq.html" title="Equazione 1.8.6">(1.8.6)</a>, si ha</p>
+<p data-braille="continuation">Analogo risultato vale per le altre componenti di \(\tens{\varepsilon}\) sulla diagonale.</p>
+<p>Per la componente fuori dalla diagonale, utilizzando il risultato <a class="xref" data-knowl="./knowl/Cij_eq.html" title="Equazione 1.8.6">(1.8.6)</a>, si ha</p>
 <div class="displaymath">
 \begin{equation*}
 \sin{\func{\gamma}{\vec{e}_1,\vec{e}_2}}\, \underbrace{\func{\lambda}{\vec{e}_1} \, \func{\lambda}{\vec{e}_2}}_{\approx 1} = \underbrace{\frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1}}_{2\,\varepsilon_{12}} + \underbrace{\frac{\partial u_1}{\partial X_1}\frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1}\frac{\partial u_2}{\partial X_2} + \frac{\partial u_3}{\partial X_1}\frac{\partial u_3}{\partial X_2}}_{\text{trascurabili nel caso infinitesimo}}\,,
 \end{equation*}
 </div>
-<p>e quindi</p>
+<p data-braille="continuation">e quindi</p>
 <div class="displaymath">
 \begin{equation}
 \varepsilon_{12} \approx \frac{1}{2}\, \sin{\func{\gamma}{\vec{e}_1,\vec{e}_2}} \approx  \frac{1}{2}\, \func{\gamma}{\vec{e}_1,\vec{e}_2}\,.\tag{1.9.10}

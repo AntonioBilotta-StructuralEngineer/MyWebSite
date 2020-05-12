@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-03T16:58:29+02:00    *-->
+<!--*    on 2020-05-12T10:13:05+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,7 +12,7 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="assemblage-like"><p>Le seguenti istruzioni MATLAB consentono il calcolo della soluzione \(\func{w}{x}\) e del relativo momento flettente  \(\func{M}{x}\text{.}\) <figure class="figure-like"><pre class="console"><b>syms w(x) EJ F l;
+<article class="assemblage assemblage-like"><p>Le seguenti istruzioni MATLAB consentono il calcolo della soluzione \(\func{w}{x}\) e del relativo momento flettente  \(\func{M}{x}\text{.}\) <figure class="listing figure-like"><pre class="console"><b>syms w(x) EJ F l;
 ode = EJ*diff(w,x,4) == 0;
 D1w = diff(w,x,1);
 D2w = diff(w,x,2);
@@ -25,8 +25,8 @@ conds = [cond1 cond2 cond3 cond4];
 sol = dsolve(ode,conds)
 M = -EJ*diff(sol,x,2)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">3.8.2.</span> </figcaption></figure></p>
-<p>Lo ppostamento dell'asse della trave può essere visualizzato con le seguenti istruzioni MATLAB. <figure class="figure-like"><pre class="console"><b>syms w(x);
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.8.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p>Lo ppostamento dell'asse della trave può essere visualizzato con le seguenti istruzioni MATLAB. <figure class="listing figure-like"><pre class="console"><b>syms w(x);
 EJ = 1;
 F = 1;
 l = 1;
@@ -39,6 +39,6 @@ Beam = zeros(1, np+1);
 plot(Xv,wv,'r',Xv,Beam,'k','LineWidth',2)
 set(gca, 'YDir','reverse')
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">3.8.3.</span> </figcaption></figure></p></article><span class="incontext"><a href="bent_beam_applications_sec_elasticity_chap_it.html#assemblage-25">in-context</a></span>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.8.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><span class="incontext"><a href="bent_beam_applications_sec_elasticity_chap_it.html#assemblage-25">in-context</a></span>
 </body>
 </html>

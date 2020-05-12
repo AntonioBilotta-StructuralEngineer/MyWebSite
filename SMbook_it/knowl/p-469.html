@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-03T16:58:30+02:00    *-->
+<!--*    on 2020-05-12T10:13:06+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,46 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Si noti come la rappresentazione del momento flettente venga effettuata cambiando il verso dell'asse verticale del diagramma. Tale scelta viene utilizzata nella pratica professionale per "visualizzare" quale dei due lembi della trave, inferiore o superiore, è soggetto a trazione.</p>
+<p>Le sollecitazioni così ottenute possono essere visualizzate utilizzando le seguenti istruzioni MATLAB. <figure class="listing figure-like"><pre class="console"><b>% diagramma dello sforzo normale
+syms N(x, F);
+N(x,F) = F;
+
+np = 100;
+Xv = 0:1/np:1;
+Nv = N(Xv, 1);
+Beam = zeros(1, np+1);
+
+plot(Xv,Nv,'g',Xv,Beam,'k','LineWidth',2)
+set(gca, 'Ylim', [-1 1])
+
+
+% diagramma del taglio
+syms T(x,F);
+T(x,F) = F;
+
+np = 100;
+Xv = 0:1/np:1;
+Tv = T(Xv, 1);
+Beam = zeros(1, np+1);
+
+plot(Xv,Tv,'b',Xv,Beam,'k','LineWidth',2)
+set(gca, 'Ylim', [-1 1])
+
+
+% diagramma del momento flettente
+syms M(x,F,l);
+M(x,F,l) = -F*l + F*x;
+
+np = 100;
+Xv = 0:1/np:1;
+Mv = M(Xv, 1, 1);
+Beam = zeros(1, np+1);
+
+plot(Xv,Mv,'r',Xv,Beam,'k','LineWidth',2)
+set(gca, 'Ylim', [-1 1])
+set(gca, 'YDir','reverse')
+</b></pre>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">5.9.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <span class="incontext"><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html#p-469">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-03T16:58:28+02:00    *-->
+<!--*    on 2020-05-12T10:13:04+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,10 +12,11 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="remark-like"><h6 class="heading">
-<span class="type">Commento</span> <span class="codenumber">1.8.1</span>.</h6>
+<article class="remark remark-like"><h6 class="heading">
+<span class="type">Commento</span><span class="space"> </span><span class="codenumber">1.8.1</span><span class="period">.</span>
+</h6>
 <p>Si potrebbe pensare che, noto \(\tens{U}^2\text{,}\) la semplice operazione \(\tens{U}=\sqrt{\tens{C}}\) consenta la valutazione di \(\tens{U}\text{.}\) L'operazione è possibile ma non è banale perché richiede la valutazione degli autovalori e degli autovettori di \(\tens{C}\text{.}\) Per tale ragione nelle misure di deformazione si utilizza direttamente il tensore \(\tens{C}\) o altre grandezze derivate.</p>
-<article class="assemblage-like"><p>Al fine di illustrare comunque la procedura sopra descritta si consideri il seguente gradiente della trasformazione</p>
+<article class="assemblage assemblage-like"><p>Al fine di illustrare comunque la procedura sopra descritta si consideri il seguente gradiente della trasformazione</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{F}=
@@ -26,14 +27,14 @@
 \end{array}\right]\,.
 \end{equation*}
 </div>
-<p>A partire da tale espressione le seguenti istruzioni MATLAB consentono di valutare gli autovettori e gli autovalori di \(\tens{U}^2\text{.}\)</p>
-<p><figure class="figure-like"><pre class="console"><b>F = [4.4623   -3.2249   -0.4874;
+<p data-braille="continuation">A partire da tale espressione le seguenti istruzioni MATLAB consentono di valutare gli autovettori e gli autovalori di \(\tens{U}^2\text{.}\)</p>
+<p><figure class="listing figure-like"><pre class="console"><b>F = [4.4623   -3.2249   -0.4874;
 2.9623    1.7249   -1.9874;
 -1.7500   -1.0607    5.2500];
 U2 = transpose(F)*F;
 [u, D2] = eig(U2)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.8.2.</span> </figcaption></figure></p>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.8.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <p>Le seguenti istruzioni invece, valutando gli allungamenti principali come</p>
 <div class="displaymath">
 \begin{equation*}
@@ -42,19 +43,19 @@ U2 = transpose(F)*F;
 \lambda_3 = \sqrt{D2(3,3)} = 7\,,
 \end{equation*}
 </div>
-<p>e le direzioni principali estraendole dalle colonne della matrice degli autovettori restituita da MATLAB, calcolano il tensore \(\tens{U}\) e quindi con la relazione</p>
+<p data-braille="continuation">e le direzioni principali estraendole dalle colonne della matrice degli autovettori restituita da MATLAB, calcolano il tensore \(\tens{U}\) e quindi con la relazione</p>
 <div class="displaymath">
 \begin{equation*}
 \tens{R} = \tens{F}\tens{U}^{-1}\,,
 \end{equation*}
 </div>
-<p>anche la il tensore di rotazione associato alla decomposizione polare. Si valuta anche \(\tens{V}\) con la relazione</p>
+<p data-braille="continuation">anche la il tensore di rotazione associato alla decomposizione polare. Si valuta anche \(\tens{V}\) con la relazione</p>
 <div class="displaymath">
 \begin{equation*}
 \tens{V} = \tens{F}\transp{\tens{R}}
 \end{equation*}
 </div>
-<p><figure class="figure-like"><pre class="console"><b>u1 = u(:,1);
+<p><figure class="listing figure-like"><pre class="console"><b>u1 = u(:,1);
 u2 = u(:,2);
 u3 = u(:,3);
 lam1 = sqrt(D2(1,1));
@@ -64,6 +65,6 @@ U = lam1*u1*transpose(u1)+lam2*u2*transpose(u2)+lam3*u3*transpose(u3)
 R = F*inv(U)
 V = F*transpose(R)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.8.3.</span> </figcaption></figure></p></article></article><span class="incontext"><a href="measures_sec_strain_chap_it.html#remark-8">in-context</a></span>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.8.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></article><span class="incontext"><a href="measures_sec_strain_chap_it.html#remark-8">in-context</a></span>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-03T16:58:25+02:00    *-->
+<!--*    on 2020-05-12T10:13:01+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -24,7 +24,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -41,21 +41,17 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.12;
-</script>
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Torna alla pagina dei contenuti</a><div class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
@@ -193,31 +189,29 @@ var js_version = 0.12;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="equilibrium_sec_stress_chap_it"><h2 class="heading hide-type">
 <span class="type">Sezione</span> <span class="codenumber">2.2</span> <span class="title">equazioni di equilibrio</span>
 </h2>
-<a href="equilibrium_sec_stress_chap_it.html" class="permalink">¶</a><p id="p-179">Date le risultanti definite dalle espressioni <a data-knowl="./knowl/body_resultant.html" title="Equazione 2.1.4">(2.1.4)</a> e <a data-knowl="./knowl/body_resultant_moment.html" title="Equazione 2.1.5">(2.1.5)</a>, la condizione di equilibrio statico per un corpo continuo è espressa dalle seguenti equazioni</p>
+<a href="equilibrium_sec_stress_chap_it.html" class="permalink">¶</a><p id="p-179">Date le risultanti definite dalle espressioni <a class="xref" data-knowl="./knowl/body_resultant.html" title="Equazione 2.1.4">(2.1.4)</a> e <a class="xref" data-knowl="./knowl/body_resultant_moment.html" title="Equazione 2.1.5">(2.1.5)</a>, la condizione di equilibrio statico per un corpo continuo è espressa dalle seguenti equazioni</p>
 <div class="displaymath">
 \begin{align}
 \int_{\body} \vec{b} \, dv + \int_{\partial\body} \vec{t} \, ds \amp = \vec0\,,\label{body_equilibrium_1}\tag{2.2.1}\\
 \int_{\body} \vec{x} \times \vec{b} \, dv + \int_{\partial\body} \vec{x} \times \vec{t} \, ds \amp = \vec0 \,.\label{body_equilibrium_2}\tag{2.2.2}
 \end{align}
 </div>
-<p id="p-180">Tali condizioni, per l'ipotesi di continuità, non valgono solo per il corpo \(\body\) in esame ma anche per qualsiasi sottoinsieme estratto dal corpo principale. <figure class="figure-like" id="continuo_in_due_fig"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="images/continuo_in_due.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">2.2.1.</span> </figcaption></figure> Tale operazione di separazione, tipica della meccanica dei solidi, viene effetuata utilizzando delle superfici immaginarie con cui viene tagliato il corpo di partenza. In particolare, si veda la figura, per le due parti di corpo così ottenute si potranno scrivere le seguenti coppie di equazioni</p>
+<p id="p-180">Tali condizioni, per l'ipotesi di continuità, non valgono solo per il corpo \(\body\) in esame ma anche per qualsiasi sottoinsieme estratto dal corpo principale. <figure class="figure figure-like" id="continuo_in_due_fig"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="images/continuo_in_due.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">2.2.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Tale operazione di separazione, tipica della meccanica dei solidi, viene effetuata utilizzando delle superfici immaginarie con cui viene tagliato il corpo di partenza. In particolare, si veda la figura, per le due parti di corpo così ottenute si potranno scrivere le seguenti coppie di equazioni</p>
 <div class="displaymath">
 \begin{align}
 \int_{\omega} \vec{b} \, dv + \int_{\partial\omega} \vec{t}_{\omega} \, ds \amp = \vec0\,,\label{body_equilibrium_p1_1}\tag{2.2.3}\\
 \int_{\omega} \vec{x} \times \vec{b} \, dv + \int_{\partial\omega} \vec{x} \times \vec{t}_{\omega} \, ds \amp = \vec0 \,.\label{body_equilibrium_p1_2}\tag{2.2.4}
 \end{align}
 </div>
-<p>e</p>
+<p data-braille="continuation">e</p>
 <div class="displaymath">
 \begin{align}
 \int_{\bar{\omega}} \vec{b} \, dv + \int_{\partial\bar{\omega}} \vec{t}_{\bar{\omega}} \, ds  + \int_{\partial\body} \vec{t} \, ds \amp = \vec0\,,\label{body_equilibrium_p2_1}\tag{2.2.5}\\
 \int_{\bar{\omega}} \vec{x} \times \vec{b} \, dv + \int_{\partial\bar{\omega}} \vec{x} \times \vec{t}_{\bar{\omega}} \, ds + \int_{\partial\body} \vec{x} \times \vec{t} \, ds \amp = \vec0 \,.\label{body_equilibrium_p2_2}\tag{2.2.6}
 \end{align}
 </div>
-<p>dove \(\vec{t}_{\omega}\) rappresenta l'azione esercitata su \(\omega\) dall'altra parte di dominio \(\bar{\omega}\) e, al contrario, \(\vec{t}_{\bar{\omega}}\) rappresenta l'azione esercitata su \(\bar{\omega}\) dall'altra parte \(\omega\text{.}\)</p></section></div></main>
+<p data-braille="continuation">dove \(\vec{t}_{\omega}\) rappresenta l'azione esercitata su \(\omega\) dall'altra parte di dominio \(\bar{\omega}\) e, al contrario, \(\vec{t}_{\bar{\omega}}\) rappresenta l'azione esercitata su \(\bar{\omega}\) dall'altra parte \(\omega\text{.}\)</p></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.12/login.js"></script>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-03T16:58:27+02:00    *-->
+<!--*    on 2020-05-12T10:13:03+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,14 +13,14 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>In merito alla Trasformazione 1 già utilizzata negli esempi precedenti, il campo di spostamento ed il relativo gradiente possono essere valutati sulla base delle seguenti istruzioni MATLAB. Si tenga presente che, per la linearità delle trasformazioni coinvolte, i gradienti vengono valutati come matrice associata alla trasformazione. <figure class="figure-like"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
+<p>In merito alla Trasformazione 1 già utilizzata negli esempi precedenti, il campo di spostamento ed il relativo gradiente possono essere valutati sulla base delle seguenti istruzioni MATLAB. Si tenga presente che, per la linearità delle trasformazioni coinvolte, i gradienti vengono valutati come matrice associata alla trasformazione. <figure class="listing figure-like"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
 F = [T1([1; 0]) T1([0; 1])]
 Grad_u = F - diag([1 1])
 
 u1 = @(X) T1(X) - X;
 Grad_u = [u1([1; 0]) u1([0; 1])]
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.4.1.</span> </figcaption></figure></p>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.4.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <span class="incontext"><a href="displacement_sec_strain_chap_it.html#p-62">in-context</a></span>
 </body>
 </html>

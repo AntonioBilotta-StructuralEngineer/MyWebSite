@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-03T16:58:24+02:00    *-->
+<!--*    on 2020-05-12T10:13:01+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -24,7 +24,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -41,21 +41,17 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.12;
-</script>
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Torna alla pagina dei contenuti</a><div class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
@@ -198,7 +194,8 @@ var js_version = 0.12;
 <p id="p-8">Altro aspetto centrale della proposta è costituito dal supporto scelto, ovvero un interfaccia web disponibile online. L'interfaccia web consente di utilizzare diverse modalità (testo tradizionale, brevi video lezioni, animazioni, riferimenti a risorse web, etc.) per proporre gli argomenti trattati e di utilizzare in maniera naturale strumenti digitali sia per l'elaborazione delle formulazioni sia per lo svolgimento degli esercizi.</p>
 <p id="p-9">Per quanto riguarda quest'ultimo aspetto, il testo propone l'utilizzo di MATLAB come strumento di elaborazione simbolica e numerica consentendo allo studente di concentrarsi solo sulla formulazione dei modelli e delle operazioni necessarie, delegando il loro svolgimento a MATLAB. A mio parere, l'insegnamento della Meccanica dei solidi deve sia prescindere da conoscenze da ritenere apprese in corsi precedenti, sia stimolare l'utilizzo di strumenti informatici che oramai costituiscono il bagaglio di base di qualsiasi ingegnere in termini di <em class="alert">linguaggio computazionale</em> da conoscere e di <em class="alert">strumenti di calcolo automatico</em> da sapere utilizzare nel lavoro quotidiano.</p>
 <p id="p-10">Da dove viene l'esigenza di conoscere un linguaggio computazionale e di sapere utilizzare degli strumenti di calcolo automatico? Probabilemente tale esigenza non è affatto una peculiarità della Meccanica dei solidi visto che accomuna tutte le discipline collocabili nell'alveo della matematica applicata. Ma limitiamo il nostro sguardo a ciò che ci interessa maggiormente, ovvero come svolge il suo lavoro un ingegnere. Cinquanta anni fa un neolaureato in ingegneria era bravissimo ad utilizzare un regolo calcolatore ovvero un calcolatore meccanico analogico di tipo manuale. Ma adesso grazie alla rivoluzione digitale, cominciata negli 80 con l'avvento dei primi personal computer e tuttora in atto, si ha la possibilità di tenere in una mano una potenza di calcolo che nel 1969 è stata utilizzata dalla NASA per spedire l'uomo sulla luna. A completamento di uno scenario drasticamente cambiato, la diffussione capillare di internet avvenuta nell'ultimo decennio ha fatto il resto aprendo la porta all'“internet of things”. </p>
-<p id="p-11">Tornando al MATLAB, acronimo di MATrix LABoratory, il software nasce<a data-knowl="" class="id-ref" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a><span id="hk-fn-1" class="hidden-content tex2jax_ignore"><span class="footnote">La prima release commerciale è del 1984 anche se il suo inventore Cleve Moler iniziò il suo sviluppo nel 1970.</span></span> espressamente come strumento per la manipolazione automatica di matrici ma negli anni si arricchito di tali e tante funzionalità che addesso è più corretto definirlo come segue: “a multi-paradigm numerical computing environment and proprietary programming language developed by MathWorks” (fonte Wikipedia). Quindi, essendo un argomento di per sé vastissimo, nel presente testo non viene fornita alcuna informazione sul suo utilizzo. Tali informazioni sono disponbili, sotto il formato di tutorial e di online help, sul sito del fornitore di MATLAB, fonte che conviene considerare la più attendibile ed autorevole. Le applicazioni e gli esercizi forniti in MATLAB nel testo quindi servono ad acquisire un linguaggio computazionale e ad imparare ad utilizzare uno strumento di calcolo automatico, certamente non l'unico disponibile (Maple, Mathematica, Octave, Sage, etc.), adeguati ad uno studio attuale della Meccanica dei solidi.</p>
+<p id="p-11">Tornando al MATLAB, acronimo di MATrix LABoratory, il software nasce<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a> espressamente come strumento per la manipolazione automatica di matrici ma negli anni si arricchito di tali e tante funzionalità che addesso è più corretto definirlo come segue: “a multi-paradigm numerical computing environment and proprietary programming language developed by MathWorks” (fonte Wikipedia). Quindi, essendo un argomento di per sé vastissimo, nel presente testo non viene fornita alcuna informazione sul suo utilizzo. Tali informazioni sono disponbili, sotto il formato di tutorial e di online help, sul sito del fornitore di MATLAB, fonte che conviene considerare la più attendibile ed autorevole. Le applicazioni e gli esercizi forniti in MATLAB nel testo quindi servono ad acquisire un linguaggio computazionale e ad imparare ad utilizzare uno strumento di calcolo automatico, certamente non l'unico disponibile (Maple, Mathematica, Octave, Sage, etc.), adeguati ad uno studio attuale della Meccanica dei solidi.</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">La prima release commerciale è del 1984 anche se il suo inventore Cleve Moler iniziò il suo sviluppo nel 1970.</div></div>
 <p id="p-12">Il materiale qui proposto è composto dai seguenti capitoli di cui i primi tre trattano argomenti di Meccanica del continuo e i due successivi sono dedicati ai sistemi rigidi.</p>
 <ul class="disc">
 <li id="li-1">Il primo capitolo affronta la cinematica dei corpi deformabili definendo gli strumenti di base per la descizione della trasformazione geometrica dei corpi indipendentemente dalle cause che lo hanno prodotto. La tematica viene utilizzata come “palestra” per familiarizzare con tutti gli strumenti matematici necessari alla Meccanica dei solid in generale. Si evita però una descrizione sistematica, che molto spesso diventa un elenco, delle nozioni necessarie di algebra e calcolo tensoriale. Ma i singoli argomenti di algebra o calcolo vengono richiamati mantendendo il più possibile il contatto con l'argemento di cinematica per il quale il richiamo è richiesto. Come supporto di tali richiami si è scelto di utilizzare brevi video lezioni più fruibili, in prima battuta, delle descrizioni fornite nei testi di riferimento di Meccanica del continuo o Matematica a cui lo studente può sempre attingere per approfondimenti.</li>
@@ -212,7 +209,5 @@ var js_version = 0.12;
 <p id="p-15"></p>
 <cite class="attribution">Antonio Bilotta<br>Arcavacata di Rende, Febbraio 2020</cite></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.12/login.js"></script>
 </body>
 </html>

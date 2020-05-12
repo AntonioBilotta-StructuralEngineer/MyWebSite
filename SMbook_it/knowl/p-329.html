@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-03T16:58:29+02:00    *-->
+<!--*    on 2020-05-12T10:13:05+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,7 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Seguono le istruzione MATLAB per il calcolo della soluzione \(\func{u}{x}\text{.}\) <figure class="figure-like"><pre class="console"><b>syms u(x) EA p l;
+<p>Seguono le istruzione MATLAB per il calcolo della soluzione \(\func{u}{x}\text{.}\) <figure class="listing figure-like"><pre class="console"><b>syms u(x) EA p l;
 ode = EA*diff(u,x,2) + p*sin(2*pi*x/l) == 0;
 cond1 = u(0) == 0;
 cond2 = u(l) == 0;
@@ -21,7 +21,7 @@ conds = [cond1 cond2];
 sol = dsolve(ode,conds)
 N = EA*diff(sol,x)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">3.7.8.</span> </figcaption></figure></p>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.7.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#p-329">in-context</a></span>
 </body>
 </html>
