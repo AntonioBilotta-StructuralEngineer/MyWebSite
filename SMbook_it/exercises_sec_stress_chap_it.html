@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:48+02:00    *-->
+<!--*    on 2020-05-14T19:27:19+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -24,7 +24,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -41,17 +41,21 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.12;
+</script>
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Torna alla pagina dei contenuti</a><div class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
@@ -192,16 +196,16 @@ MathJax.Hub.Config({
 <a href="exercises_sec_stress_chap_it.html" class="permalink">¶</a><section class="subsection" id="subsection-35"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">2.6.1</span> <span class="title"></span>
 </h3>
-<p id="p-219">Siano \(\vec{t}_{\vec{n}}\) e \(\vec{t}_{\tilde{\vec{n}}}\) le trazioni relative a due giaciture distinte \(\vec{n}\) e \(\tilde{\vec{n}}\) passanti per \(\vec{x}\text{.}\) Si dimostri che</p>
+<p id="p-220">Siano \(\vec{t}_{\vec{n}}\) e \(\vec{t}_{\tilde{\vec{n}}}\) le trazioni relative a due giaciture distinte \(\vec{n}\) e \(\tilde{\vec{n}}\) passanti per \(\vec{x}\text{.}\) Si dimostri che</p>
 <div class="displaymath">
 \begin{equation*}
 \vec{n} \cdot \vec{t}_{\tilde{\vec{n}}} = \tilde{\vec{n}} \cdot \vec{t}_{\vec{n}}
 \end{equation*}
 </div>
-<p data-braille="continuation">soltanto se il tensore associato al punto \(\vec{x}\) è simmetrico.</p></section><section class="subsection" id="subsection-36"><h3 class="heading hide-type">
+<p>soltanto se il tensore associato al punto \(\vec{x}\) è simmetrico.</p></section><section class="subsection" id="subsection-36"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">2.6.2</span> <span class="title"></span>
 </h3>
-<p id="p-220">Dato il seguente stato di tensione</p>
+<p id="p-221">Dato il seguente stato di tensione</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{\sigma} = \left[\begin{array}{ccc}
@@ -212,7 +216,7 @@ MathJax.Hub.Config({
 \right]\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">si calcoli quanto segue:</p>
+<p>si calcoli quanto segue:</p>
 <ol class="decimal">
 <li id="li-73">le componenti del vettore di trazione \(\vec{t}_{\vec{n}}\) relativo un piano passante per il punto dato e parallelo al piano \(2x_1 + 3x_2+x_3 = 5\text{;}\)</li>
 <li id="li-74">la lunghezza di \(\vec{t}_{\vec{n}}\) e l'angolo che forma con la normale al piano;</li>
@@ -220,7 +224,7 @@ MathJax.Hub.Config({
 </ol></section><section class="subsection" id="stress_ex_1"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">2.6.3</span> <span class="title"></span>
 </h3>
-<a href="exercises_sec_stress_chap_it.html#stress_ex_1" class="permalink">¶</a><p id="p-221">Si consideri lo stato tensionale definito come segue</p>
+<a href="exercises_sec_stress_chap_it.html#stress_ex_1" class="permalink">¶</a><p id="p-222">Si consideri lo stato tensionale definito come segue</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{\sigma} = \left[\begin{array}{ccc}
@@ -231,10 +235,10 @@ MathJax.Hub.Config({
 \right]\,.
 \end{equation*}
 </div>
-<p data-braille="continuation">Si calcolino le componenti del vettore di trazione nel punto di coordinate \((1/2, \sqrt{3}/2, -1)\) sulla superficie di equazione \(x_1^2 +x_2^2 + x_3=0\text{.}\) <em class="emphasis">Suggerimento</em>: la normale ad una superficie si ottiene calcolandone il gradiente.</p></section><section class="subsection" id="subsection-38"><h3 class="heading hide-type">
+<p>Si calcolino le componenti del vettore di trazione nel punto di coordinate \((1/2, \sqrt{3}/2, -1)\) sulla superficie di equazione \(x_1^2 +x_2^2 + x_3=0\text{.}\) <em class="emphasis">Suggerimento</em>: la normale ad una superficie si ottiene calcolandone il gradiente.</p></section><section class="subsection" id="subsection-38"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">2.6.4</span> <span class="title"></span>
 </h3>
-<p id="p-222">Si consideri il tensore</p>
+<p id="p-223">Si consideri il tensore</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{\sigma} = \left[\begin{array}{ccc}
@@ -245,10 +249,10 @@ MathJax.Hub.Config({
 \right]
 \end{equation*}
 </div>
-<p data-braille="continuation">e si calcolino le tensioni principali e le direzioni principali.</p></section><section class="subsection" id="subsection-39"><h3 class="heading hide-type">
+<p>e si calcolino le tensioni principali e le direzioni principali.</p></section><section class="subsection" id="subsection-39"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">2.6.5</span> <span class="title"></span>
 </h3>
-<p id="p-223">Per un generico punto \(\vec{x}\) di un corpo le componenti del tensore valgono</p>
+<p id="p-224">Per un generico punto \(\vec{x}\) di un corpo le componenti del tensore valgono</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{\sigma} = \left[\begin{array}{ccc}
@@ -259,7 +263,7 @@ MathJax.Hub.Config({
 \right]\,.
 \end{equation*}
 </div>
-<p data-braille="continuation">Per lo stesso punto si considerino le due giaciture</p>
+<p>Per lo stesso punto si considerino le due giaciture</p>
 <div class="displaymath">
 \begin{equation*}
 \vec{n} =
@@ -279,7 +283,7 @@ MathJax.Hub.Config({
 </ol></section><section class="subsection" id="subsection-40"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">2.6.6</span> <span class="title"></span>
 </h3>
-<p id="p-224">Si consideri un parallelepipedo delimitato dai piani \(x_1=\pm a\text{,}\) \(x_2=\pm b\) e \(x_3=\pm c\text{,}\) e lo stato tensionale così definito</p>
+<p id="p-225">Si consideri un parallelepipedo delimitato dai piani \(x_1=\pm a\text{,}\) \(x_2=\pm b\) e \(x_3=\pm c\text{,}\) e lo stato tensionale così definito</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{\sigma} =
@@ -290,14 +294,14 @@ MathJax.Hub.Config({
 \end{array}\right]\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">con \(\alpha\) e \(\beta\) costanti generiche. Si determinino:</p>
+<p>con \(\alpha\) e \(\beta\) costanti generiche. Si determinino:</p>
 <ol class="decimal">
 <li id="li-78">le tensioni principali e le direzioni principali nel punto di coordinate \((a/2, -b/2, 0)\text{;}\)</li>
 <li id="li-79">il vettore di trazione relativo alle tre facce che individuano lo spigolo di coordinate \((a, b, c)\text{.}\)</li>
 </ol></section><section class="subsection" id="subsection-41"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">2.6.7</span> <span class="title"></span>
 </h3>
-<p id="p-225">Si consideri il corpo \(\mathcal{B} = \{\vec{x} \,:\; 0 \leq x_i \leq 1\}\text{,}\) soggetto ai carichi di volume \(\vec{b} = \alpha x_3 \vec{e}_3\) ed alle forze di superficie su \(\partial\mathcal{B}\) definite come</p>
+<p id="p-226">Si consideri il corpo \(\mathcal{B} = \{\vec{x} \,:\; 0 \leq x_i \leq 1\}\text{,}\) soggetto ai carichi di volume \(\vec{b} = \alpha x_3 \vec{e}_3\) ed alle forze di superficie su \(\partial\mathcal{B}\) definite come</p>
 <div class="displaymath">
 \begin{equation*}
 \vec{t} =
@@ -307,10 +311,10 @@ x_1 x_2 (1-x_1)(1-x_2)\vec{e}_3, \amp\amp \text{sulla faccia}\; x_3 = 0,\\
 \end{array}\right.\,.
 \end{equation*}
 </div>
-<p data-braille="continuation">Si calcoli il valore di \(\alpha\) tale da annullare la somma delle risultanti delle forze di volume e di superficie.</p></section><section class="subsection" id="stress_ex_2"><h3 class="heading hide-type">
+<p>Si calcoli il valore di \(\alpha\) tale da annullare la somma delle risultanti delle forze di volume e di superficie.</p></section><section class="subsection" id="stress_ex_2"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">2.6.8</span> <span class="title"></span>
 </h3>
-<a href="exercises_sec_stress_chap_it.html#stress_ex_2" class="permalink">¶</a><p id="p-226">Si consideri il corpo \(\mathcal{B} = \{\vec{x} \,:\; 0 \leq x_i \leq 1\}\text{,}\) soggetto alla forza di volume \(\vec{b} = \transp{[0, 0, -\rho g]}\text{,}\) essendo \(\rho\) la densità di massa e \(g\) l'accelerazione di gravità. Si assuma inoltre il seguente campo per il tensore della tensione:</p>
+<a href="exercises_sec_stress_chap_it.html#stress_ex_2" class="permalink">¶</a><p id="p-227">Si consideri il corpo \(\mathcal{B} = \{\vec{x} \,:\; 0 \leq x_i \leq 1\}\text{,}\) soggetto alla forza di volume \(\vec{b} = \transp{[0, 0, -\rho g]}\text{,}\) essendo \(\rho\) la densità di massa e \(g\) l'accelerazione di gravità. Si assuma inoltre il seguente campo per il tensore della tensione:</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{\sigma} = \left[\begin{array}{ccc}
@@ -321,12 +325,14 @@ x_3 \amp x_1 \amp 0 \\
 \right]\,.
 \end{equation*}
 </div>
-<p data-braille="continuation">Si richiede quanto segue</p>
+<p>Si richiede quanto segue</p>
 <ol class="decimal">
 <li id="li-80">verificare il soddisfacimento delle equazioni locali di equilibrio;</li>
 <li id="li-81">calcolare il vettore di trazione su le sei facce che definiscono \(\mathcal{B}\text{;}\)</li>
 <li id="li-82">verificare l'equilibrio globale del corpo calcolando la risultante delle forze agenti su  \(\mathcal{B}\text{.}\)</li>
 </ol></section></section></div></main>
 </div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.12/login.js"></script>
 </body>
 </html>

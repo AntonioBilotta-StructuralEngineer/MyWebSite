@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:52+02:00    *-->
+<!--*    on 2020-05-14T19:27:23+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,13 +13,18 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Il termine <em class="emphasis">vincolo</em> viene utilizzato per indicare un dispositivo che limita le possibilità di movimento di un sistema di corpi. Un generico sistema, ad esempio un sistema di corpi rigidi, viene descritto mediante \(n\) parametri, \(q_1, \dots q_n\text{,}\) che prendono il nome di <em class="emphasis">coordinate lagrangiane del sistema</em>. In questi termini, la generica condizione di vincolo viene espressa, nella forma più generica, nel modo seguente:</p>
+<p>Una scrittura alternativa dell'equazione <a data-knowl="./knowl/small_rigid_u_eq.html" title="Equazione 4.1.4">(4.1.4)</a> si ottiene esplicitando la struttura del tensore \(\text{skew}\tens{\nabla u}\text{,}\) ovvero</p>
 <div class="displaymath">
 \begin{equation}
-f\left[q_1, \dots, q_n, \dot{q}_1, \dots, \dot{q}_n, t\right] \leq 0.\tag{4.2.1}
+\vec{u} = \vec{u}_o + \varphi \,\tens{W}\left(\vec{X}-\vec{X}_o\right)\,,\tag{4.1.6}
 \end{equation}
 </div>
-<p data-braille="continuation">Dove compaiono, oltre alle coordinate lagrangiane, anche le loro derivate, \(\dot{q}_1, \dots, \dot{q}_n\text{,}\) rispetto al tempo.</p>
-<span class="incontext"><a href="constraints_sec_rigid_body_kinematics_chap_it.html#p-363">in-context</a></span>
+<p>dove \(\varphi\) è l'angolo di rotazione e \(\tens{W}\) è un generico tensore emisimmetrico, si veda al riguardo l'<a data-knowl="./knowl/skew_tensor_insight.html" title="Approfondimento 1.9.5">Approfondimento 1.9.5</a>. Inoltre, utilizzando il vettore assiale associato al tensore \(\tens{W}\text{,}\) si può anche scrivere</p>
+<div class="displaymath">
+\begin{equation}
+\vec{u} = \vec{u}_o + \varphi\, \vec{\omega}\times\left(\vec{X}-\vec{X}_o\right)\,.\tag{4.1.7}
+\end{equation}
+</div>
+<span class="incontext"><a href="description_sec_rigid_body_kinematics_chap_it.html#p-363">in-context</a></span>
 </body>
 </html>

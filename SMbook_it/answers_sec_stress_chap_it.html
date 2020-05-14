@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:48+02:00    *-->
+<!--*    on 2020-05-14T19:27:19+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -24,7 +24,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -41,17 +41,21 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.12;
+</script>
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Torna alla pagina dei contenuti</a><div class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
@@ -192,7 +196,7 @@ MathJax.Hub.Config({
 <a href="answers_sec_stress_chap_it.html" class="permalink">¶</a><section class="subsection" id="subsection-43"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">2.7.1</span> <span class="title"></span>
 </h3>
-<p id="p-227">Risposta all'esercizio della <a href="exercises_sec_stress_chap_it.html#stress_ex_1" class="internal" title="Sottosezione 2.6.3">Sottosezione 2.6.3</a>. <figure class="listing figure-like" id="listing-26"><pre class="console"><b>sig = @(x) ...
+<p id="p-228">Risposta all'esercizio della <a href="exercises_sec_stress_chap_it.html#stress_ex_1" class="internal" title="Sottosezione 2.6.3">Sottosezione 2.6.3</a>. <figure class="figure-like" id="listing-26"><pre class="console"><b>sig = @(x) ...
 [5*x(2)*x(3) 3*x(2)^2 0;
 3*x(2)^2 0 -x(1);
 0 -x(1) 0];
@@ -204,10 +208,10 @@ n = @(x) ...
 
 t = sig([1/2; sqrt(3)/2; -1])*n([1/2; sqrt(3)/2; -1])
 </b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">2.7.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Si osserva che, come al solito, le precedenti istruzioni non rappresentano l'unico modo possibile per ottenere il risultato richiesto.</p></section><section class="subsection" id="subsection-44"><h3 class="heading hide-type">
+<figcaption><span class="type">Listato</span> <span class="codenumber">2.7.1.</span> </figcaption></figure> Si osserva che, come al solito, le precedenti istruzioni non rappresentano l'unico modo possibile per ottenere il risultato richiesto.</p></section><section class="subsection" id="subsection-44"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">2.7.2</span> <span class="title"></span>
 </h3>
-<p id="p-228">Risposta all'esercizio della <a href="exercises_sec_stress_chap_it.html#stress_ex_2" class="internal" title="Sottosezione 2.6.8">Sottosezione 2.6.8</a>. <figure class="listing figure-like" id="listing-27"><pre class="console"><b>% primo quesito
+<p id="p-229">Risposta all'esercizio della <a href="exercises_sec_stress_chap_it.html#stress_ex_2" class="internal" title="Sottosezione 2.6.8">Sottosezione 2.6.8</a>. <figure class="figure-like" id="listing-27"><pre class="console"><b>% primo quesito
 x = sym('x', [3 1]);
 sig = sym('s', [3 3]);
 sig(1,1) = x(2);
@@ -243,7 +247,9 @@ t_3 = subs(sig, {x(1), x(2), x(3)}, {0, 0, 0})*[0; 0; -1]
 % terzo quesito
 b*(1*1*1) + t3*(1*1)
 </b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">2.7.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></section></section></div></main>
+<figcaption><span class="type">Listato</span> <span class="codenumber">2.7.2.</span> </figcaption></figure></p></section></section></div></main>
 </div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.12/login.js"></script>
 </body>
 </html>

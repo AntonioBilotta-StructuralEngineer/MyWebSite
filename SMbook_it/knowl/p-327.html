@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:52+02:00    *-->
+<!--*    on 2020-05-14T19:27:23+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,25 +13,20 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>La presenza dell'incremento di temperatura determina un allungamento della trave pari a</p>
+<p>Da cui si ottiene la seguente soluzione in termini di spostamenti incogniti</p>
 <div class="displaymath">
-\begin{equation*}
-\Delta l_T = \alpha \Delta T \,l\,,
-\end{equation*}
+\begin{align*}
+u_a \amp= \frac{F}{EA}\frac{l-a}{l}\,x\,,\quad 0 \leq x \leq a\,,\\
+u_b \amp= \frac{F}{EA}\frac{l-x}{l}\,a\,,\quad a \leq x \leq l\,.
+\end{align*}
 </div>
-<p data-braille="continuation">dove \(\alpha\) rappresenta il coefficiente di dilatazione termica del materiale. Tale allungamento è comunque impedito dalla presenza dei vincoli pertanto la trave sarà anche soggetta ad uno sforzo normale calcolabile dalla seguente equazione</p>
+<p>Per derivazione si ottiene la soluzione in termini di sforzi normali sui due domini</p>
 <div class="displaymath">
-\begin{equation*}
-\Delta l_T + \Delta l_N = \alpha \Delta T \,l + \frac{N}{EA} \,l = 0\,,
-\end{equation*}
+\begin{align*}
+N_a \amp= EA\, \frac{du_a}{dx} = F\,\frac{l-a}{l}\,,\quad 0 \leq x \leq a\,,\\
+N_b \amp= EA\, \frac{du_b}{dx} = -F\,\frac{a}{l}\,,\quad a \leq x \leq l\,.
+\end{align*}
 </div>
-<p data-braille="continuation">da cui si ottiene</p>
-<div class="displaymath">
-\begin{equation*}
-N = - EA \,\alpha \Delta T\,,
-\end{equation*}
-</div>
-<p data-braille="continuation">soluzione che mostra lo stato di compressione determinato dall'allungamento impedito. La soluzione in termini di spostamento è identicamente nulla su tutto la lunghezza.</p>
 <span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#p-327">in-context</a></span>
 </body>
 </html>

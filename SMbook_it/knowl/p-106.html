@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:50+02:00    *-->
+<!--*    on 2020-05-14T19:27:22+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,30 +13,45 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Infine è interessante osservare come l'espressione <a class="xref" data-knowl="./knowl/mat_spectral_U_eq.html" title="Equazione 1.7.7">(1.7.7)</a> possa essere scritta nel modo seguente</p>
+<p>La forma spettrale <a data-knowl="./knowl/spectral_U_eq.html" title="Equazione 1.7.6">(1.7.6)</a> spiega come mai, rispetto alla base di riferimento standard, la forma matriciale del tensore \(\tens{U}\) perda quasi sempre la forma diagonale. Infatti, pur essendo sempre presenti le direzioni principali, queste in generale non coincidono con gli assi del sistema  di riferimento standard. La perdita della forma diagonale viene evidenziata da una scrittura matriciale del forma spettrale del tensore</p>
+<div class="displaymath">
+\begin{equation}
+\mat{U} =
+\begin{array}{l}
+\lambda_1
+\left[\begin{array}{ccc}
+u_{11}u_{11} \amp u_{11}u_{21} \amp u_{11}u_{31}\\
+u_{21}u_{11} \amp u_{21}u_{21} \amp u_{21}u_{31}\\
+u_{31}u_{11} \amp u_{31}u_{21} \amp u_{31}u_{31}
+\end{array}\right] 
++\\
+\lambda_2
+\left[\begin{array}{ccc}
+u_{12}u_{12} \amp u_{12}u_{22} \amp u_{12}u_{32}\\
+u_{22}u_{12} \amp u_{22}u_{22} \amp u_{22}u_{32}\\
+u_{32}u_{12} \amp u_{32}u_{22} \amp u_{32}u_{32}
+\end{array}\right] 
++\\
+\lambda_3
+\left[\begin{array}{ccc}
+u_{13}u_{13} \amp u_{13}u_{23} \amp u_{13}u_{33}\\
+u_{23}u_{13} \amp u_{23}u_{23} \amp u_{23}u_{33}\\
+u_{33}u_{13} \amp u_{33}u_{23} \amp u_{33}u_{33}
+\end{array}\right]\,.
+\end{array}\tag{1.7.7}
+\end{equation}
+</div>
+<p>Dove per le componenti delle direzioni pricipali si è adottata la seguente notazione</p>
 <div class="displaymath">
 \begin{equation*}
-\mat{U} =
-\left[\begin{array}{ccc}
-u_{11} \amp u_{12} \amp u_{13}\\
-u_{21} \amp u_{22} \amp u_{23}\\
-u_{31} \amp u_{32} \amp u_{33}
-\end{array}\right] 
-\left[\begin{array}{ccc}
-\lambda_1 \amp 0 \amp 0\\
-0 \amp \lambda_2 \amp 0\\
-0 \amp 0 \amp \lambda_3\\
-\end{array}\right]
-\transp{
-\left[\begin{array}{ccc}
-u_{11} \amp u_{12} \amp u_{13}\\
-u_{21} \amp u_{22} \amp u_{23}\\
-u_{31} \amp u_{32} \amp u_{33}
-\end{array}\right] 
-}\,,
+\mat{u_1} = \left[\begin{array}{c}u_{11}\\u_{21}\\u_{31}\end{array}\right]
+\,,\quad
+\mat{u_2} = \left[\begin{array}{c}u_{12}\\u_{22}\\u_{32}\end{array}\right]
+\,,\quad
+\mat{u_3} = \left[\begin{array}{c}u_{13}\\u_{23}\\u_{33}\end{array}\right]
+\,.
 \end{equation*}
 </div>
-<p data-braille="continuation">che è la modalità con cui viene valutata l'espressione che assume il tensore \(\tens{U}\) quando si passa dal sistema di coordinate costituito dalle direzioni pricipali al sistema di coordinate standard \(\vec{e}_1\text{,}\) \(\vec{e}_2\) e \(\vec{e}_3\text{.}\) La matrice utilizzata per la trasformazione viene costruita inserendo nelle colonne i vettori \(\vec{u}_{1}\text{,}\) \(\vec{u}_{2}\) e \(\vec{u}_{3}\)</p>
 <span class="incontext"><a href="principal_directions_sec_strain_chap_it.html#p-106">in-context</a></span>
 </body>
 </html>

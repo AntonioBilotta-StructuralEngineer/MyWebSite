@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:50+02:00    *-->
+<!--*    on 2020-05-14T19:27:22+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,39 +13,7 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p><figure class="listing figure-like"><pre class="console"><b>Q1 = [1 -1 -1 1 1; 1 1 -1 -1 1];
-Q2 = [1 0 -1 0 1; 0 1 0 -1 0];
-
-x = Q1(1,:);
-y = Q1(2,:);
-
-pbaspect([1 1 1])
-line(x,y,'Color','red','LineWidth',2)
-
-x = Q2(1,:);
-y = Q2(2,:);
-line(x,y,'Color','blue','LineWidth',2)
-
-
-u1 = [1/sqrt(2); 1/sqrt(2)];
-u2 = [-1/sqrt(2); 1/sqrt(2)];
-syms U(lam) 
-U(lam) = [u1 u2]*diag([1.2*lam lam])*transpose([u1 u2]);
-
-
-for v = 1.1:0.1:1.5
-  UQ1 = U(v)*Q1;
-  x = UQ1(1,:);
-  y = UQ1(2,:);
-  line(x,y,'Color','red','LineWidth',2)
-
-  UQ2 = U(v)*Q2;
-  x = UQ2(1,:);
-  y = UQ2(2,:);
-  line(x,y,'Color','blue','LineWidth',2)
-end
-</b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.7.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p>Si riportano le istruzioni MATLAB utilizzabili per il calcolo e la visualizzazione delle deformate dei due quadrati a partire dalle configurazioni iniziali.</p>
 <span class="incontext"><a href="principal_directions_sec_strain_chap_it.html#p-114">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:50+02:00    *-->
+<!--*    on 2020-05-14T19:27:22+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,14 +13,60 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Possiamo riepilogare quanto ottenuto come segue. Ogni direzione è una <em class="emphasis">direzione principale</em> dal momento che i vettori trasformati mantengono la direzione originaria. Il fattore di scala \(\lambda\text{,}\) che prende il nome di <em class="emphasis">allungamento principale</em>, vale per qualsiasi direzione su cui \(\tens{U}\) viene applicato determinando sul vettore di applicazione quanto segue</p>
-<ul class="disc">
-<li>\(\lambda &gt; 1\text{,}\) il vettore si allunga;</li>
-<li>\(\lambda = 1\text{,}\) il vettore non modifica la lunghezza;</li>
-<li>\(\lambda &lt; 1\text{,}\) il vettore si accorcia;</li>
-<li>\(\lambda = 0\text{,}\) non è ammissibile perché il vettore, per l'ammissibilità della trasformazione, non può annullare la propria lunghezza;</li>
-<li>\(\lambda &lt; 0\text{,}\) non è ammissibile perché il vettore, per l'ammissibilità della trasformazione, non può cambiare verso.</li>
-</ul>
+<p>Si supponga per \(\tens{U}\) la seguente forma diagonale</p>
+<div class="displaymath">
+\begin{equation}
+\mat{U} =
+\left[\begin{array}{ccc}
+\lambda \amp 0 \amp 0\\
+0 \amp \lambda \amp 0\\
+0 \amp 0 \amp \lambda\\
+\end{array}\right]\,.\tag{1.7.1}
+\end{equation}
+</div>
+<p>Se si applica \(\tens{U}\) ad un generico vettore \(\vec{v}\) si ottiene</p>
+<div class="displaymath">
+\begin{equation}
+\mat{U}\mat{v}
+=
+\left[\begin{array}{ccc}
+\lambda \amp 0 \amp 0\\
+0 \amp \lambda \amp 0\\
+0 \amp 0 \amp \lambda\\
+\end{array}\right]
+\left[\begin{array}{c}v_1\\v_2\\v_3\end{array}\right]
+=
+\lambda \left[\begin{array}{ccc}
+1 \amp 0 \amp 0\\
+0 \amp 1 \amp 0\\
+0 \amp 0 \amp 1\\
+\end{array}\right]
+\left[\begin{array}{c}v_1\\v_2\\v_3\end{array}\right]
+=
+\lambda \mat{I} \mat{v}
+=
+\lambda \mat{v}
+\,.\tag{1.7.2}
+\end{equation}
+</div>
+<p>Risultato che mostra come in questo caso l'applicazione di \(\tens{U}\) a qualsiasi vettore determini soltanto una scalatura, proporzionale al fattore \(\lambda\text{,}\) della lunghezza del vettore che mantiene la direzione originaria. È facile verificare infatti che</p>
+<div class="displaymath">
+\begin{equation*}
+\|\tens{U}\vec{v} \| = \|\lambda\vec{v} \| = |\lambda| \|\vec{v} \|\,.
+\end{equation*}
+</div>
+<p>Inoltre dal momento che</p>
+<div class="displaymath">
+\begin{equation*}
+\det{\tens{F}} = \det{\tens{R}\tens{U}} = \det{\tens{U}} = \lambda^3 &gt; 0
+\end{equation*}
+</div>
+<p>ne consegue che l'unico valore ammissibile per \(\lambda\) è</p>
+<div class="displaymath">
+\begin{equation*}
+\lambda &gt; 0\,.
+\end{equation*}
+</div>
 <span class="incontext"><a href="principal_directions_sec_strain_chap_it.html#p-91">in-context</a></span>
 </body>
 </html>

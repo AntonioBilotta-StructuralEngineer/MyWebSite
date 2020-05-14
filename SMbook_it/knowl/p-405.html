@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:52+02:00    *-->
+<!--*    on 2020-05-14T19:27:24+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,18 +13,20 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Le seguenti istruzioni MATLAB consentono di calcolare la soluzione cercata. <figure class="listing figure-like"><pre class="console"><b>syms l k;
-A = [
-1 0 0 0 0; ... 
-0 1 0 0 0; ... 
-1 0 -1 0 0; ...
-0 1 0 -1 l; ...
-0 0 0 1 0; ...
-];
-b = [-2*l*k; 0; 0; -2*l*k; 0];
-linsolve(A,b)
-</b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">4.4.20<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p>In questo caso il \(\textrm{rango}\mat{A} == \textrm{min}(m,n) = 5\) e \(m &lt; n\) pertanto il sistema è labile e caratterizzato da infinite soluzioni. Per descrivere tutte le soluzioni possibili si scelga come parametro la rotazione \(\varphi_{B}\) che viene eliminata dal gruppo delle incognite da calcolare. In tal modo il sistema può essere riscritto come segue</p>
+<div class="displaymath">
+\begin{equation*}
+\left[\begin{array}{ccccc}
+1 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; -1 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0 &amp; -1 &amp; l\\
+0 &amp; 0 &amp; 0 &amp; 1 &amp; 0
+\end{array}\right]
+\left[\begin{array}{c} u_{1B} \\ u_{2B} \\ u_{1D} \\ u_{2D} \\ \varphi_{D} \end{array}\right] =
+\left[\begin{array}{c} -2l\,\varphi_{B} \\ 0 \\ 0 \\ -2l\,\varphi_{B} \\ 0 \end{array}\right].
+\end{equation*}
+</div>
 <span class="incontext"><a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html#p-405">in-context</a></span>
 </body>
 </html>

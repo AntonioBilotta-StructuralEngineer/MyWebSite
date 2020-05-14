@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:52+02:00    *-->
+<!--*    on 2020-05-14T19:27:24+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,45 +12,42 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="assemblage assemblage-like"><p>Le sollecitazioni così ottenute possono essere visualizzate utilizzando le seguenti istruzioni MATLAB. <figure class="listing figure-like"><pre class="console"><b>% diagramma dello sforzo normale
-syms N(x, F);
-N(x,F) = F;
-
-np = 100;
-Xv = 0:1/np:1;
-Nv = N(Xv, 1);
-Beam = zeros(1, np+1);
-
-plot(Xv,Nv,'g',Xv,Beam,'k','LineWidth',2)
-set(gca, 'Ylim', [-1 1])
-
-
-% diagramma del taglio
-syms T(x,F);
-T(x,F) = F;
-
-np = 100;
-Xv = 0:1/np:1;
-Tv = T(Xv, 1);
-Beam = zeros(1, np+1);
-
-plot(Xv,Tv,'b',Xv,Beam,'k','LineWidth',2)
-set(gca, 'Ylim', [-1 1])
-
-
-% diagramma del momento flettente
-syms M(x,F,l);
-M(x,F,l) = -F*l + F*x;
-
-np = 100;
-Xv = 0:1/np:1;
-Mv = M(Xv, 1, 1);
-Beam = zeros(1, np+1);
-
-plot(Xv,Mv,'r',Xv,Beam,'k','LineWidth',2)
-set(gca, 'Ylim', [-1 1])
-set(gca, 'YDir','reverse')
-</b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">5.9.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><span class="incontext"><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html#assemblage-47">in-context</a></span>
+<article class="assemblage-like"><h6 class="heading"><span class="title">caso \(p(x)=0\) e \(q(x)=0\).</span></h6>
+<p>Al fine di illustrare la valutazione delle costanti d'integrazione si consideri il seguente schema di corpo libero. <figure class="figure-like"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/schema1bis.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span> <span class="codenumber">5.8.2.</span> </figcaption></figure></p>
+<p>Per l'assenza di carichi ripartiti gli integrali generali forniscono</p>
+<div class="displaymath">
+\begin{align*}
+N(x) \amp =  a \,,\\
+T(x) \amp =  b \,,\\
+M(x) \amp =  b\,x + c \,.
+\end{align*}
+</div>
+<p>Quindi si ha un andamento constante per \(N\) e \(T\) e lineare per \(M\text{.}\) Imponendo le condizioni al contorno</p>
+<div class="displaymath">
+\begin{equation*}
+N(0) = F\,,\quad T(0) = F\,, \quad M(0) = -Fl\,,
+\end{equation*}
+</div>
+<p>si ottiene</p>
+<div class="displaymath">
+\begin{equation*}
+a = F\,,\quad b = F\,, \quad c = -Fl\,.
+\end{equation*}
+</div>
+<p>Quindi l'espressione analitica delle componenti di sollecitazione diventa</p>
+<div class="displaymath">
+\begin{align*}
+N(x) \amp =  F \,,\\
+T(x) \amp =  F \,,\\
+M(x) \amp =  F\,x - Fl \,.
+\end{align*}
+</div>
+<p>Si sarebbe ottenuto lo stesso risultato utilizzando le condizioni al contorno</p>
+<div class="displaymath">
+\begin{equation*}
+N(l) = F\,,\quad T(l) = F\,, \quad M(l) = 0\,.
+\end{equation*}
+</div></article><span class="incontext"><a href="indefinte_sec_rigid_body_statics_chap_it.html#assemblage-47">in-context</a></span>
 </body>
 </html>

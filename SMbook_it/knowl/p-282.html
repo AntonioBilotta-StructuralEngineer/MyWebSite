@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:51+02:00    *-->
+<!--*    on 2020-05-14T19:27:23+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,32 +13,29 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Sulla base del campo di spostamento definito dalle <a class="xref" data-knowl="./knowl/motivation_displ_eq.html" title="Equazione 3.4.13">(3.4.13)</a> si utilizzino le seguenti istruzioni MATLAB per calcolare i relativi campi di deformazione e di tensione. <figure class="listing figure-like"><pre class="console"><b>syms t E ni;
-X = sym('X', [1 3]);
-u = sym('u', [1 3]);
-u(1) = -ni*t/E * X(1);
-u(2) = -ni*t/E * X(2);
-u(3) = t/E * X(3);
-
-Du = [transpose(gradient(u(1), X)); ...
-transpose(gradient(u(2), X)); transpose(gradient(u(3), X))];
-
-symDu = 1/2*(Du+transpose(Du))
-
-Voigt_eps = [symDu(1,1); symDu(2,2); symDu(3,3); ...
-2*symDu(2,3); 2*symDu(3,1); 2*symDu(1,2)];
-
-Voigt_C = E/((1+ni)*(1-2*ni))*[(1-ni) ni ni 0 0 0; ...
- ni (1-ni) ni 0 0 0; ...
- ni ni (1-ni) 0 0 0; ...
- 0 0 0 (1-2*ni)/2 0 0; ...
- 0 0 0 0 (1-2*ni)/2 0; ...
- 0 0 0 0 0 (1-2*ni)/2];
-
-Voigt_sig = Voigt_C*Voigt_eps;
-simplify(Voigt_sig)
-</b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.4.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p>Il legame deformazione-spostamento <a data-knowl="./knowl/ep_2_eq.html" title="Equazione 3.4.2">(3.4.2)</a> consente la determinazione del campo di spostamento. Infatti la scrittura esplicita del legame, si veda la <a data-knowl="./knowl/mat_symDu_eq.html" title="Equazione 1.9.4">(1.9.4)</a>, fornisce</p>
+<div class="displaymath">
+\begin{align*}
+\varepsilon_{11} = \frac{\partial u_1}{\partial X_1}\,,\amp\qquad \varepsilon_{23} = \frac{1}{2}\left(\frac{\partial u_2}{\partial X_3} + \frac{\partial u_3}{\partial X_2}\right)\,,\\
+\varepsilon_{22} = \frac{\partial u_2}{\partial X_2}\,,\amp\qquad \varepsilon_{31} = \frac{1}{2}\left(\frac{\partial u_3}{\partial X_1} + \frac{\partial u_1}{\partial X_3}\right)\,,\\
+\varepsilon_{33} = \frac{\partial u_3}{\partial X_3}\,,\amp\qquad \varepsilon_{12} = \frac{1}{2}\left(\frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1}\right)\,.
+\end{align*}
+</div>
+<p>Sostituendo i valori delle componenti di deformazione ricavate nelle <a data-knowl="./knowl/eps33_eq.html" title="Equazione 3.4.7">(3.4.7)</a>-<a data-knowl="./knowl/eps11_eq.html" title="Equazione 3.4.9">(3.4.9)</a> mediante il legame elastico si ottiene</p>
+<div class="displaymath">
+\begin{align}
+-\nu\,\frac{\bar{t}}{E}\ = \frac{\partial u_1}{\partial X_1}\,,\amp\qquad 0 = \frac{1}{2}\left(\frac{\partial u_2}{\partial X_3} + \frac{\partial u_3}{\partial X_2}\right)\,,\tag{3.4.10}\\
+-\nu\,\frac{\bar{t}}{E}= \frac{\partial u_2}{\partial X_2}\,,\amp\qquad 0 = \frac{1}{2}\left(\frac{\partial u_3}{\partial X_1} + \frac{\partial u_1}{\partial X_3}\right)\,,\tag{3.4.11}\\
+\frac{\bar{t}}{E} = \frac{\partial u_3}{\partial X_3}\,,\amp\qquad 0 = \frac{1}{2}\left(\frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1}\right)\,.\tag{3.4.12}
+\end{align}
+</div>
+<p>Equazioni per le quali è facile verificare che una soluzione è data da</p>
+<div class="displaymath">
+\begin{equation}
+u_1 = -\nu\,\frac{\bar{t}}{E} \, X_1\,,\quad u_2 = -\nu\,\frac{\bar{t}}{E} \, X_2\,,\quad u_3 = \frac{\bar{t}}{E} \, X_3\,.\tag{3.4.13}
+\end{equation}
+</div>
+<p>Al riguardo si osserva che si parla di <em class="emphasis">una soluzione</em> in quanto sommando a tale campo di spostamento tutti i possibili moti rigidi, che nel problema assegnato non sono esplicitamente eliminati, si otterrebbe sempre la stessa soluzione in termini di campi di tensione e deformazione.</p>
 <span class="incontext"><a href="problem_sec_elasticity_chap_it.html#p-282">in-context</a></span>
 </body>
 </html>

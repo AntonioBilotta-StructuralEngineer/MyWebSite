@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:52+02:00    *-->
+<!--*    on 2020-05-14T19:27:23+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,64 +13,29 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Il generico tensore di rotazione ha una rappresentazione del tipo, si veda il <a class="xref" data-knowl="./knowl/rotation_remark.html" title="Commento 1.6.3: tensori di rotazione">Commento 1.6.3</a>,</p>
-<div class="displaymath">
-\begin{equation*}
-\mat{R} =
-\left[\begin{array}{cc}
-\cos{\varphi} \amp -\sin{\varphi} \\
-\sin{\varphi} \amp \cos{\varphi}
-\end{array}\right]\,,
-\end{equation*}
-</div>
-<p data-braille="continuation">espressione non lineare per la presenza delle funzioni trigonometriche. Ma si è anche visto che nel caso di spostamenti infinitesimi, si veda l'<a class="xref" data-knowl="./knowl/small_rotations_insight.html" title="Approfondimento 1.9.3: rotazioni infinitesime">Approfondimento 1.9.3</a>, il tensore di rotazione assume la seguente espressione</p>
-<div class="displaymath">
-\begin{equation*}
-\tens{R} \approx \tens{I} + \text{skew}\tens{\nabla u}\,,
-\end{equation*}
-</div>
-<p data-braille="continuation">dove</p>
-<div class="displaymath">
-\begin{equation*}
-\text{skew}\mat{\nabla u} \approx
-\left[\begin{array}{cc}
-0 \amp -\varphi \\
-\varphi \amp 0 
-\end{array}\right]\,.
-\end{equation*}
-</div>
-<p data-braille="continuation">Pertanto, nel caso di spostamenti infinitesimi, la relazione <a class="xref" data-knowl="./knowl/rigid_u_eq.html" title="Equazione 4.1.3">(4.1.3)</a> diventa</p>
-<div class="displaymath">
-\begin{align*}
-\vec{u} \amp = \vec{u}_o + \left(\tens{R} - \tens{I}\right)\left(\vec{X}-\vec{X}_o\right)\\
-\amp = \vec{u}_o + \left(\tens{I} + \text{skew}\tens{\nabla u} - \tens{I}\right)\left(\vec{X}-\vec{X}_o\right)\\
-\amp = \vec{u}_o + \text{skew}\tens{\nabla u}\,\left(\vec{X}-\vec{X}_o\right)\,,
-\end{align*}
-</div>
-<p data-braille="continuation">e quindi</p>
+<p>Come visto nella <a href="gradient_sec_strain_chap_it.html" class="internal" title="Sezione 1.3: gradiente della trasformazione">Sezione 1.3</a> la descrizione del moto di un corpo nell'intorno di un suo generico punto viene effettuata mediante il gradiente della trasformazione \(\tens{F}\text{.}\) A sua volta il gradiente, per il teorema di decomposzione polare (<a href="polar_sec_strain_chap_it.html" class="internal" title="Sezione 1.6: decomposizione polare">Sezione 1.6</a>), ammette la decomposizione \(\tens{F}=\tens{R}\tens{U}\text{.}\) Assumendo l'ipotesi di <em class="emphasis">corpo rigido</em>, ovvero l'invarianza delle distanze reciproche dei punti che compongono il corpo, il corpo non si deforma e quindi</p>
 <div class="displaymath">
 \begin{equation}
-\vec{u} = \vec{u}_o + \text{skew}\tens{\nabla u}\,\left(\vec{X}-\vec{X}_o\right)\,.\tag{4.1.4}
+\tens{U} = \tens{I}\quad \Rightarrow \quad \tens{F} = \tens{R}\,.\tag{4.1.1}
 \end{equation}
 </div>
-<p data-braille="continuation">La rapresentazione per componenti fornisce</p>
+<p>Inoltre, sempre per l'ipotesi di rigidità, la trasformazione \(\tens{F}\) non vale solo per un intorno del punto ma è omogena e quindi assume lo stesso valore su tutti i punti del corpo. Tale ulteriore condizione consente di esprimere il legame fra incrementi infinitesimi \(d\vec{x}=\tens{F}\,d\vec{X}\) in termini finiti, ovvero</p>
 <div class="displaymath">
 \begin{equation}
-\left[\begin{array}{c}
-u_1 \\ u_2
-\end{array}\right] =
-\left[\begin{array}{c}
-{u_1}_o \\ {u_2}_o
-\end{array}\right] +
-\left[\begin{array}{cc}
-0 \amp -\varphi \\
-\varphi \amp 0 
-\end{array}\right]
-\left[\begin{array}{c}
-\left(X_1 - {X_1}_o\right) \\ \left(X_2 - {X_2}_o\right)
-\end{array}\right]\,.\tag{4.1.5}
+\vec{x} - \vec{x}_o = \tens{F}\left(\vec{X}-\vec{X}_o\right) = \tens{R}\left(\vec{X}-\vec{X}_o\right)\,,\tag{4.1.2}
 \end{equation}
 </div>
+<p>dove \(\vec{X}\) si riferisce al generico punto e \(\vec{X}_o\) assume il significato particolare di <em class="emphasis">polo</em> rispetto al quale si descrive la trasformazione rigida. La scelta del polo è completamente indifferente e qualsiasi polo, interno o esterno al corpo, conduce ai medesimi risultati. Se si introduce nella <a data-knowl="./knowl/rigid_x_eq.html" title="Equazione 4.1.2">(4.1.2)</a> il legame \(\vec{x}=\vec{X}+\vec{u}\) si ottiene la descrisione del moto rigido in termini di spostamenti</p>
+<div class="displaymath">
+\begin{equation}
+\vec{u} = \vec{u}_o + \left(\tens{R} - \tens{I}\right)\left(\vec{X}-\vec{X}_o\right)\,.\tag{4.1.3}
+\end{equation}
+</div>
+<p>La relazione evidenzia come il campo di spostamento per un corpo rigido sia definito da due contributi ciascuno caratterizzato da <em class="emphasis">3 gradi di libertà</em>:</p>
+<ul class="disc">
+<li>un contributo di traslazione pura (3 componenti) condiviso da tutti i punti del corpo, contributo dato dallo spostamento del polo \(\vec{u}_o\text{;}\)</li>
+<li>un contributo di rotazione (3 componenti) che invece varia per ogni punto in ragione del vettore \(\left(\vec{X} - \vec{X}_o\right)\text{.}\)</li>
+</ul>
 <span class="incontext"><a href="description_sec_rigid_body_kinematics_chap_it.html#p-358">in-context</a></span>
 </body>
 </html>

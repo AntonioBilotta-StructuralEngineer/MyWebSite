@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:52+02:00    *-->
+<!--*    on 2020-05-14T19:27:24+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,8 +13,50 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Si effettui l'analisi cinematica del seguente sistema. <figure class="figure figure-like"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="images/arcoatrecerniere_cinematica.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">4.4.9<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p><figure class="figure-like"><pre class="console"><b>% campo di spostamento generico nel piano
+rigidDispl = ...
+    @(u0, phi0, X0, X)...
+    [u0(1)-phi0*(X(2)-X0(2));...
+     u0(2)+phi0*(X(1)-X0(1))];
+
+% descrizione geometrica della trave 
+syms l;
+A = [0; 0];
+B = [l; 0];
+C = [l; l/2];
+
+% campo di spostamento assumendo come polo il punto A
+POLO = A;
+syms phiA;
+phi0 = phiA;
+u0 = sym('uA', [2 1]);
+uA = rigidDispl(u0, phi0, POLO, A);
+uB = rigidDispl(u0, phi0, POLO, B);
+uC = rigidDispl(u0, phi0, POLO, C);
+
+% equazioni di vincolo
+eqns = [
+uA(2) == 0,
+uB(2) == 0,
+uC(1) == 0
+];
+
+% matrice cinematica e vettore degli spostamenti assegnati
+[A,d] = equationsToMatrix(eqns, [uA(1), uA(2), phiA]);
+
+% gradi di libertà, n
+% gradi di vincolo, m
+[m,n] = size(A); 
+
+% calcolo del rango di A
+r = rank(A);
+
+% se il sistema è cinematicamente determinato si calcola la soluzione
+if and(r == min(m,n), m == n)
+    x = linsolve(A,d);
+end
+</b></pre>
+<figcaption><span class="type">Listato</span> <span class="codenumber">4.4.8.</span> </figcaption></figure></p>
 <span class="incontext"><a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html#p-388">in-context</a></span>
 </body>
 </html>

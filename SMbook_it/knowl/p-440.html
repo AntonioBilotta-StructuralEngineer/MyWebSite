@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:52+02:00    *-->
+<!--*    on 2020-05-14T19:27:24+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,14 +13,35 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Anche se l'esempio in esame non lo richiederebbe, per esercizio si riportano le istruzioni MATLAB utilizzabili per il calcolo del rango della matrice statica e delle reazioni vincolari incognite. <figure class="listing figure-like"><pre class="console"><b>syms l F
-B = [1 0 0; 0 1 1; 0 0 l]
-rango = rank(B)
-
-f = [0; -F; -F*l/2]
-r = linsolve(B, -f)
-</b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">5.6.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p>La presenza di un solo corpo rigido determina la scrittura di 3 equazioni di equilibrio (\(n=3\)) per le quali si assume l'estremo \(A\) come polo per l'equilibrio alla rotazione:</p>
+<div class="displaymath">
+\begin{align*}
+H_A \amp = 0\,,\\
+V_A + V_B - F \amp = 0\,,\\
+V_{B} l - F l/2 \amp = 0\,.
+\end{align*}
+</div>
+<p>Condizioni esprimibili in forma matriciale come</p>
+<div class="displaymath">
+\begin{equation*}
+\underbrace{\left[\begin{array}{ccc}
+1 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 1\\
+0 &amp; 0 &amp; l
+\end{array}\right]}_{\mat{B}}
+\underbrace{\left[\begin{array}{c} H_A \\V_A \\ V_{B} \end{array}\right]}_{\vec{r}} +
+\underbrace{\left[\begin{array}{c} 0 \\ -F \\ -Fl/2 \end{array}\right]}_{\vec{f}} =
+\left[\begin{array}{c} 0 \\ 0 \\ 0 \end{array}\right]\,.
+\end{equation*}
+</div>
+<p>Anche in questo caso la semplice ispezione della matrice statica consente di stabilire l'isostaticità del sistema. Il calcolo delle componenti di reazione vincolare fornisce:</p>
+<div class="displaymath">
+\begin{align*}
+H_{A} \amp= 0\,,\\
+V_{A}  \amp= F/2\,,\\
+V_{B}  \amp= F/2\,.
+\end{align*}
+</div>
 <span class="incontext"><a href="analysis_examples_sec_rigid_body_statics_chap_it.html#p-440">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:51+02:00    *-->
+<!--*    on 2020-05-14T19:27:23+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,20 +13,21 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Per completezza si fornisce anche un riepilogo del legame elastico ed isotropo utilizzando il formato tensoriale.</p>
+<p>Un riepilogo di quanto ottenuto sopra può essere ottenuto utilizzando la <em class="emphasis">notazione di Voigt</em> la quale per la rappresentazione dei tensori simmetrici del 2\(^o\) ordine utilizza vettori a 6 componenti, e per i corrispondenti tensori<a data-knowl="./knowl/fn-4-hidden.html" title="Nota a piè pagina 3.3.1"><sup> 1 </sup></a> del 4\(^o\) ordine matrici 6\(\times\)6. Pertanto il legame elastico ed isotropo può essere scritto come segue</p>
 <div class="displaymath">
 \begin{equation}
-\tens{\sigma} = \tensQ{C}:\tens{\varepsilon} \tag{3.3.22}
+\left[\begin{array}{c}\sigma_{11} \\ \sigma_{22} \\ \sigma_{33} \\ \sigma_{23} \\ \sigma_{31} \\ \sigma_{12}\end{array}\right] =
+\frac{E}{(1+\nu)(1-2\nu)}
+\left[\begin{array}{cccccc}
+(1-\nu) \amp \nu \amp \nu \amp 0 \amp 0 \amp 0\\
+\nu \amp (1-\nu) \amp \nu \amp 0 \amp 0 \amp 0\\
+\nu \amp \nu \amp (1-\nu) \amp 0 \amp 0 \amp 0\\
+0 \amp 0 \amp 0 \amp (1-2\nu)/2 \amp 0 \amp 0 \\
+0 \amp 0 \amp 0 \amp 0 \amp (1-2\nu)/2 \amp 0 \\
+0 \amp 0 \amp 0 \amp 0 \amp 0 \amp (1-2\nu)/2
+\end{array}\right]
+\left[\begin{array}{c}\varepsilon_{11} \\ \varepsilon_{22} \\ \varepsilon_{33} \\  2\,\varepsilon_{23} \\  2\,\varepsilon_{31} \\  2\,\varepsilon_{12}\end{array}\right]\,.\tag{3.3.21}
 \end{equation}
-</div>
-<p data-braille="continuation">dove le componenti non nulle del tensore \(\tensQ{C}\) sono</p>
-<div class="displaymath">
-\begin{align}
-\amp\mathbb{C}_{1111} = \mathbb{C}_{2222} = \mathbb{C}_{3333} = \frac{E(1-\nu)}{(1+\nu)(1-2\nu)}\,,\tag{3.3.23}\\
-\amp\mathbb{C}_{1122} = \mathbb{C}_{1133} = \mathbb{C}_{2233} =\tag{3.3.24}\\
-\amp\mathbb{C}_{2211} = \mathbb{C}_{3311} = \mathbb{C}_{3322} = \frac{E\,\nu}{(1+\nu)(1-2\nu)}\,,\tag{3.3.25}\\
-\amp\mathbb{C}_{2323} = \mathbb{C}_{3131} = \mathbb{C}_{1212} = 2\,G\,.\tag{3.3.26}
-\end{align}
 </div>
 <span class="incontext"><a href="multiaxial_sec_elasticity_chap_it.html#p-273">in-context</a></span>
 </body>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:50+02:00    *-->
+<!--*    on 2020-05-14T19:27:22+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,16 +13,19 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Analogamente anche \(\tens{C}\) può essere espresso rispetto al gradiente dello spostamento, ovvero</p>
+<p>I modelli meccanici che verranno discussi durante il corso tipicamente vengono formulati utilizzando come ente cinematico il campo di spostamento che, si ricorda, è definito come \(\vec{u} = \vec{x}-\vec{X}\text{.}\) Da cui \(\tens{F} = \tens{I}+\tens{\nabla u}\text{.}\) Pertanto il tensore di Green-Lagrange è esprimibile come</p>
 <div class="displaymath">
-\begin{equation*}
-\tens{C} = \transp{\tens{F}}\tens{F} = \transp{(\tens{I}+\tens{\nabla u})} (\tens{I}+\tens{\nabla u})\,,
-\end{equation*}
+\begin{align*}
+\tens{E} \amp = \frac{1}{2}\left( \transp{\tens{F}}\,\tens{F} - \tens{I}\right)\,,\\
+\amp = \frac{1}{2}\left( \transp{(\tens{I}+\tens{\nabla u})}\,(\tens{I}+\tens{\nabla u}) - \tens{I}\right)\,,\\
+\amp = \frac{1}{2}\left(\tens{I}+\tens{\nabla u} + \transp{\tens{\nabla u}} +  \transp{\tens{\nabla u}}\,\tens{\nabla u} - \tens{I}\right)\,,\\
+\amp = \frac{1}{2}\left(\tens{\nabla u} + \transp{\tens{\nabla u}}\right) + \frac{1}{2} \transp{\tens{\nabla u}}\,\tens{\nabla u} \,.
+\end{align*}
 </div>
-<p data-braille="continuation">da cui si ottiene</p>
+<p>Pertanto, in termini di gradiente dello spostamento, il tensore della deformazione di Green-Lagrange ha la seguente espressione</p>
 <div class="displaymath">
 \begin{equation}
-\tens{C} = \tens{I}+ \tens{\nabla u} + \transp{\tens{\nabla u}} +  \transp{\tens{\nabla u}}\,\tens{\nabla u}\,.\tag{1.8.9}
+\tens{E} = \frac{1}{2}\left(\tens{\nabla u} + \transp{\tens{\nabla u}}\right) + \frac{1}{2} \transp{\tens{\nabla u}}\,\tens{\nabla u} \,.\tag{1.8.8}
 \end{equation}
 </div>
 <span class="incontext"><a href="measures_sec_strain_chap_it.html#p-137">in-context</a></span>

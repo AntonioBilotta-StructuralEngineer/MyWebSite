@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:52+02:00    *-->
+<!--*    on 2020-05-14T19:27:23+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,16 +13,31 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Il doppio bipendolo impone che la rotazione del punto di applicazione sia nulla, ovvero</p>
+<p>Il carrello impone che lo spostamento del punto in cui è applicato può avvenire solo in direzione ortogonale all'asse del carrello:</p>
 <div class="displaymath">
 \begin{equation}
-\varphi_{A}  = 0\,.\tag{4.2.6}
+\vec{u}_A \cdot \vec{n} = 0\tag{4.2.3}
 \end{equation}
 </div>
-<p data-braille="continuation"><article class="warning remark-like"><h6 class="heading">
-<span class="type">Avvertenza</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="period">.</span>
-</h6>
-<p>Nel caso di corpo rigido la rotazione non può variare da punto a punto e, pertanto, bloccare la rotazione in un punto vuol dire bloccarla su tutto il corpo. Detto in altro parole, per la cinematica di corpo rigido il punto di applicazione del vincolo non ha nessuna rilevanza.</p></article></p>
+<p>dove</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{u}_A = \left[\begin{array}{c} u_{1A} \\ u_{2A}\end{array}\right] \,, \quad
+\vec{n} = \left[\begin{array}{c} \cos{\alpha} \\ \sin{\alpha}\end{array}\right]
+\end{equation*}
+</div>
+<p>Nei casi particolari in cui l'asse del carrello è orizzontale, \(\alpha=0\) oppure \(\alpha=\pi\text{,}\) allora la condizione <a data-knowl="./knowl/carrello_eq.html" title="Equazione 4.2.3">(4.2.3)</a> fornisce</p>
+<div class="displaymath">
+\begin{equation}
+u_{1A}  = 0\,.\tag{4.2.4}
+\end{equation}
+</div>
+<p>Se invece l'asse è verticale, \(\alpha=\pi/2\) oppure \(\alpha=-\pi/2\text{,}\) la condizione vincolare diviene</p>
+<div class="displaymath">
+\begin{equation}
+u_{2A}  = 0\,.\tag{4.2.5}
+\end{equation}
+</div>
 <span class="incontext"><a href="constraints_sec_rigid_body_kinematics_chap_it.html#p-366">in-context</a></span>
 </body>
 </html>

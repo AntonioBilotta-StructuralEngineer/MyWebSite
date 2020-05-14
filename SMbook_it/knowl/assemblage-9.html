@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:50+02:00    *-->
+<!--*    on 2020-05-14T19:27:22+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,7 +12,7 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="assemblage assemblage-like"><p>Assumendo per \(\tens{U}\) la seguente forma diagonale</p>
+<article class="assemblage-like"><p>Assumendo per \(\tens{U}\) la seguente forma diagonale</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{U} =
@@ -23,7 +23,7 @@
 \end{array}\right]\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">si calcoli l'espressione che assume \(\tens{U}\) supponendo di applicare alle direzioni principali le seguenti rotazioni in successione</p>
+<p>si calcoli l'espressione che assume \(\tens{U}\) supponendo di applicare alle direzioni principali le seguenti rotazioni in successione</p>
 <div class="displaymath">
 \begin{equation*}
 \matWp{R}{1} = 
@@ -44,7 +44,7 @@
 \end{array}\right]\,.
 \end{equation*}
 </div>
-<p>Le seguenti istruzioni MATLAB consentono di calcolare quanto richiesto. <figure class="listing figure-like"><pre class="console"><b>R1 = [cos(pi/4) -sin(pi/4) 0; sin(pi/4) cos(pi/4) 0; 0 0 1];
+<p>Le seguenti istruzioni MATLAB consentono di calcolare quanto richiesto. <figure class="figure-like"><pre class="console"><b>R1 = [cos(pi/4) -sin(pi/4) 0; sin(pi/4) cos(pi/4) 0; 0 0 1];
 R2 = [cos(pi/4) 0 -sin(pi/4); 0 1 0; sin(pi/4) 0 cos(pi/4)];
 u1 = R2*R1*[1; 0; 0];
 u2 = R2*R1*[0; 1; 0];
@@ -55,9 +55,9 @@ lam3 = 7;
 U = lam1*u1*transpose(u1) + lam2*u2*transpose(u2) + ...
 lam3*u3*transpose(u3)
 </b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.7.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<p>Si effettui anche il seguente calcolo e si rifletta sul risultato ottenuto. <figure class="listing figure-like"><pre class="console"><b>u1*transpose(u1) + u2*transpose(u2) + u3*transpose(u3)
+<figcaption><span class="type">Listato</span> <span class="codenumber">1.7.3.</span> </figcaption></figure></p>
+<p>Si effettui anche il seguente calcolo e si rifletta sul risultato ottenuto. <figure class="figure-like"><pre class="console"><b>u1*transpose(u1) + u2*transpose(u2) + u3*transpose(u3)
 </b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.7.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><span class="incontext"><a href="principal_directions_sec_strain_chap_it.html#assemblage-9">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">1.7.4.</span> </figcaption></figure></p></article><span class="incontext"><a href="principal_directions_sec_strain_chap_it.html#assemblage-9">in-context</a></span>
 </body>
 </html>

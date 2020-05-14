@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:51+02:00    *-->
+<!--*    on 2020-05-14T19:27:22+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,55 +13,38 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Nell'equazione <a class="xref" data-knowl="./knowl/motiv_static_eq.html" title="Equazione 3.1.2">(3.1.2)</a> le incognite sono le 6 componenti indipendenti del tensore della tensione mentre le equazioni a disposizione sono soltanto 3. Posta in questi termini la ricerca della soluzione non sarebbe neanche proponibile. Comunque, data la semplicità dei dati del problema si può tentare la strada di assumere una forma per il tensore della tensione e verificare se si riescono a soddisfare tutte le equazioni di equilibrio, indefinite e sul contorno. In particolare si assuma per \(\tens{\sigma}\) la forma seguente</p>
-<div class="displaymath">
+<p>Sulla base dei dati del problema e dell'ipotesi precedente, il problema statico assume la seguente formulazione.</p>
+<ul class="disc">
+<li>Equazioni indefinite di equilibrio sul dominio<div class="displaymath">
 \begin{equation}
-\mat{\sigma} =
-\left[\begin{array}{ccc}
-0 \amp 0 \amp 0\\
-0 \amp 0 \amp 0\\
-0 \amp 0 \amp \kappa
-\end{array}\right]\tag{3.1.10}
+\text{div}\tens{\sigma} = \vec{0}\quad\;\text{in}\;\body_0\,.\tag{3.1.2}
+\end{equation}
+</div>Ovvero, per componenti, le seguenti tre equazioni scalari<div class="displaymath">
+\begin{equation}
+\begin{array}{l}
+\frac{\partial\sigma_{11}}{\partial X_1} + \frac{\partial\sigma_{12}}{\partial X_2} + \frac{\partial\sigma_{13}}{\partial X_3} = 0\\
+\frac{\partial\sigma_{12}}{\partial X_1} + \frac{\partial\sigma_{22}}{\partial X_2} + \frac{\partial\sigma_{23}}{\partial X_3} = 0\\
+\frac{\partial\sigma_{13}}{\partial X_1} + \frac{\partial\sigma_{23}}{\partial X_2} + \frac{\partial\sigma_{33}}{\partial X_3} = 0
+\end{array}
+\quad\;\text{in}\;\body_0\,.\tag{3.1.3}
 \end{equation}
 </div>
-<p data-braille="continuation">valida su tutto il dominio e con \(\kappa\) una costante generica. Si verifica facilmente il soddisfacimento delle <a class="xref" data-knowl="./knowl/motiv_static_components_eq.html" title="Equazione 3.1.3">(3.1.3)</a>, infatti</p>
-<div class="displaymath">
-\begin{equation*}
-\begin{array}{l}
-\frac{\partial\, 0}{\partial\, X_1} + \frac{\partial\, 0}{\partial\, X_2} + \frac{\partial\, 0}{\partial\, X_3} = 0\\
-\frac{\partial\, 0}{\partial\, X_1} + \frac{\partial\, 0}{\partial\, X_2} + \frac{\partial\, 0}{\partial\, X_3} = 0\\
-\frac{\partial\, 0}{\partial\, X_1} + \frac{\partial\, 0}{\partial\, X_2} + \frac{\partial\, \kappa}{\partial\, X_3} = 0
-\end{array}
-\quad\;\text{in}\;\body_0\,.
-\end{equation*}
+</li>
+<li>Condizioni, di tipo statico, sul contorno<div class="displaymath">
+\begin{align}
+\amp \tens{\sigma}\vec{n}_1 = \vec{t}_1\quad\;\text{su}\;\Sigma_1 \,,\tag{3.1.4}\\
+\amp \tens{\sigma}\vec{n}_2 = \vec{t}_2\quad\;\text{su}\;\Sigma_2 \,,\tag{3.1.5}\\
+\amp \tens{\sigma}\vec{n}_{\Pi} = \vec{0}\quad\;\text{su}\;\Pi \,.\tag{3.1.6}
+\end{align}
+</div>Dove<div class="displaymath">
+\begin{align}
+\Sigma_1:\amp \quad \matWp{n}{1} = \left[\begin{array}{r}0\\0\\-1\end{array}\right]\,,\;\matWp{t}{1} = \left[\begin{array}{r}0\\0\\-\bar{t}\end{array}\right] \,,\tag{3.1.7}\\
+\Sigma_2:\amp \quad \matWp{n}{2} = \left[\begin{array}{r}0\\0\\1\end{array}\right]\,,\;\matWp{t}{2} = \left[\begin{array}{r}0\\0\\\bar{t}\end{array}\right] \,,\tag{3.1.8}\\
+\Pi:\amp \quad \matWp{n}{\Pi} = \left[\begin{array}{r}n_1\\n_2\\0\end{array}\right] \,.\tag{3.1.9}
+\end{align}
 </div>
-<p data-braille="continuation">È verificato anche il soddisfacimento della <a class="xref" data-knowl="./knowl/motiv_bc3_eq.html" title="Equazione 3.1.6">(3.1.6)</a>, infatti</p>
-<div class="displaymath">
-\begin{equation*}
-\left[\begin{array}{ccc}
-0 \amp 0 \amp 0\\
-0 \amp 0 \amp 0\\
-0 \amp 0 \amp \kappa
-\end{array}\right]
-\left[\begin{array}{r}n_1\\n_2\\0\end{array}\right] =
-\left[\begin{array}{r}0\\0\\0\end{array}\right] \,.
-\end{equation*}
-</div>
-<p data-braille="continuation">Mentre imponendo la <a class="xref" data-knowl="./knowl/motiv_bc1_eq.html" title="Equazione 3.1.4">(3.1.4)</a>, ugualmente con la  <a class="xref" data-knowl="./knowl/motiv_bc2_eq.html" title="Equazione 3.1.5">(3.1.5)</a>, si ottiene</p>
-<div class="displaymath">
-\begin{equation*}
-\left[\begin{array}{ccc}
-0 \amp 0 \amp 0\\
-0 \amp 0 \amp 0\\
-0 \amp 0 \amp \kappa
-\end{array}\right]
-\left[\begin{array}{r}0 \\ 0\\-1\end{array}\right] =
-\left[\begin{array}{r}0\\0\\-\bar{t}\end{array}\right]
-\quad \rightarrow \quad
-\kappa = \bar{t}
-\,.
-\end{equation*}
-</div>
+</li>
+</ul>
 <span class="incontext"><a href="motivations_sec_elasticity_chap_it.html#p-235">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:52+02:00    *-->
+<!--*    on 2020-05-14T19:27:23+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,20 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Utilizzando l'equazione <a class="xref" data-knowl="./knowl/stretched_beam_navier.html" title="Equazione 3.5.21">(3.5.21)</a> si calcoli la soluzione elastica per il seguente schema.</p>
-<span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#p-319">in-context</a></span>
+<p>Anche per il modello di trave inflessa le equazioni del modello possono essere utilizzate per eliminare dalle incognite \(M\) e \(\chi\) e mantenere solo lo spostamento \(\func{w}{x}\text{.}\) I seguenti passaggi mostrano come ottenere tale risultato</p>
+<div class="displaymath">
+\begin{align*}
+\frac{d^2 M}{dx^2}  + q \amp= 0\\
+\frac{d^2}{d x^2}\left(EJ\,\chi\right) + q \amp= 0\\
+\frac{d^2}{d x^2}\left(EJ\, \left( -\frac{d^2 w}{dx^2} \right)\right) + q \amp= 0
+\end{align*}
+</div>
+<p>da cui</p>
+<div class="displaymath">
+\begin{equation}
+-EJ\,\frac{d^4w}{dx^4} + q = 0\,.\tag{3.6.34}
+\end{equation}
+</div>
+<span class="incontext"><a href="bent_beam_sec_elasticity_chap_it.html#p-319">in-context</a></span>
 </body>
 </html>

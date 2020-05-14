@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:52+02:00    *-->
+<!--*    on 2020-05-14T19:27:24+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,13 +12,49 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<figure class="listing figure-like"><pre class="console"><b>syms l F
-B = [1 0 0; 0 1 1; 0 0 l]
-rango = rank(B)
+<figure class="figure-like"><pre class="console"><b>% vettore delle risultanti =
+% [orizzontale; verticale; momento]
+R = zeros(3,1);
 
-f = [0; -F; -F*l/2]
-r = linsolve(B, -f)
+% funzione per il calcolo del momento
+momento = @(X0, X, Carico)...
+    -Carico(1)*(X(2)-X0(2))+Carico(2)*(X(1)-X0(1));
+
+% coordinate dei punti sui quali sono applicati i carichi
+syms L;
+
+A = [0; 0];
+B = [L; 0];
+C = [L; L/2];
+
+% scelta del polo
+POLO = A;
+
+% per ogni punto si assegna il vettore Carico = [F1; F2; M]
+% e si sommano i contributi alla risultante
+syms F;
+
+CaricoA = [F; F; 0];
+R = R + CaricoA;
+R(3) = R(3) + momento(POLO, A, CaricoA);
+R
+
+CaricoB = [-F; -F; 0];
+R = R + CaricoB;
+R(3) = R(3) + momento(POLO, B, CaricoB);
+R
+
+CaricoC = [-F; 2*F; F*L];
+R = R + CaricoC;
+R(3) = R(3) + momento(POLO, C, CaricoC);
+R
+
+if and(and(R(1) == 0, R(2) == 0), R(3) == 0)
+    disp('Sistema equilibrato')
+else
+    disp('Sistema non equilibrato')
+end
 </b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">5.6.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure><span class="incontext"><a href="analysis_examples_sec_rigid_body_statics_chap_it.html#listing-52">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">5.2.2.</span> </figcaption></figure><span class="incontext"><a href="planecase_sec_rigid_body_statics_chap_it.html#listing-52">in-context</a></span>
 </body>
 </html>

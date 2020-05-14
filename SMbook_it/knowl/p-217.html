@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:51+02:00    *-->
+<!--*    on 2020-05-14T19:27:22+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,44 +13,15 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>La equazione integrale di partenza può quindi essere riscritta come segue</p>
-<div class="displaymath">
-\begin{equation}
-\int_{\body} \left(\text{div}\left(\tens{\sigma}\vec{v}\right) - \tens{\sigma} : \tens{\nabla v} + \vec{b} \cdot \vec{v} \right)  \,dv= 0\,,\quad \forall\vec{v}\,.\tag{2.5.2}
-\end{equation}
-</div>
-<p data-braille="continuation">Il primo integrale, applicando in successione Teorema della divergenza e Teorema della tensione di Cauchy, diventa</p>
+<p>Nei passaggi precedenti vengono trasferite derivate dal tensore \(\tens{\sigma}\) al campo di spostamento \(\vec{v}\text{.}\) Le derivate su \(\tens{\sigma}\) sono effettuate rispetto alle coordinate \(x_1\text{,}\) \(x_2\) e \(x_3\) relative alla configurazione corrente, pertanto in tale contesto per gradiente dello spostamento si intende</p>
 <div class="displaymath">
 \begin{equation*}
-\int_{\body} \text{div}\left(\tens{\sigma}\vec{v}\right)\, dv = 
-\int_{\partial\body} \tens{\sigma}\vec{v} \cdot \vec{n}\,ds =
-\int_{\partial\body} \vec{v} \cdot \tens{\sigma}\vec{n}\,ds =
-\int_{\partial\body} \vec{t} \cdot \vec{v}\,ds \,.
+\mat{\nabla v} = \left[\begin{array}{ccc}
+\regulardiff{u_1}{x_1} \amp \regulardiff{u_1}{x_2} \amp \regulardiff{u_1}{x_3}\\
+\regulardiff{u_2}{x_1} \amp \regulardiff{u_2}{x_2} \amp \regulardiff{u_2}{x_3}\\
+\regulardiff{u_3}{x_1} \amp \regulardiff{u_3}{x_2} \amp \regulardiff{u_3}{x_3}
+\end{array}\right]\,.
 \end{equation*}
-</div>
-<p data-braille="continuation">Quindi l'equazione <a class="xref" data-knowl="./knowl/continuum_plv_2_eq.html" title="Equazione 2.5.2">(2.5.2)</a> diventa</p>
-<div class="displaymath">
-\begin{equation}
-\int_{\partial\body} \vec{t} \cdot \vec{v}\,ds - \int_{\body} \tens{\sigma} : \tens{\nabla v}\,dv + \int_{\body}  \vec{b} \cdot \vec{v} \,dv = 0\,,\quad \forall\vec{v}\,.\tag{2.5.3}
-\end{equation}
-</div>
-<p data-braille="continuation">Per la decomposizione di \(\tens{\nabla v}\)</p>
-<div class="displaymath">
-\begin{equation*}
-\tens{\nabla v} = \text{sym}\tens{\nabla v} + \text{skew}\tens{\nabla v}
-\end{equation*}
-</div>
-<p data-braille="continuation">e la simmetria di \(\tens{\sigma}\) si ha</p>
-<div class="displaymath">
-\begin{equation*}
-\tens{\sigma} : \tens{\nabla v} =  \tens{\sigma} : \text{sym}\tens{\nabla v}\,.
-\end{equation*}
-</div>
-<p data-braille="continuation">Si arriva quindi alla seguente espressione finale della forma integrale delle equazioni indefinite di equilibrio <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equazione 2.3.10">(2.3.10)</a>:</p>
-<div class="displaymath">
-\begin{equation}
-\int_{\partial\body} \vec{t} \cdot \vec{v}\,ds + \int_{\body}  \vec{b} \cdot \vec{v} \,dv = \int_{\body} \tens{\sigma} : \text{sym}\tens{\nabla v}\,dv \,,\quad \forall\vec{v}\,.\tag{2.5.4}
-\end{equation}
 </div>
 <span class="incontext"><a href="plv_sec_stress_chap_it.html#p-217">in-context</a></span>
 </body>

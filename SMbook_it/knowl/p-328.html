@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:52+02:00    *-->
+<!--*    on 2020-05-14T19:27:23+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,25 +13,25 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>La condizione di carico mostrata in Figura può essere descritta come segue</p>
+<p>La presenza dell'incremento di temperatura determina un allungamento della trave pari a</p>
 <div class="displaymath">
 \begin{equation*}
-\func{p}{x} = \bar{p}\,\sin\left(\frac{2\pi\,x}{l}\right)
+\Delta l_T = \alpha \Delta T \,l\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">da cui, tramite l'equazione <a class="xref" data-knowl="./knowl/stretched_beam_navier.html" title="Equazione 3.5.21">(3.5.21)</a>, si ricava</p>
+<p>dove \(\alpha\) rappresenta il coefficiente di dilatazione termica del materiale. Tale allungamento è comunque impedito dalla presenza dei vincoli pertanto la trave sarà anche soggetta ad uno sforzo normale calcolabile dalla seguente equazione</p>
 <div class="displaymath">
 \begin{equation*}
-EA\,\frac{d^2u}{dx^2} + \bar{p}\,\sin\left(\frac{2\pi\,x}{l}\right) = 0
+\Delta l_T + \Delta l_N = \alpha \Delta T \,l + \frac{N}{EA} \,l = 0\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">da soddisfare in ogni punto della trave. Le condizioni al contorno sono</p>
+<p>da cui si ottiene</p>
 <div class="displaymath">
-\begin{align*}
-\amp \func{u}{0} = 0\,,\\
-\amp \func{u}{l} = 0\,.
-\end{align*}
+\begin{equation*}
+N = - EA \,\alpha \Delta T\,,
+\end{equation*}
 </div>
+<p>soluzione che mostra lo stato di compressione determinato dall'allungamento impedito. La soluzione in termini di spostamento è identicamente nulla su tutto la lunghezza.</p>
 <span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#p-328">in-context</a></span>
 </body>
 </html>

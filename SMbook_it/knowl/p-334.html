@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:52+02:00    *-->
+<!--*    on 2020-05-14T19:27:23+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,18 +13,20 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Per lo spostamento si ottine quindi l'atteso andamento cubico</p>
-<div class="displaymath">
-\begin{equation*}
-\func{w}{x} = \frac{F}{6\,EJ}\left(-x^3+3l\,x^2\right)\,,
-\end{equation*}
-</div>
-<p data-braille="continuation">e per il momento flettente si ha invece il seguente andamento lineare</p>
-<div class="displaymath">
-\begin{equation*}
-\func{M}{x} = F\left(x-l\right)\,.
-\end{equation*}
-</div>
+<p>Lo ppostamento dell'asse della trave può essere visualizzato con le seguenti istruzioni MATLAB. <figure class="figure-like"><pre class="console"><b>syms w(x);
+EJ = 1;
+F = 1;
+l = 1;
+w(x)=F/6/EJ*(-x^3+3*l*x^2);
+
+np = 100;
+Xv = 0:1/np:1;
+wv = w(Xv);
+Beam = zeros(1, np+1);
+plot(Xv,wv,'r',Xv,Beam,'k','LineWidth',2)
+set(gca, 'YDir','reverse')
+</b></pre>
+<figcaption><span class="type">Listato</span> <span class="codenumber">3.8.3.</span> </figcaption></figure></p>
 <span class="incontext"><a href="bent_beam_applications_sec_elasticity_chap_it.html#p-334">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:51+02:00    *-->
+<!--*    on 2020-05-14T19:27:23+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,19 +13,25 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Per completare la formulazione del problema è necessario assegnare anche le condizioni al contorno che, in generale, possono essere di due tipi: di tipo statico sulla parte di contorno \(\partial\body_{\vec{t}}\) e di tipo cinematico sulla parte di contorno \(\partial\body_{\vec{u}}\text{.}\) Si osserva che \(\partial\body=\partial\body_{\vec{u}}+\partial\body_{\vec{t}}\text{.}\)</p>
 <ul class="disc">
 <li>
-<em class="alert">Condizioni al contorno di tipo statico</em>, definite su \(\partial\body_{\vec{t}}\)<div class="displaymath">
+<em class="alert">Equazioni di equilibrio</em> (<a href="stress_chap_it.html" class="internal" title="Capitolo 2: forze, equilibrio e tensione">Capitolo 2</a>)<div class="displaymath">
 \begin{equation}
-\tens{\sigma}\,\vec{n} = \bar{\vec{t}}\,.\tag{3.4.4}
+\text{div}\tens{\sigma} + \vec{b} = \vec0\,.\tag{3.4.1}
 \end{equation}
 </div>
 </li>
 <li>
-<em class="alert">Condizioni al contorno di tipo cinematico</em>, definite su \(\partial\body_{\vec{u}}\)<div class="displaymath">
+<em class="alert">Legame deformazione-spostamento</em> (<a href="strain_chap_it.html" class="internal" title="Capitolo 1: cinematica dei corpi">Capitolo 1</a>)<div class="displaymath">
 \begin{equation}
-\vec{u} = \bar{\vec{u}}\,.\tag{3.4.5}
+\tens{\varepsilon} = \text{sym}\tens{\nabla u}\,.\tag{3.4.2}
+\end{equation}
+</div>
+</li>
+<li>
+<em class="alert">Legame elastico</em> (<a href="elasticity_chap_it.html" class="internal" title="Capitolo 3: comportamento elastico">Capitolo 3</a>)<div class="displaymath">
+\begin{equation}
+\tens{\sigma} = \tensQ{C}:\tens{\varepsilon}\,.\tag{3.4.3}
 \end{equation}
 </div>
 </li>

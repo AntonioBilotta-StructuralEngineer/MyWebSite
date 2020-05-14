@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:52+02:00    *-->
+<!--*    on 2020-05-14T19:27:24+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,13 +12,13 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="assemblage assemblage-like"><p>Le sollecitazioni così ottenute possono essere visualizzate utilizzando le seguenti istruzioni MATLAB. <figure class="listing figure-like"><pre class="console"><b>% diagramma dello sforzo normale
-syms N(x);
-N(x) = 0;
+<article class="assemblage-like"><p>Le sollecitazioni così ottenute possono essere visualizzate utilizzando le seguenti istruzioni MATLAB. <figure class="figure-like"><pre class="console"><b>% diagramma dello sforzo normale
+syms N(x, F);
+N(x,F) = F;
 
 np = 100;
 Xv = 0:1/np:1;
-Nv = N(Xv);
+Nv = N(Xv, 1);
 Beam = zeros(1, np+1);
 
 plot(Xv,Nv,'g',Xv,Beam,'k','LineWidth',2)
@@ -26,12 +26,12 @@ set(gca, 'Ylim', [-1 1])
 
 
 % diagramma del taglio
-syms T(x,q,l);
-T(x,q,l) = -q*x+q*l;
+syms T(x,F);
+T(x,F) = F;
 
 np = 100;
 Xv = 0:1/np:1;
-Tv = T(Xv, 1, 1);
+Tv = T(Xv, 1);
 Beam = zeros(1, np+1);
 
 plot(Xv,Tv,'b',Xv,Beam,'k','LineWidth',2)
@@ -39,8 +39,8 @@ set(gca, 'Ylim', [-1 1])
 
 
 % diagramma del momento flettente
-syms M(x,q,l);
-M(x,q,l) = -q*l^2/2 + q*l*x - q*l*x^2/2;
+syms M(x,F,l);
+M(x,F,l) = -F*l + F*x;
 
 np = 100;
 Xv = 0:1/np:1;
@@ -51,6 +51,6 @@ plot(Xv,Mv,'r',Xv,Beam,'k','LineWidth',2)
 set(gca, 'Ylim', [-1 1])
 set(gca, 'YDir','reverse')
 </b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">5.9.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><span class="incontext"><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html#assemblage-48">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">5.9.2.</span> </figcaption></figure></p></article><span class="incontext"><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html#assemblage-48">in-context</a></span>
 </body>
 </html>

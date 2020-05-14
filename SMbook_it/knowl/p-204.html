@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:51+02:00    *-->
+<!--*    on 2020-05-14T19:27:22+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,35 +13,35 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Lo stato tensionale che mantiene sempre la stessa forma rispetto a qualsiasi sistema di riferimento è lo stato caratterizzato da tensioni principali che assumono lo stesso valore, ovvero \(\sigma_1 = \sigma_2 = \sigma_3 = p\text{.}\) In tal caso, utilizzando la  <a class="xref" data-knowl="./knowl/spectral_stress_eq.html" title="Equazione 2.4.3">(2.4.3)</a>, il tensore \(\tens{\sigma}\) assume la seguente forma</p>
+<p>Anche in questo caso, come già discusso nel capitolo dedicato alla cinematica, la soluzione del problema agli autovalori richiede la soluzione di una equazione cubica esprimibile come segue</p>
 <div class="displaymath">
 \begin{equation*}
-\tens{\sigma} = p\,\vec{e}_1 \otimes \vec{e}_1 + p\,\vec{e}_2 \otimes \vec{e}_2 + p\,\vec{e}_3 \otimes \vec{e}_3\,,
+-\sigma^3 + \func{I_1}{\tens{\sigma}} \sigma^2 - \func{I_2}{\tens{\sigma}} \sigma + \func{I_3}{\tens{\sigma}} = 0\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">ovvero</p>
-<div class="displaymath">
-\begin{equation*}
-\tens{\sigma} = p \, \tens{I}\,.
-\end{equation*}
+<p>dove compaiono gli invarianti del tensore \(\tens{\sigma}\text{,}\) ovvero le quantità che sono indipendenti dal sistema di riferimento rispetto al quale viene rappresentato \(\tens{\sigma}\text{.}\) Gli invarianti di \(\tens{\sigma}\) sono calcolabili con le seguenti coppie di espressioni, dove ogni coppia contiene la formula da utilizzare nel caso in cui il tensore \(\tens{\sigma}\) sia espresso rispetto alle direzioni principali e la formula da utilizzare nel caso generico.</p>
+<ul class="disc">
+<li>
+<em class="emphasis">Primo invariante</em><div class="displaymath">
+\begin{equation}
+\func{I_1}{\tens{\sigma}} = \sigma_1 + \sigma_2 + \sigma_3 = \trace{\tens{\sigma}}\,,\tag{2.4.4}
+\end{equation}
+</div>dove compare la <em class="emphasis">traccia</em> del tensore ovvero la somma dei coefficienti appartenenti alla diagonale principale.</li>
+<li>
+<em class="emphasis">Secondo invariante</em><div class="displaymath">
+\begin{equation}
+\func{I_2}{\tens{\sigma}} = \sigma_1\, \sigma_2 + \sigma_2\, \sigma_3 + \sigma_3\, \sigma_1 = \frac{1}{2}\left[(\trace{\tens{\sigma}})^2 - \trace{\tens{\sigma}^2}\right]\,.\tag{2.4.5}
+\end{equation}
 </div>
-<p data-braille="continuation">La rappresentazione per componenti fornisce anche</p>
-<div class="displaymath">
-\begin{equation*}
-\mat{\sigma} =
-p \left[\begin{array}{ccc}
-1 \amp 0 \amp 0 \\
-0 \amp 1 \amp 0 \\
-0 \amp 0 \amp 1
-\end{array}\right]
-=
-\left[\begin{array}{ccc}
-p \amp 0 \amp 0 \\
-0 \amp p \amp 0 \\
-0 \amp 0 \amp p
-\end{array}\right]\,.
-\end{equation*}
+</li>
+<li>
+<em class="emphasis">Terzo invariante</em><div class="displaymath">
+\begin{equation}
+\func{I_3}{\tens{\sigma}} = \sigma_1\, \sigma_2\, \sigma_3 = \det{\tens{\sigma}}\,.\tag{2.4.6}
+\end{equation}
 </div>
+</li>
+</ul>
 <span class="incontext"><a href="stress_analysis_sec_stress_chap_it.html#p-204">in-context</a></span>
 </body>
 </html>

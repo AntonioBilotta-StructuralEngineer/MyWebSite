@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:51+02:00    *-->
+<!--*    on 2020-05-14T19:27:23+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,13 +13,28 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Quanto discusso può essere riformulato sulla base della notazione correntemente utilizzata, si veda la Figura seguente, nel modello di trave piana inflessa. <figure class="figure figure-like"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/trave_inflessa_linea_asse_bis.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">3.6.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Pertanto la variabile cinematica del modello monodimensionale è lo spostamento trasversale \(\func{w}{x}\) e l'unica componente di deformazione significativa per il modello è</p>
+<p>Il campo di spostamento ottenuto per il solido prismatico inflesso, equazioni <a data-knowl="./knowl/bend_displ_1.html" title="Equazione 3.4.25">(3.4.25)</a>, <a data-knowl="./knowl/bend_displ_2.html" title="Equazione 3.4.26">(3.4.26)</a> e  <a data-knowl="./knowl/bend_displ_3.html" title="Equazione 3.4.27">(3.4.27)</a>, lungo la linea d'asse si riduce a</p>
+<div class="displaymath">
+\begin{align}
+u_{1} \amp = 0\,,\tag{3.6.1}\\
+u_{2} \amp = -\frac{\kappa}{2E}X_3^2\,,\tag{3.6.2}\\
+u_{3} \amp = 0\,,\tag{3.6.3}
+\end{align}
+</div>
+<p>soluzione che stabilisce che la linea d'asse si deforma seguendo una parabola contenuta nel piano \(X_3\text{,}\) \(X_2\) e tutto è determinato solo dallo spostamento \(u_{2}\) diretto trasversalmente all'asse. <figure class="figure-like"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/trave_inflessa_linea_asse.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span> <span class="codenumber">3.6.1.</span> </figcaption></figure> Il principale obiettivo rimane comunque quello di descrivere la deformazione \(\varepsilon_{33}\) dipendendente dallo spostamento \(u_3\) che sulla linea d'asse si annulla. La descrizione della componente \(u_3\) è comunque recuperabile osservando che</p>
 <div class="displaymath">
 \begin{equation}
-\varepsilon = - y \frac{d^2 w}{dx^2}\,.\tag{3.6.6}
+u_3 = \kappa\,X_2X_3/E = - X_2 \frac{d u_2}{d X_3}\,,\tag{3.6.4}
 \end{equation}
 </div>
+<p>che evidenzia il legame di \(u_3\) con lo spostamento \(u_2\) della linea d'asse. Su tale base si può valutare la componente \(\varepsilon_{33}\) ottenendo</p>
+<div class="displaymath">
+\begin{equation}
+\varepsilon_{33} = \frac{d}{dX_3}\left(u_3\right) = \frac{d}{dX_3}\left(-X_2 \frac{d u_2}{d X_3}\right) = -X_2 \frac{d^2 u_2}{dX_3^2}\,,\tag{3.6.5}
+\end{equation}
+</div>
+<p>relazione che evidenzia il tipo di legame fra \(\varepsilon_{33}\) e la componente di spostamento \(u_{2}\) della linea d'asse.</p>
 <span class="incontext"><a href="bent_beam_sec_elasticity_chap_it.html#p-310">in-context</a></span>
 </body>
 </html>

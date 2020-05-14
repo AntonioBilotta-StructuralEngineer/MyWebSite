@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:50+02:00    *-->
+<!--*    on 2020-05-14T19:27:21+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,13 +13,41 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Se un tensore simmetrico \(\tens{T}\) verifica la condizione</p>
+<p>Come mostrato nel video si ottiene il seguente risultato</p>
 <div class="displaymath">
 \begin{equation*}
-\vec{v} \cdot \tens{T} \vec{v} &gt; 0\,,\quad \forall \vec{v} \neq \vec0
+\vec{\chi}_{\theta}\left(\vec{X} \right) = 
+\left[\begin{array}{c}
+X_1\cos{\theta} - X_2\sin{\theta} \\ X_1\sin{\theta} + X_2\cos{\theta}
+\end{array}\right] =
+\underbrace{
+\left[\begin{array}{cc}
+\cos{\theta} \amp -\sin{\theta} \\ \sin{\theta} \amp \cos{\theta}
+\end{array}\right]}_{\tens{R}}
+\left[\begin{array}{c}
+X_1 \\ X_2
+\end{array}\right]\,.
 \end{equation*}
 </div>
-<p data-braille="continuation">allora il tensore è definito positivo. Da un punto di vista geometrico tale condizione è facilmente interpretabile come segue: ogni volta che si applica la trasformazione lineare \(\tens{T}\) a qualsiasi vettore non nullo, si ottiene un vettore \(\tens{T}\vec{v}\) che forma con il vettore di partenza \(\vec{v}\) un angolo inferiore a \(\pi/2\text{,}\) condizione che ha comunque, molto spesso, un significato fisico ben preciso.</p>
+<p>È facile verificare le proprietà</p>
+<div class="displaymath">
+\begin{equation*}
+\transp{\tens{R}}\,\tens{R} = \tens{I}\,,\quad
+\det{\tens{R}} = 1\,.
+\end{equation*}
+</div>
+<p>con le quali si definiscono i <em class="emphasis">tensori ortogonali propri</em>. La condizione appena scritta consente di ottenere</p>
+<div class="displaymath">
+\begin{equation*}
+\det{\tens{F}} = \det{(\tens{R}\,\tens{U})} = \det{\tens{R}}\,\det{\tens{U}} = \det{\tens{U}}\,,
+\end{equation*}
+</div>
+<p>relazione che conferma il fatto che il cambio di volume non può che essere legato unicamente alla parte \(\tens{U}\) della trasformazione. È anche facile verificare che</p>
+<div class="displaymath">
+\begin{equation*}
+\det{\tens{U}} = \det{\tens{V}}\,.
+\end{equation*}
+</div>
 <span class="incontext"><a href="polar_sec_strain_chap_it.html#p-85">in-context</a></span>
 </body>
 </html>

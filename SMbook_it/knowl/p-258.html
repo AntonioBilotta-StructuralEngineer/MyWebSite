@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:51+02:00    *-->
+<!--*    on 2020-05-14T19:27:22+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,16 +13,40 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Con il simbolo \(E\) si indica il <em class="emphasis">modulo di Young</em> che è una caratteristica specifica del materiale ed è misurabile con una prova di carico del tipo descritto in precedenza (banalmente \(E\) è dato dalla pendenza che la curva di risposta assume in fase elastica). Ricordando che la deformazione è adimensionale l'unità di misura utilizzata per \(E\) è identica a quella utilizzata per la tensione \(\sigma\text{.}\) Alcune esempi di unità di misura utilizzati sono i seguenti</p>
+<p>Il focus del presente capitolo è comunque soltanto la prima fase della risposta del materiale, fase che non solo è lineare ma anche elastica nel senso che è applicabile la legge di Hooke e quindi tra le uniche componenti di tensione e deformazione, \(\sigma\) e \(\varepsilon\text{,}\) presenti in una condizione uniassiale è legittimo assumere che intercorra il seguente legame proporzionale</p>
 <div class="displaymath">
-\begin{equation*}
-\left[ \frac{\text{N}}{\text{m}^{\text{2}}} \right]\,,\quad
-\left[ \text{Pa} \right]\,,\quad
-\left[ \text{MPa} \right]\,,\quad
-\left[ \text{GPa} \right]\,.
-\end{equation*}
+\begin{equation}
+\sigma = E\,\varepsilon\,,\tag{3.2.2}
+\end{equation}
 </div>
-<p data-braille="continuation">Nella seguente tabella si riporta il valore del modulo di Young per alcuni materiali utilizzati nelle applicazioni ingegneristiche.</p>
+<p>e che sia possibile definire un'energia elastica che agisce come potenziale per la tensione</p>
+<div class="displaymath">
+\begin{equation}
+\Phi = \frac{1}{2} \sigma \varepsilon= \frac{1}{2}E\,\varepsilon^2 = \func{\Phi}{\varepsilon}
+\qquad\rightarrow\qquad
+\frac{d\func{\Phi}{\varepsilon}}{d\varepsilon} = E\,\varepsilon = \sigma\,,\tag{3.2.3}
+\end{equation}
+</div>
+<p>inoltre</p>
+<div class="displaymath">
+\begin{equation}
+\frac{d^2\func{\Phi}{\varepsilon}}{d\varepsilon^2} = E\,.\tag{3.2.4}
+\end{equation}
+</div>
+<p>È possibile anche effettuare una formulazione <em class="emphasis">complementare</em> dell'energia elastica, ovvero esprimerla rispetto alla tensione</p>
+<div class="displaymath">
+\begin{equation}
+\Phi = \frac{1}{2} \sigma \varepsilon= \frac{1}{2}\frac{\sigma^2}{E} = \func{\Phi}{\sigma}
+\qquad\rightarrow\qquad
+\frac{d\func{\Phi}{\sigma}}{d\sigma} = \frac{\sigma}{E} = \varepsilon\,,\tag{3.2.5}
+\end{equation}
+</div>
+<p>da cui</p>
+<div class="displaymath">
+\begin{equation}
+\frac{d^2\func{\Phi}{\sigma}}{d\sigma^2} = \frac{1}{E}\,.\tag{3.2.6}
+\end{equation}
+</div>
 <span class="incontext"><a href="uniaxial_sec_elasticity_chap_it.html#p-258">in-context</a></span>
 </body>
 </html>

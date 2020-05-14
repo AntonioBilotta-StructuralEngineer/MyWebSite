@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:50+02:00    *-->
+<!--*    on 2020-05-14T19:27:22+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,38 +13,30 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Assumendo per \(\tens{U}\) la seguente forma diagonale</p>
+<p>Infine è interessante osservare come l'espressione <a data-knowl="./knowl/mat_spectral_U_eq.html" title="Equazione 1.7.7">(1.7.7)</a> possa essere scritta nel modo seguente</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{U} =
 \left[\begin{array}{ccc}
-2 \amp 0 \amp 0\\
-0 \amp 5 \amp 0\\
-0 \amp 0 \amp 7\\
-\end{array}\right]\,,
-\end{equation*}
-</div>
-<p data-braille="continuation">si calcoli l'espressione che assume \(\tens{U}\) supponendo di applicare alle direzioni principali le seguenti rotazioni in successione</p>
-<div class="displaymath">
-\begin{equation*}
-\matWp{R}{1} = 
+u_{11} \amp u_{12} \amp u_{13}\\
+u_{21} \amp u_{22} \amp u_{23}\\
+u_{31} \amp u_{32} \amp u_{33}
+\end{array}\right] 
 \left[\begin{array}{ccc}
-\cos{\frac{\pi}{4}} \amp -\sin{\frac{\pi}{4}} \amp 0\\
-\sin{\frac{\pi}{4}} \amp \cos{\frac{\pi}{4}} \amp 0\\
-0 \amp 0 \amp 1\\
-\end{array}\right]\,,
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-\matWp{R}{2} = 
+\lambda_1 \amp 0 \amp 0\\
+0 \amp \lambda_2 \amp 0\\
+0 \amp 0 \amp \lambda_3\\
+\end{array}\right]
+\transp{
 \left[\begin{array}{ccc}
-\cos{\frac{\pi}{4}}  \amp 0 \amp -\sin{\frac{\pi}{4}}\\
-0 \amp 1 \amp 0\\
-\sin{\frac{\pi}{4}} \amp 0 \amp \cos{\frac{\pi}{4}}\\
-\end{array}\right]\,.
+u_{11} \amp u_{12} \amp u_{13}\\
+u_{21} \amp u_{22} \amp u_{23}\\
+u_{31} \amp u_{32} \amp u_{33}
+\end{array}\right] 
+}\,,
 \end{equation*}
 </div>
+<p>che è la modalità con cui viene valutata l'espressione che assume il tensore \(\tens{U}\) quando si passa dal sistema di coordinate costituito dalle direzioni pricipali al sistema di coordinate standard \(\vec{e}_1\text{,}\) \(\vec{e}_2\) e \(\vec{e}_3\text{.}\) La matrice utilizzata per la trasformazione viene costruita inserendo nelle colonne i vettori \(\vec{u}_{1}\text{,}\) \(\vec{u}_{2}\) e \(\vec{u}_{3}\)</p>
 <span class="incontext"><a href="principal_directions_sec_strain_chap_it.html#p-107">in-context</a></span>
 </body>
 </html>

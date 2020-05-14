@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:52+02:00    *-->
+<!--*    on 2020-05-14T19:27:23+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,15 +13,25 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Seguono le istruzione MATLAB per il calcolo della soluzione \(\func{u}{x}\text{.}\) <figure class="listing figure-like"><pre class="console"><b>syms u(x) EA p l;
-ode = EA*diff(u,x,2) + p*sin(2*pi*x/l) == 0;
-cond1 = u(0) == 0;
-cond2 = u(l) == 0;
-conds = [cond1 cond2];
-sol = dsolve(ode,conds)
-N = EA*diff(sol,x)
-</b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.7.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p>La condizione di carico mostrata in Figura può essere descritta come segue</p>
+<div class="displaymath">
+\begin{equation*}
+\func{p}{x} = \bar{p}\,\sin\left(\frac{2\pi\,x}{l}\right)
+\end{equation*}
+</div>
+<p>da cui, tramite l'equazione <a data-knowl="./knowl/stretched_beam_navier.html" title="Equazione 3.5.21">(3.5.21)</a>, si ricava</p>
+<div class="displaymath">
+\begin{equation*}
+EA\,\frac{d^2u}{dx^2} + \bar{p}\,\sin\left(\frac{2\pi\,x}{l}\right) = 0
+\end{equation*}
+</div>
+<p>da soddisfare in ogni punto della trave. Le condizioni al contorno sono</p>
+<div class="displaymath">
+\begin{align*}
+\amp \func{u}{0} = 0\,,\\
+\amp \func{u}{l} = 0\,.
+\end{align*}
+</div>
 <span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#p-329">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:51+02:00    *-->
+<!--*    on 2020-05-14T19:27:22+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,13 +13,18 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>L'andamento perfettamente oscillatario della soluzione sempre rispetto agli stessi estremi viene determinato della conservazione dell'<em class="emphasis">energia potenziale totale</em></p>
-<div class="displaymath">
-\begin{equation*}
-\Pi = \underbrace{\frac{1}{2}k\,x^2}_{\text{energia elastica}} + \underbrace{\frac{1}{2}m\,\left(\frac{dx}{dt}\right)^2}_{\text{energia cinetica}}
-\end{equation*}
-</div>
-<p data-braille="continuation">data dalla somma di <em class="emphasis">energia elastica</em> e <em class="emphasis">energia cinetica</em>. L'energia potenziale totale, in assenza di fenomeni dissipativi, si mantiene sempre costante.</p>
+<p>A scopo esemplificativo si riportano le istruzioni MATLAB utilizzabili per il plottaggio della funzione sulla base dei seguenti dati: \(\omega = 2\pi\;\left[\frac{\text{rad}}{\text{s}}\right]\text{,}\) \(m=10\;\left[\text{kg}\right]\text{,}\) \(\func{x}{0}= 1 \; \left[\text{m}\right]\) e \(\func{\frac{dx}{dt}}{0}= 10 \; \left[\frac{\text{m}}{\text{s}}\right]\text{.}\) <figure class="figure-like"><pre class="console"><b>om = 2*pi;
+u0 = 1;
+v0 = 10;
+m = 10;
+syms t 
+u(t) = u0*cos(om*t)+v0/om*sin(om*t);
+
+tt=linspace(0,3,201);
+uu=u(tt);
+plot(tt,uu,'k','LineWidth',2)
+</b></pre>
+<figcaption><span class="type">Listato</span> <span class="codenumber">3.2.4.</span> </figcaption></figure></p>
 <span class="incontext"><a href="uniaxial_sec_elasticity_chap_it.html#p-252">in-context</a></span>
 </body>
 </html>

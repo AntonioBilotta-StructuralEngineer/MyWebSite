@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:51+02:00    *-->
+<!--*    on 2020-05-14T19:27:22+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,64 +13,18 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Per spiegare la denominazione "rotazione infinitesima" che è stata data alla parte emisimmetrica del gradiente dello spostamento conviene discutere in concreto una trasformazione caratterizzata solo da una semplice rotazione. A tal fine si consideri una rotazione intorno all'asse \(\vec{e}_3\text{.}\) La parte significativa della trasformazione può essere discussa direttamente direttamente nel piano con</p>
-<div class="displaymath">
-\begin{align*}
-x_1 \amp = X_1\cos{\alpha} - X_2\sin{\alpha}\,,\\
-x_2 \amp = X_1\sin{\alpha} + X_2\cos{\alpha}\,.
-\end{align*}
-</div>
-<p data-braille="continuation">Il campo di spostamento associato è</p>
-<div class="displaymath">
-\begin{align*}
-u_1 = x_1 - X_1 \amp = (X_1\cos{\alpha} - X_2\sin{\alpha}) - X_1\,,\\
-u_2 = x_2 - X_2 \amp = (X_1\sin{\alpha} + X_2\cos{\alpha}) - X_2\,.
-\end{align*}
-</div>
-<p data-braille="continuation">Con tali dati è possibile calcolare il gradiente della trasformazione che, nel caso specifico, è composto solo dalla rotazione</p>
+<p>Per la componente fuori dalla diagonale, utilizzando il risultato <a data-knowl="./knowl/Cij_eq.html" title="Equazione 1.8.6">(1.8.6)</a>, si ha</p>
 <div class="displaymath">
 \begin{equation*}
-\tens{F} = \tens{R}\,,
+\sin{\func{\gamma}{\vec{e}_1,\vec{e}_2}}\, \underbrace{\func{\lambda}{\vec{e}_1} \, \func{\lambda}{\vec{e}_2}}_{\approx 1} = \underbrace{\frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1}}_{2\,\varepsilon_{12}} + \underbrace{\frac{\partial u_1}{\partial X_1}\frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1}\frac{\partial u_2}{\partial X_2} + \frac{\partial u_3}{\partial X_1}\frac{\partial u_3}{\partial X_2}}_{\text{trascurabili nel caso infinitesimo}}\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">dove, come già discusso nelle sezioni precedenti,</p>
-<div class="displaymath">
-\begin{equation*}
-\mat{R} =
-\left[\begin{array}{cc}
-\cos{\alpha} \amp -\sin{\alpha} \\
-\sin{\alpha} \amp \cos{\alpha}
-\end{array}\right]\,.
-\end{equation*}
-</div>
-<p data-braille="continuation">Inoltre</p>
-<div class="displaymath">
-\begin{equation*}
-\tens{F} = \tens{I} + \tens{\nabla u}\,,
-\end{equation*}
-</div>
-<p data-braille="continuation">e quindi</p>
+<p>e quindi</p>
 <div class="displaymath">
 \begin{equation}
-\tens{R} = \tens{I} + \tens{\nabla u} =  \tens{I} + \text{sym}\tens{\nabla u} + \text{skew}\tens{\nabla u}\,.\tag{1.9.11}
+\varepsilon_{12} \approx \frac{1}{2}\, \sin{\func{\gamma}{\vec{e}_1,\vec{e}_2}} \approx  \frac{1}{2}\, \func{\gamma}{\vec{e}_1,\vec{e}_2}\,.\tag{1.9.10}
 \end{equation}
 </div>
-<p data-braille="continuation">Risultato che evidenzia la decomposizione del gradiente dello spostamento con</p>
-<div class="displaymath">
-\begin{equation*}
-\text{sym}\mat{\nabla u} =
-\left[\begin{array}{cc}
-\cos{\alpha} - 1 \amp 0 \\
-0 \amp \cos{\alpha} - 1 
-\end{array}\right]\,,\quad
-\text{skew}\mat{\nabla u} =
-\left[\begin{array}{cc}
-0 \amp -\sin{\alpha} \\
-\sin{\alpha} \amp 0 
-\end{array}\right]\,,
-\end{equation*}
-</div>
-<p data-braille="continuation">ma ancora del tutto generico e che non fa riferimento agli spostamenti infinitesimi.</p>
 <span class="incontext"><a href="infinitesimal_sec_strain_chap_it.html#p-143">in-context</a></span>
 </body>
 </html>

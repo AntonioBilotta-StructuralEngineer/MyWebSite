@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:52+02:00    *-->
+<!--*    on 2020-05-14T19:27:24+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,7 +12,7 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<figure class="listing figure-like"><pre class="console"><b>% diagramma dello sforzo normale
+<figure class="figure-like"><pre class="console"><b>% diagramma dello sforzo normale
 syms N(x);
 N(x) = 0;
 
@@ -27,7 +27,7 @@ set(gca, 'Ylim', [-1 1])
 
 % diagramma del taglio
 syms T(x,q,l);
-T(x,q,l) = -q*x+q*l/2;
+T(x,q,l) = -q*x+q*l;
 
 np = 100;
 Xv = 0:1/np:1;
@@ -40,7 +40,7 @@ set(gca, 'Ylim', [-1 1])
 
 % diagramma del momento flettente
 syms M(x,q,l);
-M(x,q,l) = q*l/2*x - q*l*x^2/2;
+M(x,q,l) = -q*l^2/2 + q*l*x - q*l*x^2/2;
 
 np = 100;
 Xv = 0:1/np:1;
@@ -51,6 +51,6 @@ plot(Xv,Mv,'r',Xv,Beam,'k','LineWidth',2)
 set(gca, 'Ylim', [-1 1])
 set(gca, 'YDir','reverse')
 </b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">5.9.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure><span class="incontext"><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html#listing-61">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">5.9.5.</span> </figcaption></figure><span class="incontext"><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html#listing-61">in-context</a></span>
 </body>
 </html>

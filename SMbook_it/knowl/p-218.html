@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:51+02:00    *-->
+<!--*    on 2020-05-14T19:27:22+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,23 +13,45 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<ul class="disc">
-<li>Il campo vettoriale \(\vec{v}\) è interpretabile sia come campo di spostamento che subisce effettivamente il corpo sotto l'azione dei carichi assegnati sia come variazione generica del campo di spostamento effettivo ovvero come campo di <em class="emphasis">spostamento virtuale</em>.</li>
-<li>Al primo membro dell'eguaglianza <a class="xref" data-knowl="./knowl/continuum_plv_eq.html" title="Equazione 2.5.4">(2.5.4)</a> compare il lavoro esercitato dall'ambiente circostante sul corpo \(\body\text{,}\) ovvero il lavoro esterno.</li>
-<li>Al secondo membro dell'eguaglianza <a class="xref" data-knowl="./knowl/continuum_plv_eq.html" title="Equazione 2.5.4">(2.5.4)</a> compare il lavoro interno, ovvero il lavoro effettuato dal tensore della tensione \(\tens{\sigma}\text{.}\)</li>
-<li>Senza la necessità di effettuare alcuna assunzione preliminare, si perviene alla definizione dell'ente cinematico \(\text{sym}\tens{\nabla v}\) su cui compie lavoro il tensore della tensione \(\tens{\sigma}\text{.}\) Si amplia così il significato della parte simmetrica del gradiente dello sposatmento che, si veda il capitolo sulla cinematica, assume anche il ruolo di tensore della deformazione infinitesima.</li>
-<li>Quanto ottenuto è esprimibile come segue: "<em class="emphasis">Dato un corpo, o un suo sottoinsieme, in equilibrio con i carichi esterni applicati, ovverro è soddisfatta l'equazione <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equazione 2.3.10">(2.3.10)</a>, allora è anche valida l'equazione <a class="xref" data-knowl="./knowl/continuum_plv_eq.html" title="Equazione 2.5.4">(2.5.4)</a> che costituisce il Principio dei lavori virtuali</em>". Inoltre l'equazione <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equazione 2.3.10">(2.3.10)</a> non è solo condizione necessaria per la validità del Principio dei lavori virtuali ma anche sufficiente.</li>
-<li>Nel caso in cui il campo di spostamento \(\vec{v}\) coincida con un campo di spostamento rigido \(\vec{r}\text{,}\) allora la condizione \(\vec{v} = \vec{r}\) fornisce<div class="displaymath">
-\begin{equation*}
-\text{sym}\tens{\nabla v} = \text{sym}\tens{\nabla r} = \tens{0} 
-\end{equation*}
-</div>e quindi il Principio dei lavori virtuali si riduce a<div class="displaymath">
+<p>La equazione integrale di partenza può quindi essere riscritta come segue</p>
+<div class="displaymath">
 \begin{equation}
-\int_{\partial\body} \vec{t} \cdot \vec{r}\,ds + \int_{\body}  \vec{b} \cdot \vec{r} \,dv = 0 \,,\quad \forall\vec{r}\,.\tag{2.5.5}
+\int_{\body} \left(\text{div}\left(\tens{\sigma}\vec{v}\right) - \tens{\sigma} : \tens{\nabla v} + \vec{b} \cdot \vec{v} \right)  \,dv= 0\,,\quad \forall\vec{v}\,.\tag{2.5.2}
 \end{equation}
-</div>Tale risultato stabilisce che i carichi applicati, se in equilibrio, compiono lavoro nullo su qualsiasi moto rigido.</li>
-<li>In campo dinamico il campo vettoriale \(\vec{v}\) assume il significato di campo delle velocità. Pertanto non si parlerà di lavori ma di potenza esterna e potenza interna. Inoltre la potenza esterna eguaglierà la somma di potenza interna e variazione di energia cinetica.</li>
-</ul>
+</div>
+<p>Il primo integrale, applicando in successione Teorema della divergenza e Teorema della tensione di Cauchy, diventa</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{\body} \text{div}\left(\tens{\sigma}\vec{v}\right)\, dv = 
+\int_{\partial\body} \tens{\sigma}\vec{v} \cdot \vec{n}\,ds =
+\int_{\partial\body} \vec{v} \cdot \tens{\sigma}\vec{n}\,ds =
+\int_{\partial\body} \vec{t} \cdot \vec{v}\,ds \,.
+\end{equation*}
+</div>
+<p>Quindi l'equazione <a data-knowl="./knowl/continuum_plv_2_eq.html" title="Equazione 2.5.2">(2.5.2)</a> diventa</p>
+<div class="displaymath">
+\begin{equation}
+\int_{\partial\body} \vec{t} \cdot \vec{v}\,ds - \int_{\body} \tens{\sigma} : \tens{\nabla v}\,dv + \int_{\body}  \vec{b} \cdot \vec{v} \,dv = 0\,,\quad \forall\vec{v}\,.\tag{2.5.3}
+\end{equation}
+</div>
+<p>Per la decomposizione di \(\tens{\nabla v}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\tens{\nabla v} = \text{sym}\tens{\nabla v} + \text{skew}\tens{\nabla v}
+\end{equation*}
+</div>
+<p>e la simmetria di \(\tens{\sigma}\) si ha</p>
+<div class="displaymath">
+\begin{equation*}
+\tens{\sigma} : \tens{\nabla v} =  \tens{\sigma} : \text{sym}\tens{\nabla v}\,.
+\end{equation*}
+</div>
+<p>Si arriva quindi alla seguente espressione finale della forma integrale delle equazioni indefinite di equilibrio <a data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equazione 2.3.10">(2.3.10)</a>:</p>
+<div class="displaymath">
+\begin{equation}
+\int_{\partial\body} \vec{t} \cdot \vec{v}\,ds + \int_{\body}  \vec{b} \cdot \vec{v} \,dv = \int_{\body} \tens{\sigma} : \text{sym}\tens{\nabla v}\,dv \,,\quad \forall\vec{v}\,.\tag{2.5.4}
+\end{equation}
+</div>
 <span class="incontext"><a href="plv_sec_stress_chap_it.html#p-218">in-context</a></span>
 </body>
 </html>

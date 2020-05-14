@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:52+02:00    *-->
+<!--*    on 2020-05-14T19:27:24+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,8 +13,60 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Si effettui l'analisi cinematica del seguente sistema. <figure class="figure figure-like"><div class="image-box" style="width: 57%; margin-left: 21.5%; margin-right: 21.5%;"><img src="images/arcoatrecerniere_labile.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">4.4.17<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p><figure class="figure-like"><pre class="console"><b>% definizione della geometria
+L = 100;
+A = [0; 0];
+B = [2*L; 0];
+C = [2*L; -L];
+D = [4*L; -L];
+beam1 = [A B];
+beam2 = [B C D];
+
+% funzione per il calcolo della posizione di punto
+rigidT = @(u0, X0, phi0, X) ...
+[X(1)+u0(1)-phi0*(X(2)-X0(2)); ...
+X(2)+u0(2)+phi0*(X(1)-X0(1))];
+
+% nuova configurazione della prima trave (polo in A)
+u0 = [L/4; 0];
+phi0 = 1/4;
+X0 = A;
+TA = rigidT(u0, X0, phi0, A);
+TB = rigidT(u0, X0, phi0, B);
+beam1T = [TA TB];
+
+% nuova configurazione della seconda trave (polo in D)
+u0 = [0; 0];
+phi0 = -1/4;
+X0 = D;
+TC = rigidT(u0, X0, phi0, C);
+TD = rigidT(u0, X0, phi0, D);
+beam2T = [TB TC TD];
+
+% plottaggio
+clf
+
+x = beam1(1,:);
+y = beam1(2,:);
+line(x,y,'LineWidth',2,'Color','black')
+
+x = beam2(1,:);
+y = beam2(2,:);
+line(x,y,'LineWidth',2,'Color','black')
+
+x = beam1T(1,:);
+y = beam1T(2,:);
+line(x,y,'LineWidth',2,'Color','red')
+
+x = beam2T(1,:);
+y = beam2T(2,:);
+line(x,y,'LineWidth',2,'Color','red')
+
+xlim([0 4*L])
+ylim([-L 0.5*L])
+pbaspect([2.667 1 1])
+</b></pre>
+<figcaption><span class="type">Listato</span> <span class="codenumber">4.4.16.</span> </figcaption></figure></p>
 <span class="incontext"><a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html#p-400">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:51+02:00    *-->
+<!--*    on 2020-05-14T19:27:22+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,13 +13,25 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Quanto discusso nella sezione <a href="principal_directions_sec_strain_chap_it.html" class="internal" title="Sezione 1.7: tensore di deformazione \(\tens{U}\) e direzioni principali (trasformazione degli elementi di linea)">Sezione 1.7</a> relativa alle direzioni principali del tensore \(\tens{U}\) è applicabile in larga parte anche al tensore della tensione \(\tens{\sigma}\text{.}\) Ambedue i tensori sono simmetrici e l'unico fondamentale distinguo che occorre effettuare è che, a differenza di \(\tens{U}\text{,}\) \(\tens{\sigma}\) non è definito positivo. Pertanto in questo caso gli autovalori, che individuano adesso le <em class="emphasis">tensioni principali</em> del tensore, potranno essere anche nulli o negativi. Comunque la simmetria di \(\tens{\sigma}\) consente la seguente rappresentazione spettrale del tensore</p>
+<p>Quanto discusso per le componenti del tensore vale anche per una giacitura generica \(\vec{n}\text{.}\) Come stabilito dal Teorema della tensione di Cauchy si ha</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{t}_{\vec{n}} = \tens{\sigma}\,\vec{n}\,.
+\end{equation*}
+</div>
+<p>Da cui si può calcolare la componente normale della trazione</p>
 <div class="displaymath">
 \begin{equation}
-\tens{\sigma} = \sigma_1\,\vec{s}_1 \otimes \vec{s}_1 + \sigma_2\,\vec{s}_2 \otimes \vec{s}_2 + \sigma_3\,\vec{s}_3 \otimes \vec{s}_3\,,\tag{2.4.3}
+\sigma = \vec{t}_{\vec{n}} \cdot \vec{n} = \tens{\sigma}\,\vec{n} \cdot \vec{n}\tag{2.4.1}
 \end{equation}
 </div>
-<p data-braille="continuation">dove le <em class="emphasis">direzioni principali</em> \(\vec{s}_1\text{,}\) \(\vec{s}_2\text{,}\) \(\vec{s}_3\) sono gli autovettori di \(\tens{\sigma}\text{,}\) i quali costituiscono una terna ortonormale, e \(\sigma_1\text{,}\) \(\sigma_2\text{,}\) \(\sigma_3\) sono le tensioni principali.</p>
+<p>e la componente tangenziale relativa ad una direzione \(\vec{m}\) ortogonale ad \(\vec{n}\)</p>
+<div class="displaymath">
+\begin{equation}
+\tau = \vec{t}_{\vec{n}} \cdot \vec{m} = \tens{\sigma}\,\vec{n} \cdot \vec{m} \,.\tag{2.4.2}
+\end{equation}
+</div>
+<p>Per denotare le due componenti si è utilizzata la convenzione, spesso adottata in ambito ingegneristico, che indica le componenti normale e tangenziale rispettivamente con i simboli \(\sigma\) e \(\tau\text{.}\) Il vettore \(\vec{m}\text{,}\) come \(\vec{n}\text{,}\) è un vettore di lunghezza unitaria.</p>
 <span class="incontext"><a href="stress_analysis_sec_stress_chap_it.html#p-199">in-context</a></span>
 </body>
 </html>

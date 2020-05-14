@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:51+02:00    *-->
+<!--*    on 2020-05-14T19:27:22+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,13 +13,22 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Nella precedente sezione la trazione \(\func{\vec{t}}{\vec{x},\Gamma_{\delta}}\) è stata formulata esplicitando una dipendenza molto generica dalla superficie \(\Gamma_{\delta}\) passante per il punto \(\vec{x}\text{.}\) In base al postulato di Cauchy, fondamentale per tutti gli sviluppi successivi, si assume invece</p>
+<p>Tali condizioni, per l'ipotesi di continuità, non valgono solo per il corpo \(\body\) in esame ma anche per qualsiasi sottoinsieme estratto dal corpo principale. <figure class="figure-like"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="images/continuo_in_due.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span> <span class="codenumber">2.2.1.</span> </figcaption></figure> Tale operazione di separazione, tipica della meccanica dei solidi, viene effetuata utilizzando delle superfici immaginarie con cui viene tagliato il corpo di partenza. In particolare, si veda la figura, per le due parti di corpo così ottenute si potranno scrivere le seguenti coppie di equazioni</p>
 <div class="displaymath">
-\begin{equation}
-\func{\vec{t}}{\vec{x},\Gamma_{\delta}} = \func{\vec{t}}{\vec{x},\vec{n}}\,,\tag{2.3.1}
-\end{equation}
+\begin{align}
+\int_{\omega} \vec{b} \, dv + \int_{\partial\omega} \vec{t}_{\omega} \, ds \amp = \vec0\,,\tag{2.2.3}\\
+\int_{\omega} \vec{x} \times \vec{b} \, dv + \int_{\partial\omega} \vec{x} \times \vec{t}_{\omega} \, ds \amp = \vec0 \,.\tag{2.2.4}
+\end{align}
 </div>
-<p data-braille="continuation">dove \(\vec{n}\) rappresenta la direzione normale alla superficie individuata da un vettore di lunghezza unitaria. Pertanto viene postulata l'assoluta indipendenza del vettore trazione da fattori come la curvatura della superficie passante per il punto \(\vec{x}\text{.}\) Nella figura vengono mostrate alcune superfici passanti per il punto  \(\vec{x}\) e che condividono in tale punto la stessa tangente all superficie e quindi la stessa direzione normale.</p>
-<span class="incontext"><a href="stress_sec_stress_chap_it.html#p-181">in-context</a></span>
+<p>e</p>
+<div class="displaymath">
+\begin{align}
+\int_{\bar{\omega}} \vec{b} \, dv + \int_{\partial\bar{\omega}} \vec{t}_{\bar{\omega}} \, ds  + \int_{\partial\body} \vec{t} \, ds \amp = \vec0\,,\tag{2.2.5}\\
+\int_{\bar{\omega}} \vec{x} \times \vec{b} \, dv + \int_{\partial\bar{\omega}} \vec{x} \times \vec{t}_{\bar{\omega}} \, ds + \int_{\partial\body} \vec{x} \times \vec{t} \, ds \amp = \vec0 \,.\tag{2.2.6}
+\end{align}
+</div>
+<p>dove \(\vec{t}_{\omega}\) rappresenta l'azione esercitata su \(\omega\) dall'altra parte di dominio \(\bar{\omega}\) e, al contrario, \(\vec{t}_{\bar{\omega}}\) rappresenta l'azione esercitata su \(\bar{\omega}\) dall'altra parte \(\omega\text{.}\)</p>
+<span class="incontext"><a href="equilibrium_sec_stress_chap_it.html#p-181">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:50+02:00    *-->
+<!--*    on 2020-05-14T19:27:22+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,17 +13,26 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p><figure class="listing figure-like"><pre class="console"><b>u1 = u(:,1);
-u2 = u(:,2);
-u3 = u(:,3);
-lam1 = sqrt(D2(1,1));
-lam2 = sqrt(D2(2,2));
-lam3 = sqrt(D2(3,3));
-U = lam1*u1*transpose(u1)+lam2*u2*transpose(u2)+lam3*u3*transpose(u3)
-R = F*inv(U)
-V = F*transpose(R)
-</b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.8.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p>Le seguenti istruzioni invece, valutando gli allungamenti principali come</p>
+<div class="displaymath">
+\begin{equation*}
+\lambda_1 = \sqrt{D2(1,1)} = 2\,,\quad
+\lambda_2 = \sqrt{D2(2,2)} = 5\,,\quad
+\lambda_3 = \sqrt{D2(3,3)} = 7\,,
+\end{equation*}
+</div>
+<p>e le direzioni principali estraendole dalle colonne della matrice degli autovettori restituita da MATLAB, calcolano il tensore \(\tens{U}\) e quindi con la relazione</p>
+<div class="displaymath">
+\begin{equation*}
+\tens{R} = \tens{F}\tens{U}^{-1}\,,
+\end{equation*}
+</div>
+<p>anche la il tensore di rotazione associato alla decomposizione polare. Si valuta anche \(\tens{V}\) con la relazione</p>
+<div class="displaymath">
+\begin{equation*}
+\tens{V} = \tens{F}\transp{\tens{R}}
+\end{equation*}
+</div>
 <span class="incontext"><a href="measures_sec_strain_chap_it.html#p-129">in-context</a></span>
 </body>
 </html>

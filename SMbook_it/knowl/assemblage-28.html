@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:52+02:00    *-->
+<!--*    on 2020-05-14T19:27:23+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,7 +12,7 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="assemblage assemblage-like"><p>Le seguenti istruzioni MATLAB definiscono una funzione per il calcolo dello spostamento rigido nel piano di un punto assegnato, X, rispetto ad un polo generico, X0, ed ai parametri che definiscono la traslazione e la rotazione di un corpo, u0 e phi0. Il corpo in questione è mondimensionale, quindi di tipo trave, ed è individuato da 2 o più punti. Nell'esempio si considera una trave definita da 3 punti e se ne calcola lo spostamento assumendo come polo ciascuno di questi 3 punti. <figure class="listing figure-like"><pre class="console"><b>% campo di spostamento generico nel piano
+<article class="assemblage-like"><p>Le seguenti istruzioni MATLAB definiscono una funzione per il calcolo dello spostamento rigido nel piano di un punto assegnato, X, rispetto ad un polo generico, X0, ed ai parametri che definiscono la traslazione e la rotazione di un corpo, u0 e phi0. Il corpo in questione è mondimensionale, quindi di tipo trave, ed è individuato da 2 o più punti. Nell'esempio si considera una trave definita da 3 punti e se ne calcola lo spostamento assumendo come polo ciascuno di questi 3 punti. <figure class="figure-like"><pre class="console"><b>% campo di spostamento generico nel piano
 rigidDispl = ...
     @(u0, phi0, X0, X)...
     [u0(1)-phi0*(X(2)-X0(2));...
@@ -51,6 +51,6 @@ uA = rigidDispl(u0, phi0, POLO, A);
 uB = rigidDispl(u0, phi0, POLO, B);
 uC = rigidDispl(u0, phi0, POLO, C);
 </b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">4.1.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><span class="incontext"><a href="description_sec_rigid_body_kinematics_chap_it.html#assemblage-28">in-context</a></span>
+<figcaption><span class="type">Listato</span> <span class="codenumber">4.1.2.</span> </figcaption></figure></p></article><span class="incontext"><a href="description_sec_rigid_body_kinematics_chap_it.html#assemblage-28">in-context</a></span>
 </body>
 </html>

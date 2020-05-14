@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:50+02:00    *-->
+<!--*    on 2020-05-14T19:27:22+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,22 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Il tensore \(\tens{C} = \tens{U}^2\) è definito positivo in quanto correlato al quadrato del fattore di scala con il quale viene modificata la lunghezza del generico segmento \(d\vec{X}\text{.}\) Nel campo delle deformazioni ammissibili, tale fattore di scala, come per aree e volumi, non può annullarsi. Con il tensore di Green-Lagrange si introduce una misura dell'allungamento del segmento \(d\vec{X}\) rispetto alla sua dimensione iniziale, rendendo possibile quindi valori negativi della misura di Green-Lagrange quando il segmento si accorcia, ovvero valori nulli quando la lunghezza del segmento non cambia.</p>
+<p>Una misura di deformazione molto utilizzata si basa sulla differenza dei quadrati delle lunghezze nella configurazione attuale ed in quella di riferimento. In particolare si ricava quanto segue</p>
+<div class="displaymath">
+\begin{align*}
+\frac{1}{2}\left(\|d\vec{x}\|^2 - \|d\vec{X}\|^2\right) \amp = \frac{1}{2}\left(d\vec{x}\cdot d\vec{x} - d\vec{X}\cdot d\vec{X}\right)\,,\\
+\amp = \frac{1}{2}\left( (\tens{F} d\vec{X})\cdot(\tens{F} d\vec{X}) - d\vec{X}\cdot d\vec{X}\right) \,,\\
+\amp = \frac{1}{2}\left( d\vec{X}\cdot(\transp{\tens{F}}\,\tens{F} d\vec{X}) - d\vec{X}\cdot(\tens{I}\, d\vec{X})\right) \,,\\
+\amp = d\vec{X}\cdot \frac{1}{2}\left( \transp{\tens{F}}\,\tens{F} - \tens{I}\right)d\vec{X}\,.
+\end{align*}
+</div>
+<p>Si perviene alla definizione del seguente tensore</p>
+<div class="displaymath">
+\begin{equation}
+\tens{E} = \frac{1}{2}\left( \transp{\tens{F}}\,\tens{F} - \tens{I}\right) = \frac{1}{2}\left(\tens{C} - \tens{I}\right)\tag{1.8.7}
+\end{equation}
+</div>
+<p>noto come <em class="emphasis">tensore della deformazione di Green-Lagrange</em> (l'utilizzo del fattore \(\frac{1}{2}\) diverrà chiaro nel seguito). Il tensore \(\tens{E}\) è simmetrico ma non è definito positivo.</p>
 <span class="incontext"><a href="measures_sec_strain_chap_it.html#p-135">in-context</a></span>
 </body>
 </html>

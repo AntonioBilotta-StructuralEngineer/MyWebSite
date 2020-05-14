@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:50+02:00    *-->
+<!--*    on 2020-05-14T19:27:22+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,26 +13,13 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragrafo</span></h6>
-<p>Le seguenti istruzioni invece, valutando gli allungamenti principali come</p>
-<div class="displaymath">
-\begin{equation*}
-\lambda_1 = \sqrt{D2(1,1)} = 2\,,\quad
-\lambda_2 = \sqrt{D2(2,2)} = 5\,,\quad
-\lambda_3 = \sqrt{D2(3,3)} = 7\,,
-\end{equation*}
-</div>
-<p data-braille="continuation">e le direzioni principali estraendole dalle colonne della matrice degli autovettori restituita da MATLAB, calcolano il tensore \(\tens{U}\) e quindi con la relazione</p>
-<div class="displaymath">
-\begin{equation*}
-\tens{R} = \tens{F}\tens{U}^{-1}\,,
-\end{equation*}
-</div>
-<p data-braille="continuation">anche la il tensore di rotazione associato alla decomposizione polare. Si valuta anche \(\tens{V}\) con la relazione</p>
-<div class="displaymath">
-\begin{equation*}
-\tens{V} = \tens{F}\transp{\tens{R}}
-\end{equation*}
-</div>
+<p><figure class="figure-like"><pre class="console"><b>F = [4.4623   -3.2249   -0.4874;
+2.9623    1.7249   -1.9874;
+-1.7500   -1.0607    5.2500];
+U2 = transpose(F)*F;
+[u, D2] = eig(U2)
+</b></pre>
+<figcaption><span class="type">Listato</span> <span class="codenumber">1.8.2.</span> </figcaption></figure></p>
 <span class="incontext"><a href="measures_sec_strain_chap_it.html#p-128">in-context</a></span>
 </body>
 </html>

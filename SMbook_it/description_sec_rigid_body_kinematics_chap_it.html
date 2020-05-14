@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T10:17:49+02:00    *-->
+<!--*    on 2020-05-14T19:27:20+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -24,7 +24,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -41,17 +41,21 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.12;
+</script>
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Torna alla pagina dei contenuti</a><div class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
@@ -189,25 +193,25 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="description_sec_rigid_body_kinematics_chap_it"><h2 class="heading hide-type">
 <span class="type">Sezione</span> <span class="codenumber">4.1</span> <span class="title">descrizione cinematica di base</span>
 </h2>
-<a href="description_sec_rigid_body_kinematics_chap_it.html" class="permalink">¶</a><p id="p-357">Come visto nella <a href="gradient_sec_strain_chap_it.html" class="internal" title="Sezione 1.3: gradiente della trasformazione">Sezione 1.3</a> la descrizione del moto di un corpo nell'intorno di un suo generico punto viene effettuata mediante il gradiente della trasformazione \(\tens{F}\text{.}\) A sua volta il gradiente, per il teorema di decomposzione polare (<a href="polar_sec_strain_chap_it.html" class="internal" title="Sezione 1.6: decomposizione polare">Sezione 1.6</a>), ammette la decomposizione \(\tens{F}=\tens{R}\tens{U}\text{.}\) Assumendo l'ipotesi di <em class="emphasis">corpo rigido</em>, ovvero l'invarianza delle distanze reciproche dei punti che compongono il corpo, il corpo non si deforma e quindi</p>
+<a href="description_sec_rigid_body_kinematics_chap_it.html" class="permalink">¶</a><p id="p-358">Come visto nella <a href="gradient_sec_strain_chap_it.html" class="internal" title="Sezione 1.3: gradiente della trasformazione">Sezione 1.3</a> la descrizione del moto di un corpo nell'intorno di un suo generico punto viene effettuata mediante il gradiente della trasformazione \(\tens{F}\text{.}\) A sua volta il gradiente, per il teorema di decomposzione polare (<a href="polar_sec_strain_chap_it.html" class="internal" title="Sezione 1.6: decomposizione polare">Sezione 1.6</a>), ammette la decomposizione \(\tens{F}=\tens{R}\tens{U}\text{.}\) Assumendo l'ipotesi di <em class="emphasis">corpo rigido</em>, ovvero l'invarianza delle distanze reciproche dei punti che compongono il corpo, il corpo non si deforma e quindi</p>
 <div class="displaymath">
 \begin{equation}
 \tens{U} = \tens{I}\quad \Rightarrow \quad \tens{F} = \tens{R}\,.\tag{4.1.1}
 \end{equation}
 </div>
-<p data-braille="continuation">Inoltre, sempre per l'ipotesi di rigidità, la trasformazione \(\tens{F}\) non vale solo per un intorno del punto ma è omogena e quindi assume lo stesso valore su tutti i punti del corpo. Tale ulteriore condizione consente di esprimere il legame fra incrementi infinitesimi \(d\vec{x}=\tens{F}\,d\vec{X}\) in termini finiti, ovvero</p>
+<p>Inoltre, sempre per l'ipotesi di rigidità, la trasformazione \(\tens{F}\) non vale solo per un intorno del punto ma è omogena e quindi assume lo stesso valore su tutti i punti del corpo. Tale ulteriore condizione consente di esprimere il legame fra incrementi infinitesimi \(d\vec{x}=\tens{F}\,d\vec{X}\) in termini finiti, ovvero</p>
 <div class="displaymath">
 \begin{equation}
 \vec{x} - \vec{x}_o = \tens{F}\left(\vec{X}-\vec{X}_o\right) = \tens{R}\left(\vec{X}-\vec{X}_o\right)\,,\label{rigid_x_eq}\tag{4.1.2}
 \end{equation}
 </div>
-<p data-braille="continuation">dove \(\vec{X}\) si riferisce al generico punto e \(\vec{X}_o\) assume il significato particolare di <em class="emphasis">polo</em> rispetto al quale si descrive la trasformazione rigida. La scelta del polo è completamente indifferente e qualsiasi polo, interno o esterno al corpo, conduce ai medesimi risultati. Se si introduce nella <a class="xref" data-knowl="./knowl/rigid_x_eq.html" title="Equazione 4.1.2">(4.1.2)</a> il legame \(\vec{x}=\vec{X}+\vec{u}\) si ottiene la descrisione del moto rigido in termini di spostamenti</p>
+<p>dove \(\vec{X}\) si riferisce al generico punto e \(\vec{X}_o\) assume il significato particolare di <em class="emphasis">polo</em> rispetto al quale si descrive la trasformazione rigida. La scelta del polo è completamente indifferente e qualsiasi polo, interno o esterno al corpo, conduce ai medesimi risultati. Se si introduce nella <a data-knowl="./knowl/rigid_x_eq.html" title="Equazione 4.1.2">(4.1.2)</a> il legame \(\vec{x}=\vec{X}+\vec{u}\) si ottiene la descrisione del moto rigido in termini di spostamenti</p>
 <div class="displaymath">
 \begin{equation}
 \vec{u} = \vec{u}_o + \left(\tens{R} - \tens{I}\right)\left(\vec{X}-\vec{X}_o\right)\,.\label{rigid_u_eq}\tag{4.1.3}
 \end{equation}
 </div>
-<p data-braille="continuation">La relazione evidenzia come il campo di spostamento per un corpo rigido sia definito da due contributi ciascuno caratterizzato da <em class="emphasis">3 gradi di libertà</em>:</p>
+<p>La relazione evidenzia come il campo di spostamento per un corpo rigido sia definito da due contributi ciascuno caratterizzato da <em class="emphasis">3 gradi di libertà</em>:</p>
 <ul class="disc">
 <li id="li-123">un contributo di traslazione pura (3 componenti) condiviso da tutti i punti del corpo, contributo dato dallo spostamento del polo \(\vec{u}_o\text{;}\)</li>
 <li id="li-124">un contributo di rotazione (3 componenti) che invece varia per ogni punto in ragione del vettore \(\left(\vec{X} - \vec{X}_o\right)\text{.}\)</li>
@@ -215,7 +219,7 @@ MathJax.Hub.Config({
 <section class="subsection" id="subsection-87"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">4.1.1</span> <span class="title">linearizzazione</span>
 </h3>
-<p id="p-358">Il generico tensore di rotazione ha una rappresentazione del tipo, si veda il <a class="xref" data-knowl="./knowl/rotation_remark.html" title="Commento 1.6.3: tensori di rotazione">Commento 1.6.3</a>,</p>
+<p id="p-359">Il generico tensore di rotazione ha una rappresentazione del tipo, si veda il <a data-knowl="./knowl/rotation_remark.html" title="Commento 1.6.3: tensori di rotazione">Commento 1.6.3</a>,</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{R} =
@@ -225,13 +229,13 @@ MathJax.Hub.Config({
 \end{array}\right]\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">espressione non lineare per la presenza delle funzioni trigonometriche. Ma si è anche visto che nel caso di spostamenti infinitesimi, si veda l'<a class="xref" data-knowl="./knowl/small_rotations_insight.html" title="Approfondimento 1.9.3: rotazioni infinitesime">Approfondimento 1.9.3</a>, il tensore di rotazione assume la seguente espressione</p>
+<p>espressione non lineare per la presenza delle funzioni trigonometriche. Ma si è anche visto che nel caso di spostamenti infinitesimi, si veda l'<a data-knowl="./knowl/small_rotations_insight.html" title="Approfondimento 1.9.3: rotazioni infinitesime">Approfondimento 1.9.3</a>, il tensore di rotazione assume la seguente espressione</p>
 <div class="displaymath">
 \begin{equation*}
 \tens{R} \approx \tens{I} + \text{skew}\tens{\nabla u}\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">dove</p>
+<p>dove</p>
 <div class="displaymath">
 \begin{equation*}
 \text{skew}\mat{\nabla u} \approx
@@ -241,7 +245,7 @@ MathJax.Hub.Config({
 \end{array}\right]\,.
 \end{equation*}
 </div>
-<p data-braille="continuation">Pertanto, nel caso di spostamenti infinitesimi, la relazione <a class="xref" data-knowl="./knowl/rigid_u_eq.html" title="Equazione 4.1.3">(4.1.3)</a> diventa</p>
+<p>Pertanto, nel caso di spostamenti infinitesimi, la relazione <a data-knowl="./knowl/rigid_u_eq.html" title="Equazione 4.1.3">(4.1.3)</a> diventa</p>
 <div class="displaymath">
 \begin{align*}
 \vec{u} \amp = \vec{u}_o + \left(\tens{R} - \tens{I}\right)\left(\vec{X}-\vec{X}_o\right)\\
@@ -249,13 +253,13 @@ MathJax.Hub.Config({
 \amp = \vec{u}_o + \text{skew}\tens{\nabla u}\,\left(\vec{X}-\vec{X}_o\right)\,,
 \end{align*}
 </div>
-<p data-braille="continuation">e quindi</p>
+<p>e quindi</p>
 <div class="displaymath">
 \begin{equation}
 \vec{u} = \vec{u}_o + \text{skew}\tens{\nabla u}\,\left(\vec{X}-\vec{X}_o\right)\,.\label{small_rigid_u_eq}\tag{4.1.4}
 \end{equation}
 </div>
-<p data-braille="continuation">La rapresentazione per componenti fornisce</p>
+<p>La rapresentazione per componenti fornisce</p>
 <div class="displaymath">
 \begin{equation}
 \left[\begin{array}{c}
@@ -273,11 +277,10 @@ u_1 \\ u_2
 \end{array}\right]\,.\label{mat_small_rigid_u_eq}\tag{4.1.5}
 \end{equation}
 </div>
-<article class="remark remark-like" id="remark-15"><h6 class="heading">
-<span class="type">Commento</span><span class="space"> </span><span class="codenumber">4.1.1</span><span class="period">.</span>
-</h6>
-<p id="p-359">Nel formato tensoriale le formule precedenti sono del tutto generiche. Nello specificare le formule nel formato matriciale si è fatto riferimento al contesto bidimensionale che sarà utilizzato nelle applicazioni successive. Dalla formula <a class="xref" data-knowl="./knowl/mat_small_rigid_u_eq.html" title="Equazione 4.1.5">(4.1.5)</a> in particolare si evince che le due traslazioni del polo, \({u_1}_o\) e \({u_2}_o\text{,}\) e la rotazione \(\varphi\) costituiscono i 3 parametri necessari per descrivere il moto di un corpo rigido nel piano.</p>
-<p id="p-360">Anche se non necessario - le componenti di spostamento variano da punto a punto sul corpo, ma la rotazione di un copro rigido non varia da punto a punto - nelle applicazioni successive si tenderà a denotare anche la rotazione del corpo con un simbolo del tipo \(\varphi_o\) indicando quindi a pedice il polo preso come riferimento.</p></article><article class="assemblage assemblage-like" id="assemblage-28"><p id="p-361">Le seguenti istruzioni MATLAB definiscono una funzione per il calcolo dello spostamento rigido nel piano di un punto assegnato, X, rispetto ad un polo generico, X0, ed ai parametri che definiscono la traslazione e la rotazione di un corpo, u0 e phi0. Il corpo in questione è mondimensionale, quindi di tipo trave, ed è individuato da 2 o più punti. Nell'esempio si considera una trave definita da 3 punti e se ne calcola lo spostamento assumendo come polo ciascuno di questi 3 punti. <figure class="listing figure-like" id="listing-41"><pre class="console"><b>% campo di spostamento generico nel piano
+<article class="remark-like" id="remark-15"><h6 class="heading">
+<span class="type">Commento</span> <span class="codenumber">4.1.1</span>.</h6>
+<p id="p-360">Nel formato tensoriale le formule precedenti sono del tutto generiche. Nello specificare le formule nel formato matriciale si è fatto riferimento al contesto bidimensionale che sarà utilizzato nelle applicazioni successive. Dalla formula <a data-knowl="./knowl/mat_small_rigid_u_eq.html" title="Equazione 4.1.5">(4.1.5)</a> in particolare si evince che le due traslazioni del polo, \({u_1}_o\) e \({u_2}_o\text{,}\) e la rotazione \(\varphi\) costituiscono i 3 parametri necessari per descrivere il moto di un corpo rigido nel piano.</p>
+<p id="p-361">Anche se non necessario - le componenti di spostamento variano da punto a punto sul corpo, ma la rotazione di un copro rigido non varia da punto a punto - nelle applicazioni successive si tenderà a denotare anche la rotazione del corpo con un simbolo del tipo \(\varphi_o\) indicando quindi a pedice il polo preso come riferimento.</p></article><article class="assemblage-like" id="assemblage-28"><p id="p-362">Le seguenti istruzioni MATLAB definiscono una funzione per il calcolo dello spostamento rigido nel piano di un punto assegnato, X, rispetto ad un polo generico, X0, ed ai parametri che definiscono la traslazione e la rotazione di un corpo, u0 e phi0. Il corpo in questione è mondimensionale, quindi di tipo trave, ed è individuato da 2 o più punti. Nell'esempio si considera una trave definita da 3 punti e se ne calcola lo spostamento assumendo come polo ciascuno di questi 3 punti. <figure class="figure-like" id="listing-41"><pre class="console"><b>% campo di spostamento generico nel piano
 rigidDispl = ...
     @(u0, phi0, X0, X)...
     [u0(1)-phi0*(X(2)-X0(2));...
@@ -316,21 +319,22 @@ uA = rigidDispl(u0, phi0, POLO, A);
 uB = rigidDispl(u0, phi0, POLO, B);
 uC = rigidDispl(u0, phi0, POLO, C);
 </b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">4.1.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><article class="remark remark-like" id="remark-16"><h6 class="heading">
-<span class="type">Commento</span><span class="space"> </span><span class="codenumber">4.1.3</span><span class="period">.</span>
-</h6>
-<p id="p-362">Una scrittura alternativa dell'equazione <a class="xref" data-knowl="./knowl/small_rigid_u_eq.html" title="Equazione 4.1.4">(4.1.4)</a> si ottiene esplicitando la struttura del tensore \(\text{skew}\tens{\nabla u}\text{,}\) ovvero</p>
+<figcaption><span class="type">Listato</span> <span class="codenumber">4.1.2.</span> </figcaption></figure></p></article><article class="remark-like" id="remark-16"><h6 class="heading">
+<span class="type">Commento</span> <span class="codenumber">4.1.3</span>.</h6>
+<p id="p-363">Una scrittura alternativa dell'equazione <a data-knowl="./knowl/small_rigid_u_eq.html" title="Equazione 4.1.4">(4.1.4)</a> si ottiene esplicitando la struttura del tensore \(\text{skew}\tens{\nabla u}\text{,}\) ovvero</p>
 <div class="displaymath">
 \begin{equation}
 \vec{u} = \vec{u}_o + \varphi \,\tens{W}\left(\vec{X}-\vec{X}_o\right)\,,\label{W_small_rigid_u_eq}\tag{4.1.6}
 \end{equation}
 </div>
-<p data-braille="continuation">dove \(\varphi\) è l'angolo di rotazione e \(\tens{W}\) è un generico tensore emisimmetrico, si veda al riguardo l'<a class="xref" data-knowl="./knowl/skew_tensor_insight.html" title="Approfondimento 1.9.5">Approfondimento 1.9.5</a>. Inoltre, utilizzando il vettore assiale associato al tensore \(\tens{W}\text{,}\) si può anche scrivere</p>
+<p>dove \(\varphi\) è l'angolo di rotazione e \(\tens{W}\) è un generico tensore emisimmetrico, si veda al riguardo l'<a data-knowl="./knowl/skew_tensor_insight.html" title="Approfondimento 1.9.5">Approfondimento 1.9.5</a>. Inoltre, utilizzando il vettore assiale associato al tensore \(\tens{W}\text{,}\) si può anche scrivere</p>
 <div class="displaymath">
 \begin{equation}
 \vec{u} = \vec{u}_o + \varphi\, \vec{\omega}\times\left(\vec{X}-\vec{X}_o\right)\,.\label{omega_small_rigid_u_eq}\tag{4.1.7}
 \end{equation}
 </div></article></section></section></div></main>
 </div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.12/login.js"></script>
 </body>
 </html>
