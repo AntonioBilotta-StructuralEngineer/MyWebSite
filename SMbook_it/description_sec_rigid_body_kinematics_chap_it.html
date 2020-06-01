@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-14T19:27:20+02:00    *-->
+<!--*    on 2020-06-01T08:38:18+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -259,7 +259,7 @@ var js_version = 0.12;
 \vec{u} = \vec{u}_o + \text{skew}\tens{\nabla u}\,\left(\vec{X}-\vec{X}_o\right)\,.\label{small_rigid_u_eq}\tag{4.1.4}
 \end{equation}
 </div>
-<p>La rapresentazione per componenti fornisce</p>
+<p>La rappresentazione per componenti fornisce</p>
 <div class="displaymath">
 \begin{equation}
 \left[\begin{array}{c}
@@ -280,7 +280,7 @@ u_1 \\ u_2
 <article class="remark-like" id="remark-15"><h6 class="heading">
 <span class="type">Commento</span> <span class="codenumber">4.1.1</span>.</h6>
 <p id="p-360">Nel formato tensoriale le formule precedenti sono del tutto generiche. Nello specificare le formule nel formato matriciale si è fatto riferimento al contesto bidimensionale che sarà utilizzato nelle applicazioni successive. Dalla formula <a data-knowl="./knowl/mat_small_rigid_u_eq.html" title="Equazione 4.1.5">(4.1.5)</a> in particolare si evince che le due traslazioni del polo, \({u_1}_o\) e \({u_2}_o\text{,}\) e la rotazione \(\varphi\) costituiscono i 3 parametri necessari per descrivere il moto di un corpo rigido nel piano.</p>
-<p id="p-361">Anche se non necessario - le componenti di spostamento variano da punto a punto sul corpo, ma la rotazione di un copro rigido non varia da punto a punto - nelle applicazioni successive si tenderà a denotare anche la rotazione del corpo con un simbolo del tipo \(\varphi_o\) indicando quindi a pedice il polo preso come riferimento.</p></article><article class="assemblage-like" id="assemblage-28"><p id="p-362">Le seguenti istruzioni MATLAB definiscono una funzione per il calcolo dello spostamento rigido nel piano di un punto assegnato, X, rispetto ad un polo generico, X0, ed ai parametri che definiscono la traslazione e la rotazione di un corpo, u0 e phi0. Il corpo in questione è mondimensionale, quindi di tipo trave, ed è individuato da 2 o più punti. Nell'esempio si considera una trave definita da 3 punti e se ne calcola lo spostamento assumendo come polo ciascuno di questi 3 punti. <figure class="figure-like" id="listing-41"><pre class="console"><b>% campo di spostamento generico nel piano
+<p id="p-361">Anche se non necessario - le componenti di spostamento variano da punto a punto sul corpo, ma la rotazione di un corpo rigido non varia da punto a punto - nelle applicazioni successive si tenderà a denotare anche la rotazione del corpo con un simbolo del tipo \(\varphi_o\) indicando quindi a pedice il polo preso come riferimento.</p></article><article class="assemblage-like" id="assemblage-28"><p id="p-362">Le seguenti istruzioni MATLAB definiscono una funzione per il calcolo dello spostamento rigido nel piano di un punto assegnato, X, rispetto ad un polo generico, X0, ed ai parametri che definiscono la traslazione e la rotazione di un corpo, u0 e phi0. Il corpo in questione è mondimensionale, quindi di tipo trave, ed è individuato da 2 o più punti. Nell'esempio si considera una trave definita da 3 punti e se ne calcola lo spostamento assumendo come polo ciascuno di questi 3 punti. <figure class="figure-like" id="listing-41"><pre class="console"><b>% campo di spostamento generico nel piano
 rigidDispl = ...
     @(u0, phi0, X0, X)...
     [u0(1)-phi0*(X(2)-X0(2));...

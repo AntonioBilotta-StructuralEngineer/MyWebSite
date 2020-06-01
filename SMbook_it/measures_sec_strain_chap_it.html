@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-14T19:27:18+02:00    *-->
+<!--*    on 2020-06-01T08:38:16+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -254,7 +254,7 @@ U2 = transpose(F)*F;
 <p>anche la il tensore di rotazione associato alla decomposizione polare. Si valuta anche \(\tens{V}\) con la relazione</p>
 <div class="displaymath">
 \begin{equation*}
-\tens{V} = \tens{F}\transp{\tens{R}}
+\tens{V} = \tens{F}\transp{\tens{R}}\,.
 \end{equation*}
 </div>
 <p id="p-130"><figure class="figure-like" id="listing-21"><pre class="console"><b>u1 = u(:,1);
@@ -276,7 +276,7 @@ V = F*transpose(R)
 <p>da cui</p>
 <div class="displaymath">
 \begin{equation}
-\tens{B} = \tens{F}\,\transp{\tens{F}}\,,\tag{1.8.2}
+\tens{B} = \tens{F}\,\transp{\tens{F}}\,.\tag{1.8.2}
 \end{equation}
 </div>
 <article class="remark-like" id="remark-9"><h6 class="heading">
@@ -321,7 +321,7 @@ C_{ij} = \cos{\func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}} \sqrt{\vec{e}_
 \func{\gamma}{\vec{e}_i,\vec{e}_j} = \func{\Theta}{\vec{e}_i,\vec{e}_j} - \func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j} = \frac{\pi}{2} - \func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}\,,\tag{1.8.5}
 \end{equation}
 </div>
-<p>ovvero l'angolo dato dalla differenza fra gli angoli formati da \(\vec{e}_i\) ed \(\vec{e}_j\) prima e dopo la trasformazione, può essere riformulata come seguey</p>
+<p>ovvero l'angolo dato dalla differenza fra gli angoli formati da \(\vec{e}_i\) ed \(\vec{e}_j\) prima e dopo la trasformazione, può essere riformulata come segue</p>
 <div class="displaymath">
 \begin{align*}
 C_{ij} \amp = \cos{\left(\frac{\pi}{2} - \func{\gamma}{\vec{e}_i,\vec{e}_j}\right)} \sqrt{\vec{e}_i \cdot \tens{C}\vec{e}_i} \, \sqrt{\vec{e}_j \cdot \tens{C}\vec{e}_j}\,,\\
@@ -334,7 +334,7 @@ C_{ij} \amp = \cos{\left(\frac{\pi}{2} - \func{\gamma}{\vec{e}_i,\vec{e}_j}\righ
 C_{ij} = \sin{\func{\gamma}{\vec{e}_i,\vec{e}_j}}\, \func{\lambda}{\vec{e}_i} \, \func{\lambda}{\vec{e}_j}\,.\label{Cij_eq}\tag{1.8.6}
 \end{equation}
 </div>
-<p>La quantità \(\func{\gamma}{\vec{e}_i,\vec{e}_j}\) prende il nome di <em class="emphasis">angolo di taglio</em> o, più semplicemente, <em class="emphasis">taglio</em>. Nei casi in cui \(\func{\gamma}{\vec{e}_i,\vec{e}_j}\) è nullo, ovvero l'angolo formato dalle direzioni \(\vec{e}_i\) ed \(\vec{e}_j\) non varia, la componennte fuori diagonale \(C_{ij}\) è nulla.</p></article></section><section class="subsection" id="subsection-10"><h3 class="heading hide-type">
+<p>La quantità \(\func{\gamma}{\vec{e}_i,\vec{e}_j}\) prende il nome di <em class="emphasis">angolo di taglio</em> o, più semplicemente, <em class="emphasis">taglio</em>. Nei casi in cui \(\func{\gamma}{\vec{e}_i,\vec{e}_j}\) è nullo, ovvero l'angolo formato dalle direzioni \(\vec{e}_i\) ed \(\vec{e}_j\) non varia, la componente fuori diagonale \(C_{ij}\) è nulla.</p></article></section><section class="subsection" id="subsection-10"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">1.8.2</span> <span class="title">tensore della deformazione di Green-Lagrange</span>
 </h3>
 <p id="p-135">Una misura di deformazione molto utilizzata si basa sulla differenza dei quadrati delle lunghezze nella configurazione attuale ed in quella di riferimento. In particolare si ricava quanto segue</p>
