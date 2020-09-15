@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-01T08:38:15+02:00    *-->
-<!--*                                    *-->
-<!--*      https://pretextbook.org       *-->
-<!--*                                    *-->
-<!--**************************************-->
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-09-15T18:44:54+02:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
 <html lang="it-IT">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Solid Mechanics - il campo di spostamento</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -24,7 +26,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -41,24 +43,21 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.12;
-</script>
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Valuta (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Torna alla pagina dei contenuti</a><div class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Torna alla pagina dei contenuti</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{{\not{\mid}}}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -97,7 +96,7 @@ var js_version = 0.12;
 <p class="byline">Antonio Bilotta</p>
 </div>
 </div></div>
-<nav id="primary-navbar" class="navbar"><div class="container">
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contenuti</button><div class="tree-nav toolbar toolbar-divisor-3">
 <a class="index-button toolbar-item button" href="solid_mechnics_book_index_it.html" title="Indice">Indice</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="gradient_sec_strain_chap_it.html" title="Precedente">Prec</a><a id="upbutton" class="up-button button toolbar-item" href="strain_chap_it.html" title="Sopra">Su</a><a id="nextbutton" class="next-button button toolbar-item" href="determinant_sec_strain_chap_it.html" title="Successivo">Succ</a></span>
@@ -107,9 +106,9 @@ var js_version = 0.12;
 <button class="sidebar-left-toggle-button button toolbar-item active">Contenuti</button><a class="previous-button toolbar-item button" href="gradient_sec_strain_chap_it.html" title="Precedente">Prec</a><a class="up-button button toolbar-item" href="strain_chap_it.html" title="Sopra">Su</a><a class="next-button button toolbar-item" href="determinant_sec_strain_chap_it.html" title="Successivo">Succ</a>
 </div>
 </div></nav></header><div class="page">
-<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link">
+<li class="link frontmatter">
 <a href="front_matter_it.html" data-scroll="front_matter_it"><span class="title">Copertina</span></a><ul>
 <li><a href="front_colophon_it.html" data-scroll="front_colophon_it">Colofone</a></li>
 <li><a href="author_bio_it.html" data-scroll="author_bio_it">Biografia dell'autore</a></li>
@@ -179,27 +178,27 @@ var js_version = 0.12;
 <li><a href="constraints_sec_rigid_body_statics_chap_it.html" data-scroll="constraints_sec_rigid_body_statics_chap_it">vincoli</a></li>
 <li><a href="free_body_sec_rigid_body_statics_chap_it.html" data-scroll="free_body_sec_rigid_body_statics_chap_it">diagrammi di corpo libero</a></li>
 <li><a href="analysis_sec_rigid_body_statics_chap_it.html" data-scroll="analysis_sec_rigid_body_statics_chap_it">analisi statica</a></li>
-<li><a href="analysis_examples_sec_rigid_body_statics_chap_it.html" data-scroll="analysis_examples_sec_rigid_body_statics_chap_it">applicazione dell'analisi statica ai sistemi di corpi rigidi</a></li>
+<li><a href="analysis_examples_sec_rigid_body_statics_chap_it.html" data-scroll="analysis_examples_sec_rigid_body_statics_chap_it">applicazione dell'analisi statica ai sistemi di corpi</a></li>
 <li><a href="sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_it">sollecitazioni</a></li>
 <li><a href="indefinte_sec_rigid_body_statics_chap_it.html" data-scroll="indefinte_sec_rigid_body_statics_chap_it">equazioni indefinite di equilibrio per la trave piana</a></li>
 <li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it">calcolo e diagrammi delle sollecitazioni</a></li>
 </ul>
 </li>
-<li class="link"><a href="backmatter_it.html" data-scroll="backmatter_it"><span class="title">Back Matter</span></a></li>
+<li class="link backmatter"><a href="backmatter_it.html" data-scroll="backmatter_it"><span class="title">Back Matter</span></a></li>
 <li class="link"><a href="solid_mechnics_book_index_it.html" data-scroll="solid_mechnics_book_index_it"><span class="title">Indice</span></a></li>
 <li class="link"><a href="back_colophon_it.html" data-scroll="back_colophon_it"><span class="title">Colofone</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Scritto con PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="pretext-content"><section class="section" id="displacement_sec_strain_chap_it"><h2 class="heading hide-type">
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="displacement_sec_strain_chap_it"><h2 class="heading hide-type">
 <span class="type">Sezione</span> <span class="codenumber">1.4</span> <span class="title">il campo di spostamento</span>
 </h2>
-<a href="displacement_sec_strain_chap_it.html" class="permalink">¶</a><p id="p-60">Un altra quantità molto utilizzata nella descrizione cinematica dei corpi è la differenza fra la posizione corrente la posizione di riferimento del generico punto</p>
+<p id="p-60">Un altra quantità molto utilizzata nella descrizione cinematica dei corpi è la differenza fra la posizione corrente la posizione di riferimento del generico punto</p>
 <div class="displaymath">
 \begin{equation}
 \vec{u} = \vec{x} - \vec{X}\label{displ_eq}\tag{1.4.1}
 \end{equation}
 </div>
-<p>nota come <em class="emphasis">campo di spostamento</em>. Il relativo gradiente, noto come <em class="emphasis">gradiente dello spostamento</em> e indicato con il simbolo \(\tens{\nabla u}\text{,}\) si ottiene in modo analago a quanto già fatto per il gradiente della trasformazione. Ovvero dato il campo</p>
+<p data-braille="continuation">nota come <em class="emphasis">campo di spostamento</em>. Il relativo gradiente, noto come <em class="emphasis">gradiente dello spostamento</em> e indicato con il simbolo \(\tens{\nabla u}\text{,}\) si ottiene in modo analago a quanto già fatto per il gradiente della trasformazione. Ovvero dato il campo</p>
 <div class="displaymath">
 \begin{align}
 u_1 \amp = \func{u_1}{X_1, X_2, X_3}\,,\tag{1.4.2}\\
@@ -207,23 +206,23 @@ u_2 \amp = \func{u_3}{X_1, X_2, X_3}\,,\tag{1.4.3}\\
 u_3 \amp = \func{u_3}{X_1, X_2, X_3}\,.\tag{1.4.4}
 \end{align}
 </div>
-<p>si ottiene</p>
+<p data-braille="continuation">si ottiene</p>
 <div class="displaymath">
 \begin{equation}
 \mat{\nabla u} = \left[\begin{array}{ccc}
 \regulardiff{u_1}{X_1} \amp \regulardiff{u_1}{X_2} \amp \regulardiff{u_1}{X_3}\\
 \regulardiff{u_2}{X_1} \amp \regulardiff{u_2}{X_2} \amp \regulardiff{u_2}{X_3}\\
 \regulardiff{u_3}{X_1} \amp \regulardiff{u_3}{X_2} \amp \regulardiff{u_3}{X_3}
-\end{array}\right]\,.\tag{1.4.5}
+\end{array}\right]\,.\label{Dipl_Grad_X_eq}\tag{1.4.5}
 \end{equation}
 </div>
-<p id="p-61">Dalla equazione <a data-knowl="./knowl/displ_eq.html" title="Equazione 1.4.1">(1.4.1)</a> si ricava facilmente la relazione fra gradiente dello spostamento e gradiente della trasformazione</p>
+<p id="p-61">Dalla equazione <a class="xref" data-knowl="./knowl/displ_eq.html" title="Equazione 1.4.1">(1.4.1)</a> si ricava facilmente la relazione fra gradiente dello spostamento e gradiente della trasformazione</p>
 <div class="displaymath">
 \begin{equation}
 \tens{\nabla u} = \tens{F} - \tens{I}\,,\tag{1.4.6}
 \end{equation}
 </div>
-<p>dove \(\tens{I}\) rappresenta il tensore identità</p>
+<p data-braille="continuation">dove \(\tens{I}\) rappresenta il tensore identità</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{I} = \left[\begin{array}{ccc}
@@ -233,41 +232,39 @@ u_3 \amp = \func{u_3}{X_1, X_2, X_3}\,.\tag{1.4.4}
 \end{array}\right]\,.
 \end{equation*}
 </div>
-<article class="assemblage-like" id="assemblage-7"><h6 class="heading"><span class="title">valutazione del campo di spostamento e del relativo gradiente.</span></h6>
-<p id="p-62">In merito alla Trasformazione 1 già utilizzata negli esempi precedenti, il campo di spostamento ed il relativo gradiente possono essere valutati sulla base delle seguenti istruzioni MATLAB. Si tenga presente che, per la linearità delle trasformazioni coinvolte, i gradienti vengono valutati come matrice associata alla trasformazione. <figure class="figure-like" id="listing-9"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
+<article class="assemblage assemblage-like" id="assemblage-7"><h6 class="heading"><span class="title">valutazione del campo di spostamento e del relativo gradiente.</span></h6>
+<p id="p-62">In merito alla Trasformazione 1 già utilizzata negli esempi precedenti, il campo di spostamento ed il relativo gradiente possono essere valutati sulla base delle seguenti istruzioni MATLAB. Si tenga presente che, per la linearità delle trasformazioni coinvolte, i gradienti vengono valutati come matrice associata alla trasformazione. <figure class="listing figure-like" id="listing-9"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
 F = [T1([1; 0]) T1([0; 1])]
 Grad_u = F - diag([1 1])
 
 u1 = @(X) T1(X) - X;
 Grad_u = [u1([1; 0]) u1([0; 1])]
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.4.1.</span> </figcaption></figure></p>
-<p id="p-63">Istruzioni MATLAB per la Trasformazione 2. <figure class="figure-like" id="listing-10"><pre class="console"><b>T2 = @(X) [2*X(1); X(2)];
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.4.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p id="p-63">Istruzioni MATLAB per la Trasformazione 2. <figure class="listing figure-like" id="listing-10"><pre class="console"><b>T2 = @(X) [2*X(1); X(2)];
 F = [T2([1; 0]) T2([0; 1])]
 Grad_u = F - diag([1 1])
 
 u2 = @(X) T2(X) - X;
 Grad_u = [u2([1; 0]) u2([0; 1])]
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.4.2.</span> </figcaption></figure></p>
-<p id="p-64">Istruzioni MATLAB per la Trasformazione 3. <figure class="figure-like" id="listing-11"><pre class="console"><b>T3 = @(X) [X(1); 1.5*X(2)];
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.4.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p id="p-64">Istruzioni MATLAB per la Trasformazione 3. <figure class="listing figure-like" id="listing-11"><pre class="console"><b>T3 = @(X) [X(1); 1.5*X(2)];
 F = [T3([1; 0]) T3([0; 1])]
 Grad_u = F - diag([1 1])
 
 u3 = @(X) T3(X) - X;
 Grad_u = [u3([1; 0]) u3([0; 1])]
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.4.3.</span> </figcaption></figure></p>
-<p id="p-65">Istruzioni MATLAB per la Trasformazione 4. <figure class="figure-like" id="listing-12"><pre class="console"><b>T4 = @(X) [X(1)+X(2); X(2)];
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.4.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p id="p-65">Istruzioni MATLAB per la Trasformazione 4. <figure class="listing figure-like" id="listing-12"><pre class="console"><b>T4 = @(X) [X(1)+X(2); X(2)];
 F = [T4([1; 0]) T4([0; 1])]
 Grad_u = F - diag([1 1])
 
 u4 = @(X) T4(X) - X;
 Grad_u = [u4([1; 0]) u4([0; 1])]
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.4.4.</span> </figcaption></figure></p></article></section></div></main>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.4.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.12/login.js"></script>
 </body>
 </html>

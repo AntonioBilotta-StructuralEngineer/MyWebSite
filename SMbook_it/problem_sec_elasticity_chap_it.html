@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-01T08:38:17+02:00    *-->
-<!--*                                    *-->
-<!--*      https://pretextbook.org       *-->
-<!--*                                    *-->
-<!--**************************************-->
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-09-15T18:44:57+02:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
 <html lang="it-IT">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Solid Mechanics - il problema elastico</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -24,7 +26,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -41,24 +43,21 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.12;
-</script>
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Valuta (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Torna alla pagina dei contenuti</a><div class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Torna alla pagina dei contenuti</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{{\not{\mid}}}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -97,7 +96,7 @@ var js_version = 0.12;
 <p class="byline">Antonio Bilotta</p>
 </div>
 </div></div>
-<nav id="primary-navbar" class="navbar"><div class="container">
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contenuti</button><div class="tree-nav toolbar toolbar-divisor-3">
 <a class="index-button toolbar-item button" href="solid_mechnics_book_index_it.html" title="Indice">Indice</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="multiaxial_sec_elasticity_chap_it.html" title="Precedente">Prec</a><a id="upbutton" class="up-button button toolbar-item" href="elasticity_chap_it.html" title="Sopra">Su</a><a id="nextbutton" class="next-button button toolbar-item" href="stretched_beam_sec_elasticity_chap_it.html" title="Successivo">Succ</a></span>
@@ -107,9 +106,9 @@ var js_version = 0.12;
 <button class="sidebar-left-toggle-button button toolbar-item active">Contenuti</button><a class="previous-button toolbar-item button" href="multiaxial_sec_elasticity_chap_it.html" title="Precedente">Prec</a><a class="up-button button toolbar-item" href="elasticity_chap_it.html" title="Sopra">Su</a><a class="next-button button toolbar-item" href="stretched_beam_sec_elasticity_chap_it.html" title="Successivo">Succ</a>
 </div>
 </div></nav></header><div class="page">
-<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link">
+<li class="link frontmatter">
 <a href="front_matter_it.html" data-scroll="front_matter_it"><span class="title">Copertina</span></a><ul>
 <li><a href="front_colophon_it.html" data-scroll="front_colophon_it">Colofone</a></li>
 <li><a href="author_bio_it.html" data-scroll="author_bio_it">Biografia dell'autore</a></li>
@@ -179,25 +178,25 @@ var js_version = 0.12;
 <li><a href="constraints_sec_rigid_body_statics_chap_it.html" data-scroll="constraints_sec_rigid_body_statics_chap_it">vincoli</a></li>
 <li><a href="free_body_sec_rigid_body_statics_chap_it.html" data-scroll="free_body_sec_rigid_body_statics_chap_it">diagrammi di corpo libero</a></li>
 <li><a href="analysis_sec_rigid_body_statics_chap_it.html" data-scroll="analysis_sec_rigid_body_statics_chap_it">analisi statica</a></li>
-<li><a href="analysis_examples_sec_rigid_body_statics_chap_it.html" data-scroll="analysis_examples_sec_rigid_body_statics_chap_it">applicazione dell'analisi statica ai sistemi di corpi rigidi</a></li>
+<li><a href="analysis_examples_sec_rigid_body_statics_chap_it.html" data-scroll="analysis_examples_sec_rigid_body_statics_chap_it">applicazione dell'analisi statica ai sistemi di corpi</a></li>
 <li><a href="sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_it">sollecitazioni</a></li>
 <li><a href="indefinte_sec_rigid_body_statics_chap_it.html" data-scroll="indefinte_sec_rigid_body_statics_chap_it">equazioni indefinite di equilibrio per la trave piana</a></li>
 <li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it">calcolo e diagrammi delle sollecitazioni</a></li>
 </ul>
 </li>
-<li class="link"><a href="backmatter_it.html" data-scroll="backmatter_it"><span class="title">Back Matter</span></a></li>
+<li class="link backmatter"><a href="backmatter_it.html" data-scroll="backmatter_it"><span class="title">Back Matter</span></a></li>
 <li class="link"><a href="solid_mechnics_book_index_it.html" data-scroll="solid_mechnics_book_index_it"><span class="title">Indice</span></a></li>
 <li class="link"><a href="back_colophon_it.html" data-scroll="back_colophon_it"><span class="title">Colofone</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Scritto con PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="pretext-content"><section class="section" id="problem_sec_elasticity_chap_it"><h2 class="heading hide-type">
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="problem_sec_elasticity_chap_it"><h2 class="heading hide-type">
 <span class="type">Sezione</span> <span class="codenumber">3.4</span> <span class="title">il problema elastico</span>
 </h2>
-<a href="problem_sec_elasticity_chap_it.html" class="permalink">¶</a><p id="p-275">La definizione del legame elastico fornita nelle precedenti sezioni consente di formulare in termini ben posti il seguente problema noto come <em class="emphasis">problema elastico</em>.</p>
+<p id="p-275">La definizione del legame elastico fornita nelle precedenti sezioni consente di formulare in termini ben posti il seguente problema noto come <em class="emphasis">problema elastico</em>.</p>
 <p id="p-276"><em class="emphasis">Determinazione dei campi di spostamento, \(\vec{u}\text{,}\) di tensione, \(\tens{\sigma}\text{,}\) ed di deformazione, \(\tens{\varepsilon}\text{,}\) indotti dalle condizioni di carico assegnate in un corpo \(\body\) comunque vincolato.</em></p>
-<figure class="figure-like" id="figure-28"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="images/Elastic_Problem.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">3.4.1.</span> </figcaption></figure><p id="p-277">Dare una risposta al quesito posto richiede la soluzione simultanea delle seguenti equazioni definite su tutti i punti del corpo \(\body\) in esame.</p>
-<article class="assemblage-like" id="assemblage-16"><ul id="p-278" class="disc">
+<figure class="figure figure-like" id="figure-28"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="images/Elastic_Problem.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">3.4.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-277">Dare una risposta al quesito posto richiede la soluzione simultanea delle seguenti equazioni definite su tutti i punti del corpo \(\body\) in esame.</p>
+<article class="assemblage assemblage-like" id="assemblage-16"><ul id="p-278" class="disc">
 <li id="li-97">
 <em class="alert">Equazioni di equilibrio</em> (<a href="stress_chap_it.html" class="internal" title="Capitolo 2: forze, equilibrio e tensione">Capitolo 2</a>)<div class="displaymath">
 \begin{equation}
@@ -240,13 +239,13 @@ var js_version = 0.12;
 <span class="type">Sottosezione</span> <span class="codenumber">3.4.1</span> <span class="title">motivazione di inizio capitolo: il solido prismatico semplicemente teso</span>
 </h3>
 <p id="p-280">A questo punto possiamo riprendere il problema del solido prismatico soggetto a trazione presentato nella <a href="motivations_sec_elasticity_chap_it.html" class="internal" title="Sezione 3.1: motivazione">Sezione 3.1</a> all'inizio del presente capitolo.</p>
-<p id="p-281">La soluzione statica già trovata, comunque corretta perché soddisfa le equazioni di equilibrio <a data-knowl="./knowl/ep_1_eq.html" title="Equazione 3.4.1">(3.4.1)</a> all'interno del solido e le condizioni di tipo statico sul contorno <a data-knowl="./knowl/ep_4_eq.html" title="Equazione 3.4.4">(3.4.4)</a>, è</p>
+<p id="p-281">La soluzione statica già trovata, comunque corretta perché soddisfa le equazioni di equilibrio <a class="xref" data-knowl="./knowl/ep_1_eq.html" title="Equazione 3.4.1">(3.4.1)</a> all'interno del solido e le condizioni di tipo statico sul contorno <a class="xref" data-knowl="./knowl/ep_4_eq.html" title="Equazione 3.4.4">(3.4.4)</a>, è</p>
 <div class="displaymath">
 \begin{equation}
 \sigma_{11} = \sigma_{22} = \sigma_{12} = \sigma_{13} = \sigma_{23} = 0\,\quad \sigma_{33} = \bar{t}\,.\tag{3.4.6}
 \end{equation}
 </div>
-<p>Sulla base del legame elastico isotropo <a data-knowl="./knowl/isotropic_normal_eq.html" title="Equazione 3.3.11">(3.3.11)</a>, è adesso possibile calcolare il tensore della deformazione le cui uniche componenti non nulle sono</p>
+<p data-braille="continuation">Sulla base del legame elastico isotropo <a class="xref" data-knowl="./knowl/isotropic_normal_eq.html" title="Equazione 3.3.11">(3.3.11)</a>, è adesso possibile calcolare il tensore della deformazione le cui uniche componenti non nulle sono</p>
 <div class="displaymath">
 \begin{align}
 \amp \varepsilon_{33} = \frac{\sigma_{33}}{E} = \frac{\bar{t}}{E}\,,\label{eps33_eq}\tag{3.4.7}\\
@@ -254,8 +253,8 @@ var js_version = 0.12;
 \amp \varepsilon_{11} = -\nu\,\varepsilon_{33} = -\nu\,\frac{\bar{t}}{E}\,,\label{eps11_eq}\tag{3.4.9}
 \end{align}
 </div>
-<p>quindi un campo di deformazione costante e omogeneo su tutto il solido.</p>
-<p id="p-282">Il legame deformazione-spostamento <a data-knowl="./knowl/ep_2_eq.html" title="Equazione 3.4.2">(3.4.2)</a> consente la determinazione del campo di spostamento. Infatti la scrittura esplicita del legame, si veda la <a data-knowl="./knowl/mat_symDu_eq.html" title="Equazione 1.9.4">(1.9.4)</a>, fornisce</p>
+<p data-braille="continuation">quindi un campo di deformazione costante e omogeneo su tutto il solido.</p>
+<p id="p-282">Il legame deformazione-spostamento <a class="xref" data-knowl="./knowl/ep_2_eq.html" title="Equazione 3.4.2">(3.4.2)</a> consente la determinazione del campo di spostamento. Infatti la scrittura esplicita del legame, si veda la <a class="xref" data-knowl="./knowl/mat_symDu_eq.html" title="Equazione 1.9.4">(1.9.4)</a>, fornisce</p>
 <div class="displaymath">
 \begin{align*}
 \varepsilon_{11} = \frac{\partial u_1}{\partial X_1}\,,\amp\qquad \varepsilon_{23} = \frac{1}{2}\left(\frac{\partial u_2}{\partial X_3} + \frac{\partial u_3}{\partial X_2}\right)\,,\\
@@ -263,7 +262,7 @@ var js_version = 0.12;
 \varepsilon_{33} = \frac{\partial u_3}{\partial X_3}\,,\amp\qquad \varepsilon_{12} = \frac{1}{2}\left(\frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1}\right)\,.
 \end{align*}
 </div>
-<p>Sostituendo i valori delle componenti di deformazione ricavate nelle <a data-knowl="./knowl/eps33_eq.html" title="Equazione 3.4.7">(3.4.7)</a>-<a data-knowl="./knowl/eps11_eq.html" title="Equazione 3.4.9">(3.4.9)</a> mediante il legame elastico si ottiene</p>
+<p data-braille="continuation">Sostituendo i valori delle componenti di deformazione ricavate nelle <a class="xref" data-knowl="./knowl/eps33_eq.html" title="Equazione 3.4.7">(3.4.7)</a>-<a class="xref" data-knowl="./knowl/eps11_eq.html" title="Equazione 3.4.9">(3.4.9)</a> mediante il legame elastico si ottiene</p>
 <div class="displaymath">
 \begin{align}
 -\nu\,\frac{\bar{t}}{E}\ = \frac{\partial u_1}{\partial X_1}\,,\amp\qquad 0 = \frac{1}{2}\left(\frac{\partial u_2}{\partial X_3} + \frac{\partial u_3}{\partial X_2}\right)\,,\tag{3.4.10}\\
@@ -271,15 +270,15 @@ var js_version = 0.12;
 \frac{\bar{t}}{E} = \frac{\partial u_3}{\partial X_3}\,,\amp\qquad 0 = \frac{1}{2}\left(\frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1}\right)\,.\tag{3.4.12}
 \end{align}
 </div>
-<p>Equazioni per le quali è facile verificare che una soluzione è data da</p>
+<p data-braille="continuation">Equazioni per le quali è facile verificare che una soluzione è data da</p>
 <div class="displaymath">
 \begin{equation}
 u_1 = -\nu\,\frac{\bar{t}}{E} \, X_1\,,\quad u_2 = -\nu\,\frac{\bar{t}}{E} \, X_2\,,\quad u_3 = \frac{\bar{t}}{E} \, X_3\,.\label{motivation_displ_eq}\tag{3.4.13}
 \end{equation}
 </div>
-<p>Al riguardo si osserva che si parla di <em class="emphasis">una soluzione</em> in quanto sommando a tale campo di spostamento tutti i possibili moti rigidi, che nel problema assegnato non sono esplicitamente eliminati, si otterrebbe sempre la stessa soluzione in termini di campi di tensione e deformazione.</p>
-<article class="assemblage-like" id="assemblage-17"><h6 class="heading"><span class="title">verifica.</span></h6>
-<p id="p-283">Sulla base del campo di spostamento definito dalle <a data-knowl="./knowl/motivation_displ_eq.html" title="Equazione 3.4.13">(3.4.13)</a> si utilizzino le seguenti istruzioni MATLAB per calcolare i relativi campi di deformazione e di tensione. <figure class="figure-like" id="listing-31"><pre class="console"><b>syms t E ni;
+<p data-braille="continuation">Al riguardo si osserva che si parla di <em class="emphasis">una soluzione</em> in quanto sommando a tale campo di spostamento tutti i possibili moti rigidi, che nel problema assegnato non sono esplicitamente eliminati, si otterrebbe sempre la stessa soluzione in termini di campi di tensione e deformazione.</p>
+<article class="assemblage assemblage-like" id="assemblage-17"><h6 class="heading"><span class="title">verifica.</span></h6>
+<p id="p-283">Sulla base del campo di spostamento definito dalle <a class="xref" data-knowl="./knowl/motivation_displ_eq.html" title="Equazione 3.4.13">(3.4.13)</a> si utilizzino le seguenti istruzioni MATLAB per calcolare i relativi campi di deformazione e di tensione. <figure class="listing figure-like" id="listing-31"><pre class="console"><b>syms t E ni;
 X = sym('X', [1 3]);
 u = sym('u', [1 3]);
 u(1) = -ni*t/E * X(1);
@@ -304,12 +303,12 @@ Voigt_C = E/((1+ni)*(1-2*ni))*[(1-ni) ni ni 0 0 0; ...
 Voigt_sig = Voigt_C*Voigt_eps;
 simplify(Voigt_sig)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">3.4.2.</span> </figcaption></figure></p></article></section><section class="subsection" id="bend_problem_sub"><h3 class="heading hide-type">
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.4.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></section><section class="subsection" id="bend_problem_sub"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">3.4.2</span> <span class="title">il solido prismatico semplicemente inflesso</span>
 </h3>
-<a href="problem_sec_elasticity_chap_it.html#bend_problem_sub" class="permalink">¶</a><p id="p-284">Quanto ottenuto per il solido prismatico soggetto a campi di trazione uniformi alle estremità può essere facilmente esteso al caso in cui le trazioni applicate alle estremità abbiano l'andamento lineare mostrato nella figura seguente.</p>
-<figure class="figure-like" id="figure-29"><div class="image-box" style="width: 96%; margin-left: 2%; margin-right: 2%;"><img src="images/bend_problem.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">3.4.3.</span> </figcaption></figure><section class="subsubsection" id="subsubsection-16"><h4 class="heading hide-type">
+<p id="p-284">Quanto ottenuto per il solido prismatico soggetto a campi di trazione uniformi alle estremità può essere facilmente esteso al caso in cui le trazioni applicate alle estremità abbiano l'andamento lineare mostrato nella figura seguente.</p>
+<figure class="figure figure-like" id="figure-29"><div class="image-box" style="width: 96%; margin-left: 2%; margin-right: 2%;"><img src="images/bend_problem.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">3.4.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure><section class="subsubsection" id="subsubsection-16"><h4 class="heading hide-type">
 <span class="type">Sottosottosezione</span> <span class="codenumber">3.4.2.1</span> <span class="title">analisi statica</span>
 </h4>
 <p id="p-285">La formulazione della parte statica del problema è identica a quella fatta per il solido prismatico semplicemente teso eccetto per le facce di estremità del solido sulle quali le trazioni applicate assumono la seguente espressione</p>
@@ -319,7 +318,7 @@ simplify(Voigt_sig)
 \Sigma_2:\amp\quad \matWp{t}{2} = \left[\begin{array}{c}0\\0\\\frac{\bar{t}}{H/2}\,X_2 \end{array}\right] \,,\tag{3.4.15}
 \end{align}
 </div>
-<p>dove \(H\) rappresenta l'altezza del solido lungo la direzione \(X_2\) e \(\bar{t}\) è l'intensità della trazione applicata sui lembi superiore ed inferiore.</p>
+<p data-braille="continuation">dove \(H\) rappresenta l'altezza del solido lungo la direzione \(X_2\) e \(\bar{t}\) è l'intensità della trazione applicata sui lembi superiore ed inferiore.</p>
 <p id="p-286">Anche in questo caso si può procedere assumendo una soluzione di tentativo per il tensore della tensione per poi verificare il soddisfacimento delle equazioni di equilibrio e delle condizioni al contorno. In particolare per \(\tens{\sigma}\) si assume la seguente forma</p>
 <div class="displaymath">
 \begin{equation}
@@ -331,7 +330,7 @@ simplify(Voigt_sig)
 \end{array}\right]\tag{3.4.16}
 \end{equation}
 </div>
-<p>valida su tutto il dominio e con \(\kappa\) una costante generica. Con tale assunzione la scrittura delle equazioni equilibrio fornisce</p>
+<p data-braille="continuation">valida su tutto il dominio e con \(\kappa\) una costante generica. Con tale assunzione la scrittura delle equazioni equilibrio fornisce</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{l}
@@ -342,8 +341,8 @@ simplify(Voigt_sig)
 \quad\;\text{in}\;\body_0\,,
 \end{equation*}
 </div>
-<p>da cui si evince il loro soddisfacimento.</p>
-<p id="p-287">Ripercorrendo gli stessi passi fatti nella <a href="motivations_sec_elasticity_chap_it.html#motivation_static_subsubsec" class="internal" title="Sottosottosezione 3.1.1.1: assunzione sul campo di tensione e soluzione">Sottosottosezione 3.1.1.1</a> per il solido semplicemente teso, si passa alla verifica o imposizione delle condizione al contorno. In particolare si verifica facilmente il soddisfacimento della <a data-knowl="./knowl/motiv_bc3_eq.html" title="Equazione 3.1.6">(3.1.6)</a>, infatti</p>
+<p data-braille="continuation">da cui si evince il loro soddisfacimento.</p>
+<p id="p-287">Ripercorrendo gli stessi passi fatti nella <a href="motivations_sec_elasticity_chap_it.html#motivation_static_subsubsec" class="internal" title="Sottosottosezione 3.1.1.1: assunzione sul campo di tensione e soluzione">Sottosottosezione 3.1.1.1</a> per il solido semplicemente teso, si passa alla verifica o imposizione delle condizione al contorno. In particolare si verifica facilmente il soddisfacimento della <a class="xref" data-knowl="./knowl/motiv_bc3_eq.html" title="Equazione 3.1.6">(3.1.6)</a>, infatti</p>
 <div class="displaymath">
 \begin{equation*}
 \left[\begin{array}{ccc}
@@ -355,7 +354,7 @@ simplify(Voigt_sig)
 \left[\begin{array}{r}0\\0\\0\end{array}\right] \,.
 \end{equation*}
 </div>
-<p>La condizione <a data-knowl="./knowl/motiv_bc1_eq.html" title="Equazione 3.1.4">(3.1.4)</a></p>
+<p data-braille="continuation">La condizione <a class="xref" data-knowl="./knowl/motiv_bc1_eq.html" title="Equazione 3.1.4">(3.1.4)</a> fornisce</p>
 <div class="displaymath">
 \begin{equation*}
 \left[\begin{array}{ccc}
@@ -370,8 +369,8 @@ simplify(Voigt_sig)
 \,.
 \end{equation*}
 </div>
-<p>Lo stesso risultato verrebbe fornito dalla condizione  <a data-knowl="./knowl/motiv_bc2_eq.html" title="Equazione 3.1.5">(3.1.5)</a>.</p>
-<p id="p-288">In conclusione il campo di tensione che soddisfa tutte le quazioni di equilibrio in gioco è</p>
+<p data-braille="continuation">Lo stesso risultato verrebbe fornito dalla condizione  <a class="xref" data-knowl="./knowl/motiv_bc2_eq.html" title="Equazione 3.1.5">(3.1.5)</a>.</p>
+<p id="p-288">In conclusione il campo di tensione che soddisfa tutte le equazioni di equilibrio in gioco è</p>
 <div class="displaymath">
 \begin{equation}
 \mat{\sigma} =
@@ -382,9 +381,10 @@ simplify(Voigt_sig)
 \end{array}\right]\,.\label{bend_stress_eq}\tag{3.4.17}
 \end{equation}
 </div>
-<p>Quindi la soluzione statica è data da uno stato di trazione pura nella direzione \(X_3\) distribuito linearmente lungo l'asse \(X_2\text{.}\) Per maggiore comodità degli sviluppi successivi continueremo ad utilizzare l'espressione \(\sigma_{33}=\kappa\,X_2\) ricordando comunque che \(\kappa=\frac{\bar{t}}{H/2}\text{.}\)</p>
-<article class="remark-like" id="remark-14"><h6 class="heading">
-<span class="type">Commento</span> <span class="codenumber">3.4.4</span>.</h6>
+<p data-braille="continuation">Quindi la soluzione statica è data da uno stato di trazione pura nella direzione \(X_3\) distribuito linearmente lungo l'asse \(X_2\text{.}\) Per maggiore comodità degli sviluppi successivi continueremo ad utilizzare l'espressione \(\sigma_{33}=\kappa\,X_2\) ricordando comunque che \(\kappa=\frac{\bar{t}}{H/2}\text{.}\)</p>
+<article class="remark remark-like" id="remark-14"><h6 class="heading">
+<span class="type">Commento</span><span class="space"> </span><span class="codenumber">3.4.4</span><span class="period">.</span>
+</h6>
 <p id="p-289">Analogamente al solido semplicemente, si noti come la soluzione ottenuta coivolga solo la componente \(\sigma_{33}\) del tensore. Differisce solo la forma della soluzione che invece di essere costante è lineare lungo lasse \(X_2\text{.}\)</p></article></section><section class="subsubsection" id="subsubsection-17"><h4 class="heading hide-type">
 <span class="type">Sottosottosezione</span> <span class="codenumber">3.4.2.2</span> <span class="title">dalla tensione agli spostamenti</span>
 </h4>
@@ -396,7 +396,7 @@ simplify(Voigt_sig)
 \amp \varepsilon_{11} = -\nu\,\varepsilon_{33} = -\nu\,\frac{\kappa\,X_2}{E}\,,\label{bend_eps11_eq}\tag{3.4.20}\\
 \amp \varepsilon_{12} = \varepsilon_{13} = \varepsilon_{23} = 0\,.\label{bend_epsij_eq}\tag{3.4.21}
 \end{align}
-</div> Tali valori delle componenti di deformazione consentono di imporre il legame deformazione-spostamento <a data-knowl="./knowl/ep_2_eq.html" title="Equazione 3.4.2">(3.4.2)</a> nei seguenti termini<div class="displaymath">
+</div> Tali valori delle componenti di deformazione consentono di imporre il legame deformazione-spostamento <a class="xref" data-knowl="./knowl/ep_2_eq.html" title="Equazione 3.4.2">(3.4.2)</a> nei seguenti termini<div class="displaymath">
 \begin{align}
 -\nu\,\frac{\kappa\,X_2}{E}\ = \frac{\partial u_1}{\partial X_1}\,,\amp\qquad 0 = \frac{1}{2}\left(\frac{\partial u_2}{\partial X_3} + \frac{\partial u_3}{\partial X_2}\right)\,,\tag{3.4.22}\\
 -\nu\,\frac{\kappa\,X_2}{E}= \frac{\partial u_2}{\partial X_2}\,,\amp\qquad 0 = \frac{1}{2}\left(\frac{\partial u_3}{\partial X_1} + \frac{\partial u_1}{\partial X_3}\right)\,,\tag{3.4.23}\\
@@ -408,8 +408,8 @@ u_{1} \amp = -\nu\frac{\kappa}{E}\,X_1 X_2\,,\label{bend_displ_1}\tag{3.4.25}\\
 u_{2} \amp = -\frac{\kappa}{2E}\left[X_3^2 +\nu\left(X_2^2 - X_1^2 \right)\right]\,,\label{bend_displ_2}\tag{3.4.26}\\
 u_{3} \amp = \frac{\kappa}{E}\,X_2 X_3\,.\label{bend_displ_3}\tag{3.4.27}
 \end{align}
-</div></section><article class="assemblage-like" id="assemblage-18"><h6 class="heading"><span class="title">verifica.</span></h6>
-<p id="p-291">Sulla base del campo di spostamento definito dalle <a data-knowl="./knowl/bend_displ_1.html" title="Equazione 3.4.25">(3.4.25)</a>, <a data-knowl="./knowl/bend_displ_2.html" title="Equazione 3.4.26">(3.4.26)</a>, <a data-knowl="./knowl/bend_displ_3.html" title="Equazione 3.4.27">(3.4.27)</a> è possibile verificare il risultato ottenuto con le seguenti istruzioni MATLAB. <figure class="figure-like" id="listing-32"><pre class="console"><b>syms E ni k;
+</div></section><article class="assemblage assemblage-like" id="assemblage-18"><h6 class="heading"><span class="title">verifica.</span></h6>
+<p id="p-291">Sulla base del campo di spostamento definito dalle <a class="xref" data-knowl="./knowl/bend_displ_1.html" title="Equazione 3.4.25">(3.4.25)</a>, <a class="xref" data-knowl="./knowl/bend_displ_2.html" title="Equazione 3.4.26">(3.4.26)</a>, <a class="xref" data-knowl="./knowl/bend_displ_3.html" title="Equazione 3.4.27">(3.4.27)</a> è possibile verificare il risultato ottenuto con le seguenti istruzioni MATLAB. <figure class="listing figure-like" id="listing-32"><pre class="console"><b>syms E ni k;
 X = sym('X', [1 3]);
 u = sym('u', [1 3]);
 u(1) = -ni*k/E * X(1) * X(2);
@@ -434,71 +434,68 @@ Voigt_C = E/((1+ni)*(1-2*ni))*[(1-ni) ni ni 0 0 0; ...
 Voigt_sig = Voigt_C*Voigt_eps;
 simplify(Voigt_sig)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">3.4.5.</span> </figcaption></figure></p></article></section><section class="subsection" id="subsection-56"><h3 class="heading hide-type">
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.4.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></section><section class="subsection" id="subsection-56"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">3.4.3</span> <span class="title">riepilogo</span>
 </h3>
 <p id="p-292">Si riporta una sintesi delle soluzioni trovate per i solidi prismatici seplicemente teso ed inflesso al fine anche di mostrare le evidenti analogie. Per ogni campo trovato, tensione, deformazione e spostamento, si riportano solo le componenenti non nulle.</p>
-<article class="assemblage-like" id="assemblage-19"><p id="p-293"><figure class="figure-like" id="prismatic_solutions_tab"><table>
+<article class="assemblage assemblage-like" id="assemblage-19"><p id="p-293"><figure class="table table-like" id="prismatic_solutions_tab"><figcaption><span class="type">Tabella</span><span class="space"> </span><span class="codenumber">3.4.6<span class="period">.</span></span><span class="space"> </span></figcaption><table>
 <tr>
 <td class="l m b1 r0 l0 t0 lines"></td>
 <td class="l m b1 r0 l0 t0 lines"></td>
 <td class="l m b1 r0 l0 t0 lines">solido teso</td>
 <td class="l m b1 r0 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines">solido inflesso</td>
+<td class="l m b1 r0 l0 t0 lines" data-braille="last-cell">solido inflesso</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">\(\sigma_{33}\)</td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="l m b0 r0 l0 t0 lines">\(\kappa\)</td>
 <td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines">\(\kappa\,X_2\)</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(\kappa\,X_2\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">\(\varepsilon_{11}\)</td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="l m b0 r0 l0 t0 lines">\(-\nu\kappa/E\)</td>
 <td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines">\(-\nu\kappa\,X_2/E\)</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(-\nu\kappa\,X_2/E\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">\(\varepsilon_{22}\)</td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="l m b0 r0 l0 t0 lines">\(-\nu\kappa/E\)</td>
 <td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines">\(-\nu\kappa\,X_2/E\)</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(-\nu\kappa\,X_2/E\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">\(\varepsilon_{33}\)</td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="l m b0 r0 l0 t0 lines">\(\kappa/E\)</td>
 <td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines">\(\kappa\,X_2/E\)</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(\kappa\,X_2/E\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">\(u_{1}\)</td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="l m b0 r0 l0 t0 lines">\(-\nu\kappa\,X_1/E\)</td>
 <td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines">\(-\nu\kappa\,X_1X_2/E\)</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(-\nu\kappa\,X_1X_2/E\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">\(u_{2}\)</td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="l m b0 r0 l0 t0 lines">\(-\nu\kappa\,X_2/E\)</td>
 <td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines">\(-\kappa\left[X_3^2 +\nu\left(X_2^2 - X_1^2 \right)\right] /(2E)\)</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(-\kappa\left[X_3^2 +\nu\left(X_2^2 - X_1^2 \right)\right] /(2E)\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">\(u_{3}\)</td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="l m b0 r0 l0 t0 lines">\(\kappa\,X_3/E\)</td>
 <td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines">\(\kappa\,X_2X_3/E\)</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(\kappa\,X_2X_3/E\)</td>
 </tr>
-</table>
-<figcaption><span class="type">Tabella</span> <span class="codenumber">3.4.6.</span> </figcaption></figure></p></article></section></section></div></main>
+</table></figure></p></article></section></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.12/login.js"></script>
 </body>
 </html>

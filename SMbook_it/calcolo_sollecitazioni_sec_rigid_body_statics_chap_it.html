@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-01T08:38:18+02:00    *-->
-<!--*                                    *-->
-<!--*      https://pretextbook.org       *-->
-<!--*                                    *-->
-<!--**************************************-->
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-09-15T18:44:59+02:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
 <html lang="it-IT">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Solid Mechanics - calcolo e diagrammi delle sollecitazioni</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -24,7 +26,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -41,24 +43,21 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.12;
-</script>
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Valuta (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Torna alla pagina dei contenuti</a><div class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Torna alla pagina dei contenuti</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{{\not{\mid}}}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -97,7 +96,7 @@ var js_version = 0.12;
 <p class="byline">Antonio Bilotta</p>
 </div>
 </div></div>
-<nav id="primary-navbar" class="navbar"><div class="container">
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contenuti</button><div class="tree-nav toolbar toolbar-divisor-3">
 <a class="index-button toolbar-item button" href="solid_mechnics_book_index_it.html" title="Indice">Indice</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="indefinte_sec_rigid_body_statics_chap_it.html" title="Precedente">Prec</a><a id="upbutton" class="up-button button toolbar-item" href="rigid_body_statics_chap_it.html" title="Sopra">Su</a><a id="nextbutton" class="next-button button toolbar-item" href="backmatter_it.html" title="Successivo">Succ</a></span>
@@ -107,9 +106,9 @@ var js_version = 0.12;
 <button class="sidebar-left-toggle-button button toolbar-item active">Contenuti</button><a class="previous-button toolbar-item button" href="indefinte_sec_rigid_body_statics_chap_it.html" title="Precedente">Prec</a><a class="up-button button toolbar-item" href="rigid_body_statics_chap_it.html" title="Sopra">Su</a><a class="next-button button toolbar-item" href="backmatter_it.html" title="Successivo">Succ</a>
 </div>
 </div></nav></header><div class="page">
-<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link">
+<li class="link frontmatter">
 <a href="front_matter_it.html" data-scroll="front_matter_it"><span class="title">Copertina</span></a><ul>
 <li><a href="front_colophon_it.html" data-scroll="front_colophon_it">Colofone</a></li>
 <li><a href="author_bio_it.html" data-scroll="author_bio_it">Biografia dell'autore</a></li>
@@ -179,40 +178,40 @@ var js_version = 0.12;
 <li><a href="constraints_sec_rigid_body_statics_chap_it.html" data-scroll="constraints_sec_rigid_body_statics_chap_it">vincoli</a></li>
 <li><a href="free_body_sec_rigid_body_statics_chap_it.html" data-scroll="free_body_sec_rigid_body_statics_chap_it">diagrammi di corpo libero</a></li>
 <li><a href="analysis_sec_rigid_body_statics_chap_it.html" data-scroll="analysis_sec_rigid_body_statics_chap_it">analisi statica</a></li>
-<li><a href="analysis_examples_sec_rigid_body_statics_chap_it.html" data-scroll="analysis_examples_sec_rigid_body_statics_chap_it">applicazione dell'analisi statica ai sistemi di corpi rigidi</a></li>
+<li><a href="analysis_examples_sec_rigid_body_statics_chap_it.html" data-scroll="analysis_examples_sec_rigid_body_statics_chap_it">applicazione dell'analisi statica ai sistemi di corpi</a></li>
 <li><a href="sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_it">sollecitazioni</a></li>
 <li><a href="indefinte_sec_rigid_body_statics_chap_it.html" data-scroll="indefinte_sec_rigid_body_statics_chap_it">equazioni indefinite di equilibrio per la trave piana</a></li>
 <li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it" class="active">calcolo e diagrammi delle sollecitazioni</a></li>
 </ul>
 </li>
-<li class="link"><a href="backmatter_it.html" data-scroll="backmatter_it"><span class="title">Back Matter</span></a></li>
+<li class="link backmatter"><a href="backmatter_it.html" data-scroll="backmatter_it"><span class="title">Back Matter</span></a></li>
 <li class="link"><a href="solid_mechnics_book_index_it.html" data-scroll="solid_mechnics_book_index_it"><span class="title">Indice</span></a></li>
 <li class="link"><a href="back_colophon_it.html" data-scroll="back_colophon_it"><span class="title">Colofone</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Scritto con PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="pretext-content"><section class="section" id="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it"><h2 class="heading hide-type">
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it"><h2 class="heading hide-type">
 <span class="type">Sezione</span> <span class="codenumber">5.9</span> <span class="title">calcolo e diagrammi delle sollecitazioni</span>
 </h2>
-<a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html" class="permalink">¶</a><p id="p-466">L'analisi statica presentata nelle sezioni precedenti consente di valutare le reazioni vincolari per un sistema isostatico. A partire da questa informazione e utilizzando gli integrali generali <a data-knowl="./knowl/general_const_N_eq.html" title="Equazione 5.8.13">(5.8.13)</a>, <a data-knowl="./knowl/general_const_T_eq.html" title="Equazione 5.8.14">(5.8.14)</a> e <a data-knowl="./knowl/general_const_M_eq.html" title="Equazione 5.8.15">(5.8.15)</a> è possibile procedere con il calcolo delle sollecitazioni per sistemi di travi soggetti a forze/coppie generiche e carichi ripartiti al più costanti (per carichi ripartiti di tipo generico occorre utilizzare le <a data-knowl="./knowl/general_N_eq.html" title="Equazione 5.8.10">(5.8.10)</a>, <a data-knowl="./knowl/general_T_eq.html" title="Equazione 5.8.11">(5.8.11)</a> e <a data-knowl="./knowl/general_M_eq.html" title="Equazione 5.8.12">(5.8.12)</a>).</p>
+<p id="p-466">L'analisi statica presentata nelle sezioni precedenti consente di valutare le reazioni vincolari per un sistema isostatico. A partire da questa informazione e utilizzando gli integrali generali <a class="xref" data-knowl="./knowl/general_const_N_eq.html" title="Equazione 5.8.13">(5.8.13)</a>, <a class="xref" data-knowl="./knowl/general_const_T_eq.html" title="Equazione 5.8.14">(5.8.14)</a> e <a class="xref" data-knowl="./knowl/general_const_M_eq.html" title="Equazione 5.8.15">(5.8.15)</a> è possibile procedere con il calcolo delle sollecitazioni per sistemi di travi soggetti a forze/coppie generiche e carichi ripartiti al più costanti (per carichi ripartiti di tipo generico occorre utilizzare le <a class="xref" data-knowl="./knowl/general_N_eq.html" title="Equazione 5.8.10">(5.8.10)</a>, <a class="xref" data-knowl="./knowl/general_T_eq.html" title="Equazione 5.8.11">(5.8.11)</a> e <a class="xref" data-knowl="./knowl/general_M_eq.html" title="Equazione 5.8.12">(5.8.12)</a>).</p>
 <p id="p-467">La procedura di calcolo delle sollecitazioni verrà illustrata discutendo alcuni esempi ed utilizzando MATLAB per lo svolgimento dei calcoli richiesti e la visualizzazione dei risultati. Data la semplicità degli schemi considerati il calcolo esplicito delle reazioni vincolari viene omesso.</p>
 <section class="subsection" id="subsection-122"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">5.9.1</span> <span class="title"></span>
 </h3>
 <p id="p-468">Si consideri il seguente schema di corpo di libero di cui è facile verificare il soddisfacimento delle condizioni di equilibrio.</p>
-<figure class="figure-like" id="figure-89"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/schema1bis.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">5.9.1.</span> </figcaption></figure><p id="p-469">Risultano chiari dallo schema i valori assunti dalle sollecitazioni per \(x=0\text{,}\) ovvero</p>
+<figure class="figure figure-like" id="figure-93"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/schema1bis.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.9.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-469">Risultano chiari dallo schema i valori assunti dalle sollecitazioni per \(x=0\text{,}\) ovvero</p>
 <div class="displaymath">
 \begin{equation*}
 N(0) = F\,,\quad T(0) = F\,,\quad  M(0) = -F l\,.
 \end{equation*}
 </div>
-<p>Utilizzando quindi gli integrali generali si ottenendo le seguenti espressioni delle componenti di sollecitazione in funzione dell'ascissa \(x\) posta lungo l'asse della trave</p>
+<p data-braille="continuation">Utilizzando quindi gli integrali generali si ottenendo le seguenti espressioni delle componenti di sollecitazione in funzione dell'ascissa \(x\) posta lungo l'asse della trave</p>
 <div class="displaymath">
 \begin{equation*}
 N(x) = F\,,\quad T(x) = F\,,\quad  M(x) = -F l + F\,x\,.
 \end{equation*}
 </div>
-<article class="assemblage-like" id="assemblage-48"><p id="p-470">Le sollecitazioni così ottenute possono essere visualizzate utilizzando le seguenti istruzioni MATLAB. <figure class="figure-like" id="listing-60"><pre class="console"><b>% diagramma dello sforzo normale
+<article class="assemblage assemblage-like" id="assemblage-48"><p id="p-470">Le sollecitazioni così ottenute possono essere visualizzate utilizzando le seguenti istruzioni MATLAB. <figure class="listing figure-like" id="listing-61"><pre class="console"><b>% diagramma dello sforzo normale
 syms N(x, F);
 N(x,F) = F;
 
@@ -251,7 +250,7 @@ plot(Xv,Mv,'r',Xv,Beam,'k','LineWidth',2)
 set(gca, 'Ylim', [-1 1])
 set(gca, 'YDir','reverse')
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">5.9.2.</span> </figcaption></figure></p></article><p id="p-471">Si ottengono in tal modo i seguenti grafici relativi a sforzo normale (verde), taglio (blu) e momento flettente (rosso).</p>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">5.9.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-471">Si ottengono in tal modo i seguenti grafici relativi a sforzo normale (verde), taglio (blu) e momento flettente (rosso).</p>
 <div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/sollecitazioni_ex1_N.png" style="width: 100%; height: auto;" alt=""></div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
 <div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;"><img src="images/sollecitazioni_ex1_T.png" style="width: 100%; height: auto;" alt=""></div>
@@ -261,16 +260,16 @@ set(gca, 'YDir','reverse')
 <span class="type">Sottosezione</span> <span class="codenumber">5.9.2</span> <span class="title"></span>
 </h3>
 <p id="p-473">Si consideri il seguente schema relativo ad una mensola soggetta ad un carico ripartito.</p>
-<figure class="figure-like" id="figure-90"><div class="image-box" style="width: 38%; margin-left: 31%; margin-right: 31%;"><img src="images/mensola_con_carico_ripartito.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">5.9.3.</span> </figcaption></figure><p id="p-474">Lo schema di corpo libero e il relativo calcolo delle reazioni vincolari forniscono il seguente risultato.</p>
-<figure class="figure-like" id="figure-91"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/mensola_con_carico_ripartito_calcolo_reazioni.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">5.9.4.</span> </figcaption></figure><p id="p-475">Informazione utilizzabile nella scrittura degli integrali generali <a data-knowl="./knowl/general_const_N_eq.html" title="Equazione 5.8.13">(5.8.13)</a>, <a data-knowl="./knowl/general_const_T_eq.html" title="Equazione 5.8.14">(5.8.14)</a>, <a data-knowl="./knowl/general_const_M_eq.html" title="Equazione 5.8.15">(5.8.15)</a>, ed ottenere la seguente espressione delle sollecitazioni lungo l'asse della trave.</p>
+<figure class="figure figure-like" id="figure-94"><div class="image-box" style="width: 38%; margin-left: 31%; margin-right: 31%;"><img src="images/mensola_con_carico_ripartito.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.9.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-474">Lo schema di corpo libero e il relativo calcolo delle reazioni vincolari forniscono il seguente risultato.</p>
+<figure class="figure figure-like" id="figure-95"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/mensola_con_carico_ripartito_calcolo_reazioni.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.9.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-475">Informazione utilizzabile nella scrittura degli integrali generali <a class="xref" data-knowl="./knowl/general_const_N_eq.html" title="Equazione 5.8.13">(5.8.13)</a>, <a class="xref" data-knowl="./knowl/general_const_T_eq.html" title="Equazione 5.8.14">(5.8.14)</a>, <a class="xref" data-knowl="./knowl/general_const_M_eq.html" title="Equazione 5.8.15">(5.8.15)</a>, ed ottenere la seguente espressione delle sollecitazioni lungo l'asse della trave.</p>
 <div class="displaymath">
 \begin{equation*}
 N(x) = 0\,,\quad T(x) = -q\,x + ql \,,\quad  M(x) = -ql^2/2 + ql\,x - q\,x^2/2 \,.
 \end{equation*}
 </div>
-<article class="assemblage-like" id="assemblage-49"><p id="p-476">Le sollecitazioni così ottenute possono essere visualizzate utilizzando le seguenti istruzioni MATLAB. <figure class="figure-like" id="listing-61"><pre class="console"><b>% diagramma dello sforzo normale
+<article class="assemblage assemblage-like" id="assemblage-49"><p id="p-476">Le sollecitazioni così ottenute possono essere visualizzate utilizzando le seguenti istruzioni MATLAB. <figure class="listing figure-like" id="listing-62"><pre class="console"><b>% diagramma dello sforzo normale
 syms N(x);
 N(x) = 0;
 
@@ -309,7 +308,7 @@ plot(Xv,Mv,'r',Xv,Beam,'k','LineWidth',2)
 set(gca, 'Ylim', [-1 1])
 set(gca, 'YDir','reverse')
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">5.9.5.</span> </figcaption></figure></p></article><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/sollecitazioni_ex2_N.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">5.9.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/sollecitazioni_ex2_N.png" style="width: 100%; height: auto;" alt=""></div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
 <div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;"><img src="images/sollecitazioni_ex2_T.png" style="width: 100%; height: auto;" alt=""></div>
 <div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;"><img src="images/sollecitazioni_ex2_M.png" style="width: 100%; height: auto;" alt=""></div>
@@ -317,22 +316,22 @@ set(gca, 'YDir','reverse')
 <span class="type">Sottosezione</span> <span class="codenumber">5.9.3</span> <span class="title"></span>
 </h3>
 <p id="p-477">Si consideri la seguente trave appoggiata soggetta ad un carico ripartito.</p>
-<figure class="figure-like" id="figure-92"><div class="image-box" style="width: 38%; margin-left: 31%; margin-right: 31%;"><img src="images/trave_appoggiata_con_carico_ripartito.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">5.9.6.</span> </figcaption></figure><p id="p-478">Lo schema di corpo libero e il relativo calcolo delle reazioni vincolari forniscono il seguente risultato.</p>
-<figure class="figure-like" id="figure-93"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/trave_appoggiata_con_carico_ripartito_calcolo_reazioni.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">5.9.7.</span> </figcaption></figure><p id="p-479">La soluzione ottenuta dal calcolo delle reazioni vincolari consente la scrittura delle seguenti condizioni relative all'estremo \(A\) della trave</p>
+<figure class="figure figure-like" id="figure-96"><div class="image-box" style="width: 38%; margin-left: 31%; margin-right: 31%;"><img src="images/trave_appoggiata_con_carico_ripartito.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.9.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-478">Lo schema di corpo libero e il relativo calcolo delle reazioni vincolari forniscono il seguente risultato.</p>
+<figure class="figure figure-like" id="figure-97"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/trave_appoggiata_con_carico_ripartito_calcolo_reazioni.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.9.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-479">La soluzione ottenuta dal calcolo delle reazioni vincolari consente la scrittura delle seguenti condizioni relative all'estremo \(A\) della trave</p>
 <div class="displaymath">
 \begin{equation*}
 N(0) = 0\,,\quad T(0) = ql/2\,,\quad  M(0) = 0\,,
 \end{equation*}
 </div>
-<p>condizioni che consentono di esprimere le componenti di sollecitazione lungo l'asse della trave:</p>
+<p data-braille="continuation">condizioni che consentono di esprimere le componenti di sollecitazione lungo l'asse della trave:</p>
 <div class="displaymath">
 \begin{equation*}
 N(x) = 0\,,\quad T(x) = -q\,x + ql/2 \,,\quad  M(x) = ql/2\,x - q\,x^2/2 \,.
 \end{equation*}
 </div>
-<article class="assemblage-like" id="assemblage-50"><p id="p-480">Le istruzioni MATLAB da utilizzare per diagrammare le componenti di sollecitazione sono formulabili come di seguto riportato. <figure class="figure-like" id="listing-62"><pre class="console"><b>% diagramma dello sforzo normale
+<article class="assemblage assemblage-like" id="assemblage-50"><p id="p-480">Le istruzioni MATLAB da utilizzare per diagrammare le componenti di sollecitazione sono formulabili come di seguto riportato. <figure class="listing figure-like" id="listing-63"><pre class="console"><b>% diagramma dello sforzo normale
 syms N(x);
 N(x) = 0;
 
@@ -371,7 +370,7 @@ plot(Xv,Mv,'r',Xv,Beam,'k','LineWidth',2)
 set(gca, 'Ylim', [-1 1])
 set(gca, 'YDir','reverse')
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">5.9.8.</span> </figcaption></figure></p></article><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/sollecitazioni_ex3_N.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">5.9.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/sollecitazioni_ex3_N.png" style="width: 100%; height: auto;" alt=""></div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
 <div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;"><img src="images/sollecitazioni_ex3_T.png" style="width: 100%; height: auto;" alt=""></div>
 <div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;"><img src="images/sollecitazioni_ex3_M.png" style="width: 100%; height: auto;" alt=""></div>
@@ -379,10 +378,10 @@ set(gca, 'YDir','reverse')
 <span class="type">Sottosezione</span> <span class="codenumber">5.9.4</span> <span class="title"></span>
 </h3>
 <p id="p-481">Si consideri la seguente trave appoggiata soggetta ad una forza concentrata in mezzeria.</p>
-<figure class="figure-like" id="figure-94"><div class="image-box" style="width: 38%; margin-left: 31%; margin-right: 31%;"><img src="images/trave_appoggiata_con_forza_concentrata.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">5.9.9.</span> </figcaption></figure><p id="p-482">Si riporta anche in questo caso il diagramma di corpo libero utilizzato per il calcolo delle reazioni vincolari insieme al risultato ottenuto dal calcolo.</p>
-<figure class="figure-like" id="figure-95"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/trave_appoggiata_con_forza_concentrata_calcolo_reazioni.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">5.9.10.</span> </figcaption></figure><p id="p-483">Rispetto ai casi precedenti, il caso in esame è comunque differente poiché la forza concentrata in mezzeria determina una discontinuità del taglio \(T(x)\) e quindi, essendo \(dM/dx=T\text{,}\) anche una discontinuità della derivata del momento flettente. Pertanto gli integrali generali  <a data-knowl="./knowl/general_const_N_eq.html" title="Equazione 5.8.13">(5.8.13)</a>, <a data-knowl="./knowl/general_const_T_eq.html" title="Equazione 5.8.14">(5.8.14)</a> e <a data-knowl="./knowl/general_const_M_eq.html" title="Equazione 5.8.15">(5.8.15)</a> non sono applicabili direttamente al tratto di trave \(AB\) ma devono essere applicati separatamente ai tratti di trave \(AC\) e  \(CB\text{.}\) In tal modo si ottengono due rappresentazioni delle sollecitazioni \(T(x)\) e \(M(x)\text{,}\) una rappresentazione valida per il tratto \(AC\) ed un'altra per il tratto \(CB\text{.}\)</p>
+<figure class="figure figure-like" id="figure-98"><div class="image-box" style="width: 38%; margin-left: 31%; margin-right: 31%;"><img src="images/trave_appoggiata_con_forza_concentrata.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.9.9<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-482">Si riporta anche in questo caso il diagramma di corpo libero utilizzato per il calcolo delle reazioni vincolari insieme al risultato ottenuto dal calcolo.</p>
+<figure class="figure figure-like" id="figure-99"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/trave_appoggiata_con_forza_concentrata_calcolo_reazioni.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.9.10<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-483">Rispetto ai casi precedenti, il caso in esame è comunque differente poiché la forza concentrata in mezzeria determina una discontinuità del taglio \(T(x)\) e quindi, essendo \(dM/dx=T\text{,}\) anche una discontinuità della derivata del momento flettente. Pertanto gli integrali generali  <a class="xref" data-knowl="./knowl/general_const_N_eq.html" title="Equazione 5.8.13">(5.8.13)</a>, <a class="xref" data-knowl="./knowl/general_const_T_eq.html" title="Equazione 5.8.14">(5.8.14)</a> e <a class="xref" data-knowl="./knowl/general_const_M_eq.html" title="Equazione 5.8.15">(5.8.15)</a> non sono applicabili direttamente al tratto di trave \(AB\) ma devono essere applicati separatamente ai tratti di trave \(AC\) e  \(CB\text{.}\) In tal modo si ottengono due rappresentazioni delle sollecitazioni \(T(x)\) e \(M(x)\text{,}\) una rappresentazione valida per il tratto \(AC\) ed un'altra per il tratto \(CB\text{.}\)</p>
 <ul class="disc">
 <li id="li-150">Tratto \(AC\text{,}\) \(0 \leq x \leq l/2\text{:}\)<div class="displaymath">
 \begin{align*}
@@ -413,7 +412,7 @@ M_{CB}(x) &amp;= -F/2\,x + Fl/4\,.
 </div>
 </li>
 </ul>
-<article class="assemblage-like" id="assemblage-51"><p id="p-484"><figure class="figure-like" id="listing-63"><pre class="console"><b>% diagramma del taglio
+<article class="assemblage assemblage-like" id="assemblage-51"><p id="p-484"><figure class="listing figure-like" id="listing-64"><pre class="console"><b>% diagramma del taglio
 syms T_ac(x,F) T_cb(x,F);
 T_ac(x,F) = F/2;
 T_cb(x,F) = -F/2;
@@ -451,13 +450,11 @@ Xv_cb,Mv_cb,'r', Xv_cb,Beam,'k', 'LineWidth',2)
 set(gca, 'Ylim', [-1 1])
 set(gca, 'YDir','reverse')
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">5.9.11.</span> </figcaption></figure></p>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">5.9.11<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
 <div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;"><img src="images/sollecitazioni_ex4_T.png" style="width: 100%; height: auto;" alt=""></div>
 <div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;"><img src="images/sollecitazioni_ex4_M.png" style="width: 100%; height: auto;" alt=""></div>
 </div></div></article></section></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.12/login.js"></script>
 </body>
 </html>

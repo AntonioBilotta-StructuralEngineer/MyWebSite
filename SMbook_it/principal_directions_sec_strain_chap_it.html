@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-01T08:38:16+02:00    *-->
-<!--*                                    *-->
-<!--*      https://pretextbook.org       *-->
-<!--*                                    *-->
-<!--**************************************-->
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-09-15T18:44:54+02:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
 <html lang="it-IT">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Solid Mechanics - tensore di deformazione \(\tens{U}\) e direzioni principali (trasformazione degli elementi di linea)</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -24,7 +26,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -41,24 +43,21 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.12;
-</script>
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Valuta (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Torna alla pagina dei contenuti</a><div class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Torna alla pagina dei contenuti</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{{\not{\mid}}}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -97,7 +96,7 @@ var js_version = 0.12;
 <p class="byline">Antonio Bilotta</p>
 </div>
 </div></div>
-<nav id="primary-navbar" class="navbar"><div class="container">
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contenuti</button><div class="tree-nav toolbar toolbar-divisor-3">
 <a class="index-button toolbar-item button" href="solid_mechnics_book_index_it.html" title="Indice">Indice</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="polar_sec_strain_chap_it.html" title="Precedente">Prec</a><a id="upbutton" class="up-button button toolbar-item" href="strain_chap_it.html" title="Sopra">Su</a><a id="nextbutton" class="next-button button toolbar-item" href="measures_sec_strain_chap_it.html" title="Successivo">Succ</a></span>
@@ -107,9 +106,9 @@ var js_version = 0.12;
 <button class="sidebar-left-toggle-button button toolbar-item active">Contenuti</button><a class="previous-button toolbar-item button" href="polar_sec_strain_chap_it.html" title="Precedente">Prec</a><a class="up-button button toolbar-item" href="strain_chap_it.html" title="Sopra">Su</a><a class="next-button button toolbar-item" href="measures_sec_strain_chap_it.html" title="Successivo">Succ</a>
 </div>
 </div></nav></header><div class="page">
-<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link">
+<li class="link frontmatter">
 <a href="front_matter_it.html" data-scroll="front_matter_it"><span class="title">Copertina</span></a><ul>
 <li><a href="front_colophon_it.html" data-scroll="front_colophon_it">Colofone</a></li>
 <li><a href="author_bio_it.html" data-scroll="author_bio_it">Biografia dell'autore</a></li>
@@ -179,21 +178,21 @@ var js_version = 0.12;
 <li><a href="constraints_sec_rigid_body_statics_chap_it.html" data-scroll="constraints_sec_rigid_body_statics_chap_it">vincoli</a></li>
 <li><a href="free_body_sec_rigid_body_statics_chap_it.html" data-scroll="free_body_sec_rigid_body_statics_chap_it">diagrammi di corpo libero</a></li>
 <li><a href="analysis_sec_rigid_body_statics_chap_it.html" data-scroll="analysis_sec_rigid_body_statics_chap_it">analisi statica</a></li>
-<li><a href="analysis_examples_sec_rigid_body_statics_chap_it.html" data-scroll="analysis_examples_sec_rigid_body_statics_chap_it">applicazione dell'analisi statica ai sistemi di corpi rigidi</a></li>
+<li><a href="analysis_examples_sec_rigid_body_statics_chap_it.html" data-scroll="analysis_examples_sec_rigid_body_statics_chap_it">applicazione dell'analisi statica ai sistemi di corpi</a></li>
 <li><a href="sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_it">sollecitazioni</a></li>
 <li><a href="indefinte_sec_rigid_body_statics_chap_it.html" data-scroll="indefinte_sec_rigid_body_statics_chap_it">equazioni indefinite di equilibrio per la trave piana</a></li>
 <li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it">calcolo e diagrammi delle sollecitazioni</a></li>
 </ul>
 </li>
-<li class="link"><a href="backmatter_it.html" data-scroll="backmatter_it"><span class="title">Back Matter</span></a></li>
+<li class="link backmatter"><a href="backmatter_it.html" data-scroll="backmatter_it"><span class="title">Back Matter</span></a></li>
 <li class="link"><a href="solid_mechnics_book_index_it.html" data-scroll="solid_mechnics_book_index_it"><span class="title">Indice</span></a></li>
 <li class="link"><a href="back_colophon_it.html" data-scroll="back_colophon_it"><span class="title">Colofone</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Scritto con PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="pretext-content"><section class="section" id="principal_directions_sec_strain_chap_it"><h2 class="heading hide-type">
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="principal_directions_sec_strain_chap_it"><h2 class="heading hide-type">
 <span class="type">Sezione</span> <span class="codenumber">1.7</span> <span class="title">tensore di deformazione \(\tens{U}\) e direzioni principali (trasformazione degli elementi di linea)</span>
 </h2>
-<a href="principal_directions_sec_strain_chap_it.html" class="permalink">¶</a><p id="p-88">L'individuazione delle direzioni principali del tensore di deformazione consente di ottenenere una rappresentazione “intrinseca” della deformazione a cui è soggetto un generico punto del corpo. L'aggettivazione “intrenseca” si giustifica perché, come vedremo, si ottiene una rappresentazione più semplice dello stato deformativo ma, soprattutto, indipendente dal sistema di riferimento utilizzato.</p>
+<p id="p-88">L'individuazione delle direzioni principali del tensore di deformazione consente di ottenenere una rappresentazione “intrinseca” della deformazione a cui è soggetto un generico punto del corpo. L'aggettivazione “intrenseca” si giustifica perché, come vedremo, si ottiene una rappresentazione più semplice dello stato deformativo ma, soprattutto, indipendente dal sistema di riferimento utilizzato.</p>
 <p id="p-89">La discussione che segue, in modo graduale, presenta l'idea che sta dietro alle direzioni principali facendo riferimento al tensore destro della deformazione, \(\tens{U}\text{,}\) in una forma particolare: la forma diagonale.</p>
 <p id="p-90">Con le dovute precisazioni, quanto si ottiene vale anche per il tensore sinistro della deformazione, \(\tens{V}\text{.}\)</p>
 <section class="subsection" id="subsection-4"><h3 class="heading hide-type">
@@ -210,7 +209,7 @@ var js_version = 0.12;
 \end{array}\right]\,.\tag{1.7.1}
 \end{equation}
 </div>
-<p>Se si applica \(\tens{U}\) ad un generico vettore \(\vec{v}\) si ottiene</p>
+<p data-braille="continuation">Se si applica \(\tens{U}\) ad un generico vettore \(\vec{v}\) si ottiene</p>
 <div class="displaymath">
 \begin{equation}
 \mat{U}\mat{v}
@@ -235,19 +234,19 @@ var js_version = 0.12;
 \,.\tag{1.7.2}
 \end{equation}
 </div>
-<p>Risultato che mostra come in questo caso l'applicazione di \(\tens{U}\) a qualsiasi vettore determini soltanto una scalatura, proporzionale al fattore \(\lambda\text{,}\) della lunghezza del vettore che mantiene la direzione originaria. È facile verificare infatti che</p>
+<p data-braille="continuation">Risultato che mostra come in questo caso l'applicazione di \(\tens{U}\) a qualsiasi vettore determini soltanto una scalatura, proporzionale al fattore \(\lambda\text{,}\) della lunghezza del vettore che mantiene la direzione originaria. È facile verificare infatti che</p>
 <div class="displaymath">
 \begin{equation*}
 \|\tens{U}\vec{v} \| = \|\lambda\vec{v} \| = |\lambda| \|\vec{v} \|\,.
 \end{equation*}
 </div>
-<p>Inoltre dal momento che</p>
+<p data-braille="continuation">Inoltre dal momento che</p>
 <div class="displaymath">
 \begin{equation*}
 \det{\tens{F}} = \det{\tens{R}\tens{U}} = \det{\tens{U}} = \lambda^3 &gt; 0
 \end{equation*}
 </div>
-<p>ne consegue che l'unico valore ammissibile per \(\lambda\) è</p>
+<p data-braille="continuation">ne consegue che l'unico valore ammissibile per \(\lambda\) è</p>
 <div class="displaymath">
 \begin{equation*}
 \lambda &gt; 0\,.
@@ -261,7 +260,7 @@ var js_version = 0.12;
 <li id="li-14">\(\lambda = 0\text{,}\) non è ammissibile perché il vettore, per l'ammissibilità della trasformazione, non può annullare la propria lunghezza;</li>
 <li id="li-15">\(\lambda &lt; 0\text{,}\) non è ammissibile perché il vettore, per l'ammissibilità della trasformazione, non può cambiare verso.</li>
 </ul>
-<p id="p-93"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><iframe id="video-7" width="456" height="256" allowfullscreen="" src="https://www.youtube.com/embed/2r0uBXOPcRg?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></p></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type">
+<p id="p-93"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-7" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/2r0uBXOPcRg?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">1.7.2</span> <span class="title"></span>
 </h3>
 <p id="p-94">Si supponga adesso per \(\tens{U}\) sempre una forma diagonale ma con coefficienti non tutti uguali fra loro. In particolare si assuma</p>
@@ -275,7 +274,7 @@ var js_version = 0.12;
 \end{array}\right]\,.\tag{1.7.3}
 \end{equation}
 </div>
-<p>Applicando \(\tens{U}\) ai seguenti tre vettori</p>
+<p data-braille="continuation">Applicando \(\tens{U}\) ai seguenti tre vettori</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{u} = \left[\begin{array}{c}u_1\\u_2\\0\end{array}\right]
@@ -286,7 +285,7 @@ var js_version = 0.12;
 \,,
 \end{equation*}
 </div>
-<p>si ottiene</p>
+<p data-braille="continuation">si ottiene</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{U}\mat{u} = \lambda_1\mat{u}
@@ -297,39 +296,39 @@ var js_version = 0.12;
 \,,\quad
 \end{equation*}
 </div>
-<p>risultato che può essere commentato come segue.</p>
+<p data-braille="continuation">risultato che può essere commentato come segue.</p>
 <ul class="disc">
 <li id="li-16">Tutti i vettori appartenenti a direzioni giacenti nel piano individuato dai i primi due assi di riferimento vengono semplicemente scalati dal fattore \(\lambda_1\text{.}\)</li>
 <li id="li-17">Vettori paralleli al terzo asse di riferimento vengono semplicemente scalati dal fattore \(\lambda_2\text{.}\)</li>
 <li id="li-18">Tutti gli altri vettori vengono sia scalati sia cambiano direzione e il fattore di scala dipende sia \(\lambda_1\) e sia da \(\lambda_2\text{.}\)</li>
 </ul>
-<p>Quindi in questo caso le <em class="emphasis">direzioni principali</em> sono individuate da tutte le direzioni appartenenti al piano \(1-2\) e dall'asse \(3\text{.}\)</p>
+<p data-braille="continuation">Quindi in questo caso le <em class="emphasis">direzioni principali</em> sono individuate da tutte le direzioni appartenenti al piano \(1-2\) e dall'asse \(3\text{.}\)</p>
 <p id="p-95">Per quanto riguarda i fattori di scala \(\lambda_1\) e \(\lambda_2\) si può osservare come per il precedente caso come</p>
 <div class="displaymath">
 \begin{equation*}
 \det{\tens{F}} = \det{\tens{R}\tens{U}} = \det{\tens{U}} = \lambda_1^2\,\lambda_2 &gt; 0
 \end{equation*}
 </div>
-<p>condizione che consente di stabilire che</p>
+<p data-braille="continuation">condizione che consente di stabilire che</p>
 <div class="displaymath">
 \begin{equation*}
 \lambda_2 &gt; 0\,.
 \end{equation*}
 </div>
-<p>Mentre la condizione di positività del tensore \(\tens{U}\)</p>
+<p data-braille="continuation">Mentre la condizione di positività del tensore \(\tens{U}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \vec{u} \cdot \tens{U} \vec{u} = \vec{u} \cdot \lambda_1 \vec{u} =  \lambda_1\,\vec{u} \cdot \vec{u}  &gt; 0\,,\quad \forall \vec{u} \neq \vec0\,,
 \end{equation*}
 </div>
-<p>implica anche</p>
+<p data-braille="continuation">implica anche</p>
 <div class="displaymath">
 \begin{equation*}
 \lambda_1 &gt; 0\,.
 \end{equation*}
 </div>
 <p id="p-96">Quindi anche in questo caso  \(\lambda_1\) e \(\lambda_2\) assumono il significato di fattori di scala denominati di allungamenti principali degli elementi di linea appartenenti alle direzioni principali. Per \(\lambda_1\) e \(\lambda_2\) valgono le stesse considerazioni discusse nel caso precedente.</p>
-<p id="p-97"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><iframe id="video-8" width="456" height="256" allowfullscreen="" src="https://www.youtube.com/embed/hVJudtVPnc4?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></p>
+<p id="p-97"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-8" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/hVJudtVPnc4?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p>
 <p id="p-98">Tutte le considerazioni svolte finora valgono nel caso il tensore \(\tens{U}\) assuma la forma</p>
 <div class="displaymath">
 \begin{equation*}
@@ -342,7 +341,7 @@ var js_version = 0.12;
 \,,
 \end{equation*}
 </div>
-<p>con direzioni principali definite dal piano \(1-3\) e dall'asse \(2\text{.}\) Ovvero la forma</p>
+<p data-braille="continuation">con direzioni principali definite dal piano \(1-3\) e dall'asse \(2\text{.}\) Ovvero la forma</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{U} =
@@ -354,7 +353,7 @@ var js_version = 0.12;
 \,,
 \end{equation*}
 </div>
-<p>con direzioni principali date dal piano \(2-3\) e dall'asse \(1\text{.}\)</p></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
+<p data-braille="continuation">con direzioni principali date dal piano \(2-3\) e dall'asse \(1\text{.}\)</p></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">1.7.3</span> <span class="title"></span>
 </h3>
 <p id="p-99">È ormai chiaro che la forma diagonale più generica del tensore \(\tens{U}\) sia data da</p>
@@ -368,16 +367,16 @@ var js_version = 0.12;
 \end{array}\right]\,,\label{diag_U_eq}\tag{1.7.4}
 \end{equation}
 </div>
-<p>dove tutti i coefficienti sulla diagonale sono in generale differenti. In questo caso, evitando di ripetere ulteriori considerazioni oramai ovvie, si può stabilire quanto segue.</p>
+<p data-braille="continuation">dove tutti i coefficienti sulla diagonale sono in generale differenti. In questo caso, evitando di ripetere ulteriori considerazioni oramai ovvie, si può stabilire quanto segue.</p>
 <ul class="disc">
 <li id="li-19">Solo gli assi di riferimento \(\vec{e}_{1}\text{,}\) \(\vec{e}_{2}\) e \(\vec{e}_{3}\) costituiscono le <em class="emphasis">direzioni principali</em> del tensore \(\tens{U}\text{.}\)</li>
 <li id="li-20">Gli <em class="emphasis">allungamenti principali</em> \(\lambda_{1}\text{,}\) \(\lambda_{2}\) e \(\lambda_{3}\) sono tutti numeri reali positivi ed associati, rispettivamente, a \(\vec{e}_{1}\text{,}\) \(\vec{e}_{2}\) e \(\vec{e}_{3}\text{.}\) Elementi di linea appartanenti alle direzioni principali per effetto della trasformazione mantegono direzione e verso originari modificando solo la lunghezza sulla base di tali fattori di scala.</li>
 </ul>
-<p id="p-100"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><iframe id="video-9" width="456" height="256" allowfullscreen="" src="https://www.youtube.com/embed/WUhCsflXZno?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></p></section><section class="subsection" id="subsection-7"><h3 class="heading hide-type">
+<p id="p-100"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-9" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/WUhCsflXZno?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p></section><section class="subsection" id="subsection-7"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">1.7.4</span> <span class="title">forma spettrale del tensore di deformazione</span>
 </h3>
-<p id="p-101"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><iframe id="video-10" width="456" height="256" allowfullscreen="" src="https://www.youtube.com/embed/x029RSllgas?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></p>
-<p id="p-102">La forma diagonale del tensore \(\tens{U}\text{,}\) si veda la <a data-knowl="./knowl/diag_U_eq.html" title="Equazione 1.7.4">(1.7.4)</a>, può essere riscritta come segue</p>
+<p id="p-101"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-10" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/x029RSllgas?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p>
+<p id="p-102">La forma diagonale del tensore \(\tens{U}\text{,}\) si veda la <a class="xref" data-knowl="./knowl/diag_U_eq.html" title="Equazione 1.7.4">(1.7.4)</a>, può essere riscritta come segue</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{U} =
@@ -404,7 +403,7 @@ var js_version = 0.12;
 \,,
 \end{equation*}
 </div>
-<p>relazione che suggerisce la seguente forma tensiorale per \(\tens{U}\)</p>
+<p data-braille="continuation">relazione che suggerisce la seguente forma tensiorale per \(\tens{U}\)</p>
 <div class="displaymath">
 \begin{equation}
 \tens{U} = \lambda_1\,\vec{e}_1 \otimes \vec{e}_1 + \lambda_2\,\vec{e}_2 \otimes \vec{e}_2 + \lambda_3\,\vec{e}_3 \otimes \vec{e}_3\,.\tag{1.7.5}
@@ -417,12 +416,14 @@ var js_version = 0.12;
 \tens{U} = \lambda_1\,\vec{u}_{1} \otimes \vec{u}_{1} + \lambda_2\,\vec{u}_{2} \otimes \vec{u}_{2} + \lambda_3\,\vec{u}_{3} \otimes \vec{u}_{3}\,.\label{spectral_U_eq}\tag{1.7.6}
 \end{equation}
 </div>
-<p>Gli allungamenti principali formano lo <em class="emphasis">spettro</em> di \(\tens{U}\) e le direzioni principali sono individuate dalla base ortonormale \(\vec{u}_{1}\text{,}\) \(\vec{u}_{2}\) e \(\vec{u}_{3}\text{.}\)</p>
-<article class="remark-like" id="remark-6"><h6 class="heading">
-<span class="type">Commento</span> <span class="codenumber">1.7.1</span>.</h6>
-<p id="p-105">Da quando si è cominciato a parlare di direzioni principali non si è mai fatto accenno alla simmetria di \(\tens{U}\text{.}\) La simmetria del tensore determina la mutua ortogonalità delle direzioni principali, qualunque direzione esse assumano.</p></article><article class="remark-like" id="remark-7"><h6 class="heading">
-<span class="type">Commento</span> <span class="codenumber">1.7.2</span>.</h6>
-<p id="p-106">La forma spettrale <a data-knowl="./knowl/spectral_U_eq.html" title="Equazione 1.7.6">(1.7.6)</a> spiega come mai, rispetto alla base di riferimento standard, la forma matriciale del tensore \(\tens{U}\) perda quasi sempre la forma diagonale. Infatti, pur essendo sempre presenti le direzioni principali, queste in generale non coincidono con gli assi del sistema  di riferimento standard. La perdita della forma diagonale viene evidenziata da una scrittura matriciale del forma spettrale del tensore</p>
+<p data-braille="continuation">Gli allungamenti principali formano lo <em class="emphasis">spettro</em> di \(\tens{U}\) e le direzioni principali sono individuate dalla base ortonormale \(\vec{u}_{1}\text{,}\) \(\vec{u}_{2}\) e \(\vec{u}_{3}\text{.}\)</p>
+<article class="remark remark-like" id="remark-6"><h6 class="heading">
+<span class="type">Commento</span><span class="space"> </span><span class="codenumber">1.7.1</span><span class="period">.</span>
+</h6>
+<p id="p-105">Da quando si è cominciato a parlare di direzioni principali non si è mai fatto accenno alla simmetria di \(\tens{U}\text{.}\) La simmetria del tensore determina la mutua ortogonalità delle direzioni principali, qualunque direzione esse assumano.</p></article><article class="remark remark-like" id="remark-7"><h6 class="heading">
+<span class="type">Commento</span><span class="space"> </span><span class="codenumber">1.7.2</span><span class="period">.</span>
+</h6>
+<p id="p-106">La forma spettrale <a class="xref" data-knowl="./knowl/spectral_U_eq.html" title="Equazione 1.7.6">(1.7.6)</a> spiega come mai, rispetto alla base di riferimento standard, la forma matriciale del tensore \(\tens{U}\) perda quasi sempre la forma diagonale. Infatti, pur essendo sempre presenti le direzioni principali, queste in generale non coincidono con gli assi del sistema  di riferimento standard. La perdita della forma diagonale viene evidenziata da una scrittura matriciale del forma spettrale del tensore</p>
 <div class="displaymath">
 \begin{equation}
 \mat{U} =
@@ -450,7 +451,7 @@ u_{33}u_{13} \amp u_{33}u_{23} \amp u_{33}u_{33}
 \end{array}\label{mat_spectral_U_eq}\tag{1.7.7}
 \end{equation}
 </div>
-<p>Dove per le componenti delle direzioni principali si è adottata la seguente notazione</p>
+<p data-braille="continuation">Dove per le componenti delle direzioni principali si è adottata la seguente notazione</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{u_1} = \left[\begin{array}{c}u_{11}\\u_{21}\\u_{31}\end{array}\right]
@@ -461,7 +462,7 @@ u_{33}u_{13} \amp u_{33}u_{23} \amp u_{33}u_{33}
 \,.
 \end{equation*}
 </div>
-<p id="p-107">Infine è interessante osservare come l'espressione <a data-knowl="./knowl/mat_spectral_U_eq.html" title="Equazione 1.7.7">(1.7.7)</a> possa essere scritta nel modo seguente</p>
+<p id="p-107">Infine è interessante osservare come l'espressione <a class="xref" data-knowl="./knowl/mat_spectral_U_eq.html" title="Equazione 1.7.7">(1.7.7)</a> possa essere scritta nel modo seguente</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{U} =
@@ -484,7 +485,7 @@ u_{31} \amp u_{32} \amp u_{33}
 }\,,
 \end{equation*}
 </div>
-<p>che è la modalità con cui viene valutata l'espressione che assume il tensore \(\tens{U}\) quando si passa dal sistema di coordinate costituito dalle direzioni pricipali al sistema di coordinate standard \(\vec{e}_1\text{,}\) \(\vec{e}_2\) e \(\vec{e}_3\text{.}\) La matrice utilizzata per la trasformazione viene costruita inserendo nelle colonne i vettori \(\vec{u}_{1}\text{,}\) \(\vec{u}_{2}\) e \(\vec{u}_{3}\text{.}\)</p></article><article class="assemblage-like" id="assemblage-9"><p id="p-108">Assumendo per \(\tens{U}\) la seguente forma diagonale</p>
+<p data-braille="continuation">che è la modalità con cui viene valutata l'espressione che assume il tensore \(\tens{U}\) quando si passa dal sistema di coordinate costituito dalle direzioni pricipali al sistema di coordinate standard \(\vec{e}_1\text{,}\) \(\vec{e}_2\) e \(\vec{e}_3\text{.}\) La matrice utilizzata per la trasformazione viene costruita inserendo nelle colonne i vettori \(\vec{u}_{1}\text{,}\) \(\vec{u}_{2}\) e \(\vec{u}_{3}\text{.}\)</p></article><article class="assemblage assemblage-like" id="assemblage-9"><p id="p-108">Assumendo per \(\tens{U}\) la seguente forma diagonale</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{U} =
@@ -495,7 +496,7 @@ u_{31} \amp u_{32} \amp u_{33}
 \end{array}\right]\,,
 \end{equation*}
 </div>
-<p>si calcoli l'espressione che assume \(\tens{U}\) supponendo di applicare alle direzioni principali le seguenti rotazioni in successione</p>
+<p data-braille="continuation">si calcoli l'espressione che assume \(\tens{U}\) supponendo di applicare alle direzioni principali le seguenti rotazioni in successione</p>
 <div class="displaymath">
 \begin{equation*}
 \matWp{R}{1} = 
@@ -516,7 +517,7 @@ u_{31} \amp u_{32} \amp u_{33}
 \end{array}\right]\,.
 \end{equation*}
 </div>
-<p id="p-109">Le seguenti istruzioni MATLAB consentono di calcolare quanto richiesto. <figure class="figure-like" id="listing-15"><pre class="console"><b>R1 = [cos(pi/4) -sin(pi/4) 0; sin(pi/4) cos(pi/4) 0; 0 0 1];
+<p id="p-109">Le seguenti istruzioni MATLAB consentono di calcolare quanto richiesto. <figure class="listing figure-like" id="listing-15"><pre class="console"><b>R1 = [cos(pi/4) -sin(pi/4) 0; sin(pi/4) cos(pi/4) 0; 0 0 1];
 R2 = [cos(pi/4) 0 -sin(pi/4); 0 1 0; sin(pi/4) 0 cos(pi/4)];
 u1 = R2*R1*[1; 0; 0];
 u2 = R2*R1*[0; 1; 0];
@@ -527,10 +528,10 @@ lam3 = 7;
 U = lam1*u1*transpose(u1) + lam2*u2*transpose(u2) + ...
 lam3*u3*transpose(u3)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.7.3.</span> </figcaption></figure></p>
-<p id="p-110">Si effettui anche il seguente calcolo e si rifletta sul risultato ottenuto. <figure class="figure-like" id="listing-16"><pre class="console"><b>u1*transpose(u1) + u2*transpose(u2) + u3*transpose(u3)
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.7.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p id="p-110">Si effettui anche il seguente calcolo e si rifletta sul risultato ottenuto. <figure class="listing figure-like" id="listing-16"><pre class="console"><b>u1*transpose(u1) + u2*transpose(u2) + u3*transpose(u3)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.7.4.</span> </figcaption></figure></p></article><article class="assemblage-like" id="assemblage-10"><p id="p-111">Al fine di verificare come il tensore \(\tens{U}\) agisca in modo differente sulle direzioni principali e sulle direzioni individuate dal riferimento standard, si consideri il seguente stato piano caratterizzato dalla seguente forma diagonale di \(\tens{U}\)</p>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.7.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><article class="assemblage assemblage-like" id="assemblage-10"><p id="p-111">Al fine di verificare come il tensore \(\tens{U}\) agisca in modo differente sulle direzioni principali e sulle direzioni individuate dal riferimento standard, si consideri il seguente stato piano caratterizzato dalla seguente forma diagonale di \(\tens{U}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{U} =
@@ -540,12 +541,12 @@ lam3*u3*transpose(u3)
 \end{array}\right]\,.
 \end{equation*}
 </div>
-<p>Si assuma per le direzioni principali un'inclinazione di \(\pi/4\) e si applichi quindi il tensore della deformazione ai due quadrati, rappresentati nella seguente figura. Il quadrato di colore rosso ha lati allineati con il riferimento standard, il quadrato di colore blu ha invece lati allineati con le direzioni principali.</p>
-<p id="p-112"><figure class="figure-like" id="figure-7"><div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="images/Squares.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">1.7.5.</span> </figcaption></figure></p>
+<p data-braille="continuation">Si assuma per le direzioni principali un'inclinazione di \(\pi/4\) e si applichi quindi il tensore della deformazione ai due quadrati, rappresentati nella seguente figura. Il quadrato di colore rosso ha lati allineati con il riferimento standard, il quadrato di colore blu ha invece lati allineati con le direzioni principali.</p>
+<p id="p-112"><figure class="figure figure-like" id="figure-7"><div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="images/Squares.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.7.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <p id="p-113">L'applicazione del tensore viene effettuata facendo crescere il parametro \(\lambda\text{,}\) da cui dipendono i due autovalori del tensore, dal valore \(1.1\) al valore \(1.5\text{.}\)</p>
 <p id="p-114">Si riportano le istruzioni MATLAB utilizzabili per il calcolo e la visualizzazione delle deformate dei due quadrati a partire dalle configurazioni iniziali.</p>
-<p id="p-115"><figure class="figure-like" id="listing-17"><pre class="console"><b>Q1 = [1 -1 -1 1 1; 1 1 -1 -1 1];
+<p id="p-115"><figure class="listing figure-like" id="listing-17"><pre class="console"><b>Q1 = [1 -1 -1 1 1; 1 1 -1 -1 1];
 Q2 = [1 0 -1 0 1; 0 1 0 -1 0];
 
 x = Q1(1,:);
@@ -577,13 +578,13 @@ for v = 1.1:0.1:1.5
   line(x,y,'Color','blue','LineWidth',2)
 end
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.7.6.</span> </figcaption></figure></p></article></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.7.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">1.7.5</span> <span class="title">autovalori ed autovettori</span>
 </h3>
-<p id="p-116">Noti gli allungamenti principali \(\lambda_i\) e le direzioni principali ad essi associate \(\vec{u}_i\) (\(i=1 \dots 3\)), la forma spettrale <a data-knowl="./knowl/spectral_U_eq.html" title="Equazione 1.7.6">(1.7.6)</a> consente di valutare facilmente il tensore \(\tens{U}\) rispetto al sistema di riferimento utilizzato.</p>
+<p id="p-116">Noti gli allungamenti principali \(\lambda_i\) e le direzioni principali ad essi associate \(\vec{u}_i\) (\(i=1 \dots 3\)), la forma spettrale <a class="xref" data-knowl="./knowl/spectral_U_eq.html" title="Equazione 1.7.6">(1.7.6)</a> consente di valutare facilmente il tensore \(\tens{U}\) rispetto al sistema di riferimento utilizzato.</p>
 <p id="p-117">Lo scenario tipico è, comunque, ribaltato. Ovvero dato il tensore \(\tens{U}\) si vogliono valutare gli allungamenti e le direzioni principali. Risolvere tale quesito vuol dire calcolare gli autovalori e gli autovettori della matrice associata al tensore \(\tens{U}\text{.}\) Nella presente sezione non verrà presentata la procedura da utilizzare nella soluzione del problema agli autovalori perché questa costituisce un argomento che sicuramente è già stato oggetto di studio in corsi precedenti e per il quale la letteratura disponibile, anche in rete, è vasta. In questa sede si è ritenuto più importante mettere in evidenza il significato meccanico di autovalori ed autovettori, significato ampiamente discusso nelle sezioni precedenti.</p>
 <p id="p-118">Inoltre per il calcolo degli autovalori ed autovettori si utilizzerà MATLAB come viene illustrato nel seguente esempio.</p>
-<article class="assemblage-like" id="assemblage-11"><p id="p-119">A partire dall'espressione di \(\tens{U}\) ottenuta nell'esempio precedente, ovvero</p>
+<article class="assemblage assemblage-like" id="assemblage-11"><p id="p-119">A partire dall'espressione di \(\tens{U}\) ottenuta nell'esempio precedente, ovvero</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{U} =
@@ -594,15 +595,15 @@ end
 \end{array}\right]\,,
 \end{equation*}
 </div>
-<p>si calcolino con MATLAB gli autovalori ed autovettori.</p>
-<p id="p-120"><figure class="figure-like" id="listing-18"><pre class="console"><b>U = ...
+<p data-braille="continuation">si calcolino con MATLAB gli autovalori ed autovettori.</p>
+<p id="p-120"><figure class="listing figure-like" id="listing-18"><pre class="console"><b>U = ...
 [5.2500 -1.0607 -1.7500; ...
 -1.0607 3.5000 -1.0607; ...
 -1.7500 -1.0607 5.2500];
 [V, D] = eig(U)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.7.7.</span> </figcaption></figure></p></article><article class="remark-like" id="insight-1"><h6 class="heading">
-<span class="type">Approfondimento</span> <span class="codenumber">1.7.8</span>. <span class="title">il polinomio caratteristico.</span>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.7.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><article class="insight remark-like" id="insight-1"><h6 class="heading">
+<span class="type">Approfondimento</span><span class="space"> </span><span class="codenumber">1.7.8</span><span class="period">.</span><span class="space"> </span><span class="title">il polinomio caratteristico.</span>
 </h6>
 <p id="p-121">La valutazione degli autovalori ed autovettori associati al tensore \(\tens{U}\) passa attraverso la soluzione della seguente equazione cubica</p>
 <div class="displaymath">
@@ -610,7 +611,7 @@ end
 -\lambda^3 + \func{I_1}{\tens{U}} \lambda^2 - \func{I_2}{\tens{U}} \lambda + \func{I_3}{\tens{U}} = 0\,,
 \end{equation*}
 </div>
-<p>dove compare il polinomio caratteristico il quale dipendende da tre quantità che prendono il nome di <em class="emphasis">invarianti</em> del tensore \(\tens{U}\text{.}\) Il termine invariante sta ad indicare che tali valori non cambiano al variare del sistema di riferimento rispetto al quale viene rappresentato \(\tens{U}\text{.}\) Si riportano le espressioni da utilizzare per il calcolo degli invarianti nel caso il tensore \(\tens{U}\) sia espresso alle direzioni principali e nel caso generico.</p>
+<p data-braille="continuation">dove compare il polinomio caratteristico il quale dipendende da tre quantità che prendono il nome di <em class="emphasis">invarianti</em> del tensore \(\tens{U}\text{.}\) Il termine invariante sta ad indicare che tali valori non cambiano al variare del sistema di riferimento rispetto al quale viene rappresentato \(\tens{U}\text{.}\) Si riportano le espressioni da utilizzare per il calcolo degli invarianti nel caso il tensore \(\tens{U}\) sia espresso alle direzioni principali e nel caso generico.</p>
 <ul class="disc">
 <li id="li-21">
 <em class="emphasis">Primo invariante</em><div class="displaymath">
@@ -633,7 +634,7 @@ end
 </div>
 </li>
 </ul>
-<article class="assemblage-like" id="assemblage-12"><p id="p-122">Si verifichi che gli invarianti calcolati su \(\tens{U}\) nella forma diagonale</p>
+<article class="assemblage assemblage-like" id="assemblage-12"><p id="p-122">Si verifichi che gli invarianti calcolati su \(\tens{U}\) nella forma diagonale</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{U} =
@@ -644,7 +645,7 @@ end
 \end{array}\right]\,,
 \end{equation*}
 </div>
-<p>e nella forma</p>
+<p data-braille="continuation">e nella forma</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{U} =
@@ -655,9 +656,9 @@ end
 \end{array}\right]\,,
 \end{equation*}
 </div>
-<p>non cambiano.</p>
+<p data-braille="continuation">non cambiano.</p>
 <p id="p-123">Si riportano le istruzioni MATLAB utilizzabili per la verifica.</p>
-<p id="p-124"><figure class="figure-like" id="listing-19"><pre class="console"><b>lam1 = 2;
+<p id="p-124"><figure class="listing figure-like" id="listing-19"><pre class="console"><b>lam1 = 2;
 lam2 = 5;
 lam3 = 7;
 I1 = lam1 + lam2 + lam3
@@ -671,9 +672,7 @@ I1 = trace(U)
 I2 = 1/2*(trace(U)^2 - trace(U*U))
 I3 = det(U)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.7.9.</span> </figcaption></figure></p></article></article></section></section></div></main>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.7.9<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></article></section></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.12/login.js"></script>
 </body>
 </html>

@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="it-IT">
-<!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-01T08:38:19+02:00    *-->
-<!--*                                    *-->
-<!--*      https://pretextbook.org       *-->
-<!--*                                    *-->
-<!--**************************************-->
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-09-15T18:45:00+02:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="assemblage-like"><p>Assumendo per \(\tens{U}\) la seguente forma diagonale</p>
-<div class="displaymath">
+<article class="assemblage assemblage-like"><p>Assumendo per \(\tens{U}\) la seguente forma diagonale</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
 \mat{U} =
 \left[\begin{array}{ccc}
@@ -23,8 +25,8 @@
 \end{array}\right]\,,
 \end{equation*}
 </div>
-<p>si calcoli l'espressione che assume \(\tens{U}\) supponendo di applicare alle direzioni principali le seguenti rotazioni in successione</p>
-<div class="displaymath">
+<p data-braille="continuation">si calcoli l'espressione che assume \(\tens{U}\) supponendo di applicare alle direzioni principali le seguenti rotazioni in successione</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
 \matWp{R}{1} = 
 \left[\begin{array}{ccc}
@@ -34,7 +36,7 @@
 \end{array}\right]\,,
 \end{equation*}
 </div>
-<div class="displaymath">
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
 \matWp{R}{2} = 
 \left[\begin{array}{ccc}
@@ -44,7 +46,7 @@
 \end{array}\right]\,.
 \end{equation*}
 </div>
-<p>Le seguenti istruzioni MATLAB consentono di calcolare quanto richiesto. <figure class="figure-like"><pre class="console"><b>R1 = [cos(pi/4) -sin(pi/4) 0; sin(pi/4) cos(pi/4) 0; 0 0 1];
+<p xmlns:svg="http://www.w3.org/2000/svg">Le seguenti istruzioni MATLAB consentono di calcolare quanto richiesto. <figure class="listing figure-like"><pre class="console"><b>R1 = [cos(pi/4) -sin(pi/4) 0; sin(pi/4) cos(pi/4) 0; 0 0 1];
 R2 = [cos(pi/4) 0 -sin(pi/4); 0 1 0; sin(pi/4) 0 cos(pi/4)];
 u1 = R2*R1*[1; 0; 0];
 u2 = R2*R1*[0; 1; 0];
@@ -55,9 +57,9 @@ lam3 = 7;
 U = lam1*u1*transpose(u1) + lam2*u2*transpose(u2) + ...
 lam3*u3*transpose(u3)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.7.3.</span> </figcaption></figure></p>
-<p>Si effettui anche il seguente calcolo e si rifletta sul risultato ottenuto. <figure class="figure-like"><pre class="console"><b>u1*transpose(u1) + u2*transpose(u2) + u3*transpose(u3)
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.7.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Si effettui anche il seguente calcolo e si rifletta sul risultato ottenuto. <figure class="listing figure-like"><pre class="console"><b>u1*transpose(u1) + u2*transpose(u2) + u3*transpose(u3)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">1.7.4.</span> </figcaption></figure></p></article><span class="incontext"><a href="principal_directions_sec_strain_chap_it.html#assemblage-9">in-context</a></span>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.7.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><span class="incontext"><a href="principal_directions_sec_strain_chap_it.html#assemblage-9">in-context</a></span>
 </body>
 </html>

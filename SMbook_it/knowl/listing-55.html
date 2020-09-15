@@ -1,28 +1,82 @@
 <!DOCTYPE html>
 <html lang="it-IT">
-<!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-01T08:38:21+02:00    *-->
-<!--*                                    *-->
-<!--*      https://pretextbook.org       *-->
-<!--*                                    *-->
-<!--**************************************-->
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-09-15T18:45:03+02:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<figure class="figure-like"><pre class="console"><b>syms l
-B = [
-1 0 1 0 0 0;
-0 1 0 1 0 0;
-0 0 0 2*l 0 0;
-0 0 -1 0 1 0;
-0 0 0 -1 0 1;
-0 0 l 0 0 2*l
-]
-rango = rank(B)
+<figure class="listing figure-like"><pre class="console"><b>% vettore delle risultanti =
+% [orizzontale; verticale; momento]
+R = zeros(3,1);
+
+% funzione per il calcolo del momento
+momento = @(X0, X, Carico)...
+    -Carico(1)*(X(2)-X0(2))+Carico(2)*(X(1)-X0(1));
+
+% coordinate dei punti sui quali sono applicati i carichi
+syms L;
+A = [0; 0];
+B = [L; L/2];
+C = [L/2; L];
+
+% scelta del polo
+POLO = C;
+
+% per ogni punto si assegna il vettore Carico = [F1; F2; M]
+% e si sommano i contributi alla risultante
+syms VA MA;
+CaricoA = [0; VA; MA];
+R = R + CaricoA;
+R(3) = R(3) + momento(POLO, A, CaricoA);
+R
+
+syms HB;
+CaricoB = [HB; 0; 0];
+R = R + CaricoB;
+R(3) = R(3) + momento(POLO, B, CaricoB);
+R
+
+syms F;
+CaricoC = [0; -F; 0];
+R = R + CaricoC;
+R(3) = R(3) + momento(POLO, C, CaricoC);
+R
+
+% equazioni di equilibrio
+eqns = [
+R(1) ==0,
+R(2) == 0,
+R(3)==0
+];
+
+% matrice statica e vettore dei carichi assegnati
+[B,b] = equationsToMatrix(eqns, [VA, MA, HB]);
+
+% gradi di libertà, n
+% gradi di vincolo, m
+[n,m] = size(B); 
+
+% calcolo del rango di B
+r = rank(B);
+
+% se il sistema è staticamente determinato si calcola la soluzione
+if and(r == min(m,n), m == n)
+    x = linsolve(B,b);
+end
+
+VA = x(1)
+MA = x(2)
+HB = x(3)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">5.6.7.</span> </figcaption></figure><span class="incontext"><a href="analysis_examples_sec_rigid_body_statics_chap_it.html#listing-55">in-context</a></span>
+<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Listato</span><span class="space"> </span><span class="codenumber">5.6.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure><span class="incontext"><a href="analysis_examples_sec_rigid_body_statics_chap_it.html#listing-55">in-context</a></span>
 </body>
 </html>

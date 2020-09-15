@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-01T08:38:16+02:00    *-->
-<!--*                                    *-->
-<!--*      https://pretextbook.org       *-->
-<!--*                                    *-->
-<!--**************************************-->
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-09-15T18:44:56+02:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
 <html lang="it-IT">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Solid Mechanics - analisi dello stato di tensione</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -24,7 +26,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -41,24 +43,21 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.12;
-</script>
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Valuta (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Torna alla pagina dei contenuti</a><div class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Torna alla pagina dei contenuti</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{{\not{\mid}}}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -97,7 +96,7 @@ var js_version = 0.12;
 <p class="byline">Antonio Bilotta</p>
 </div>
 </div></div>
-<nav id="primary-navbar" class="navbar"><div class="container">
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contenuti</button><div class="tree-nav toolbar toolbar-divisor-3">
 <a class="index-button toolbar-item button" href="solid_mechnics_book_index_it.html" title="Indice">Indice</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="stress_sec_stress_chap_it.html" title="Precedente">Prec</a><a id="upbutton" class="up-button button toolbar-item" href="stress_chap_it.html" title="Sopra">Su</a><a id="nextbutton" class="next-button button toolbar-item" href="plv_sec_stress_chap_it.html" title="Successivo">Succ</a></span>
@@ -107,9 +106,9 @@ var js_version = 0.12;
 <button class="sidebar-left-toggle-button button toolbar-item active">Contenuti</button><a class="previous-button toolbar-item button" href="stress_sec_stress_chap_it.html" title="Precedente">Prec</a><a class="up-button button toolbar-item" href="stress_chap_it.html" title="Sopra">Su</a><a class="next-button button toolbar-item" href="plv_sec_stress_chap_it.html" title="Successivo">Succ</a>
 </div>
 </div></nav></header><div class="page">
-<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link">
+<li class="link frontmatter">
 <a href="front_matter_it.html" data-scroll="front_matter_it"><span class="title">Copertina</span></a><ul>
 <li><a href="front_colophon_it.html" data-scroll="front_colophon_it">Colofone</a></li>
 <li><a href="author_bio_it.html" data-scroll="author_bio_it">Biografia dell'autore</a></li>
@@ -179,51 +178,51 @@ var js_version = 0.12;
 <li><a href="constraints_sec_rigid_body_statics_chap_it.html" data-scroll="constraints_sec_rigid_body_statics_chap_it">vincoli</a></li>
 <li><a href="free_body_sec_rigid_body_statics_chap_it.html" data-scroll="free_body_sec_rigid_body_statics_chap_it">diagrammi di corpo libero</a></li>
 <li><a href="analysis_sec_rigid_body_statics_chap_it.html" data-scroll="analysis_sec_rigid_body_statics_chap_it">analisi statica</a></li>
-<li><a href="analysis_examples_sec_rigid_body_statics_chap_it.html" data-scroll="analysis_examples_sec_rigid_body_statics_chap_it">applicazione dell'analisi statica ai sistemi di corpi rigidi</a></li>
+<li><a href="analysis_examples_sec_rigid_body_statics_chap_it.html" data-scroll="analysis_examples_sec_rigid_body_statics_chap_it">applicazione dell'analisi statica ai sistemi di corpi</a></li>
 <li><a href="sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_it">sollecitazioni</a></li>
 <li><a href="indefinte_sec_rigid_body_statics_chap_it.html" data-scroll="indefinte_sec_rigid_body_statics_chap_it">equazioni indefinite di equilibrio per la trave piana</a></li>
 <li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it">calcolo e diagrammi delle sollecitazioni</a></li>
 </ul>
 </li>
-<li class="link"><a href="backmatter_it.html" data-scroll="backmatter_it"><span class="title">Back Matter</span></a></li>
+<li class="link backmatter"><a href="backmatter_it.html" data-scroll="backmatter_it"><span class="title">Back Matter</span></a></li>
 <li class="link"><a href="solid_mechnics_book_index_it.html" data-scroll="solid_mechnics_book_index_it"><span class="title">Indice</span></a></li>
 <li class="link"><a href="back_colophon_it.html" data-scroll="back_colophon_it"><span class="title">Colofone</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Scritto con PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="pretext-content"><section class="section" id="stress_analysis_sec_stress_chap_it"><h2 class="heading hide-type">
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="stress_analysis_sec_stress_chap_it"><h2 class="heading hide-type">
 <span class="type">Sezione</span> <span class="codenumber">2.4</span> <span class="title">analisi dello stato di tensione</span>
 </h2>
-<a href="stress_analysis_sec_stress_chap_it.html" class="permalink">¶</a><section class="subsection" id="subsection-30"><h3 class="heading hide-type">
+<section class="subsection" id="subsection-30"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">2.4.1</span> <span class="title">convenzione e significato delle componenti del tensore</span>
 </h3>
 <p id="p-195">Riprendiamo la figura già riportata nella sezione precedente per ribadire la convenzione adottata sui segni delle componenti del tensore.</p>
-<figure class="figure-like" id="figure-15"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/cauchy_stress_components.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">2.4.1.</span> </figcaption></figure><p id="p-196">La figura mostra i tre piani che si prendono come riferimento, ovvero i piani aventi come normale uscente gli assi \(\vec{e}_1\text{,}\) \(\vec{e}_2\) e \(\vec{e}_3\text{.}\) A tali facce, che si considerano <em class="emphasis">positive</em>, si riferiscono le componenti del tensore della tensione e la figura riporta tali componenti secondo i versi che si assumono positivi.  Se immaginiamo di osservare un cubo, come suggerisce la figura, le facce nascoste del cubo hanno come normale uscente le direzioni opposte \(-\vec{e}_1\text{,}\) \(-\vec{e}_2\) e \(-\vec{e}_3\text{.}\) Su tali facce, che si considerano <em class="emphasis">negative</em>, agiranno le stesse componenti di tensione di segno opposto. Ad esempio sulla faccia avente giacitura \(-\vec{e}_1\) agirà la trazione \(\vec{t}_{-\vec{e}_1} = -\vec{t}_{\vec{e}_1}\text{.}\)</p>
-<p id="p-197">Si consideri la trazione agente sulla giacitura individuta da \(\vec{e}_1\text{,}\) calcolabile anche come</p>
+<figure class="figure figure-like" id="figure-15"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/cauchy_stress_components.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">2.4.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-196">La figura mostra i tre piani che si prendono come riferimento, ovvero i piani aventi come normale uscente gli assi \(\vec{e}_1\text{,}\) \(\vec{e}_2\) e \(\vec{e}_3\text{.}\) A tali facce, che si considerano <em class="emphasis">positive</em>, si riferiscono le componenti del tensore della tensione e la figura riporta tali componenti secondo i versi che si assumono positivi.  Se immaginiamo di osservare un cubo, come suggerisce la figura, le facce nascoste del cubo hanno come normale uscente le direzioni opposte \(-\vec{e}_1\text{,}\) \(-\vec{e}_2\) e \(-\vec{e}_3\text{.}\) Su tali facce, che si considerano <em class="emphasis">negative</em>, agiranno le stesse componenti di tensione di segno opposto. Ad esempio sulla faccia avente giacitura \(-\vec{e}_1\) agirà la trazione \(\vec{t}_{-\vec{e}_1} = -\vec{t}_{\vec{e}_1}\text{.}\)</p>
+<p id="p-197">Si consideri la trazione agente sulla giacitura individuata da \(\vec{e}_1\text{,}\) calcolabile anche come</p>
 <div class="displaymath">
 \begin{equation*}
 \vec{t}_{\vec{e}_1} = \tens{\sigma}\,\vec{e}_1\,.
 \end{equation*}
 </div>
-<p>Il prodotto scalare fra questa e la giacitura a cui si riferisce fornisce</p>
+<p data-braille="continuation">Il prodotto scalare fra questa e la giacitura a cui si riferisce fornisce</p>
 <div class="displaymath">
 \begin{equation*}
 \vec{t}_{\vec{e}_1} \cdot \vec{e}_1 = \sigma_{11}
 \end{equation*}
 </div>
-<p>che rappresenta, si veda anche la figura, la <em class="emphasis">componente normale</em> della trazione \(\vec{t}_{\vec{e}_1}\text{.}\) Se si calcola il prodotto scalare tra \(\vec{t}_{\vec{e}_1}\) e la direzione \(\vec{e}_2\) si ottiene</p>
+<p data-braille="continuation">che rappresenta, si veda anche la figura, la <em class="emphasis">componente normale</em> della trazione \(\vec{t}_{\vec{e}_1}\text{.}\) Se si calcola il prodotto scalare tra \(\vec{t}_{\vec{e}_1}\) e la direzione \(\vec{e}_2\) si ottiene</p>
 <div class="displaymath">
 \begin{equation*}
 \vec{t}_{\vec{e}_1} \cdot \vec{e}_2 = \sigma_{21}
 \end{equation*}
 </div>
-<p>che rappresenta la <em class="emphasis">componente tangenziale</em> della trazione \(\vec{t}_{\vec{e}_1}\) lungo la direzione 2. Analogamente</p>
+<p data-braille="continuation">che rappresenta la <em class="emphasis">componente tangenziale</em> della trazione \(\vec{t}_{\vec{e}_1}\) lungo la direzione 2. Analogamente</p>
 <div class="displaymath">
 \begin{equation*}
 \vec{t}_{\vec{e}_1} \cdot \vec{e}_3 = \sigma_{31}
 \end{equation*}
 </div>
-<p>rappresenta la <em class="emphasis">componente tangenziale</em> della trazione \(\vec{t}_{\vec{e}_1}\) lungo la direzione 3.</p>
+<p data-braille="continuation">rappresenta la <em class="emphasis">componente tangenziale</em> della trazione \(\vec{t}_{\vec{e}_1}\) lungo la direzione 3.</p>
 <p id="p-198">Le stesse valutazioni possono essere fatte per le altre trazioni \(\vec{t}_{\vec{e}_2}\) e \(\vec{t}_{\vec{e}_3}\text{.}\) Quanto si ottiene può essere riepilogato come segue.</p>
 <ul class="disc">
 <li id="li-60">Le componenti con indice ripetuto<div class="displaymath">
@@ -244,30 +243,30 @@ var js_version = 0.12;
 \vec{t}_{\vec{n}} = \tens{\sigma}\,\vec{n}\,.
 \end{equation*}
 </div>
-<p>Da cui si può calcolare la componente normale della trazione</p>
+<p data-braille="continuation">Da cui si può calcolare la componente normale della trazione</p>
 <div class="displaymath">
 \begin{equation}
 \sigma = \vec{t}_{\vec{n}} \cdot \vec{n} = \tens{\sigma}\,\vec{n} \cdot \vec{n}\tag{2.4.1}
 \end{equation}
 </div>
-<p>e la componente tangenziale relativa ad una direzione \(\vec{m}\) ortogonale ad \(\vec{n}\)</p>
+<p data-braille="continuation">e la componente tangenziale relativa ad una direzione \(\vec{m}\) ortogonale ad \(\vec{n}\)</p>
 <div class="displaymath">
 \begin{equation}
 \tau = \vec{t}_{\vec{n}} \cdot \vec{m} = \tens{\sigma}\,\vec{n} \cdot \vec{m} \,.\tag{2.4.2}
 \end{equation}
 </div>
-<p>Per denotare le due componenti si è utilizzata la convenzione, spesso adottata in ambito ingegneristico, che indica le componenti normale e tangenziale rispettivamente con i simboli \(\sigma\) e \(\tau\text{.}\) Il vettore \(\vec{m}\text{,}\) come \(\vec{n}\text{,}\) è un vettore di lunghezza unitaria.</p>
-<figure class="figure-like" id="normal_shear_fig"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/new_normal_shear.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">2.4.2.</span> </figcaption></figure></section><section class="subsection" id="subsection-31"><h3 class="heading hide-type">
+<p data-braille="continuation">Per denotare le due componenti si è utilizzata la convenzione, spesso adottata in ambito ingegneristico, che indica le componenti normale e tangenziale rispettivamente con i simboli \(\sigma\) e \(\tau\text{.}\) Il vettore \(\vec{m}\text{,}\) come \(\vec{n}\text{,}\) è un vettore di lunghezza unitaria.</p>
+<figure class="figure figure-like" id="normal_shear_fig"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/new_normal_shear.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">2.4.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></section><section class="subsection" id="subsection-31"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">2.4.2</span> <span class="title">tensioni principali e direzioni principali</span>
 </h3>
-<p id="p-200">Quanto discusso nella sezione <a href="principal_directions_sec_strain_chap_it.html" class="internal" title="Sezione 1.7: tensore di deformazione \(\tens{U}\) e direzioni principali (trasformazione degli elementi di linea)">Sezione 1.7</a> relativa alle direzioni principali del tensore \(\tens{U}\) è applicabile in larga parte anche al tensore della tensione \(\tens{\sigma}\text{.}\) Ambedue i tensori sono simmetrici e l'unico fondamentale distinguo che occorre effettuare è che, a differenza di \(\tens{U}\text{,}\) \(\tens{\sigma}\) non è definito positivo. Pertanto in questo caso gli autovalori, che individuano adesso le <em class="emphasis">tensioni principali</em> del tensore, potranno essere anche nulli o negativi. Comunque la simmetria di \(\tens{\sigma}\) consente la seguente rappresentazione spettrale del tensore</p>
+<p id="p-200">Quanto discusso nella <a href="principal_directions_sec_strain_chap_it.html" class="internal" title="Sezione 1.7: tensore di deformazione \(\tens{U}\) e direzioni principali (trasformazione degli elementi di linea)">Sezione 1.7</a> relativa alle direzioni principali del tensore \(\tens{U}\) è applicabile in larga parte anche al tensore della tensione \(\tens{\sigma}\text{.}\) Ambedue i tensori sono simmetrici e l'unico fondamentale distinguo che occorre effettuare è che, a differenza di \(\tens{U}\text{,}\) \(\tens{\sigma}\) non è definito positivo. Pertanto in questo caso gli autovalori, che individuano adesso le <em class="emphasis">tensioni principali</em> del tensore, potranno essere anche nulli o negativi. Comunque la simmetria di \(\tens{\sigma}\) consente la seguente rappresentazione spettrale del tensore</p>
 <div class="displaymath">
 \begin{equation}
 \tens{\sigma} = \sigma_1\,\vec{s}_1 \otimes \vec{s}_1 + \sigma_2\,\vec{s}_2 \otimes \vec{s}_2 + \sigma_3\,\vec{s}_3 \otimes \vec{s}_3\,,\label{spectral_stress_eq}\tag{2.4.3}
 \end{equation}
 </div>
-<p>dove le <em class="emphasis">direzioni principali</em> \(\vec{s}_1\text{,}\) \(\vec{s}_2\text{,}\) \(\vec{s}_3\) sono gli autovettori di \(\tens{\sigma}\text{,}\) i quali costituiscono una terna ortonormale, e \(\sigma_1\text{,}\) \(\sigma_2\text{,}\) \(\sigma_3\) sono le tensioni principali.</p>
+<p data-braille="continuation">dove le <em class="emphasis">direzioni principali</em> \(\vec{s}_1\text{,}\) \(\vec{s}_2\text{,}\) \(\vec{s}_3\) sono gli autovettori di \(\tens{\sigma}\text{,}\) i quali costituiscono una terna ortonormale, e \(\sigma_1\text{,}\) \(\sigma_2\text{,}\) \(\sigma_3\) sono le tensioni principali.</p>
 <p id="p-201">Nel caso cui le direzioni principali sono allineate con il sistema di riferimento il tensore \(\tens{\sigma}\) assume la semplice forma diagonale</p>
 <div class="displaymath">
 \begin{equation*}
@@ -279,12 +278,12 @@ var js_version = 0.12;
 \end{array}\right]
 \end{equation*}
 </div>
-<p>che individua uno stato tensionale descritto solo da componenti di tipo normale. Componenti di trazione se la componente è positiva, di compressione se la componente è negativa. Tale situazione viene illustrata nelle seguente figura.</p>
-<figure class="figure-like" id="figure-17"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/cauchy_normal_stress_components.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">2.4.3.</span> </figcaption></figure><p id="p-202">Se invece le direzioni principali non sono allineate con il sistema di riferimento il tensore \(\tens{\sigma}\) assume la forma generica con la presenza anche di componenti tangenziali.</p>
+<p data-braille="continuation">che individua uno stato tensionale descritto solo da componenti di tipo normale. Componenti di trazione se la componente è positiva, di compressione se la componente è negativa. Tale situazione viene illustrata nelle seguente figura.</p>
+<figure class="figure figure-like" id="figure-17"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/cauchy_normal_stress_components.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">2.4.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-202">Se invece le direzioni principali non sono allineate con il sistema di riferimento il tensore \(\tens{\sigma}\) assume la forma generica con la presenza anche di componenti tangenziali.</p>
 <p id="p-203">Assegnato un tensore \(\tens{\sigma}\) l'individuazione delle tensioni e delle direzioni principali richiede il calcolo degli autovalori e degli autovettori effetuabile, come si mostrerà in seguito, tramite MATLAB.</p>
-<article class="remark-like" id="insight-6"><h6 class="heading">
-<span class="type">Approfondimento</span> <span class="codenumber">2.4.4</span>. <span class="title">gli invarianti della tensione.</span>
+<article class="insight remark-like" id="insight-6"><h6 class="heading">
+<span class="type">Approfondimento</span><span class="space"> </span><span class="codenumber">2.4.4</span><span class="period">.</span><span class="space"> </span><span class="title">gli invarianti della tensione.</span>
 </h6>
 <p id="p-204">Anche in questo caso, come già discusso nel capitolo dedicato alla cinematica, la soluzione del problema agli autovalori richiede la soluzione di una equazione cubica esprimibile come segue</p>
 <div class="displaymath">
@@ -292,7 +291,7 @@ var js_version = 0.12;
 -\sigma^3 + \func{I_1}{\tens{\sigma}} \sigma^2 - \func{I_2}{\tens{\sigma}} \sigma + \func{I_3}{\tens{\sigma}} = 0\,,
 \end{equation*}
 </div>
-<p>dove compaiono gli invarianti del tensore \(\tens{\sigma}\text{,}\) ovvero le quantità che sono indipendenti dal sistema di riferimento rispetto al quale viene rappresentato \(\tens{\sigma}\text{.}\) Gli invarianti di \(\tens{\sigma}\) sono calcolabili con le seguenti coppie di espressioni, dove ogni coppia contiene la formula da utilizzare nel caso in cui il tensore \(\tens{\sigma}\) sia espresso rispetto alle direzioni principali e la formula da utilizzare nel caso generico.</p>
+<p data-braille="continuation">dove compaiono gli invarianti del tensore \(\tens{\sigma}\text{,}\) ovvero le quantità che sono indipendenti dal sistema di riferimento rispetto al quale viene rappresentato \(\tens{\sigma}\text{.}\) Gli invarianti di \(\tens{\sigma}\) sono calcolabili con le seguenti coppie di espressioni, dove ogni coppia contiene la formula da utilizzare nel caso in cui il tensore \(\tens{\sigma}\) sia espresso rispetto alle direzioni principali e la formula da utilizzare nel caso generico.</p>
 <ul class="disc">
 <li id="li-63">
 <em class="emphasis">Primo invariante</em><div class="displaymath">
@@ -320,19 +319,19 @@ var js_version = 0.12;
 <section class="subsubsection" id="subsubsection-8"><h4 class="heading hide-type">
 <span class="type">Sottosottosezione</span> <span class="codenumber">2.4.3.1</span> <span class="title">stato sferico o idrostatico</span>
 </h4>
-<p id="p-205">Lo stato tensionale che mantiene sempre la stessa forma rispetto a qualsiasi sistema di riferimento è lo stato caratterizzato da tensioni principali che assumono lo stesso valore, ovvero \(\sigma_1 = \sigma_2 = \sigma_3 = p\text{.}\) In tal caso, utilizzando la  <a data-knowl="./knowl/spectral_stress_eq.html" title="Equazione 2.4.3">(2.4.3)</a>, il tensore \(\tens{\sigma}\) assume la seguente forma</p>
+<p id="p-205">Lo stato tensionale che mantiene sempre la stessa forma rispetto a qualsiasi sistema di riferimento è lo stato caratterizzato da tensioni principali che assumono lo stesso valore, ovvero \(\sigma_1 = \sigma_2 = \sigma_3 = p\text{.}\) In tal caso, utilizzando la  <a class="xref" data-knowl="./knowl/spectral_stress_eq.html" title="Equazione 2.4.3">(2.4.3)</a>, il tensore \(\tens{\sigma}\) assume la seguente forma</p>
 <div class="displaymath">
 \begin{equation*}
 \tens{\sigma} = p\,\vec{e}_1 \otimes \vec{e}_1 + p\,\vec{e}_2 \otimes \vec{e}_2 + p\,\vec{e}_3 \otimes \vec{e}_3\,,
 \end{equation*}
 </div>
-<p>ovvero</p>
+<p data-braille="continuation">ovvero</p>
 <div class="displaymath">
 \begin{equation*}
 \tens{\sigma} = p \, \tens{I}\,.
 \end{equation*}
 </div>
-<p>La rappresentazione per componenti fornisce anche</p>
+<p data-braille="continuation">La rappresentazione per componenti fornisce anche</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{\sigma} =
@@ -349,8 +348,8 @@ p \amp 0 \amp 0 \\
 \end{array}\right]\,.
 \end{equation*}
 </div>
-<figure class="figure-like" id="figure-18"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="images/spherical_stress_state.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">2.4.5.</span> </figcaption></figure><p id="p-206">Assumendo \(p\) positivo si ha uno stato di trazione uguale in tutte le direzioni, da qui l'aggettivo <em class="emphasis">sferico</em>. Se invece \(p\) è negativo si ha uno stato di compressione uguale in tutte le direzioni, proprio come avviene per un corpo immerso in un fluido. Da qui l'aggettivo <em class="emphasis">idrostatico</em>.</p></section><section class="subsubsection" id="subsubsection-9"><h4 class="heading hide-type">
+<figure class="figure figure-like" id="figure-18"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="images/spherical_stress_state.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">2.4.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-206">Assumendo \(p\) positivo si ha uno stato di trazione uguale in tutte le direzioni, da qui l'aggettivo <em class="emphasis">sferico</em>. Se invece \(p\) è negativo si ha uno stato di compressione uguale in tutte le direzioni, proprio come avviene per un corpo immerso in un fluido. Da qui l'aggettivo <em class="emphasis">idrostatico</em>.</p></section><section class="subsubsection" id="subsubsection-9"><h4 class="heading hide-type">
 <span class="type">Sottosottosezione</span> <span class="codenumber">2.4.3.2</span> <span class="title">stato di trazione o compressione “pura”</span>
 </h4>
 <p id="p-207">Il seguente stato tensionale</p>
@@ -365,15 +364,15 @@ p \amp 0 \amp 0 \\
 \end{array}\right]\,,
 \end{equation*}
 </div>
-<p>caratterizzato quindi da tensioni principali pari a \(\sigma_1 = \sigma\text{,}\) \(\sigma_2 = 0\text{,}\) \(\sigma_3 = 0\) e direzioni principali individuate dall'asse \(\vec{e}_1\) e dal piano definito dalgi altri due assi della terna, viene di solito etichettato, in base al segno di \(\sigma\text{,}\) <em class="emphasis">stato di trazione o compressione “pura”</em>.</p>
-<figure class="figure-like" id="figure-19"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/pure_traction_stress_state.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">2.4.6.</span> </figcaption></figure><p id="p-208">L'aggetivazione  “pura” non deve trarre in inganno in quanto vale solo per la disposizione delle direzioni principali appena descritta. È sufficiente infatti assumere una disposizione differente per le direzioni principali, ad esempio ottenuta con una rotazione generica intorno all'asse \(\vec{e}_3\text{,}\) per avere</p>
+<p data-braille="continuation">caratterizzato quindi da tensioni principali pari a \(\sigma_1 = \sigma\text{,}\) \(\sigma_2 = 0\text{,}\) \(\sigma_3 = 0\) e direzioni principali individuate dall'asse \(\vec{e}_1\) e dal piano definito dalgi altri due assi della terna, viene di solito etichettato, in base al segno di \(\sigma\text{,}\) <em class="emphasis">stato di trazione o compressione “pura”</em>.</p>
+<figure class="figure figure-like" id="figure-19"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/pure_traction_stress_state.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">2.4.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-208">L'aggetivazione  “pura” non deve trarre in inganno in quanto vale solo per la disposizione delle direzioni principali appena descritta. È sufficiente infatti assumere una disposizione differente per le direzioni principali, ad esempio ottenuta con una rotazione generica intorno all'asse \(\vec{e}_3\text{,}\) per avere</p>
 <div class="displaymath">
 \begin{equation*}
 \tens{\sigma} = \sigma \, \vec{s}_1 \otimes \vec{s}_1\,,
 \end{equation*}
 </div>
-<p>con</p>
+<p data-braille="continuation">con</p>
 <div class="displaymath">
 \begin{equation*}
 \matWp{s}{1} = 
@@ -382,7 +381,7 @@ p \amp 0 \amp 0 \\
 \end{array}\right]\,.
 \end{equation*}
 </div>
-<p>Da cui deriva, per il tensore \(\tens{\sigma}\text{,}\) la seguente rappresentazione per componenti</p>
+<p data-braille="continuation">Da cui deriva, per il tensore \(\tens{\sigma}\text{,}\) la seguente rappresentazione per componenti</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{\sigma} = \sigma
@@ -405,7 +404,7 @@ p \amp 0 \amp 0 \\
 \end{array}\right]
 \end{equation*}
 </div>
-<p>e</p>
+<p data-braille="continuation">e</p>
 <div class="displaymath">
 \begin{equation*}
 \tens{\sigma} = \sigma \, \vec{e}_3 \otimes \vec{e}_3\,,\quad
@@ -430,20 +429,20 @@ p \amp 0 \amp 0 \\
 \end{array}\right]\,.
 \end{equation*}
 </div>
-<p>In tal caso, sempre relativamente al sistema di riferimento \(\vec{e}_1\text{,}\) \(\vec{e}_2\text{,}\) \(\vec{e}_3\) utilizzato, si parlerà di stato di taglio “puro” in quanto l'unica componente non nulla del tensore è \(\sigma_{12}=\sigma_{21}=\tau\text{.}\)</p>
-<figure class="figure-like" id="figure-20"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/pure_shear_stress_state.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">2.4.7.</span> </figcaption></figure><p id="p-211">Il calcolo di direzioni principali e tensioni principali mostrerebbe che ci troviamo in un caso differente dai precedenti. Infatti il calcolo degli autovalori ed autovettori, effettuabile con le seguenti istruzioni MATLAB</p>
-<figure class="figure-like" id="listing-25"><pre class="console"><b>syms t;
+<p data-braille="continuation">In tal caso, sempre relativamente al sistema di riferimento \(\vec{e}_1\text{,}\) \(\vec{e}_2\text{,}\) \(\vec{e}_3\) utilizzato, si parlerà di stato di taglio “puro” in quanto l'unica componente non nulla del tensore è \(\sigma_{12}=\sigma_{21}=\tau\text{.}\)</p>
+<figure class="figure figure-like" id="figure-20"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/pure_shear_stress_state.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">2.4.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-211">Il calcolo di direzioni principali e tensioni principali mostrerebbe che ci troviamo in un caso differente dai precedenti. Infatti il calcolo degli autovalori ed autovettori, effettuabile con le seguenti istruzioni MATLAB</p>
+<figure class="listing figure-like" id="listing-25"><pre class="console"><b>syms t;
 s = [0 t 0; t 0 0; 0 0 0];
 [V, D]=eig(s)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">2.4.8.</span> </figcaption></figure><p id="p-212">fornisce</p>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">2.4.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-212">fornisce</p>
 <div class="displaymath">
 \begin{equation*}
 \sigma_1 = \tau\,,\quad\sigma_2 = -\tau\,,\quad\sigma_3 = 0\,,
 \end{equation*}
 </div>
-<p>e</p>
+<p data-braille="continuation">e</p>
 <div class="displaymath">
 \begin{equation*}
 \matWp{s}{1} = 
@@ -463,7 +462,7 @@ s = [0 t 0; t 0 0; 0 0 0];
 \,.
 \end{equation*}
 </div>
-<p>Quindi le direzioni principali sono ruotate di \(\pi/4\) intorno all'asse \(\vec{e}_3\) (si riportano gli autovettori normalizzati anche se, nel caso di calcolo simbolico, MATLAB non fornisce autovettori normalizzati).</p>
+<p data-braille="continuation">Quindi le direzioni principali sono ruotate di \(\pi/4\) intorno all'asse \(\vec{e}_3\) (si riportano gli autovettori normalizzati anche se, nel caso di calcolo simbolico, MATLAB non fornisce autovettori normalizzati).</p>
 <p id="p-213">Per quanto discusso, sarebbe stato possibile presentare il caso di taglio “puro”</p>
 <div class="displaymath">
 \begin{equation*}
@@ -475,7 +474,7 @@ s = [0 t 0; t 0 0; 0 0 0];
 \end{array}\right]\,,
 \end{equation*}
 </div>
-<p>come lo stato tensionale che si realizza quando il sistema di riferimento è ottenuto ruotando la terna delle direzioni principali di \(\pi/4\) intorno al terzo asse e le tensioni principali sono definite da</p>
+<p data-braille="continuation">come lo stato tensionale che si realizza quando il sistema di riferimento è ottenuto ruotando la terna delle direzioni principali di \(\pi/4\) intorno al terzo asse e le tensioni principali sono definite da</p>
 <div class="displaymath">
 \begin{equation*}
 \sigma_1 = \tau\,,\quad\sigma_2 = -\tau\,,\quad\sigma_3 = 0\,.
@@ -489,10 +488,10 @@ s = [0 t 0; t 0 0; 0 0 0];
 0 \amp 0  \amp \tau \\
 0 \amp 0 \amp 0 \\
 \tau \amp 0 \amp 0
-\end{array}\right]\,.
+\end{array}\right]
 \end{equation*}
 </div>
-<p>e</p>
+<p data-braille="continuation">e</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{\sigma} =
@@ -500,12 +499,10 @@ s = [0 t 0; t 0 0; 0 0 0];
 0  \amp 0 \amp 0 \\
 0 \amp 0 \amp \tau \\
 0 \amp \tau \amp 0
-\end{array}\right]\,,
+\end{array}\right]
 \end{equation*}
 </div>
-<p>rappresentano stati di taglio “puro” e anche ad essi, con le dovute precisazioni, si applica tutta la discussione precedente.</p></section></section></section></div></main>
+<p data-braille="continuation">rappresentano stati di taglio “puro” e anche ad essi, con le dovute precisazioni, si applica tutta la discussione precedente.</p></section></section></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.12/login.js"></script>
 </body>
 </html>

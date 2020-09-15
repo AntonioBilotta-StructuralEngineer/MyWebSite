@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-01T08:38:18+02:00    *-->
-<!--*                                    *-->
-<!--*      https://pretextbook.org       *-->
-<!--*                                    *-->
-<!--**************************************-->
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-09-15T18:44:59+02:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
 <html lang="it-IT">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Solid Mechanics - applicazione dell'analisi statica ai sistemi di corpi rigidi</title>
+<title>Solid Mechanics - applicazione dell'analisi statica ai sistemi di corpi</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -24,7 +26,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -41,24 +43,21 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.12;
-</script>
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Valuta (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Torna alla pagina dei contenuti</a><div class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Torna alla pagina dei contenuti</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{{\not{\mid}}}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -97,7 +96,7 @@ var js_version = 0.12;
 <p class="byline">Antonio Bilotta</p>
 </div>
 </div></div>
-<nav id="primary-navbar" class="navbar"><div class="container">
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contenuti</button><div class="tree-nav toolbar toolbar-divisor-3">
 <a class="index-button toolbar-item button" href="solid_mechnics_book_index_it.html" title="Indice">Indice</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="analysis_sec_rigid_body_statics_chap_it.html" title="Precedente">Prec</a><a id="upbutton" class="up-button button toolbar-item" href="rigid_body_statics_chap_it.html" title="Sopra">Su</a><a id="nextbutton" class="next-button button toolbar-item" href="sollecitazioni_sec_rigid_body_statics_chap_it.html" title="Successivo">Succ</a></span>
@@ -107,9 +106,9 @@ var js_version = 0.12;
 <button class="sidebar-left-toggle-button button toolbar-item active">Contenuti</button><a class="previous-button toolbar-item button" href="analysis_sec_rigid_body_statics_chap_it.html" title="Precedente">Prec</a><a class="up-button button toolbar-item" href="rigid_body_statics_chap_it.html" title="Sopra">Su</a><a class="next-button button toolbar-item" href="sollecitazioni_sec_rigid_body_statics_chap_it.html" title="Successivo">Succ</a>
 </div>
 </div></nav></header><div class="page">
-<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link">
+<li class="link frontmatter">
 <a href="front_matter_it.html" data-scroll="front_matter_it"><span class="title">Copertina</span></a><ul>
 <li><a href="front_colophon_it.html" data-scroll="front_colophon_it">Colofone</a></li>
 <li><a href="author_bio_it.html" data-scroll="author_bio_it">Biografia dell'autore</a></li>
@@ -179,26 +178,26 @@ var js_version = 0.12;
 <li><a href="constraints_sec_rigid_body_statics_chap_it.html" data-scroll="constraints_sec_rigid_body_statics_chap_it">vincoli</a></li>
 <li><a href="free_body_sec_rigid_body_statics_chap_it.html" data-scroll="free_body_sec_rigid_body_statics_chap_it">diagrammi di corpo libero</a></li>
 <li><a href="analysis_sec_rigid_body_statics_chap_it.html" data-scroll="analysis_sec_rigid_body_statics_chap_it">analisi statica</a></li>
-<li><a href="analysis_examples_sec_rigid_body_statics_chap_it.html" data-scroll="analysis_examples_sec_rigid_body_statics_chap_it" class="active">applicazione dell'analisi statica ai sistemi di corpi rigidi</a></li>
+<li><a href="analysis_examples_sec_rigid_body_statics_chap_it.html" data-scroll="analysis_examples_sec_rigid_body_statics_chap_it" class="active">applicazione dell'analisi statica ai sistemi di corpi</a></li>
 <li><a href="sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_it">sollecitazioni</a></li>
 <li><a href="indefinte_sec_rigid_body_statics_chap_it.html" data-scroll="indefinte_sec_rigid_body_statics_chap_it">equazioni indefinite di equilibrio per la trave piana</a></li>
 <li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it">calcolo e diagrammi delle sollecitazioni</a></li>
 </ul>
 </li>
-<li class="link"><a href="backmatter_it.html" data-scroll="backmatter_it"><span class="title">Back Matter</span></a></li>
+<li class="link backmatter"><a href="backmatter_it.html" data-scroll="backmatter_it"><span class="title">Back Matter</span></a></li>
 <li class="link"><a href="solid_mechnics_book_index_it.html" data-scroll="solid_mechnics_book_index_it"><span class="title">Indice</span></a></li>
 <li class="link"><a href="back_colophon_it.html" data-scroll="back_colophon_it"><span class="title">Colofone</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Scritto con PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="pretext-content"><section class="section" id="analysis_examples_sec_rigid_body_statics_chap_it"><h2 class="heading hide-type">
-<span class="type">Sezione</span> <span class="codenumber">5.6</span> <span class="title">applicazione dell'analisi statica ai sistemi di corpi rigidi</span>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="analysis_examples_sec_rigid_body_statics_chap_it"><h2 class="heading hide-type">
+<span class="type">Sezione</span> <span class="codenumber">5.6</span> <span class="title">applicazione dell'analisi statica ai sistemi di corpi</span>
 </h2>
-<a href="analysis_examples_sec_rigid_body_statics_chap_it.html" class="permalink">¶</a><section class="subsection" id="subsection-112"><h3 class="heading hide-type">
+<section class="subsection" id="subsection-112"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">5.6.1</span> <span class="title">mensola</span>
 </h3>
 <p id="p-437">Si consideri una semplice trave incastrata ad un estremità e soggetta ad una forza verticale all'estremo libero. Nella figura successiva viene illustrato lo schema di partenza e il diagramma di corpo libero ottenuto rimuovendo l'incastro ed applicando le relative componenti di reazione vincolare (\(m=3\)).</p>
-<figure class="figure-like" id="statica_mensola_con_forza_fig"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="images/statica_mensola_con_forza.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">5.6.1.</span> </figcaption></figure><p id="p-438">L'analisi coinvolge solo un corpo rigido, pertanto è possibile scrivere 3 equazioni di equilibrio (\(n=3\)) che, assumendo come polo per l'equilibrio alla rotazione l'estremo \(A\) della trave, sono esprimibili come segue</p>
+<figure class="figure figure-like" id="statica_mensola_con_forza_fig"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="images/statica_mensola_con_forza.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.6.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-438">L'analisi coinvolge solo un corpo rigido, pertanto è possibile scrivere 3 equazioni di equilibrio (\(n=3\)) che, assumendo come polo per l'equilibrio alla rotazione l'estremo \(A\) della trave, sono esprimibili come segue</p>
 <div class="displaymath">
 \begin{align*}
 H_A \amp = 0\,,\\
@@ -206,7 +205,7 @@ V_A - F \amp = 0\,,\\
 \mathcal{M}_{A} - F l \amp = 0\,.
 \end{align*}
 </div>
-<p>Condizioni esprimibili in forma matriciale ottenendo</p>
+<p data-braille="continuation">Condizioni esprimibili in forma matriciale ottenendo</p>
 <div class="displaymath">
 \begin{equation*}
 \underbrace{\left[\begin{array}{ccc}
@@ -219,7 +218,7 @@ V_A - F \amp = 0\,,\\
 \left[\begin{array}{c} 0 \\ 0 \\ 0 \end{array}\right]\,.
 \end{equation*}
 </div>
-<p>Il sistema è evidentemente isostatico e il calcolo delle componenti di reazione vincolare fornisce</p>
+<p data-braille="continuation">Il sistema è evidentemente isostatico e il calcolo delle componenti di reazione vincolare fornisce</p>
 <div class="displaymath">
 \begin{align*}
 H_{A} \amp= 0\,,\\
@@ -230,8 +229,8 @@ V_{A}  \amp= F\,,\\
 <span class="type">Sottosezione</span> <span class="codenumber">5.6.2</span> <span class="title">trave appoggiata</span>
 </h3>
 <p id="p-439">Si consideri una trave vincolata nella maniera indicata in figura e soggetta ad una forza verticale in mezzeria. La stessa figura riporta anche il diagramma di corpo libero ottenuto rimuovendo la cerniera e il carrello facendo seguire l'applicazione delle relative componenti di reazione vincolare (\(m=3\)).</p>
-<figure class="figure-like" id="statica_appoggiata_con_forza_fig"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="images/statica_appoggiata_con_forza.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">5.6.2.</span> </figcaption></figure><p id="p-440">La presenza di un solo corpo rigido determina la scrittura di 3 equazioni di equilibrio (\(n=3\)) per le quali si assume l'estremo \(A\) come polo per l'equilibrio alla rotazione:</p>
+<figure class="figure figure-like" id="statica_appoggiata_con_forza_fig"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="images/statica_appoggiata_con_forza.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.6.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-440">La presenza di un solo corpo rigido determina la scrittura di 3 equazioni di equilibrio (\(n=3\)) per le quali si assume l'estremo \(A\) come polo per l'equilibrio alla rotazione:</p>
 <div class="displaymath">
 \begin{align*}
 H_A \amp = 0\,,\\
@@ -239,7 +238,7 @@ V_A + V_B - F \amp = 0\,,\\
 V_{B} l - F l/2 \amp = 0\,.
 \end{align*}
 </div>
-<p>Condizioni esprimibili in forma matriciale come</p>
+<p data-braille="continuation">Condizioni esprimibili in forma matriciale come</p>
 <div class="displaymath">
 \begin{equation*}
 \underbrace{\left[\begin{array}{ccc}
@@ -252,7 +251,7 @@ V_{B} l - F l/2 \amp = 0\,.
 \left[\begin{array}{c} 0 \\ 0 \\ 0 \end{array}\right]\,.
 \end{equation*}
 </div>
-<p>Anche in questo caso la semplice ispezione della matrice statica consente di stabilire l'isostaticità del sistema. Il calcolo delle componenti di reazione vincolare fornisce:</p>
+<p data-braille="continuation">Anche in questo caso la semplice ispezione della matrice statica consente di stabilire l'isostaticità del sistema. Il calcolo delle componenti di reazione vincolare fornisce:</p>
 <div class="displaymath">
 \begin{align*}
 H_{A} \amp= 0\,,\\
@@ -260,7 +259,7 @@ V_{A}  \amp= F/2\,,\\
 V_{B}  \amp= F/2\,.
 \end{align*}
 </div>
-<article class="assemblage-like" id="assemblage-41"><p id="p-441">Si riportano le istruzioni MATLAB utilizzabili per il calcolo delle reazioni vincolari incognite. <figure class="figure-like" id="listing-53"><pre class="console"><b>% vettore delle risultanti =
+<article class="assemblage assemblage-like" id="assemblage-41"><p id="p-441">Si riportano le istruzioni MATLAB utilizzabili per il calcolo delle reazioni vincolari incognite. <figure class="listing figure-like" id="listing-54"><pre class="console"><b>% vettore delle risultanti =
 % [orizzontale; verticale; momento]
 R = zeros(3,1);
 
@@ -311,7 +310,7 @@ R(3)==0
 % gradi di vincolo, m
 [n,m] = size(B); 
 
-% calcolo del rango di A
+% calcolo del rango di B
 r = rank(B);
 
 % se il sistema è staticamente determinato si calcola la soluzione
@@ -323,12 +322,12 @@ HA = x(1)
 VA = x(2)
 VB = x(3)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">5.6.3.</span> </figcaption></figure></p></article></section><section class="subsection" id="subsection-114"><h3 class="heading hide-type">
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">5.6.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></section><section class="subsection" id="subsection-114"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">5.6.3</span> <span class="title">portale</span>
 </h3>
 <p id="p-442">Si consideri il seguente portale soggetto ad una forza verticale applicata nella mezzeria del traverso. I vincoli (\(m=3\)) sono applicati al piede dei ritti e la loro rimozione e la successiva applicazione delle componenti di reazione vincolare conduce al diagramma di corpo libero riportato in figura insieme allo schema assegnato.</p>
-<figure class="figure-like" id="portale_isostatico_fig"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="images/portale_isostatico.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">5.6.4.</span> </figcaption></figure><p id="p-443">Le equazioni di equilibrio (\(n=3\)) sono</p>
+<figure class="figure figure-like" id="portale_isostatico_fig"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="images/portale_isostatico.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.6.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-443">Le equazioni di equilibrio (\(n=3\)) sono</p>
 <div class="displaymath">
 \begin{align*}
 H_B \amp = 0\,,\\
@@ -336,7 +335,7 @@ V_A  - F \amp = 0\,,\\
 \mathcal{M}_{A} - V_A l + F l/2 \amp = 0\,.
 \end{align*}
 </div>
-<p>Equazioni che corrispondono alla seguente forma matriciale del sistema</p>
+<p data-braille="continuation">Equazioni che corrispondono alla seguente forma matriciale del sistema</p>
 <div class="displaymath">
 \begin{equation*}
 \underbrace{\left[\begin{array}{ccc}
@@ -349,7 +348,7 @@ V_A  - F \amp = 0\,,\\
 \left[\begin{array}{c} 0 \\ 0 \\ 0 \end{array}\right]\,.
 \end{equation*}
 </div>
-<p>Il sistema è isostatico e fornisce la soluzione del sistema lineare fornisce</p>
+<p data-braille="continuation">Il sistema è isostatico e la soluzione del sistema lineare fornisce</p>
 <div class="displaymath">
 \begin{align*}
 V_{A} \amp= F\,,\\
@@ -357,7 +356,7 @@ V_{A} \amp= F\,,\\
 H_{B}  \amp= 0\,.
 \end{align*}
 </div>
-<article class="assemblage-like" id="assemblage-42"><p id="p-444">Si riportano le istruzioni MATLAB utilizzabili per il calcolo delle reazioni vincolari incognite. <figure class="figure-like" id="listing-54"><pre class="console"><b>% vettore delle risultanti =
+<article class="assemblage assemblage-like" id="assemblage-42"><p id="p-444">Si riportano le istruzioni MATLAB utilizzabili per il calcolo delle reazioni vincolari incognite. <figure class="listing figure-like" id="listing-55"><pre class="console"><b>% vettore delle risultanti =
 % [orizzontale; verticale; momento]
 R = zeros(3,1);
 
@@ -408,7 +407,7 @@ R(3)==0
 % gradi di vincolo, m
 [n,m] = size(B); 
 
-% calcolo del rango di A
+% calcolo del rango di B
 r = rank(B);
 
 % se il sistema è staticamente determinato si calcola la soluzione
@@ -420,12 +419,12 @@ VA = x(1)
 MA = x(2)
 HB = x(3)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">5.6.5.</span> </figcaption></figure></p></article></section><section class="subsection" id="subsection-115"><h3 class="heading hide-type">
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">5.6.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></section><section class="subsection" id="subsection-115"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">5.6.4</span> <span class="title">sistema a due corpi</span>
 </h3>
 <p id="p-445">Si consideri il seguente sistema costituito da due corpi connessi mediante una cerniera interna. La rimozione di tutti i gradi di vincolo (\(m=6\)) e la successiva applicazione delle componenti di reazione vincolare conduce al diagramma di corpo libero riportato in figura insieme allo schema assegnato.</p>
-<figure class="figure-like" id="statica_arcoatrecerniere_fig"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="images/statica_arcoatrecerniere.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span> <span class="codenumber">5.6.6.</span> </figcaption></figure><p id="p-446">Il sistema è costituito da due corpi (\(n=6\)), consentendo la scrittura di due gruppi di equazioni: le equazioni di equilibrio per il corpo \(AB\) (polo in \(A\))</p>
+<figure class="figure figure-like" id="statica_arcoatrecerniere_fig"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="images/statica_arcoatrecerniere.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.6.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-446">Il sistema è costituito da due corpi (\(n=6\)), consentendo la scrittura di due gruppi di equazioni: le equazioni di equilibrio per il corpo \(AB\) (polo in \(A\))</p>
 <div class="displaymath">
 \begin{align*}
 H_A + H_B \amp = 0\,,\\
@@ -433,7 +432,7 @@ V_A + V_B - F \amp = 0\,,\\
 V_{B} 2l - F l \amp = 0\,,
 \end{align*}
 </div>
-<p>e quelle per il corpo \(BC\) (polo in \(D\))</p>
+<p data-braille="continuation">e quelle per il corpo \(BC\) (polo in \(D\))</p>
 <div class="displaymath">
 \begin{align*}
 H_C - H_B + F \amp = 0\,,\\
@@ -441,7 +440,7 @@ V_C - V_B \amp = 0\,,\\
 H_{B} l + V_C 2l \amp = 0\,.
 \end{align*}
 </div>
-<p>Equazioni riscrivibili nella seguente forma matriciale</p>
+<p data-braille="continuation">Equazioni riscrivibili nella seguente forma matriciale</p>
 <div class="displaymath">
 \begin{equation*}
 \underbrace{\left[\begin{array}{ccccc}
@@ -457,7 +456,7 @@ H_{B} l + V_C 2l \amp = 0\,.
 \left[\begin{array}{c} 0 \\ 0 \\ 0 \\ 0 \\ 0 \\ 0 \end{array}\right]\,.
 \end{equation*}
 </div>
-<article class="assemblage-like" id="assemblage-43"><p id="p-447">Per il calcolo del rango della matrice statica si possono utilizzare le seguenti istruzioni MATLAB. <figure class="figure-like" id="listing-55"><pre class="console"><b>syms l
+<article class="assemblage assemblage-like" id="assemblage-43"><p id="p-447">Per il calcolo del rango della matrice statica si possono utilizzare le seguenti istruzioni MATLAB. <figure class="listing figure-like" id="listing-56"><pre class="console"><b>syms l
 B = [
 1 0 1 0 0 0;
 0 1 0 1 0 0;
@@ -468,8 +467,8 @@ B = [
 ]
 rango = rank(B)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">5.6.7.</span> </figcaption></figure></p></article><p id="p-448">Il calcolo fornisce un rango pari a \(r=6\) che verifica la condizione \(\text{min}(n, m)=6\text{.}\) Essendo \(m==n\) il sistema è isostatico. La soluzione del sistema lineare calcolabile con MATLAB</p>
-<article class="assemblage-like" id="assemblage-44"><p id="p-449"><figure class="figure-like" id="listing-56"><pre class="console"><b>syms l F
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">5.6.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-448">Il calcolo fornisce un rango pari a \(r=6\) che verifica la condizione \(\text{min}(n, m)=6\text{.}\) Essendo \(m==n\) il sistema è isostatico. La soluzione del sistema lineare calcolabile con MATLAB</p>
+<article class="assemblage assemblage-like" id="assemblage-44"><p id="p-449"><figure class="listing figure-like" id="listing-57"><pre class="console"><b>syms l F
 B = [
 1 0 1 0 0 0;
 0 1 0 1 0 0;
@@ -481,7 +480,7 @@ B = [
 f = [0; -F; -F*l; F; 0; 0]
 r = linsolve(B, -f)
 </b></pre>
-<figcaption><span class="type">Listato</span> <span class="codenumber">5.6.8.</span> </figcaption></figure></p></article><p id="p-450">fornisce infine l'unica soluzione possibile di seguito riportata.</p>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">5.6.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-450">fornisce infine l'unica soluzione possibile di seguito riportata.</p>
 <div class="displaymath">
 \begin{align*}
 H_{A} \amp= F\,,\\
@@ -493,7 +492,5 @@ V_C  \amp= F/2\,.
 \end{align*}
 </div></section></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.12/login.js"></script>
 </body>
 </html>

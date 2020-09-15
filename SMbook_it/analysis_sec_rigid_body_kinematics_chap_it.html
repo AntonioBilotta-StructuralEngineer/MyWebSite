@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-01T08:38:18+02:00    *-->
-<!--*                                    *-->
-<!--*      https://pretextbook.org       *-->
-<!--*                                    *-->
-<!--**************************************-->
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-09-15T18:44:58+02:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
 <html lang="it-IT">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Solid Mechanics - analisi cinematica</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -24,7 +26,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -41,24 +43,21 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.12;
-</script>
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Valuta (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Torna alla pagina dei contenuti</a><div class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Torna alla pagina dei contenuti</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{{\not{\mid}}}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -97,7 +96,7 @@ var js_version = 0.12;
 <p class="byline">Antonio Bilotta</p>
 </div>
 </div></div>
-<nav id="primary-navbar" class="navbar"><div class="container">
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contenuti</button><div class="tree-nav toolbar toolbar-divisor-3">
 <a class="index-button toolbar-item button" href="solid_mechnics_book_index_it.html" title="Indice">Indice</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="constraints_sec_rigid_body_kinematics_chap_it.html" title="Precedente">Prec</a><a id="upbutton" class="up-button button toolbar-item" href="rigid_body_kinematics_chap_it.html" title="Sopra">Su</a><a id="nextbutton" class="next-button button toolbar-item" href="analysis_examples_sec_rigid_body_kinematics_chap_it.html" title="Successivo">Succ</a></span>
@@ -107,9 +106,9 @@ var js_version = 0.12;
 <button class="sidebar-left-toggle-button button toolbar-item active">Contenuti</button><a class="previous-button toolbar-item button" href="constraints_sec_rigid_body_kinematics_chap_it.html" title="Precedente">Prec</a><a class="up-button button toolbar-item" href="rigid_body_kinematics_chap_it.html" title="Sopra">Su</a><a class="next-button button toolbar-item" href="analysis_examples_sec_rigid_body_kinematics_chap_it.html" title="Successivo">Succ</a>
 </div>
 </div></nav></header><div class="page">
-<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link">
+<li class="link frontmatter">
 <a href="front_matter_it.html" data-scroll="front_matter_it"><span class="title">Copertina</span></a><ul>
 <li><a href="front_colophon_it.html" data-scroll="front_colophon_it">Colofone</a></li>
 <li><a href="author_bio_it.html" data-scroll="author_bio_it">Biografia dell'autore</a></li>
@@ -179,21 +178,21 @@ var js_version = 0.12;
 <li><a href="constraints_sec_rigid_body_statics_chap_it.html" data-scroll="constraints_sec_rigid_body_statics_chap_it">vincoli</a></li>
 <li><a href="free_body_sec_rigid_body_statics_chap_it.html" data-scroll="free_body_sec_rigid_body_statics_chap_it">diagrammi di corpo libero</a></li>
 <li><a href="analysis_sec_rigid_body_statics_chap_it.html" data-scroll="analysis_sec_rigid_body_statics_chap_it">analisi statica</a></li>
-<li><a href="analysis_examples_sec_rigid_body_statics_chap_it.html" data-scroll="analysis_examples_sec_rigid_body_statics_chap_it">applicazione dell'analisi statica ai sistemi di corpi rigidi</a></li>
+<li><a href="analysis_examples_sec_rigid_body_statics_chap_it.html" data-scroll="analysis_examples_sec_rigid_body_statics_chap_it">applicazione dell'analisi statica ai sistemi di corpi</a></li>
 <li><a href="sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_it">sollecitazioni</a></li>
 <li><a href="indefinte_sec_rigid_body_statics_chap_it.html" data-scroll="indefinte_sec_rigid_body_statics_chap_it">equazioni indefinite di equilibrio per la trave piana</a></li>
 <li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it">calcolo e diagrammi delle sollecitazioni</a></li>
 </ul>
 </li>
-<li class="link"><a href="backmatter_it.html" data-scroll="backmatter_it"><span class="title">Back Matter</span></a></li>
+<li class="link backmatter"><a href="backmatter_it.html" data-scroll="backmatter_it"><span class="title">Back Matter</span></a></li>
 <li class="link"><a href="solid_mechnics_book_index_it.html" data-scroll="solid_mechnics_book_index_it"><span class="title">Indice</span></a></li>
 <li class="link"><a href="back_colophon_it.html" data-scroll="back_colophon_it"><span class="title">Colofone</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Scritto con PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="pretext-content"><section class="section" id="analysis_sec_rigid_body_kinematics_chap_it"><h2 class="heading hide-type">
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="analysis_sec_rigid_body_kinematics_chap_it"><h2 class="heading hide-type">
 <span class="type">Sezione</span> <span class="codenumber">4.3</span> <span class="title">analisi cinematica</span>
 </h2>
-<a href="analysis_sec_rigid_body_kinematics_chap_it.html" class="permalink">¶</a><section class="subsection" id="subsection-92"><h3 class="heading hide-type">
+<section class="subsection" id="subsection-92"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">4.3.1</span> <span class="title">matrice cinematica</span>
 </h3>
 <p id="p-374">Si consideri un sistema rigido caratterizzato da \(n\) coordinate lagrangiane e soggetto ad \(m\) condizioni di vincolo. Le equazioni di vincolo corrispondente sono esprimibili nel modo seguente</p>
@@ -202,18 +201,19 @@ var js_version = 0.12;
 \sum_{j=1}^n A_{ij}  q_j = d_i \qquad (i=1 \dots m)\,.\tag{4.3.1}
 \end{equation}
 </div>
-<p>\(d_i\) è il generico <em class="emphasis">cedimento</em> assegnato sul vincolo \(i\)-esimo, \(q_j\) è l'incremento della coordinata lagrangiana \(j\)-esima e \(A_{ij}\) è il contributo di spostamento fornito per un incremento unitario della coordinata \(q_j\) sul vincolo \(i\)-esimo. In termini matriciali le condizioni vincolari sono esprimibili come segue</p>
+<p data-braille="continuation">\(d_i\) è il generico <em class="emphasis">cedimento</em> assegnato sul vincolo \(i\)-esimo, \(q_j\) è l'incremento della coordinata lagrangiana \(j\)-esima e \(A_{ij}\) è il contributo di spostamento fornito per un incremento unitario della coordinata \(q_j\) sul vincolo \(i\)-esimo. In termini matriciali le condizioni vincolari sono esprimibili come segue</p>
 <div class="displaymath">
 \begin{equation}
 \mat{A} \vec{q} = \vec{d},\label{kinematik_system_eq}\tag{4.3.2}
 \end{equation}
 </div>
-<p>dove \(\mat{A}\text{,}\) di dimensioni \(m \times n\text{,}\) è la matrice cinematica del sistema, \(\vec{q}\text{,}\) di dimensione \(n\text{,}\) è il vettore che raccoglie le coordinate lagrangiane e \(\vec{d}\text{,}\) di dimensione \(m\text{,}\) è il vettore dei cedimenti assegnati. <article class="remark-like" id="note-2"><h6 class="heading">
-<span class="type">Nota</span> <span class="codenumber">4.3.1</span>.</h6>
+<p data-braille="continuation">dove \(\mat{A}\text{,}\) di dimensioni \(m \times n\text{,}\) è la matrice cinematica del sistema, \(\vec{q}\text{,}\) di dimensione \(n\text{,}\) è il vettore che raccoglie le coordinate lagrangiane e \(\vec{d}\text{,}\) di dimensione \(m\text{,}\) è il vettore dei cedimenti assegnati. <article class="note remark-like" id="note-2"><h6 class="heading">
+<span class="type">Nota</span><span class="space"> </span><span class="codenumber">4.3.1</span><span class="period">.</span>
+</h6>
 <p id="p-375">Le componenti del vettore \(\vec{d}\) possono assumere indifferentemente valori nulli o non nulli. Il caso tipico è comunque il caso di cedimento assegnato nullo.</p></article></p></section><section class="subsection" id="subsection-93"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">4.3.2</span> <span class="title">classificazione cinematica</span>
 </h3>
-<p id="p-376">Il sistema lineare <a data-knowl="./knowl/kinematik_system_eq.html" title="Equazione 4.3.2">(4.3.2)</a> viene utilizzato per il calcolo dei parametri lagrangiani \(\vec{q}\text{.}\) A tal fine è utile definire, sulla base delle condizioni di solvibilità del sistema, una classificazione cinematica dei stistemi. Sia \(p=\text{min}(n, m)\text{,}\) allora possono verificarsi i seguenti casi.</p>
+<p id="p-376">Il sistema lineare <a class="xref" data-knowl="./knowl/kinematik_system_eq.html" title="Equazione 4.3.2">(4.3.2)</a> viene utilizzato per il calcolo dei parametri lagrangiani \(\vec{q}\text{.}\) A tal fine è utile definire, sulla base delle condizioni di solvibilità del sistema, una classificazione cinematica dei stistemi. Sia \(p=\text{min}(n, m)\text{,}\) allora possono verificarsi i seguenti casi.</p>
 <ul class="disc">
 <li id="li-125">\(\text{rango}\mat{A} == p\)<ul class="circle">
 <li id="li-126">\(n==m\text{:}\) sistema determinato;</li>
@@ -224,11 +224,10 @@ var js_version = 0.12;
 <li id="li-129">\(\text{rango}\mat{A} &lt; p\)<ul class="circle"><li id="li-130">sistema degenere.</li></ul>
 </li>
 </ul>
-<article class="remark-like" id="remark-17"><h6 class="heading">
-<span class="type">Commento</span> <span class="codenumber">4.3.2</span>.</h6>
+<article class="remark remark-like" id="remark-17"><h6 class="heading">
+<span class="type">Commento</span><span class="space"> </span><span class="codenumber">4.3.2</span><span class="period">.</span>
+</h6>
 <p id="p-377">Nel caso di sistema degenere una o più righe della matrice \(\mat{A}\) sono combinazione lineare delle altre. L'eliminazione delle righe dipendenti conduce ad un sistema con un numero inferiore di equazioni per il quale si può procedere con la soluzione ricadendo in uno dei tre casi visti per il sistema non degenere. Da un punto di vista meccanico tale situazione non necessariamente è sintomo di un errore ma può essere determinata da uno o più gradi di vincolo eliminabili senza modificare le condizioni cinematiche applicate al sistema.</p></article></section></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.12/login.js"></script>
 </body>
 </html>
