@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-10-02T11:40:24+02:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="assemblage assemblage-like"><p>Let \(\tens{U}\) be given by the following diagonal form</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\mat{U} =
+\left[\begin{array}{ccc}
+2 \amp 0 \amp 0\\
+0 \amp 5 \amp 0\\
+0 \amp 0 \amp 7\\
+\end{array}\right]\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">calculate the expression assumed \(\tens{U}\) assuming to apply to the principal directions the following rotations</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\matWp{R}{1} = 
+\left[\begin{array}{ccc}
+\cos{\frac{\pi}{4}} \amp -\sin{\frac{\pi}{4}} \amp 0\\
+\sin{\frac{\pi}{4}} \amp \cos{\frac{\pi}{4}} \amp 0\\
+0 \amp 0 \amp 1\\
+\end{array}\right]\,,
+\end{equation*}
+</div>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\matWp{R}{2} = 
+\left[\begin{array}{ccc}
+\cos{\frac{\pi}{4}}  \amp 0 \amp -\sin{\frac{\pi}{4}}\\
+0 \amp 1 \amp 0\\
+\sin{\frac{\pi}{4}} \amp 0 \amp \cos{\frac{\pi}{4}}\\
+\end{array}\right]\,.
+\end{equation*}
+</div>
+<p xmlns:svg="http://www.w3.org/2000/svg">The following MATLAB® instructions allow you to calculate what is required. <figure class="listing figure-like"><pre class="console"><b>R1 = [cos(pi/4) -sin(pi/4) 0; sin(pi/4) cos(pi/4) 0; 0 0 1];
+R2 = [cos(pi/4) 0 -sin(pi/4); 0 1 0; sin(pi/4) 0 cos(pi/4)];
+u1 = R2*R1*[1; 0; 0];
+u2 = R2*R1*[0; 1; 0];
+u3 = R2*R1*[0; 0; 1];
+lam1 = 2;
+lam2 = 5;
+lam3 = 7;
+U = lam1*u1*transpose(u1) + lam2*u2*transpose(u2) + ...
+lam3*u3*transpose(u3)
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.7.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Also carry out the following calculation. <figure class="listing figure-like"><pre class="console"><b>u1*transpose(u1) + u2*transpose(u2) + u3*transpose(u3)
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.7.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure> What does the obtained result suggest?</p></article><span class="incontext"><a href="principal_directions_sec_strain_chap_en.html#assemblage-9">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-10-02T11:40:23+02:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Solid Mechanics - kinematic analysis of simple rigid body systems</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+\newcommand{\tens}[1]{\boldsymbol{#1}}
+\newcommand{\mat}[1]{\left[\boldsymbol{#1}\right]}
+\newcommand{\matWp}[2]{\left[\boldsymbol{#1}_{#2}\right]}
+\newcommand{\tensQ}[1]{\pmb{\mathbb{#1}}}
+\newcommand{\tensQc}[1]{\mathbb{#1}}
+
+\newcommand{\transp}[1]{{#1}^{\textrm{T}}}
+\newcommand{\veczero}{\vec{0}}
+\newcommand{\body}{\Omega}
+\newcommand{\calvec}[1]{\boldsymbol{\mathcal{#1}}}
+\newcommand{\commadiff}[2]{{#1,}_{#2}}
+\newcommand{\regulardiff}[2]{ \frac{\partial#1}{\partial#2} }
+\newcommand{\func}[2]{#1\left(#2\right)}
+\newcommand{\transp}[1]{{#1}^{\text{T}}}
+\newcommand{\transpm}[1]{{#1}^{-\text{T}}}
+\newcommand{\trace}[1]{\text{tr}#1}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="./images/sm_logo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="solid_mechanics_book_en.html"><span class="title">A first course on solid mechanics</span></a></h1>
+<p class="byline">Antonio Bilotta</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="analysis_sec_rigid_body_kinematics_chap_en.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="rigid_body_kinematics_chap_en.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="refs_rigid_body_kinematics_chap_en.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="analysis_sec_rigid_body_kinematics_chap_en.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="rigid_body_kinematics_chap_en.html" title="Up">Up</a><a class="next-button button toolbar-item" href="refs_rigid_body_kinematics_chap_en.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="front_matter_en.html" data-scroll="front_matter_en"><span class="title">Front Matter</span></a><ul>
+<li><a href="front_colophon_en.html" data-scroll="front_colophon_en">Colophon</a></li>
+<li><a href="author_bio_en.html" data-scroll="author_bio_en">Author Biography</a></li>
+<li><a href="dedication_en.html" data-scroll="dedication_en">Dedication</a></li>
+<li><a href="acknowledgement_en.html" data-scroll="acknowledgement_en">Acknowledgements</a></li>
+<li><a href="preface_en.html" data-scroll="preface_en">Preface</a></li>
+<li><a href="references_frontmatter_en.html" data-scroll="references_frontmatter_en">using MATLAB®</a></li>
+</ul>
+</li>
+<li class="link part"><a href="continuum_mechanics_en.html" data-scroll="continuum_mechanics_en"><span class="codenumber">I</span> <span class="title">continuum mechanics</span></a></li>
+<li class="link">
+<a href="strain_chap_en.html" data-scroll="strain_chap_en"><span class="codenumber">1</span> <span class="title">bodies' kinematics</span></a><ul>
+<li><a href="configurations_sec_strain_chap_en.html" data-scroll="configurations_sec_strain_chap_en">configurations</a></li>
+<li><a href="transformations_sec_strain_chap_en.html" data-scroll="transformations_sec_strain_chap_en">transformations</a></li>
+<li><a href="gradient_sec_strain_chap_en.html" data-scroll="gradient_sec_strain_chap_en">deformation gradient</a></li>
+<li><a href="displacement_sec_strain_chap_en.html" data-scroll="displacement_sec_strain_chap_en">displacement field</a></li>
+<li><a href="determinant_sec_strain_chap_en.html" data-scroll="determinant_sec_strain_chap_en">determinant of the deformation gradient</a></li>
+<li><a href="polar_sec_strain_chap_en.html" data-scroll="polar_sec_strain_chap_en">polar decomposition</a></li>
+<li><a href="principal_directions_sec_strain_chap_en.html" data-scroll="principal_directions_sec_strain_chap_en">stretch tensor \(\tens{U}\) and principal directions (transformation of line elements)</a></li>
+<li><a href="measures_sec_strain_chap_en.html" data-scroll="measures_sec_strain_chap_en">strain measures</a></li>
+<li><a href="infinitesimal_sec_strain_chap_en.html" data-scroll="infinitesimal_sec_strain_chap_en">the infinitesimal strain tensor</a></li>
+<li><a href="exercises_sec_strain_chap_en.html" data-scroll="exercises_sec_strain_chap_en">exercises</a></li>
+<li><a href="answers_sec_strain_chap_en.html" data-scroll="answers_sec_strain_chap_en">answers to selected exercises</a></li>
+<li><a href="refs_strain_chap_en.html" data-scroll="refs_strain_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="stress_chap_en.html" data-scroll="stress_chap_en"><span class="codenumber">2</span> <span class="title">forces, equilibrium and stress</span></a><ul>
+<li><a href="basics_sec_stress_chap_en.html" data-scroll="basics_sec_stress_chap_en">the continuity hypothesis</a></li>
+<li><a href="equilibrium_sec_stress_chap_en.html" data-scroll="equilibrium_sec_stress_chap_en">equilibrium equations</a></li>
+<li><a href="stress_sec_stress_chap_en.html" data-scroll="stress_sec_stress_chap_en">Cauchy stress tensor tensor</a></li>
+<li><a href="stress_analysis_sec_stress_chap_en.html" data-scroll="stress_analysis_sec_stress_chap_en">analisys of states of stress</a></li>
+<li><a href="plv_sec_stress_chap_en.html" data-scroll="plv_sec_stress_chap_en">principle of virtual work</a></li>
+<li><a href="exercises_sec_stress_chap_en.html" data-scroll="exercises_sec_stress_chap_en">exercises</a></li>
+<li><a href="answers_sec_stress_chap_en.html" data-scroll="answers_sec_stress_chap_en">answers to some of the proposed exercises</a></li>
+<li><a href="refs_stress_chap_en.html" data-scroll="refs_stress_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="elasticity_chap_en.html" data-scroll="elasticity_chap_en"><span class="codenumber">3</span> <span class="title">elasticity</span></a><ul>
+<li><a href="motivations_sec_elasticity_chap_en.html" data-scroll="motivations_sec_elasticity_chap_en">motivation</a></li>
+<li><a href="uniaxial_sec_elasticity_chap_en.html" data-scroll="uniaxial_sec_elasticity_chap_en">uniaxial states</a></li>
+<li><a href="multiaxial_sec_elasticity_chap_en.html" data-scroll="multiaxial_sec_elasticity_chap_en">multi-axial states</a></li>
+<li><a href="problem_sec_elasticity_chap_en.html" data-scroll="problem_sec_elasticity_chap_en">the elastic problem</a></li>
+<li><a href="stretched_beam_sec_elasticity_chap_en.html" data-scroll="stretched_beam_sec_elasticity_chap_en">one-dimensional models: stretched beam</a></li>
+<li><a href="bent_beam_sec_elasticity_chap_en.html" data-scroll="bent_beam_sec_elasticity_chap_en">one-dimensional models: bent beam</a></li>
+<li><a href="stretched_beam_applications_sec_elasticity_chap_en.html" data-scroll="stretched_beam_applications_sec_elasticity_chap_en">applications of the stretched beam model</a></li>
+<li><a href="bent_beam_applications_sec_elasticity_chap_en.html" data-scroll="bent_beam_applications_sec_elasticity_chap_en">applications of the bent beam model</a></li>
+<li><a href="exercises_sec_elasticity_chap_en.html" data-scroll="exercises_sec_elasticity_chap_en">exercises</a></li>
+<li><a href="answers_sec_elasticity_chap_en.html" data-scroll="answers_sec_elasticity_chap_en">answers to selected exercises</a></li>
+<li><a href="refs_elasticity_chap_en.html" data-scroll="refs_elasticity_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link part"><a href="beams_systems_en.html" data-scroll="beams_systems_en"><span class="codenumber">II</span> <span class="title">rigid systems</span></a></li>
+<li class="link">
+<a href="rigid_body_kinematics_chap_en.html" data-scroll="rigid_body_kinematics_chap_en"><span class="codenumber">4</span> <span class="title">kinematics</span></a><ul>
+<li><a href="description_sec_rigid_body_kinematics_chap_en.html" data-scroll="description_sec_rigid_body_kinematics_chap_en">basic kinematic description</a></li>
+<li><a href="constraints_sec_rigid_body_kinematics_chap_en.html" data-scroll="constraints_sec_rigid_body_kinematics_chap_en">constraints</a></li>
+<li><a href="analysis_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_sec_rigid_body_kinematics_chap_en">kinematic analysis</a></li>
+<li><a href="analysis_examples_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_examples_sec_rigid_body_kinematics_chap_en" class="active">kinematic analysis of simple rigid body systems</a></li>
+<li><a href="refs_rigid_body_kinematics_chap_en.html" data-scroll="refs_rigid_body_kinematics_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="rigid_body_statics_chap_en.html" data-scroll="rigid_body_statics_chap_en"><span class="codenumber">5</span> <span class="title">statics</span></a><ul>
+<li><a href="equilibrium_sec_rigid_body_statics_chap_en.html" data-scroll="equilibrium_sec_rigid_body_statics_chap_en">equilibrium equations</a></li>
+<li><a href="planecase_sec_rigid_body_statics_chap_en.html" data-scroll="planecase_sec_rigid_body_statics_chap_en">2D case</a></li>
+<li><a href="constraints_sec_rigid_body_statics_chap_en.html" data-scroll="constraints_sec_rigid_body_statics_chap_en">constraints</a></li>
+<li><a href="free_body_sec_rigid_body_statics_chap_en.html" data-scroll="free_body_sec_rigid_body_statics_chap_en">free body diagrams</a></li>
+<li><a href="analysis_sec_rigid_body_statics_chap_en.html" data-scroll="analysis_sec_rigid_body_statics_chap_en">static analysis</a></li>
+<li><a href="analysis_examples_sec_rigid_body_statics_chap_en.html" data-scroll="analysis_examples_sec_rigid_body_statics_chap_en">application of static analysis to systems of bodies</a></li>
+<li><a href="sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces</a></li>
+<li><a href="indefinte_sec_rigid_body_statics_chap_en.html" data-scroll="indefinte_sec_rigid_body_statics_chap_en">2D beam equilibrium differential equations</a></li>
+<li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces calculation and diagrams</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="analysis_examples_sec_rigid_body_kinematics_chap_en"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4.4</span> <span class="title">kinematic analysis of simple rigid body systems</span>
+</h2>
+<section class="subsection" id="subsection-94"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.4.1</span> <span class="title">simply supported beam</span>
+</h3>
+<p id="p-382">Perform the kinematic analysis of the following beam of length equal to \(l\text{.}\) <figure class="figure figure-like" id="trave_appoggiata_cinematica_fig"><div class="image-box" style="width: 42%; margin-left: 29%; margin-right: 29%;"><img src="images/trave_appoggiata_cinematica.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.4.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p id="p-383">By “reading” the applyed constraints the following equations can be written</p>
+<div class="displaymath">
+\begin{gather*}
+\vec{u}_A = \vec0\,,\\
+\vec{u}_B \cdot \vec{n}_B = 0\,,
+\end{gather*}
+</div>
+<p data-braille="continuation">where \(\vec{n}_B = \transp{[0 \; 1]}\text{.}\) Previous equations can be also expressed by the following 3 scalar equations (\(m=3\)):</p>
+<div class="displaymath">
+\begin{gather*}
+u_{1A} = 0\,,\\
+u_{2A} = 0\,,\\
+u_{2B} = 0\,.
+\end{gather*}
+</div>
+<p id="p-384">For the only rigid body in question, choose point \(A \) as the pole, therefore the 3 Lagrangian parameters (\(n = 3 \)) that can be used for the kinematic description of the system are: <figure class="figure figure-like" id="trave_appoggiata_cinematica_parametri_lagrangiani_fig"><div class="image-box" style="width: 42%; margin-left: 29%; margin-right: 29%;"><img src="images/trave_appoggiata_cinematica_parametri_lagrangiani.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.4.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Using the equation <a class="xref" data-knowl="./knowl/mat_small_rigid_u_eq.html" title="Equation 4.1.5">(4.1.5)</a> the constraint conditions can be expressed with respect to the chosen Lagrangian coordinates</p>
+<div class="displaymath">
+\begin{gather*}
+u_{1A} = 0\,,\\
+u_{2A} = 0\,,\\
+u_{2A} + \varphi_{A} l = 0\,.
+\end{gather*}
+</div>
+<p data-braille="continuation">Conditions which give</p>
+<div class="displaymath">
+\begin{equation*}
+\underbrace{\left[\begin{array}{ccc}
+1 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0\\
+0 &amp; 1 &amp; l
+\end{array}\right]}_{\mat{A}}
+\underbrace{\left[\begin{array}{c} u_{1A} \\ u_{2A} \\ \varphi_{A} \end{array}\right]}_{\vec{q}} =
+\underbrace{\left[\begin{array}{c} 0 \\ 0 \\ 0 \end{array}\right]}_{\vec{d}}.
+\end{equation*}
+</div>
+<article class="assemblage assemblage-like" id="assemblage-29"><p id="p-385">Before proceeding with the solution of the system, it is possible to classify the system by calculating the rank of the kinematic matrix using the following MATLAB® instructions. <figure class="listing figure-like" id="listing-43"><pre class="console"><b>syms l;
+A = [1 0 0; 0 1 0; 0 1 l];
+rank(A)
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">4.4.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-386">Since the \(\textrm{min} (m, n) = 3 == \text{rank} \ mat {A} \) and \(n == m \) then the system is kinematically determined. Finally, the solution of the linear system provides the values assumed by the Lagrangian parameters \(u_{1A} \text{,}\) \(u_{2A} \) and \(\varphi_{A} \) which, in this case, are identically null.</p>
+<article class="assemblage assemblage-like" id="assemblage-30"><p id="p-387"><figure class="listing figure-like" id="listing-44"><pre class="console"><b>syms l;
+A = [1 0 0; 0 1 0; 0 1 l];
+b = [0; 0; 0];
+linsolve(A,b)
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">4.4.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-388">Let us assume to modify the assigned system as follows. <figure class="figure figure-like" id="trave_appoggiata_cinematica_bis_fig"><div class="image-box" style="width: 61%; margin-left: 19.5%; margin-right: 19.5%;"><img src="images/trave_appoggiata_cinematica_bis.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.4.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure> In this case it is necessary to simply modify the constraint condition for the roller support placed in point \(B \text{,}\) that is</p>
+<div class="displaymath">
+\begin{equation*}
+u_{2B} = l/10\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">Therefore on the system of equations to be analyzed, the only effect is constituted by the modification of the vector of the known terms and there is no effect on the classification of the system which always remains kinematically determined (the matrix \(A \) has not changed). Therefore the system of equations becomes</p>
+<div class="displaymath">
+\begin{equation*}
+\underbrace{\left[\begin{array}{ccc}
+1 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0\\
+0 &amp; 1 &amp; l
+\end{array}\right]}_{\mat{A}}
+\underbrace{\left[\begin{array}{c} u_{1A} \\ u_{2A} \\ \varphi_{A} \end{array}\right]}_{\vec{q}} =
+\underbrace{\left[\begin{array}{c} 0 \\ 0 \\ l/10 \end{array}\right]}_{\vec{d}}.
+\end{equation*}
+</div>
+<p data-braille="continuation">The solution of the linear system provides the new values assumed by the Lagrangian parameters \(u_{1A} \text{,}\) \(u_{2A} \) and \(\varphi_{A} \text{.}\)</p>
+<article class="assemblage assemblage-like" id="assemblage-31"><p id="p-389"><figure class="listing figure-like" id="listing-45"><pre class="console"><b>syms l;
+A = [1 0 0; 0 1 0; 0 1 l];
+b = [0; 0; l/10];
+linsolve(A,b)
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">4.4.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></section><section class="subsection" id="traveL_cinematica_sec"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.4.2</span> <span class="title">L shaped beam with 3 roller supports</span>
+</h3>
+<p id="p-390">The assigned system is shown in the figure below. <figure class="figure figure-like" id="traveL_cinematica_fig"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/traveL_cinematica.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.4.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p id="p-391">The proposed scheme does not present any particular novelty with respect to the previous scheme and the following MATLAB® instructions allow to obtain the desired solution.</p>
+<article class="assemblage assemblage-like" id="assemblage-32"><p id="p-392"><figure class="listing figure-like" id="listing-46"><pre class="console"><b>% generic 2D displacement for a rigid body
+rigidDispl = ...
+    @(u0, phi0, X0, X)...
+    [u0(1)-phi0*(X(2)-X0(2));...
+     u0(2)+phi0*(X(1)-X0(1))];
+
+% geometric description of the beam
+syms l;
+A = [0; 0];
+B = [l; 0];
+C = [l; l/2];
+
+% displacement description by using the point A as pole
+POLE = A;
+syms phiA;
+phi0 = phiA;
+u0 = sym('uA', [2 1]);
+uA = rigidDispl(u0, phi0, POLE, A);
+uB = rigidDispl(u0, phi0, POLE, B);
+uC = rigidDispl(u0, phi0, POLE, C);
+
+% constraint equations
+eqns = [
+uA(2) == 0,
+uB(2) == 0,
+uC(1) == 0
+];
+
+% kinematic matrix and vector of the assigned displacements
+[A,d] = equationsToMatrix(eqns, [uA(1), uA(2), phiA]);
+
+% degrees of freedom, n
+% number of constrains, m
+[m,n] = size(A); 
+
+% rank of A
+r = rank(A);
+
+% if the system is kinematically determined the solution is calculated
+if and(r == min(m,n), m == n)
+    x = linsolve(A,d);
+end
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">4.4.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></section><section class="subsection" id="subsection-96"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.4.3</span> <span class="title">system with three hinges</span>
+</h3>
+<p id="p-393">Perform the kinematic analysis of the following system. <figure class="figure figure-like" id="arcoatrecerniere_cinematica_fig"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="images/arcoatrecerniere_cinematica.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.4.9<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p id="p-394">The “reading” of the assigned constraint conditions gives</p>
+<div class="displaymath">
+\begin{gather*}
+\vec{u}_A = \vec{0}\,,\\
+\vec{u}_B = \vec{u}_{B'}\,,\\
+\vec{u}_C = \vec0\,,
+\end{gather*}
+</div>
+<p data-braille="continuation">which can be also expressed by the following scalar equations (\(m=6\)):</p>
+<div class="displaymath">
+\begin{gather*}
+u_{1A} = 0\,,\\
+u_{2A} = 0\,,\\
+u_{1B} = u_{1B'}\,,\\
+u_{2B} = u_{2B'}\,,\\
+u_{1C} = 0\,,\\
+u_{2C} = 0\,.
+\end{gather*}
+</div>
+<p id="p-395">The rigid bodies under examination are two: for the body \(AB \) the point \(A \) is chosen as the pole and for the second body the point \(B'\) is chosen. Therefore the 6 Lagrangian parameters (\(n = 6 \)) adopted for the kinematic description of the system are: <figure class="figure figure-like" id="arcoatrecerniere_cinematica_parametri_lagrangiani_fig"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/arcoatrecerniere_cinematica_parametri_lagrangiani.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.4.10<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Using the equation <a class="xref" data-knowl="./knowl/mat_small_rigid_u_eq.html" title="Equation 4.1.5">(4.1.5)</a> the constraint conditions can be expressed with respect to the chosen Lagrangian coordinates, in particular:</p>
+<div class="displaymath">
+\begin{gather*}
+u_{1A} = 0\,,\\
+u_{2A} = 0\,,\\
+u_{1A} = u_{1B'}\,,\\
+u_{2A} + \varphi_{A} 2l = u_{2B'}\,,\\
+u_{1B'} + \varphi_{B'} l = 0\,,\\
+u_{2B'} + \varphi_{B'} 2l = 0\,.
+\end{gather*}
+</div>
+<p data-braille="continuation">or, in matrix format,</p>
+<div class="displaymath">
+\begin{equation*}
+\underbrace{\left[\begin{array}{cccccc}
+1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 0 &amp; -1 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 2l &amp; 0 &amp; -1 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; l\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 2l
+\end{array}\right]}_{\mat{A}}
+\underbrace{\left[\begin{array}{c} u_{1A} \\ u_{2A} \\ \varphi_{A} \\ u_{1B'} \\ u_{2B'} \\ \varphi_{B'} \end{array}\right]}_{\vec{q}} =
+\underbrace{\left[\begin{array}{c} 0 \\ 0 \\ 0 \\ 0 \\ 0 \\ 0 \end{array}\right]}_{\vec{d}}.
+\end{equation*}
+</div>
+<article class="assemblage assemblage-like" id="assemblage-33"><p id="p-396">In order to classify the system, the rank of the kinematic matrix is calculated. <figure class="listing figure-like" id="listing-47"><pre class="console"><b>syms l;
+A = [
+1 0 0 0 0 0; ... 
+0 1 0 0 0 0; ... 
+1 0 0 -1 0 0; ...
+0 1 2*l 0 -1 0; ...
+0 0 0 1 0 l; ...
+0 0 0 0 1 2*l ...
+];
+rank(A)
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">4.4.11<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-397">Since \(\textrm{min}(m,n) = 6 == \textrm{rango}\mat{A}\) and \(n == m\) then the system is kinematically determined. The solution of the linear system provides the values assumed by the Lagrangian parameters \(u_{1A}\text{,}\) \(u_{2A}\text{,}\) \(\varphi_{A}\text{,}\) \(u_{1B'}\text{,}\) \(u_{2B'}\text{,}\) \(\varphi_{B'}\text{.}\)</p>
+<article class="assemblage assemblage-like" id="assemblage-34"><p id="p-398"><figure class="listing figure-like" id="listing-48"><pre class="console"><b>syms l;
+A = [
+1 0 0 0 0 0; ... 
+0 1 0 0 0 0; ... 
+1 0 0 -1 0 0; ...
+0 1 2*l 0 -1 0; ...
+0 0 0 1 0 l; ...
+0 0 0 0 1 2*l ...
+];
+b = [0; 0; 0; 0; 0; 0];
+linsolve(A,b)
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">4.4.12<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-399">Also in this case the solution of a kinematically determined system with respect to a vector of the known terms which is identically null still provides the trivial solution.</p>
+<p id="p-400">A more interesting result can be obtained by assuming an assigned non-zero displacement condition on one or more degrees of constraint. For example: <figure class="figure figure-like" id="arcoatrecerniere_cinematica_bis_fig"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="images/arcoatrecerniere_cinematica_bis.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.4.13<span class="period">.</span></span><span class="space"> </span></figcaption></figure> In this case the matrix form of the constraint conditions provides</p>
+<div class="displaymath">
+\begin{equation*}
+\underbrace{\left[\begin{array}{cccccc}
+1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 0 &amp; -1 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 2l &amp; 0 &amp; -1 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; l\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 2l
+\end{array}\right]}_{\mat{A}}
+\underbrace{\left[\begin{array}{c} u_{1A} \\ u_{2A} \\ \varphi_{A} \\ u_{1B'} \\ u_{2B'} \\ \varphi_{B'} \end{array}\right]}_{\vec{q}} =
+\underbrace{\left[\begin{array}{c} l/4 \\ 0 \\ 0 \\ 0 \\ 0 \\ 0 \end{array}\right]}_{\vec{d}}\,.
+\end{equation*}
+</div>
+<article class="assemblage assemblage-like" id="assemblage-35"><p id="p-401">The solution can be calculated using the following MATLAB® instructions. <figure class="listing figure-like" id="listing-49"><pre class="console"><b>syms l;
+A = [
+1 0 0 0 0 0; ... 
+0 1 0 0 0 0; ... 
+1 0 0 -1 0 0; ...
+0 1 2*l 0 -1 0; ...
+0 0 0 1 0 l; ...
+0 0 0 0 1 2*l ...
+];
+b = [l/4; 0; 0; 0; 0; 0];
+linsolve(A,b)
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">4.4.14<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-402">The graphical representation of the displacement field is obtained by evaluating the displacement of the end points of the straight parts of the beams, obtaining what follows. <figure class="figure figure-like" id="arcoatrecerniere_cinematica_bis_soluzione_fig"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="images/arcoatrecerniere_cinematica_bis_soluzione.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.4.15<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p id="p-403">The following MATLAB® instructions allow you to obtain a plot of the kinematics shown above.</p>
+<article class="assemblage assemblage-like" id="assemblage-36"><p id="p-404"><figure class="listing figure-like" id="listing-50"><pre class="console"><b>% geometric description
+L = 100;
+A = [0; 0];
+B = [2*L; 0];
+C = [2*L; -L];
+D = [4*L; -L];
+beam1 = [A B];
+beam2 = [B C D];
+
+% function for the evaluation of the new position of a point
+rigidT = @(u0, X0, phi0, X) ...
+[X(1)+u0(1)-phi0*(X(2)-X0(2)); ...
+X(2)+u0(2)+phi0*(X(1)-X0(1))];
+
+% new configuration of the first beam (pole in A)
+u0 = [L/4; 0];
+phi0 = 1/4;
+X0 = A;
+TA = rigidT(u0, X0, phi0, A);
+TB = rigidT(u0, X0, phi0, B);
+beam1T = [TA TB];
+
+% new configuration of the first beam (pole in D)
+u0 = [0; 0];
+phi0 = -1/4;
+X0 = D;
+TC = rigidT(u0, X0, phi0, C);
+TD = rigidT(u0, X0, phi0, D);
+beam2T = [TB TC TD];
+
+% drawing
+clf
+
+x = beam1(1,:);
+y = beam1(2,:);
+line(x,y,'LineWidth',2,'Color','black')
+
+x = beam2(1,:);
+y = beam2(2,:);
+line(x,y,'LineWidth',2,'Color','black')
+
+x = beam1T(1,:);
+y = beam1T(2,:);
+line(x,y,'LineWidth',2,'Color','red')
+
+x = beam2T(1,:);
+y = beam2T(2,:);
+line(x,y,'LineWidth',2,'Color','red')
+
+xlim([0 4*L])
+ylim([-L 0.5*L])
+pbaspect([2.667 1 1])
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">4.4.16<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></section><section class="subsection" id="subsection-97"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.4.4</span> <span class="title">mechanism example</span>
+</h3>
+<p id="p-405">Perform the kinematic analysis of the following system. <figure class="figure figure-like" id="arcoatrecerniere_labile_fig"><div class="image-box" style="width: 57%; margin-left: 21.5%; margin-right: 21.5%;"><img src="images/arcoatrecerniere_labile.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.4.17<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p id="p-406">The constraint conditions assigned can be expressed as follows</p>
+<div class="displaymath">
+\begin{gather*}
+\vec{u}_A = \vec{0}\,,\\
+\vec{u}_C = \vec{u}_{C'}\,,
+\end{gather*}
+</div>
+<p data-braille="continuation">The corresponding set of scalar equations is (\(m=5\)):</p>
+<div class="displaymath">
+\begin{gather*}
+u_{1A} = 0\,,\\
+u_{2A} = 0\,,\\
+u_{1C} = u_{1C'}\,,\\
+u_{2C} = u_{2C'}\,,\\
+u_{2E} = 0\,.
+\end{gather*}
+</div>
+<p id="p-407">For the two rigid bodies under examination, points B and D are chosen as poles, thus the kinematics is described through the following 6 Lagrangian parameters (\(n=6\)): <figure class="figure figure-like" id="arcoatrecerniere_labile_parametri_lagrangiani_fig"><div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="images/arcoatrecerniere_labile_parametri_lagrangiani.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.4.18<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Always using the plane motion model represented by the equation <a class="xref" data-knowl="./knowl/mat_small_rigid_u_eq.html" title="Equation 4.1.5">(4.1.5)</a> the constraint conditions can be expressed with respect to the chosen Lagrangian coordinates obtaining the following result,</p>
+<div class="displaymath">
+\begin{gather*}
+u_{1B} + \varphi_{B} 2l = 0\,,\\
+u_{2B} = 0\,,\\
+u_{1B} = u_{1D}\,,\\
+u_{2B} + \varphi_{B} 2l = u_{2D}-\varphi_{D} l\,,\\
+u_{2D} = 0\,.
+\end{gather*}
+</div>
+<p data-braille="continuation">Using a matrix format, the system of constraint equations can be written as</p>
+<div class="displaymath">
+\begin{equation*}
+\underbrace{\left[\begin{array}{cccccc}
+1 &amp; 0 &amp; 2l &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 0 &amp; -1 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 2l &amp; 0 &amp; -1 &amp; l\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0
+\end{array}\right]}_{\mat{A}}
+\underbrace{\left[\begin{array}{c} u_{1B} \\ u_{2B} \\ \varphi_{B} \\ u_{1D} \\ u_{2D} \\ \varphi_{D} \end{array}\right]}_{\vec{q}} =
+\underbrace{\left[\begin{array}{c} 0 \\ 0 \\ 0 \\ 0 \\ 0 \end{array}\right]}_{\vec{d}}.
+\end{equation*}
+</div>
+<article class="assemblage assemblage-like" id="assemblage-37"><p id="p-408">It is possible to proceed with the calculation of the rank of the matrix as follows. <figure class="listing figure-like" id="listing-51"><pre class="console"><b>syms l;
+A = [
+1 0 2*l 0 0 0; ... 
+0 1 0 0 0 0; ... 
+1 0 0 -1 0 0; ...
+0 1 2*l 0 -1 l; ...
+0 0 0 0 1 0; ...
+];
+rank(A)
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">4.4.19<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-409">In the present case \(\textrm{rango}\mat{A} == \textrm{min}(m,n) = 5\) and \(m &lt; n\) therefore the system is a mechanism and characterized by infinite solutions. To describe all possible solutions, choose the rotation \(\varphi_{B}\) as parameter to be eliminated from the group of unknowns. In this way the system can be rewritten as follows</p>
+<div class="displaymath">
+\begin{equation*}
+\left[\begin{array}{ccccc}
+1 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; -1 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0 &amp; -1 &amp; l\\
+0 &amp; 0 &amp; 0 &amp; 1 &amp; 0
+\end{array}\right]
+\left[\begin{array}{c} u_{1B} \\ u_{2B} \\ u_{1D} \\ u_{2D} \\ \varphi_{D} \end{array}\right] =
+\left[\begin{array}{c} -2l\,\varphi_{B} \\ 0 \\ 0 \\ -2l\,\varphi_{B} \\ 0 \end{array}\right].
+\end{equation*}
+</div>
+<article class="assemblage assemblage-like" id="assemblage-38"><p id="p-410">The following MATLAB® instructions allow to calculate the solution we are looking for. <figure class="listing figure-like" id="listing-52"><pre class="console"><b>syms l k;
+A = [
+1 0 0 0 0; ... 
+0 1 0 0 0; ... 
+1 0 -1 0 0; ...
+0 1 0 -1 l; ...
+0 0 0 1 0; ...
+];
+b = [-2*l*k; 0; 0; -2*l*k; 0];
+linsolve(A,b)
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">4.4.20<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-411">The obtained infinite solutions are</p>
+<div class="displaymath">
+\begin{gather*}
+u_{1B} = -\varphi_{B} 2l \,,\\
+u_{2B} = 0\,,\\
+u_{1D} = -\varphi_{B} 2l\,,\\
+u_{2D} = 0\,,\\
+\varphi_{D} = - 2\varphi_{B} \,.
+\end{gather*}
+</div>
+<p data-braille="continuation">One of these can be represented as follows <figure class="figure figure-like" id="arcoatrecerniere_labile_soluzione_fig"><div class="image-box" style="width: 57%; margin-left: 21.5%; margin-right: 21.5%;"><img src="images/arcoatrecerniere_labile_soluzione.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.4.21<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></section><section class="subsection" id="subsection-98"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.4.5</span> <span class="title">esercizi proposti</span>
+</h3>
+<p id="p-412">Perform the previous exercises by suitably modifying the MATLAB® code used for the example shown in <a href="analysis_examples_sec_rigid_body_kinematics_chap_en.html#traveL_cinematica_sec" class="internal" title="Subsection 4.4.2: L shaped beam with 3 roller supports">Subsection 4.4.2</a>.</p></section></section></div></main>
+</div>
+</body>
+</html>

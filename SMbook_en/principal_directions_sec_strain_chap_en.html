@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-10-02T11:40:20+02:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Solid Mechanics - stretch tensor \(\tens{U}\) and principal directions (transformation of line elements)</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+\newcommand{\tens}[1]{\boldsymbol{#1}}
+\newcommand{\mat}[1]{\left[\boldsymbol{#1}\right]}
+\newcommand{\matWp}[2]{\left[\boldsymbol{#1}_{#2}\right]}
+\newcommand{\tensQ}[1]{\pmb{\mathbb{#1}}}
+\newcommand{\tensQc}[1]{\mathbb{#1}}
+
+\newcommand{\transp}[1]{{#1}^{\textrm{T}}}
+\newcommand{\veczero}{\vec{0}}
+\newcommand{\body}{\Omega}
+\newcommand{\calvec}[1]{\boldsymbol{\mathcal{#1}}}
+\newcommand{\commadiff}[2]{{#1,}_{#2}}
+\newcommand{\regulardiff}[2]{ \frac{\partial#1}{\partial#2} }
+\newcommand{\func}[2]{#1\left(#2\right)}
+\newcommand{\transp}[1]{{#1}^{\text{T}}}
+\newcommand{\transpm}[1]{{#1}^{-\text{T}}}
+\newcommand{\trace}[1]{\text{tr}#1}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="./images/sm_logo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="solid_mechanics_book_en.html"><span class="title">A first course on solid mechanics</span></a></h1>
+<p class="byline">Antonio Bilotta</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="polar_sec_strain_chap_en.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="strain_chap_en.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="measures_sec_strain_chap_en.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="polar_sec_strain_chap_en.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="strain_chap_en.html" title="Up">Up</a><a class="next-button button toolbar-item" href="measures_sec_strain_chap_en.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="front_matter_en.html" data-scroll="front_matter_en"><span class="title">Front Matter</span></a><ul>
+<li><a href="front_colophon_en.html" data-scroll="front_colophon_en">Colophon</a></li>
+<li><a href="author_bio_en.html" data-scroll="author_bio_en">Author Biography</a></li>
+<li><a href="dedication_en.html" data-scroll="dedication_en">Dedication</a></li>
+<li><a href="acknowledgement_en.html" data-scroll="acknowledgement_en">Acknowledgements</a></li>
+<li><a href="preface_en.html" data-scroll="preface_en">Preface</a></li>
+<li><a href="references_frontmatter_en.html" data-scroll="references_frontmatter_en">using MATLAB®</a></li>
+</ul>
+</li>
+<li class="link part"><a href="continuum_mechanics_en.html" data-scroll="continuum_mechanics_en"><span class="codenumber">I</span> <span class="title">continuum mechanics</span></a></li>
+<li class="link">
+<a href="strain_chap_en.html" data-scroll="strain_chap_en"><span class="codenumber">1</span> <span class="title">bodies' kinematics</span></a><ul>
+<li><a href="configurations_sec_strain_chap_en.html" data-scroll="configurations_sec_strain_chap_en">configurations</a></li>
+<li><a href="transformations_sec_strain_chap_en.html" data-scroll="transformations_sec_strain_chap_en">transformations</a></li>
+<li><a href="gradient_sec_strain_chap_en.html" data-scroll="gradient_sec_strain_chap_en">deformation gradient</a></li>
+<li><a href="displacement_sec_strain_chap_en.html" data-scroll="displacement_sec_strain_chap_en">displacement field</a></li>
+<li><a href="determinant_sec_strain_chap_en.html" data-scroll="determinant_sec_strain_chap_en">determinant of the deformation gradient</a></li>
+<li><a href="polar_sec_strain_chap_en.html" data-scroll="polar_sec_strain_chap_en">polar decomposition</a></li>
+<li><a href="principal_directions_sec_strain_chap_en.html" data-scroll="principal_directions_sec_strain_chap_en" class="active">stretch tensor \(\tens{U}\) and principal directions (transformation of line elements)</a></li>
+<li><a href="measures_sec_strain_chap_en.html" data-scroll="measures_sec_strain_chap_en">strain measures</a></li>
+<li><a href="infinitesimal_sec_strain_chap_en.html" data-scroll="infinitesimal_sec_strain_chap_en">the infinitesimal strain tensor</a></li>
+<li><a href="exercises_sec_strain_chap_en.html" data-scroll="exercises_sec_strain_chap_en">exercises</a></li>
+<li><a href="answers_sec_strain_chap_en.html" data-scroll="answers_sec_strain_chap_en">answers to selected exercises</a></li>
+<li><a href="refs_strain_chap_en.html" data-scroll="refs_strain_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="stress_chap_en.html" data-scroll="stress_chap_en"><span class="codenumber">2</span> <span class="title">forces, equilibrium and stress</span></a><ul>
+<li><a href="basics_sec_stress_chap_en.html" data-scroll="basics_sec_stress_chap_en">the continuity hypothesis</a></li>
+<li><a href="equilibrium_sec_stress_chap_en.html" data-scroll="equilibrium_sec_stress_chap_en">equilibrium equations</a></li>
+<li><a href="stress_sec_stress_chap_en.html" data-scroll="stress_sec_stress_chap_en">Cauchy stress tensor tensor</a></li>
+<li><a href="stress_analysis_sec_stress_chap_en.html" data-scroll="stress_analysis_sec_stress_chap_en">analisys of states of stress</a></li>
+<li><a href="plv_sec_stress_chap_en.html" data-scroll="plv_sec_stress_chap_en">principle of virtual work</a></li>
+<li><a href="exercises_sec_stress_chap_en.html" data-scroll="exercises_sec_stress_chap_en">exercises</a></li>
+<li><a href="answers_sec_stress_chap_en.html" data-scroll="answers_sec_stress_chap_en">answers to some of the proposed exercises</a></li>
+<li><a href="refs_stress_chap_en.html" data-scroll="refs_stress_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="elasticity_chap_en.html" data-scroll="elasticity_chap_en"><span class="codenumber">3</span> <span class="title">elasticity</span></a><ul>
+<li><a href="motivations_sec_elasticity_chap_en.html" data-scroll="motivations_sec_elasticity_chap_en">motivation</a></li>
+<li><a href="uniaxial_sec_elasticity_chap_en.html" data-scroll="uniaxial_sec_elasticity_chap_en">uniaxial states</a></li>
+<li><a href="multiaxial_sec_elasticity_chap_en.html" data-scroll="multiaxial_sec_elasticity_chap_en">multi-axial states</a></li>
+<li><a href="problem_sec_elasticity_chap_en.html" data-scroll="problem_sec_elasticity_chap_en">the elastic problem</a></li>
+<li><a href="stretched_beam_sec_elasticity_chap_en.html" data-scroll="stretched_beam_sec_elasticity_chap_en">one-dimensional models: stretched beam</a></li>
+<li><a href="bent_beam_sec_elasticity_chap_en.html" data-scroll="bent_beam_sec_elasticity_chap_en">one-dimensional models: bent beam</a></li>
+<li><a href="stretched_beam_applications_sec_elasticity_chap_en.html" data-scroll="stretched_beam_applications_sec_elasticity_chap_en">applications of the stretched beam model</a></li>
+<li><a href="bent_beam_applications_sec_elasticity_chap_en.html" data-scroll="bent_beam_applications_sec_elasticity_chap_en">applications of the bent beam model</a></li>
+<li><a href="exercises_sec_elasticity_chap_en.html" data-scroll="exercises_sec_elasticity_chap_en">exercises</a></li>
+<li><a href="answers_sec_elasticity_chap_en.html" data-scroll="answers_sec_elasticity_chap_en">answers to selected exercises</a></li>
+<li><a href="refs_elasticity_chap_en.html" data-scroll="refs_elasticity_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link part"><a href="beams_systems_en.html" data-scroll="beams_systems_en"><span class="codenumber">II</span> <span class="title">rigid systems</span></a></li>
+<li class="link">
+<a href="rigid_body_kinematics_chap_en.html" data-scroll="rigid_body_kinematics_chap_en"><span class="codenumber">4</span> <span class="title">kinematics</span></a><ul>
+<li><a href="description_sec_rigid_body_kinematics_chap_en.html" data-scroll="description_sec_rigid_body_kinematics_chap_en">basic kinematic description</a></li>
+<li><a href="constraints_sec_rigid_body_kinematics_chap_en.html" data-scroll="constraints_sec_rigid_body_kinematics_chap_en">constraints</a></li>
+<li><a href="analysis_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_sec_rigid_body_kinematics_chap_en">kinematic analysis</a></li>
+<li><a href="analysis_examples_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_examples_sec_rigid_body_kinematics_chap_en">kinematic analysis of simple rigid body systems</a></li>
+<li><a href="refs_rigid_body_kinematics_chap_en.html" data-scroll="refs_rigid_body_kinematics_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="rigid_body_statics_chap_en.html" data-scroll="rigid_body_statics_chap_en"><span class="codenumber">5</span> <span class="title">statics</span></a><ul>
+<li><a href="equilibrium_sec_rigid_body_statics_chap_en.html" data-scroll="equilibrium_sec_rigid_body_statics_chap_en">equilibrium equations</a></li>
+<li><a href="planecase_sec_rigid_body_statics_chap_en.html" data-scroll="planecase_sec_rigid_body_statics_chap_en">2D case</a></li>
+<li><a href="constraints_sec_rigid_body_statics_chap_en.html" data-scroll="constraints_sec_rigid_body_statics_chap_en">constraints</a></li>
+<li><a href="free_body_sec_rigid_body_statics_chap_en.html" data-scroll="free_body_sec_rigid_body_statics_chap_en">free body diagrams</a></li>
+<li><a href="analysis_sec_rigid_body_statics_chap_en.html" data-scroll="analysis_sec_rigid_body_statics_chap_en">static analysis</a></li>
+<li><a href="analysis_examples_sec_rigid_body_statics_chap_en.html" data-scroll="analysis_examples_sec_rigid_body_statics_chap_en">application of static analysis to systems of bodies</a></li>
+<li><a href="sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces</a></li>
+<li><a href="indefinte_sec_rigid_body_statics_chap_en.html" data-scroll="indefinte_sec_rigid_body_statics_chap_en">2D beam equilibrium differential equations</a></li>
+<li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces calculation and diagrams</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="principal_directions_sec_strain_chap_en"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.7</span> <span class="title">stretch tensor \(\tens{U}\) and principal directions (transformation of line elements)</span>
+</h2>
+<p id="p-97">The identification of the prinicipal directions of the stretch tensor allows to obtain an “intrinsic” representation of the deformation to which a generic point of the body is subjected. The adjective “intrinsec” is justified because, as we will see, a simpler representation of the deformation state is obtained but, above all, independent of the reference system used.</p>
+<p id="p-98">The discussion that follows, gradually, presents the idea behind the principal directions referring to the right stretch tensor, \(\tens{U}\text{,}\) in a particular form: the diagonal form.</p>
+<p id="p-99">With due clarifications, what is obtained also applies to the left stretch tensor, \(\tens{V}\text{.}\)</p>
+<section class="subsection" id="subsection-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.7.1</span> <span class="title"></span>
+</h3>
+<p id="p-100">Let us assume for \(\tens{U}\) the following diagonal form</p>
+<div class="displaymath">
+\begin{equation}
+\mat{U} =
+\left[\begin{array}{ccc}
+\lambda \amp 0 \amp 0\\
+0 \amp \lambda \amp 0\\
+0 \amp 0 \amp \lambda\\
+\end{array}\right]\,.\tag{1.7.1}
+\end{equation}
+</div>
+<p data-braille="continuation">If \(\tens{U}\) is applied to a generic vector \(\vec{v}\) the following result is obtained</p>
+<div class="displaymath">
+\begin{equation}
+\mat{U}\mat{v}
+=
+\left[\begin{array}{ccc}
+\lambda \amp 0 \amp 0\\
+0 \amp \lambda \amp 0\\
+0 \amp 0 \amp \lambda\\
+\end{array}\right]
+\left[\begin{array}{c}v_1\\v_2\\v_3\end{array}\right]
+=
+\lambda \left[\begin{array}{ccc}
+1 \amp 0 \amp 0\\
+0 \amp 1 \amp 0\\
+0 \amp 0 \amp 1\\
+\end{array}\right]
+\left[\begin{array}{c}v_1\\v_2\\v_3\end{array}\right]
+=
+\lambda \mat{I} \mat{v}
+=
+\lambda \mat{v}
+\,.\tag{1.7.2}
+\end{equation}
+</div>
+<p data-braille="continuation">Result that shows how in this case the application of \(\tens{U}\) to any vector determines only a scaling, proportional to the factor \(\lambda\text{,}\) of the length of the vector which maintains the original direction. It is easy to verify that</p>
+<div class="displaymath">
+\begin{equation*}
+\|\tens{U}\vec{v} \| = \|\lambda\vec{v} \| = |\lambda| \|\vec{v} \|\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">Moreover because</p>
+<div class="displaymath">
+\begin{equation*}
+\det{\tens{F}} = \det{\tens{R}\tens{U}} = \det{\tens{U}} = \lambda^3 &gt; 0
+\end{equation*}
+</div>
+<p data-braille="continuation">the unique admissible value for \(\lambda\) is</p>
+<div class="displaymath">
+\begin{equation*}
+\lambda &gt; 0\,.
+\end{equation*}
+</div>
+<p id="p-101">We can summarize what has been achieved as follows. Each direction is a <em class="emphasis">principal direction</em> since the transformed vectors maintain the original direction. The scaling factor \(\lambda\text{,}\) which is called <em class="emphasis">principal stretch</em>, applies to any direction on which \(\tens{U}\) is applied by determining one of the following effects</p>
+<ul class="disc">
+<li id="li-11">\(\lambda &gt; 1\text{,}\) the vector increases its length;</li>
+<li id="li-12">\(\lambda = 1\text{,}\) the vector does not modify its length;</li>
+<li id="li-13">\(\lambda &lt; 1\text{,}\) the vector decreases its length;</li>
+<li id="li-14">\(\lambda = 0\text{,}\) the value is not admissible because the resulting vector cannot go to zero length;</li>
+<li id="li-15">\(\lambda &lt; 0\text{,}\) the value is not admissible because the resulting vector cannot point in the opposite direction.</li>
+</ul>
+<p id="p-102"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-7" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/Bb-R42ZhZl0?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.7.2</span> <span class="title"></span>
+</h3>
+<p id="p-103">Now suppose for \(\tens{U}\) always a diagonal form but with coefficients not all equal to each other. In particular, let us take</p>
+<div class="displaymath">
+\begin{equation}
+\mat{U} =
+\left[\begin{array}{ccc}
+\lambda_1 \amp 0 \amp 0\\
+0 \amp \lambda_1 \amp 0\\
+0 \amp 0 \amp \lambda_2\\
+\end{array}\right]\,.\tag{1.7.3}
+\end{equation}
+</div>
+<p data-braille="continuation">By applying \(\tens{U}\) to the following vectors</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{u} = \left[\begin{array}{c}u_1\\u_2\\0\end{array}\right]
+\,,\quad
+\mat{v} = \left[\begin{array}{c}0\\0\\v_3\end{array}\right]
+\,,\quad
+\mat{w} = \left[\begin{array}{c}w_1\\w_2\\w_3\end{array}\right]
+\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">we obtain</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{U}\mat{u} = \lambda_1\mat{u}
+\,,\quad
+\mat{U}\mat{v} = \lambda_2\mat{v}
+\,,\quad
+\mat{U}\mat{w} = \left[\begin{array}{c}\lambda_1\,w_1\\\lambda_1\,w_2\\\lambda_2\,w_3\end{array}\right]
+\,.\quad
+\end{equation*}
+</div>
+<p data-braille="continuation">Result that can be commented as follows.</p>
+<ul class="disc">
+<li id="li-16">All the vectors belonging to directions lying in the plane identified by the first two reference axes are simply scaled by the factor \(\lambda_1\text{.}\)</li>
+<li id="li-17">Vectors parallel to the third reference axis are simply scaled by the factor \(\lambda_2\text{.}\)</li>
+<li id="li-18">All other vectors are both scaled and change direction and the scale factor depends on both \(\lambda_1 \) and \(\lambda_2 \text{.}\)</li>
+</ul>
+<p data-braille="continuation">Then in this case <em class="emphasis">principal directions</em> are given by all the directions belonging to the \(1-2\) plane and by the \(3\) axis.</p>
+<p id="p-104">As for the scaling factors \(\lambda_1 \) and \(\lambda_2 \) it can be observed as in the previous case as</p>
+<div class="displaymath">
+\begin{equation*}
+\det{\tens{F}} = \det{\tens{R}\tens{U}} = \det{\tens{U}} = \lambda_1^2\,\lambda_2 &gt; 0
+\end{equation*}
+</div>
+<p data-braille="continuation">condition which allows to state</p>
+<div class="displaymath">
+\begin{equation*}
+\lambda_2 &gt; 0\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">While the positivity condition of the tensor \(\tens{U} \)</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{u} \cdot \tens{U} \vec{u} = \vec{u} \cdot \lambda_1 \vec{u} =  \lambda_1\,\vec{u} \cdot \vec{u}  &gt; 0\,,\quad \forall \vec{u} \neq \vec0\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">gives also</p>
+<div class="displaymath">
+\begin{equation*}
+\lambda_1 &gt; 0\,.
+\end{equation*}
+</div>
+<p id="p-105">Therefore also in this case \(\lambda_1 \) and \(\lambda_2 \) assume the meaning of scale factors called principal stretches of the line elements belonging to the principal directions. For \(\lambda_1 \) and \(\lambda_2 \) the same considerations discussed in the previous case apply.</p>
+<p id="p-106"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-8" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/q3ZFGNQ0CiU?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p>
+<p id="p-107">All the considerations made so far apply if the tensor \(\tens{U} \) takes the form</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{U} =
+\left[\begin{array}{ccc}
+\lambda_1 \amp 0 \amp 0\\
+0 \amp \lambda_2 \amp 0\\
+0 \amp 0 \amp \lambda_1\\
+\end{array}\right]
+\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">with principal directions defined by the \(1-3\) plane and the \(2\) axis; or the form</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{U} =
+\left[\begin{array}{ccc}
+\lambda_2 \amp 0 \amp 0\\
+0 \amp \lambda_1 \amp 0\\
+0 \amp 0 \amp \lambda_1\\
+\end{array}\right]
+\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">with principal directions defined by the \(2-3\) plane and the \(1\) axis.</p></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.7.3</span> <span class="title"></span>
+</h3>
+<p id="p-108">It is now clear that the more generic diagonal form of the tensor \(\tens{U} \) is given by</p>
+<div class="displaymath">
+\begin{equation}
+\mat{U} =
+\left[\begin{array}{ccc}
+\lambda_1 \amp 0 \amp 0\\
+0 \amp \lambda_2 \amp 0\\
+0 \amp 0 \amp \lambda_3\\
+\end{array}\right]\,,\label{diag_U_eq}\tag{1.7.4}
+\end{equation}
+</div>
+<p data-braille="continuation">where all the coefficients on the main diagonal are generally different. In this case, avoiding repeating further considerations now obvious, the following results can be established.</p>
+<ul class="disc">
+<li id="li-19">Only \(\vec{e}_{1}\text{,}\) \(\vec{e}_{2}\) and \(\vec{e}_{3}\) axes constitute the <em class="emphasis">principal directions</em> of tensor \(\tens{U}\text{.}\)</li>
+<li id="li-20">The <em class="emphasis">principal stretches</em>, \(\lambda_{1}\text{,}\) \(\lambda_{2}\) and \(\lambda_{3}\text{,}\) are positive real numbers associated to \(\vec{e}_{1}\text{,}\) \(\vec{e}_{2}\) and \(\vec{e}_{3}\text{,}\) respectively. Under the action of the transformation, line elements belonging to principal directions maintain the original direction by changing only their length that can increase or decrease.</li>
+</ul>
+<p id="p-109"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-9" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/dZ1gKkfhs5s?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p></section><section class="subsection" id="subsection-7"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.7.4</span> <span class="title">spectral decomposition of the stretch tensor</span>
+</h3>
+<p id="p-110"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-10" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/n2Vsdkn6j60?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p>
+<p id="p-111">The diagonal form of \(\tens{U}\text{,}\) see <a class="xref" data-knowl="./knowl/diag_U_eq.html" title="Equation 1.7.4">(1.7.4)</a>, can be written as follows</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{U} =
+\lambda_1
+\left[\begin{array}{ccc}
+1 \amp 0 \amp 0\\
+0 \amp 0 \amp 0\\
+0 \amp 0 \amp 0
+\end{array}\right] 
++
+\lambda_2
+\left[\begin{array}{ccc}
+0 \amp 0 \amp 0\\
+0 \amp 1 \amp 0\\
+0 \amp 0 \amp 0
+\end{array}\right] 
++
+\lambda_3
+\left[\begin{array}{ccc}
+0 \amp 0 \amp 0\\
+0 \amp 0 \amp 0\\
+0 \amp 0 \amp 1
+\end{array}\right]
+\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">from which, on the basis of the discussion presented in the previous video, the following expression for \(\tens{U}\) can be obtained</p>
+<div class="displaymath">
+\begin{equation}
+\tens{U} = \lambda_1\,\vec{e}_1 \otimes \vec{e}_1 + \lambda_2\,\vec{e}_2 \otimes \vec{e}_2 + \lambda_3\,\vec{e}_3 \otimes \vec{e}_3\,.\tag{1.7.5}
+\end{equation}
+</div>
+<p id="p-112">The latter result is of fundamental importance because it allows you to express \(\tens{U}\) with respect to the principal directions in the more general, and also more frequent, case of <em class="alert">principal directions not aligned with the axes of reference</em> used in the problem under consideration.</p>
+<p id="p-113">Let the generic principal directions be noted by \(\vec{u}_{1}\text{,}\) \(\vec{u}_{2}\) and \(\vec{u}_{3}\text{,}\) then <em class="emphasis">the spectral decomposition</em> of tensor \(\tens{U}\) is</p>
+<div class="displaymath">
+\begin{equation}
+\tens{U} = \lambda_1\,\vec{u}_{1} \otimes \vec{u}_{1} + \lambda_2\,\vec{u}_{2} \otimes \vec{u}_{2} + \lambda_3\,\vec{u}_{3} \otimes \vec{u}_{3}\,.\label{spectral_U_eq}\tag{1.7.6}
+\end{equation}
+</div>
+<p data-braille="continuation">The principal stretches constitute what is called the <em class="emphasis">spectrum</em> of \(\tens{U}\text{.}\)</p>
+<article class="remark remark-like" id="remark-7"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.7.1</span><span class="period">.</span>
+</h6>
+<p id="p-114">Ever since we started talking about principal directions, we never mentioned the symmetry of \(\tens{U}\text{.}\) The symmetry of the tensor determines the mutual orthogonality of the principal directions, whatever direction they take.</p></article><article class="remark remark-like" id="remark-8"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.7.2</span><span class="period">.</span>
+</h6>
+<p id="p-115">The spectral form <a class="xref" data-knowl="./knowl/spectral_U_eq.html" title="Equation 1.7.6">(1.7.6)</a> explains why, compared to the standard reference base, the matrix associated to tensor \(\tens{U}\) almost always loses its diagonal form. In fact, although the principal directions are always present, these in general do not coincide with the axes of the standard reference system. The loss of the diagonal form can be highlighted by a matrix writing of the spectral decomposition of the tensor</p>
+<div class="displaymath">
+\begin{equation}
+\mat{U} =
+\begin{array}{l}
+\lambda_1
+\left[\begin{array}{ccc}
+u_{11}u_{11} \amp u_{11}u_{21} \amp u_{11}u_{31}\\
+u_{21}u_{11} \amp u_{21}u_{21} \amp u_{21}u_{31}\\
+u_{31}u_{11} \amp u_{31}u_{21} \amp u_{31}u_{31}
+\end{array}\right] 
++\\
+\lambda_2
+\left[\begin{array}{ccc}
+u_{12}u_{12} \amp u_{12}u_{22} \amp u_{12}u_{32}\\
+u_{22}u_{12} \amp u_{22}u_{22} \amp u_{22}u_{32}\\
+u_{32}u_{12} \amp u_{32}u_{22} \amp u_{32}u_{32}
+\end{array}\right] 
++\\
+\lambda_3
+\left[\begin{array}{ccc}
+u_{13}u_{13} \amp u_{13}u_{23} \amp u_{13}u_{33}\\
+u_{23}u_{13} \amp u_{23}u_{23} \amp u_{23}u_{33}\\
+u_{33}u_{13} \amp u_{33}u_{23} \amp u_{33}u_{33}
+\end{array}\right]\,.
+\end{array}\label{mat_spectral_U_eq}\tag{1.7.7}
+\end{equation}
+</div>
+<p data-braille="continuation">Where the following notation has been adopted for the components of the prinicipal directions</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{u_1} = \left[\begin{array}{c}u_{11}\\u_{21}\\u_{31}\end{array}\right]
+\,,\quad
+\mat{u_2} = \left[\begin{array}{c}u_{12}\\u_{22}\\u_{32}\end{array}\right]
+\,,\quad
+\mat{u_3} = \left[\begin{array}{c}u_{13}\\u_{23}\\u_{33}\end{array}\right]
+\,.
+\end{equation*}
+</div>
+<p id="p-116">Finally it is interesting to observe how the expression <a class="xref" data-knowl="./knowl/mat_spectral_U_eq.html" title="Equation 1.7.7">(1.7.7)</a> can be written in the following way</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{U} =
+\left[\begin{array}{ccc}
+u_{11} \amp u_{12} \amp u_{13}\\
+u_{21} \amp u_{22} \amp u_{23}\\
+u_{31} \amp u_{32} \amp u_{33}
+\end{array}\right] 
+\left[\begin{array}{ccc}
+\lambda_1 \amp 0 \amp 0\\
+0 \amp \lambda_2 \amp 0\\
+0 \amp 0 \amp \lambda_3\\
+\end{array}\right]
+\transp{
+\left[\begin{array}{ccc}
+u_{11} \amp u_{12} \amp u_{13}\\
+u_{21} \amp u_{22} \amp u_{23}\\
+u_{31} \amp u_{32} \amp u_{33}
+\end{array}\right] 
+}\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">which is how the expression assumed by the tensor \(\tens{U} \) is evaluated when passing from the coordinate system consisting of the principal directions to the standard coordinate system \(\vec{e}_1 \text{,}\) \(\vec{e}_2 \) and \(\vec{e}_3 \text{.}\) The matrix used for the transformation is constructed by inserting in the columns the vectors \(\vec{u}_{1} \text{,}\) \(\vec{u}_{2} \) and \(\vec{u}_{3}\text{.}\)</p></article><article class="assemblage assemblage-like" id="assemblage-9"><p id="p-117">Let \(\tens{U}\) be given by the following diagonal form</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{U} =
+\left[\begin{array}{ccc}
+2 \amp 0 \amp 0\\
+0 \amp 5 \amp 0\\
+0 \amp 0 \amp 7\\
+\end{array}\right]\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">calculate the expression assumed \(\tens{U}\) assuming to apply to the principal directions the following rotations</p>
+<div class="displaymath">
+\begin{equation*}
+\matWp{R}{1} = 
+\left[\begin{array}{ccc}
+\cos{\frac{\pi}{4}} \amp -\sin{\frac{\pi}{4}} \amp 0\\
+\sin{\frac{\pi}{4}} \amp \cos{\frac{\pi}{4}} \amp 0\\
+0 \amp 0 \amp 1\\
+\end{array}\right]\,,
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\matWp{R}{2} = 
+\left[\begin{array}{ccc}
+\cos{\frac{\pi}{4}}  \amp 0 \amp -\sin{\frac{\pi}{4}}\\
+0 \amp 1 \amp 0\\
+\sin{\frac{\pi}{4}} \amp 0 \amp \cos{\frac{\pi}{4}}\\
+\end{array}\right]\,.
+\end{equation*}
+</div>
+<p id="p-118">The following MATLAB® instructions allow you to calculate what is required. <figure class="listing figure-like" id="listing-15"><pre class="console"><b>R1 = [cos(pi/4) -sin(pi/4) 0; sin(pi/4) cos(pi/4) 0; 0 0 1];
+R2 = [cos(pi/4) 0 -sin(pi/4); 0 1 0; sin(pi/4) 0 cos(pi/4)];
+u1 = R2*R1*[1; 0; 0];
+u2 = R2*R1*[0; 1; 0];
+u3 = R2*R1*[0; 0; 1];
+lam1 = 2;
+lam2 = 5;
+lam3 = 7;
+U = lam1*u1*transpose(u1) + lam2*u2*transpose(u2) + ...
+lam3*u3*transpose(u3)
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.7.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p id="p-119">Also carry out the following calculation. <figure class="listing figure-like" id="listing-16"><pre class="console"><b>u1*transpose(u1) + u2*transpose(u2) + u3*transpose(u3)
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.7.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure> What does the obtained result suggest?</p></article><article class="assemblage assemblage-like" id="assemblage-10"><p id="p-120">In order to verify how the tensor \(\tens{U}\) acts differently on the principal directions and on the directions identified by the standard reference, consider the following plane state characterized by the following diagonal form of \(\tens{U} \)</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{U} =
+\left[\begin{array}{cc}
+1.2\lambda \amp 0\\
+0 \amp \lambda
+\end{array}\right]\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">Assume for the principal directions an inclination equal to \(\pi/4\) and then apply the stretch tensor to the two squares, represented in the following figure. The red square has sides aligned with the standard reference, the blue square has sides aligned with the principal directions.</p>
+<p id="p-121"><figure class="figure figure-like" id="figure-7"><div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="images/Squares.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.7.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p id="p-122">The application of the tensor is carried out by varying the parameter \(\lambda \text{,}\) from which the two eigenvalues of the tensor depend, between the values \(1.1\) and \(1.5\text{.}\)</p>
+<p id="p-123">The MATLAB® instructions that can be used for calculating and displaying the deformations of the two squares starting from the initial configurations are shown below.</p>
+<p id="p-124"><figure class="listing figure-like" id="listing-17"><pre class="console"><b>Q1 = [1 -1 -1 1 1; 1 1 -1 -1 1];
+Q2 = [1 0 -1 0 1; 0 1 0 -1 0];
+
+x = Q1(1,:);
+y = Q1(2,:);
+
+pbaspect([1 1 1])
+line(x,y,'Color','red','LineWidth',2)
+
+x = Q2(1,:);
+y = Q2(2,:);
+line(x,y,'Color','blue','LineWidth',2)
+
+
+u1 = [1/sqrt(2); 1/sqrt(2)];
+u2 = [-1/sqrt(2); 1/sqrt(2)];
+syms U(lam) 
+U(lam) = [u1 u2]*diag([1.2*lam lam])*transpose([u1 u2]);
+
+
+for v = 1.1:0.1:1.5
+  UQ1 = U(v)*Q1;
+  x = UQ1(1,:);
+  y = UQ1(2,:);
+  line(x,y,'Color','red','LineWidth',2)
+
+  UQ2 = U(v)*Q2;
+  x = UQ2(1,:);
+  y = UQ2(2,:);
+  line(x,y,'Color','blue','LineWidth',2)
+end
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.7.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.7.5</span> <span class="title">eigenvalues and eigenvectors</span>
+</h3>
+<p id="p-125">Knowing the principal stretches \(\lambda_i\) and the principal directions, \(\vec{u}_i\) (\(i=1 \dots 3\)), associated with them, the spectral decomposition <a class="xref" data-knowl="./knowl/spectral_U_eq.html" title="Equation 1.7.6">(1.7.6)</a> allows to easily evaluate the tensor \(\tens{U} \) with respect to the reference system used.</p>
+<p id="p-126">The typical scenario is, however, reversed. That is, given the tensor \(\tens{U} \text{,}\) we want to evaluate the principal stretches and directions. Solving this question means calculating the eigenvalues and eigenvectors of the matrix associated with the tensor \(\tens{U}\text{.}\) In this section the procedure to be used in the solution of the eigenvalue problem will not be presented because this constitutes a topic that has certainly already been studied in previous courses and for which the available literature, also online, is vast. Here it was considered more important to highlight the mechanical meaning of eigenvalues and eigenvectors, meaning widely discussed in the previous sections.</p>
+<p id="p-127">In addition, MATLAB® will be used to calculate the eigenvalues and eigenvectors as shown in the following example.</p>
+<article class="assemblage assemblage-like" id="assemblage-11"><p id="p-128">Let us consider the expression of  \(\tens{U}\) obtained in previous example, i.e.</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{U} =
+\left[\begin{array}{ccc}
+5.2500 \amp  -1.0607 \amp  -1.7500 \\
+-1.0607 \amp   3.5000 \amp  -1.0607 \\
+-1.7500 \amp  -1.0607  \amp  5.2500
+\end{array}\right]\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">calculate eigenvalues and eigenvectors by using MATLAB®. The required instructions are as follows.</p>
+<p id="p-129"><figure class="listing figure-like" id="listing-18"><pre class="console"><b>U = ...
+[5.2500 -1.0607 -1.7500; ...
+-1.0607 3.5000 -1.0607; ...
+-1.7500 -1.0607 5.2500];
+[V, D] = eig(U)
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.7.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><article class="insight remark-like" id="insight-1"><h6 class="heading">
+<span class="type">Insight</span><span class="space"> </span><span class="codenumber">1.7.8</span><span class="period">.</span><span class="space"> </span><span class="title">the characteristic polynomial.</span>
+</h6>
+<p id="p-130">The evaluation of the eigenvalues and eigenvectors associated with the tensor \(\tens{U}\) passes through the solution of the following cubic equation</p>
+<div class="displaymath">
+\begin{equation*}
+-\lambda^3 + \func{I_1}{\tens{U}} \lambda^2 - \func{I_2}{\tens{U}} \lambda + \func{I_3}{\tens{U}} = 0\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">where the characteristic polynomial appears. It depends on three quantities that are called <em class="emphasis">invariants</em> of the tensor \(\tens{U} \text{.}\) The term invariant indicates that these values do not change as the reference system, with respect to which \(\tens{U}\) is represented, changes. In the following the expressions to be used for the calculation of the invariants are reported for the case regarding the tensor \(\tens{U} \) expressed with respect to the principal directions and for the generic case.</p>
+<ul class="disc">
+<li id="li-21">
+<em class="emphasis">First invariant</em><div class="displaymath">
+\begin{equation}
+\func{I_1}{\tens{U}} = \lambda_1 + \lambda_2 + \lambda_3 = \trace{\tens{U}}\,,\tag{1.7.8}
+\end{equation}
+</div>where the <em class="emphasis">trace</em> of the tensor, i.e. the sum of the coefficients belonging to the main diagonal, is used.</li>
+<li id="li-22">
+<em class="emphasis">Second invariant</em><div class="displaymath">
+\begin{equation}
+\func{I_2}{\tens{U}} = \lambda_1\, \lambda_2 + \lambda_2\, \lambda_3 + \lambda_3\, \lambda_1 = \frac{1}{2}\left[(\trace{\tens{U}})^2 - \trace{\tens{U}^2}\right]\,.\tag{1.7.9}
+\end{equation}
+</div>
+</li>
+<li id="li-23">
+<em class="emphasis">Third invariant</em><div class="displaymath">
+\begin{equation}
+\func{I_3}{\tens{U}} = \lambda_1\, \lambda_2\, \lambda_3 = \det{\tens{U}}\,.\tag{1.7.10}
+\end{equation}
+</div>
+</li>
+</ul>
+<article class="assemblage assemblage-like" id="assemblage-12"><p id="p-131">Let us check that invariants do not change if we consider for \(\tens{U}\) its diagonal form</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{U} =
+\left[\begin{array}{ccc}
+2 \amp 0 \amp 0\\
+0 \amp 5 \amp 0\\
+0 \amp 0 \amp 7\\
+\end{array}\right]\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">or</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{U} =
+\left[\begin{array}{ccc}
+5.2500 \amp  -1.0607 \amp  -1.7500 \\
+-1.0607 \amp   3.5000 \amp  -1.0607 \\
+-1.7500 \amp  -1.0607  \amp  5.2500
+\end{array}\right]\,.
+\end{equation*}
+</div>
+<p id="p-132">MATLAB® instructions that can be used for the required check are reported here.</p>
+<p id="p-133"><figure class="listing figure-like" id="listing-19"><pre class="console"><b>lam1 = 2;
+lam2 = 5;
+lam3 = 7;
+I1 = lam1 + lam2 + lam3
+I2 = lam1*lam2 + lam2*lam3 + lam3*lam1
+I3 = lam1*lam2*lam3
+U = ...
+[5.2500 -1.0607 -1.7500; ...
+-1.0607 3.5000 -1.0607; ...
+-1.7500 -1.0607 5.2500];
+I1 = trace(U)
+I2 = 1/2*(trace(U)^2 - trace(U*U))
+I3 = det(U)
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.7.9<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></article></section></section></div></main>
+</div>
+</body>
+</html>

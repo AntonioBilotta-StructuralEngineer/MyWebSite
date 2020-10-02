@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-10-02T11:40:22+02:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Solid Mechanics - one-dimensional models: stretched beam</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+\newcommand{\tens}[1]{\boldsymbol{#1}}
+\newcommand{\mat}[1]{\left[\boldsymbol{#1}\right]}
+\newcommand{\matWp}[2]{\left[\boldsymbol{#1}_{#2}\right]}
+\newcommand{\tensQ}[1]{\pmb{\mathbb{#1}}}
+\newcommand{\tensQc}[1]{\mathbb{#1}}
+
+\newcommand{\transp}[1]{{#1}^{\textrm{T}}}
+\newcommand{\veczero}{\vec{0}}
+\newcommand{\body}{\Omega}
+\newcommand{\calvec}[1]{\boldsymbol{\mathcal{#1}}}
+\newcommand{\commadiff}[2]{{#1,}_{#2}}
+\newcommand{\regulardiff}[2]{ \frac{\partial#1}{\partial#2} }
+\newcommand{\func}[2]{#1\left(#2\right)}
+\newcommand{\transp}[1]{{#1}^{\text{T}}}
+\newcommand{\transpm}[1]{{#1}^{-\text{T}}}
+\newcommand{\trace}[1]{\text{tr}#1}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="./images/sm_logo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="solid_mechanics_book_en.html"><span class="title">A first course on solid mechanics</span></a></h1>
+<p class="byline">Antonio Bilotta</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="problem_sec_elasticity_chap_en.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="elasticity_chap_en.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="bent_beam_sec_elasticity_chap_en.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="problem_sec_elasticity_chap_en.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="elasticity_chap_en.html" title="Up">Up</a><a class="next-button button toolbar-item" href="bent_beam_sec_elasticity_chap_en.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="front_matter_en.html" data-scroll="front_matter_en"><span class="title">Front Matter</span></a><ul>
+<li><a href="front_colophon_en.html" data-scroll="front_colophon_en">Colophon</a></li>
+<li><a href="author_bio_en.html" data-scroll="author_bio_en">Author Biography</a></li>
+<li><a href="dedication_en.html" data-scroll="dedication_en">Dedication</a></li>
+<li><a href="acknowledgement_en.html" data-scroll="acknowledgement_en">Acknowledgements</a></li>
+<li><a href="preface_en.html" data-scroll="preface_en">Preface</a></li>
+<li><a href="references_frontmatter_en.html" data-scroll="references_frontmatter_en">using MATLAB®</a></li>
+</ul>
+</li>
+<li class="link part"><a href="continuum_mechanics_en.html" data-scroll="continuum_mechanics_en"><span class="codenumber">I</span> <span class="title">continuum mechanics</span></a></li>
+<li class="link">
+<a href="strain_chap_en.html" data-scroll="strain_chap_en"><span class="codenumber">1</span> <span class="title">bodies' kinematics</span></a><ul>
+<li><a href="configurations_sec_strain_chap_en.html" data-scroll="configurations_sec_strain_chap_en">configurations</a></li>
+<li><a href="transformations_sec_strain_chap_en.html" data-scroll="transformations_sec_strain_chap_en">transformations</a></li>
+<li><a href="gradient_sec_strain_chap_en.html" data-scroll="gradient_sec_strain_chap_en">deformation gradient</a></li>
+<li><a href="displacement_sec_strain_chap_en.html" data-scroll="displacement_sec_strain_chap_en">displacement field</a></li>
+<li><a href="determinant_sec_strain_chap_en.html" data-scroll="determinant_sec_strain_chap_en">determinant of the deformation gradient</a></li>
+<li><a href="polar_sec_strain_chap_en.html" data-scroll="polar_sec_strain_chap_en">polar decomposition</a></li>
+<li><a href="principal_directions_sec_strain_chap_en.html" data-scroll="principal_directions_sec_strain_chap_en">stretch tensor \(\tens{U}\) and principal directions (transformation of line elements)</a></li>
+<li><a href="measures_sec_strain_chap_en.html" data-scroll="measures_sec_strain_chap_en">strain measures</a></li>
+<li><a href="infinitesimal_sec_strain_chap_en.html" data-scroll="infinitesimal_sec_strain_chap_en">the infinitesimal strain tensor</a></li>
+<li><a href="exercises_sec_strain_chap_en.html" data-scroll="exercises_sec_strain_chap_en">exercises</a></li>
+<li><a href="answers_sec_strain_chap_en.html" data-scroll="answers_sec_strain_chap_en">answers to selected exercises</a></li>
+<li><a href="refs_strain_chap_en.html" data-scroll="refs_strain_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="stress_chap_en.html" data-scroll="stress_chap_en"><span class="codenumber">2</span> <span class="title">forces, equilibrium and stress</span></a><ul>
+<li><a href="basics_sec_stress_chap_en.html" data-scroll="basics_sec_stress_chap_en">the continuity hypothesis</a></li>
+<li><a href="equilibrium_sec_stress_chap_en.html" data-scroll="equilibrium_sec_stress_chap_en">equilibrium equations</a></li>
+<li><a href="stress_sec_stress_chap_en.html" data-scroll="stress_sec_stress_chap_en">Cauchy stress tensor tensor</a></li>
+<li><a href="stress_analysis_sec_stress_chap_en.html" data-scroll="stress_analysis_sec_stress_chap_en">analisys of states of stress</a></li>
+<li><a href="plv_sec_stress_chap_en.html" data-scroll="plv_sec_stress_chap_en">principle of virtual work</a></li>
+<li><a href="exercises_sec_stress_chap_en.html" data-scroll="exercises_sec_stress_chap_en">exercises</a></li>
+<li><a href="answers_sec_stress_chap_en.html" data-scroll="answers_sec_stress_chap_en">answers to some of the proposed exercises</a></li>
+<li><a href="refs_stress_chap_en.html" data-scroll="refs_stress_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="elasticity_chap_en.html" data-scroll="elasticity_chap_en"><span class="codenumber">3</span> <span class="title">elasticity</span></a><ul>
+<li><a href="motivations_sec_elasticity_chap_en.html" data-scroll="motivations_sec_elasticity_chap_en">motivation</a></li>
+<li><a href="uniaxial_sec_elasticity_chap_en.html" data-scroll="uniaxial_sec_elasticity_chap_en">uniaxial states</a></li>
+<li><a href="multiaxial_sec_elasticity_chap_en.html" data-scroll="multiaxial_sec_elasticity_chap_en">multi-axial states</a></li>
+<li><a href="problem_sec_elasticity_chap_en.html" data-scroll="problem_sec_elasticity_chap_en">the elastic problem</a></li>
+<li><a href="stretched_beam_sec_elasticity_chap_en.html" data-scroll="stretched_beam_sec_elasticity_chap_en" class="active">one-dimensional models: stretched beam</a></li>
+<li><a href="bent_beam_sec_elasticity_chap_en.html" data-scroll="bent_beam_sec_elasticity_chap_en">one-dimensional models: bent beam</a></li>
+<li><a href="stretched_beam_applications_sec_elasticity_chap_en.html" data-scroll="stretched_beam_applications_sec_elasticity_chap_en">applications of the stretched beam model</a></li>
+<li><a href="bent_beam_applications_sec_elasticity_chap_en.html" data-scroll="bent_beam_applications_sec_elasticity_chap_en">applications of the bent beam model</a></li>
+<li><a href="exercises_sec_elasticity_chap_en.html" data-scroll="exercises_sec_elasticity_chap_en">exercises</a></li>
+<li><a href="answers_sec_elasticity_chap_en.html" data-scroll="answers_sec_elasticity_chap_en">answers to selected exercises</a></li>
+<li><a href="refs_elasticity_chap_en.html" data-scroll="refs_elasticity_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link part"><a href="beams_systems_en.html" data-scroll="beams_systems_en"><span class="codenumber">II</span> <span class="title">rigid systems</span></a></li>
+<li class="link">
+<a href="rigid_body_kinematics_chap_en.html" data-scroll="rigid_body_kinematics_chap_en"><span class="codenumber">4</span> <span class="title">kinematics</span></a><ul>
+<li><a href="description_sec_rigid_body_kinematics_chap_en.html" data-scroll="description_sec_rigid_body_kinematics_chap_en">basic kinematic description</a></li>
+<li><a href="constraints_sec_rigid_body_kinematics_chap_en.html" data-scroll="constraints_sec_rigid_body_kinematics_chap_en">constraints</a></li>
+<li><a href="analysis_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_sec_rigid_body_kinematics_chap_en">kinematic analysis</a></li>
+<li><a href="analysis_examples_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_examples_sec_rigid_body_kinematics_chap_en">kinematic analysis of simple rigid body systems</a></li>
+<li><a href="refs_rigid_body_kinematics_chap_en.html" data-scroll="refs_rigid_body_kinematics_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="rigid_body_statics_chap_en.html" data-scroll="rigid_body_statics_chap_en"><span class="codenumber">5</span> <span class="title">statics</span></a><ul>
+<li><a href="equilibrium_sec_rigid_body_statics_chap_en.html" data-scroll="equilibrium_sec_rigid_body_statics_chap_en">equilibrium equations</a></li>
+<li><a href="planecase_sec_rigid_body_statics_chap_en.html" data-scroll="planecase_sec_rigid_body_statics_chap_en">2D case</a></li>
+<li><a href="constraints_sec_rigid_body_statics_chap_en.html" data-scroll="constraints_sec_rigid_body_statics_chap_en">constraints</a></li>
+<li><a href="free_body_sec_rigid_body_statics_chap_en.html" data-scroll="free_body_sec_rigid_body_statics_chap_en">free body diagrams</a></li>
+<li><a href="analysis_sec_rigid_body_statics_chap_en.html" data-scroll="analysis_sec_rigid_body_statics_chap_en">static analysis</a></li>
+<li><a href="analysis_examples_sec_rigid_body_statics_chap_en.html" data-scroll="analysis_examples_sec_rigid_body_statics_chap_en">application of static analysis to systems of bodies</a></li>
+<li><a href="sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces</a></li>
+<li><a href="indefinte_sec_rigid_body_statics_chap_en.html" data-scroll="indefinte_sec_rigid_body_statics_chap_en">2D beam equilibrium differential equations</a></li>
+<li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces calculation and diagrams</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="stretched_beam_sec_elasticity_chap_en"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.5</span> <span class="title">one-dimensional models: stretched beam</span>
+</h2>
+<section class="subsection" id="premise_stretched_beam_sec_elasticity_chap"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.5.1</span> <span class="title">premise</span>
+</h3>
+<p id="p-299">The solution of the elastic problem under completely generic conditions poses difficulties which are difficult to overcome. Only by making appropriate simplifications, such as for previous examples regarding prismatic solids (simple geometries) and under the action of loads of a precise type, is it possible to obtain an analytical solution of the assigned problem.</p>
+<p id="p-300">The previous considerations and the need to deal with engineering problems concerning solids which, from a geometric point of view, can be modeled through one-dimensional or two-dimensional descriptions, have led to the development of various structural models. These models allow to solve, with an acceptable degree of approximation, various problems that would not be easily tackled using both analytical and numerical tools.</p>
+<p id="p-301">In the following two beam models are presented. They are obtained through a one-dimensional reduction of the solutions found for prismatic solids simply stretched and simply bent, see <a class="xref" data-knowl="./knowl/prismatic_solutions_tab.html" title="Table 3.4.6">Table 3.4.6</a>. In particular, we will proceed by showing how it is possible to describe the significant component of the strain, the \(\varepsilon_{33} \text{,}\) referring only to the centerline of the beam, known as beam axis. The component \(\varepsilon_{33} \) is the significant one because it constitutes the only strain component that determines the value of the internal work of the prismatic solid, in fact in the two cases examined we have that</p>
+<div class="displaymath">
+\begin{equation*}
+L_i = \int_{\body} \sigma_{33}\varepsilon_{33} \, dV\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">quantity that we will indicate by simply writing</p>
+<div class="displaymath">
+\begin{equation}
+L_i = \int_{\body} \sigma\varepsilon \, dV\,,\label{beam_internal_work}\tag{3.5.1}
+\end{equation}
+</div>
+<p data-braille="continuation">being clear which components we are referring to. So the main purpose is to obtain <em class="alert">a description of the internal energy of the one-dimensional model equivalent to the internal energy of the 3D solution taken as a reference</em>.</p>
+<p id="p-302">Furthermore, for the problems examined, the beam axis moves remaining in the plane identified by the axes \(X_3 \) and \(X_2 \) and for this reason the treatment can be carried out in the plane and then we will talk about 2D beam models <a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 1 </sup></a>.</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-6"><div class="fn">In the case of the stretched beam the one-dimensional solution should be valid also in a 3D context.</div></div></section><section class="subsection" id="subsection-58"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.5.2</span> <span class="title">the reference given by the beam axis</span>
+</h3>
+<p id="p-303">In the case of the prismatic solid that is simply stretched, the beam axis deforms as shown in the Figure, that is, it undergoes a simple elongation or shortening. The figure also highlights the notation that is currently used for this one-dimensional model.</p>
+<figure class="figure figure-like" id="figure-30"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/trave_tesa_linea_asse.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-304">Using the beam axis as a reference, we can calculate the strain component \(\varepsilon_{33} \text{,}\) here simply referred to as \(\varepsilon \text{,}\) simply deriving the displacement variable along the axis</p>
+<div class="displaymath">
+\begin{equation}
+\varepsilon = \frac{du}{dx}\,.\tag{3.5.2}
+\end{equation}
+</div>
+<p data-braille="continuation">At the moment, as in the 3D reference solution, \(u \) is variable along the axis and the deformation \(\varepsilon \) is constant.</p></section><section class="subsection" id="subsection-59"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.5.3</span> <span class="title">internal work</span>
+</h3>
+<p id="p-305">It is possible now to rewrite the expression of the internal work <a class="xref" data-knowl="./knowl/beam_internal_work.html" title="Equation 3.5.1">(3.5.1)</a> in a format that refers only to the beam axis, that is</p>
+<div class="displaymath">
+\begin{align*}
+L_i \amp = \int_{\body} \sigma\varepsilon \, dV\\
+\amp = \int_{l}\int_{A} \sigma\varepsilon \, dS \,dx\\
+\amp = \int_{l}\int_{A} \sigma \, dS \varepsilon \,dx\\
+\amp = \int_{l} N \varepsilon \,dx\,,
+\end{align*}
+</div>
+<p data-braille="continuation">then</p>
+<div class="displaymath">
+\begin{equation}
+L_i = \int_{l} N \varepsilon \,dx\,.\tag{3.5.3}
+\end{equation}
+</div>
+<p data-braille="continuation">The introduced quantity</p>
+<div class="displaymath">
+\begin{equation}
+N =\int_{A} \sigma \, dS\,,\label{trave_tesa_N}\tag{3.5.4}
+\end{equation}
+</div>
+<p data-braille="continuation">is the static entity that in the one-dimensional reduction performs the internal work on strain. \(N\) is called <em class="emphasis">axial force</em> and is measured as a force, \(\left[\text{F}\right]\text{.}\)</p></section><section class="subsection" id="subsection-60"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.5.4</span> <span class="title">elastic constitutive law</span>
+</h3>
+<p id="p-306">The definition of the elastic law for the one-dimensional model is obtained by reworking Eq. <a class="xref" data-knowl="./knowl/trave_tesa_N.html" title="Equation 3.5.4">(3.5.4)</a> as follows</p>
+<div class="displaymath">
+\begin{equation}
+N =\int_{A} \sigma \, dS = \int_{A} E\varepsilon \, dS  = E\, \int_{A}  dS \,\varepsilon = EA\,\varepsilon\,.\tag{3.5.5}
+\end{equation}
+</div>
+<p data-braille="continuation">Relationship that highlights how the proportionality coefficient that defines the link between \(N \) and \(\varepsilon \) is given by the product between the Young's modulus of the material and the cross-section area of the beam.</p></section><section class="subsection" id="subsection-61"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.5.5</span> <span class="title">external work</span>
+</h3>
+<p id="p-307">Up to this point the one-dimensional reduction has remained strictly adherent to the 3D solution from which we started. If we continue on the same false line also for external loads you will get the following situation <figure class="figure figure-like" id="figure-31"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/trave_tesa_carichi_da_3D.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure> that is, a beam simply subjected to two equal and opposite end forces.</p>
+<p id="p-308">With the definition of the external loads admissible for the beam model, the choice is made instead of extending the use of the model also to cases that in general are not included in the solution of the simply stretched prismatic solid. In particular, as the following Figure shows, <figure class="figure figure-like" id="figure-32"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/trave_tesa_carichi.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure> we introduce the load per unit of length \(\func{p}{x} \text{,}\) a generic function dependent on the abscissa \(x \text{,}\) and the concetrated end forces, however expected, are generally different. The external work therefore assumes the following expression</p>
+<div class="displaymath">
+\begin{equation}
+L_e = \int_{l} \func{p}{x}\,\func{u}{x}\, dx + H_{0} \,\func{u}{0} +  H_{l} \,\func{u}{l}\,.\tag{3.5.6}
+\end{equation}
+</div>
+<p id="p-309">Furthermore, unlike the reference 3D solution, the choice of the admissible loads determines for \(\func{u}{x} \) a pattern which is no longer limited to linear variability alone. The normal stress and axial strain, constant in the reference solution, also become generic functions of the type \(\func{N}{x} \) and \(\func{\varepsilon}{x}\text{.}\)</p></section><section class="subsection" id="subsection-62"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.5.6</span> <span class="title">virtual work principle and equilibrium equations</span>
+</h3>
+<p id="p-310">At this point the definition of the model is practically complete. Only the definition of equilibrium equations, which can be obtained through the virtual work principle, is missing. The principle can be formulated as follows</p>
+<div class="displaymath">
+\begin{equation}
+\int_{l} N \delta\varepsilon \,dx = \int_{l} p\,\delta u\, dx + H_{0} \,\func{\delta u}{0} +  H_{l} \,\func{\delta u}{l}\,, \quad \forall\,\delta u \;\left(\delta\varepsilon = \frac{d\delta u}{d x}\right)\,.\tag{3.5.7}
+\end{equation}
+</div>
+<p data-braille="continuation">The relationship just written, where we have neglected to make explicit the dependencies on the variable \(x \text{,}\) can be manipulated by carrying out the following steps</p>
+<div class="displaymath">
+\begin{align*}
+\int_{l} N \delta\varepsilon \,dx \amp= \int_{l} p\,\delta u\, dx + H_{0} \,\func{\delta u}{0} +  H_{l} \,\func{\delta u}{l}\\
+\int_{l} N \frac{d\delta u}{d x} \,dx \amp= \int_{l} p\,\delta u\, dx + H_{0} \,\func{\delta u}{0} +  H_{l} \,\func{\delta u}{l}\\
+\left[N\,\delta u \right]_0^l - \int_{l}  \frac{dN}{d x}\delta u \,dx \amp= \int_{l} p\,\delta u\, dx + H_{0} \,\func{\delta u}{0} +  H_{l} \,\func{\delta u}{l}\\
+\int_{l}  \frac{dN}{d x}\delta u + \int_{l} p\,\delta u\, dx \,dx \amp= \left[N\,\delta u \right]_0^l - H_{0} \,\func{\delta u}{0} -  H_{l} \,\func{\delta u}{l}\\
+\int_{l} \left( \frac{dN}{d x} + p\right)\delta u\, dx \amp= \func{N}{l}\,\func{\delta u}{l} - \func{N}{0}\,\func{\delta u}{0} - H_{0} \,\func{\delta u}{0} -  H_{l} \,\func{\delta u}{l}\\
+\int_{l} \left( \frac{dN}{d x} + p\right)\delta u\, dx \amp= \left(\func{N}{l}-  H_{l}\right)\func{\delta u}{l} - \left(\func{N}{0} + H_{0} \right)\func{\delta u}{0} 
+\end{align*}
+</div>
+<p data-braille="continuation">And then we get the following writing of the virtual work principle</p>
+<div class="displaymath">
+\begin{equation}
+\int_{l} \left( \frac{dN}{d x} + p\right)\delta u\, dx = \left(\func{N}{l}-  H_{l}\right)\func{\delta u}{l} - \left(\func{N}{0} + H_{0} \right)\func{\delta u}{0}\,,\quad \forall\,\delta u\,.\tag{3.5.8}
+\end{equation}
+</div>
+<p data-braille="continuation">The satisfaction of this expression for any virtual displacement \(\delta u \) implies the satisfaction of the equation</p>
+<div class="displaymath">
+\begin{equation}
+\frac{dN}{d x} + p = 0\,,\tag{3.5.9}
+\end{equation}
+</div>
+<p data-braille="continuation">at each point of the beam axis and the fulfillment of the boundary conditions</p>
+<div class="displaymath">
+\begin{align}
+\func{N}{0} \amp=  -H_{0}\,,\tag{3.5.10}\\
+\func{N}{l} \amp=  H_{l}\,,\tag{3.5.11}
+\end{align}
+</div>
+<p data-braille="continuation">on the ends of the beam axis.</p></section><section class="subsection" id="subsection-63"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.5.7</span> <span class="title">summary of the model</span>
+</h3>
+<article class="assemblage assemblage-like" id="assemblage-20"><ul id="p-311" class="disc">
+<li id="li-105">Loads<div class="displaymath">
+\begin{equation*}
+\func{p}{x}\quad H_0 \quad H_l
+\end{equation*}
+</div>
+</li>
+<li id="li-106">Unknowns<div class="displaymath">
+\begin{equation*}
+\func{u}{x}\quad\func{\varepsilon}{x}\quad\func{N}{x}
+\end{equation*}
+</div>
+</li>
+<li id="li-107">Internal work<div class="displaymath">
+\begin{equation}
+L_i = \int_{l} N \varepsilon \,dx\,.\tag{3.5.12}
+\end{equation}
+</div>
+</li>
+<li id="li-108">External work<div class="displaymath">
+\begin{equation}
+L_e = \int_{l} \func{p}{x}\,\func{u}{x}\, dx + H_{0} \,\func{u}{0} +  H_{l} \,\func{u}{l}\,.\tag{3.5.13}
+\end{equation}
+</div>
+</li>
+<li id="li-109">Strain-displacement relationship<div class="displaymath">
+\begin{equation}
+\varepsilon = \frac{du}{dx}\tag{3.5.14}
+\end{equation}
+</div>
+</li>
+<li id="li-110">Elastic constitutive law<div class="displaymath">
+\begin{equation}
+N = EA\,\varepsilon\tag{3.5.15}
+\end{equation}
+</div>
+</li>
+<li id="li-111">Equilibrium equation<div class="displaymath">
+\begin{equation}
+\frac{dN}{d x} + p = 0\tag{3.5.16}
+\end{equation}
+</div>
+</li>
+<li id="li-112">Static boundary conditions<div class="displaymath">
+\begin{align}
+\func{N}{0} \amp=  -H_{0}\tag{3.5.17}\\
+\func{N}{l} \amp=  H_{l}\tag{3.5.18}
+\end{align}
+</div>
+</li>
+<li id="li-113">Kinematic boundary conditions<div class="displaymath">
+\begin{align}
+\func{u}{0} \amp=  \bar{u}_{0}\tag{3.5.19}\\
+\func{u}{l} \amp=  \bar{u}_{l}\tag{3.5.20}
+\end{align}
+</div>
+</li>
+</ul></article><p id="p-312">As regards the boundary conditions, it is worth to be noted that on each end it is possible to assign either a static condition or a kinematic condition.</p>
+<p id="p-313">Equilibrium equation can be manipulated in order to obtain an expression in which the displacement \(\func{u}{x} \) appears as unknown. In particular by carrying out the following steps</p>
+<div class="displaymath">
+\begin{align*}
+\frac{dN}{d x} + p \amp= 0\\
+\frac{d}{d x}\left(EA\,\varepsilon\right) + p \amp= 0\\
+\frac{d}{d x}\left(EA\,\frac{du}{dx}\right) + p \amp= 0
+\end{align*}
+</div>
+<p data-braille="continuation">the following result is obtained</p>
+<div class="displaymath">
+\begin{equation}
+EA\,\frac{d^2u}{dx^2} + p = 0\,.\label{stretched_beam_navier}\tag{3.5.21}
+\end{equation}
+</div></section></section></div></main>
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-10-02T11:40:24+02:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="assemblage assemblage-like"><h6 class="heading"><span class="title">evaluation of the displacement field and its gradient.</span></h6>
+<p xmlns:svg="http://www.w3.org/2000/svg">With regard to the Transformation 1 already used in the previous examples, the displacement field and its gradient can be evaluated on the basis of the following MATLAB® instructions. Bear in mind that, for the linearity of the transformations involved, the gradients are evaluated as the matrix associated to the transformation. <figure class="listing figure-like"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
+F = [T1([1; 0]) T1([0; 1])]
+Grad_u = F - diag([1 1])
+
+u1 = @(X) T1(X) - X;
+Grad_u = [u1([1; 0]) u1([0; 1])]
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.4.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p xmlns:svg="http://www.w3.org/2000/svg">MATLAB® instructions for Transformation 2. <figure class="listing figure-like"><pre class="console"><b>T2 = @(X) [2*X(1); X(2)];
+F = [T2([1; 0]) T2([0; 1])]
+Grad_u = F - diag([1 1])
+
+u2 = @(X) T2(X) - X;
+Grad_u = [u2([1; 0]) u2([0; 1])]
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.4.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p xmlns:svg="http://www.w3.org/2000/svg">MATLAB® instructions for Transformation 3. <figure class="listing figure-like"><pre class="console"><b>T3 = @(X) [X(1); 1.5*X(2)];
+F = [T3([1; 0]) T3([0; 1])]
+Grad_u = F - diag([1 1])
+
+u3 = @(X) T3(X) - X;
+Grad_u = [u3([1; 0]) u3([0; 1])]
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.4.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p xmlns:svg="http://www.w3.org/2000/svg">MATLAB® instructions for Transformation 4. <figure class="listing figure-like"><pre class="console"><b>T4 = @(X) [X(1)+X(2); X(2)];
+F = [T4([1; 0]) T4([0; 1])]
+Grad_u = F - diag([1 1])
+
+u4 = @(X) T4(X) - X;
+Grad_u = [u4([1; 0]) u4([0; 1])]
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.4.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><span class="incontext"><a href="displacement_sec_strain_chap_en.html#assemblage-7">in-context</a></span>
+</body>
+</html>

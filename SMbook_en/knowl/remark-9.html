@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-10-02T11:40:24+02:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="remark remark-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.8.1</span><span class="period">.</span>
+</h6>
+<p xmlns:svg="http://www.w3.org/2000/svg">One might think that, known \(\tens{U}^2 \text{,}\) the simple operation \(\tens{U} = \sqrt{\tens{C}}\) allows the evaluation of \(\tens{U}\text{.}\) The operation is possible but not trivial because it requires the evaluation of the eigenvalues and eigenvectors of \(\tens{C} \text{.}\) For this reason the tensor \(\tens{C} \) or other derived quantities are used directly in strain measurements.</p>
+<article class="assemblage assemblage-like"><p>In order to illustrate the procedure described above, however, consider the following deformation gradient</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\mat{F}=
+\left[ \begin{array}{ccc}
+4.4623 \amp  -3.2249 \amp  -0.4874 \\
+2.9623  \amp  1.7249 \amp  -1.9874 \\
+-1.7500 \amp  -1.0607 \amp   5.2500 
+\end{array}\right]\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">Starting from this expression, the following MATLAB® instructions allow you to evaluate the eigenvectors and eigenvalues of \(\tens{U}^2\text{.}\)</p>
+<p xmlns:svg="http://www.w3.org/2000/svg"><figure class="listing figure-like"><pre class="console"><b>F = [4.4623   -3.2249   -0.4874;
+2.9623    1.7249   -1.9874;
+-1.7500   -1.0607    5.2500];
+U2 = transpose(F)*F;
+[u, D2] = eig(U2)
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.8.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p>The following instructions instead, evaluating the principal stretches as</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\lambda_1 = \sqrt{D2(1,1)} = 2\,,\quad
+\lambda_2 = \sqrt{D2(2,2)} = 5\,,\quad
+\lambda_3 = \sqrt{D2(3,3)} = 7\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">and the main directions by extracting them from the columns of the eigenvectors matrix returned by MATLAB®, allow to calulate tensor \(\tens{U}\) and tensor \(\tens{R}\) by using</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\tens{R} = \tens{F}\tens{U}^{-1}\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">It is also possible to calculate \(\tens{V}\) by using</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\tens{V} = \tens{F}\transp{\tens{R}}\,.
+\end{equation*}
+</div>
+<p xmlns:svg="http://www.w3.org/2000/svg"><figure class="listing figure-like"><pre class="console"><b>u1 = u(:,1);
+u2 = u(:,2);
+u3 = u(:,3);
+lam1 = sqrt(D2(1,1));
+lam2 = sqrt(D2(2,2));
+lam3 = sqrt(D2(3,3));
+U = lam1*u1*transpose(u1)+lam2*u2*transpose(u2)+lam3*u3*transpose(u3)
+R = F*inv(U)
+V = F*transpose(R)
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.8.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></article><span class="incontext"><a href="measures_sec_strain_chap_en.html#remark-9">in-context</a></span>
+</body>
+</html>

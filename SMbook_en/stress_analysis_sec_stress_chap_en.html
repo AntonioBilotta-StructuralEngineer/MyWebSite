@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-10-02T11:40:21+02:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Solid Mechanics - analisys of states of stress</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+\newcommand{\tens}[1]{\boldsymbol{#1}}
+\newcommand{\mat}[1]{\left[\boldsymbol{#1}\right]}
+\newcommand{\matWp}[2]{\left[\boldsymbol{#1}_{#2}\right]}
+\newcommand{\tensQ}[1]{\pmb{\mathbb{#1}}}
+\newcommand{\tensQc}[1]{\mathbb{#1}}
+
+\newcommand{\transp}[1]{{#1}^{\textrm{T}}}
+\newcommand{\veczero}{\vec{0}}
+\newcommand{\body}{\Omega}
+\newcommand{\calvec}[1]{\boldsymbol{\mathcal{#1}}}
+\newcommand{\commadiff}[2]{{#1,}_{#2}}
+\newcommand{\regulardiff}[2]{ \frac{\partial#1}{\partial#2} }
+\newcommand{\func}[2]{#1\left(#2\right)}
+\newcommand{\transp}[1]{{#1}^{\text{T}}}
+\newcommand{\transpm}[1]{{#1}^{-\text{T}}}
+\newcommand{\trace}[1]{\text{tr}#1}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="./images/sm_logo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="solid_mechanics_book_en.html"><span class="title">A first course on solid mechanics</span></a></h1>
+<p class="byline">Antonio Bilotta</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="stress_sec_stress_chap_en.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="stress_chap_en.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="plv_sec_stress_chap_en.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="stress_sec_stress_chap_en.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="stress_chap_en.html" title="Up">Up</a><a class="next-button button toolbar-item" href="plv_sec_stress_chap_en.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="front_matter_en.html" data-scroll="front_matter_en"><span class="title">Front Matter</span></a><ul>
+<li><a href="front_colophon_en.html" data-scroll="front_colophon_en">Colophon</a></li>
+<li><a href="author_bio_en.html" data-scroll="author_bio_en">Author Biography</a></li>
+<li><a href="dedication_en.html" data-scroll="dedication_en">Dedication</a></li>
+<li><a href="acknowledgement_en.html" data-scroll="acknowledgement_en">Acknowledgements</a></li>
+<li><a href="preface_en.html" data-scroll="preface_en">Preface</a></li>
+<li><a href="references_frontmatter_en.html" data-scroll="references_frontmatter_en">using MATLAB®</a></li>
+</ul>
+</li>
+<li class="link part"><a href="continuum_mechanics_en.html" data-scroll="continuum_mechanics_en"><span class="codenumber">I</span> <span class="title">continuum mechanics</span></a></li>
+<li class="link">
+<a href="strain_chap_en.html" data-scroll="strain_chap_en"><span class="codenumber">1</span> <span class="title">bodies' kinematics</span></a><ul>
+<li><a href="configurations_sec_strain_chap_en.html" data-scroll="configurations_sec_strain_chap_en">configurations</a></li>
+<li><a href="transformations_sec_strain_chap_en.html" data-scroll="transformations_sec_strain_chap_en">transformations</a></li>
+<li><a href="gradient_sec_strain_chap_en.html" data-scroll="gradient_sec_strain_chap_en">deformation gradient</a></li>
+<li><a href="displacement_sec_strain_chap_en.html" data-scroll="displacement_sec_strain_chap_en">displacement field</a></li>
+<li><a href="determinant_sec_strain_chap_en.html" data-scroll="determinant_sec_strain_chap_en">determinant of the deformation gradient</a></li>
+<li><a href="polar_sec_strain_chap_en.html" data-scroll="polar_sec_strain_chap_en">polar decomposition</a></li>
+<li><a href="principal_directions_sec_strain_chap_en.html" data-scroll="principal_directions_sec_strain_chap_en">stretch tensor \(\tens{U}\) and principal directions (transformation of line elements)</a></li>
+<li><a href="measures_sec_strain_chap_en.html" data-scroll="measures_sec_strain_chap_en">strain measures</a></li>
+<li><a href="infinitesimal_sec_strain_chap_en.html" data-scroll="infinitesimal_sec_strain_chap_en">the infinitesimal strain tensor</a></li>
+<li><a href="exercises_sec_strain_chap_en.html" data-scroll="exercises_sec_strain_chap_en">exercises</a></li>
+<li><a href="answers_sec_strain_chap_en.html" data-scroll="answers_sec_strain_chap_en">answers to selected exercises</a></li>
+<li><a href="refs_strain_chap_en.html" data-scroll="refs_strain_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="stress_chap_en.html" data-scroll="stress_chap_en"><span class="codenumber">2</span> <span class="title">forces, equilibrium and stress</span></a><ul>
+<li><a href="basics_sec_stress_chap_en.html" data-scroll="basics_sec_stress_chap_en">the continuity hypothesis</a></li>
+<li><a href="equilibrium_sec_stress_chap_en.html" data-scroll="equilibrium_sec_stress_chap_en">equilibrium equations</a></li>
+<li><a href="stress_sec_stress_chap_en.html" data-scroll="stress_sec_stress_chap_en">Cauchy stress tensor tensor</a></li>
+<li><a href="stress_analysis_sec_stress_chap_en.html" data-scroll="stress_analysis_sec_stress_chap_en" class="active">analisys of states of stress</a></li>
+<li><a href="plv_sec_stress_chap_en.html" data-scroll="plv_sec_stress_chap_en">principle of virtual work</a></li>
+<li><a href="exercises_sec_stress_chap_en.html" data-scroll="exercises_sec_stress_chap_en">exercises</a></li>
+<li><a href="answers_sec_stress_chap_en.html" data-scroll="answers_sec_stress_chap_en">answers to some of the proposed exercises</a></li>
+<li><a href="refs_stress_chap_en.html" data-scroll="refs_stress_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="elasticity_chap_en.html" data-scroll="elasticity_chap_en"><span class="codenumber">3</span> <span class="title">elasticity</span></a><ul>
+<li><a href="motivations_sec_elasticity_chap_en.html" data-scroll="motivations_sec_elasticity_chap_en">motivation</a></li>
+<li><a href="uniaxial_sec_elasticity_chap_en.html" data-scroll="uniaxial_sec_elasticity_chap_en">uniaxial states</a></li>
+<li><a href="multiaxial_sec_elasticity_chap_en.html" data-scroll="multiaxial_sec_elasticity_chap_en">multi-axial states</a></li>
+<li><a href="problem_sec_elasticity_chap_en.html" data-scroll="problem_sec_elasticity_chap_en">the elastic problem</a></li>
+<li><a href="stretched_beam_sec_elasticity_chap_en.html" data-scroll="stretched_beam_sec_elasticity_chap_en">one-dimensional models: stretched beam</a></li>
+<li><a href="bent_beam_sec_elasticity_chap_en.html" data-scroll="bent_beam_sec_elasticity_chap_en">one-dimensional models: bent beam</a></li>
+<li><a href="stretched_beam_applications_sec_elasticity_chap_en.html" data-scroll="stretched_beam_applications_sec_elasticity_chap_en">applications of the stretched beam model</a></li>
+<li><a href="bent_beam_applications_sec_elasticity_chap_en.html" data-scroll="bent_beam_applications_sec_elasticity_chap_en">applications of the bent beam model</a></li>
+<li><a href="exercises_sec_elasticity_chap_en.html" data-scroll="exercises_sec_elasticity_chap_en">exercises</a></li>
+<li><a href="answers_sec_elasticity_chap_en.html" data-scroll="answers_sec_elasticity_chap_en">answers to selected exercises</a></li>
+<li><a href="refs_elasticity_chap_en.html" data-scroll="refs_elasticity_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link part"><a href="beams_systems_en.html" data-scroll="beams_systems_en"><span class="codenumber">II</span> <span class="title">rigid systems</span></a></li>
+<li class="link">
+<a href="rigid_body_kinematics_chap_en.html" data-scroll="rigid_body_kinematics_chap_en"><span class="codenumber">4</span> <span class="title">kinematics</span></a><ul>
+<li><a href="description_sec_rigid_body_kinematics_chap_en.html" data-scroll="description_sec_rigid_body_kinematics_chap_en">basic kinematic description</a></li>
+<li><a href="constraints_sec_rigid_body_kinematics_chap_en.html" data-scroll="constraints_sec_rigid_body_kinematics_chap_en">constraints</a></li>
+<li><a href="analysis_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_sec_rigid_body_kinematics_chap_en">kinematic analysis</a></li>
+<li><a href="analysis_examples_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_examples_sec_rigid_body_kinematics_chap_en">kinematic analysis of simple rigid body systems</a></li>
+<li><a href="refs_rigid_body_kinematics_chap_en.html" data-scroll="refs_rigid_body_kinematics_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="rigid_body_statics_chap_en.html" data-scroll="rigid_body_statics_chap_en"><span class="codenumber">5</span> <span class="title">statics</span></a><ul>
+<li><a href="equilibrium_sec_rigid_body_statics_chap_en.html" data-scroll="equilibrium_sec_rigid_body_statics_chap_en">equilibrium equations</a></li>
+<li><a href="planecase_sec_rigid_body_statics_chap_en.html" data-scroll="planecase_sec_rigid_body_statics_chap_en">2D case</a></li>
+<li><a href="constraints_sec_rigid_body_statics_chap_en.html" data-scroll="constraints_sec_rigid_body_statics_chap_en">constraints</a></li>
+<li><a href="free_body_sec_rigid_body_statics_chap_en.html" data-scroll="free_body_sec_rigid_body_statics_chap_en">free body diagrams</a></li>
+<li><a href="analysis_sec_rigid_body_statics_chap_en.html" data-scroll="analysis_sec_rigid_body_statics_chap_en">static analysis</a></li>
+<li><a href="analysis_examples_sec_rigid_body_statics_chap_en.html" data-scroll="analysis_examples_sec_rigid_body_statics_chap_en">application of static analysis to systems of bodies</a></li>
+<li><a href="sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces</a></li>
+<li><a href="indefinte_sec_rigid_body_statics_chap_en.html" data-scroll="indefinte_sec_rigid_body_statics_chap_en">2D beam equilibrium differential equations</a></li>
+<li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces calculation and diagrams</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="stress_analysis_sec_stress_chap_en"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.4</span> <span class="title">analisys of states of stress</span>
+</h2>
+<section class="subsection" id="subsection-30"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.4.1</span> <span class="title">convention and meaning of the components of stress tensor</span>
+</h3>
+<p id="p-201">Let us consider again the figure already reported in the previous section</p>
+<figure class="figure figure-like" id="figure-15"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/cauchy_stress_components.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-202">where the three reference planes are shown, i.e. the planes having the axes \(\vec{e}_1\text{,}\) \(\vec{e}_2\) and \(\vec{e}_3\) as outgoing normal. The components of the stress tensor refer to these planes, which are considered <em class="emphasis">positive</em>, and the figure shows these components according to the directions that are assumed to be positive. If we imagine of observing a cube, as the figure suggests, the hidden faces of the cube have the opposite directions  \(-\vec{e}_1 \text{,}\) \(-\vec{e}_2 \) and \(-\vec{e}_3 \) as positive outgoing normal. On these planes, which are considered <em class="emphasis">negative</em>, the same stress components but of opposite sign will act. For example, the traction  \(\vec{t}_{-\vec{e}_1} = -\vec{t}_{\vec{e}_1}\) will act on the plane having \(-\vec{e}_1 \) as normal.</p>
+<p id="p-203">Consider the traction acting on the position identified by \(\vec{e}_1 \text{,}\) which can also be calculated as</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{t}_{\vec{e}_1} = \tens{\sigma}\,\vec{e}_1\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">The scalar product between this and the normal to which it refers provides</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{t}_{\vec{e}_1} \cdot \vec{e}_1 = \sigma_{11}
+\end{equation*}
+</div>
+<p data-braille="continuation">which represents, see also the figure, the <em class="emphasis">normal componente</em> of traction \(\vec{t}_{\vec{e}_1}\text{.}\) By calculating the scalar product between \(\vec{t}_{\vec{e}_1}\) and direction \(\vec{e}_2\)</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{t}_{\vec{e}_1} \cdot \vec{e}_2 = \sigma_{21}
+\end{equation*}
+</div>
+<p data-braille="continuation">the <em class="emphasis">tangential component</em> of traction \(\vec{t}_{\vec{e}_1}\) with respect direction 2 is obtained. Similarly</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{t}_{\vec{e}_1} \cdot \vec{e}_3 = \sigma_{31}
+\end{equation*}
+</div>
+<p data-braille="continuation">represents the <em class="emphasis">tangential component</em> of traction \(\vec{t}_{\vec{e}_1}\) with respect to direction 3.</p>
+<p id="p-204">Similar assessments can be made for the other tractions \(\vec{t}_{\vec{e}_2}\) and \(\vec{t}_{\vec{e}_3}\text{.}\) A summary of the meaning of the components of the stress tensor is as follows.</p>
+<ul class="disc">
+<li id="li-63">The components with repeated indices such as<div class="displaymath">
+\begin{equation*}
+\sigma_{11}\quad\sigma_{22}\quad\sigma_{33}
+\end{equation*}
+</div>are the normal components of the stress tensor. If the sign is positive they are <em class="emphasis">traction</em> components, if it is negative they are <em class="emphasis">compression</em> components.</li>
+<li id="li-64">The components with mixed indices (simmetry always applies)<div class="displaymath">
+\begin{equation*}
+\sigma_{12}\quad\sigma_{13}\quad\sigma_{23}
+\end{equation*}
+</div>constitute the tangential components of the tensor. The sign of the tangential components follows the convention indicated in the figure but, unlike the normal components, it has no particular physical meaning since the type of load does not change when the sign changes.</li>
+<li id="li-65">For each component of the tensor the second index refers to the plane's normal on which the traction acts and the first index refers to the component of the traction.</li>
+</ul>
+<p id="p-205">What has been discussed for the tensor components also applies to a generic normal \(\vec{n} \text{.}\) As established by the Cauchy tension theorem we have</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{t}_{\vec{n}} = \tens{\sigma}\,\vec{n}\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">From which the normal component of traction can be calculated, i.e.</p>
+<div class="displaymath">
+\begin{equation}
+\sigma = \vec{t}_{\vec{n}} \cdot \vec{n} = \tens{\sigma}\,\vec{n} \cdot \vec{n}\tag{2.4.1}
+\end{equation}
+</div>
+<p data-braille="continuation">and also the tangential component relative to a direction \(\vec{m} \) orthogonal to \(\vec{n} \)</p>
+<div class="displaymath">
+\begin{equation}
+\tau = \vec{t}_{\vec{n}} \cdot \vec{m} = \tens{\sigma}\,\vec{n} \cdot \vec{m} \,.\tag{2.4.2}
+\end{equation}
+</div>
+<p data-braille="continuation">To denote the two components, the convention, often adopted in the engineering field, which indicates the normal and tangential components with the symbols \(\sigma \) and \(\tau \) respectively, was used. The vector \(\vec{m} \text{,}\) like \(\vec{n} \text{,}\) is a vector of unit length.</p>
+<figure class="figure figure-like" id="normal_shear_fig"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/new_normal_shear.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></section><section class="subsection" id="subsection-31"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.4.2</span> <span class="title">principal stresses and principal directions</span>
+</h3>
+<p id="p-206">What is discussed in <a href="principal_directions_sec_strain_chap_en.html" class="internal" title="Section 1.7: stretch tensor \(\tens{U}\) and principal directions (transformation of line elements)">Section 1.7</a> concerning the main directions of the tensor \(\tens{U} \) is also largely applicable to the stress tensor \(\tens{\sigma} \text{.}\) Both tensors are symmetric and the only fundamental distinction that needs to be made is that, unlike \(\tens{U} \text{,}\) \(\tens{\sigma} \) is not defined positive . Therefore in this case the eigenvalues, which now identify the <em class="emphasis">principal stress</em> of the tensor, can also be zero or negative. However the symmetry of \(\tens{\sigma} \) allows the writing of the spectral decomposition of the tensor</p>
+<div class="displaymath">
+\begin{equation}
+\tens{\sigma} = \sigma_1\,\vec{s}_1 \otimes \vec{s}_1 + \sigma_2\,\vec{s}_2 \otimes \vec{s}_2 + \sigma_3\,\vec{s}_3 \otimes \vec{s}_3\,,\label{spectral_stress_eq}\tag{2.4.3}
+\end{equation}
+</div>
+<p data-braille="continuation">where the <em class="emphasis">principal directions</em> \(\vec{s}_1\text{,}\) \(\vec{s}_2\text{,}\) \(\vec{s}_3\text{,}\) constituting an orthonormal vector triad, are the eigenvectors of \(\tens{\sigma}\text{.}\) \(\sigma_1\text{,}\) \(\sigma_2\text{,}\) \(\sigma_3\) are the principal stresses.</p>
+<p id="p-207">In the case of main directions aligned with the reference system the tensor \(\tens{\sigma} \) assumes the diagonal form</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{\sigma} =
+\left[\begin{array}{ccc}
+\sigma_1 \amp 0 \amp 0 \\
+0 \amp \sigma_2 \amp 0 \\
+0 \amp 0 \amp \sigma_3
+\end{array}\right]
+\end{equation*}
+</div>
+<p data-braille="continuation">which identifies a state of stress described only by normal components. The sign is positive in the case of a tensile component and it is negative in the case of a compressive component. This situation is illustrated in the following figure.</p>
+<figure class="figure figure-like" id="figure-17"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/cauchy_normal_stress_components.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-208">If, on the other hand, the main directions are not aligned with the reference system, the tensor \(\tens{\sigma} \) is characterized by the presence of tangential components.</p>
+<p id="p-209">Given a tensor \(\tens{\sigma} \) the identification of the principal stresses and directions requires the calculation of the eigenvalues and eigenvectors to be carried out, as will be shown later, via MATLAB®.</p>
+<article class="insight remark-like" id="insight-6"><h6 class="heading">
+<span class="type">Insight</span><span class="space"> </span><span class="codenumber">2.4.4</span><span class="period">.</span><span class="space"> </span><span class="title">stress tensor invariants.</span>
+</h6>
+<p id="p-210">Also in this case, as already discussed in the chapter dedicated to kinematics, the solution of the eigenvalue problem requires the solution of a cubic equation which can be expressed as follows</p>
+<div class="displaymath">
+\begin{equation*}
+-\sigma^3 + \func{I_1}{\tens{\sigma}} \sigma^2 - \func{I_2}{\tens{\sigma}} \sigma + \func{I_3}{\tens{\sigma}} = 0\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">where the invariants of the tensor \(\tens{\sigma}\text{,}\) that is the quantities that are independent from the reference system used to represent the tensor,  appear. The invariants of \(\tens{\sigma} \) can be calculated with the following pairs of expressions, where each pair contains the formula to be used in the case where the tensor \(\tens{\sigma} \) is expressed with respect to the principal directions and the formula to be used in the generic case.</p>
+<ul class="disc">
+<li id="li-66">
+<em class="emphasis">First invariant</em><div class="displaymath">
+\begin{equation}
+\func{I_1}{\tens{\sigma}} = \sigma_1 + \sigma_2 + \sigma_3 = \trace{\tens{\sigma}}\,,\tag{2.4.4}
+\end{equation}
+</div>where the <em class="emphasis">trace</em> of the tensor, i.e the sum of the coefficients belonging to the main diagonal, is used.</li>
+<li id="li-67">
+<em class="emphasis">Second invariant</em><div class="displaymath">
+\begin{equation}
+\func{I_2}{\tens{\sigma}} = \sigma_1\, \sigma_2 + \sigma_2\, \sigma_3 + \sigma_3\, \sigma_1 = \frac{1}{2}\left[(\trace{\tens{\sigma}})^2 - \trace{\tens{\sigma}^2}\right]\,.\tag{2.4.5}
+\end{equation}
+</div>
+</li>
+<li id="li-68">
+<em class="emphasis">Third invariant</em><div class="displaymath">
+\begin{equation}
+\func{I_3}{\tens{\sigma}} = \sigma_1\, \sigma_2\, \sigma_3 = \det{\tens{\sigma}}\,.\tag{2.4.6}
+\end{equation}
+</div>
+</li>
+</ul></article></section><section class="subsection" id="subsection-32"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.4.3</span> <span class="title">basic states of stress</span>
+</h3>
+<section class="subsubsection" id="subsubsection-8"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">2.4.3.1</span> <span class="title">spheric or hydrostatic state</span>
+</h4>
+<p id="p-211">The state of stress which always maintains the same representation with respect to any reference system is the state characterized by principal stresses assuming the same value, that is \(\sigma_1 = \sigma_2 = \sigma_3 = p \text{.}\) In this case, using Eq. <a class="xref" data-knowl="./knowl/spectral_stress_eq.html" title="Equation 2.4.3">(2.4.3)</a>, the tensor \(\tens{\sigma} \) takes the following form</p>
+<div class="displaymath">
+\begin{equation*}
+\tens{\sigma} = p\,\vec{e}_1 \otimes \vec{e}_1 + p\,\vec{e}_2 \otimes \vec{e}_2 + p\,\vec{e}_3 \otimes \vec{e}_3\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">that is</p>
+<div class="displaymath">
+\begin{equation*}
+\tens{\sigma} = p \, \tens{I}\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">whose matrix form is</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{\sigma} =
+p \left[\begin{array}{ccc}
+1 \amp 0 \amp 0 \\
+0 \amp 1 \amp 0 \\
+0 \amp 0 \amp 1
+\end{array}\right]
+=
+\left[\begin{array}{ccc}
+p \amp 0 \amp 0 \\
+0 \amp p \amp 0 \\
+0 \amp 0 \amp p
+\end{array}\right]\,.
+\end{equation*}
+</div>
+<figure class="figure figure-like" id="figure-18"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="images/spherical_stress_state.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-212">Assuming \(p \) positive there is an equal traction in all directions, hence the adjective <em class="emphasis">spherical</em>. On the other hand, if \(p \) is negative, there is a state of compression equal in all directions, just as it happens for a body immersed in a fluid. Hence the adjective <em class="emphasis">hydrostatic</em>.</p></section><section class="subsubsection" id="subsubsection-9"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">2.4.3.2</span> <span class="title">state of “pure” traction or compression</span>
+</h4>
+<p id="p-213">The following state of stress</p>
+<div class="displaymath">
+\begin{equation*}
+\tens{\sigma} = \sigma \, \vec{e}_1 \otimes \vec{e}_1\,,\quad
+\mat{\sigma} =
+\left[\begin{array}{ccc}
+\sigma \amp 0 \amp 0 \\
+0 \amp 0 \amp 0 \\
+0 \amp 0 \amp 0
+\end{array}\right]\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">characterized by principal stresses equal to \(\sigma_1 = \sigma \text{,}\) \(\sigma_2 = 0 \text{,}\) \(\sigma_3 = 0 \) and principal directions identified by the axis \(\vec{e}_1 \) and the plane defined by the other two axes of the triad, it is usually labeled, based on the sign of \(\sigma \text{,}\) state of <em class="emphasis">“pure” traction</em> or <em class="emphasis">“pure” compression</em>.</p>
+<figure class="figure figure-like" id="figure-19"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/pure_traction_stress_state.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-214">The adjective “pure” must not be misleading as it only applies to the arrangement of principal directions just described. In fact, it is sufficient to assume a different arrangement for the principal directions, for example obtained with a generic rotation around the axis \(\vec{e}_3 \text{,}\) to have</p>
+<div class="displaymath">
+\begin{equation*}
+\tens{\sigma} = \sigma \, \vec{s}_1 \otimes \vec{s}_1\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">with</p>
+<div class="displaymath">
+\begin{equation*}
+\matWp{s}{1} = 
+\left[\begin{array}{c}
+\cos{\alpha}\\\sin{\alpha}\\0
+\end{array}\right]\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">From which the following matrix form of the given stress tensor</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{\sigma} = \sigma
+\left[\begin{array}{ccc}
+\cos{\alpha}^2 \amp \cos{\alpha}\sin{\alpha} \amp 0 \\
+\sin{\alpha}\cos{\alpha} \amp \sin{\alpha}^2 \amp 0 \\
+0 \amp 0 \amp 0
+\end{array}\right]\,.
+\end{equation*}
+</div>
+<p id="p-215">Also the following stress tensors constitute states of “pure” traction or compression.</p>
+<div class="displaymath">
+\begin{equation*}
+\tens{\sigma} = \sigma \, \vec{e}_2 \otimes \vec{e}_2\,,\quad
+\mat{\sigma} =
+\left[\begin{array}{ccc}
+0 \amp 0 \amp 0 \\
+0 \amp \sigma \amp 0 \\
+0 \amp 0 \amp 0
+\end{array}\right]
+\end{equation*}
+</div>
+<p data-braille="continuation">and</p>
+<div class="displaymath">
+\begin{equation*}
+\tens{\sigma} = \sigma \, \vec{e}_3 \otimes \vec{e}_3\,,\quad
+\mat{\sigma} =
+\left[\begin{array}{ccc}
+0  \amp 0 \amp 0 \\
+0 \amp 0 \amp 0 \\
+0 \amp 0 \amp \sigma
+\end{array}\right]\,.
+\end{equation*}
+</div></section><section class="subsubsection" id="subsubsection-10"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">2.4.3.3</span> <span class="title">state of “pure” shear</span>
+</h4>
+<p id="p-216">In order to discuss the state of <em class="emphasis">“pure” shear</em> it is necessary to leave the point of view given by the main directions and speak directly of a stress state characterized by the following matrix form</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{\sigma} =
+\left[\begin{array}{ccc}
+0  \amp \tau \amp 0 \\
+\tau \amp 0 \amp 0 \\
+0 \amp 0 \amp 0
+\end{array}\right]\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">In a such case and always with respect to the given reference triad \(\vec{e}_1\text{,}\) \(\vec{e}_2\text{,}\) \(\vec{e}_3\text{,}\) it is possible to talk of a state of “pure” shear because the only non zero component of the tensor is \(\sigma_{12}=\sigma_{21}=\tau\text{.}\)</p>
+<figure class="figure figure-like" id="figure-20"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/pure_shear_stress_state.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-217">The calculation of principal directions and principal stresses would show that we are in a different case from the previous ones. In fact, the calculation of the eigenvalues and eigenvectors can be carried out with the following MATLAB® instructions</p>
+<figure class="listing figure-like" id="listing-25"><pre class="console"><b>syms t;
+s = [0 t 0; t 0 0; 0 0 0];
+[V, D]=eig(s)
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">2.4.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-218">gives</p>
+<div class="displaymath">
+\begin{equation*}
+\sigma_1 = \tau\,,\quad\sigma_2 = -\tau\,,\quad\sigma_3 = 0\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">and</p>
+<div class="displaymath">
+\begin{equation*}
+\matWp{s}{1} = 
+\left[\begin{array}{c}
+1/\sqrt{2} \\ 1/\sqrt{2} \\0
+\end{array}\right]
+\,,\quad
+\matWp{s}{2} = 
+\left[\begin{array}{c}
+-1/\sqrt{2} \\ 1/\sqrt{2} \\0
+\end{array}\right]
+\,,\quad
+\matWp{s}{3} = 
+\left[\begin{array}{c}
+0 \\ 0 \\ 1
+\end{array}\right]
+\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">Then the principal directions are rotated of \(\pi / 4 \) around the axis \(\vec{e}_3 \) (the normalized eigenvectors are reported even if, in the case of symbolic calculation, MATLAB® does not provide normalized eigenvectors).</p>
+<p id="p-219">Thus, as discussed, it would have been possible to present the case of “pure” shear</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{\sigma} =
+\left[\begin{array}{ccc}
+0  \amp \tau \amp 0 \\
+\tau \amp 0 \amp 0 \\
+0 \amp 0 \amp 0
+\end{array}\right]\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">as the stress state that occurs when the reference system is obtained by rotating the triad of the main directions of \(\pi/4 \) around the third axis and the principal stresses are defined by</p>
+<div class="displaymath">
+\begin{equation*}
+\sigma_1 = \tau\,,\quad\sigma_2 = -\tau\,,\quad\sigma_3 = 0\,.
+\end{equation*}
+</div>
+<p id="p-220">Also the following stress states</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{\sigma} =
+\left[\begin{array}{ccc}
+0 \amp 0  \amp \tau \\
+0 \amp 0 \amp 0 \\
+\tau \amp 0 \amp 0
+\end{array}\right]
+\end{equation*}
+</div>
+<p data-braille="continuation">and</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{\sigma} =
+\left[\begin{array}{ccc}
+0  \amp 0 \amp 0 \\
+0 \amp 0 \amp \tau \\
+0 \amp \tau \amp 0
+\end{array}\right]
+\end{equation*}
+</div>
+<p data-braille="continuation">are states of “pure” shear and all the previous discussion also applies, with due clarifications, to them.</p></section></section></section></div></main>
+</div>
+</body>
+</html>

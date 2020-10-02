@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-10-02T11:40:20+02:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Solid Mechanics - configurations</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+\newcommand{\tens}[1]{\boldsymbol{#1}}
+\newcommand{\mat}[1]{\left[\boldsymbol{#1}\right]}
+\newcommand{\matWp}[2]{\left[\boldsymbol{#1}_{#2}\right]}
+\newcommand{\tensQ}[1]{\pmb{\mathbb{#1}}}
+\newcommand{\tensQc}[1]{\mathbb{#1}}
+
+\newcommand{\transp}[1]{{#1}^{\textrm{T}}}
+\newcommand{\veczero}{\vec{0}}
+\newcommand{\body}{\Omega}
+\newcommand{\calvec}[1]{\boldsymbol{\mathcal{#1}}}
+\newcommand{\commadiff}[2]{{#1,}_{#2}}
+\newcommand{\regulardiff}[2]{ \frac{\partial#1}{\partial#2} }
+\newcommand{\func}[2]{#1\left(#2\right)}
+\newcommand{\transp}[1]{{#1}^{\text{T}}}
+\newcommand{\transpm}[1]{{#1}^{-\text{T}}}
+\newcommand{\trace}[1]{\text{tr}#1}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="./images/sm_logo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="solid_mechanics_book_en.html"><span class="title">A first course on solid mechanics</span></a></h1>
+<p class="byline">Antonio Bilotta</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="strain_chap_en.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="strain_chap_en.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="transformations_sec_strain_chap_en.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="strain_chap_en.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="strain_chap_en.html" title="Up">Up</a><a class="next-button button toolbar-item" href="transformations_sec_strain_chap_en.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="front_matter_en.html" data-scroll="front_matter_en"><span class="title">Front Matter</span></a><ul>
+<li><a href="front_colophon_en.html" data-scroll="front_colophon_en">Colophon</a></li>
+<li><a href="author_bio_en.html" data-scroll="author_bio_en">Author Biography</a></li>
+<li><a href="dedication_en.html" data-scroll="dedication_en">Dedication</a></li>
+<li><a href="acknowledgement_en.html" data-scroll="acknowledgement_en">Acknowledgements</a></li>
+<li><a href="preface_en.html" data-scroll="preface_en">Preface</a></li>
+<li><a href="references_frontmatter_en.html" data-scroll="references_frontmatter_en">using MATLAB®</a></li>
+</ul>
+</li>
+<li class="link part"><a href="continuum_mechanics_en.html" data-scroll="continuum_mechanics_en"><span class="codenumber">I</span> <span class="title">continuum mechanics</span></a></li>
+<li class="link">
+<a href="strain_chap_en.html" data-scroll="strain_chap_en"><span class="codenumber">1</span> <span class="title">bodies' kinematics</span></a><ul>
+<li><a href="configurations_sec_strain_chap_en.html" data-scroll="configurations_sec_strain_chap_en" class="active">configurations</a></li>
+<li><a href="transformations_sec_strain_chap_en.html" data-scroll="transformations_sec_strain_chap_en">transformations</a></li>
+<li><a href="gradient_sec_strain_chap_en.html" data-scroll="gradient_sec_strain_chap_en">deformation gradient</a></li>
+<li><a href="displacement_sec_strain_chap_en.html" data-scroll="displacement_sec_strain_chap_en">displacement field</a></li>
+<li><a href="determinant_sec_strain_chap_en.html" data-scroll="determinant_sec_strain_chap_en">determinant of the deformation gradient</a></li>
+<li><a href="polar_sec_strain_chap_en.html" data-scroll="polar_sec_strain_chap_en">polar decomposition</a></li>
+<li><a href="principal_directions_sec_strain_chap_en.html" data-scroll="principal_directions_sec_strain_chap_en">stretch tensor \(\tens{U}\) and principal directions (transformation of line elements)</a></li>
+<li><a href="measures_sec_strain_chap_en.html" data-scroll="measures_sec_strain_chap_en">strain measures</a></li>
+<li><a href="infinitesimal_sec_strain_chap_en.html" data-scroll="infinitesimal_sec_strain_chap_en">the infinitesimal strain tensor</a></li>
+<li><a href="exercises_sec_strain_chap_en.html" data-scroll="exercises_sec_strain_chap_en">exercises</a></li>
+<li><a href="answers_sec_strain_chap_en.html" data-scroll="answers_sec_strain_chap_en">answers to selected exercises</a></li>
+<li><a href="refs_strain_chap_en.html" data-scroll="refs_strain_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="stress_chap_en.html" data-scroll="stress_chap_en"><span class="codenumber">2</span> <span class="title">forces, equilibrium and stress</span></a><ul>
+<li><a href="basics_sec_stress_chap_en.html" data-scroll="basics_sec_stress_chap_en">the continuity hypothesis</a></li>
+<li><a href="equilibrium_sec_stress_chap_en.html" data-scroll="equilibrium_sec_stress_chap_en">equilibrium equations</a></li>
+<li><a href="stress_sec_stress_chap_en.html" data-scroll="stress_sec_stress_chap_en">Cauchy stress tensor tensor</a></li>
+<li><a href="stress_analysis_sec_stress_chap_en.html" data-scroll="stress_analysis_sec_stress_chap_en">analisys of states of stress</a></li>
+<li><a href="plv_sec_stress_chap_en.html" data-scroll="plv_sec_stress_chap_en">principle of virtual work</a></li>
+<li><a href="exercises_sec_stress_chap_en.html" data-scroll="exercises_sec_stress_chap_en">exercises</a></li>
+<li><a href="answers_sec_stress_chap_en.html" data-scroll="answers_sec_stress_chap_en">answers to some of the proposed exercises</a></li>
+<li><a href="refs_stress_chap_en.html" data-scroll="refs_stress_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="elasticity_chap_en.html" data-scroll="elasticity_chap_en"><span class="codenumber">3</span> <span class="title">elasticity</span></a><ul>
+<li><a href="motivations_sec_elasticity_chap_en.html" data-scroll="motivations_sec_elasticity_chap_en">motivation</a></li>
+<li><a href="uniaxial_sec_elasticity_chap_en.html" data-scroll="uniaxial_sec_elasticity_chap_en">uniaxial states</a></li>
+<li><a href="multiaxial_sec_elasticity_chap_en.html" data-scroll="multiaxial_sec_elasticity_chap_en">multi-axial states</a></li>
+<li><a href="problem_sec_elasticity_chap_en.html" data-scroll="problem_sec_elasticity_chap_en">the elastic problem</a></li>
+<li><a href="stretched_beam_sec_elasticity_chap_en.html" data-scroll="stretched_beam_sec_elasticity_chap_en">one-dimensional models: stretched beam</a></li>
+<li><a href="bent_beam_sec_elasticity_chap_en.html" data-scroll="bent_beam_sec_elasticity_chap_en">one-dimensional models: bent beam</a></li>
+<li><a href="stretched_beam_applications_sec_elasticity_chap_en.html" data-scroll="stretched_beam_applications_sec_elasticity_chap_en">applications of the stretched beam model</a></li>
+<li><a href="bent_beam_applications_sec_elasticity_chap_en.html" data-scroll="bent_beam_applications_sec_elasticity_chap_en">applications of the bent beam model</a></li>
+<li><a href="exercises_sec_elasticity_chap_en.html" data-scroll="exercises_sec_elasticity_chap_en">exercises</a></li>
+<li><a href="answers_sec_elasticity_chap_en.html" data-scroll="answers_sec_elasticity_chap_en">answers to selected exercises</a></li>
+<li><a href="refs_elasticity_chap_en.html" data-scroll="refs_elasticity_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link part"><a href="beams_systems_en.html" data-scroll="beams_systems_en"><span class="codenumber">II</span> <span class="title">rigid systems</span></a></li>
+<li class="link">
+<a href="rigid_body_kinematics_chap_en.html" data-scroll="rigid_body_kinematics_chap_en"><span class="codenumber">4</span> <span class="title">kinematics</span></a><ul>
+<li><a href="description_sec_rigid_body_kinematics_chap_en.html" data-scroll="description_sec_rigid_body_kinematics_chap_en">basic kinematic description</a></li>
+<li><a href="constraints_sec_rigid_body_kinematics_chap_en.html" data-scroll="constraints_sec_rigid_body_kinematics_chap_en">constraints</a></li>
+<li><a href="analysis_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_sec_rigid_body_kinematics_chap_en">kinematic analysis</a></li>
+<li><a href="analysis_examples_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_examples_sec_rigid_body_kinematics_chap_en">kinematic analysis of simple rigid body systems</a></li>
+<li><a href="refs_rigid_body_kinematics_chap_en.html" data-scroll="refs_rigid_body_kinematics_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="rigid_body_statics_chap_en.html" data-scroll="rigid_body_statics_chap_en"><span class="codenumber">5</span> <span class="title">statics</span></a><ul>
+<li><a href="equilibrium_sec_rigid_body_statics_chap_en.html" data-scroll="equilibrium_sec_rigid_body_statics_chap_en">equilibrium equations</a></li>
+<li><a href="planecase_sec_rigid_body_statics_chap_en.html" data-scroll="planecase_sec_rigid_body_statics_chap_en">2D case</a></li>
+<li><a href="constraints_sec_rigid_body_statics_chap_en.html" data-scroll="constraints_sec_rigid_body_statics_chap_en">constraints</a></li>
+<li><a href="free_body_sec_rigid_body_statics_chap_en.html" data-scroll="free_body_sec_rigid_body_statics_chap_en">free body diagrams</a></li>
+<li><a href="analysis_sec_rigid_body_statics_chap_en.html" data-scroll="analysis_sec_rigid_body_statics_chap_en">static analysis</a></li>
+<li><a href="analysis_examples_sec_rigid_body_statics_chap_en.html" data-scroll="analysis_examples_sec_rigid_body_statics_chap_en">application of static analysis to systems of bodies</a></li>
+<li><a href="sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces</a></li>
+<li><a href="indefinte_sec_rigid_body_statics_chap_en.html" data-scroll="indefinte_sec_rigid_body_statics_chap_en">2D beam equilibrium differential equations</a></li>
+<li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces calculation and diagrams</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="configurations_sec_strain_chap_en"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title">configurations</span>
+</h2>
+<figure class="figure figure-like" id="Kinematics_01_fig"><div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="images/Kinematics_01.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-25">The object of the kinematic analysis is a continuous body which will be named with the symbol \(\body\text{.}\) Each point of the body occupies a position in space which, fixed an orthonormal reference triad \(\vec{e}_a\) (\(a = 1,2,3\)), is identified by a vector. In particular we will talk about two <em class="emphasis">configurations</em>:</p>
+<ul class="disc">
+<li id="li-6">the <em class="emphasis">reference configuration</em> \(\body_0\text{,}\) which collects all the positions \(\vec{X}\) occupied by the points of the body before the motion;</li>
+<li id="li-7">the <em class="emphasis">current configuration</em> \(\body\text{,}\) which collects all the positions \(\vec{x}\) occupied by the points of the body after the motion.</li>
+</ul>
+<p data-braille="continuation">With respect to the chosen reference base, the positions \(\vec{X}\) and \(\vec{x}\) will be expressed using different types of notation.</p>
+<div class="displaymath">
+\begin{gather*}
+\left[\begin{array}{c}X_1\\X_2\\X_3\end{array}\right]\,,\quad
+\left[\begin{array}{c}x_1\\x_2\\x_3\end{array}\right]\\
+X_1 \vec{e}_1 + X_2 \vec{e}_2 + X_3 \vec{e}_3\,,\quad 
+x_1 \vec{e}_1 + x_2 \vec{e}_2 + x_3 \vec{e}_3\\
+X_a \vec{e}_a\,,\quad x_a \vec{e}_a\,.
+\end{gather*}
+</div>
+<p id="p-26"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-1" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/zJpxrEKcdVs?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p>
+<p id="p-27">Below are reported some examples of MATLAB® instructions that can be used to define and manipulate vectors.</p>
+<article class="assemblage assemblage-like" id="assemblage-1"><p id="p-28">Instructions for creating row vectors. <figure class="listing figure-like" id="listing-1"><pre class="console"><b>u = [1 2 3]
+v = 4:6
+w = u + v
+x = 0.5
+y = 1.0
+z = -2.0
+k = x*u + y*v + z*w
+
+% how to access to vector's components
+u(1)
+u(2)
+% the same as u(2)
+u(1,2)
+% access error
+u(2,1)
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.1.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p id="p-29">Instructions for creating column vectors (the format usually adopted to manipulate vectors in Mechanics). <figure class="listing figure-like" id="listing-2"><pre class="console"><b>u = [1; 2; 3]
+v = (linspace(4,6,3))'
+w = u + v
+x = 0.5
+y = 1.0
+z = -2.0
+k = x*u + y*v + z*w 
+
+% how to access to vector's components
+k(1)
+k(2)
+% the same as k(2)
+k(2,1)
+% access error
+k(1,2)
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.1.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></section></div></main>
+</div>
+</body>
+</html>

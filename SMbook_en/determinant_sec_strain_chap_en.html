@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-10-02T11:40:20+02:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Solid Mechanics - determinant of the deformation gradient</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+\newcommand{\tens}[1]{\boldsymbol{#1}}
+\newcommand{\mat}[1]{\left[\boldsymbol{#1}\right]}
+\newcommand{\matWp}[2]{\left[\boldsymbol{#1}_{#2}\right]}
+\newcommand{\tensQ}[1]{\pmb{\mathbb{#1}}}
+\newcommand{\tensQc}[1]{\mathbb{#1}}
+
+\newcommand{\transp}[1]{{#1}^{\textrm{T}}}
+\newcommand{\veczero}{\vec{0}}
+\newcommand{\body}{\Omega}
+\newcommand{\calvec}[1]{\boldsymbol{\mathcal{#1}}}
+\newcommand{\commadiff}[2]{{#1,}_{#2}}
+\newcommand{\regulardiff}[2]{ \frac{\partial#1}{\partial#2} }
+\newcommand{\func}[2]{#1\left(#2\right)}
+\newcommand{\transp}[1]{{#1}^{\text{T}}}
+\newcommand{\transpm}[1]{{#1}^{-\text{T}}}
+\newcommand{\trace}[1]{\text{tr}#1}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="./images/sm_logo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="solid_mechanics_book_en.html"><span class="title">A first course on solid mechanics</span></a></h1>
+<p class="byline">Antonio Bilotta</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="displacement_sec_strain_chap_en.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="strain_chap_en.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="polar_sec_strain_chap_en.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="displacement_sec_strain_chap_en.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="strain_chap_en.html" title="Up">Up</a><a class="next-button button toolbar-item" href="polar_sec_strain_chap_en.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="front_matter_en.html" data-scroll="front_matter_en"><span class="title">Front Matter</span></a><ul>
+<li><a href="front_colophon_en.html" data-scroll="front_colophon_en">Colophon</a></li>
+<li><a href="author_bio_en.html" data-scroll="author_bio_en">Author Biography</a></li>
+<li><a href="dedication_en.html" data-scroll="dedication_en">Dedication</a></li>
+<li><a href="acknowledgement_en.html" data-scroll="acknowledgement_en">Acknowledgements</a></li>
+<li><a href="preface_en.html" data-scroll="preface_en">Preface</a></li>
+<li><a href="references_frontmatter_en.html" data-scroll="references_frontmatter_en">using MATLAB®</a></li>
+</ul>
+</li>
+<li class="link part"><a href="continuum_mechanics_en.html" data-scroll="continuum_mechanics_en"><span class="codenumber">I</span> <span class="title">continuum mechanics</span></a></li>
+<li class="link">
+<a href="strain_chap_en.html" data-scroll="strain_chap_en"><span class="codenumber">1</span> <span class="title">bodies' kinematics</span></a><ul>
+<li><a href="configurations_sec_strain_chap_en.html" data-scroll="configurations_sec_strain_chap_en">configurations</a></li>
+<li><a href="transformations_sec_strain_chap_en.html" data-scroll="transformations_sec_strain_chap_en">transformations</a></li>
+<li><a href="gradient_sec_strain_chap_en.html" data-scroll="gradient_sec_strain_chap_en">deformation gradient</a></li>
+<li><a href="displacement_sec_strain_chap_en.html" data-scroll="displacement_sec_strain_chap_en">displacement field</a></li>
+<li><a href="determinant_sec_strain_chap_en.html" data-scroll="determinant_sec_strain_chap_en" class="active">determinant of the deformation gradient</a></li>
+<li><a href="polar_sec_strain_chap_en.html" data-scroll="polar_sec_strain_chap_en">polar decomposition</a></li>
+<li><a href="principal_directions_sec_strain_chap_en.html" data-scroll="principal_directions_sec_strain_chap_en">stretch tensor \(\tens{U}\) and principal directions (transformation of line elements)</a></li>
+<li><a href="measures_sec_strain_chap_en.html" data-scroll="measures_sec_strain_chap_en">strain measures</a></li>
+<li><a href="infinitesimal_sec_strain_chap_en.html" data-scroll="infinitesimal_sec_strain_chap_en">the infinitesimal strain tensor</a></li>
+<li><a href="exercises_sec_strain_chap_en.html" data-scroll="exercises_sec_strain_chap_en">exercises</a></li>
+<li><a href="answers_sec_strain_chap_en.html" data-scroll="answers_sec_strain_chap_en">answers to selected exercises</a></li>
+<li><a href="refs_strain_chap_en.html" data-scroll="refs_strain_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="stress_chap_en.html" data-scroll="stress_chap_en"><span class="codenumber">2</span> <span class="title">forces, equilibrium and stress</span></a><ul>
+<li><a href="basics_sec_stress_chap_en.html" data-scroll="basics_sec_stress_chap_en">the continuity hypothesis</a></li>
+<li><a href="equilibrium_sec_stress_chap_en.html" data-scroll="equilibrium_sec_stress_chap_en">equilibrium equations</a></li>
+<li><a href="stress_sec_stress_chap_en.html" data-scroll="stress_sec_stress_chap_en">Cauchy stress tensor tensor</a></li>
+<li><a href="stress_analysis_sec_stress_chap_en.html" data-scroll="stress_analysis_sec_stress_chap_en">analisys of states of stress</a></li>
+<li><a href="plv_sec_stress_chap_en.html" data-scroll="plv_sec_stress_chap_en">principle of virtual work</a></li>
+<li><a href="exercises_sec_stress_chap_en.html" data-scroll="exercises_sec_stress_chap_en">exercises</a></li>
+<li><a href="answers_sec_stress_chap_en.html" data-scroll="answers_sec_stress_chap_en">answers to some of the proposed exercises</a></li>
+<li><a href="refs_stress_chap_en.html" data-scroll="refs_stress_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="elasticity_chap_en.html" data-scroll="elasticity_chap_en"><span class="codenumber">3</span> <span class="title">elasticity</span></a><ul>
+<li><a href="motivations_sec_elasticity_chap_en.html" data-scroll="motivations_sec_elasticity_chap_en">motivation</a></li>
+<li><a href="uniaxial_sec_elasticity_chap_en.html" data-scroll="uniaxial_sec_elasticity_chap_en">uniaxial states</a></li>
+<li><a href="multiaxial_sec_elasticity_chap_en.html" data-scroll="multiaxial_sec_elasticity_chap_en">multi-axial states</a></li>
+<li><a href="problem_sec_elasticity_chap_en.html" data-scroll="problem_sec_elasticity_chap_en">the elastic problem</a></li>
+<li><a href="stretched_beam_sec_elasticity_chap_en.html" data-scroll="stretched_beam_sec_elasticity_chap_en">one-dimensional models: stretched beam</a></li>
+<li><a href="bent_beam_sec_elasticity_chap_en.html" data-scroll="bent_beam_sec_elasticity_chap_en">one-dimensional models: bent beam</a></li>
+<li><a href="stretched_beam_applications_sec_elasticity_chap_en.html" data-scroll="stretched_beam_applications_sec_elasticity_chap_en">applications of the stretched beam model</a></li>
+<li><a href="bent_beam_applications_sec_elasticity_chap_en.html" data-scroll="bent_beam_applications_sec_elasticity_chap_en">applications of the bent beam model</a></li>
+<li><a href="exercises_sec_elasticity_chap_en.html" data-scroll="exercises_sec_elasticity_chap_en">exercises</a></li>
+<li><a href="answers_sec_elasticity_chap_en.html" data-scroll="answers_sec_elasticity_chap_en">answers to selected exercises</a></li>
+<li><a href="refs_elasticity_chap_en.html" data-scroll="refs_elasticity_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link part"><a href="beams_systems_en.html" data-scroll="beams_systems_en"><span class="codenumber">II</span> <span class="title">rigid systems</span></a></li>
+<li class="link">
+<a href="rigid_body_kinematics_chap_en.html" data-scroll="rigid_body_kinematics_chap_en"><span class="codenumber">4</span> <span class="title">kinematics</span></a><ul>
+<li><a href="description_sec_rigid_body_kinematics_chap_en.html" data-scroll="description_sec_rigid_body_kinematics_chap_en">basic kinematic description</a></li>
+<li><a href="constraints_sec_rigid_body_kinematics_chap_en.html" data-scroll="constraints_sec_rigid_body_kinematics_chap_en">constraints</a></li>
+<li><a href="analysis_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_sec_rigid_body_kinematics_chap_en">kinematic analysis</a></li>
+<li><a href="analysis_examples_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_examples_sec_rigid_body_kinematics_chap_en">kinematic analysis of simple rigid body systems</a></li>
+<li><a href="refs_rigid_body_kinematics_chap_en.html" data-scroll="refs_rigid_body_kinematics_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="rigid_body_statics_chap_en.html" data-scroll="rigid_body_statics_chap_en"><span class="codenumber">5</span> <span class="title">statics</span></a><ul>
+<li><a href="equilibrium_sec_rigid_body_statics_chap_en.html" data-scroll="equilibrium_sec_rigid_body_statics_chap_en">equilibrium equations</a></li>
+<li><a href="planecase_sec_rigid_body_statics_chap_en.html" data-scroll="planecase_sec_rigid_body_statics_chap_en">2D case</a></li>
+<li><a href="constraints_sec_rigid_body_statics_chap_en.html" data-scroll="constraints_sec_rigid_body_statics_chap_en">constraints</a></li>
+<li><a href="free_body_sec_rigid_body_statics_chap_en.html" data-scroll="free_body_sec_rigid_body_statics_chap_en">free body diagrams</a></li>
+<li><a href="analysis_sec_rigid_body_statics_chap_en.html" data-scroll="analysis_sec_rigid_body_statics_chap_en">static analysis</a></li>
+<li><a href="analysis_examples_sec_rigid_body_statics_chap_en.html" data-scroll="analysis_examples_sec_rigid_body_statics_chap_en">application of static analysis to systems of bodies</a></li>
+<li><a href="sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces</a></li>
+<li><a href="indefinte_sec_rigid_body_statics_chap_en.html" data-scroll="indefinte_sec_rigid_body_statics_chap_en">2D beam equilibrium differential equations</a></li>
+<li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces calculation and diagrams</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="determinant_sec_strain_chap_en"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.5</span> <span class="title">determinant of the deformation gradient</span>
+</h2>
+<p id="p-75">In previous sections tensors have been introduced as <em class="emphasis">linear operators</em> associated with <em class="emphasis">linear transformations</em> defined in the usual space \(\mathbb{R}^3\text{.}\) The use of the denomination <em class="emphasis">linear operator</em> instead of <em class="emphasis">matrix</em> indicates a mathematical object with a broader meaning but, in any case, the tensors share with matrices all the basic algebraic properties and operations. Therefore, in the following, speaking of matrices, some properties and operations will be resumed, such as the calculation of the determinant, placing them in the realm of the kinematic description of the bodies.</p>
+<p id="p-76"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-3" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/fi2bq1MCvFE?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p>
+<p id="p-77">What is described in previous video lesson can be summarized as follows.</p>
+<ul class="disc">
+<li id="li-8">The determinant is a real number which constitutes the scale factor of the areas, in the case of 2D transformations, or of the volumes, in the case of 3D transformations.</li>
+<li id="li-9">From this perspective a null determinant is associated with transformations that scale to zero areas or volumes described in the initial space to which the transformation is applied. For example in 2D, the determinant is zero if all the points of the starting space are mapped on a line or, in the most extreme case, on a single point. In the 3D case, a transformation has zero determinant if it maps the points in a plane, in a straight line or in a single point. In these cases the columns of the matrix associated with the transformation are linearly dependent.</li>
+<li id="li-10">The determinant can also be negative because it also carries information about a possible change of orientation of the area or of the starting volume. This occurs when the transformed vectors of the basis do not respect the right hand's rule.</li>
+</ul>
+<section class="subsection" id="subsection-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.5.1</span> <span class="title">transformation formula of volume elements</span>
+</h3>
+<p id="p-78">Given the volume element \(dV = dX_1 dX_2 dX_3\) belonging to the reference configuration \(\body_0\text{,}\) it is possible to evaluate the corresponding volume element \(dv = dx_1 dx_2 dx_3 \) relative to the current configuration \(\body\text{.}\) The formula is</p>
+<div class="displaymath">
+\begin{equation}
+dv = \func{J}{\vec{X}}\,dV\,,\label{volume_change_eq}\tag{1.5.1}
+\end{equation}
+</div>
+<p data-braille="continuation">where</p>
+<div class="displaymath">
+\begin{equation}
+\func{J}{\vec{X}} = \det{\func{\mat{F}}{\vec{X}}} &gt; 0 \,.\tag{1.5.2}
+\end{equation}
+</div>
+<p data-braille="continuation">Inequality highlights compliance with the following conditions: <em class="emphasis">(i)</em> due to the impenetrability of matter, transformations characterized by \(\func{J}{\vec{X},t} &lt; 0\) are not admissible; <em class="emphasis">(ii)</em> the volumetric transformation ratio \(\func{J}{\vec{X}} = dv / dV \) cannot be null for any point \(\vec{X} \in \body_{0}\text{.}\) It is also possible to define the inverse volumetric ratio i.e.</p>
+<div class="displaymath">
+\begin{equation}
+\func{J^{-1}}{\vec{x}} = \det{ \func{\mat{F}^{-1}}{\vec{x}} } &gt; 0\,,\tag{1.5.3}
+\end{equation}
+</div>
+<p data-braille="continuation">from which</p>
+<div class="displaymath">
+\begin{equation}
+dV = \func{J^{-1}}{\vec{x}}\,dv\,.\label{inverse_volume_change_eq}\tag{1.5.4}
+\end{equation}
+</div>
+<p id="p-79">Transformations characterized by \(J = 1 \) will be called <em class="emphasis">isochoric</em> transformations.</p>
+<article class="assemblage assemblage-like" id="assemblage-8"><h6 class="heading"><span class="title">calculation of the determinant of transformations and admissibility check.</span></h6>
+<p id="p-80">Considering the two-dimensional transformations considered in the previous examples, the following MATLAB® instructions are given to be used for the calculation of the determinant and for the verification of the admissibility of the transformation. The instructions for plotting the value of the determinant on the domain \(-5 &lt;  X_1 &lt; 5\text{,}\) \(-5 &lt;  X_2 &lt; 5\) are also given.</p>
+<p id="p-81">MATLAB® instructions for the Transformation 1. <figure class="listing figure-like" id="listing-13"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
+F = [T1([1; 0]) T1([0; 1])];
+syms detF(X1, X2);
+detF(X1, X2) = det(F);
+
+x = linspace(-5, 5, 50);
+y = linspace(-5, 5, 50);
+[X,Y] = meshgrid(x,y);
+
+surface(X,Y,detF(X,Y))
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.5.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p id="p-82">Similar instructions can also be identified for Transformations 2, 3 and 4 which also verify the admissibility condition, being characterized by a determinant which is constant and greater than zero.</p>
+<p id="p-83">MATLAB® instructions for the transformation defined by \(x_1 = X_1^3\,,\; x_2 = X_2^3\text{.}\) <figure class="listing figure-like" id="listing-14"><pre class="console"><b>syms T1(X1, X2);
+T1(X1, X2) = X1^3; 
+
+syms T2(X1, X2);
+T2(X1, X2) = X2^3; 
+
+syms detF(X1, X2);
+detF(X1,X2) = diff(T1, X1)*diff(T2, X2) - diff(T1, X2)*diff(T2, X1);
+
+x = linspace(-5, 5, 50);
+y = linspace(-5, 5, 50);
+[X,Y] = meshgrid(x,y);
+
+surface(X,Y,detF(X,Y))
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.5.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p id="p-84">The result of the previous instructions provides the following plot <figure class="figure figure-like" id="figure-5"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="images/nolin_transf_det.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.5.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure> plotting which can be used to verify that along the coordinated axes \(X_1 = 0 \) and \(X_2 = 0 \) the transformation has zero determinant and therefore is not admissible (remember in this regard the presence of cusps in the plots shown in <a class="xref" data-knowl="./knowl/nolin_transf_example.html" title="Figure 1.3.4">Figure 1.3.4</a>).</p></article></section><section class="subsection" id="subsection-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.5.2</span> <span class="title">area element transformation</span>
+</h3>
+<p id="p-85"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-4" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/JVkE0EuiVik?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p>
+<p id="p-86">The volumetric transformation <a class="xref" data-knowl="./knowl/volume_change_eq.html" title="Equation 1.5.1">(1.5.1)</a> can be rewritten, remembering the meaning of the triple product presented in previous video, as follows</p>
+<div class="displaymath">
+\begin{gather*}
+dv = J\, dV\\
+d\vec{s} \cdot d\vec{x} = J\, d\vec{S} \cdot d\vec{X}
+\end{gather*}
+</div>
+<p data-braille="continuation">where \(d\vec{s} = ds \vec{n}\) and \(d\vec{S} = dS \vec{N}\) represent vector elements relative to the infinitesimal areas in the current configuration and in the reference configuration, respectively. \(d\vec{x}\) is obtained by transforming the elementary segment \(d\vec{X}\text{.}\) By taking a few simple manipulations it is easy to obtain</p>
+<div class="displaymath">
+\begin{align*}
+d\vec{s} \cdot d\vec{x}  \amp = J\, d\vec{S} \cdot d\vec{X}\,,\\
+d\vec{s} \cdot \tens{F}d\vec{X} \amp = J\, d\vec{S} \cdot d\vec{X} \,,\\
+\transp{\tens{F}}d\vec{s} \cdot d\vec{X} \amp = J\, d\vec{S} \cdot d\vec{X}\,,\\
+d\vec{s} \cdot d\vec{X} \amp = \transpm{\tens{F}}J\, d\vec{S} \cdot d\vec{X}\,.
+\end{align*}
+</div>
+<p data-braille="continuation">Which gives</p>
+<div class="displaymath">
+\begin{equation}
+d\vec{s} = J \transpm{\tens{F}}d\vec{S}\tag{1.5.5}
+\end{equation}
+</div>
+<p data-braille="continuation">expression known as <em class="emphasis">Nanson's formula</em> and which defines how the area element vector \(d\vec{s}\text{,}\) belonging to the current configuration \(\body\text{,}\) is related to area element vector \(d\vec{S}\)  belonging to the reference configuration \(\body_0\text{.}\)</p></section></section></div></main>
+</div>
+</body>
+</html>

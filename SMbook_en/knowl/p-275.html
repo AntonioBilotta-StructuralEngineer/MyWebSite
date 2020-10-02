@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-10-02T11:40:25+02:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
+<p>The elastic relationship for normal components can be formulated as follows</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\begin{array}{rcrcrcr}
+\varepsilon_{11} = \amp + \amp \frac{\displaystyle\sigma_{11}}{\displaystyle E} \amp-\amp \nu\,\frac{\displaystyle\sigma_{22}}{\displaystyle E} \amp-\amp \nu\,\frac{\displaystyle \sigma_{33}}{\displaystyle E}\,,\\
+\varepsilon_{22} = \amp - \amp \nu\,\frac{\displaystyle \sigma_{11}}{\displaystyle E} \amp+\amp \frac{\displaystyle \sigma_{22}}{\displaystyle E} \amp-\amp \nu\,\frac{\displaystyle \sigma_{33}}{\displaystyle E}\,,\\
+\varepsilon_{33} = \amp - \amp \nu\,\frac{\displaystyle \sigma_{11}}{\displaystyle E} \amp-\amp \nu\,\frac{\displaystyle \sigma_{22}}{\displaystyle E} \amp+\amp \frac{\displaystyle \sigma_{33}}{\displaystyle E}\,.
+\end{array}\tag{3.3.11}
+\end{equation}
+</div>
+<p data-braille="continuation">It is observed that this result constitutes the inverse form of the elastic relationship for the part relating to the normal components. To obtain the elastic coefficients that proportionally correlate the stress components to the strain components, it is better to visualize the relationship in the following matrix form</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\left[\begin{array}{c}\varepsilon_{11} \\ \varepsilon_{22} \\ \varepsilon_{33}\end{array}\right] =
+\left[\begin{array}{ccc}
+\frac{\displaystyle 1}{\displaystyle E} \amp -\frac{\displaystyle \nu}{\displaystyle E} \amp -\frac{\displaystyle \nu}{\displaystyle E} \\
+-\frac{\displaystyle \nu}{\displaystyle E} \amp \frac{\displaystyle 1}{\displaystyle E} \amp -\frac{\displaystyle \nu}{\displaystyle E} \\
+-\frac{\displaystyle \nu}{\displaystyle E} \amp -\frac{\displaystyle \nu}{\displaystyle E} \amp \frac{\displaystyle 1}{\displaystyle E}  \\
+\end{array}\right]
+\left[\begin{array}{c}\sigma_{11} \\ \sigma_{22} \\ \sigma_{33}\end{array}\right]
+\end{equation*}
+</div>
+<p data-braille="continuation">and use the following MATLAB® instructions to invert the highlighted matrix. <figure class="listing figure-like"><pre class="console"><b>syms E ni;
+M = [1/E -ni/E -ni/E; -ni/E 1/E  -ni/E; -ni/E -ni/E 1/E]
+inv(M)
+</b></pre>
+<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.3.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure> So we get</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\left[\begin{array}{c}\sigma_{11} \\ \sigma_{22} \\ \sigma_{33}\end{array}\right] =
+\frac{E}{(1+\nu)(1-2\nu)}
+\left[\begin{array}{ccc}
+(1-\nu) \amp \nu \amp \nu \\
+\nu \amp (1-\nu) \amp \nu \\
+\nu \amp \nu \amp (1-\nu) 
+\end{array}\right]
+\left[\begin{array}{c}\varepsilon_{11} \\ \varepsilon_{22} \\ \varepsilon_{33}\end{array}\right]\,.\tag{3.3.12}
+\end{equation}
+</div>
+<p data-braille="continuation">Result that allows to identify the non-zero constitutive coefficients relative to the normal components of the stress tensor, that is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{gather}
+\mathbb{C}_{1111} = \mathbb{C}_{2222} = \mathbb{C}_{3333} = \frac{E(1-\nu)}{(1+\nu)(1-2\nu)}\,,\tag{3.3.13}\\
+\mathbb{C}_{1122} = \mathbb{C}_{1133} = \mathbb{C}_{2233} = \frac{E\,\nu}{(1+\nu)(1-2\nu)}\,,\tag{3.3.14}\\
+\mathbb{C}_{2211} = \mathbb{C}_{1122}\,,\tag{3.3.15}\\
+\mathbb{C}_{3311} = \mathbb{C}_{1133}\,,\tag{3.3.16}\\
+\mathbb{C}_{3322} = \mathbb{C}_{2233}\,.\tag{3.3.17}
+\end{gather}
+</div>
+<span class="incontext"><a href="multiaxial_sec_elasticity_chap_en.html#p-275">in-context</a></span>
+</body>
+</html>

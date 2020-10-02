@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-10-02T11:40:22+02:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Solid Mechanics - multi-axial states</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+\newcommand{\tens}[1]{\boldsymbol{#1}}
+\newcommand{\mat}[1]{\left[\boldsymbol{#1}\right]}
+\newcommand{\matWp}[2]{\left[\boldsymbol{#1}_{#2}\right]}
+\newcommand{\tensQ}[1]{\pmb{\mathbb{#1}}}
+\newcommand{\tensQc}[1]{\mathbb{#1}}
+
+\newcommand{\transp}[1]{{#1}^{\textrm{T}}}
+\newcommand{\veczero}{\vec{0}}
+\newcommand{\body}{\Omega}
+\newcommand{\calvec}[1]{\boldsymbol{\mathcal{#1}}}
+\newcommand{\commadiff}[2]{{#1,}_{#2}}
+\newcommand{\regulardiff}[2]{ \frac{\partial#1}{\partial#2} }
+\newcommand{\func}[2]{#1\left(#2\right)}
+\newcommand{\transp}[1]{{#1}^{\text{T}}}
+\newcommand{\transpm}[1]{{#1}^{-\text{T}}}
+\newcommand{\trace}[1]{\text{tr}#1}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="./images/sm_logo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="solid_mechanics_book_en.html"><span class="title">A first course on solid mechanics</span></a></h1>
+<p class="byline">Antonio Bilotta</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="uniaxial_sec_elasticity_chap_en.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="elasticity_chap_en.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="problem_sec_elasticity_chap_en.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="uniaxial_sec_elasticity_chap_en.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="elasticity_chap_en.html" title="Up">Up</a><a class="next-button button toolbar-item" href="problem_sec_elasticity_chap_en.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="front_matter_en.html" data-scroll="front_matter_en"><span class="title">Front Matter</span></a><ul>
+<li><a href="front_colophon_en.html" data-scroll="front_colophon_en">Colophon</a></li>
+<li><a href="author_bio_en.html" data-scroll="author_bio_en">Author Biography</a></li>
+<li><a href="dedication_en.html" data-scroll="dedication_en">Dedication</a></li>
+<li><a href="acknowledgement_en.html" data-scroll="acknowledgement_en">Acknowledgements</a></li>
+<li><a href="preface_en.html" data-scroll="preface_en">Preface</a></li>
+<li><a href="references_frontmatter_en.html" data-scroll="references_frontmatter_en">using MATLAB®</a></li>
+</ul>
+</li>
+<li class="link part"><a href="continuum_mechanics_en.html" data-scroll="continuum_mechanics_en"><span class="codenumber">I</span> <span class="title">continuum mechanics</span></a></li>
+<li class="link">
+<a href="strain_chap_en.html" data-scroll="strain_chap_en"><span class="codenumber">1</span> <span class="title">bodies' kinematics</span></a><ul>
+<li><a href="configurations_sec_strain_chap_en.html" data-scroll="configurations_sec_strain_chap_en">configurations</a></li>
+<li><a href="transformations_sec_strain_chap_en.html" data-scroll="transformations_sec_strain_chap_en">transformations</a></li>
+<li><a href="gradient_sec_strain_chap_en.html" data-scroll="gradient_sec_strain_chap_en">deformation gradient</a></li>
+<li><a href="displacement_sec_strain_chap_en.html" data-scroll="displacement_sec_strain_chap_en">displacement field</a></li>
+<li><a href="determinant_sec_strain_chap_en.html" data-scroll="determinant_sec_strain_chap_en">determinant of the deformation gradient</a></li>
+<li><a href="polar_sec_strain_chap_en.html" data-scroll="polar_sec_strain_chap_en">polar decomposition</a></li>
+<li><a href="principal_directions_sec_strain_chap_en.html" data-scroll="principal_directions_sec_strain_chap_en">stretch tensor \(\tens{U}\) and principal directions (transformation of line elements)</a></li>
+<li><a href="measures_sec_strain_chap_en.html" data-scroll="measures_sec_strain_chap_en">strain measures</a></li>
+<li><a href="infinitesimal_sec_strain_chap_en.html" data-scroll="infinitesimal_sec_strain_chap_en">the infinitesimal strain tensor</a></li>
+<li><a href="exercises_sec_strain_chap_en.html" data-scroll="exercises_sec_strain_chap_en">exercises</a></li>
+<li><a href="answers_sec_strain_chap_en.html" data-scroll="answers_sec_strain_chap_en">answers to selected exercises</a></li>
+<li><a href="refs_strain_chap_en.html" data-scroll="refs_strain_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="stress_chap_en.html" data-scroll="stress_chap_en"><span class="codenumber">2</span> <span class="title">forces, equilibrium and stress</span></a><ul>
+<li><a href="basics_sec_stress_chap_en.html" data-scroll="basics_sec_stress_chap_en">the continuity hypothesis</a></li>
+<li><a href="equilibrium_sec_stress_chap_en.html" data-scroll="equilibrium_sec_stress_chap_en">equilibrium equations</a></li>
+<li><a href="stress_sec_stress_chap_en.html" data-scroll="stress_sec_stress_chap_en">Cauchy stress tensor tensor</a></li>
+<li><a href="stress_analysis_sec_stress_chap_en.html" data-scroll="stress_analysis_sec_stress_chap_en">analisys of states of stress</a></li>
+<li><a href="plv_sec_stress_chap_en.html" data-scroll="plv_sec_stress_chap_en">principle of virtual work</a></li>
+<li><a href="exercises_sec_stress_chap_en.html" data-scroll="exercises_sec_stress_chap_en">exercises</a></li>
+<li><a href="answers_sec_stress_chap_en.html" data-scroll="answers_sec_stress_chap_en">answers to some of the proposed exercises</a></li>
+<li><a href="refs_stress_chap_en.html" data-scroll="refs_stress_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="elasticity_chap_en.html" data-scroll="elasticity_chap_en"><span class="codenumber">3</span> <span class="title">elasticity</span></a><ul>
+<li><a href="motivations_sec_elasticity_chap_en.html" data-scroll="motivations_sec_elasticity_chap_en">motivation</a></li>
+<li><a href="uniaxial_sec_elasticity_chap_en.html" data-scroll="uniaxial_sec_elasticity_chap_en">uniaxial states</a></li>
+<li><a href="multiaxial_sec_elasticity_chap_en.html" data-scroll="multiaxial_sec_elasticity_chap_en" class="active">multi-axial states</a></li>
+<li><a href="problem_sec_elasticity_chap_en.html" data-scroll="problem_sec_elasticity_chap_en">the elastic problem</a></li>
+<li><a href="stretched_beam_sec_elasticity_chap_en.html" data-scroll="stretched_beam_sec_elasticity_chap_en">one-dimensional models: stretched beam</a></li>
+<li><a href="bent_beam_sec_elasticity_chap_en.html" data-scroll="bent_beam_sec_elasticity_chap_en">one-dimensional models: bent beam</a></li>
+<li><a href="stretched_beam_applications_sec_elasticity_chap_en.html" data-scroll="stretched_beam_applications_sec_elasticity_chap_en">applications of the stretched beam model</a></li>
+<li><a href="bent_beam_applications_sec_elasticity_chap_en.html" data-scroll="bent_beam_applications_sec_elasticity_chap_en">applications of the bent beam model</a></li>
+<li><a href="exercises_sec_elasticity_chap_en.html" data-scroll="exercises_sec_elasticity_chap_en">exercises</a></li>
+<li><a href="answers_sec_elasticity_chap_en.html" data-scroll="answers_sec_elasticity_chap_en">answers to selected exercises</a></li>
+<li><a href="refs_elasticity_chap_en.html" data-scroll="refs_elasticity_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link part"><a href="beams_systems_en.html" data-scroll="beams_systems_en"><span class="codenumber">II</span> <span class="title">rigid systems</span></a></li>
+<li class="link">
+<a href="rigid_body_kinematics_chap_en.html" data-scroll="rigid_body_kinematics_chap_en"><span class="codenumber">4</span> <span class="title">kinematics</span></a><ul>
+<li><a href="description_sec_rigid_body_kinematics_chap_en.html" data-scroll="description_sec_rigid_body_kinematics_chap_en">basic kinematic description</a></li>
+<li><a href="constraints_sec_rigid_body_kinematics_chap_en.html" data-scroll="constraints_sec_rigid_body_kinematics_chap_en">constraints</a></li>
+<li><a href="analysis_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_sec_rigid_body_kinematics_chap_en">kinematic analysis</a></li>
+<li><a href="analysis_examples_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_examples_sec_rigid_body_kinematics_chap_en">kinematic analysis of simple rigid body systems</a></li>
+<li><a href="refs_rigid_body_kinematics_chap_en.html" data-scroll="refs_rigid_body_kinematics_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="rigid_body_statics_chap_en.html" data-scroll="rigid_body_statics_chap_en"><span class="codenumber">5</span> <span class="title">statics</span></a><ul>
+<li><a href="equilibrium_sec_rigid_body_statics_chap_en.html" data-scroll="equilibrium_sec_rigid_body_statics_chap_en">equilibrium equations</a></li>
+<li><a href="planecase_sec_rigid_body_statics_chap_en.html" data-scroll="planecase_sec_rigid_body_statics_chap_en">2D case</a></li>
+<li><a href="constraints_sec_rigid_body_statics_chap_en.html" data-scroll="constraints_sec_rigid_body_statics_chap_en">constraints</a></li>
+<li><a href="free_body_sec_rigid_body_statics_chap_en.html" data-scroll="free_body_sec_rigid_body_statics_chap_en">free body diagrams</a></li>
+<li><a href="analysis_sec_rigid_body_statics_chap_en.html" data-scroll="analysis_sec_rigid_body_statics_chap_en">static analysis</a></li>
+<li><a href="analysis_examples_sec_rigid_body_statics_chap_en.html" data-scroll="analysis_examples_sec_rigid_body_statics_chap_en">application of static analysis to systems of bodies</a></li>
+<li><a href="sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces</a></li>
+<li><a href="indefinte_sec_rigid_body_statics_chap_en.html" data-scroll="indefinte_sec_rigid_body_statics_chap_en">2D beam equilibrium differential equations</a></li>
+<li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces calculation and diagrams</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="multiaxial_sec_elasticity_chap_en"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.3</span> <span class="title">multi-axial states</span>
+</h2>
+<section class="subsection" id="subsection-51"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.3.1</span> <span class="title">the model as a generalization of Hooke's law</span>
+</h3>
+<p id="p-267">The uniaxial states of traction/compression and shear highlighted two different experimental parameters, the Young \(E \) modulus and the shear modulus \(G \text{,}\) usable as proportionality coefficients in the definition of the elastic relationship existing between the stress component and its strain component. In order to extend this approach to multi-axial states, the definition of elastic relationships has to be capable to describe more complex situations in which the stress components, in general, do not depend only on the corresponding strain components. Therefore the following proportionality coefficients are introduced <figure class="figure figure-like" id="figure-27"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/C_ijhk_en.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.3.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure> between the generic stress component \(\sigma_{ij} \) and the generic strain component \(\varepsilon_ {hk} \text{.}\) So for each of the 9 stress components (\(i, \, j = 1 \dots 3 \)) it will be necessary to define as many coefficients of proportionality as the strain components, which are also 9 (\(h, \, k = 1 \dots 3 \)). Each contribution given by the generic strain component can be added together by providing</p>
+<div class="displaymath">
+\begin{align*}
+\sigma_{ij} \amp = \mathbb{C}_{ij11}\,\varepsilon_{11} + \mathbb{C}_{ij12}\,\varepsilon_{12} + \mathbb{C}_{ij13}\,\varepsilon_{13} \,+ \\
+\amp + \mathbb{C}_{ij21}\,\varepsilon_{21} + \mathbb{C}_{ij22}\,\varepsilon_{22} + \mathbb{C}_{ij23}\,\varepsilon_{23} \,+ \\
+\amp + \mathbb{C}_{ij31}\,\varepsilon_{31} + \mathbb{C}_{ij32}\,\varepsilon_{32} + \mathbb{C}_{ij33}\,\varepsilon_{33}\,. 
+\end{align*}
+</div>
+<p data-braille="continuation">There are therefore 9 proportionality coefficients for each of the 9 stress components for a total of 81 coefficients. This relationship can be expressed in compact form as like</p>
+<div class="displaymath">
+\begin{equation}
+\sigma_{ij} = \sum_{h,k=1 \dots 3}\mathbb{C}_{ijhk}\varepsilon_{hk} \label{components_costitutivo_continuo_eq}\tag{3.3.1}
+\end{equation}
+</div>
+<p data-braille="continuation">or, in tensorial form, by writing</p>
+<div class="displaymath">
+\begin{equation}
+\tens{\sigma} = \tensQ{C}:\tens{\varepsilon} \label{costitutivo_continuo_eq}\tag{3.3.2}
+\end{equation}
+</div>
+<p data-braille="continuation">relationship that highlights a new type of linear transformation that associates the generic strain tensor with the corresponding stress tensor. In this case, the linear operator involved is given by the 4th order tensor \(\tensQ{C} \text{,}\) the tensor which internally contains the above 81 coefficients.</p>
+<p id="p-268">It is also assumed the possibility of defining elastic energy for multi-axial states as follows</p>
+<div class="displaymath">
+\begin{equation}
+\Phi = \frac{1}{2} \tens{\sigma}:\tens{\varepsilon}\,,\tag{3.3.3}
+\end{equation}
+</div>
+<p data-braille="continuation">quantity which, as for the uniaxial case, represents half of the internal work, that is the work carried out by the stress on the strain. Elastic energy, on the basis of the constitutive relationship <a class="xref" data-knowl="./knowl/costitutivo_continuo_eq.html" title="Equation 3.3.2">(3.3.2)</a>, can be rewritten as follows</p>
+<div class="displaymath">
+\begin{equation}
+\Phi = \frac{1}{2} \left( \tensQ{C}:\tens{\varepsilon} \right):\tens{\varepsilon}\,.\label{energia_continuo_eq}\tag{3.3.4}
+\end{equation}
+</div>
+<section class="subsubsection" id="subsubsection-12"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">3.3.1.1</span> <span class="title">properties of the constitutive tensor</span>
+</h4>
+<ul class="disc">
+<li id="li-96">The definition of energy, Eq. <a class="xref" data-knowl="./knowl/energia_continuo_eq.html" title="Equation 3.3.4">(3.3.4)</a>, and the condition of non-negativity of internal work imply that the constitutive tensor must necessarily be <em class="alert">defined positive</em>, that is<div class="displaymath">
+\begin{equation*}
+\left(\tensQ{C}:\tens{\varepsilon}\right):\tens{\varepsilon} \geq 0
+\end{equation*}
+</div>and the only case which is null occurs when \(\tens{\varepsilon} = \tens{0} \text{.}\)</li>
+<li id="li-97">By definition of elastic potential, the relationship between generic stress component \(\sigma_{ij} \) and elastic energy can be written as<div class="displaymath">
+\begin{equation}
+\sigma_{ij} = \frac{\partial \Phi}{\partial \varepsilon_{ij}}\,.\tag{3.3.5}
+\end{equation}
+</div>Further deriving this relationship and using relationship <a class="xref" data-knowl="./knowl/components_costitutivo_continuo_eq.html" title="Equation 3.3.1">(3.3.1)</a> we obtain<div class="displaymath">
+\begin{equation*}
+\frac{\partial}{\partial \varepsilon_{hk}} \left(\frac{\partial \Phi}{\partial \varepsilon_{ij}}\right) =
+\frac{\partial}{\partial \varepsilon_{hk}} \left(\sigma_{ij}\right) =
+\frac{\partial}{\partial \varepsilon_{hk}} \left(\sum_{h,k=1 \dots 3}\mathbb{C}_{ijhk}\varepsilon_{hk} \right) =
+\mathbb{C}_{ijhk} 
+\,.
+\end{equation*}
+</div>Therefore the generic coefficient of the constitutive tensor is related to the elastic energy through relationship<div class="displaymath">
+\begin{equation}
+\mathbb{C}_{ijhk} = \frac{\partial}{\partial \varepsilon_{hk}} \left(\frac{\partial \Phi}{\partial \varepsilon_{ij}}\right)\,.\tag{3.3.6}
+\end{equation}
+</div>Observing that by swapping the derivation order the result does not change<div class="displaymath">
+\begin{equation*}
+\mathbb{C}_{ijhk}
+= \frac{\partial}{\partial \varepsilon_{hk}} \left(\frac{\partial \Phi}{\partial \varepsilon_{ij}}\right)
+= \frac{\partial}{\partial \varepsilon_{ij}} \left(\frac{\partial \Phi}{\partial \varepsilon_{hk}}\right)
+= \frac{\partial}{\partial \varepsilon_{ij}} \left(\sigma_{hk} \right)
+= \mathbb{C}_{hkij}\,,
+\end{equation*}
+</div>followin condition is fulfilled<div class="displaymath">
+\begin{equation}
+\mathbb{C}_{ijhk} = \mathbb{C}_{hkij}\tag{3.3.7}
+\end{equation}
+</div>known as <em class="alert">major symmetry</em> of the constitutive tensor \(\tensQ{C} \text{.}\)</li>
+<li id="li-98">The symmetry of the stress components allows to write<div class="displaymath">
+\begin{equation}
+\mathbb{C}_{ijhk} = \mathbb{C}_{jihk}\,,\tag{3.3.8}
+\end{equation}
+</div>while the symmetry condition of the strain components provides<div class="displaymath">
+\begin{equation}
+\mathbb{C}_{ijhk} = \mathbb{C}_{ijkh}\,.\tag{3.3.9}
+\end{equation}
+</div>These conditions are called <em class="alert">minor symmetries</em> of the tensor \(\tensQ{C} \text{.}\)</li>
+<li id="li-99">The symmetry conditions described above reduce the number of effectively independent coefficients necessary to define a generic elastic tensor from 81 to 21.</li>
+</ul></section></section><section class="subsection" id="subsection-52"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.3.2</span> <span class="title">experimental observation</span>
+</h3>
+<p id="p-269">The main phenomenon highlighted by the experimental observation of multiaxial stress / strain states is that the application of a load in an assigned direction determines not only a deformation along that direction but also along the directions transverse to it. This phenomenon, as shown also in the following animation, is observed in particular for the states of traction or compression and is called <em class="alert">Poisson effect</em>.</p>
+<p id="p-270"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-13" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/guKqTXOLUyc?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p>
+<p id="p-271">For simpler materials Poisson effect is modeled through the introduction of a single characteristic parameter of the material, known as the <em class="emphasis">Poisson coefficient</em>, which links the generic transverse strain to the strain relative to the direction of the applied load. For example, if a stress \(\sigma_{11} \) is applied, the strain along the direction of the load will take on a generic value</p>
+<div class="displaymath">
+\begin{equation*}
+\varepsilon_{11}\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">while the strains in the transverse directions will be</p>
+<div class="displaymath">
+\begin{equation*}
+\varepsilon_{22} = -\nu\,\varepsilon_{11}\,,\qquad
+\varepsilon_{33} = -\nu\,\varepsilon_{11}\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">where \(\nu\) is precisely the Poisson coefficient.</p></section><section class="subsection" id="subsection-53"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.3.3</span> <span class="title">the isotropic case</span>
+</h3>
+<p id="p-272">The experimental parameters encountered so far are Young's modulus, \(E \text{,}\) the shear modulus, \(G \) and the Poisson's ratio, \(\ nu \) . It has also been said, see previous section, that the number of coefficients strictly necessary to define the constitutive tensor is equal to 21. It therefore seems that the experimental results discussed so far are very insufficient to reach a complete definition of the elastic relationship. Fortunately, most of the materials used in the usual engineering applications are <em class="emphasis">isotropic</em>. That is, they have the property that, given a block of material and any direction is chosen to <em class="emphasis">cross it</em> by means of experimental tests, the same mechanical response is always detected. For this class of materials, applicable to metals, glass, polymers, soils and, in some ways, even cement or bituminous conglomerates, the constitutive characterization can be carried out by <em class="alert">only 2 experimental parameters</em>.</p>
+<p id="p-273">A couple of experimental parameters, although not the only pair, is given by the pair formed by Young's modulus parameters, \(E \) and Poisson's ratio, \(\nu \text{.}\) The shear modulus \(G \) depends in fact on \(E \) and \(\nu \) according to the following formula</p>
+<div class="displaymath">
+\begin{equation}
+G = \frac{E}{2\left(1+\nu\right)}\,.\tag{3.3.10}
+\end{equation}
+</div>
+<p data-braille="continuation">Given this, it is convenient to discuss the elastic and isotropic material behavior by keeping the strain/stress components of the normal type and the tangential type components separate since, for isotropic materials, there is no coupling and therefore the coefficients of the type</p>
+<div class="displaymath">
+\begin{equation*}
+\mathbb{C}_{iihk}\;\text{con}\; h \neq k
+\end{equation*}
+</div>
+<p data-braille="continuation">are however null.</p>
+<section class="subsubsection" id="subsubsection-13"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">3.3.3.1</span> <span class="title">normal components</span>
+</h4>
+<p id="p-274"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-14" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/u9K_lV-aW2Y?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p>
+<p id="p-275">The elastic relationship for normal components can be formulated as follows</p>
+<div class="displaymath">
+\begin{equation}
+\begin{array}{rcrcrcr}
+\varepsilon_{11} = \amp + \amp \frac{\displaystyle\sigma_{11}}{\displaystyle E} \amp-\amp \nu\,\frac{\displaystyle\sigma_{22}}{\displaystyle E} \amp-\amp \nu\,\frac{\displaystyle \sigma_{33}}{\displaystyle E}\,,\\
+\varepsilon_{22} = \amp - \amp \nu\,\frac{\displaystyle \sigma_{11}}{\displaystyle E} \amp+\amp \frac{\displaystyle \sigma_{22}}{\displaystyle E} \amp-\amp \nu\,\frac{\displaystyle \sigma_{33}}{\displaystyle E}\,,\\
+\varepsilon_{33} = \amp - \amp \nu\,\frac{\displaystyle \sigma_{11}}{\displaystyle E} \amp-\amp \nu\,\frac{\displaystyle \sigma_{22}}{\displaystyle E} \amp+\amp \frac{\displaystyle \sigma_{33}}{\displaystyle E}\,.
+\end{array}\label{isotropic_normal_eq}\tag{3.3.11}
+\end{equation}
+</div>
+<p data-braille="continuation">It is observed that this result constitutes the inverse form of the elastic relationship for the part relating to the normal components. To obtain the elastic coefficients that proportionally correlate the stress components to the strain components, it is better to visualize the relationship in the following matrix form</p>
+<div class="displaymath">
+\begin{equation*}
+\left[\begin{array}{c}\varepsilon_{11} \\ \varepsilon_{22} \\ \varepsilon_{33}\end{array}\right] =
+\left[\begin{array}{ccc}
+\frac{\displaystyle 1}{\displaystyle E} \amp -\frac{\displaystyle \nu}{\displaystyle E} \amp -\frac{\displaystyle \nu}{\displaystyle E} \\
+-\frac{\displaystyle \nu}{\displaystyle E} \amp \frac{\displaystyle 1}{\displaystyle E} \amp -\frac{\displaystyle \nu}{\displaystyle E} \\
+-\frac{\displaystyle \nu}{\displaystyle E} \amp -\frac{\displaystyle \nu}{\displaystyle E} \amp \frac{\displaystyle 1}{\displaystyle E}  \\
+\end{array}\right]
+\left[\begin{array}{c}\sigma_{11} \\ \sigma_{22} \\ \sigma_{33}\end{array}\right]
+\end{equation*}
+</div>
+<p data-braille="continuation">and use the following MATLAB® instructions to invert the highlighted matrix. <figure class="listing figure-like" id="listing-30"><pre class="console"><b>syms E ni;
+M = [1/E -ni/E -ni/E; -ni/E 1/E  -ni/E; -ni/E -ni/E 1/E]
+inv(M)
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.3.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure> So we get</p>
+<div class="displaymath">
+\begin{equation}
+\left[\begin{array}{c}\sigma_{11} \\ \sigma_{22} \\ \sigma_{33}\end{array}\right] =
+\frac{E}{(1+\nu)(1-2\nu)}
+\left[\begin{array}{ccc}
+(1-\nu) \amp \nu \amp \nu \\
+\nu \amp (1-\nu) \amp \nu \\
+\nu \amp \nu \amp (1-\nu) 
+\end{array}\right]
+\left[\begin{array}{c}\varepsilon_{11} \\ \varepsilon_{22} \\ \varepsilon_{33}\end{array}\right]\,.\tag{3.3.12}
+\end{equation}
+</div>
+<p data-braille="continuation">Result that allows to identify the non-zero constitutive coefficients relative to the normal components of the stress tensor, that is</p>
+<div class="displaymath">
+\begin{gather}
+\mathbb{C}_{1111} = \mathbb{C}_{2222} = \mathbb{C}_{3333} = \frac{E(1-\nu)}{(1+\nu)(1-2\nu)}\,,\tag{3.3.13}\\
+\mathbb{C}_{1122} = \mathbb{C}_{1133} = \mathbb{C}_{2233} = \frac{E\,\nu}{(1+\nu)(1-2\nu)}\,,\tag{3.3.14}\\
+\mathbb{C}_{2211} = \mathbb{C}_{1122}\,,\tag{3.3.15}\\
+\mathbb{C}_{3311} = \mathbb{C}_{1133}\,,\tag{3.3.16}\\
+\mathbb{C}_{3322} = \mathbb{C}_{2233}\,.\tag{3.3.17}
+\end{gather}
+</div></section><section class="subsubsection" id="subsubsection-14"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">3.3.3.2</span> <span class="title">tangential type components</span>
+</h4>
+<p id="p-276">For tangential components, in addition to the absence of coupling with normal components, it is not necessary to model any reciprocal coupling, therefore for all tangential components the uniaxial law already seen in <a href="uniaxial_sec_elasticity_chap_en.html#shear_subsecuniaxial_sec_elasticity_chap_en" class="internal" title="Subsection 3.2.2: uniaxial shear test">Subsection 3.2.2</a> can be assumed</p>
+<div class="displaymath">
+\begin{equation}
+\begin{array}{rr}
+\gamma_{23} = 2\,\varepsilon_{23} = \amp \frac{\displaystyle \sigma_{23}}{\displaystyle G}\,,\\ 
+\gamma_{31} = 2\,\varepsilon_{31} = \amp \frac{\displaystyle \sigma_{31}}{\displaystyle G}\,,\\ 
+\gamma_{12} = 2\,\varepsilon_{12} = \amp \frac{\displaystyle \sigma_{12}}{\displaystyle G}\,.
+\end{array}\tag{3.3.18}
+\end{equation}
+</div> From which the following relationship is obtained between the tangential components of the stress and strain tensors<div class="displaymath">
+\begin{equation}
+\sigma_{23} = 2\,G\,\varepsilon_{23}\,,\quad
+\sigma_{31} = 2\,G\,\varepsilon_{31}\,,\quad
+\sigma_{12} = 2\,G\,\varepsilon_{12}\,,\tag{3.3.19}
+\end{equation}
+</div>and therefore the following non-zero constitutive coefficients<div class="displaymath">
+\begin{equation}
+\mathbb{C}_{2323} = \mathbb{C}_{3131} = \mathbb{C}_{1212} = 2\,G\,.\tag{3.3.20}
+\end{equation}
+</div></section><section class="subsubsection" id="subsubsection-15"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">3.3.3.3</span> <span class="title">summary and Voigt notation</span>
+</h4>
+<p id="p-277">In the previous discussion, the elastic law was presented keeping the description of the part concerning the normal components separate from that relating to the tangential components. This certainly to better highlight the lack of certain couplings between stress components and strain components, but also for the impossibility of representing in a compact way the components of a 4th tensor such as the constitutive tensor. In fact, while for the tensors of the 2nd order the representation of all the components is realized through the associated matrix, for a 4th tensor there is no similar representation.</p>
+<p id="p-278">A summary of what described above can be obtained using the <em class="emphasis">Voigt notation</em> which uses 6-component vectors to represent 2nd order symmetric tensors, while for the corresponding 4th order tensors<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-5" id="fn-5"><sup> 1 </sup></a> 6\(\times\)6 matrices. Therefore the constitutive elastic law can be written as follows</p>
+<div class="displaymath">
+\begin{equation}
+\left[\begin{array}{c}\sigma_{11} \\ \sigma_{22} \\ \sigma_{33} \\ \sigma_{23} \\ \sigma_{31} \\ \sigma_{12}\end{array}\right] =
+\frac{E}{(1+\nu)(1-2\nu)}
+\left[\begin{array}{cccccc}
+(1-\nu) \amp \nu \amp \nu \amp 0 \amp 0 \amp 0\\
+\nu \amp (1-\nu) \amp \nu \amp 0 \amp 0 \amp 0\\
+\nu \amp \nu \amp (1-\nu) \amp 0 \amp 0 \amp 0\\
+0 \amp 0 \amp 0 \amp (1-2\nu)/2 \amp 0 \amp 0 \\
+0 \amp 0 \amp 0 \amp 0 \amp (1-2\nu)/2 \amp 0 \\
+0 \amp 0 \amp 0 \amp 0 \amp 0 \amp (1-2\nu)/2
+\end{array}\right]
+\left[\begin{array}{c}\varepsilon_{11} \\ \varepsilon_{22} \\ \varepsilon_{33} \\  2\,\varepsilon_{23} \\  2\,\varepsilon_{31} \\  2\,\varepsilon_{12}\end{array}\right]\,.\tag{3.3.21}
+\end{equation}
+</div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-5"><div class="fn">Corresponding in the sense of 4th order tensors which map 2nd symmetric tensors into 2nd order symmetric tensors.</div></div>
+<p id="p-279">For completeness, a summary of the elastic and isotropic law is also provided using the tensor format.</p>
+<div class="displaymath">
+\begin{equation}
+\tens{\sigma} = \tensQ{C}:\tens{\varepsilon} \tag{3.3.22}
+\end{equation}
+</div>
+<p data-braille="continuation">where the non-zero components of tensor \(\tensQ{C}\) are</p>
+<div class="displaymath">
+\begin{align}
+\amp\mathbb{C}_{1111} = \mathbb{C}_{2222} = \mathbb{C}_{3333} = \frac{E(1-\nu)}{(1+\nu)(1-2\nu)}\,,\tag{3.3.23}\\
+\amp\mathbb{C}_{1122} = \mathbb{C}_{1133} = \mathbb{C}_{2233} =\tag{3.3.24}\\
+\amp\mathbb{C}_{2211} = \mathbb{C}_{3311} = \mathbb{C}_{3322} = \frac{E\,\nu}{(1+\nu)(1-2\nu)}\,,\tag{3.3.25}\\
+\amp\mathbb{C}_{2323} = \mathbb{C}_{3131} = \mathbb{C}_{1212} = 2\,G\,.\tag{3.3.26}
+\end{align}
+</div></section></section></section></div></main>
+</div>
+</body>
+</html>

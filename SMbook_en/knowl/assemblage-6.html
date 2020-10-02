@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-10-02T11:40:24+02:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="assemblage assemblage-like"><h6 class="heading"><span class="title">evaluation of the deformation gradient (nonlinear transformations).</span></h6>
+<p>In the case of nonlinear transformations it is not possible to identify a matrix associated with the transformation but, locally, the gradient of the transformation behaves like a linear transformation. Consider thus, for example, the transformation defined as</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+x_1 \amp = \func{\chi_1}{X_1, X_2} = X_1^3\,,\\
+x_2 \amp = \func{\chi_2}{X_1, X_2} = X_2^3\,.
+\end{align*}
+</div>
+<p>The calculation of the partial derivatives gives</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\regulardiff{\chi_1}{X_1} = 3\,X_1^2\,,\amp\regulardiff{\chi_1}{X_2} = 0\,,\\
+\regulardiff{\chi_2}{X_1} = 0\,,\amp\regulardiff{\chi_2}{X_2} = 3\,X_2^2
+\end{align*}
+</div>
+<p data-braille="continuation">allowing the evaluation of the deformation gradient</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\func{\mat{F}}{\vec{X}} =
+\left[\begin{array}{cc} \regulardiff{\chi_1}{X_1} \amp \regulardiff{\chi_1}{X_2} \\ \regulardiff{\chi_2}{X_1}  \amp \regulardiff{\chi_2}{X_2}  \end{array}\right] =
+\left[\begin{array}{cc}  3\,X_1^2 \amp 0 \\ 0  \amp  3\,X_2^2  \end{array}\right]
+\end{equation*}
+</div>
+<p xmlns:svg="http://www.w3.org/2000/svg">In order to visualize how the assigned transformation works let us consider, in the plane \((X_1, X_2)\text{,}\) three circumferences of radius \(0. \text{,}\) \(1.0\) and \(1.5\) and their configuratons obtained through the assigned nonlinear transformation. The MATLAB® instructions for the calculation and plotting of the circumferences in the reference configuration and in the current one are as reported below. <figure class="listing figure-like"><pre class="console"><b>N=60;
+angle=linspace(0,2*pi,N);
+
+radius=1.0;
+c1X=radius*cos(angle);
+c1Y=radius*sin(angle);
+c1x=c1X.^3;
+c1y=c1Y.^3;
+
+radius=0.5;
+c2X=radius*cos(angle);
+c2Y=radius*sin(angle);
+c2x=c2X.^3;
+c2y=c2Y.^3;
+
+radius=1.5;
+c3X=radius*cos(angle);
+c3Y=radius*sin(angle);
+c3x=c3X.^3;
+c3y=c3Y.^3;
+
+hold on
+% circumference (r=1), reference and deformed configurations
+plot(c1X,c1Y,'b-')
+plot(c1x,c1y,'b-')
+
+% circumference (r=0.5), reference and deformed configurations
+plot(c2X,c2Y,'r-')
+plot(c2x,c2y,'r-')
+
+% circumference (r=1.5), reference and deformed configurations
+plot(c3X,c3Y,'m-')
+plot(c3x,c3y,'m-')
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.3.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure> The previous instructions allow to obtain the following figure where the three circumferences, in the reference and current configurations, are represented with the colors red for the radius \(0.5\text{,}\) blue for the radius \(1.0\) and magenta for the radius \(1.5 \text{.}\) <figure class="figure figure-like"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="images/nolin_grad1.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.3.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p xmlns:svg="http://www.w3.org/2000/svg">For exercise and to compare the nonlinear transformation examined with simpler linear transformations, it is suggested to perform the same calculations for the Transformations 2, 3 and 4 discussed in the previous sections.</p></article><span class="incontext"><a href="gradient_sec_strain_chap_en.html#assemblage-6">in-context</a></span>
+</body>
+</html>

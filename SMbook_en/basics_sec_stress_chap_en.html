@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-10-02T11:40:21+02:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Solid Mechanics - the continuity hypothesis</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+\newcommand{\tens}[1]{\boldsymbol{#1}}
+\newcommand{\mat}[1]{\left[\boldsymbol{#1}\right]}
+\newcommand{\matWp}[2]{\left[\boldsymbol{#1}_{#2}\right]}
+\newcommand{\tensQ}[1]{\pmb{\mathbb{#1}}}
+\newcommand{\tensQc}[1]{\mathbb{#1}}
+
+\newcommand{\transp}[1]{{#1}^{\textrm{T}}}
+\newcommand{\veczero}{\vec{0}}
+\newcommand{\body}{\Omega}
+\newcommand{\calvec}[1]{\boldsymbol{\mathcal{#1}}}
+\newcommand{\commadiff}[2]{{#1,}_{#2}}
+\newcommand{\regulardiff}[2]{ \frac{\partial#1}{\partial#2} }
+\newcommand{\func}[2]{#1\left(#2\right)}
+\newcommand{\transp}[1]{{#1}^{\text{T}}}
+\newcommand{\transpm}[1]{{#1}^{-\text{T}}}
+\newcommand{\trace}[1]{\text{tr}#1}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="./images/sm_logo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="solid_mechanics_book_en.html"><span class="title">A first course on solid mechanics</span></a></h1>
+<p class="byline">Antonio Bilotta</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="stress_chap_en.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="stress_chap_en.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="equilibrium_sec_stress_chap_en.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="stress_chap_en.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="stress_chap_en.html" title="Up">Up</a><a class="next-button button toolbar-item" href="equilibrium_sec_stress_chap_en.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="front_matter_en.html" data-scroll="front_matter_en"><span class="title">Front Matter</span></a><ul>
+<li><a href="front_colophon_en.html" data-scroll="front_colophon_en">Colophon</a></li>
+<li><a href="author_bio_en.html" data-scroll="author_bio_en">Author Biography</a></li>
+<li><a href="dedication_en.html" data-scroll="dedication_en">Dedication</a></li>
+<li><a href="acknowledgement_en.html" data-scroll="acknowledgement_en">Acknowledgements</a></li>
+<li><a href="preface_en.html" data-scroll="preface_en">Preface</a></li>
+<li><a href="references_frontmatter_en.html" data-scroll="references_frontmatter_en">using MATLAB®</a></li>
+</ul>
+</li>
+<li class="link part"><a href="continuum_mechanics_en.html" data-scroll="continuum_mechanics_en"><span class="codenumber">I</span> <span class="title">continuum mechanics</span></a></li>
+<li class="link">
+<a href="strain_chap_en.html" data-scroll="strain_chap_en"><span class="codenumber">1</span> <span class="title">bodies' kinematics</span></a><ul>
+<li><a href="configurations_sec_strain_chap_en.html" data-scroll="configurations_sec_strain_chap_en">configurations</a></li>
+<li><a href="transformations_sec_strain_chap_en.html" data-scroll="transformations_sec_strain_chap_en">transformations</a></li>
+<li><a href="gradient_sec_strain_chap_en.html" data-scroll="gradient_sec_strain_chap_en">deformation gradient</a></li>
+<li><a href="displacement_sec_strain_chap_en.html" data-scroll="displacement_sec_strain_chap_en">displacement field</a></li>
+<li><a href="determinant_sec_strain_chap_en.html" data-scroll="determinant_sec_strain_chap_en">determinant of the deformation gradient</a></li>
+<li><a href="polar_sec_strain_chap_en.html" data-scroll="polar_sec_strain_chap_en">polar decomposition</a></li>
+<li><a href="principal_directions_sec_strain_chap_en.html" data-scroll="principal_directions_sec_strain_chap_en">stretch tensor \(\tens{U}\) and principal directions (transformation of line elements)</a></li>
+<li><a href="measures_sec_strain_chap_en.html" data-scroll="measures_sec_strain_chap_en">strain measures</a></li>
+<li><a href="infinitesimal_sec_strain_chap_en.html" data-scroll="infinitesimal_sec_strain_chap_en">the infinitesimal strain tensor</a></li>
+<li><a href="exercises_sec_strain_chap_en.html" data-scroll="exercises_sec_strain_chap_en">exercises</a></li>
+<li><a href="answers_sec_strain_chap_en.html" data-scroll="answers_sec_strain_chap_en">answers to selected exercises</a></li>
+<li><a href="refs_strain_chap_en.html" data-scroll="refs_strain_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="stress_chap_en.html" data-scroll="stress_chap_en"><span class="codenumber">2</span> <span class="title">forces, equilibrium and stress</span></a><ul>
+<li><a href="basics_sec_stress_chap_en.html" data-scroll="basics_sec_stress_chap_en" class="active">the continuity hypothesis</a></li>
+<li><a href="equilibrium_sec_stress_chap_en.html" data-scroll="equilibrium_sec_stress_chap_en">equilibrium equations</a></li>
+<li><a href="stress_sec_stress_chap_en.html" data-scroll="stress_sec_stress_chap_en">Cauchy stress tensor tensor</a></li>
+<li><a href="stress_analysis_sec_stress_chap_en.html" data-scroll="stress_analysis_sec_stress_chap_en">analisys of states of stress</a></li>
+<li><a href="plv_sec_stress_chap_en.html" data-scroll="plv_sec_stress_chap_en">principle of virtual work</a></li>
+<li><a href="exercises_sec_stress_chap_en.html" data-scroll="exercises_sec_stress_chap_en">exercises</a></li>
+<li><a href="answers_sec_stress_chap_en.html" data-scroll="answers_sec_stress_chap_en">answers to some of the proposed exercises</a></li>
+<li><a href="refs_stress_chap_en.html" data-scroll="refs_stress_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="elasticity_chap_en.html" data-scroll="elasticity_chap_en"><span class="codenumber">3</span> <span class="title">elasticity</span></a><ul>
+<li><a href="motivations_sec_elasticity_chap_en.html" data-scroll="motivations_sec_elasticity_chap_en">motivation</a></li>
+<li><a href="uniaxial_sec_elasticity_chap_en.html" data-scroll="uniaxial_sec_elasticity_chap_en">uniaxial states</a></li>
+<li><a href="multiaxial_sec_elasticity_chap_en.html" data-scroll="multiaxial_sec_elasticity_chap_en">multi-axial states</a></li>
+<li><a href="problem_sec_elasticity_chap_en.html" data-scroll="problem_sec_elasticity_chap_en">the elastic problem</a></li>
+<li><a href="stretched_beam_sec_elasticity_chap_en.html" data-scroll="stretched_beam_sec_elasticity_chap_en">one-dimensional models: stretched beam</a></li>
+<li><a href="bent_beam_sec_elasticity_chap_en.html" data-scroll="bent_beam_sec_elasticity_chap_en">one-dimensional models: bent beam</a></li>
+<li><a href="stretched_beam_applications_sec_elasticity_chap_en.html" data-scroll="stretched_beam_applications_sec_elasticity_chap_en">applications of the stretched beam model</a></li>
+<li><a href="bent_beam_applications_sec_elasticity_chap_en.html" data-scroll="bent_beam_applications_sec_elasticity_chap_en">applications of the bent beam model</a></li>
+<li><a href="exercises_sec_elasticity_chap_en.html" data-scroll="exercises_sec_elasticity_chap_en">exercises</a></li>
+<li><a href="answers_sec_elasticity_chap_en.html" data-scroll="answers_sec_elasticity_chap_en">answers to selected exercises</a></li>
+<li><a href="refs_elasticity_chap_en.html" data-scroll="refs_elasticity_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link part"><a href="beams_systems_en.html" data-scroll="beams_systems_en"><span class="codenumber">II</span> <span class="title">rigid systems</span></a></li>
+<li class="link">
+<a href="rigid_body_kinematics_chap_en.html" data-scroll="rigid_body_kinematics_chap_en"><span class="codenumber">4</span> <span class="title">kinematics</span></a><ul>
+<li><a href="description_sec_rigid_body_kinematics_chap_en.html" data-scroll="description_sec_rigid_body_kinematics_chap_en">basic kinematic description</a></li>
+<li><a href="constraints_sec_rigid_body_kinematics_chap_en.html" data-scroll="constraints_sec_rigid_body_kinematics_chap_en">constraints</a></li>
+<li><a href="analysis_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_sec_rigid_body_kinematics_chap_en">kinematic analysis</a></li>
+<li><a href="analysis_examples_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_examples_sec_rigid_body_kinematics_chap_en">kinematic analysis of simple rigid body systems</a></li>
+<li><a href="refs_rigid_body_kinematics_chap_en.html" data-scroll="refs_rigid_body_kinematics_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="rigid_body_statics_chap_en.html" data-scroll="rigid_body_statics_chap_en"><span class="codenumber">5</span> <span class="title">statics</span></a><ul>
+<li><a href="equilibrium_sec_rigid_body_statics_chap_en.html" data-scroll="equilibrium_sec_rigid_body_statics_chap_en">equilibrium equations</a></li>
+<li><a href="planecase_sec_rigid_body_statics_chap_en.html" data-scroll="planecase_sec_rigid_body_statics_chap_en">2D case</a></li>
+<li><a href="constraints_sec_rigid_body_statics_chap_en.html" data-scroll="constraints_sec_rigid_body_statics_chap_en">constraints</a></li>
+<li><a href="free_body_sec_rigid_body_statics_chap_en.html" data-scroll="free_body_sec_rigid_body_statics_chap_en">free body diagrams</a></li>
+<li><a href="analysis_sec_rigid_body_statics_chap_en.html" data-scroll="analysis_sec_rigid_body_statics_chap_en">static analysis</a></li>
+<li><a href="analysis_examples_sec_rigid_body_statics_chap_en.html" data-scroll="analysis_examples_sec_rigid_body_statics_chap_en">application of static analysis to systems of bodies</a></li>
+<li><a href="sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces</a></li>
+<li><a href="indefinte_sec_rigid_body_statics_chap_en.html" data-scroll="indefinte_sec_rigid_body_statics_chap_en">2D beam equilibrium differential equations</a></li>
+<li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces calculation and diagrams</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="basics_sec_stress_chap_en"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.1</span> <span class="title">the continuity hypothesis</span>
+</h2>
+<p id="p-174">At the basis of the <em class="emphasis">continuum mechanics</em> there is the idea of studying different physical phenomena without a precise knowledge of the internal micro-structure of the matter by adopting the so-called <em class="emphasis">macroscopic</em> point of view. In other words, all the used quantities represent an <em class="emphasis">average</em> of all the processes taking place at atomic or molecular scale.</p>
+<p id="p-175">The macroscopic systems thus defined can be effectively described using the continuous approach which assumes, for the body under examination, a continuous distribution of matter in space and time. The body is always seen as an assembly of single particles or <em class="emphasis">points</em> which have not to be confused with the point mass systems of Newtonian mechanics or the particle systems of atomic theory. Typically the point of a continuous body inside it hides an internal structure (an accumulation of molecules or atoms or an heterogeneous composition of various constituents) of sufficiently small dimensions if compared with the scale of the problem under consideration. The behavior of the point or particle is a consequence of the collective behavior of all that <em class="emphasis">inside</em> constitutes the point of the continuum.</p>
+<figure class="figure figure-like" id="macro_fig"><div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="images/macro.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-176">The continuity hypothesis has important consequences.</p>
+<ul class="disc">
+<li id="li-56">The possibility of making a <em class="emphasis">one-to-one</em> association between the points of the body and the points of the Euclidean space region occupied by the body.</li>
+<li id="li-57">The possibility of dividing a body into smaller and smaller volume regions and of always finding the same physical characteristics as the volume decreases.</li>
+<li id="li-58">The analyticity of the functions used to describe the physical phenomenon under examination allows to formulate the fundamental laws of mechanics in terms of differential equations.</li>
+<li id="li-59">The macroscopic approach at the basis of continuum mechanics can be used in the study of solids, fluids and gases.</li>
+</ul>
+<section class="subsection" id="subsection-25"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.1.1</span> <span class="title">geometric description of the bodies</span>
+</h3>
+<p id="p-177">The continuity hypothesis allows to identify the body with an open subset \(\body \) of the Euclidean space. As already discussed in the chapter dedicated to kinematics, the body will assume different configurations. In the following we will refer to a generic configuration assumed by the body during its motion. On this configuration it is possible to calculate, for example, the volume occupied by the body</p>
+<div class="displaymath">
+\begin{equation}
+\func{v}{\body} = \int_{\body} dv \,.\tag{2.1.1}
+\end{equation}
+</div></section><section class="subsection" id="subsection-26"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.1.2</span> <span class="title">mass</span>
+</h3>
+<p id="p-178">Mass is a property of matter that quantifies its resistance to acceleration. According to the continuity hypothesis, the mass is assumed to be distributed continuously over the whole body. In particular we assume the existence of a scalar field \(\func {\rho} {\vec{x}}&gt; 0 \) denoted <em class="emphasis">mass density</em> such that</p>
+<div class="displaymath">
+\begin{equation}
+\func{m}{\body} = \int_{\body} \func{\rho}{\vec{x}} dv \,.\tag{2.1.2}
+\end{equation}
+</div>
+<p data-braille="continuation">A formal definition of the mass can be made as follows. Let \(\vec{x} \) be a point in \(\body \) and let \(\func{\body_{\delta}}{\vec{x}}\) a family of volumes such that \(\func{v}{\func{\body_{\delta}}{\vec{x}}} \rightarrow 0 \) if \(\delta \rightarrow 0 \text{.}\) Then</p>
+<div class="displaymath">
+\begin{equation}
+\func{\rho}{\vec{x}} = \lim_{\delta \to 0} \frac{\func{m}{\func{\body_{\delta}}{\vec{x}}}}{\func{v}{\func{\body_{\delta}}{\vec{x}}}} \,.\tag{2.1.3}
+\end{equation}
+</div>
+<p data-braille="continuation">If this limit exists and is positive in every point \(\vec{x}\) of the body then the hypothesis of continuity is verified. In addition, the limit must always be the same for any volume family \(\func{\body_{\delta}} {\vec{x}} \) having the described property.</p>
+<article class="note remark-like" id="note-1"><h6 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span>
+</h6>
+<p id="p-179">The modern idea of the limit of a function dates back to Bolzano which, in 1817, introduced the basics of the epsilon-delta technique to define continuous functions. However, his work was not known during his lifetime. The French mathematician Augustin-Louis Cauchy, in his book of the “Cours d'analyse” of 1821, discussed variable quantities, infinitesimals and limits and defined the continuity of \(y = f(x) \) establishing that a infinitesimal variation in \(x\) necessarily produces an infinitesimal variation in \(y \text{.}\)</p>
+<p id="p-180">Cauchy was the first to formulate continuum mechanics in the 19th century.</p></article></section><section class="subsection" id="subsection-27"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.1.3</span> <span class="title">forces</span>
+</h3>
+<p id="p-181">The mechanical interaction between parts of a body or body with the surrounding environment is described by means of forces. Two types of forces are considered: volume forces, which act within the body, and surface forces, which are exerted through a surface. For the hypothesis of continuity, as done for the mass, also the forces are postulated through the existence of vector fields that allow to calculate the resultant of all the forces acting on the body</p>
+<div class="displaymath">
+\begin{equation}
+\func{\vec{R}}{\body} = \int_{\body} \vec{b} \, dv + \int_{\partial\body} \vec{t} \, ds \,,\label{body_resultant}\tag{2.1.4}
+\end{equation}
+</div>
+<p data-braille="continuation">and the resultant torque, with respect to the origin, of the applied forces</p>
+<div class="displaymath">
+\begin{equation}
+\func{\calvec{M}}{\body} = \int_{\body} \vec{x} \times \vec{b} \, dv + \int_{\partial\body} \vec{x} \times \vec{t} \, ds \,.\label{body_resultant_moment}\tag{2.1.5}
+\end{equation}
+</div>
+<p data-braille="continuation">where \(\partial \body \) is the boundary of \(\body\) and therefore it is a surface, \(\vec{b} \) and \(\vec{t} \) denote two vector fields which will be better described below and which represent, respectively, a bulk force density or, simply, the <em class="emphasis">bulk force</em> and a surface force density that will be called <em class="emphasis">traction</em>.</p>
+<figure class="figure figure-like" id="continuo_forze_fig"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/continuo_forze.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure><section class="subsubsection" id="subsubsection-1"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">2.1.3.1</span> <span class="title">bulk force</span>
+</h4>
+<p id="p-182">A bulk force does not arise due to a physical contact between bodies but is the result of remote action, for example the gravitational force. We therefore assume the existence of a vector field \(\func{\vec{b}} {\vec{x}} \) depending on the position of the point \(\vec{x} \) belonging to \(\body \text{.}\) Similarly to what has been done for mass density, it is possible to give a formal definition of \(\func{\vec{b}} {\vec{x}} \text{:}\)</p>
+<div class="displaymath">
+\begin{equation}
+\func{\vec{b}}{\vec{x}} = \lim_{\delta \to 0} \frac{\func{\vec{F}}{\func{\body_{\delta}}{\vec{x}}}}{\func{v}{\func{\body_{\delta}}{\vec{x}}}} \,,\tag{2.1.6}
+\end{equation}
+</div>
+<p data-braille="continuation">where \(\func{\vec{F}}{\func{\body_{\delta}}{\vec{x}}}\) is the force acting on volume \(\func{\body_{\delta}}{\vec{x}}\text{.}\)</p></section><section class="subsubsection" id="subsubsection-2"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">2.1.3.2</span> <span class="title">traction</span>
+</h4>
+<p id="p-183">Traction comes from physical contact between bodies. Contact can take place through \(\partial \body \text{,}\) the boundary of the body, and in this case there will be an <em class="emphasis">external</em> traction. Or, as we will discuss more extensively in the following sections, it can take place through an ideal surface passing inside the body, in this case we will speak of an <em class="emphasis">internal</em> traction. We therefore introduce a formal definition of traction which will allow us to specify the dependence of this vector field.</p>
+<p id="p-184">Given a point \(\vec{x} \) of the body placed inside or on the border of \(\body \text{,}\) and given a family of surfaces \(\func{\Gamma_{\delta}} {\vec{x}} \) passing through this point such that \(\func{a} {\func{\Gamma_{\delta}} {\vec{x}}} = \int_{\Gamma_\delta} ds \rightarrow 0 \) if \(\delta \rightarrow 0 \text{,}\) we assume the existence of a vector field \(\func{\vec{t}} {\vec{x}, \Gamma_{\delta}} \)  defined as follows</p>
+<div class="displaymath">
+\begin{equation}
+\func{\vec{t}}{\vec{x},\Gamma_{\delta}} = \lim_{\delta \to 0} \frac{\func{\vec{F}}{\func{\Gamma_{\delta}}{\vec{x}}}}{\func{a}{\func{\Gamma_{\delta}}{\vec{x}}}} \,,\tag{2.1.7}
+\end{equation}
+</div>
+<p data-braille="continuation">where \(\func{\vec{F}}{\func{\Gamma_{\delta}}{\vec{x}}}\) is a surface force acting on the area \(\func{\Gamma_{\delta}}{\vec{x}}\text{.}\) \(\func{\vec{t}}{\vec{x}, \Gamma_{\delta}}\) is called  <em class="emphasis">traction vector</em>, or simply traction, depending on the position \(\vec{x}\) and on the family of surfaces passing through \(\vec{x}\text{.}\)</p>
+<p id="p-185">A suitable definition of this dependence, elaborated by Cauchy, leads to the notion of <em class="emphasis">Cauchy stress tensor</em>.</p></section></section></section></div></main>
+</div>
+</body>
+</html>

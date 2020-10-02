@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-10-02T11:40:23+02:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Solid Mechanics - application of static analysis to systems of bodies</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+\newcommand{\tens}[1]{\boldsymbol{#1}}
+\newcommand{\mat}[1]{\left[\boldsymbol{#1}\right]}
+\newcommand{\matWp}[2]{\left[\boldsymbol{#1}_{#2}\right]}
+\newcommand{\tensQ}[1]{\pmb{\mathbb{#1}}}
+\newcommand{\tensQc}[1]{\mathbb{#1}}
+
+\newcommand{\transp}[1]{{#1}^{\textrm{T}}}
+\newcommand{\veczero}{\vec{0}}
+\newcommand{\body}{\Omega}
+\newcommand{\calvec}[1]{\boldsymbol{\mathcal{#1}}}
+\newcommand{\commadiff}[2]{{#1,}_{#2}}
+\newcommand{\regulardiff}[2]{ \frac{\partial#1}{\partial#2} }
+\newcommand{\func}[2]{#1\left(#2\right)}
+\newcommand{\transp}[1]{{#1}^{\text{T}}}
+\newcommand{\transpm}[1]{{#1}^{-\text{T}}}
+\newcommand{\trace}[1]{\text{tr}#1}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="./images/sm_logo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="solid_mechanics_book_en.html"><span class="title">A first course on solid mechanics</span></a></h1>
+<p class="byline">Antonio Bilotta</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="analysis_sec_rigid_body_statics_chap_en.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="rigid_body_statics_chap_en.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sollecitazioni_sec_rigid_body_statics_chap_en.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="analysis_sec_rigid_body_statics_chap_en.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="rigid_body_statics_chap_en.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sollecitazioni_sec_rigid_body_statics_chap_en.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="front_matter_en.html" data-scroll="front_matter_en"><span class="title">Front Matter</span></a><ul>
+<li><a href="front_colophon_en.html" data-scroll="front_colophon_en">Colophon</a></li>
+<li><a href="author_bio_en.html" data-scroll="author_bio_en">Author Biography</a></li>
+<li><a href="dedication_en.html" data-scroll="dedication_en">Dedication</a></li>
+<li><a href="acknowledgement_en.html" data-scroll="acknowledgement_en">Acknowledgements</a></li>
+<li><a href="preface_en.html" data-scroll="preface_en">Preface</a></li>
+<li><a href="references_frontmatter_en.html" data-scroll="references_frontmatter_en">using MATLAB®</a></li>
+</ul>
+</li>
+<li class="link part"><a href="continuum_mechanics_en.html" data-scroll="continuum_mechanics_en"><span class="codenumber">I</span> <span class="title">continuum mechanics</span></a></li>
+<li class="link">
+<a href="strain_chap_en.html" data-scroll="strain_chap_en"><span class="codenumber">1</span> <span class="title">bodies' kinematics</span></a><ul>
+<li><a href="configurations_sec_strain_chap_en.html" data-scroll="configurations_sec_strain_chap_en">configurations</a></li>
+<li><a href="transformations_sec_strain_chap_en.html" data-scroll="transformations_sec_strain_chap_en">transformations</a></li>
+<li><a href="gradient_sec_strain_chap_en.html" data-scroll="gradient_sec_strain_chap_en">deformation gradient</a></li>
+<li><a href="displacement_sec_strain_chap_en.html" data-scroll="displacement_sec_strain_chap_en">displacement field</a></li>
+<li><a href="determinant_sec_strain_chap_en.html" data-scroll="determinant_sec_strain_chap_en">determinant of the deformation gradient</a></li>
+<li><a href="polar_sec_strain_chap_en.html" data-scroll="polar_sec_strain_chap_en">polar decomposition</a></li>
+<li><a href="principal_directions_sec_strain_chap_en.html" data-scroll="principal_directions_sec_strain_chap_en">stretch tensor \(\tens{U}\) and principal directions (transformation of line elements)</a></li>
+<li><a href="measures_sec_strain_chap_en.html" data-scroll="measures_sec_strain_chap_en">strain measures</a></li>
+<li><a href="infinitesimal_sec_strain_chap_en.html" data-scroll="infinitesimal_sec_strain_chap_en">the infinitesimal strain tensor</a></li>
+<li><a href="exercises_sec_strain_chap_en.html" data-scroll="exercises_sec_strain_chap_en">exercises</a></li>
+<li><a href="answers_sec_strain_chap_en.html" data-scroll="answers_sec_strain_chap_en">answers to selected exercises</a></li>
+<li><a href="refs_strain_chap_en.html" data-scroll="refs_strain_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="stress_chap_en.html" data-scroll="stress_chap_en"><span class="codenumber">2</span> <span class="title">forces, equilibrium and stress</span></a><ul>
+<li><a href="basics_sec_stress_chap_en.html" data-scroll="basics_sec_stress_chap_en">the continuity hypothesis</a></li>
+<li><a href="equilibrium_sec_stress_chap_en.html" data-scroll="equilibrium_sec_stress_chap_en">equilibrium equations</a></li>
+<li><a href="stress_sec_stress_chap_en.html" data-scroll="stress_sec_stress_chap_en">Cauchy stress tensor tensor</a></li>
+<li><a href="stress_analysis_sec_stress_chap_en.html" data-scroll="stress_analysis_sec_stress_chap_en">analisys of states of stress</a></li>
+<li><a href="plv_sec_stress_chap_en.html" data-scroll="plv_sec_stress_chap_en">principle of virtual work</a></li>
+<li><a href="exercises_sec_stress_chap_en.html" data-scroll="exercises_sec_stress_chap_en">exercises</a></li>
+<li><a href="answers_sec_stress_chap_en.html" data-scroll="answers_sec_stress_chap_en">answers to some of the proposed exercises</a></li>
+<li><a href="refs_stress_chap_en.html" data-scroll="refs_stress_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="elasticity_chap_en.html" data-scroll="elasticity_chap_en"><span class="codenumber">3</span> <span class="title">elasticity</span></a><ul>
+<li><a href="motivations_sec_elasticity_chap_en.html" data-scroll="motivations_sec_elasticity_chap_en">motivation</a></li>
+<li><a href="uniaxial_sec_elasticity_chap_en.html" data-scroll="uniaxial_sec_elasticity_chap_en">uniaxial states</a></li>
+<li><a href="multiaxial_sec_elasticity_chap_en.html" data-scroll="multiaxial_sec_elasticity_chap_en">multi-axial states</a></li>
+<li><a href="problem_sec_elasticity_chap_en.html" data-scroll="problem_sec_elasticity_chap_en">the elastic problem</a></li>
+<li><a href="stretched_beam_sec_elasticity_chap_en.html" data-scroll="stretched_beam_sec_elasticity_chap_en">one-dimensional models: stretched beam</a></li>
+<li><a href="bent_beam_sec_elasticity_chap_en.html" data-scroll="bent_beam_sec_elasticity_chap_en">one-dimensional models: bent beam</a></li>
+<li><a href="stretched_beam_applications_sec_elasticity_chap_en.html" data-scroll="stretched_beam_applications_sec_elasticity_chap_en">applications of the stretched beam model</a></li>
+<li><a href="bent_beam_applications_sec_elasticity_chap_en.html" data-scroll="bent_beam_applications_sec_elasticity_chap_en">applications of the bent beam model</a></li>
+<li><a href="exercises_sec_elasticity_chap_en.html" data-scroll="exercises_sec_elasticity_chap_en">exercises</a></li>
+<li><a href="answers_sec_elasticity_chap_en.html" data-scroll="answers_sec_elasticity_chap_en">answers to selected exercises</a></li>
+<li><a href="refs_elasticity_chap_en.html" data-scroll="refs_elasticity_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link part"><a href="beams_systems_en.html" data-scroll="beams_systems_en"><span class="codenumber">II</span> <span class="title">rigid systems</span></a></li>
+<li class="link">
+<a href="rigid_body_kinematics_chap_en.html" data-scroll="rigid_body_kinematics_chap_en"><span class="codenumber">4</span> <span class="title">kinematics</span></a><ul>
+<li><a href="description_sec_rigid_body_kinematics_chap_en.html" data-scroll="description_sec_rigid_body_kinematics_chap_en">basic kinematic description</a></li>
+<li><a href="constraints_sec_rigid_body_kinematics_chap_en.html" data-scroll="constraints_sec_rigid_body_kinematics_chap_en">constraints</a></li>
+<li><a href="analysis_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_sec_rigid_body_kinematics_chap_en">kinematic analysis</a></li>
+<li><a href="analysis_examples_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_examples_sec_rigid_body_kinematics_chap_en">kinematic analysis of simple rigid body systems</a></li>
+<li><a href="refs_rigid_body_kinematics_chap_en.html" data-scroll="refs_rigid_body_kinematics_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="rigid_body_statics_chap_en.html" data-scroll="rigid_body_statics_chap_en"><span class="codenumber">5</span> <span class="title">statics</span></a><ul>
+<li><a href="equilibrium_sec_rigid_body_statics_chap_en.html" data-scroll="equilibrium_sec_rigid_body_statics_chap_en">equilibrium equations</a></li>
+<li><a href="planecase_sec_rigid_body_statics_chap_en.html" data-scroll="planecase_sec_rigid_body_statics_chap_en">2D case</a></li>
+<li><a href="constraints_sec_rigid_body_statics_chap_en.html" data-scroll="constraints_sec_rigid_body_statics_chap_en">constraints</a></li>
+<li><a href="free_body_sec_rigid_body_statics_chap_en.html" data-scroll="free_body_sec_rigid_body_statics_chap_en">free body diagrams</a></li>
+<li><a href="analysis_sec_rigid_body_statics_chap_en.html" data-scroll="analysis_sec_rigid_body_statics_chap_en">static analysis</a></li>
+<li><a href="analysis_examples_sec_rigid_body_statics_chap_en.html" data-scroll="analysis_examples_sec_rigid_body_statics_chap_en" class="active">application of static analysis to systems of bodies</a></li>
+<li><a href="sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces</a></li>
+<li><a href="indefinte_sec_rigid_body_statics_chap_en.html" data-scroll="indefinte_sec_rigid_body_statics_chap_en">2D beam equilibrium differential equations</a></li>
+<li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces calculation and diagrams</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="analysis_examples_sec_rigid_body_statics_chap_en"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5.6</span> <span class="title">application of static analysis to systems of bodies</span>
+</h2>
+<section class="subsection" id="subsection-112"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.6.1</span> <span class="title">cantilever beam</span>
+</h3>
+<p id="p-439">Consider a simple beam fixed at one end and subjected to a vertical force at the free end. The following figure shows the starting scheme and the free body diagram obtained by removing the fixed support and applying the related constraint reaction components (\(m = 3 \)).</p>
+<figure class="figure figure-like" id="statica_mensola_con_forza_fig"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="images/statica_mensola_con_forza.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.6.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-440">The analysis involves only one body, therefore it is possible to write 3 equilibrium equations (\(n = 3 \)) which, taking as pole the end \(A \) in the rotational equilibrium of the beam, can be expressed as follows</p>
+<div class="displaymath">
+\begin{align*}
+H_A \amp = 0\,,\\
+V_A - F \amp = 0\,,\\
+\mathcal{M}_{A} - F l \amp = 0\,.
+\end{align*}
+</div>
+<p data-braille="continuation">Conditions which, in matrix form, give</p>
+<div class="displaymath">
+\begin{equation*}
+\underbrace{\left[\begin{array}{ccc}
+1 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0\\
+0 &amp; 0 &amp; 1
+\end{array}\right]}_{\mat{B}}
+\underbrace{\left[\begin{array}{c} H_A \\V_A \\ \mathcal{M}_{A} \end{array}\right]}_{\vec{r}} +
+\underbrace{\left[\begin{array}{c} 0 \\ -F \\ -Fl \end{array}\right]}_{\vec{f}} =
+\left[\begin{array}{c} 0 \\ 0 \\ 0 \end{array}\right]\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">The system is evidently isostatic and the calculation of the constraint reaction components provides</p>
+<div class="displaymath">
+\begin{align*}
+H_{A} \amp= 0\,,\\
+V_{A}  \amp= F\,,\\
+\mathcal{M}_{A} \amp= F l\,.
+\end{align*}
+</div></section><section class="subsection" id="subsection-113"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.6.2</span> <span class="title">supported beam</span>
+</h3>
+<p id="p-441">Consider a beam constrained in the manner shown in the figure and subjected to a vertical force in the middle. The same figure also shows the free body diagram obtained by removing the hinge and roller support and applying the related constraint reaction components (\(m = 3 \)).</p>
+<figure class="figure figure-like" id="statica_appoggiata_con_forza_fig"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="images/statica_appoggiata_con_forza.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.6.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-442">The presence of a single body determines the writing of 3 equations of equilibrium (\(n = 3 \)) for which the extreme \(A \) is assumed as pole for rotational equilibrium:</p>
+<div class="displaymath">
+\begin{align*}
+H_A \amp = 0\,,\\
+V_A + V_B - F \amp = 0\,,\\
+V_{B} l - F l/2 \amp = 0\,.
+\end{align*}
+</div>
+<p data-braille="continuation">Whose matrix form is</p>
+<div class="displaymath">
+\begin{equation*}
+\underbrace{\left[\begin{array}{ccc}
+1 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 1\\
+0 &amp; 0 &amp; l
+\end{array}\right]}_{\mat{B}}
+\underbrace{\left[\begin{array}{c} H_A \\V_A \\ V_{B} \end{array}\right]}_{\vec{r}} +
+\underbrace{\left[\begin{array}{c} 0 \\ -F \\ -Fl/2 \end{array}\right]}_{\vec{f}} =
+\left[\begin{array}{c} 0 \\ 0 \\ 0 \end{array}\right]\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">Also in this case the simple inspection of the static matrix allows to establish the isostaticity of the system. The calculation of the constraint reaction components provides:</p>
+<div class="displaymath">
+\begin{align*}
+H_{A} \amp= 0\,,\\
+V_{A}  \amp= F/2\,,\\
+V_{B}  \amp= F/2\,.
+\end{align*}
+</div>
+<article class="assemblage assemblage-like" id="assemblage-41"><p id="p-443">The MATLAB® instructions that can be used for the calculation of unknown constraint reactions are reported below. <figure class="listing figure-like" id="listing-54"><pre class="console"><b>% resultants' vector =
+% [horizontal; vertical; torque]
+R = zeros(3,1);
+
+% function for the calculation of the moment
+moment = @(X0, X, Load)...
+    -Load(1)*(X(2)-X0(2))+Load(2)*(X(1)-X0(1));
+
+% coordinates of the points on which the loads are applied
+syms L;
+A = [0; 0];
+B = [L; 0];
+C = [L/2; 0];
+
+% choice of pole
+POLE = A;
+
+% for each point the vector Load = [F1; F2; M] is assigned
+% and all the contribuitions are summed to R
+syms HA VA;
+LoadA = [HA; VA; 0];
+R = R + LoadA;
+R(3) = R(3) + moment(POLE, A, LoadA);
+R
+
+syms VB;
+LoadB = [0; VB; 0];
+R = R + LoadB;
+R(3) = R(3) + moment(POLE, B, LoadB);
+R
+
+syms F;
+CaricoC = [0; -F; 0];
+R = R + LoadC;
+R(3) = R(3) + moment(POLE, C, LoadC);
+R
+
+% equilibrium equations
+eqns = [
+R(1) ==0,
+R(2) == 0,
+R(3)==0
+];
+
+% static matrix and vector of the assigned loads
+[B,b] = equationsToMatrix(eqns, [HA, VA, VB]);
+
+% degrees of freedom, n
+% constraint degrees, m
+[n,m] = size(B); 
+
+% evaluation of the rank of B
+r = rank(B);
+
+% if the system is statically determined, the solution is calculated
+if and(r == min(m,n), m == n)
+    x = linsolve(B,b);
+end
+
+HA = x(1)
+VA = x(2)
+VB = x(3)
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.6.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></section><section class="subsection" id="subsection-114"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.6.3</span> <span class="title">simple frame</span>
+</h3>
+<p id="p-444">Consider the following simple frame subjected to a vertical force applied in the midle of the horizzontal beam. The constraints (\(m = 3 \)) are applied at the basis of the vertical beams and their removal and the subsequent application of the constraint reaction components leads to the free body diagram shown in the figure.</p>
+<figure class="figure figure-like" id="portale_isostatico_fig"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="images/portale_isostatico.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.6.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-445">Equilibrium equations (\(n=3\)) are</p>
+<div class="displaymath">
+\begin{align*}
+H_B \amp = 0\,,\\
+V_A  - F \amp = 0\,,\\
+\mathcal{M}_{A} - V_A l + F l/2 \amp = 0\,.
+\end{align*}
+</div>
+<p data-braille="continuation">Equations which give the following matrix form of the system</p>
+<div class="displaymath">
+\begin{equation*}
+\underbrace{\left[\begin{array}{ccc}
+0 &amp; 0 &amp; 1\\
+1 &amp; 0 &amp; 0\\
+-l &amp; 1 &amp; 0
+\end{array}\right]}_{\mat{B}}
+\underbrace{\left[\begin{array}{c} V_A \\ \mathcal{M}_A \\ H_{B} \end{array}\right]}_{\vec{r}} +
+\underbrace{\left[\begin{array}{c} 0 \\ -F \\ F l/2 \end{array}\right]}_{\vec{f}} =
+\left[\begin{array}{c} 0 \\ 0 \\ 0 \end{array}\right]\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">The system is isostatic and the linear system solution provides</p>
+<div class="displaymath">
+\begin{align*}
+V_{A} \amp= F\,,\\
+\mathcal{M}_A  \amp= F l/2\,,\\
+H_{B}  \amp= 0\,.
+\end{align*}
+</div>
+<article class="assemblage assemblage-like" id="assemblage-42"><p id="p-446">The MATLAB® instructions that can be used for the calculation of unknown constraint reactions are as follows. <figure class="listing figure-like" id="listing-55"><pre class="console"><b>% resultants' vector =
+% [horizontal; vertical; torque]
+R = zeros(3,1);
+
+% function for the calculation of the moment
+moment = @(X0, X, Load)...
+    -Load(1)*(X(2)-X0(2))+Load(2)*(X(1)-X0(1));
+
+% coordinates of the points on which the loads are applied
+syms L;
+A = [0; 0];
+B = [L; L/2];
+C = [L/2; L];
+
+% pole chosen
+POLE = C;
+
+% for each point the vector Load = [F1; F2; M] is assigned
+% and all the contribuitions are summed to R
+syms VA MA;
+LoadA = [0; VA; MA];
+R = R + LoadA;
+R(3) = R(3) + moment(POLE, A, LoadA);
+R
+
+syms HB;
+LoadB = [HB; 0; 0];
+R = R + LoadB;
+R(3) = R(3) + moment(POLE, B, LoadB);
+R
+
+syms F;
+LoadC = [0; -F; 0];
+R = R + LoadC;
+R(3) = R(3) + moment(POLE, C, LoadC);
+R
+
+% equilibrium equations
+eqns = [
+R(1) ==0,
+R(2) == 0,
+R(3)==0
+];
+
+% static matrix and vector of the assigned loads
+[B,b] = equationsToMatrix(eqns, [VA, MA, HB]);
+
+% degrees of freedom, n
+% constraint degrees, m
+[n,m] = size(B); 
+
+% evaluation of the rank of B
+r = rank(B);
+
+% if the system is statically determined, the solution is calculated
+if and(r == min(m,n), m == n)
+    x = linsolve(B,b);
+end
+
+VA = x(1)
+MA = x(2)
+HB = x(3)
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.6.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></section><section class="subsection" id="subsection-115"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.6.4</span> <span class="title">two bodies system</span>
+</h3>
+<p id="p-447">Consider the following system consisting of two bodies connected by an internal hinge. The removal of all the degrees of constraint (\(m = 6 \)) and the subsequent application of the constraint reaction components leads to the free body diagram shown in the figure.</p>
+<figure class="figure figure-like" id="statica_arcoatrecerniere_fig"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="images/statica_arcoatrecerniere.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.6.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-448">The system consists of two bodies (\(n = 6 \)), allowing the writing of two groups of equations: the equilibrium equations for the body \(AB \) (pole in \(A \))</p>
+<div class="displaymath">
+\begin{align*}
+H_A + H_B \amp = 0\,,\\
+V_A + V_B - F \amp = 0\,,\\
+V_{B} 2l - F l \amp = 0\,,
+\end{align*}
+</div>
+<p data-braille="continuation">and those for the body \(BC\) (pole in \(D\))</p>
+<div class="displaymath">
+\begin{align*}
+H_C - H_B + F \amp = 0\,,\\
+V_C - V_B \amp = 0\,,\\
+H_{B} l + V_C 2l \amp = 0\,.
+\end{align*}
+</div>
+<p data-braille="continuation">Equations that can be rewritten through the following matrix form</p>
+<div class="displaymath">
+\begin{equation*}
+\underbrace{\left[\begin{array}{ccccc}
+1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 2l &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; -1 &amp; 0 &amp; 1 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; -1 &amp; 0 &amp; 1\\
+0 &amp; 0 &amp; l &amp; 0 &amp; 0 &amp; 2l
+\end{array}\right]}_{\mat{B}}
+\underbrace{\left[\begin{array}{c} H_A \\ V_A \\ H_B \\ V_B \\ H_C \\ V_C  \end{array}\right]}_{\vec{r}} +
+\underbrace{\left[\begin{array}{c} 0 \\ -F \\ -Fl \\ F \\ 0 \\ 0 \end{array}\right]}_{\vec{f}} =
+\left[\begin{array}{c} 0 \\ 0 \\ 0 \\ 0 \\ 0 \\ 0 \end{array}\right]\,.
+\end{equation*}
+</div>
+<article class="assemblage assemblage-like" id="assemblage-43"><p id="p-449">The following MATLAB® instructions can be used to calculate the rank of the static matrix. <figure class="listing figure-like" id="listing-56"><pre class="console"><b>syms l
+B = [
+1 0 1 0 0 0;
+0 1 0 1 0 0;
+0 0 0 2*l 0 0;
+0 0 -1 0 1 0;
+0 0 0 -1 0 1;
+0 0 l 0 0 2*l
+]
+rango = rank(B)
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.6.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-450">The calculation provides a rank equal to \(r = 6 \) which verifies the condition \(\text{min}(n, m) = 6 \text{.}\) Being \(m == n \) the system is isostatic. The linear system solution calculable with MATLAB®</p>
+<article class="assemblage assemblage-like" id="assemblage-44"><p id="p-451"><figure class="listing figure-like" id="listing-57"><pre class="console"><b>syms l F
+B = [
+1 0 1 0 0 0;
+0 1 0 1 0 0;
+0 0 0 2*l 0 0;
+0 0 -1 0 1 0;
+0 0 0 -1 0 1;
+0 0 l 0 0 2*l
+]
+f = [0; -F; -F*l; F; 0; 0]
+r = linsolve(B, -f)
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.6.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-452">furnishes the unique solution reported below</p>
+<div class="displaymath">
+\begin{align*}
+H_{A} \amp= F\,,\\
+V_A  \amp= F/2\,,\\
+H_{B}  \amp= -F\,,\\
+V_B  \amp= F/2\,,\\
+H_{C} \amp= -2F\,,\\
+V_C  \amp= F/2\,.
+\end{align*}
+</div>
+<article class="assemblage assemblage-like" id="assemblage-45"><p id="p-453">The previous two bodies system can be solved by using the following MATLAB® instructions. <figure class="listing figure-like" id="listing-58"><pre class="console"><b>% resultants' vector =
+% [horizontal; vertical; torque]
+% for the first body
+R1 = zeros(3,1);
+% and for the second body
+R2 = zeros(3,1);
+
+% function for the calculation of the moment
+moment = @(X0, X, Load)...
+    -Load(1)*(X(2)-X0(2))+Load(2)*(X(1)-X0(1));
+
+% coordinates of the points on which the loads are applied
+syms L;
+A = [0; L];
+B = [2*L; L];
+C = [4*L; 0];
+D = [L; L];
+E = [2*L; 0];
+
+% choosing pole for the first body
+POLE = A;
+
+% point A (first body)
+syms HA VA;
+LoadA = [HA; VA; 0];
+R1 = R1 + LoadA;
+R1(3) = R1(3) + moment(POLE, A, LoadA);
+
+% point D (first body)
+syms F;
+LoadD = [0; -F; 0];
+R1 = R1 + LoadD;
+R1(3) = R1(3) + moment(POLE, D, LoadD);
+
+% point B (first body)
+syms HB VB;
+LoadB = [HB; VB; 0];
+R1 = R1 + LoadB;
+R1(3) = R1(3) + moment(POLE, B, LoadB);
+
+% choosing pole for the second body
+POLE = B;
+
+% point B (second body)
+LoadB = [-HB; -VB; 0];
+R2 = R2 + LoadB;
+R2(3) = R2(3) + moment(POLE, B, LoadB);
+
+% point E (second body)
+LoadE = [F; 0; 0];
+R2 = R2 + LoadE;
+R2(3) = R2(3) + moment(POLE, E, LoadE);
+
+% point C (second body)
+syms HC VC;
+LoadC = [HC; VC; 0];
+R2 = R2 + LoadC;
+R2(3) = R2(3) + moment(POLE, C, LoadC);
+
+% equilibrium equations
+eqns = [
+R1(1) ==0,
+R1(2) == 0,
+R1(3)==0,
+R2(1) ==0,
+R2(2) == 0,
+R2(3)==0
+];
+
+% static matrix and vector of the assigned loads
+[B,b] = equationsToMatrix(eqns, [HA, VA, HB, VB, HC, VC]);
+
+% degrees of freedom, n
+% constraint degrees, m
+[n,m] = size(B); 
+
+% evaluation of the rank of B
+r = rank(B);
+
+% if the system is statically determined, the solution is calculated
+if and(r == min(m,n), m == n)
+    x = linsolve(B,b);
+end
+
+HA = x(1)
+VA = x(2)
+HB = x(3)
+VB = x(4)
+HC = x(5)
+VC = x(6)
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.6.9<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></section></section></div></main>
+</div>
+</body>
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-10-02T11:40:21+02:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Solid Mechanics - Cauchy stress tensor tensor</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+\newcommand{\tens}[1]{\boldsymbol{#1}}
+\newcommand{\mat}[1]{\left[\boldsymbol{#1}\right]}
+\newcommand{\matWp}[2]{\left[\boldsymbol{#1}_{#2}\right]}
+\newcommand{\tensQ}[1]{\pmb{\mathbb{#1}}}
+\newcommand{\tensQc}[1]{\mathbb{#1}}
+
+\newcommand{\transp}[1]{{#1}^{\textrm{T}}}
+\newcommand{\veczero}{\vec{0}}
+\newcommand{\body}{\Omega}
+\newcommand{\calvec}[1]{\boldsymbol{\mathcal{#1}}}
+\newcommand{\commadiff}[2]{{#1,}_{#2}}
+\newcommand{\regulardiff}[2]{ \frac{\partial#1}{\partial#2} }
+\newcommand{\func}[2]{#1\left(#2\right)}
+\newcommand{\transp}[1]{{#1}^{\text{T}}}
+\newcommand{\transpm}[1]{{#1}^{-\text{T}}}
+\newcommand{\trace}[1]{\text{tr}#1}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="./images/sm_logo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="solid_mechanics_book_en.html"><span class="title">A first course on solid mechanics</span></a></h1>
+<p class="byline">Antonio Bilotta</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="equilibrium_sec_stress_chap_en.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="stress_chap_en.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="stress_analysis_sec_stress_chap_en.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="equilibrium_sec_stress_chap_en.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="stress_chap_en.html" title="Up">Up</a><a class="next-button button toolbar-item" href="stress_analysis_sec_stress_chap_en.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="front_matter_en.html" data-scroll="front_matter_en"><span class="title">Front Matter</span></a><ul>
+<li><a href="front_colophon_en.html" data-scroll="front_colophon_en">Colophon</a></li>
+<li><a href="author_bio_en.html" data-scroll="author_bio_en">Author Biography</a></li>
+<li><a href="dedication_en.html" data-scroll="dedication_en">Dedication</a></li>
+<li><a href="acknowledgement_en.html" data-scroll="acknowledgement_en">Acknowledgements</a></li>
+<li><a href="preface_en.html" data-scroll="preface_en">Preface</a></li>
+<li><a href="references_frontmatter_en.html" data-scroll="references_frontmatter_en">using MATLAB®</a></li>
+</ul>
+</li>
+<li class="link part"><a href="continuum_mechanics_en.html" data-scroll="continuum_mechanics_en"><span class="codenumber">I</span> <span class="title">continuum mechanics</span></a></li>
+<li class="link">
+<a href="strain_chap_en.html" data-scroll="strain_chap_en"><span class="codenumber">1</span> <span class="title">bodies' kinematics</span></a><ul>
+<li><a href="configurations_sec_strain_chap_en.html" data-scroll="configurations_sec_strain_chap_en">configurations</a></li>
+<li><a href="transformations_sec_strain_chap_en.html" data-scroll="transformations_sec_strain_chap_en">transformations</a></li>
+<li><a href="gradient_sec_strain_chap_en.html" data-scroll="gradient_sec_strain_chap_en">deformation gradient</a></li>
+<li><a href="displacement_sec_strain_chap_en.html" data-scroll="displacement_sec_strain_chap_en">displacement field</a></li>
+<li><a href="determinant_sec_strain_chap_en.html" data-scroll="determinant_sec_strain_chap_en">determinant of the deformation gradient</a></li>
+<li><a href="polar_sec_strain_chap_en.html" data-scroll="polar_sec_strain_chap_en">polar decomposition</a></li>
+<li><a href="principal_directions_sec_strain_chap_en.html" data-scroll="principal_directions_sec_strain_chap_en">stretch tensor \(\tens{U}\) and principal directions (transformation of line elements)</a></li>
+<li><a href="measures_sec_strain_chap_en.html" data-scroll="measures_sec_strain_chap_en">strain measures</a></li>
+<li><a href="infinitesimal_sec_strain_chap_en.html" data-scroll="infinitesimal_sec_strain_chap_en">the infinitesimal strain tensor</a></li>
+<li><a href="exercises_sec_strain_chap_en.html" data-scroll="exercises_sec_strain_chap_en">exercises</a></li>
+<li><a href="answers_sec_strain_chap_en.html" data-scroll="answers_sec_strain_chap_en">answers to selected exercises</a></li>
+<li><a href="refs_strain_chap_en.html" data-scroll="refs_strain_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="stress_chap_en.html" data-scroll="stress_chap_en"><span class="codenumber">2</span> <span class="title">forces, equilibrium and stress</span></a><ul>
+<li><a href="basics_sec_stress_chap_en.html" data-scroll="basics_sec_stress_chap_en">the continuity hypothesis</a></li>
+<li><a href="equilibrium_sec_stress_chap_en.html" data-scroll="equilibrium_sec_stress_chap_en">equilibrium equations</a></li>
+<li><a href="stress_sec_stress_chap_en.html" data-scroll="stress_sec_stress_chap_en" class="active">Cauchy stress tensor tensor</a></li>
+<li><a href="stress_analysis_sec_stress_chap_en.html" data-scroll="stress_analysis_sec_stress_chap_en">analisys of states of stress</a></li>
+<li><a href="plv_sec_stress_chap_en.html" data-scroll="plv_sec_stress_chap_en">principle of virtual work</a></li>
+<li><a href="exercises_sec_stress_chap_en.html" data-scroll="exercises_sec_stress_chap_en">exercises</a></li>
+<li><a href="answers_sec_stress_chap_en.html" data-scroll="answers_sec_stress_chap_en">answers to some of the proposed exercises</a></li>
+<li><a href="refs_stress_chap_en.html" data-scroll="refs_stress_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="elasticity_chap_en.html" data-scroll="elasticity_chap_en"><span class="codenumber">3</span> <span class="title">elasticity</span></a><ul>
+<li><a href="motivations_sec_elasticity_chap_en.html" data-scroll="motivations_sec_elasticity_chap_en">motivation</a></li>
+<li><a href="uniaxial_sec_elasticity_chap_en.html" data-scroll="uniaxial_sec_elasticity_chap_en">uniaxial states</a></li>
+<li><a href="multiaxial_sec_elasticity_chap_en.html" data-scroll="multiaxial_sec_elasticity_chap_en">multi-axial states</a></li>
+<li><a href="problem_sec_elasticity_chap_en.html" data-scroll="problem_sec_elasticity_chap_en">the elastic problem</a></li>
+<li><a href="stretched_beam_sec_elasticity_chap_en.html" data-scroll="stretched_beam_sec_elasticity_chap_en">one-dimensional models: stretched beam</a></li>
+<li><a href="bent_beam_sec_elasticity_chap_en.html" data-scroll="bent_beam_sec_elasticity_chap_en">one-dimensional models: bent beam</a></li>
+<li><a href="stretched_beam_applications_sec_elasticity_chap_en.html" data-scroll="stretched_beam_applications_sec_elasticity_chap_en">applications of the stretched beam model</a></li>
+<li><a href="bent_beam_applications_sec_elasticity_chap_en.html" data-scroll="bent_beam_applications_sec_elasticity_chap_en">applications of the bent beam model</a></li>
+<li><a href="exercises_sec_elasticity_chap_en.html" data-scroll="exercises_sec_elasticity_chap_en">exercises</a></li>
+<li><a href="answers_sec_elasticity_chap_en.html" data-scroll="answers_sec_elasticity_chap_en">answers to selected exercises</a></li>
+<li><a href="refs_elasticity_chap_en.html" data-scroll="refs_elasticity_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link part"><a href="beams_systems_en.html" data-scroll="beams_systems_en"><span class="codenumber">II</span> <span class="title">rigid systems</span></a></li>
+<li class="link">
+<a href="rigid_body_kinematics_chap_en.html" data-scroll="rigid_body_kinematics_chap_en"><span class="codenumber">4</span> <span class="title">kinematics</span></a><ul>
+<li><a href="description_sec_rigid_body_kinematics_chap_en.html" data-scroll="description_sec_rigid_body_kinematics_chap_en">basic kinematic description</a></li>
+<li><a href="constraints_sec_rigid_body_kinematics_chap_en.html" data-scroll="constraints_sec_rigid_body_kinematics_chap_en">constraints</a></li>
+<li><a href="analysis_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_sec_rigid_body_kinematics_chap_en">kinematic analysis</a></li>
+<li><a href="analysis_examples_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_examples_sec_rigid_body_kinematics_chap_en">kinematic analysis of simple rigid body systems</a></li>
+<li><a href="refs_rigid_body_kinematics_chap_en.html" data-scroll="refs_rigid_body_kinematics_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="rigid_body_statics_chap_en.html" data-scroll="rigid_body_statics_chap_en"><span class="codenumber">5</span> <span class="title">statics</span></a><ul>
+<li><a href="equilibrium_sec_rigid_body_statics_chap_en.html" data-scroll="equilibrium_sec_rigid_body_statics_chap_en">equilibrium equations</a></li>
+<li><a href="planecase_sec_rigid_body_statics_chap_en.html" data-scroll="planecase_sec_rigid_body_statics_chap_en">2D case</a></li>
+<li><a href="constraints_sec_rigid_body_statics_chap_en.html" data-scroll="constraints_sec_rigid_body_statics_chap_en">constraints</a></li>
+<li><a href="free_body_sec_rigid_body_statics_chap_en.html" data-scroll="free_body_sec_rigid_body_statics_chap_en">free body diagrams</a></li>
+<li><a href="analysis_sec_rigid_body_statics_chap_en.html" data-scroll="analysis_sec_rigid_body_statics_chap_en">static analysis</a></li>
+<li><a href="analysis_examples_sec_rigid_body_statics_chap_en.html" data-scroll="analysis_examples_sec_rigid_body_statics_chap_en">application of static analysis to systems of bodies</a></li>
+<li><a href="sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces</a></li>
+<li><a href="indefinte_sec_rigid_body_statics_chap_en.html" data-scroll="indefinte_sec_rigid_body_statics_chap_en">2D beam equilibrium differential equations</a></li>
+<li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces calculation and diagrams</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="stress_sec_stress_chap_en"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">Cauchy stress tensor tensor</span>
+</h2>
+<section class="subsection" id="subsection-28"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.3.1</span> <span class="title">Cauchy's postulate</span>
+</h3>
+<p id="p-188">In previous sections, the traction \(\func{\vec{t}}{\vec{x}, \Gamma_{\delta}} \) was formulated with a very generic dependence on the surface \(\Gamma_{\delta}\) passing through the point \(\vec{x}\text{.}\) On the basis of Cauchy's postulate, fundamental for all subsequent developments, it is assumed instead</p>
+<div class="displaymath">
+\begin{equation}
+\func{\vec{t}}{\vec{x},\Gamma_{\delta}} = \func{\vec{t}}{\vec{x},\vec{n}}\,,\tag{2.3.1}
+\end{equation}
+</div>
+<p data-braille="continuation">where \(\vec{n}\) represents the normal direction to the surface identified by a vector of unit length. Therefore the absolute independence of the traction vector from other factors, such as the curvature of the surface passing through the point \(\vec{x}\text{,}\) is postulated. The figure below shows some surfaces passing through the point \(\vec{x}\) and sharing in this point the very same tangent to the surface and therefore the same normal direction.</p>
+<figure class="figure figure-like" id="surfaces_through_x_fig"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/surfaces_through_x.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.3.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure></section><section class="subsection" id="subsection-29"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.3.2</span> <span class="title">Cauchy stress Theorem</span>
+</h3>
+<p id="p-189">A series of results are presented which, taken together, constitute the <em class="emphasis">Cauchy stress tensor Theorem</em>, the statement of which will be given at the end of the section.</p>
+<section class="subsubsection" id="subsubsection-3"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">2.3.2.1</span> <span class="title">equilibrium of Cauchy's tetrahedron</span>
+</h4>
+<p id="p-190"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-11" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/Irt6ogH1W4g?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p>
+<p id="p-191">The application of Eq. <a class="xref" data-knowl="./knowl/body_equilibrium_p1_1.html" title="Equation 2.2.3">(2.2.3)</a> assuming as subdomain \(\omega\) the Cauchy tetrahedron illustrated in the previous video provides</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{\omega_{\delta}} \func{\vec{b}}{\vec{x}} \, dv + \int_{\partial\omega_{\delta}} \func{\vec{t}}{\vec{x}, \vec{n}} \, ds = \vec0\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">It has already been observed that when \(\delta \to 0 \) the volume measurement \(\omega_{\delta} \) tends to zero much faster than the surface measurement \(\partial\omega_{\delta}\text{.}\) Moreover \(\partial\omega_{\delta} = \Gamma_{\delta}\cup\Gamma_{1}\cup\Gamma_{2}\cup\Gamma_{3}\text{,}\) then previous equation becomes</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{\Gamma_{\delta}} \func{\vec{t}}{\vec{x}, \vec{n}} \, ds + \int_{\Gamma_{1}}  \func{\vec{t}}{\vec{x}, -\vec{e}_1} \, ds + \int_{\Gamma_{2}} \func{\vec{t}}{\vec{x}, -\vec{e}_2} \, ds + \int_{\Gamma_{3}}  \func{\vec{t}}{\vec{x}, -\vec{e}_3} \, ds  = \vec0\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">Taking into account the geometric relationship of face \(\Gamma_{\delta}\) with each face \(\Gamma_{1}\text{,}\) \(\Gamma_{2}\) and \(\Gamma_{3}\text{,}\) it can be obtained what follows</p>
+<div class="displaymath">
+\begin{equation*}
+\func{\vec{t}}{\vec{x}, \vec{n}}\,\Gamma_{\delta} + \func{\vec{t}}{\vec{x}, -\vec{e}_1} \,\Gamma_{\delta}\,n_1 + \func{\vec{t}}{\vec{x}, -\vec{e}_2} \,\Gamma_{\delta}\,n_2 +  \func{\vec{t}}{\vec{x}, -\vec{e}_3} \,\Gamma_{\delta}\,n_3  = \vec0\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">and finally</p>
+<div class="displaymath">
+\begin{equation}
+\func{\vec{t}}{\vec{x}, \vec{n}} = - \func{\vec{t}}{\vec{x}, -\vec{e}_1} \,n_1 - \func{\vec{t}}{\vec{x}, -\vec{e}_2} \,n_2 -  \func{\vec{t}}{\vec{x}, -\vec{e}_3} \,n_3 \,.\label{cauchy_tetrahedron_eq}\tag{2.3.2}
+\end{equation}
+</div></section><section class="subsubsection" id="subsubsection-4"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">2.3.2.2</span> <span class="title">principle of action and reaction</span>
+</h4>
+<p id="p-192">If in Eq. <a class="xref" data-knowl="./knowl/cauchy_tetrahedron_eq.html" title="Equation 2.3.2">(2.3.2)</a> \(\vec{n}=\vec{e}_1\) is assumed, the following raltionship is obtained</p>
+<div class="displaymath">
+\begin{equation}
+\func{\vec{t}}{\vec{x}, \vec{e_1}} = - \func{\vec{t}}{\vec{x}, -\vec{e}_1} \,.\label{cauchy_action_reaction_eq}\tag{2.3.3}
+\end{equation}
+</div>
+<p data-braille="continuation">The very same condition is true for  \(\vec{n}=\vec{e}_2\) and \(\vec{n}=\vec{e}_3\text{.}\)</p></section><section class="subsubsection" id="subsubsection-5"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">2.3.2.3</span> <span class="title">the tensor</span>
+</h4>
+<p id="p-193">By using Eqs. <a class="xref" data-knowl="./knowl/cauchy_tetrahedron_eq.html" title="Equation 2.3.2">(2.3.2)</a> and <a class="xref" data-knowl="./knowl/cauchy_action_reaction_eq.html" title="Equation 2.3.3">(2.3.3)</a> the following result is obtained</p>
+<div class="displaymath">
+\begin{equation}
+\func{\vec{t}}{\vec{x}, \vec{n}} =\func{\vec{t}}{\vec{x}, \vec{e}_1} \,n_1 + \func{\vec{t}}{\vec{x}, \vec{e}_2} \,n_2 +  \func{\vec{t}}{\vec{x}, \vec{e}_3} \,n_3 \,,\label{cauchy_lt_eq}\tag{2.3.4}
+\end{equation}
+</div>
+<p data-braille="continuation">relationship showing how traction \(\vec{t}\) is linked to the generic normal \(\vec{n}\) by means of a <em class="emphasis">linear transformation</em>, see video on linear transformations in <a href="transformations_sec_strain_chap_en.html" class="internal" title="Section 1.2: transformations">Section 1.2</a>, represented by a second order tensor. Then</p>
+<div class="displaymath">
+\begin{equation}
+\func{\vec{t}}{\vec{x}, \vec{n}} =\func{\tens{\sigma}}{\vec{x}}\,\vec{n} \,.\label{cauchy_stress_eq}\tag{2.3.5}
+\end{equation}
+</div>
+<p data-braille="continuation">\(\func{\tens{\sigma}}{\vec{x}}\) prende il nome di <em class="emphasis">tensore della tensione di Cauchy</em>.</p>
+<p id="p-194">The matrix form of previous relationship is</p>
+<div class="displaymath">
+\begin{equation}
+\left[\begin{array}{c}t_1\\t_2\\t_3\end{array}\right] =
+\left[\begin{array}{ccc}
+\sigma_{11} \amp \sigma_{12} \amp \sigma_{13} \\
+\sigma_{21} \amp \sigma_{22} \amp \sigma_{23} \\
+\sigma_{31} \amp \sigma_{32} \amp \sigma_{33}
+\end{array}\right]
+\left[\begin{array}{c}n_1\\n_2\\n_3\end{array}\right]\,,\label{cauchy_mat_stress_eq}\tag{2.3.6}
+\end{equation}
+</div>
+<p data-braille="continuation">where the 9 components of the stress tensor appear explicitly. These components can be visulized as follows,</p>
+<figure class="figure figure-like" id="stress_components_fig"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/cauchy_stress_components.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.3.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-195">i.e. each column of the matrix associated to the stress tensor,</p>
+<div class="displaymath">
+\begin{equation}
+\mat{\sigma} = 
+\left[\begin{array}{ccc}\vec{t}_{\vec{e}_1} \amp \vec{t}_{\vec{e}_2} \amp \vec{t}_{\vec{e}_3}\end{array}\right]\,,\tag{2.3.7}
+\end{equation}
+</div>
+<p data-braille="continuation">collects the components of one of the three tractions relative to the planes identified by coordinate axes.</p></section><section class="subsubsection" id="subsubsection-6"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">2.3.2.4</span> <span class="title">differential form of equilibrium equations</span>
+</h4>
+<p id="p-196"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-12" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/Wy6ggwQttZ0?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p>
+<p id="p-197">Consider the cancellation condition of the resultant of the applied forces, equation <a class="xref" data-knowl="./knowl/body_equilibrium_p1_1.html" title="Equation 2.2.3">(2.2.3)</a>. This equation, thanks to the <a class="xref" data-knowl="./knowl/cauchy_stress_eq.html" title="Equation 2.3.5">(2.3.5)</a>, can be reformulated as follows</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{\omega} \vec{b} \, dv + \int_{\partial\omega} \tens{\sigma}\,\vec{n} \, ds = \vec0\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">By the divergence theorem the surface integral can be transformed thus obtaining</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{\omega} \left( \text{div}\tens{\sigma} + \vec{b} \right) \, dv = \vec0\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">For the continuity hypothesis, this equation must be satisfied for any subdomain \(\omega \) of the body under examination, therefore the following differential equation is obtained</p>
+<div class="displaymath">
+\begin{equation}
+\text{div}\tens{\sigma} + \vec{b} = \vec0\tag{2.3.8}
+\end{equation}
+</div>
+<p data-braille="continuation">to be satisfied in every point of the body \(\body \text{.}\) This vector equation is called <em class="emphasis">indefinite equation of equilibrium</em> or, referring to the three scalar equations relative to the vector components, <em class="emphasis">indefinite equations of equilibrium</em>.</p></section><section class="subsubsection" id="subsubsection-7"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">2.3.2.5</span> <span class="title">symmetry of the tensor</span>
+</h4>
+<p id="p-198">The equilibrium condition regarding the resultant torque, equation <a class="xref" data-knowl="./knowl/body_equilibrium_p1_2.html" title="Equation 2.2.4">(2.2.4)</a>, allows to establish the symmetry of the stress tensor. However, its explicit derivation is not presented here. The interested reader can find more details in the reference given at the end of the chapter.</p></section><article class="theorem theorem-like" id="theorem-1"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="space"> </span><span class="creator">(A.-L. Cauchy)</span><span class="period">.</span>
+</h6>
+<p id="p-199">Given a body subject to some applied loads, a necessary and sufficient condition for the body to be in equilibrium (satisfaction of Eqs. <a class="xref" data-knowl="./knowl/body_equilibrium_1.html" title="Equation 2.2.1">(2.2.1)</a> and <a class="xref" data-knowl="./knowl/body_equilibrium_2.html" title="Equation 2.2.2">(2.2.2)</a>) is that there is a tensor field \(\func{\tens{\sigma}}{\vec{x}} \) such that</p>
+<div class="displaymath">
+\begin{equation}
+\func{\vec{t}}{\vec{x}, \vec{n}} =\func{\tens{\sigma}}{\vec{x}}\,\vec{n}\,,\label{T_cauchy_stress_eq}\tag{2.3.9}
+\end{equation}
+</div>
+<div class="displaymath">
+\begin{equation}
+\text{div}\tens{\sigma} + \vec{b} = \vec0\,,\label{T_cauchy_equilibrium_eq}\tag{2.3.10}
+\end{equation}
+</div>
+<div class="displaymath">
+\begin{equation}
+\transp{\tens{\sigma}}=\tens{\sigma}\,.\label{T_cauchy_simmetry_eq}\tag{2.3.11}
+\end{equation}
+</div></article><article class="remark remark-like" id="remark-12"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">observations about indefinite equations of equilibrium.</span>
+</h6>
+<ul id="p-200" class="disc">
+<li id="li-60">The equations <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a> do not completely determine the Cauchy stress tensor field for a body in equilibrium. In particular, there are 3 differential equations to calculate, for the symmetry of the tensor, the \(6\) unknown components of \(\tens{\sigma} \text{.}\) As will be seen in the following, this drawback will be solved by characterizing the constitutive behavior of the material of which the body is composed. Behavior to be reconstructed experimentally and referring to the average of the quantities involved. Remember that the macroscopic approach is not based on a precise description of the internal micro-structure of matter.</li>
+<li id="li-61">The boundary conditions to be associated with the differential equations <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a> will be determined by relating the unknown stress \(\tens{\sigma} \) to the tractions, \(\bar {\vec{t}} \text{,}\) assigned on the contour of the body \(\body \text{.}\) This relationship is established through the <a class="xref" data-knowl="./knowl/T_cauchy_stress_eq.html" title="Equation 2.3.9">(2.3.9)</a> which provides<div class="displaymath">
+\begin{equation}
+\tens{\sigma}\,\vec{n} = \bar{\vec{t}}\,, \text{su}\;\partial\body\,.\tag{2.3.12}
+\end{equation}
+</div>These equations constitute the <em class="emphasis">boundary conditions</em> of the <em class="emphasis">natural</em> type for the differential problem <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a>.</li>
+<li id="li-62">At the basis of the derivation of the equations <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a> there is the hypothesis of continuity of the vector field \(\vec{b} \) and the hypothesis of differentiability of the tensor field \(\tens{\sigma} \text{.}\) Hypotheses that allow, as seen, to pass from equations in integral form to equations in local form.</li>
+</ul></article></section></section></div></main>
+</div>
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-10-02T11:40:23+02:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Solid Mechanics - generalized section forces</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+\newcommand{\tens}[1]{\boldsymbol{#1}}
+\newcommand{\mat}[1]{\left[\boldsymbol{#1}\right]}
+\newcommand{\matWp}[2]{\left[\boldsymbol{#1}_{#2}\right]}
+\newcommand{\tensQ}[1]{\pmb{\mathbb{#1}}}
+\newcommand{\tensQc}[1]{\mathbb{#1}}
+
+\newcommand{\transp}[1]{{#1}^{\textrm{T}}}
+\newcommand{\veczero}{\vec{0}}
+\newcommand{\body}{\Omega}
+\newcommand{\calvec}[1]{\boldsymbol{\mathcal{#1}}}
+\newcommand{\commadiff}[2]{{#1,}_{#2}}
+\newcommand{\regulardiff}[2]{ \frac{\partial#1}{\partial#2} }
+\newcommand{\func}[2]{#1\left(#2\right)}
+\newcommand{\transp}[1]{{#1}^{\text{T}}}
+\newcommand{\transpm}[1]{{#1}^{-\text{T}}}
+\newcommand{\trace}[1]{\text{tr}#1}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="./images/sm_logo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="solid_mechanics_book_en.html"><span class="title">A first course on solid mechanics</span></a></h1>
+<p class="byline">Antonio Bilotta</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="analysis_examples_sec_rigid_body_statics_chap_en.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="rigid_body_statics_chap_en.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="indefinte_sec_rigid_body_statics_chap_en.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="analysis_examples_sec_rigid_body_statics_chap_en.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="rigid_body_statics_chap_en.html" title="Up">Up</a><a class="next-button button toolbar-item" href="indefinte_sec_rigid_body_statics_chap_en.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="front_matter_en.html" data-scroll="front_matter_en"><span class="title">Front Matter</span></a><ul>
+<li><a href="front_colophon_en.html" data-scroll="front_colophon_en">Colophon</a></li>
+<li><a href="author_bio_en.html" data-scroll="author_bio_en">Author Biography</a></li>
+<li><a href="dedication_en.html" data-scroll="dedication_en">Dedication</a></li>
+<li><a href="acknowledgement_en.html" data-scroll="acknowledgement_en">Acknowledgements</a></li>
+<li><a href="preface_en.html" data-scroll="preface_en">Preface</a></li>
+<li><a href="references_frontmatter_en.html" data-scroll="references_frontmatter_en">using MATLAB®</a></li>
+</ul>
+</li>
+<li class="link part"><a href="continuum_mechanics_en.html" data-scroll="continuum_mechanics_en"><span class="codenumber">I</span> <span class="title">continuum mechanics</span></a></li>
+<li class="link">
+<a href="strain_chap_en.html" data-scroll="strain_chap_en"><span class="codenumber">1</span> <span class="title">bodies' kinematics</span></a><ul>
+<li><a href="configurations_sec_strain_chap_en.html" data-scroll="configurations_sec_strain_chap_en">configurations</a></li>
+<li><a href="transformations_sec_strain_chap_en.html" data-scroll="transformations_sec_strain_chap_en">transformations</a></li>
+<li><a href="gradient_sec_strain_chap_en.html" data-scroll="gradient_sec_strain_chap_en">deformation gradient</a></li>
+<li><a href="displacement_sec_strain_chap_en.html" data-scroll="displacement_sec_strain_chap_en">displacement field</a></li>
+<li><a href="determinant_sec_strain_chap_en.html" data-scroll="determinant_sec_strain_chap_en">determinant of the deformation gradient</a></li>
+<li><a href="polar_sec_strain_chap_en.html" data-scroll="polar_sec_strain_chap_en">polar decomposition</a></li>
+<li><a href="principal_directions_sec_strain_chap_en.html" data-scroll="principal_directions_sec_strain_chap_en">stretch tensor \(\tens{U}\) and principal directions (transformation of line elements)</a></li>
+<li><a href="measures_sec_strain_chap_en.html" data-scroll="measures_sec_strain_chap_en">strain measures</a></li>
+<li><a href="infinitesimal_sec_strain_chap_en.html" data-scroll="infinitesimal_sec_strain_chap_en">the infinitesimal strain tensor</a></li>
+<li><a href="exercises_sec_strain_chap_en.html" data-scroll="exercises_sec_strain_chap_en">exercises</a></li>
+<li><a href="answers_sec_strain_chap_en.html" data-scroll="answers_sec_strain_chap_en">answers to selected exercises</a></li>
+<li><a href="refs_strain_chap_en.html" data-scroll="refs_strain_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="stress_chap_en.html" data-scroll="stress_chap_en"><span class="codenumber">2</span> <span class="title">forces, equilibrium and stress</span></a><ul>
+<li><a href="basics_sec_stress_chap_en.html" data-scroll="basics_sec_stress_chap_en">the continuity hypothesis</a></li>
+<li><a href="equilibrium_sec_stress_chap_en.html" data-scroll="equilibrium_sec_stress_chap_en">equilibrium equations</a></li>
+<li><a href="stress_sec_stress_chap_en.html" data-scroll="stress_sec_stress_chap_en">Cauchy stress tensor tensor</a></li>
+<li><a href="stress_analysis_sec_stress_chap_en.html" data-scroll="stress_analysis_sec_stress_chap_en">analisys of states of stress</a></li>
+<li><a href="plv_sec_stress_chap_en.html" data-scroll="plv_sec_stress_chap_en">principle of virtual work</a></li>
+<li><a href="exercises_sec_stress_chap_en.html" data-scroll="exercises_sec_stress_chap_en">exercises</a></li>
+<li><a href="answers_sec_stress_chap_en.html" data-scroll="answers_sec_stress_chap_en">answers to some of the proposed exercises</a></li>
+<li><a href="refs_stress_chap_en.html" data-scroll="refs_stress_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="elasticity_chap_en.html" data-scroll="elasticity_chap_en"><span class="codenumber">3</span> <span class="title">elasticity</span></a><ul>
+<li><a href="motivations_sec_elasticity_chap_en.html" data-scroll="motivations_sec_elasticity_chap_en">motivation</a></li>
+<li><a href="uniaxial_sec_elasticity_chap_en.html" data-scroll="uniaxial_sec_elasticity_chap_en">uniaxial states</a></li>
+<li><a href="multiaxial_sec_elasticity_chap_en.html" data-scroll="multiaxial_sec_elasticity_chap_en">multi-axial states</a></li>
+<li><a href="problem_sec_elasticity_chap_en.html" data-scroll="problem_sec_elasticity_chap_en">the elastic problem</a></li>
+<li><a href="stretched_beam_sec_elasticity_chap_en.html" data-scroll="stretched_beam_sec_elasticity_chap_en">one-dimensional models: stretched beam</a></li>
+<li><a href="bent_beam_sec_elasticity_chap_en.html" data-scroll="bent_beam_sec_elasticity_chap_en">one-dimensional models: bent beam</a></li>
+<li><a href="stretched_beam_applications_sec_elasticity_chap_en.html" data-scroll="stretched_beam_applications_sec_elasticity_chap_en">applications of the stretched beam model</a></li>
+<li><a href="bent_beam_applications_sec_elasticity_chap_en.html" data-scroll="bent_beam_applications_sec_elasticity_chap_en">applications of the bent beam model</a></li>
+<li><a href="exercises_sec_elasticity_chap_en.html" data-scroll="exercises_sec_elasticity_chap_en">exercises</a></li>
+<li><a href="answers_sec_elasticity_chap_en.html" data-scroll="answers_sec_elasticity_chap_en">answers to selected exercises</a></li>
+<li><a href="refs_elasticity_chap_en.html" data-scroll="refs_elasticity_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link part"><a href="beams_systems_en.html" data-scroll="beams_systems_en"><span class="codenumber">II</span> <span class="title">rigid systems</span></a></li>
+<li class="link">
+<a href="rigid_body_kinematics_chap_en.html" data-scroll="rigid_body_kinematics_chap_en"><span class="codenumber">4</span> <span class="title">kinematics</span></a><ul>
+<li><a href="description_sec_rigid_body_kinematics_chap_en.html" data-scroll="description_sec_rigid_body_kinematics_chap_en">basic kinematic description</a></li>
+<li><a href="constraints_sec_rigid_body_kinematics_chap_en.html" data-scroll="constraints_sec_rigid_body_kinematics_chap_en">constraints</a></li>
+<li><a href="analysis_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_sec_rigid_body_kinematics_chap_en">kinematic analysis</a></li>
+<li><a href="analysis_examples_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_examples_sec_rigid_body_kinematics_chap_en">kinematic analysis of simple rigid body systems</a></li>
+<li><a href="refs_rigid_body_kinematics_chap_en.html" data-scroll="refs_rigid_body_kinematics_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="rigid_body_statics_chap_en.html" data-scroll="rigid_body_statics_chap_en"><span class="codenumber">5</span> <span class="title">statics</span></a><ul>
+<li><a href="equilibrium_sec_rigid_body_statics_chap_en.html" data-scroll="equilibrium_sec_rigid_body_statics_chap_en">equilibrium equations</a></li>
+<li><a href="planecase_sec_rigid_body_statics_chap_en.html" data-scroll="planecase_sec_rigid_body_statics_chap_en">2D case</a></li>
+<li><a href="constraints_sec_rigid_body_statics_chap_en.html" data-scroll="constraints_sec_rigid_body_statics_chap_en">constraints</a></li>
+<li><a href="free_body_sec_rigid_body_statics_chap_en.html" data-scroll="free_body_sec_rigid_body_statics_chap_en">free body diagrams</a></li>
+<li><a href="analysis_sec_rigid_body_statics_chap_en.html" data-scroll="analysis_sec_rigid_body_statics_chap_en">static analysis</a></li>
+<li><a href="analysis_examples_sec_rigid_body_statics_chap_en.html" data-scroll="analysis_examples_sec_rigid_body_statics_chap_en">application of static analysis to systems of bodies</a></li>
+<li><a href="sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_en" class="active">generalized section forces</a></li>
+<li><a href="indefinte_sec_rigid_body_statics_chap_en.html" data-scroll="indefinte_sec_rigid_body_statics_chap_en">2D beam equilibrium differential equations</a></li>
+<li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces calculation and diagrams</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="sollecitazioni_sec_rigid_body_statics_chap_en"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5.7</span> <span class="title">generalized section forces</span>
+</h2>
+<p id="p-454">The state of internal stress of one-dimensional solids, or beams, is characterized by evaluating the <em class="alert">generalized section forces</em> at each point. In the plane case there are three components: <em class="alert">axial force (\(N \))</em>, <em class="alert">shear force (\(T \))</em> and <em class="alert">bending moment (\(M \))</em>. In order to come up to a simple definition of these three components, consider the following free body diagram regarding a balanced system of forces. <figure class="figure figure-like" id="schema1_fig"><div class="image-box" style="width: 43%; margin-left: 28.5%; margin-right: 28.5%;"><img src="images/schema1.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.7.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Suppose to separate the body into two parts by means of a plane passing through a generic point \(s \) obtaining the following free body diagrams <figure class="figure figure-like" id="schema2_fig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/schema2.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.7.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure> where it is postulated that the two parts exchange, through the separation section, equal and opposite actions. However, these actions must be such as to satisfy the equilibrium equations on each obtained part. In particular, if we consider the part of length \(s \) we obtain the following equations (pole for the rotation equilibrium placed in the abscissa \(s \)):</p>
+<div class="displaymath">
+\begin{align*}
+N - F \amp = 0\,,\\
+-T + F \amp = 0\,,\\
+M - F s + Fl \amp = 0\,.
+\end{align*}
+</div>
+<p data-braille="continuation">System that provides the following solution for the unknown generalized section forces</p>
+<div class="displaymath">
+\begin{align*}
+N \amp= F\,,\\
+T \amp= F \,,\\
+M \amp= -F(l - s)\,.
+\end{align*}
+</div>
+<p data-braille="continuation">The same result would be obtained by applying the equilibrium equations to other part with length \((l-s) \text{.}\)</p>
+<article class="remark remark-like" id="remark-21"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">5.7.3</span><span class="period">.</span>
+</h6>
+<p id="p-455">The separation process carried out can also be understood as the removal of the continuity constraint at point \(s \) and the application of the <em class="emphasis">"constraint reactions"</em> associated with the constraint, of degree 3, removed.</p></article><article class="remark remark-like" id="remark-22"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">5.7.4</span><span class="period">.</span>
+</h6>
+<p id="p-456">The single sectioning operation must make it possible to obtain two distinct free bodies. If for this purpose one or more sectionings happen to be necessary, the obtained separated parts would lead to the formulation of hyperstatic problems.</p></article><section class="subsection" id="subsection-116"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.7.1</span> <span class="title">generalized section forces sign convention</span>
+</h3>
+<p id="p-457">By applying the sectioning procedure twice in order to isolate a section of beam of infinitesimal length, it is possible to obtain the following diagram (where the height of the beam has also been made evident) useful for highlighting the convention currently used to define the positive sign for the generalized section forces (for clarity they are shown separately).</p>
+<figure class="figure figure-like" id="convenzione_sollecitazioni_fig"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/convenzione_sollecitazioni.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.7.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></section><section class="subsection" id="subsection-117"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.7.2</span> <span class="title">distributed loads</span>
+</h3>
+<p id="p-458">In order to complete the kinds of loads applicable to beam systems and also to make it possible to have a general treatment of the equilibrium diffrential equations presented in the next section, the case of distributed loads is discussed. To this end, consider the following scheme.</p>
+<figure class="figure figure-like" id="ripartiti_fig"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="images/ripartiti.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.7.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-459">The scheme represents a cantilever beam subjected to a variable distributed load \(q (x) \text{.}\) The distributed load is measured as \(\left[\frac{F}{L} \right] \text{.}\) The free body diagram shown at the top right of the figure allows writing the three equilibrium equations (horizontal, vertical and rotation using point \(A \) as pole) providing:</p>
+<div class="displaymath">
+\begin{align*}
+H_{A} \amp = 0\,,\\
+V_{A} -\int_0^l q(x) dx \amp = 0\,,\\
+\mathcal{M}_{A} - \int_0^l q(x) x dx \amp = 0\,.
+\end{align*}
+</div>
+<p data-braille="continuation">It is easy to realize that the integrals present in the equations have the meaning of the resultant of the applied distributed load</p>
+<div class="displaymath">
+\begin{equation*}
+\int_0^l q(x) dx = R_q
+\end{equation*}
+</div>
+<p data-braille="continuation">and static moment with respect to point \(A\)</p>
+<div class="displaymath">
+\begin{equation*}
+\int_0^l q(x)x dx = S_q = R_q x_q,
+\end{equation*}
+</div>
+<p data-braille="continuation">where \(x_q \) represents the centroid of the load with respect to an axis passing through \(A \text{,}\) see the additional free body diagram shown at the bottom right of the figure. Therefore equilibrium equations can be rewritten as follows:</p>
+<div class="displaymath">
+\begin{align*}
+H_{A} \amp = 0\,,\\
+V_{A} - R_q \amp = 0\,,\\
+\mathcal{M}_{A} - R_q x_q \amp = 0\,.
+\end{align*}
+</div>
+<p data-braille="continuation">Therefore in systems subjected to distributed loads it is possible to replace the latter with the respective resultants positioned in their centroids. It is observed that this substitution is correct only for the calculation of the constraint reactions and not for the calculation of the generalized cross forces which will be better described later.</p>
+<article class="assemblage assemblage-like" id="assemblage-46"><p id="p-460">Below are the MATLAB® instructions for calculating the resultant and the centroid for some types of distributed load. <figure class="listing figure-like" id="listing-59"><pre class="console"><b>% constant ditributed load
+syms q l x;
+load(x, q) = q;
+np = 100;
+xv = 0:1/np:1;
+qv = load(xv, 1);
+plot(xv,qv,'r','LineWidth',2)
+
+
+Rq = int(load(x, q), x, 0, l)
+xq = int(load(x, q)*x, x, 0, l)/Rq
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.7.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure> <figure class="listing figure-like" id="listing-60"><pre class="console"><b>% linear ditributed load
+syms q l x;
+load(x, q, l) = q/l*x;
+np = 100;
+xv = 0:1/np:1;
+qv = load(xv, 1, 1);
+plot(xv,qv,'r','LineWidth',2)
+
+Rq = int(load(x, q, l), x, 0, l)
+xq = int(load(x, q, l)*x, x, 0, l)/Rq
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.7.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure> <figure class="listing figure-like" id="listing-61"><pre class="console"><b>% quadratic ditributed load
+syms q l x;
+load(x, q, l) = q/l^2*x^2;
+np = 100;
+xv = 0:1/np:1;
+qv = load(xv, 1, 1);
+plot(xv,qv,'r','LineWidth',2)
+
+Rq = int(load(x, q, l), x, 0, l)
+xq = int(load(x, q, l)*x, x, 0, l)/Rq
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.7.9<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></section></section></div></main>
+</div>
+</body>
+</html>

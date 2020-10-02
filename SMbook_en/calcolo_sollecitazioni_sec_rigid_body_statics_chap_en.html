@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-10-02T11:40:24+02:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Solid Mechanics - generalized section forces calculation and diagrams</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+\newcommand{\tens}[1]{\boldsymbol{#1}}
+\newcommand{\mat}[1]{\left[\boldsymbol{#1}\right]}
+\newcommand{\matWp}[2]{\left[\boldsymbol{#1}_{#2}\right]}
+\newcommand{\tensQ}[1]{\pmb{\mathbb{#1}}}
+\newcommand{\tensQc}[1]{\mathbb{#1}}
+
+\newcommand{\transp}[1]{{#1}^{\textrm{T}}}
+\newcommand{\veczero}{\vec{0}}
+\newcommand{\body}{\Omega}
+\newcommand{\calvec}[1]{\boldsymbol{\mathcal{#1}}}
+\newcommand{\commadiff}[2]{{#1,}_{#2}}
+\newcommand{\regulardiff}[2]{ \frac{\partial#1}{\partial#2} }
+\newcommand{\func}[2]{#1\left(#2\right)}
+\newcommand{\transp}[1]{{#1}^{\text{T}}}
+\newcommand{\transpm}[1]{{#1}^{-\text{T}}}
+\newcommand{\trace}[1]{\text{tr}#1}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="./images/sm_logo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="solid_mechanics_book_en.html"><span class="title">A first course on solid mechanics</span></a></h1>
+<p class="byline">Antonio Bilotta</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="indefinte_sec_rigid_body_statics_chap_en.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="rigid_body_statics_chap_en.html" title="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="indefinte_sec_rigid_body_statics_chap_en.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="rigid_body_statics_chap_en.html" title="Up">Up</a><span class="next-button button toolbar-item disabled">Next</span>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="front_matter_en.html" data-scroll="front_matter_en"><span class="title">Front Matter</span></a><ul>
+<li><a href="front_colophon_en.html" data-scroll="front_colophon_en">Colophon</a></li>
+<li><a href="author_bio_en.html" data-scroll="author_bio_en">Author Biography</a></li>
+<li><a href="dedication_en.html" data-scroll="dedication_en">Dedication</a></li>
+<li><a href="acknowledgement_en.html" data-scroll="acknowledgement_en">Acknowledgements</a></li>
+<li><a href="preface_en.html" data-scroll="preface_en">Preface</a></li>
+<li><a href="references_frontmatter_en.html" data-scroll="references_frontmatter_en">using MATLAB®</a></li>
+</ul>
+</li>
+<li class="link part"><a href="continuum_mechanics_en.html" data-scroll="continuum_mechanics_en"><span class="codenumber">I</span> <span class="title">continuum mechanics</span></a></li>
+<li class="link">
+<a href="strain_chap_en.html" data-scroll="strain_chap_en"><span class="codenumber">1</span> <span class="title">bodies' kinematics</span></a><ul>
+<li><a href="configurations_sec_strain_chap_en.html" data-scroll="configurations_sec_strain_chap_en">configurations</a></li>
+<li><a href="transformations_sec_strain_chap_en.html" data-scroll="transformations_sec_strain_chap_en">transformations</a></li>
+<li><a href="gradient_sec_strain_chap_en.html" data-scroll="gradient_sec_strain_chap_en">deformation gradient</a></li>
+<li><a href="displacement_sec_strain_chap_en.html" data-scroll="displacement_sec_strain_chap_en">displacement field</a></li>
+<li><a href="determinant_sec_strain_chap_en.html" data-scroll="determinant_sec_strain_chap_en">determinant of the deformation gradient</a></li>
+<li><a href="polar_sec_strain_chap_en.html" data-scroll="polar_sec_strain_chap_en">polar decomposition</a></li>
+<li><a href="principal_directions_sec_strain_chap_en.html" data-scroll="principal_directions_sec_strain_chap_en">stretch tensor \(\tens{U}\) and principal directions (transformation of line elements)</a></li>
+<li><a href="measures_sec_strain_chap_en.html" data-scroll="measures_sec_strain_chap_en">strain measures</a></li>
+<li><a href="infinitesimal_sec_strain_chap_en.html" data-scroll="infinitesimal_sec_strain_chap_en">the infinitesimal strain tensor</a></li>
+<li><a href="exercises_sec_strain_chap_en.html" data-scroll="exercises_sec_strain_chap_en">exercises</a></li>
+<li><a href="answers_sec_strain_chap_en.html" data-scroll="answers_sec_strain_chap_en">answers to selected exercises</a></li>
+<li><a href="refs_strain_chap_en.html" data-scroll="refs_strain_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="stress_chap_en.html" data-scroll="stress_chap_en"><span class="codenumber">2</span> <span class="title">forces, equilibrium and stress</span></a><ul>
+<li><a href="basics_sec_stress_chap_en.html" data-scroll="basics_sec_stress_chap_en">the continuity hypothesis</a></li>
+<li><a href="equilibrium_sec_stress_chap_en.html" data-scroll="equilibrium_sec_stress_chap_en">equilibrium equations</a></li>
+<li><a href="stress_sec_stress_chap_en.html" data-scroll="stress_sec_stress_chap_en">Cauchy stress tensor tensor</a></li>
+<li><a href="stress_analysis_sec_stress_chap_en.html" data-scroll="stress_analysis_sec_stress_chap_en">analisys of states of stress</a></li>
+<li><a href="plv_sec_stress_chap_en.html" data-scroll="plv_sec_stress_chap_en">principle of virtual work</a></li>
+<li><a href="exercises_sec_stress_chap_en.html" data-scroll="exercises_sec_stress_chap_en">exercises</a></li>
+<li><a href="answers_sec_stress_chap_en.html" data-scroll="answers_sec_stress_chap_en">answers to some of the proposed exercises</a></li>
+<li><a href="refs_stress_chap_en.html" data-scroll="refs_stress_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="elasticity_chap_en.html" data-scroll="elasticity_chap_en"><span class="codenumber">3</span> <span class="title">elasticity</span></a><ul>
+<li><a href="motivations_sec_elasticity_chap_en.html" data-scroll="motivations_sec_elasticity_chap_en">motivation</a></li>
+<li><a href="uniaxial_sec_elasticity_chap_en.html" data-scroll="uniaxial_sec_elasticity_chap_en">uniaxial states</a></li>
+<li><a href="multiaxial_sec_elasticity_chap_en.html" data-scroll="multiaxial_sec_elasticity_chap_en">multi-axial states</a></li>
+<li><a href="problem_sec_elasticity_chap_en.html" data-scroll="problem_sec_elasticity_chap_en">the elastic problem</a></li>
+<li><a href="stretched_beam_sec_elasticity_chap_en.html" data-scroll="stretched_beam_sec_elasticity_chap_en">one-dimensional models: stretched beam</a></li>
+<li><a href="bent_beam_sec_elasticity_chap_en.html" data-scroll="bent_beam_sec_elasticity_chap_en">one-dimensional models: bent beam</a></li>
+<li><a href="stretched_beam_applications_sec_elasticity_chap_en.html" data-scroll="stretched_beam_applications_sec_elasticity_chap_en">applications of the stretched beam model</a></li>
+<li><a href="bent_beam_applications_sec_elasticity_chap_en.html" data-scroll="bent_beam_applications_sec_elasticity_chap_en">applications of the bent beam model</a></li>
+<li><a href="exercises_sec_elasticity_chap_en.html" data-scroll="exercises_sec_elasticity_chap_en">exercises</a></li>
+<li><a href="answers_sec_elasticity_chap_en.html" data-scroll="answers_sec_elasticity_chap_en">answers to selected exercises</a></li>
+<li><a href="refs_elasticity_chap_en.html" data-scroll="refs_elasticity_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link part"><a href="beams_systems_en.html" data-scroll="beams_systems_en"><span class="codenumber">II</span> <span class="title">rigid systems</span></a></li>
+<li class="link">
+<a href="rigid_body_kinematics_chap_en.html" data-scroll="rigid_body_kinematics_chap_en"><span class="codenumber">4</span> <span class="title">kinematics</span></a><ul>
+<li><a href="description_sec_rigid_body_kinematics_chap_en.html" data-scroll="description_sec_rigid_body_kinematics_chap_en">basic kinematic description</a></li>
+<li><a href="constraints_sec_rigid_body_kinematics_chap_en.html" data-scroll="constraints_sec_rigid_body_kinematics_chap_en">constraints</a></li>
+<li><a href="analysis_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_sec_rigid_body_kinematics_chap_en">kinematic analysis</a></li>
+<li><a href="analysis_examples_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_examples_sec_rigid_body_kinematics_chap_en">kinematic analysis of simple rigid body systems</a></li>
+<li><a href="refs_rigid_body_kinematics_chap_en.html" data-scroll="refs_rigid_body_kinematics_chap_en">references and suggested readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="rigid_body_statics_chap_en.html" data-scroll="rigid_body_statics_chap_en"><span class="codenumber">5</span> <span class="title">statics</span></a><ul>
+<li><a href="equilibrium_sec_rigid_body_statics_chap_en.html" data-scroll="equilibrium_sec_rigid_body_statics_chap_en">equilibrium equations</a></li>
+<li><a href="planecase_sec_rigid_body_statics_chap_en.html" data-scroll="planecase_sec_rigid_body_statics_chap_en">2D case</a></li>
+<li><a href="constraints_sec_rigid_body_statics_chap_en.html" data-scroll="constraints_sec_rigid_body_statics_chap_en">constraints</a></li>
+<li><a href="free_body_sec_rigid_body_statics_chap_en.html" data-scroll="free_body_sec_rigid_body_statics_chap_en">free body diagrams</a></li>
+<li><a href="analysis_sec_rigid_body_statics_chap_en.html" data-scroll="analysis_sec_rigid_body_statics_chap_en">static analysis</a></li>
+<li><a href="analysis_examples_sec_rigid_body_statics_chap_en.html" data-scroll="analysis_examples_sec_rigid_body_statics_chap_en">application of static analysis to systems of bodies</a></li>
+<li><a href="sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces</a></li>
+<li><a href="indefinte_sec_rigid_body_statics_chap_en.html" data-scroll="indefinte_sec_rigid_body_statics_chap_en">2D beam equilibrium differential equations</a></li>
+<li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en" class="active">generalized section forces calculation and diagrams</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5.9</span> <span class="title">generalized section forces calculation and diagrams</span>
+</h2>
+<p id="p-469">The static analysis presented in the previous sections allows to evaluate the constraint reactions for an isostatic system. Starting from this information and using general integrals <a class="xref" data-knowl="./knowl/general_const_N_eq.html" title="Equation 5.8.13">(5.8.13)</a>, <a class="xref" data-knowl="./knowl/general_const_T_eq.html" title="Equation 5.8.14">(5.8.14)</a> and <a class="xref" data-knowl="./knowl/general_const_M_eq.html" title="Equation 5.8.15">(5.8.15)</a> it is possible to proceed with the calculation of the generalized section forces for beams subjected to generic forces / torques and at most constant distributed loads (for generic distributed loads it is necessary to use the <a class="xref" data-knowl="./knowl/general_N_eq.html" title="Equation 5.8.10">(5.8.10)</a>, <a class="xref" data-knowl="./knowl/general_T_eq.html" title="Equation 5.8.11">(5.8.11)</a> and <a class="xref" data-knowl="./knowl/general_M_eq.html" title="Equation 5.8.12">(5.8.12)</a>).</p>
+<p id="p-470">The calculation procedure will be illustrated by discussing some examples and using MATLAB® to carry out the required calculations and display the results. Given the simplicity of the schemes considered, the explicit calculation of the constraint reactions is omitted.</p>
+<section class="subsection" id="subsection-122"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.9.1</span> <span class="title"></span>
+</h3>
+<p id="p-471">Consider the following free body diagram whose satisfaction of the equilibrium conditions is easy to be checked.</p>
+<figure class="figure figure-like" id="figure-92"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/schema1bis.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.9.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-472">It is evident from the diagram that the values assumed by the section forces for \(x = 0 \) are</p>
+<div class="displaymath">
+\begin{equation*}
+N(0) = F\,,\quad T(0) = F\,,\quad  M(0) = -F l\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">Using the general integrals, we obtain the following expressions of the generalized section forces as a function of the abscissa \(x \) placed along the axis of the beam</p>
+<div class="displaymath">
+\begin{equation*}
+N(x) = F\,,\quad T(x) = F\,,\quad  M(x) = -F l + F\,x\,.
+\end{equation*}
+</div>
+<article class="assemblage assemblage-like" id="assemblage-49"><p id="p-473">The latter results can be plotted using the following MATLAB® instructions. <figure class="listing figure-like" id="listing-62"><pre class="console"><b>% axial force diagram
+syms N(x, F);
+N(x,F) = F;
+
+np = 100;
+Xv = 0:1/np:1;
+Nv = N(Xv, 1);
+Beam = zeros(1, np+1);
+
+plot(Xv,Nv,'g',Xv,Beam,'k','LineWidth',2)
+set(gca, 'Ylim', [-1 1])
+
+
+% shear force diagram
+syms T(x,F);
+T(x,F) = F;
+
+np = 100;
+Xv = 0:1/np:1;
+Tv = T(Xv, 1);
+Beam = zeros(1, np+1);
+
+plot(Xv,Tv,'b',Xv,Beam,'k','LineWidth',2)
+set(gca, 'Ylim', [-1 1])
+
+
+% bending moment diagram
+syms M(x,F,l);
+M(x,F,l) = -F*l + F*x;
+
+np = 100;
+Xv = 0:1/np:1;
+Mv = M(Xv, 1, 1);
+Beam = zeros(1, np+1);
+
+plot(Xv,Mv,'r',Xv,Beam,'k','LineWidth',2)
+set(gca, 'Ylim', [-1 1])
+set(gca, 'YDir','reverse')
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.9.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-474">In this way we obtain the following diagrams for axial force (green), shear force (blue) and bending moment (red).</p>
+<div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/sollecitazioni_ex1_N.png" style="width: 100%; height: auto;" alt=""></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;"><img src="images/sollecitazioni_ex1_T.png" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;"><img src="images/sollecitazioni_ex1_M.png" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<p id="p-475">Note how the representation of the bending moment is carried out by changing the direction of the vertical axis of the diagram. This choice is used in professional practice to "visualize" which of the two edges of the beam, lower or upper, is under tensile condition.</p></section><section class="subsection" id="subsection-123"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.9.2</span> <span class="title"></span>
+</h3>
+<p id="p-476">Let us consider the following scheme regarding a cantilever beam subjected to a constant distributed load.</p>
+<figure class="figure figure-like" id="figure-93"><div class="image-box" style="width: 38%; margin-left: 31%; margin-right: 31%;"><img src="images/mensola_con_carico_ripartito.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.9.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-477">The free body diagram and the related computation of the constraint reactions provide the following result.</p>
+<figure class="figure figure-like" id="figure-94"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/mensola_con_carico_ripartito_calcolo_reazioni_en.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.9.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-478">Information that can be used in writing general integrals <a class="xref" data-knowl="./knowl/general_const_N_eq.html" title="Equation 5.8.13">(5.8.13)</a>, <a class="xref" data-knowl="./knowl/general_const_T_eq.html" title="Equation 5.8.14">(5.8.14)</a>, <a class="xref" data-knowl="./knowl/general_const_M_eq.html" title="Equation 5.8.15">(5.8.15)</a>, and obtain the following expression of the generalized section forces along the beam axis .</p>
+<div class="displaymath">
+\begin{equation*}
+N(x) = 0\,,\quad T(x) = -q\,x + ql \,,\quad  M(x) = -ql^2/2 + ql\,x - q\,x^2/2 \,.
+\end{equation*}
+</div>
+<article class="assemblage assemblage-like" id="assemblage-50"><p id="p-479">The latter results can be plotted using the following MATLAB® instructions. <figure class="listing figure-like" id="listing-63"><pre class="console"><b>% axial force diagram
+syms N(x);
+N(x) = 0;
+
+np = 100;
+Xv = 0:1/np:1;
+Nv = N(Xv);
+Beam = zeros(1, np+1);
+
+plot(Xv,Nv,'g',Xv,Beam,'k','LineWidth',2)
+set(gca, 'Ylim', [-1 1])
+
+
+% shear force diagram
+syms T(x,q,l);
+T(x,q,l) = -q*x+q*l;
+
+np = 100;
+Xv = 0:1/np:1;
+Tv = T(Xv, 1, 1);
+Beam = zeros(1, np+1);
+
+plot(Xv,Tv,'b',Xv,Beam,'k','LineWidth',2)
+set(gca, 'Ylim', [-1 1])
+
+
+% bending moment diagram
+syms M(x,q,l);
+M(x,q,l) = -q*l^2/2 + q*l*x - q*l*x^2/2;
+
+np = 100;
+Xv = 0:1/np:1;
+Mv = M(Xv, 1, 1);
+Beam = zeros(1, np+1);
+
+plot(Xv,Mv,'r',Xv,Beam,'k','LineWidth',2)
+set(gca, 'Ylim', [-1 1])
+set(gca, 'YDir','reverse')
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.9.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/sollecitazioni_ex2_N.png" style="width: 100%; height: auto;" alt=""></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;"><img src="images/sollecitazioni_ex2_T.png" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;"><img src="images/sollecitazioni_ex2_M.png" style="width: 100%; height: auto;" alt=""></div>
+</div></div></section><section class="subsection" id="subsection-124"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.9.3</span> <span class="title"></span>
+</h3>
+<p id="p-480">Let us consider a supported beam subjected to a distributed load.</p>
+<figure class="figure figure-like" id="figure-95"><div class="image-box" style="width: 38%; margin-left: 31%; margin-right: 31%;"><img src="images/trave_appoggiata_con_carico_ripartito.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.9.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-481">Constraint reactions are calculated through the free body diagram as follows.</p>
+<figure class="figure figure-like" id="figure-96"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/trave_appoggiata_con_carico_ripartito_calcolo_reazioni_en.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.9.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-482">The obtained solution allows the writing of the following conditions regarding to the end \(A \) of the beam</p>
+<div class="displaymath">
+\begin{equation*}
+N(0) = 0\,,\quad T(0) = ql/2\,,\quad  M(0) = 0\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">from which it is easy to obtain the expression of generalized section forces along the beam:</p>
+<div class="displaymath">
+\begin{equation*}
+N(x) = 0\,,\quad T(x) = -q\,x + ql/2 \,,\quad  M(x) = ql/2\,x - q\,x^2/2 \,.
+\end{equation*}
+</div>
+<article class="assemblage assemblage-like" id="assemblage-51"><p id="p-483">It is now possible to plot the diagrams of obtained generalized section forces. <figure class="listing figure-like" id="listing-64"><pre class="console"><b>% axial force diagram
+syms N(x);
+N(x) = 0;
+
+np = 100;
+Xv = 0:1/np:1;
+Nv = N(Xv);
+Beam = zeros(1, np+1);
+
+plot(Xv,Nv,'g',Xv,Beam,'k','LineWidth',2)
+set(gca, 'Ylim', [-1 1])
+
+
+% shear force diagram
+syms T(x,q,l);
+T(x,q,l) = -q*x+q*l/2;
+
+np = 100;
+Xv = 0:1/np:1;
+Tv = T(Xv, 1, 1);
+Beam = zeros(1, np+1);
+
+plot(Xv,Tv,'b',Xv,Beam,'k','LineWidth',2)
+set(gca, 'Ylim', [-1 1])
+
+
+% bending moment diagram
+syms M(x,q,l);
+M(x,q,l) = q*l/2*x - q*l*x^2/2;
+
+np = 100;
+Xv = 0:1/np:1;
+Mv = M(Xv, 1, 1);
+Beam = zeros(1, np+1);
+
+plot(Xv,Mv,'r',Xv,Beam,'k','LineWidth',2)
+set(gca, 'Ylim', [-1 1])
+set(gca, 'YDir','reverse')
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.9.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/sollecitazioni_ex3_N.png" style="width: 100%; height: auto;" alt=""></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;"><img src="images/sollecitazioni_ex3_T.png" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;"><img src="images/sollecitazioni_ex3_M.png" style="width: 100%; height: auto;" alt=""></div>
+</div></div></section><section class="subsection" id="subsection-125"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.9.4</span> <span class="title"></span>
+</h3>
+<p id="p-484">Let us consider a supported beam subjected to a concentrated force in the middle point.</p>
+<figure class="figure figure-like" id="figure-97"><div class="image-box" style="width: 38%; margin-left: 31%; margin-right: 31%;"><img src="images/trave_appoggiata_con_forza_concentrata.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.9.9<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-485">The evaluation of the constraint reactions furnishes the following result.</p>
+<figure class="figure figure-like" id="figure-98"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/trave_appoggiata_con_forza_concentrata_calcolo_reazioni_en.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.9.10<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-486">Compared to the previous cases, the current case is different because the force concentrated in the middle determines a discontinuity of the shear \(T (x) \) and therefore, being \(dM / dx = T \text{,}\) also a discontinuity of the derivative of the bending moment. Therefore the general integrals <a class="xref" data-knowl="./knowl/general_const_N_eq.html" title="Equation 5.8.13">(5.8.13)</a>, <a class="xref" data-knowl="./knowl/general_const_T_eq.html" title="Equation 5.8.14">(5.8.14)</a> and <a class="xref" data-knowl="./knowl/general_const_M_eq.html" title="Equation 5.8.15">(5.8.15)</a> are not directly applicable to whole beam \(AB \) but they must be applied separately to the \(AC \) and \(CB \) beam portions. In this way, two descriptions of \(T (x) \) and \(M (x) \) are obtained, one description valid for the \(AC \) portion and the other one valid for the \(CB \) portion.</p>
+<ul class="disc">
+<li id="li-153">\(AC\) portion, \(0 \leq x \leq l/2\text{:}\)<div class="displaymath">
+\begin{align*}
+N_{AC}(0) &amp;= 0\,,\\
+T_{AC}(0) &amp;= F/2\,,\\
+M_{AC}(0) &amp;= 0\,.
+\end{align*}
+</div>which give<div class="displaymath">
+\begin{align*}
+N_{AC}(x) &amp;= 0\,,\\
+T_{AC}(x) &amp;= F/2\,,\\
+M_{AC}(x) &amp;= F/2\,x\,.
+\end{align*}
+</div>
+</li>
+<li id="li-154">\(CB\) portion, \(0 \leq x \leq l/2\text{:}\)<div class="displaymath">
+\begin{align*}
+N_{CB}(0) &amp;= 0\,,\\
+T_{CB}(0) &amp;= T_{AC}(l/2) - F=F/2-F=-F/2\,,\\
+M_{CB}(0) &amp;= M_{AC}(l/2) = Fl/4\,.
+\end{align*}
+</div>which give<div class="displaymath">
+\begin{align*}
+N_{CB}(x) &amp;= 0\,,\\
+T_{CB}(x) &amp;= -F/2\,,\\
+M_{CB}(x) &amp;= -F/2\,x + Fl/4\,.
+\end{align*}
+</div>
+</li>
+</ul>
+<article class="assemblage assemblage-like" id="assemblage-52"><p id="p-487"><figure class="listing figure-like" id="listing-65"><pre class="console"><b>% shear force diagram
+syms T_ac(x,F) T_cb(x,F);
+T_ac(x,F) = F/2;
+T_cb(x,F) = -F/2;
+
+np = 50;
+Xv = 0:0.5/np:0.5;
+Tv_ac = T_ac(Xv, 1);
+Tv_cb = T_cb(Xv, 1);
+
+Xv_ac = Xv;
+Xv_cb = 0.5:0.5/np:1;
+Beam = zeros(1, np+1);
+
+plot(Xv_ac,Tv_ac,'b', Xv_ac,Beam,'k', ...
+Xv_cb,Tv_cb,'b', Xv_cb,Beam,'k', 'LineWidth',2)
+set(gca, 'Ylim', [-1 1])
+
+
+% bending moment diagram
+syms M_ac(x,F) M_cb(x,F,l);
+M_ac(x,F) = F/2*x;
+M_cb(x,F,l) = -F/2*x+F*l/4;
+
+np = 50;
+Xv = 0:0.5/np:0.5;
+Mv_ac = M_ac(Xv, 1);
+Mv_cb = M_cb(Xv, 1, 1);
+
+Xv_ac = Xv;
+Xv_cb = 0.5:0.5/np:1;
+Beam = zeros(1, np+1);
+
+plot(Xv_ac,Mv_ac,'r', Xv_ac,Beam,'k', ...
+Xv_cb,Mv_cb,'r', Xv_cb,Beam,'k', 'LineWidth',2)
+set(gca, 'Ylim', [-1 1])
+set(gca, 'YDir','reverse')
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.9.11<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;"><img src="images/sollecitazioni_ex4_T.png" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;"><img src="images/sollecitazioni_ex4_M.png" style="width: 100%; height: auto;" alt=""></div>
+</div></div></article></section></section></div></main>
+</div>
+</body>
+</html>

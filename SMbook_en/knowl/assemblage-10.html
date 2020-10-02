@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-10-02T11:40:24+02:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="assemblage assemblage-like"><p>In order to verify how the tensor \(\tens{U}\) acts differently on the principal directions and on the directions identified by the standard reference, consider the following plane state characterized by the following diagonal form of \(\tens{U} \)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\mat{U} =
+\left[\begin{array}{cc}
+1.2\lambda \amp 0\\
+0 \amp \lambda
+\end{array}\right]\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">Assume for the principal directions an inclination equal to \(\pi/4\) and then apply the stretch tensor to the two squares, represented in the following figure. The red square has sides aligned with the standard reference, the blue square has sides aligned with the principal directions.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg"><figure class="figure figure-like"><div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="images/Squares.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.7.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p xmlns:svg="http://www.w3.org/2000/svg">The application of the tensor is carried out by varying the parameter \(\lambda \text{,}\) from which the two eigenvalues of the tensor depend, between the values \(1.1\) and \(1.5\text{.}\)</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">The MATLAB® instructions that can be used for calculating and displaying the deformations of the two squares starting from the initial configurations are shown below.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg"><figure class="listing figure-like"><pre class="console"><b>Q1 = [1 -1 -1 1 1; 1 1 -1 -1 1];
+Q2 = [1 0 -1 0 1; 0 1 0 -1 0];
+
+x = Q1(1,:);
+y = Q1(2,:);
+
+pbaspect([1 1 1])
+line(x,y,'Color','red','LineWidth',2)
+
+x = Q2(1,:);
+y = Q2(2,:);
+line(x,y,'Color','blue','LineWidth',2)
+
+
+u1 = [1/sqrt(2); 1/sqrt(2)];
+u2 = [-1/sqrt(2); 1/sqrt(2)];
+syms U(lam) 
+U(lam) = [u1 u2]*diag([1.2*lam lam])*transpose([u1 u2]);
+
+
+for v = 1.1:0.1:1.5
+  UQ1 = U(v)*Q1;
+  x = UQ1(1,:);
+  y = UQ1(2,:);
+  line(x,y,'Color','red','LineWidth',2)
+
+  UQ2 = U(v)*Q2;
+  x = UQ2(1,:);
+  y = UQ2(2,:);
+  line(x,y,'Color','blue','LineWidth',2)
+end
+</b></pre>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.7.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><span class="incontext"><a href="principal_directions_sec_strain_chap_en.html#assemblage-10">in-context</a></span>
+</body>
+</html>
