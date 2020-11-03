@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-15T18:45:00+02:00       *-->
+<!--*       on 2020-11-03T08:24:07+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,18 +15,14 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Istruzioni MATLAB per la Trasformazione 1. <figure class="listing figure-like"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
-F = [T1([1; 0]) T1([0; 1])];
-syms detF(X1, X2);
-detF(X1, X2) = det(F);
+<p xmlns:svg="http://www.w3.org/2000/svg">Istruzioni MATLAB® per la Trasformazione 3. <figure class="listing figure-like"><pre class="console"><b>T3 = @(X) [X(1); 1.5*X(2)];
+F = [T3([1; 0]) T3([0; 1])]
+Grad_u = F - diag([1 1])
 
-x = linspace(-5, 5, 50);
-y = linspace(-5, 5, 50);
-[X,Y] = meshgrid(x,y);
-
-surface(X,Y,detF(X,Y))
+u3 = @(X) T3(X) - X;
+Grad_u = [u3([1; 0]) u3([0; 1])]
 </b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.5.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<span class="incontext"><a href="determinant_sec_strain_chap_it.html#p-72">in-context</a></span>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.4.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<span class="incontext"><a href="displacement_sec_strain_chap_it.html#p-72">in-context</a></span>
 </body>
 </html>

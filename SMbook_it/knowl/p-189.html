@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-15T18:45:00+02:00       *-->
+<!--*       on 2020-11-03T08:24:07+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,14 +15,22 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p>ovvero ciascuna colonna della matrice associata al tensore della tensione</p>
+<p>Tali condizioni, per l'ipotesi di continuità, non valgono solo per il corpo \(\body\) in esame ma anche per qualsiasi sottoinsieme estratto dal corpo principale. <figure class="figure figure-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="images/continuo_in_due.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figura</span><span class="space"> </span><span class="codenumber">2.2.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Tale operazione di separazione, tipica della meccanica dei solidi, viene effetuata utilizzando delle superfici immaginarie con cui viene tagliato il corpo di partenza. In particolare, si veda la figura, per le due parti di corpo così ottenute si potranno scrivere le seguenti coppie di equazioni</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\mat{\sigma} = 
-\left[\begin{array}{ccc}\vec{t}_{\vec{e}_1} \amp \vec{t}_{\vec{e}_2} \amp \vec{t}_{\vec{e}_3}\end{array}\right]\,,\tag{2.3.7}
-\end{equation}
+\begin{align}
+\int_{\omega} \vec{b} \, dv + \int_{\partial\omega} \vec{t}_{\omega} \, ds \amp = \vec0\,,\tag{2.2.3}\\
+\int_{\omega} \vec{x} \times \vec{b} \, dv + \int_{\partial\omega} \vec{x} \times \vec{t}_{\omega} \, ds \amp = \vec0 \,.\tag{2.2.4}
+\end{align}
 </div>
-<p data-braille="continuation">contiene le componenti di una delle 3 trazioni agenti sulle giaciture individuate dagli assi coordinati.</p>
-<span class="incontext"><a href="stress_sec_stress_chap_it.html#p-189">in-context</a></span>
+<p data-braille="continuation">e</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align}
+\int_{\bar{\omega}} \vec{b} \, dv + \int_{\partial\bar{\omega}} \vec{t}_{\bar{\omega}} \, ds  + \int_{\partial\body} \vec{t} \, ds \amp = \vec0\,,\tag{2.2.5}\\
+\int_{\bar{\omega}} \vec{x} \times \vec{b} \, dv + \int_{\partial\bar{\omega}} \vec{x} \times \vec{t}_{\bar{\omega}} \, ds + \int_{\partial\body} \vec{x} \times \vec{t} \, ds \amp = \vec0 \,.\tag{2.2.6}
+\end{align}
+</div>
+<p data-braille="continuation">dove \(\vec{t}_{\omega}\) rappresenta l'azione esercitata su \(\omega\) dall'altra parte di dominio \(\bar{\omega}\) e, al contrario, \(\vec{t}_{\bar{\omega}}\) rappresenta l'azione esercitata su \(\bar{\omega}\) dall'altra parte \(\omega\text{.}\)</p>
+<span class="incontext"><a href="equilibrium_sec_stress_chap_it.html#p-189">in-context</a></span>
 </body>
 </html>

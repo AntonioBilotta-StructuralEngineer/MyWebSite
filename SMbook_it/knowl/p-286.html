@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-15T18:45:01+02:00       *-->
+<!--*       on 2020-11-03T08:24:08+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,29 +15,29 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p>Anche in questo caso si può procedere assumendo una soluzione di tentativo per il tensore della tensione per poi verificare il soddisfacimento delle equazioni di equilibrio e delle condizioni al contorno. In particolare per \(\tens{\sigma}\) si assume la seguente forma</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<ul class="disc">
+<li>
+<em xmlns:svg="http://www.w3.org/2000/svg" class="alert">Equazioni di equilibrio</em> (<a href="stress_chap_it.html" class="internal" title="Capitolo 2: forze, equilibrio e tensione">Capitolo 2</a>)<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation}
-\mat{\sigma} =
-\left[\begin{array}{ccc}
-0 \amp 0 \amp 0\\
-0 \amp 0 \amp 0\\
-0 \amp 0 \amp \kappa\,X_2
-\end{array}\right]\tag{3.4.16}
+\text{div}\tens{\sigma} + \vec{b} = \vec0\,.\tag{3.4.1}
 \end{equation}
 </div>
-<p data-braille="continuation">valida su tutto il dominio e con \(\kappa\) una costante generica. Con tale assunzione la scrittura delle equazioni equilibrio fornisce</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\begin{array}{l}
-\frac{\partial\, 0}{\partial\, X_1} + \frac{\partial\, 0}{\partial\, X_2} + \frac{\partial\, 0}{\partial\, X_3} = 0\\
-\frac{\partial\, 0}{\partial\, X_1} + \frac{\partial\, 0}{\partial\, X_2} + \frac{\partial\, 0}{\partial\, X_3} = 0\\
-\frac{\partial\, 0}{\partial\, X_1} + \frac{\partial\, 0}{\partial\, X_2} + \frac{\partial\, (\kappa\,X_2)}{\partial\, X_3} = 0
-\end{array}
-\quad\;\text{in}\;\body_0\,,
-\end{equation*}
+</li>
+<li>
+<em xmlns:svg="http://www.w3.org/2000/svg" class="alert">Legame deformazione-spostamento</em> (<a href="strain_chap_it.html" class="internal" title="Capitolo 1: cinematica dei corpi">Capitolo 1</a>)<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\tens{\varepsilon} = \text{sym}\tens{\nabla u}\,.\tag{3.4.2}
+\end{equation}
 </div>
-<p data-braille="continuation">da cui si evince il loro soddisfacimento.</p>
+</li>
+<li>
+<em xmlns:svg="http://www.w3.org/2000/svg" class="alert">Legame elastico</em> (<a href="elasticity_chap_it.html" class="internal" title="Capitolo 3: comportamento elastico">Capitolo 3</a>)<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\tens{\sigma} = \tensQ{C}:\tens{\varepsilon}\,.\tag{3.4.3}
+\end{equation}
+</div>
+</li>
+</ul>
 <span class="incontext"><a href="problem_sec_elasticity_chap_it.html#p-286">in-context</a></span>
 </body>
 </html>

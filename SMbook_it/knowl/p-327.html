@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-15T18:45:02+02:00       *-->
+<!--*       on 2020-11-03T08:24:09+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,20 +15,20 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p>Da cui si ottiene la seguente soluzione in termini di spostamenti incogniti</p>
+<p>Anche per il modello di trave inflessa le equazioni del modello possono essere utilizzate per eliminare dalle incognite \(M\) e \(\chi\) e mantenere solo lo spostamento \(\func{w}{x}\text{.}\) I seguenti passaggi mostrano come ottenere tale risultato</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-u_a \amp= \frac{F}{EA}\frac{l-a}{l}\,x\,,\quad 0 \leq x \leq a\,,\\
-u_b \amp= \frac{F}{EA}\frac{l-x}{l}\,a\,,\quad a \leq x \leq l\,.
+\frac{d^2 M}{dx^2}  + q \amp= 0\\
+\frac{d^2}{d x^2}\left(EJ\,\chi\right) + q \amp= 0\\
+\frac{d^2}{d x^2}\left(EJ\, \left( -\frac{d^2 w}{dx^2} \right)\right) + q \amp= 0
 \end{align*}
 </div>
-<p data-braille="continuation">Per derivazione si ottiene la soluzione in termini di sforzi normali sui due domini</p>
+<p data-braille="continuation">da cui</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-N_a \amp= EA\, \frac{du_a}{dx} = F\,\frac{l-a}{l}\,,\quad 0 \leq x \leq a\,,\\
-N_b \amp= EA\, \frac{du_b}{dx} = -F\,\frac{a}{l}\,,\quad a \leq x \leq l\,.
-\end{align*}
+\begin{equation}
+-EJ\,\frac{d^4w}{dx^4} + q = 0\,.\tag{3.6.34}
+\end{equation}
 </div>
-<span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#p-327">in-context</a></span>
+<span class="incontext"><a href="bent_beam_sec_elasticity_chap_it.html#p-327">in-context</a></span>
 </body>
 </html>

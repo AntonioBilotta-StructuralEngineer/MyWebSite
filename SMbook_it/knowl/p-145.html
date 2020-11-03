@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-15T18:45:00+02:00       *-->
+<!--*       on 2020-11-03T08:24:07+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,24 +15,21 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p>Ipotizzare spostamenti infinitesimi equivale ad assumere valori dell'angolo \(\alpha\) molto piccoli, \(\alpha \ll 1\text{,}\) ovvero \(\cos{\alpha}\approx 1\) e \(\sin{\alpha} \approx \alpha\text{.}\) Da cui deriva</p>
+<p>I modelli meccanici che verranno discussi durante il corso tipicamente vengono formulati utilizzando come ente cinematico il campo di spostamento che, si ricorda, è definito come \(\vec{u} = \vec{x}-\vec{X}\text{.}\) Da cui \(\tens{F} = \tens{I}+\tens{\nabla u}\text{.}\) Pertanto il tensore di Green-Lagrange è esprimibile come</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\text{sym}\mat{\nabla u} \approx \mat{0}
-\,,\quad
-\text{skew}\mat{\nabla u} \approx
-\left[\begin{array}{cc}
-0 \amp -\alpha \\
-\alpha \amp 0 
-\end{array}\right]\,.
-\end{equation*}
+\begin{align*}
+\tens{E} \amp = \frac{1}{2}\left( \transp{\tens{F}}\,\tens{F} - \tens{I}\right)\,,\\
+\amp = \frac{1}{2}\left( \transp{(\tens{I}+\tens{\nabla u})}\,(\tens{I}+\tens{\nabla u}) - \tens{I}\right)\,,\\
+\amp = \frac{1}{2}\left(\tens{I}+\tens{\nabla u} + \transp{\tens{\nabla u}} +  \transp{\tens{\nabla u}}\,\tens{\nabla u} - \tens{I}\right)\,,\\
+\amp = \frac{1}{2}\left(\tens{\nabla u} + \transp{\tens{\nabla u}}\right) + \frac{1}{2} \transp{\tens{\nabla u}}\,\tens{\nabla u} \,.
+\end{align*}
 </div>
-<p data-braille="continuation">Pertanto nel caso di spostamenti infinitesi la relazione <a class="xref" data-knowl="./knowl/rotation_eq.html" title="Equazione 1.9.11">(1.9.11)</a> può essere riscritta come segue</p>
+<p data-braille="continuation">Pertanto, in termini di gradiente dello spostamento, il tensore della deformazione di Green-Lagrange ha la seguente espressione</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation}
-\tens{R} \approx \tens{I} + \text{skew}\tens{\nabla u}\,.\tag{1.9.12}
+\tens{E} = \frac{1}{2}\left(\tens{\nabla u} + \transp{\tens{\nabla u}}\right) + \frac{1}{2} \transp{\tens{\nabla u}}\,\tens{\nabla u} \,.\tag{1.8.8}
 \end{equation}
 </div>
-<span class="incontext"><a href="infinitesimal_sec_strain_chap_it.html#p-145">in-context</a></span>
+<span class="incontext"><a href="measures_sec_strain_chap_it.html#p-145">in-context</a></span>
 </body>
 </html>

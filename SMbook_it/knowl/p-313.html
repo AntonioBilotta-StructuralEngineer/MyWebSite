@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-15T18:45:02+02:00       *-->
+<!--*       on 2020-11-03T08:24:08+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,20 +15,43 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p>La definizione del legame elastico per il modello monodimensionale si ottiene rielaborando la <a class="xref" data-knowl="./knowl/trave_inflessa_M.html" title="Equazione 3.6.8">(3.6.8)</a> come segue</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-M \amp=\int_{A} \sigma\,y \, dS = \int_{A} E\varepsilon \,y \,dS  =  \int_{A} E\left(- y \frac{d^2 w}{dx^2} \right)  \,y \,dS\\
-\amp= E \int_{A} y^2 \,dS \left(- \frac{d^2 w}{dx^2} \right)  = EJ\, \chi \,,
-\end{align*}
-</div>
-<p data-braille="continuation">e quindi</p>
+<p>A questo punto la definizione del modello è praticamente completa. Manca la definizione delle equazioni di equilibrio alle quali si può arrivare attraverso il principio dei lavori virtuali formulabile come segue</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation}
-M = EJ\, \chi \,.\tag{3.6.10}
+\int_{l} N \delta\varepsilon \,dx = \int_{l} p\,\delta u\, dx + H_{0} \,\func{\delta u}{0} +  H_{l} \,\func{\delta u}{l}\,, \quad \forall\,\delta u \;\left(\delta\varepsilon = \frac{d\delta u}{d x}\right)\,.\tag{3.5.7}
 \end{equation}
 </div>
-<p data-braille="continuation">Relazione che evidenzia come il coefficiente di proporzionalità che definisce il legame fra \(M\) ed \(\chi\) sia dato dal prodotto fra il modulo di Young del materiale ed il momento d'inerzia della sezione della trave, \(J =\int_{A} y^2 \,dS\text{.}\)</p>
-<span class="incontext"><a href="bent_beam_sec_elasticity_chap_it.html#p-313">in-context</a></span>
+<p data-braille="continuation">La relazione appena scritta, dove si è tralasciato di esplicitare le dipendenze dalla variabile \(x\text{,}\) può essere manipolata effettuando i seguenti passaggi</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\int_{l} N \delta\varepsilon \,dx \amp= \int_{l} p\,\delta u\, dx + H_{0} \,\func{\delta u}{0} +  H_{l} \,\func{\delta u}{l}\\
+\int_{l} N \frac{d\delta u}{d x} \,dx \amp= \int_{l} p\,\delta u\, dx + H_{0} \,\func{\delta u}{0} +  H_{l} \,\func{\delta u}{l}\\
+\left[N\,\delta u \right]_0^l - \int_{l}  \frac{dN}{d x}\delta u \,dx \amp= \int_{l} p\,\delta u\, dx + H_{0} \,\func{\delta u}{0} +  H_{l} \,\func{\delta u}{l}\\
+\int_{l}  \frac{dN}{d x}\delta u + \int_{l} p\,\delta u\, dx \,dx \amp= \left[N\,\delta u \right]_0^l - H_{0} \,\func{\delta u}{0} -  H_{l} \,\func{\delta u}{l}\\
+\int_{l} \left( \frac{dN}{d x} + p\right)\delta u\, dx \amp= \func{N}{l}\,\func{\delta u}{l} - \func{N}{0}\,\func{\delta u}{0} - H_{0} \,\func{\delta u}{0} -  H_{l} \,\func{\delta u}{l}\\
+\int_{l} \left( \frac{dN}{d x} + p\right)\delta u\, dx \amp= \left(\func{N}{l}-  H_{l}\right)\func{\delta u}{l} - \left(\func{N}{0} + H_{0} \right)\func{\delta u}{0} 
+\end{align*}
+</div>
+<p data-braille="continuation">E quindi si ottiene la seguente scrittura del principio dei lavori virtuali in termini di</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\int_{l} \left( \frac{dN}{d x} + p\right)\delta u\, dx = \left(\func{N}{l}-  H_{l}\right)\func{\delta u}{l} - \left(\func{N}{0} + H_{0} \right)\func{\delta u}{0}\,,\quad \forall\,\delta u\,.\tag{3.5.8}
+\end{equation}
+</div>
+<p data-braille="continuation">Il soddisfacimento di tale espressione per qualsiasi spostamento virtuale \(\delta u\) implica il soddisfacimento dell'equazione</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\frac{dN}{d x} + p = 0\,,\tag{3.5.9}
+\end{equation}
+</div>
+<p data-braille="continuation">in ogni punto della linea d'asse e il soddisfacimento delle condizioni al contorno</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align}
+\func{N}{0} \amp=  -H_{0}\,,\tag{3.5.10}\\
+\func{N}{l} \amp=  H_{l}\,,\tag{3.5.11}
+\end{align}
+</div>
+<p data-braille="continuation">sugli estremi della linea d'asse.</p>
+<span class="incontext"><a href="stretched_beam_sec_elasticity_chap_it.html#p-313">in-context</a></span>
 </body>
 </html>

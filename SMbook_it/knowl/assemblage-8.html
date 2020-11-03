@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-15T18:45:00+02:00       *-->
+<!--*       on 2020-11-03T08:24:07+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,8 +15,8 @@
 </head>
 <body>
 <article class="assemblage assemblage-like"><h6 class="heading"><span class="title">calcolo del determinate di trasformazioni e relativa verifica di ammissibilità.</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Per le trasformazioni bidimensionali considerate anche negli esempi precedenti si riportano le istruzioni MATLAB per il calcolo del determinante e per la verifica di ammissibità della trasformazione. Si ricava anche un plottaggio del valore del determinante sul dominio definito da \(-5 &lt;  X_1 &lt; 5\text{,}\) \(-5 &lt;  X_2 &lt; 5\text{.}\)</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">Istruzioni MATLAB per la Trasformazione 1. <figure class="listing figure-like"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
+<p xmlns:svg="http://www.w3.org/2000/svg">Per le trasformazioni bidimensionali considerate anche negli esempi precedenti si riportano le istruzioni MATLAB® per il calcolo del determinante e per la verifica di ammissibità della trasformazione. Si ricava anche un plottaggio del valore del determinante sul dominio definito da \(-5 &lt;  X_1 &lt; 5\text{,}\) \(-5 &lt;  X_2 &lt; 5\text{.}\)</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Istruzioni MATLAB® per la Trasformazione 1. <figure class="listing figure-like"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
 F = [T1([1; 0]) T1([0; 1])];
 syms detF(X1, X2);
 detF(X1, X2) = det(F);
@@ -29,7 +29,7 @@ surface(X,Y,detF(X,Y))
 </b></pre>
 <figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.5.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <p xmlns:svg="http://www.w3.org/2000/svg">Analoghe istruzioni possono essere individuate anche per le Trasformazioni 2, 3 e 4 che verificano anch'esse la condizione di ammissibilità essendo caratterizzate da un determinante costante e maggiore di zero.</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">Istruzioni MATLAB per la trasformazione \(x_1 = X_1^3\,,\; x_2 = X_2^3\text{.}\) <figure class="listing figure-like"><pre class="console"><b>syms T1(X1, X2);
+<p xmlns:svg="http://www.w3.org/2000/svg">Istruzioni MATLAB® per la trasformazione \(x_1 = X_1^3\,,\; x_2 = X_2^3\text{.}\) <figure class="listing figure-like"><pre class="console"><b>syms T1(X1, X2);
 T1(X1, X2) = X1^3; 
 
 syms T2(X1, X2);

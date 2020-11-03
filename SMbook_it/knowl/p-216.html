@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-15T18:45:01+02:00       *-->
+<!--*       on 2020-11-03T08:24:08+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,24 +15,32 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p>Si moltiplichi scalarmente l'equazione <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equazione 2.3.10">(2.3.10)</a> per un campo vettoriale generico \(\vec{v}\) e si integri sul corpo in esame \(\body\) (per la continuità tale operazione potrebbe essere effettuata su qualsiasi sottoinsieme di \(\body\)). Dal momento che l'equazione <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equazione 2.3.10">(2.3.10)</a> deve essere vera per qualsiasi \(\vec{x}\text{,}\) allora</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\int_{\body} \left( \text{div}\tens{\sigma} + \vec{b} \right) \cdot \vec{v} \,dv = 0\,,\quad \forall\vec{v}\,,\tag{2.5.1}
-\end{equation}
-</div>
-<p data-braille="continuation">dove \(\vec{v}\) è un campo vettoriale continuo e differenziabile definito sul corpo \(\body\text{.}\) Per quanto già mostrato nel video sulla divergenza è possibile scrivere</p>
+<p>L'aggetivazione  “pura” non deve trarre in inganno in quanto vale solo per la disposizione delle direzioni principali appena descritta. È sufficiente infatti assumere una disposizione differente per le direzioni principali, ad esempio ottenuta con una rotazione generica intorno all'asse \(\vec{e}_3\text{,}\) per avere</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\text{div}\left(\tens{\sigma}\vec{v}\right) = \text{div}\tens{\sigma} \cdot \vec{v} + \tens{\sigma} : \tens{\nabla v}\,,
+\tens{\sigma} = \sigma \, \vec{s}_1 \otimes \vec{s}_1\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">da cui si ricava</p>
+<p data-braille="continuation">con</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\text{div}\tens{\sigma} \cdot \vec{v} = \text{div}\left(\tens{\sigma}\vec{v}\right) - \tens{\sigma} : \tens{\nabla v} \,.
+\matWp{s}{1} = 
+\left[\begin{array}{c}
+\cos{\alpha}\\\sin{\alpha}\\0
+\end{array}\right]\,.
 \end{equation*}
 </div>
-<span class="incontext"><a href="plv_sec_stress_chap_it.html#p-216">in-context</a></span>
+<p data-braille="continuation">Da cui deriva, per il tensore \(\tens{\sigma}\text{,}\) la seguente rappresentazione per componenti</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\mat{\sigma} = \sigma
+\left[\begin{array}{ccc}
+\cos{\alpha}^2 \amp \cos{\alpha}\sin{\alpha} \amp 0 \\
+\sin{\alpha}\cos{\alpha} \amp \sin{\alpha}^2 \amp 0 \\
+0 \amp 0 \amp 0
+\end{array}\right]\,.
+\end{equation*}
+</div>
+<span class="incontext"><a href="stress_analysis_sec_stress_chap_it.html#p-216">in-context</a></span>
 </body>
 </html>

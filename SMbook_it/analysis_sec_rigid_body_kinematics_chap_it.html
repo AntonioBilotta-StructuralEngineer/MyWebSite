@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-15T18:44:58+02:00       *-->
+<!--*       on 2020-11-03T08:24:05+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -98,9 +98,7 @@ MathJax.Hub.Config({
 </div></div>
 <nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contenuti</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="solid_mechnics_book_index_it.html" title="Indice">Indice</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="constraints_sec_rigid_body_kinematics_chap_it.html" title="Precedente">Prec</a><a id="upbutton" class="up-button button toolbar-item" href="rigid_body_kinematics_chap_it.html" title="Sopra">Su</a><a id="nextbutton" class="next-button button toolbar-item" href="analysis_examples_sec_rigid_body_kinematics_chap_it.html" title="Successivo">Succ</a></span>
-</div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contenuti</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="constraints_sec_rigid_body_kinematics_chap_it.html" title="Precedente">Prec</a><a id="upbutton" class="up-button button toolbar-item" href="rigid_body_kinematics_chap_it.html" title="Sopra">Su</a><a id="nextbutton" class="next-button button toolbar-item" href="analysis_examples_sec_rigid_body_kinematics_chap_it.html" title="Successivo">Succ</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
 <button class="sidebar-left-toggle-button button toolbar-item active">Contenuti</button><a class="previous-button toolbar-item button" href="constraints_sec_rigid_body_kinematics_chap_it.html" title="Precedente">Prec</a><a class="up-button button toolbar-item" href="rigid_body_kinematics_chap_it.html" title="Sopra">Su</a><a class="next-button button toolbar-item" href="analysis_examples_sec_rigid_body_kinematics_chap_it.html" title="Successivo">Succ</a>
@@ -115,6 +113,7 @@ MathJax.Hub.Config({
 <li><a href="dedication_it.html" data-scroll="dedication_it">Dedica</a></li>
 <li><a href="acknowledgement_it.html" data-scroll="acknowledgement_it">Ringraziamenti</a></li>
 <li><a href="preface_it.html" data-scroll="preface_it">Prefazione</a></li>
+<li><a href="references_frontmatter_en.html" data-scroll="references_frontmatter_en">utilizzo di MATLAB®</a></li>
 </ul>
 </li>
 <li class="link part"><a href="continuum_mechanics_it.html" data-scroll="continuum_mechanics_it"><span class="codenumber">I</span> <span class="title">meccanica del continuo</span></a></li>
@@ -184,9 +183,6 @@ MathJax.Hub.Config({
 <li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it">calcolo e diagrammi delle sollecitazioni</a></li>
 </ul>
 </li>
-<li class="link backmatter"><a href="backmatter_it.html" data-scroll="backmatter_it"><span class="title">Back Matter</span></a></li>
-<li class="link"><a href="solid_mechnics_book_index_it.html" data-scroll="solid_mechnics_book_index_it"><span class="title">Indice</span></a></li>
-<li class="link"><a href="back_colophon_it.html" data-scroll="back_colophon_it"><span class="title">Colofone</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Scritto con PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="analysis_sec_rigid_body_kinematics_chap_it"><h2 class="heading hide-type">
@@ -195,7 +191,7 @@ MathJax.Hub.Config({
 <section class="subsection" id="subsection-92"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">4.3.1</span> <span class="title">matrice cinematica</span>
 </h3>
-<p id="p-374">Si consideri un sistema rigido caratterizzato da \(n\) coordinate lagrangiane e soggetto ad \(m\) condizioni di vincolo. Le equazioni di vincolo corrispondente sono esprimibili nel modo seguente</p>
+<p id="p-382">Si consideri un sistema rigido caratterizzato da \(n\) coordinate lagrangiane e soggetto ad \(m\) condizioni di vincolo. Le equazioni di vincolo corrispondente sono esprimibili nel modo seguente</p>
 <div class="displaymath">
 \begin{equation}
 \sum_{j=1}^n A_{ij}  q_j = d_i \qquad (i=1 \dots m)\,.\tag{4.3.1}
@@ -210,10 +206,10 @@ MathJax.Hub.Config({
 <p data-braille="continuation">dove \(\mat{A}\text{,}\) di dimensioni \(m \times n\text{,}\) è la matrice cinematica del sistema, \(\vec{q}\text{,}\) di dimensione \(n\text{,}\) è il vettore che raccoglie le coordinate lagrangiane e \(\vec{d}\text{,}\) di dimensione \(m\text{,}\) è il vettore dei cedimenti assegnati. <article class="note remark-like" id="note-2"><h6 class="heading">
 <span class="type">Nota</span><span class="space"> </span><span class="codenumber">4.3.1</span><span class="period">.</span>
 </h6>
-<p id="p-375">Le componenti del vettore \(\vec{d}\) possono assumere indifferentemente valori nulli o non nulli. Il caso tipico è comunque il caso di cedimento assegnato nullo.</p></article></p></section><section class="subsection" id="subsection-93"><h3 class="heading hide-type">
+<p id="p-383">Le componenti del vettore \(\vec{d}\) possono assumere indifferentemente valori nulli o non nulli. Il caso tipico è comunque il caso di cedimento assegnato nullo.</p></article></p></section><section class="subsection" id="subsection-93"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">4.3.2</span> <span class="title">classificazione cinematica</span>
 </h3>
-<p id="p-376">Il sistema lineare <a class="xref" data-knowl="./knowl/kinematik_system_eq.html" title="Equazione 4.3.2">(4.3.2)</a> viene utilizzato per il calcolo dei parametri lagrangiani \(\vec{q}\text{.}\) A tal fine è utile definire, sulla base delle condizioni di solvibilità del sistema, una classificazione cinematica dei stistemi. Sia \(p=\text{min}(n, m)\text{,}\) allora possono verificarsi i seguenti casi.</p>
+<p id="p-384">Il sistema lineare <a class="xref" data-knowl="./knowl/kinematik_system_eq.html" title="Equazione 4.3.2">(4.3.2)</a> viene utilizzato per il calcolo dei parametri lagrangiani \(\vec{q}\text{.}\) A tal fine è utile definire, sulla base delle condizioni di solvibilità del sistema, una classificazione cinematica dei stistemi. Sia \(p=\text{min}(n, m)\text{,}\) allora possono verificarsi i seguenti casi.</p>
 <ul class="disc">
 <li id="li-125">\(\text{rango}\mat{A} == p\)<ul class="circle">
 <li id="li-126">\(n==m\text{:}\) sistema determinato;</li>
@@ -227,7 +223,7 @@ MathJax.Hub.Config({
 <article class="remark remark-like" id="remark-17"><h6 class="heading">
 <span class="type">Commento</span><span class="space"> </span><span class="codenumber">4.3.2</span><span class="period">.</span>
 </h6>
-<p id="p-377">Nel caso di sistema degenere una o più righe della matrice \(\mat{A}\) sono combinazione lineare delle altre. L'eliminazione delle righe dipendenti conduce ad un sistema con un numero inferiore di equazioni per il quale si può procedere con la soluzione ricadendo in uno dei tre casi visti per il sistema non degenere. Da un punto di vista meccanico tale situazione non necessariamente è sintomo di un errore ma può essere determinata da uno o più gradi di vincolo eliminabili senza modificare le condizioni cinematiche applicate al sistema.</p></article></section></section></div></main>
+<p id="p-385">Nel caso di sistema degenere una o più righe della matrice \(\mat{A}\) sono combinazione lineare delle altre. L'eliminazione delle righe dipendenti conduce ad un sistema con un numero inferiore di equazioni per il quale si può procedere con la soluzione ricadendo in uno dei tre casi visti per il sistema non degenere. Da un punto di vista meccanico tale situazione non necessariamente è sintomo di un errore ma può essere determinata da uno o più gradi di vincolo eliminabili senza modificare le condizioni cinematiche applicate al sistema.</p></article></section></section></div></main>
 </div>
 </body>
 </html>

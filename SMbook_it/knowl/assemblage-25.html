@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-15T18:45:02+02:00       *-->
+<!--*       on 2020-11-03T08:24:09+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,7 +14,7 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="assemblage assemblage-like"><p xmlns:svg="http://www.w3.org/2000/svg">Le seguenti istruzioni MATLAB consentono il calcolo della soluzione \(\func{w}{x}\) e del relativo momento flettente  \(\func{M}{x}\text{.}\) <figure class="listing figure-like"><pre class="console"><b>syms w(x) EJ F l;
+<article class="assemblage assemblage-like"><p xmlns:svg="http://www.w3.org/2000/svg">Le seguenti istruzioni MATLAB® consentono il calcolo della soluzione \(\func{w}{x}\) e del relativo momento flettente  \(\func{M}{x}\text{.}\) <figure class="listing figure-like"><pre class="console"><b>syms w(x) EJ F l;
 ode = EJ*diff(w,x,4) == 0;
 D1w = diff(w,x,1);
 D2w = diff(w,x,2);
@@ -28,7 +28,7 @@ sol = dsolve(ode,conds)
 M = -EJ*diff(sol,x,2)
 </b></pre>
 <figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.8.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<p xmlns:svg="http://www.w3.org/2000/svg">Lo spostamento dell'asse della trave può essere visualizzato con le seguenti istruzioni MATLAB. <figure class="listing figure-like"><pre class="console"><b>syms w(x);
+<p xmlns:svg="http://www.w3.org/2000/svg">Lo spostamento dell'asse della trave può essere visualizzato con le seguenti istruzioni MATLAB®. <figure class="listing figure-like"><pre class="console"><b>syms w(x);
 EJ = 1;
 F = 1;
 l = 1;

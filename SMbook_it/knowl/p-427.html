@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-15T18:45:03+02:00       *-->
+<!--*       on 2020-11-03T08:24:10+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,18 +15,50 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p>Il bipendolo per le componenti orizzontale e verticale si comporta come il carrello. Il vincolo ulteriore sulla rotazione determina anche la presenza della componte coppia. Pertanto si avrà</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-H \neq 0 \,, \quad V \neq 0 \,,\quad \mathcal{M} \neq 0\,,\tag{5.3.8}
-\end{equation}
-</div>
-<p data-braille="continuation">dove</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\frac{V}{H} = \tan{\alpha}\,.\tag{5.3.9}
-\end{equation}
-</div>
-<span class="incontext"><a href="constraints_sec_rigid_body_statics_chap_it.html#p-427">in-context</a></span>
+<p xmlns:svg="http://www.w3.org/2000/svg">Le seguenti istruzioni MATLAB® consentono di valutare le risultanti delle forze orizzontali, delle forze verticali e dei momenti a partire dai carichi applicati sui singoli punti di un corpo rigido. <figure class="listing figure-like"><pre class="console"><b>% vettore delle risultanti =
+% [orizzontale; verticale; momento]
+R = zeros(3,1);
+
+% funzione per il calcolo del momento
+momento = @(X0, X, Carico)...
+    -Carico(1)*(X(2)-X0(2))+Carico(2)*(X(1)-X0(1));
+
+% coordinate dei punti sui quali sono applicati i carichi
+syms L;
+
+A = [0; 0];
+B = [L; 0];
+C = [L; L/2];
+
+% scelta del polo
+POLO = A;
+
+% per ogni punto si assegna il vettore Carico = [F1; F2; M]
+% e si sommano i contributi alla risultante
+syms F;
+
+CaricoA = [F; F; 0];
+R = R + CaricoA;
+R(3) = R(3) + momento(POLO, A, CaricoA);
+R
+
+CaricoB = [-F; -F; 0];
+R = R + CaricoB;
+R(3) = R(3) + momento(POLO, B, CaricoB);
+R
+
+CaricoC = [-F; 2*F; F*L];
+R = R + CaricoC;
+R(3) = R(3) + momento(POLO, C, CaricoC);
+R
+
+if and(and(R(1) == 0, R(2) == 0), R(3) == 0)
+    disp('Sistema equilibrato')
+else
+    disp('Sistema non equilibrato')
+end
+</b></pre>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">5.2.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<span class="incontext"><a href="planecase_sec_rigid_body_statics_chap_it.html#p-427">in-context</a></span>
 </body>
 </html>

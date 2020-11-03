@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-15T18:45:02+02:00       *-->
+<!--*       on 2020-11-03T08:24:09+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,21 +15,25 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p>Per lo schema assegnato l'equazione differenziale <a class="xref" data-knowl="./knowl/bent_beam_navier.html" title="Equazione 3.6.34">(3.6.34)</a> fornisce</p>
+<p>La presenza dell'incremento di temperatura determina un allungamento della trave pari a</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
--EJ\,\frac{d^4w}{dx^4} + q = 0\,,
+\Delta l_T = \alpha \Delta T \,l\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">dove il carico ripartito ha un valore costante. Anche in questo caso le condizioni al contorno sono di tipo cinematico all'estremo \(x=0\) e di tipo statico all'estremo \(x=l\text{:}\)</p>
+<p data-braille="continuation">dove \(\alpha\) rappresenta il coefficiente di dilatazione termica del materiale. Tale allungamento è comunque impedito dalla presenza dei vincoli pertanto la trave sarà anche soggetta ad uno sforzo normale calcolabile dalla seguente equazione</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\amp \func{w}{0} = 0\,,\\
-\amp \func{\frac{dw}{dx}}{0} = 0\,,\\
-\amp \func{\frac{d M}{dx}}{l} = \frac{d}{dx}\left(-EJ\,\func{\frac{d^2w}{dx^2}}{l}\right) = -EJ\,\func{\frac{d^3w}{dx^3}}{l}  = 0\,,\\
-\amp \func{M}{l} = -EJ\,\func{\frac{d^2w}{dx^2}}{l} = 0\,.
-\end{align*}
+\begin{equation*}
+\Delta l_T + \Delta l_N = \alpha \Delta T \,l + \frac{N}{EA} \,l = 0\,,
+\end{equation*}
 </div>
-<span class="incontext"><a href="bent_beam_applications_sec_elasticity_chap_it.html#p-336">in-context</a></span>
+<p data-braille="continuation">da cui si ottiene</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+N = - EA \,\alpha \Delta T\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">soluzione che mostra lo stato di compressione determinato dall'allungamento impedito. La soluzione in termini di spostamento è identicamente nulla su tutto la lunghezza.</p>
+<span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#p-336">in-context</a></span>
 </body>
 </html>

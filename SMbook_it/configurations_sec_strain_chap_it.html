@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-15T18:44:54+02:00       *-->
+<!--*       on 2020-11-03T08:24:01+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -98,9 +98,7 @@ MathJax.Hub.Config({
 </div></div>
 <nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contenuti</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="solid_mechnics_book_index_it.html" title="Indice">Indice</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="strain_chap_it.html" title="Precedente">Prec</a><a id="upbutton" class="up-button button toolbar-item" href="strain_chap_it.html" title="Sopra">Su</a><a id="nextbutton" class="next-button button toolbar-item" href="transformations_sec_strain_chap_it.html" title="Successivo">Succ</a></span>
-</div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contenuti</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="strain_chap_it.html" title="Precedente">Prec</a><a id="upbutton" class="up-button button toolbar-item" href="strain_chap_it.html" title="Sopra">Su</a><a id="nextbutton" class="next-button button toolbar-item" href="transformations_sec_strain_chap_it.html" title="Successivo">Succ</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
 <button class="sidebar-left-toggle-button button toolbar-item active">Contenuti</button><a class="previous-button toolbar-item button" href="strain_chap_it.html" title="Precedente">Prec</a><a class="up-button button toolbar-item" href="strain_chap_it.html" title="Sopra">Su</a><a class="next-button button toolbar-item" href="transformations_sec_strain_chap_it.html" title="Successivo">Succ</a>
@@ -115,6 +113,7 @@ MathJax.Hub.Config({
 <li><a href="dedication_it.html" data-scroll="dedication_it">Dedica</a></li>
 <li><a href="acknowledgement_it.html" data-scroll="acknowledgement_it">Ringraziamenti</a></li>
 <li><a href="preface_it.html" data-scroll="preface_it">Prefazione</a></li>
+<li><a href="references_frontmatter_en.html" data-scroll="references_frontmatter_en">utilizzo di MATLAB®</a></li>
 </ul>
 </li>
 <li class="link part"><a href="continuum_mechanics_it.html" data-scroll="continuum_mechanics_it"><span class="codenumber">I</span> <span class="title">meccanica del continuo</span></a></li>
@@ -184,16 +183,13 @@ MathJax.Hub.Config({
 <li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it">calcolo e diagrammi delle sollecitazioni</a></li>
 </ul>
 </li>
-<li class="link backmatter"><a href="backmatter_it.html" data-scroll="backmatter_it"><span class="title">Back Matter</span></a></li>
-<li class="link"><a href="solid_mechnics_book_index_it.html" data-scroll="solid_mechnics_book_index_it"><span class="title">Indice</span></a></li>
-<li class="link"><a href="back_colophon_it.html" data-scroll="back_colophon_it"><span class="title">Colofone</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Scritto con PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="configurations_sec_strain_chap_it"><h2 class="heading hide-type">
 <span class="type">Sezione</span> <span class="codenumber">1.1</span> <span class="title">configurazioni</span>
 </h2>
 <figure class="figure figure-like" id="Kinematics_01_fig"><div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="images/Kinematics_01.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.1.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-17">L'oggetto dell'analisi cinematica è un corpo continuo che sarà denominato con il simbolo \(\body\text{.}\) Ciascun punto del corpo occupa nello spazio una posizione che, fissata una terna ortonormale di riferimento \(\vec{e}_a\) (\(a=1,2,3\)), è individuata da un vettore. A tal riguardo parleremo di due <em class="emphasis">configurazioni</em>:</p>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.1.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-25">L'oggetto dell'analisi cinematica è un corpo continuo che sarà denominato con il simbolo \(\body\text{.}\) Ciascun punto del corpo occupa nello spazio una posizione che, fissata una terna ortonormale di riferimento \(\vec{e}_a\) (\(a=1,2,3\)), è individuata da un vettore. A tal riguardo parleremo di due <em class="emphasis">configurazioni</em>:</p>
 <ul class="disc">
 <li id="li-6">la <em class="emphasis">configurazione di riferimento</em> \(\body_0\text{,}\) ovvero l'insieme delle posizioni \(\vec{X}\) occupate dai punti del corpo prima del moto;</li>
 <li id="li-7">la <em class="emphasis">configurazione corrente</em> \(\body\text{,}\) ovvero l'insieme delle posizioni \(\vec{x}\) occupate dai punti del corpo per effetto del moto.</li>
@@ -208,9 +204,9 @@ x_1 \vec{e}_1 + x_2 \vec{e}_2 + x_3 \vec{e}_3\\
 X_a \vec{e}_a\,,\quad x_a \vec{e}_a\,.
 \end{gather*}
 </div>
-<p id="p-18"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-1" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/MT00uOUP4X8?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p>
-<p id="p-19">Si riportano alcuni esempi di istruzioni MATLAB utilizzabili per definire ed utilizzare vettori.</p>
-<article class="assemblage assemblage-like" id="assemblage-1"><p id="p-20">Istruzioni per la generazione di vettori riga. <figure class="listing figure-like" id="listing-1"><pre class="console"><b>u = [1 2 3]
+<p id="p-26"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-1" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/MT00uOUP4X8?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p>
+<p id="p-27">Si riportano alcuni esempi di istruzioni MATLAB® utilizzabili per definire ed utilizzare vettori.</p>
+<article class="assemblage assemblage-like" id="assemblage-1"><p id="p-28">Istruzioni per la generazione di vettori riga. <figure class="listing figure-like" id="listing-1"><pre class="console"><b>u = [1 2 3]
 v = 4:6
 w = u + v
 x = 0.5
@@ -227,7 +223,7 @@ u(1,2)
 u(2,1)
 </b></pre>
 <figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.1.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<p id="p-21">Istruzioni per la generazione di vettori colonna (il formato con cui si intendono solitamente i vettori in Meccanica). <figure class="listing figure-like" id="listing-2"><pre class="console"><b>u = [1; 2; 3]
+<p id="p-29">Istruzioni per la generazione di vettori colonna (il formato con cui si intendono solitamente i vettori in Meccanica). <figure class="listing figure-like" id="listing-2"><pre class="console"><b>u = [1; 2; 3]
 v = (linspace(4,6,3))'
 w = u + v
 x = 0.5

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-15T18:45:01+02:00       *-->
+<!--*       on 2020-11-03T08:24:08+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,19 +15,25 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p>Il seguente stato tensionale</p>
+<p>Quanto discusso per le componenti del tensore vale anche per una giacitura generica \(\vec{n}\text{.}\) Come stabilito dal Teorema della tensione di Cauchy si ha</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\tens{\sigma} = \sigma \, \vec{e}_1 \otimes \vec{e}_1\,,\quad
-\mat{\sigma} =
-\left[\begin{array}{ccc}
-\sigma \amp 0 \amp 0 \\
-0 \amp 0 \amp 0 \\
-0 \amp 0 \amp 0
-\end{array}\right]\,,
+\vec{t}_{\vec{n}} = \tens{\sigma}\,\vec{n}\,.
 \end{equation*}
 </div>
-<p data-braille="continuation">caratterizzato quindi da tensioni principali pari a \(\sigma_1 = \sigma\text{,}\) \(\sigma_2 = 0\text{,}\) \(\sigma_3 = 0\) e direzioni principali individuate dall'asse \(\vec{e}_1\) e dal piano definito dalgi altri due assi della terna, viene di solito etichettato, in base al segno di \(\sigma\text{,}\) <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">stato di trazione o compressione “pura”</em>.</p>
+<p data-braille="continuation">Da cui si può calcolare la componente normale della trazione</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\sigma = \vec{t}_{\vec{n}} \cdot \vec{n} = \tens{\sigma}\,\vec{n} \cdot \vec{n}\tag{2.4.1}
+\end{equation}
+</div>
+<p data-braille="continuation">e la componente tangenziale relativa ad una direzione \(\vec{m}\) ortogonale ad \(\vec{n}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\tau = \vec{t}_{\vec{n}} \cdot \vec{m} = \tens{\sigma}\,\vec{n} \cdot \vec{m} \,.\tag{2.4.2}
+\end{equation}
+</div>
+<p data-braille="continuation">Per denotare le due componenti si è utilizzata la convenzione, spesso adottata in ambito ingegneristico, che indica le componenti normale e tangenziale rispettivamente con i simboli \(\sigma\) e \(\tau\text{.}\) Il vettore \(\vec{m}\text{,}\) come \(\vec{n}\text{,}\) è un vettore di lunghezza unitaria.</p>
 <span class="incontext"><a href="stress_analysis_sec_stress_chap_it.html#p-207">in-context</a></span>
 </body>
 </html>

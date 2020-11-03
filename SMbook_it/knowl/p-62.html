@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-15T18:44:59+02:00       *-->
+<!--*       on 2020-11-03T08:24:07+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,14 +15,21 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">In merito alla Trasformazione 1 già utilizzata negli esempi precedenti, il campo di spostamento ed il relativo gradiente possono essere valutati sulla base delle seguenti istruzioni MATLAB. Si tenga presente che, per la linearità delle trasformazioni coinvolte, i gradienti vengono valutati come matrice associata alla trasformazione. <figure class="listing figure-like"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
-F = [T1([1; 0]) T1([0; 1])]
-Grad_u = F - diag([1 1])
-
-u1 = @(X) T1(X) - X;
-Grad_u = [u1([1; 0]) u1([0; 1])]
-</b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.4.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<span class="incontext"><a href="displacement_sec_strain_chap_it.html#p-62">in-context</a></span>
+<p>Il calcolo delle derivate parziali</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\regulardiff{\chi_1}{X_1} = 3\,X_1^2\,,\amp\regulardiff{\chi_1}{X_2} = 0\,,\\
+\regulardiff{\chi_2}{X_1} = 0\,,\amp\regulardiff{\chi_2}{X_2} = 3\,X_2^2
+\end{align*}
+</div>
+<p data-braille="continuation">consente la valutazione del gradiente della trasformazione</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\func{\mat{F}}{\vec{X}} =
+\left[\begin{array}{cc} \regulardiff{\chi_1}{X_1} \amp \regulardiff{\chi_1}{X_2} \\ \regulardiff{\chi_2}{X_1}  \amp \regulardiff{\chi_2}{X_2}  \end{array}\right] =
+\left[\begin{array}{cc}  3\,X_1^2 \amp 0 \\ 0  \amp  3\,X_2^2  \end{array}\right]
+\end{equation*}
+</div>
+<span class="incontext"><a href="gradient_sec_strain_chap_it.html#p-62">in-context</a></span>
 </body>
 </html>

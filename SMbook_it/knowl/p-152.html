@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-15T18:45:00+02:00       *-->
+<!--*       on 2020-11-03T08:24:07+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,14 +15,64 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p>Si consideri la seguente trasformazione</p>
+<p>Per spiegare la denominazione "rotazione infinitesima" che è stata data alla parte emisimmetrica del gradiente dello spostamento conviene discutere in concreto una trasformazione caratterizzata solo da una semplice rotazione. A tal fine si consideri una rotazione intorno all'asse \(\vec{e}_3\text{.}\) La parte significativa della trasformazione può essere discussa direttamente nel piano con</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-x_1 \amp= X_1^2\,,\\
-x_2 \amp= X_3^2\,,\\
-x_3 \amp= X_2 X_3\,.
+x_1 \amp = X_1\cos{\alpha} - X_2\sin{\alpha}\,,\\
+x_2 \amp = X_1\sin{\alpha} + X_2\cos{\alpha}\,.
 \end{align*}
 </div>
-<span class="incontext"><a href="exercises_sec_strain_chap_it.html#p-152">in-context</a></span>
+<p data-braille="continuation">Il campo di spostamento associato è</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+u_1 = x_1 - X_1 \amp = (X_1\cos{\alpha} - X_2\sin{\alpha}) - X_1\,,\\
+u_2 = x_2 - X_2 \amp = (X_1\sin{\alpha} + X_2\cos{\alpha}) - X_2\,.
+\end{align*}
+</div>
+<p data-braille="continuation">Con tali dati è possibile calcolare il gradiente della trasformazione che, nel caso specifico, è composto solo dalla rotazione</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\tens{F} = \tens{R}\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">dove, come già discusso nelle sezioni precedenti,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\mat{R} =
+\left[\begin{array}{cc}
+\cos{\alpha} \amp -\sin{\alpha} \\
+\sin{\alpha} \amp \cos{\alpha}
+\end{array}\right]\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">Inoltre</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\tens{F} = \tens{I} + \tens{\nabla u}\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">e quindi</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\tens{R} = \tens{I} + \tens{\nabla u} =  \tens{I} + \text{sym}\tens{\nabla u} + \text{skew}\tens{\nabla u}\,.\tag{1.9.11}
+\end{equation}
+</div>
+<p data-braille="continuation">Risultato che evidenzia la decomposizione del gradiente dello spostamento con</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\text{sym}\mat{\nabla u} =
+\left[\begin{array}{cc}
+\cos{\alpha} - 1 \amp 0 \\
+0 \amp \cos{\alpha} - 1 
+\end{array}\right]\,,\quad
+\text{skew}\mat{\nabla u} =
+\left[\begin{array}{cc}
+0 \amp -\sin{\alpha} \\
+\sin{\alpha} \amp 0 
+\end{array}\right]\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">ma ancora del tutto generico e che non fa riferimento agli spostamenti infinitesimi.</p>
+<span class="incontext"><a href="infinitesimal_sec_strain_chap_it.html#p-152">in-context</a></span>
 </body>
 </html>

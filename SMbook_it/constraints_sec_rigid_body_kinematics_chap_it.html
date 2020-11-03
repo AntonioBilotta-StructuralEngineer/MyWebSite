@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-15T18:44:58+02:00       *-->
+<!--*       on 2020-11-03T08:24:05+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -98,9 +98,7 @@ MathJax.Hub.Config({
 </div></div>
 <nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contenuti</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="solid_mechnics_book_index_it.html" title="Indice">Indice</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="description_sec_rigid_body_kinematics_chap_it.html" title="Precedente">Prec</a><a id="upbutton" class="up-button button toolbar-item" href="rigid_body_kinematics_chap_it.html" title="Sopra">Su</a><a id="nextbutton" class="next-button button toolbar-item" href="analysis_sec_rigid_body_kinematics_chap_it.html" title="Successivo">Succ</a></span>
-</div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contenuti</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="description_sec_rigid_body_kinematics_chap_it.html" title="Precedente">Prec</a><a id="upbutton" class="up-button button toolbar-item" href="rigid_body_kinematics_chap_it.html" title="Sopra">Su</a><a id="nextbutton" class="next-button button toolbar-item" href="analysis_sec_rigid_body_kinematics_chap_it.html" title="Successivo">Succ</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
 <button class="sidebar-left-toggle-button button toolbar-item active">Contenuti</button><a class="previous-button toolbar-item button" href="description_sec_rigid_body_kinematics_chap_it.html" title="Precedente">Prec</a><a class="up-button button toolbar-item" href="rigid_body_kinematics_chap_it.html" title="Sopra">Su</a><a class="next-button button toolbar-item" href="analysis_sec_rigid_body_kinematics_chap_it.html" title="Successivo">Succ</a>
@@ -115,6 +113,7 @@ MathJax.Hub.Config({
 <li><a href="dedication_it.html" data-scroll="dedication_it">Dedica</a></li>
 <li><a href="acknowledgement_it.html" data-scroll="acknowledgement_it">Ringraziamenti</a></li>
 <li><a href="preface_it.html" data-scroll="preface_it">Prefazione</a></li>
+<li><a href="references_frontmatter_en.html" data-scroll="references_frontmatter_en">utilizzo di MATLAB®</a></li>
 </ul>
 </li>
 <li class="link part"><a href="continuum_mechanics_it.html" data-scroll="continuum_mechanics_it"><span class="codenumber">I</span> <span class="title">meccanica del continuo</span></a></li>
@@ -184,22 +183,19 @@ MathJax.Hub.Config({
 <li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it">calcolo e diagrammi delle sollecitazioni</a></li>
 </ul>
 </li>
-<li class="link backmatter"><a href="backmatter_it.html" data-scroll="backmatter_it"><span class="title">Back Matter</span></a></li>
-<li class="link"><a href="solid_mechnics_book_index_it.html" data-scroll="solid_mechnics_book_index_it"><span class="title">Indice</span></a></li>
-<li class="link"><a href="back_colophon_it.html" data-scroll="back_colophon_it"><span class="title">Colofone</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Scritto con PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="constraints_sec_rigid_body_kinematics_chap_it"><h2 class="heading hide-type">
 <span class="type">Sezione</span> <span class="codenumber">4.2</span> <span class="title">vincoli</span>
 </h2>
-<p id="p-364">Il termine <em class="emphasis">vincolo</em> viene utilizzato per indicare un dispositivo che limita le possibilità di movimento di un sistema di corpi. Un generico sistema, ad esempio un sistema di corpi rigidi, viene descritto mediante \(n\) parametri, \(q_1, \dots q_n\text{,}\) che prendono il nome di <em class="emphasis">coordinate lagrangiane del sistema</em>. In questi termini, la generica condizione di vincolo viene espressa, nella forma più generica, nel modo seguente:</p>
+<p id="p-372">Il termine <em class="emphasis">vincolo</em> viene utilizzato per indicare un dispositivo che limita le possibilità di movimento di un sistema di corpi. Un generico sistema, ad esempio un sistema di corpi rigidi, viene descritto mediante \(n\) parametri, \(q_1, \dots q_n\text{,}\) che prendono il nome di <em class="emphasis">coordinate lagrangiane del sistema</em>. In questi termini, la generica condizione di vincolo viene espressa, nella forma più generica, nel modo seguente:</p>
 <div class="displaymath">
 \begin{equation}
 f\left[q_1, \dots, q_n, \dot{q}_1, \dots, \dot{q}_n, t\right] \leq 0.\tag{4.2.1}
 \end{equation}
 </div>
 <p data-braille="continuation">Dove compaiono, oltre alle coordinate lagrangiane, anche le loro derivate, \(\dot{q}_1, \dots, \dot{q}_n\text{,}\) rispetto al tempo.</p>
-<p id="p-365">Per gli sviluppi successivi è sufficiente considerare solo vincoli <em class="emphasis">fissi</em> (indipendenti dal tempo), <em class="emphasis">bilateri</em> (la condizione di vincolo si esprime mediante il segno di uguaglianza) e non <em class="emphasis">monolateri</em> (espressi mediante i segni di disegueglianza), <em class="emphasis">olonomi</em> (indipendenti dalle velocità) e non <em class="emphasis">sclerolonomi</em> (dipendenti dalle velocità) e <em class="emphasis">privi di attrito</em> (consentono completamente ciò che non vincolano), ovvero</p>
+<p id="p-373">Per gli sviluppi successivi è sufficiente considerare solo vincoli <em class="emphasis">fissi</em> (indipendenti dal tempo), <em class="emphasis">bilateri</em> (la condizione di vincolo si esprime mediante il segno di uguaglianza) e non <em class="emphasis">monolateri</em> (espressi mediante i segni di disegueglianza), <em class="emphasis">olonomi</em> (indipendenti dalle velocità) e non <em class="emphasis">sclerolonomi</em> (dipendenti dalle velocità) e <em class="emphasis">privi di attrito</em> (consentono completamente ciò che non vincolano), ovvero</p>
 <div class="displaymath">
 \begin{equation}
 f\left[q_1, q_2, \dots, q_n\right] = 0.\label{constraint_eq}\tag{4.2.2}
@@ -213,7 +209,7 @@ f\left[q_1, q_2, \dots, q_n\right] = 0.\label{constraint_eq}\tag{4.2.2}
 <span class="type">Sottosottosezione</span> <span class="codenumber">4.2.1.1</span> <span class="title">carrello</span>
 </h4>
 <figure class="figure figure-like" id="carrello_fig"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/vincolosemplice_carrello.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">4.2.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-366">Il carrello impone che lo spostamento del punto in cui è applicato può avvenire solo in direzione ortogonale all'asse del carrello:</p>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">4.2.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-374">Il carrello impone che lo spostamento del punto in cui è applicato può avvenire solo in direzione ortogonale all'asse del carrello:</p>
 <div class="displaymath">
 \begin{equation}
 \vec{u}_A \cdot \vec{n} = 0\label{carrello_eq}\tag{4.2.3}
@@ -241,7 +237,7 @@ u_{2A}  = 0\,.\tag{4.2.5}
 <span class="type">Sottosottosezione</span> <span class="codenumber">4.2.1.2</span> <span class="title">doppio bipendolo</span>
 </h4>
 <figure class="figure figure-like" id="doppiobipendolo_fig"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/vincolosemplice_doppiobipendolo.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">4.2.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-367">Il doppio bipendolo impone che la rotazione del punto di applicazione sia nulla, ovvero</p>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">4.2.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-375">Il doppio bipendolo impone che la rotazione del punto di applicazione sia nulla, ovvero</p>
 <div class="displaymath">
 \begin{equation}
 \varphi_{A}  = 0\,.\tag{4.2.6}
@@ -250,14 +246,14 @@ u_{2A}  = 0\,.\tag{4.2.5}
 <p data-braille="continuation"><article class="warning remark-like" id="warning-1"><h6 class="heading">
 <span class="type">Avvertenza</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="period">.</span>
 </h6>
-<p id="p-368">Nel caso di corpo rigido la rotazione non può variare da punto a punto e, pertanto, bloccare la rotazione in un punto vuol dire bloccarla su tutto il corpo. Detto in altro parole, per la cinematica di corpo rigido il punto di applicazione del vincolo non ha nessuna rilevanza.</p></article></p></section></section><section class="subsection" id="subsection-89"><h3 class="heading hide-type">
+<p id="p-376">Nel caso di corpo rigido la rotazione non può variare da punto a punto e, pertanto, bloccare la rotazione in un punto vuol dire bloccarla su tutto il corpo. Detto in altro parole, per la cinematica di corpo rigido il punto di applicazione del vincolo non ha nessuna rilevanza.</p></article></p></section></section><section class="subsection" id="subsection-89"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">4.2.2</span> <span class="title">vincoli esterni doppi</span>
 </h3>
 <section class="subsubsection" id="subsubsection-20"><h4 class="heading hide-type">
 <span class="type">Sottosottosezione</span> <span class="codenumber">4.2.2.1</span> <span class="title">cerniera o appoggio</span>
 </h4>
 <figure class="figure figure-like" id="cerniera_fig"><div class="image-box" style="width: 43%; margin-left: 28.5%; margin-right: 28.5%;"><img src="images/vincolodoppio_cerniera.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">4.2.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-369">La cerniera impone che nel punto di applicazione il vettore spostamento sia nullo</p>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">4.2.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-377">La cerniera impone che nel punto di applicazione il vettore spostamento sia nullo</p>
 <div class="displaymath">
 \begin{equation}
 \vec{u}_A = \vec0\,.\tag{4.2.7}
@@ -266,7 +262,7 @@ u_{2A}  = 0\,.\tag{4.2.5}
 <span class="type">Sottosottosezione</span> <span class="codenumber">4.2.2.2</span> <span class="title">bipendolo</span>
 </h4>
 <figure class="figure figure-like" id="bipendolo_fig"><div class="image-box" style="width: 55%; margin-left: 22.5%; margin-right: 22.5%;"><img src="images/vincolodoppio_bipendolo.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">4.2.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-370">Il bipendolo impone le condizioni</p>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">4.2.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-378">Il bipendolo impone le condizioni</p>
 <div class="displaymath">
 \begin{equation}
 \begin{split}
@@ -282,7 +278,7 @@ u_{2A}  = 0\,.\tag{4.2.5}
 <span class="type">Sottosottosezione</span> <span class="codenumber">4.2.3.1</span> <span class="title">incastro</span>
 </h4>
 <figure class="figure figure-like" id="incastro_fig"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/vincolotriplo_incastro.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">4.2.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-371">Infine l'incastro impone</p>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">4.2.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-379">Infine l'incastro impone</p>
 <div class="displaymath">
 \begin{equation}
 \begin{split}
@@ -293,12 +289,12 @@ u_{2A}  = 0\,.\tag{4.2.5}
 </div></section></section><section class="subsection" id="subsection-91"><h3 class="heading hide-type">
 <span class="type">Sottosezione</span> <span class="codenumber">4.2.4</span> <span class="title">vincoli interni</span>
 </h3>
-<p id="p-372">L'articolazione di due o più corpi rigidi può essere effettuata mediante dei dispositivi detti vincoli interni. A scopo esemplificativo, evitando di passare in rassegna tutti i possibili casi, si discute solo uno dei casi più ricorrenti.</p>
+<p id="p-380">L'articolazione di due o più corpi rigidi può essere effettuata mediante dei dispositivi detti vincoli interni. A scopo esemplificativo, evitando di passare in rassegna tutti i possibili casi, si discute solo uno dei casi più ricorrenti.</p>
 <section class="subsubsection" id="subsubsection-23"><h4 class="heading hide-type">
 <span class="type">Sottosottosezione</span> <span class="codenumber">4.2.4.1</span> <span class="title">cerniera interna</span>
 </h4>
 <figure class="figure figure-like" id="cerniera_interna_fig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/vincolointerno_cerniera.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">4.2.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-373">La presenza del vincolo interno è esprimibile mediante la condizione</p>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">4.2.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-381">La presenza del vincolo interno è esprimibile mediante la condizione</p>
 <div class="displaymath">
 \begin{equation}
 \vec{u}_{A} = \vec{u}_{A'}\,.\tag{4.2.10}

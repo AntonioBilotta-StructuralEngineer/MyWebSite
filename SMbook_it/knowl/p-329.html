@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-15T18:45:02+02:00       *-->
+<!--*       on 2020-11-03T08:24:09+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,24 +15,49 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p>La condizione di carico mostrata in Figura può essere descritta come segue</p>
+<p>Per l'assenza di carico ripartito l'equazione da risolvere diventa</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\func{p}{x} = \bar{p}\,\sin\left(\frac{2\pi\,x}{l}\right)
+EA\,\frac{d^2u}{dx^2} = 0\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">da cui, tramite l'equazione <a class="xref" data-knowl="./knowl/stretched_beam_navier.html" title="Equazione 3.5.21">(3.5.21)</a>, si ricava</p>
+<p data-braille="continuation">che ha come integrale generale</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-EA\,\frac{d^2u}{dx^2} + \bar{p}\,\sin\left(\frac{2\pi\,x}{l}\right) = 0
+\func{u}{x} = c_0 + c_1 x\,.
 \end{equation*}
 </div>
-<p data-braille="continuation">da soddisfare in ogni punto della trave. Le condizioni al contorno sono</p>
+<p data-braille="continuation">Le costanti di integrazione sono valutabili imponendo le condizioni al contorno</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
 \amp \func{u}{0} = 0\,,\\
-\amp \func{u}{l} = 0\,.
+\amp \func{N}{l} = EA\, \func{\frac{du}{dx}}{l} = F\,.
 \end{align*}
+</div>
+<p data-braille="continuation">Da cui si ottiene</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+c_0 = 0\,, \quad c_1 = \frac{F}{EA}\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">Quindi il campo di spostamento assume la seguente espressione</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\func{u}{x} = \frac{F}{EA} x\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">con cui è possibile valutare lo sforzo normale lungo l'asta e, ad esempio, lo spostamento all'estremo libero</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\amp \func{N}{x} = EA \func{\frac{du}{dx}}{x} = F\,,\\
+\amp \func{u}{l} = \frac{F}{EA} l\,,
+\end{align*}
+</div>
+<p data-braille="continuation">quest'ultimo coincide con l'allungamento totale dell'asta valutabile anche come segue</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\Delta l = \int_l \varepsilon \,dx =  \int_l \frac{du}{dx} \,dx =  \int_l \frac{F}{EA} \,dx =  \frac{F}{EA} \int_l \,dx = \frac{F}{EA} l\,.
+\end{equation*}
 </div>
 <span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#p-329">in-context</a></span>
 </body>

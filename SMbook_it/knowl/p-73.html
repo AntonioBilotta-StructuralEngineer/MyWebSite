@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-15T18:45:00+02:00       *-->
+<!--*       on 2020-11-03T08:24:07+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,14 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Analoghe istruzioni possono essere individuate anche per le Trasformazioni 2, 3 e 4 che verificano anch'esse la condizione di ammissibilità essendo caratterizzate da un determinante costante e maggiore di zero.</p>
-<span class="incontext"><a href="determinant_sec_strain_chap_it.html#p-73">in-context</a></span>
+<p xmlns:svg="http://www.w3.org/2000/svg">Istruzioni MATLAB® per la Trasformazione 4. <figure class="listing figure-like"><pre class="console"><b>T4 = @(X) [X(1)+X(2); X(2)];
+F = [T4([1; 0]) T4([0; 1])]
+Grad_u = F - diag([1 1])
+
+u4 = @(X) T4(X) - X;
+Grad_u = [u4([1; 0]) u4([0; 1])]
+</b></pre>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.4.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<span class="incontext"><a href="displacement_sec_strain_chap_it.html#p-73">in-context</a></span>
 </body>
 </html>

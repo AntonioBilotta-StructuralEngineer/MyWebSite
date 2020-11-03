@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-15T18:45:02+02:00       *-->
+<!--*       on 2020-11-03T08:24:09+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,20 +15,28 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Le seguenti istruzioni MATLAB consentono il calcolo della soluzione \(\func{w}{x}\) e del relativo momento flettente  \(\func{M}{x}\text{.}\) <figure class="listing figure-like"><pre class="console"><b>syms w(x) EJ F l;
-ode = EJ*diff(w,x,4) == 0;
-D1w = diff(w,x,1);
-D2w = diff(w,x,2);
-D3w = diff(w,x,3);
-cond1 = w(0) == 0;
-cond2 = D1w(0) == 0;
-cond3 = -EJ*D3w(l) == F;
-cond4 = -EJ*D2w(l) == 0;
-conds = [cond1 cond2 cond3 cond4];
-sol = dsolve(ode,conds)
-M = -EJ*diff(sol,x,2)
-</b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.8.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<span class="incontext"><a href="bent_beam_applications_sec_elasticity_chap_it.html#p-333">in-context</a></span>
+<p>L'equazione di equilibrio, <a class="xref" data-knowl="./knowl/stretched_beam_navier.html" title="Equazione 3.5.21">(3.5.21)</a>, applicata ai due sottodomini della trave sono formulabili come segue</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\amp EA\,\frac{d^2u_a}{dx^2} = 0\,,\quad 0 \leq x \leq a\,,\\
+\amp EA\,\frac{d^2u_b}{dx^2} = 0\,,\quad a \leq x \leq l\,.
+\end{align*}
+</div>
+<p data-braille="continuation">Si ottiene quindi un sistema di 2 equazioni differenziali dove le incognite, \(u_a\) e \(u_b\text{,}\) sono disaccopiate. Incognite che comunque interagiscono nelle condizioni al contorno. In particolare tali condizioni sono espresse dalle seguenti equazioni</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\amp \func{u_a}{0} = 0\,,\\
+\amp \func{u_b}{l} = 0\,,\\
+\amp \func{u_a}{a} = \func{u_b}{a}\,,\\
+\amp EA\, \func{\frac{du_a}{dx}}{a} - EA\, \func{\frac{du_b}{dx}}{a} = F\,,
+\end{align*}
+</div>
+<p data-braille="continuation">dove l'ultima equazione deriva dalla condizione di tipo statico</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\func{N_a}{a} - \func{N_b}{a} = F\,.
+\end{equation*}
+</div>
+<span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#p-333">in-context</a></span>
 </body>
 </html>

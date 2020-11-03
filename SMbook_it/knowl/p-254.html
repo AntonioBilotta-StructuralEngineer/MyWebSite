@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-15T18:45:01+02:00       *-->
+<!--*       on 2020-11-03T08:24:08+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,18 +15,18 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">La seguente figura <figure class="figure figure-like"><div class="image-box" style="width: 85%; margin-left: 7.5%; margin-right: 7.5%;"><img src="images/armonico_semplice.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">3.2.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure> ottenuta con le istruzioni MATLAB <figure class="listing figure-like"><pre class="console"><b>Edef(t) = 1/2*om^2*m*u(t)^2;
-Ekin(t) = 1/2*m*diff(u,t)^2;
-
-dd=Edef(tt);
-kk=Ekin(tt);
-
-scale = 5*u0 / (Edef(0)+Ekin(0));
-plot(tt,uu,'k',tt,dd*scale,'r',tt,kk*scale,'b','LineWidth',2)
-legend('spost.','en. def.','en. cinet.')
-</b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.2.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure> evidenzia in forma grafica la continua trasformazione dell'energia di deformazione della molla in energia cinetica del corpo e viceversa. Energia di deformazione (colore rosso) che oscilla fra lo zero fra il valore massimo che si ha quando il valore assoluto dello spostamento (colore nero) è massimo, allo stesso istante la velocità è nulla. Al contrario l'energia cinetica (colore blu) è massima quando il valore assoluto dello velocità è massima, quando allo stesso istante lo spostamento è nullo.</p>
-<span class="incontext"><a href="uniaxial_sec_elasticity_chap_it.html#p-254">in-context</a></span>
+<p>Nelle sezioni successive viene presentata e discussa tale problematica, non nei termini più generali possibili, ma rispetto al contesto in larga parte già utilizzato per il problema sopra esaminato. Ovvero nel contesto di piccoli spostamenti e piccole deformazioni overro l'ambito degli <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">spostamenti infinitesimi</em>. Pertanto verrà stabilito un legame tra la tensione di Cauchy e il tensore della deformazione infinitesima:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\tens{\sigma} = \func{\tens{\sigma}}{\tens{\varepsilon}}\,.\tag{3.1.23}
+\end{equation}
+</div>
+<p data-braille="continuation">Si ricorda che, per spostamenti infinitesimi, il tensore della deformazione infinitesima costituisce un'approssimazione della deformazione di Green-Lagrange, si veda la <a href="infinitesimal_sec_strain_chap_it.html" class="internal" title="Sezione 1.9: tensore della deformazione infinitesima">Sezione 1.9</a>, e che nel calcolo del lavoro interno compare proprio tale tensore. Infatti</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\text{L}_{\text{int}} = \int_{\body_0} \tens{\sigma} : \text{sym}\tens{\nabla u}\,dV = \int_{\body_0} \tens{\sigma} : \tens{\varepsilon}\,dV\,.\tag{3.1.24}
+\end{equation}
+</div>
+<span class="incontext"><a href="motivations_sec_elasticity_chap_it.html#p-254">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-15T18:45:02+02:00       *-->
+<!--*       on 2020-11-03T08:24:09+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,15 +15,11 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Seguono le istruzione MATLAB per il calcolo della soluzione \(\func{u}{x}\text{.}\) <figure class="listing figure-like"><pre class="console"><b>syms u(x) EA p l;
-ode = EA*diff(u,x,2) + p*sin(2*pi*x/l) == 0;
-cond1 = u(0) == 0;
-cond2 = u(l) == 0;
-conds = [cond1 cond2];
-sol = dsolve(ode,conds)
-N = EA*diff(sol,x)
+<p xmlns:svg="http://www.w3.org/2000/svg">L'integrale generale può essere calcolato utilizzando le seguenti istruzioni. <figure class="listing figure-like"><pre class="console"><b>syms u(x) EA;
+ode = EA*diff(u,x,2) == 0
+dsolve(ode)
 </b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.7.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.7.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#p-330">in-context</a></span>
 </body>
 </html>

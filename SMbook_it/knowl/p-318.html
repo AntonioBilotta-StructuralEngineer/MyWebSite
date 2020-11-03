@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-15T18:45:02+02:00       *-->
+<!--*       on 2020-11-03T08:24:09+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,70 +15,28 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<ul class="disc">
-<li>Carichi<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\func{q}{x}\quad \mathcal{M}_0 \quad \mathcal{M}_l \quad V_0 \quad V_l
-\end{equation*}
-</div>
-</li>
-<li>Incognite<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\func{w}{x}\quad\func{\chi}{x}\quad\func{M}{x}
-\end{equation*}
-</div>
-</li>
-<li>Lavoro interno<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-L_i = \int_{l} M \chi \,dx\,.\tag{3.6.21}
-\end{equation}
-</div>
-</li>
-<li>Lavoro esterno<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\begin{split}
-L_e = \int_{l} \func{q}{x}\,\func{w}{x}\, dx + V_{0} \,\func{w}{0} +  V_{l} \,\func{w}{l} +\\ - \mathcal{M}_{0} \,\func{\frac{dw}{dx}}{0} -  \mathcal{M}_{l} \,\func{\frac{dw}{dx}}{l} \,.
-\end{split}\tag{3.6.22}
-\end{equation}
-</div>
-</li>
-<li>Legame spostamento-deformazione<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\chi = - \frac{d^2 w}{dx^2}\tag{3.6.23}
-\end{equation}
-</div>
-</li>
-<li>Legame elastico<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-M = EJ\,\chi\tag{3.6.24}
-\end{equation}
-</div>
-</li>
-<li>Equazioni di equilibrio<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\frac{d^2 M}{dx^2}  + \func{q}{x} = 0\tag{3.6.25}
-\end{equation}
-</div>
-</li>
-<li>Eventuali condizioni al contorno di tipo statico<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<p>Il campo di spostamento ottenuto per il solido prismatico inflesso, equazioni <a class="xref" data-knowl="./knowl/bend_displ_1.html" title="Equazione 3.4.25">(3.4.25)</a>, <a class="xref" data-knowl="./knowl/bend_displ_2.html" title="Equazione 3.4.26">(3.4.26)</a> e  <a class="xref" data-knowl="./knowl/bend_displ_3.html" title="Equazione 3.4.27">(3.4.27)</a>, lungo la linea d'asse si riduce a</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align}
-\func{\frac{d M}{dx}}{0} \amp= -V_0\tag{3.6.26}\\
-\func{\frac{d M}{dx}}{l} \amp= V_l\tag{3.6.27}\\
-\func{M}{0}  \amp= -\mathcal{M}_0 \tag{3.6.28}\\
-\func{M}{l}  \amp= \mathcal{M}_l \tag{3.6.29}
+u_{1} \amp = 0\,,\tag{3.6.1}\\
+u_{2} \amp = -\frac{\kappa}{2E}X_3^2\,,\tag{3.6.2}\\
+u_{3} \amp = 0\,,\tag{3.6.3}
 \end{align}
 </div>
-</li>
-<li>Eventuali condizioni al contorno di tipo cinematico<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align}
-\func{w}{0} \amp=  \bar{w}_{0}\tag{3.6.30}\\
-\func{w}{l} \amp=  \bar{w}_{l}\tag{3.6.31}\\
--\func{\frac{dw}{dx}}{0} \amp= \bar{\varphi}_0\tag{3.6.32}\\
--\func{\frac{dw}{dx}}{l} \amp= \bar{\varphi}_l\tag{3.6.33}
-\end{align}
+<p data-braille="continuation">soluzione che stabilisce che la linea d'asse si deforma seguendo una parabola contenuta nel piano \(X_3\text{,}\) \(X_2\) e tutto è determinato solo dallo spostamento \(u_{2}\) diretto trasversalmente all'asse. <figure class="figure figure-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/trave_inflessa_linea_asse.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figura</span><span class="space"> </span><span class="codenumber">3.6.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Il principale obiettivo rimane comunque quello di descrivere la deformazione \(\varepsilon_{33}\) dipendendente dallo spostamento \(u_3\) che sulla linea d'asse si annulla. La descrizione della componente \(u_3\) è comunque recuperabile osservando che</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+u_3 = \kappa\,X_2X_3/E = - X_2 \frac{d u_2}{d X_3}\,,\tag{3.6.4}
+\end{equation}
 </div>
-</li>
-</ul>
+<p data-braille="continuation">che evidenzia il legame di \(u_3\) con lo spostamento \(u_2\) della linea d'asse. Su tale base si può valutare la componente \(\varepsilon_{33}\) ottenendo</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\varepsilon_{33} = \frac{d}{dX_3}\left(u_3\right) = \frac{d}{dX_3}\left(-X_2 \frac{d u_2}{d X_3}\right) = -X_2 \frac{d^2 u_2}{dX_3^2}\,,\tag{3.6.5}
+\end{equation}
+</div>
+<p data-braille="continuation">relazione che evidenzia il tipo di legame fra \(\varepsilon_{33}\) e la componente di spostamento \(u_{2}\) della linea d'asse.</p>
 <span class="incontext"><a href="bent_beam_sec_elasticity_chap_it.html#p-318">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-15T18:45:00+02:00       *-->
+<!--*       on 2020-11-03T08:24:07+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,39 +15,46 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p>La forma diagonale del tensore \(\tens{U}\text{,}\) si veda la <a class="xref" data-knowl="./knowl/diag_U_eq.html" title="Equazione 1.7.4">(1.7.4)</a>, può essere riscritta come segue</p>
+<p>Si supponga adesso per \(\tens{U}\) sempre una forma diagonale ma con coefficienti non tutti uguali fra loro. In particolare si assuma</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\mat{U} =
+\left[\begin{array}{ccc}
+\lambda_1 \amp 0 \amp 0\\
+0 \amp \lambda_1 \amp 0\\
+0 \amp 0 \amp \lambda_2\\
+\end{array}\right]\,.\tag{1.7.3}
+\end{equation}
+</div>
+<p data-braille="continuation">Applicando \(\tens{U}\) ai seguenti tre vettori</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\mat{U} =
-\lambda_1
-\left[\begin{array}{ccc}
-1 \amp 0 \amp 0\\
-0 \amp 0 \amp 0\\
-0 \amp 0 \amp 0
-\end{array}\right] 
-+
-\lambda_2
-\left[\begin{array}{ccc}
-0 \amp 0 \amp 0\\
-0 \amp 1 \amp 0\\
-0 \amp 0 \amp 0
-\end{array}\right] 
-+
-\lambda_3
-\left[\begin{array}{ccc}
-0 \amp 0 \amp 0\\
-0 \amp 0 \amp 0\\
-0 \amp 0 \amp 1
-\end{array}\right]
+\mat{u} = \left[\begin{array}{c}u_1\\u_2\\0\end{array}\right]
+\,,\quad
+\mat{v} = \left[\begin{array}{c}0\\0\\v_3\end{array}\right]
+\,,\quad
+\mat{w} = \left[\begin{array}{c}w_1\\w_2\\w_3\end{array}\right]
 \,,
 \end{equation*}
 </div>
-<p data-braille="continuation">relazione che suggerisce la seguente forma tensiorale per \(\tens{U}\)</p>
+<p data-braille="continuation">si ottiene</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\tens{U} = \lambda_1\,\vec{e}_1 \otimes \vec{e}_1 + \lambda_2\,\vec{e}_2 \otimes \vec{e}_2 + \lambda_3\,\vec{e}_3 \otimes \vec{e}_3\,.\tag{1.7.5}
-\end{equation}
+\begin{equation*}
+\mat{U}\mat{u} = \lambda_1\mat{u}
+\,,\quad
+\mat{U}\mat{v} = \lambda_2\mat{v}
+\,,\quad
+\mat{U}\mat{w} = \left[\begin{array}{c}\lambda_1\,w_1\\\lambda_1\,w_2\\\lambda_2\,w_3\end{array}\right]
+\,,\quad
+\end{equation*}
 </div>
+<p data-braille="continuation">risultato che può essere commentato come segue.</p>
+<ul class="disc">
+<li>Tutti i vettori appartenenti a direzioni giacenti nel piano individuato dai i primi due assi di riferimento vengono semplicemente scalati dal fattore \(\lambda_1\text{.}\)</li>
+<li>Vettori paralleli al terzo asse di riferimento vengono semplicemente scalati dal fattore \(\lambda_2\text{.}\)</li>
+<li>Tutti gli altri vettori vengono sia scalati sia cambiano direzione e il fattore di scala dipende sia \(\lambda_1\) e sia da \(\lambda_2\text{.}\)</li>
+</ul>
+<p data-braille="continuation">Quindi in questo caso le <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">direzioni principali</em> sono individuate da tutte le direzioni appartenenti al piano \(1-2\) e dall'asse \(3\text{.}\)</p>
 <span class="incontext"><a href="principal_directions_sec_strain_chap_it.html#p-102">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-15T18:45:01+02:00       *-->
+<!--*       on 2020-11-03T08:24:08+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,21 +15,33 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p>Per quanto discusso, sarebbe stato possibile presentare il caso di taglio “puro”</p>
+<p>Lo stato tensionale che mantiene sempre la stessa forma rispetto a qualsiasi sistema di riferimento è lo stato caratterizzato da tensioni principali che assumono lo stesso valore, ovvero \(\sigma_1 = \sigma_2 = \sigma_3 = p\text{.}\) In tal caso, utilizzando la  <a class="xref" data-knowl="./knowl/spectral_stress_eq.html" title="Equazione 2.4.3">(2.4.3)</a>, il tensore \(\tens{\sigma}\) assume la seguente forma</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\tens{\sigma} = p\,\vec{e}_1 \otimes \vec{e}_1 + p\,\vec{e}_2 \otimes \vec{e}_2 + p\,\vec{e}_3 \otimes \vec{e}_3\,,
+\end{equation*}
+</div>
+<p data-braille="continuation">ovvero</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\tens{\sigma} = p \, \tens{I}\,.
+\end{equation*}
+</div>
+<p data-braille="continuation">La rappresentazione per componenti fornisce anche</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
 \mat{\sigma} =
+p \left[\begin{array}{ccc}
+1 \amp 0 \amp 0 \\
+0 \amp 1 \amp 0 \\
+0 \amp 0 \amp 1
+\end{array}\right]
+=
 \left[\begin{array}{ccc}
-0  \amp \tau \amp 0 \\
-\tau \amp 0 \amp 0 \\
-0 \amp 0 \amp 0
-\end{array}\right]\,,
-\end{equation*}
-</div>
-<p data-braille="continuation">come lo stato tensionale che si realizza quando il sistema di riferimento è ottenuto ruotando la terna delle direzioni principali di \(\pi/4\) intorno al terzo asse e le tensioni principali sono definite da</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\sigma_1 = \tau\,,\quad\sigma_2 = -\tau\,,\quad\sigma_3 = 0\,.
+p \amp 0 \amp 0 \\
+0 \amp p \amp 0 \\
+0 \amp 0 \amp p
+\end{array}\right]\,.
 \end{equation*}
 </div>
 <span class="incontext"><a href="stress_analysis_sec_stress_chap_it.html#p-213">in-context</a></span>

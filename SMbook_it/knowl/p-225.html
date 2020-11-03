@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-15T18:45:01+02:00       *-->
+<!--*       on 2020-11-03T08:24:08+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,22 +15,17 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p>Si consideri un parallelepipedo delimitato dai piani \(x_1=\pm a\text{,}\) \(x_2=\pm b\) e \(x_3=\pm c\text{,}\) e lo stato tensionale così definito</p>
+<p>Nei passaggi precedenti vengono trasferite derivate dal tensore \(\tens{\sigma}\) al campo di spostamento \(\vec{v}\text{.}\) Le derivate su \(\tens{\sigma}\) sono effettuate rispetto alle coordinate \(x_1\text{,}\) \(x_2\) e \(x_3\) relative alla configurazione corrente, pertanto in tale contesto per gradiente dello spostamento si intende</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\mat{\sigma} =
-\left[\begin{array}{ccc}
-\alpha\left(x_1-x_2\right) \amp \beta x_1^2 x_2 \amp 0 \\
-\beta x_1^2 x_2 \amp -\alpha\left(x_1-x_2\right) \amp 0 \\
-0 \amp 0 \amp 0
-\end{array}\right]\,,
-\end{equation*}
+\begin{equation}
+\mat{\nabla v} = \left[\begin{array}{ccc}
+\regulardiff{u_1}{x_1} \amp \regulardiff{u_1}{x_2} \amp \regulardiff{u_1}{x_3}\\
+\regulardiff{u_2}{x_1} \amp \regulardiff{u_2}{x_2} \amp \regulardiff{u_2}{x_3}\\
+\regulardiff{u_3}{x_1} \amp \regulardiff{u_3}{x_2} \amp \regulardiff{u_3}{x_3}
+\end{array}\right]\,,\tag{2.5.2}
+\end{equation}
 </div>
-<p data-braille="continuation">con \(\alpha\) e \(\beta\) costanti generiche. Si determinino:</p>
-<ol class="decimal">
-<li>le tensioni principali e le direzioni principali nel punto di coordinate \((a/2, -b/2, 0)\text{;}\)</li>
-<li>il vettore di trazione relativo alle tre facce che individuano lo spigolo di coordinate \((a, b, c)\text{.}\)</li>
-</ol>
-<span class="incontext"><a href="exercises_sec_stress_chap_it.html#p-225">in-context</a></span>
+<p data-braille="continuation">espressione da non confondere con l'equazione simile <a class="xref" data-knowl="./knowl/Dipl_Grad_X_eq.html" title="Equazione 1.4.5">(1.4.5)</a>.</p>
+<span class="incontext"><a href="plv_sec_stress_chap_it.html#p-225">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-15T18:45:03+02:00       *-->
+<!--*       on 2020-11-03T08:24:10+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,37 +15,34 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p>Il sistema è costituito da due corpi (\(n=6\)), consentendo la scrittura di due gruppi di equazioni: le equazioni di equilibrio per il corpo \(AB\) (polo in \(A\))</p>
+<p>L'analisi coinvolge solo un corpo rigido, pertanto è possibile scrivere 3 equazioni di equilibrio (\(n=3\)) che, assumendo come polo per l'equilibrio alla rotazione l'estremo \(A\) della trave, sono esprimibili come segue</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-H_A + H_B \amp = 0\,,\\
-V_A + V_B - F \amp = 0\,,\\
-V_{B} 2l - F l \amp = 0\,,
+H_A \amp = 0\,,\\
+V_A - F \amp = 0\,,\\
+\mathcal{M}_{A} - F l \amp = 0\,.
 \end{align*}
 </div>
-<p data-braille="continuation">e quelle per il corpo \(BC\) (polo in \(D\))</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-H_C - H_B + F \amp = 0\,,\\
-V_C - V_B \amp = 0\,,\\
-H_{B} l + V_C 2l \amp = 0\,.
-\end{align*}
-</div>
-<p data-braille="continuation">Equazioni riscrivibili nella seguente forma matriciale</p>
+<p data-braille="continuation">Condizioni esprimibili in forma matriciale ottenendo</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\underbrace{\left[\begin{array}{ccccc}
-1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0\\
-0 &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 0\\
-0 &amp; 0 &amp; 0 &amp; 2l &amp; 0 &amp; 0\\
-0 &amp; 0 &amp; -1 &amp; 0 &amp; 1 &amp; 0\\
-0 &amp; 0 &amp; 0 &amp; -1 &amp; 0 &amp; 1\\
-0 &amp; 0 &amp; l &amp; 0 &amp; 0 &amp; 2l
+\underbrace{\left[\begin{array}{ccc}
+1 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0\\
+0 &amp; 0 &amp; 1
 \end{array}\right]}_{\mat{B}}
-\underbrace{\left[\begin{array}{c} H_A \\ V_A \\ H_B \\ V_B \\ H_C \\ V_C  \end{array}\right]}_{\vec{r}} +
-\underbrace{\left[\begin{array}{c} 0 \\ -F \\ -Fl \\ F \\ 0 \\ 0 \end{array}\right]}_{\vec{f}} =
-\left[\begin{array}{c} 0 \\ 0 \\ 0 \\ 0 \\ 0 \\ 0 \end{array}\right]\,.
+\underbrace{\left[\begin{array}{c} H_A \\V_A \\ \mathcal{M}_{A} \end{array}\right]}_{\vec{r}} +
+\underbrace{\left[\begin{array}{c} 0 \\ -F \\ -Fl \end{array}\right]}_{\vec{f}} =
+\left[\begin{array}{c} 0 \\ 0 \\ 0 \end{array}\right]\,.
 \end{equation*}
+</div>
+<p data-braille="continuation">Il sistema è evidentemente isostatico e il calcolo delle componenti di reazione vincolare fornisce</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+H_{A} \amp= 0\,,\\
+V_{A}  \amp= F\,,\\
+\mathcal{M}_{A} \amp= F l\,.
+\end{align*}
 </div>
 <span class="incontext"><a href="analysis_examples_sec_rigid_body_statics_chap_it.html#p-446">in-context</a></span>
 </body>

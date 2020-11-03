@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-15T18:45:00+02:00       *-->
+<!--*       on 2020-11-03T08:24:07+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,18 +15,17 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p>Analogamente anche \(\tens{C}\) può essere espresso rispetto al gradiente dello spostamento, ovvero</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\tens{C} = \transp{\tens{F}}\tens{F} = \transp{(\tens{I}+\tens{\nabla u})} (\tens{I}+\tens{\nabla u})\,,
-\end{equation*}
-</div>
-<p data-braille="continuation">da cui si ottiene</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\tens{C} = \tens{I}+ \tens{\nabla u} + \transp{\tens{\nabla u}} +  \transp{\tens{\nabla u}}\,\tens{\nabla u}\,.\tag{1.8.9}
-\end{equation}
-</div>
+<p xmlns:svg="http://www.w3.org/2000/svg"><figure class="listing figure-like"><pre class="console"><b>u1 = u(:,1);
+u2 = u(:,2);
+u3 = u(:,3);
+lam1 = sqrt(D2(1,1));
+lam2 = sqrt(D2(2,2));
+lam3 = sqrt(D2(3,3));
+U = lam1*u1*transpose(u1)+lam2*u2*transpose(u2)+lam3*u3*transpose(u3)
+R = F*inv(U)
+V = F*transpose(R)
+</b></pre>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.8.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <span class="incontext"><a href="measures_sec_strain_chap_it.html#p-138">in-context</a></span>
 </body>
 </html>

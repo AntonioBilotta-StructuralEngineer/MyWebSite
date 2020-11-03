@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-15T18:45:02+02:00       *-->
+<!--*       on 2020-11-03T08:24:09+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,28 +15,25 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p>L'equazione di equilibrio, <a class="xref" data-knowl="./knowl/stretched_beam_navier.html" title="Equazione 3.5.21">(3.5.21)</a>, applicata ai due sottodomini della trave sono formulabili come segue</p>
+<p>L'uguaglianza fra lavoro interno e lavoro esterno diventa pertanto</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\amp EA\,\frac{d^2u_a}{dx^2} = 0\,,\quad 0 \leq x \leq a\,,\\
-\amp EA\,\frac{d^2u_b}{dx^2} = 0\,,\quad a \leq x \leq l\,.
-\end{align*}
+\begin{equation}
+\begin{split}
+-\func{M}{l} \func{\frac{d \delta w}{dx}}{l} + \func{M}{0} \func{\frac{d \delta w}{dx}}{0}  + \func{\frac{d M}{dx}}{l}\func{\delta w}{l} - \func{\frac{d M}{dx}}{0}  \func{\delta w}{0} +\\ - \int_{l} \frac{d^2 M}{dx^2}  \delta w \,dx
+= \int_{l} \func{q}{x}\,\func{\delta w}{x}\, dx + V_{0} \,\func{\delta w}{0} +  V_{l} \,\func{\delta w}{l} +\\ - \mathcal{M}_{0} \,\func{\frac{d\delta w}{dx}}{0} -  \mathcal{M}_{l} \,\func{\frac{d\delta w}{dx}}{l}\,,\quad \forall\,\delta w\,.
+\end{split}\tag{3.6.15}
+\end{equation}
 </div>
-<p data-braille="continuation">Si ottiene quindi un sistema di 2 equazioni differenziali dove le incognite, \(u_a\) e \(u_b\text{,}\) sono disaccopiate. Incognite che comunque interagiscono nelle condizioni al contorno. In particolare tali condizioni sono espresse dalle seguenti equazioni</p>
+<p data-braille="continuation">Da cui si ricavano le seguenti equazioni</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\amp \func{u_a}{0} = 0\,,\\
-\amp \func{u_b}{l} = 0\,,\\
-\amp \func{u_a}{a} = \func{u_b}{a}\,,\\
-\amp EA\, \func{\frac{du_a}{dx}}{a} - EA\, \func{\frac{du_b}{dx}}{a} = F\,,
-\end{align*}
+\begin{align}
+\delta w:\amp \quad \frac{d^2 M}{dx^2}  + \func{q}{x} = 0\,,\;\; 0 \leq x \leq l  \tag{3.6.16}\\
+\func{\delta w}{0}:\amp \quad \func{\frac{d M}{dx}}{0}  = -V_0\,,\;\;  x = 0  \tag{3.6.17}\\
+\func{\delta w}{l}:\amp \quad \func{\frac{d M}{dx}}{l}  = V_l\,,\;\; x = l  \tag{3.6.18}\\
+\func{\frac{d\delta w}{dx}}{0}:\amp \quad \func{M}{0}  = -\mathcal{M}_0\,,\;\;  x = 0  \tag{3.6.19}\\
+\func{\frac{d\delta w}{dx}}{l}:\amp \quad \func{M}{l}  = \mathcal{M}_l\,,\;\;  x = l  \tag{3.6.20}
+\end{align}
 </div>
-<p data-braille="continuation">dove l'ultima equazione deriva dalla condizione di tipo statico</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\func{N_a}{a} - \func{N_b}{a} = F\,.
-\end{equation*}
-</div>
-<span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#p-325">in-context</a></span>
+<span class="incontext"><a href="bent_beam_sec_elasticity_chap_it.html#p-325">in-context</a></span>
 </body>
 </html>

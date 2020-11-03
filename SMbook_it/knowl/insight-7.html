@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-15T18:45:01+02:00       *-->
+<!--*       on 2020-11-03T08:24:08+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -51,7 +51,7 @@ F = k\,x\,.\tag{3.2.1}
 \end{equation*}
 </div>
 <p data-braille="continuation">dove \(\func{x}{0}\) e \(\func{\frac{dx}{dt}}{0}\) rappresentano le condizioni iniziali. \(\omega\) prende il nome di pulsazione e viene misurata in \(\left[\frac{\text{rad}}{\text{s}}\right]\text{.}\)</p>
-<article class="assemblage assemblage-like"><p xmlns:svg="http://www.w3.org/2000/svg">A scopo esemplificativo si riportano le istruzioni MATLAB utilizzabili per il plottaggio della funzione sulla base dei seguenti dati: \(\omega = 2\pi\;\left[\frac{\text{rad}}{\text{s}}\right]\text{,}\) \(m=10\;\left[\text{kg}\right]\text{,}\) \(\func{x}{0}= 1 \; \left[\text{m}\right]\) e \(\func{\frac{dx}{dt}}{0}= 10 \; \left[\frac{\text{m}}{\text{s}}\right]\text{.}\) <figure class="listing figure-like"><pre class="console"><b>om = 2*pi;
+<article class="assemblage assemblage-like"><p xmlns:svg="http://www.w3.org/2000/svg">A scopo esemplificativo si riportano le istruzioni MATLAB® utilizzabili per il plottaggio della funzione sulla base dei seguenti dati: \(\omega = 2\pi\;\left[\frac{\text{rad}}{\text{s}}\right]\text{,}\) \(m=10\;\left[\text{kg}\right]\text{,}\) \(\func{x}{0}= 1 \; \left[\text{m}\right]\) e \(\func{\frac{dx}{dt}}{0}= 10 \; \left[\frac{\text{m}}{\text{s}}\right]\text{.}\) <figure class="listing figure-like"><pre class="console"><b>om = 2*pi;
 u0 = 1;
 v0 = 10;
 m = 10;
@@ -70,7 +70,7 @@ plot(tt,uu,'k','LineWidth',2)
 </div>
 <p data-braille="continuation">data dalla somma di <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">energia elastica</em> e <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">energia cinetica</em>. L'energia potenziale totale, in assenza di fenomeni dissipativi, si mantiene sempre costante.</p>
 <article class="assemblage assemblage-like"><p xmlns:svg="http://www.w3.org/2000/svg">La seguente figura <figure class="figure figure-like"><div class="image-box" style="width: 85%; margin-left: 7.5%; margin-right: 7.5%;"><img src="images/armonico_semplice.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">3.2.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure> ottenuta con le istruzioni MATLAB <figure class="listing figure-like"><pre class="console"><b>Edef(t) = 1/2*om^2*m*u(t)^2;
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">3.2.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure> ottenuta con le istruzioni MATLAB® <figure class="listing figure-like"><pre class="console"><b>Edef(t) = 1/2*om^2*m*u(t)^2;
 Ekin(t) = 1/2*m*diff(u,t)^2;
 
 dd=Edef(tt);
