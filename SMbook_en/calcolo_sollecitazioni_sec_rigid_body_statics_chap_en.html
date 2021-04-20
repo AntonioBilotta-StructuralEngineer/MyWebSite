@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-02T11:40:24+02:00       *-->
+<!--*       on 2021-04-20T14:29:53+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -57,7 +57,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{{\not{\mid}}}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -188,26 +188,26 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5.9</span> <span class="title">generalized section forces calculation and diagrams</span>
 </h2>
-<p id="p-469">The static analysis presented in the previous sections allows to evaluate the constraint reactions for an isostatic system. Starting from this information and using general integrals <a class="xref" data-knowl="./knowl/general_const_N_eq.html" title="Equation 5.8.13">(5.8.13)</a>, <a class="xref" data-knowl="./knowl/general_const_T_eq.html" title="Equation 5.8.14">(5.8.14)</a> and <a class="xref" data-knowl="./knowl/general_const_M_eq.html" title="Equation 5.8.15">(5.8.15)</a> it is possible to proceed with the calculation of the generalized section forces for beams subjected to generic forces / torques and at most constant distributed loads (for generic distributed loads it is necessary to use the <a class="xref" data-knowl="./knowl/general_N_eq.html" title="Equation 5.8.10">(5.8.10)</a>, <a class="xref" data-knowl="./knowl/general_T_eq.html" title="Equation 5.8.11">(5.8.11)</a> and <a class="xref" data-knowl="./knowl/general_M_eq.html" title="Equation 5.8.12">(5.8.12)</a>).</p>
-<p id="p-470">The calculation procedure will be illustrated by discussing some examples and using MATLAB® to carry out the required calculations and display the results. Given the simplicity of the schemes considered, the explicit calculation of the constraint reactions is omitted.</p>
+<p id="p-468">The static analysis presented in the previous sections allows to evaluate the constraint reactions for an isostatic system. Starting from this information and using general integrals <a class="xref" data-knowl="./knowl/general_const_N_eq.html" title="Equation 5.8.13">(5.8.13)</a>, <a class="xref" data-knowl="./knowl/general_const_T_eq.html" title="Equation 5.8.14">(5.8.14)</a> and <a class="xref" data-knowl="./knowl/general_const_M_eq.html" title="Equation 5.8.15">(5.8.15)</a> it is possible to proceed with the calculation of the generalized section forces for beams subjected to generic forces / torques and at most constant distributed loads (for generic distributed loads it is necessary to use the <a class="xref" data-knowl="./knowl/general_N_eq.html" title="Equation 5.8.10">(5.8.10)</a>, <a class="xref" data-knowl="./knowl/general_T_eq.html" title="Equation 5.8.11">(5.8.11)</a> and <a class="xref" data-knowl="./knowl/general_M_eq.html" title="Equation 5.8.12">(5.8.12)</a>).</p>
+<p id="p-469">The calculation procedure will be illustrated by discussing some examples and using MATLAB® to carry out the required calculations and display the results. Given the simplicity of the schemes considered, the explicit calculation of the constraint reactions is omitted.</p>
 <section class="subsection" id="subsection-122"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.9.1</span> <span class="title"></span>
 </h3>
-<p id="p-471">Consider the following free body diagram whose satisfaction of the equilibrium conditions is easy to be checked.</p>
+<p id="p-470">Consider the following free body diagram whose satisfaction of the equilibrium conditions is easy to be checked.</p>
 <figure class="figure figure-like" id="figure-92"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/schema1bis.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.9.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-472">It is evident from the diagram that the values assumed by the section forces for \(x = 0 \) are</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.9.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-471">It is evident from the diagram that the values assumed by the section forces for \(x = 0 \) are</p>
 <div class="displaymath">
 \begin{equation*}
 N(0) = F\,,\quad T(0) = F\,,\quad  M(0) = -F l\,.
 \end{equation*}
 </div>
-<p data-braille="continuation">Using the general integrals, we obtain the following expressions of the generalized section forces as a function of the abscissa \(x \) placed along the axis of the beam</p>
+<p class="continuation">Using the general integrals, we obtain the following expressions of the generalized section forces as a function of the abscissa \(x \) placed along the axis of the beam</p>
 <div class="displaymath">
 \begin{equation*}
 N(x) = F\,,\quad T(x) = F\,,\quad  M(x) = -F l + F\,x\,.
 \end{equation*}
 </div>
-<article class="assemblage assemblage-like" id="assemblage-49"><p id="p-473">The latter results can be plotted using the following MATLAB® instructions. <figure class="listing figure-like" id="listing-62"><pre class="console"><b>% axial force diagram
+<article class="assemblage assemblage-like" id="assemblage-49"><p id="p-472">The latter results can be plotted using the following MATLAB® instructions. <figure class="listing figure-like" id="listing-62"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>% axial force diagram
 syms N(x, F);
 N(x,F) = F;
 
@@ -245,27 +245,27 @@ Beam = zeros(1, np+1);
 plot(Xv,Mv,'r',Xv,Beam,'k','LineWidth',2)
 set(gca, 'Ylim', [-1 1])
 set(gca, 'YDir','reverse')
-</b></pre>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.9.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-474">In this way we obtain the following diagrams for axial force (green), shear force (blue) and bending moment (red).</p>
+</b></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.9.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-473">In this way we obtain the following diagrams for axial force (green), shear force (blue) and bending moment (red).</p>
 <div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/sollecitazioni_ex1_N.png" style="width: 100%; height: auto;" alt=""></div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
 <div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;"><img src="images/sollecitazioni_ex1_T.png" style="width: 100%; height: auto;" alt=""></div>
 <div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;"><img src="images/sollecitazioni_ex1_M.png" style="width: 100%; height: auto;" alt=""></div>
 </div></div>
-<p id="p-475">Note how the representation of the bending moment is carried out by changing the direction of the vertical axis of the diagram. This choice is used in professional practice to "visualize" which of the two edges of the beam, lower or upper, is under tensile condition.</p></section><section class="subsection" id="subsection-123"><h3 class="heading hide-type">
+<p id="p-474">Note how the representation of the bending moment is carried out by changing the direction of the vertical axis of the diagram. This choice is used in professional practice to "visualize" which of the two edges of the beam, lower or upper, is under tensile condition.</p></section><section class="subsection" id="subsection-123"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.9.2</span> <span class="title"></span>
 </h3>
-<p id="p-476">Let us consider the following scheme regarding a cantilever beam subjected to a constant distributed load.</p>
+<p id="p-475">Let us consider the following scheme regarding a cantilever beam subjected to a constant distributed load.</p>
 <figure class="figure figure-like" id="figure-93"><div class="image-box" style="width: 38%; margin-left: 31%; margin-right: 31%;"><img src="images/mensola_con_carico_ripartito.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.9.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-477">The free body diagram and the related computation of the constraint reactions provide the following result.</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.9.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-476">The free body diagram and the related computation of the constraint reactions provide the following result.</p>
 <figure class="figure figure-like" id="figure-94"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/mensola_con_carico_ripartito_calcolo_reazioni_en.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.9.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-478">Information that can be used in writing general integrals <a class="xref" data-knowl="./knowl/general_const_N_eq.html" title="Equation 5.8.13">(5.8.13)</a>, <a class="xref" data-knowl="./knowl/general_const_T_eq.html" title="Equation 5.8.14">(5.8.14)</a>, <a class="xref" data-knowl="./knowl/general_const_M_eq.html" title="Equation 5.8.15">(5.8.15)</a>, and obtain the following expression of the generalized section forces along the beam axis .</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.9.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-477">Information that can be used in writing general integrals <a class="xref" data-knowl="./knowl/general_const_N_eq.html" title="Equation 5.8.13">(5.8.13)</a>, <a class="xref" data-knowl="./knowl/general_const_T_eq.html" title="Equation 5.8.14">(5.8.14)</a>, <a class="xref" data-knowl="./knowl/general_const_M_eq.html" title="Equation 5.8.15">(5.8.15)</a>, and obtain the following expression of the generalized section forces along the beam axis .</p>
 <div class="displaymath">
 \begin{equation*}
 N(x) = 0\,,\quad T(x) = -q\,x + ql \,,\quad  M(x) = -ql^2/2 + ql\,x - q\,x^2/2 \,.
 \end{equation*}
 </div>
-<article class="assemblage assemblage-like" id="assemblage-50"><p id="p-479">The latter results can be plotted using the following MATLAB® instructions. <figure class="listing figure-like" id="listing-63"><pre class="console"><b>% axial force diagram
+<article class="assemblage assemblage-like" id="assemblage-50"><p id="p-478">The latter results can be plotted using the following MATLAB® instructions. <figure class="listing figure-like" id="listing-63"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>% axial force diagram
 syms N(x);
 N(x) = 0;
 
@@ -303,7 +303,7 @@ Beam = zeros(1, np+1);
 plot(Xv,Mv,'r',Xv,Beam,'k','LineWidth',2)
 set(gca, 'Ylim', [-1 1])
 set(gca, 'YDir','reverse')
-</b></pre>
+</b></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.9.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/sollecitazioni_ex2_N.png" style="width: 100%; height: auto;" alt=""></div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
 <div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;"><img src="images/sollecitazioni_ex2_T.png" style="width: 100%; height: auto;" alt=""></div>
@@ -311,23 +311,23 @@ set(gca, 'YDir','reverse')
 </div></div></section><section class="subsection" id="subsection-124"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.9.3</span> <span class="title"></span>
 </h3>
-<p id="p-480">Let us consider a supported beam subjected to a distributed load.</p>
+<p id="p-479">Let us consider a supported beam subjected to a distributed load.</p>
 <figure class="figure figure-like" id="figure-95"><div class="image-box" style="width: 38%; margin-left: 31%; margin-right: 31%;"><img src="images/trave_appoggiata_con_carico_ripartito.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.9.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-481">Constraint reactions are calculated through the free body diagram as follows.</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.9.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-480">Constraint reactions are calculated through the free body diagram as follows.</p>
 <figure class="figure figure-like" id="figure-96"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/trave_appoggiata_con_carico_ripartito_calcolo_reazioni_en.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.9.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-482">The obtained solution allows the writing of the following conditions regarding to the end \(A \) of the beam</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.9.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-481">The obtained solution allows the writing of the following conditions regarding to the end \(A \) of the beam</p>
 <div class="displaymath">
 \begin{equation*}
 N(0) = 0\,,\quad T(0) = ql/2\,,\quad  M(0) = 0\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">from which it is easy to obtain the expression of generalized section forces along the beam:</p>
+<p class="continuation">from which it is easy to obtain the expression of generalized section forces along the beam:</p>
 <div class="displaymath">
 \begin{equation*}
 N(x) = 0\,,\quad T(x) = -q\,x + ql/2 \,,\quad  M(x) = ql/2\,x - q\,x^2/2 \,.
 \end{equation*}
 </div>
-<article class="assemblage assemblage-like" id="assemblage-51"><p id="p-483">It is now possible to plot the diagrams of obtained generalized section forces. <figure class="listing figure-like" id="listing-64"><pre class="console"><b>% axial force diagram
+<article class="assemblage assemblage-like" id="assemblage-51"><p id="p-482">It is now possible to plot the diagrams of obtained generalized section forces. <figure class="listing figure-like" id="listing-64"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>% axial force diagram
 syms N(x);
 N(x) = 0;
 
@@ -365,7 +365,7 @@ Beam = zeros(1, np+1);
 plot(Xv,Mv,'r',Xv,Beam,'k','LineWidth',2)
 set(gca, 'Ylim', [-1 1])
 set(gca, 'YDir','reverse')
-</b></pre>
+</b></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.9.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/sollecitazioni_ex3_N.png" style="width: 100%; height: auto;" alt=""></div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
 <div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;"><img src="images/sollecitazioni_ex3_T.png" style="width: 100%; height: auto;" alt=""></div>
@@ -373,13 +373,13 @@ set(gca, 'YDir','reverse')
 </div></div></section><section class="subsection" id="subsection-125"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.9.4</span> <span class="title"></span>
 </h3>
-<p id="p-484">Let us consider a supported beam subjected to a concentrated force in the middle point.</p>
+<p id="p-483">Let us consider a supported beam subjected to a concentrated force in the middle point.</p>
 <figure class="figure figure-like" id="figure-97"><div class="image-box" style="width: 38%; margin-left: 31%; margin-right: 31%;"><img src="images/trave_appoggiata_con_forza_concentrata.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.9.9<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-485">The evaluation of the constraint reactions furnishes the following result.</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.9.9<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-484">The evaluation of the constraint reactions furnishes the following result.</p>
 <figure class="figure figure-like" id="figure-98"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/trave_appoggiata_con_forza_concentrata_calcolo_reazioni_en.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.9.10<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-486">Compared to the previous cases, the current case is different because the force concentrated in the middle determines a discontinuity of the shear \(T (x) \) and therefore, being \(dM / dx = T \text{,}\) also a discontinuity of the derivative of the bending moment. Therefore the general integrals <a class="xref" data-knowl="./knowl/general_const_N_eq.html" title="Equation 5.8.13">(5.8.13)</a>, <a class="xref" data-knowl="./knowl/general_const_T_eq.html" title="Equation 5.8.14">(5.8.14)</a> and <a class="xref" data-knowl="./knowl/general_const_M_eq.html" title="Equation 5.8.15">(5.8.15)</a> are not directly applicable to whole beam \(AB \) but they must be applied separately to the \(AC \) and \(CB \) beam portions. In this way, two descriptions of \(T (x) \) and \(M (x) \) are obtained, one description valid for the \(AC \) portion and the other one valid for the \(CB \) portion.</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.9.10<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-485">Compared to the previous cases, the current case is different because the force concentrated in the middle determines a discontinuity of the shear \(T (x) \) and therefore, being \(dM / dx = T \text{,}\) also a discontinuity of the derivative of the bending moment. Therefore the general integrals <a class="xref" data-knowl="./knowl/general_const_N_eq.html" title="Equation 5.8.13">(5.8.13)</a>, <a class="xref" data-knowl="./knowl/general_const_T_eq.html" title="Equation 5.8.14">(5.8.14)</a> and <a class="xref" data-knowl="./knowl/general_const_M_eq.html" title="Equation 5.8.15">(5.8.15)</a> are not directly applicable to whole beam \(AB \) but they must be applied separately to the \(AC \) and \(CB \) beam portions. In this way, two descriptions of \(T (x) \) and \(M (x) \) are obtained, one description valid for the \(AC \) portion and the other one valid for the \(CB \) portion.</p>
 <ul class="disc">
-<li id="li-153">\(AC\) portion, \(0 \leq x \leq l/2\text{:}\)<div class="displaymath">
+<li id="li-155">\(AC\) portion, \(0 \leq x \leq l/2\text{:}\)<div class="displaymath">
 \begin{align*}
 N_{AC}(0) &amp;= 0\,,\\
 T_{AC}(0) &amp;= F/2\,,\\
@@ -393,7 +393,7 @@ M_{AC}(x) &amp;= F/2\,x\,.
 \end{align*}
 </div>
 </li>
-<li id="li-154">\(CB\) portion, \(0 \leq x \leq l/2\text{:}\)<div class="displaymath">
+<li id="li-156">\(CB\) portion, \(0 \leq x \leq l/2\text{:}\)<div class="displaymath">
 \begin{align*}
 N_{CB}(0) &amp;= 0\,,\\
 T_{CB}(0) &amp;= T_{AC}(l/2) - F=F/2-F=-F/2\,,\\
@@ -408,7 +408,7 @@ M_{CB}(x) &amp;= -F/2\,x + Fl/4\,.
 </div>
 </li>
 </ul>
-<article class="assemblage assemblage-like" id="assemblage-52"><p id="p-487"><figure class="listing figure-like" id="listing-65"><pre class="console"><b>% shear force diagram
+<article class="assemblage assemblage-like" id="assemblage-52"><p id="p-486"><figure class="listing figure-like" id="listing-65"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>% shear force diagram
 syms T_ac(x,F) T_cb(x,F);
 T_ac(x,F) = F/2;
 T_cb(x,F) = -F/2;
@@ -445,7 +445,7 @@ plot(Xv_ac,Mv_ac,'r', Xv_ac,Beam,'k', ...
 Xv_cb,Mv_cb,'r', Xv_cb,Beam,'k', 'LineWidth',2)
 set(gca, 'Ylim', [-1 1])
 set(gca, 'YDir','reverse')
-</b></pre>
+</b></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.9.11<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
 <div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;"><img src="images/sollecitazioni_ex4_T.png" style="width: 100%; height: auto;" alt=""></div>

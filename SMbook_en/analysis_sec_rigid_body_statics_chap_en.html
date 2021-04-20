@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-02T11:40:23+02:00       *-->
+<!--*       on 2021-04-20T14:29:53+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -57,7 +57,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{{\not{\mid}}}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -188,40 +188,40 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="analysis_sec_rigid_body_statics_chap_en"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5.5</span> <span class="title">static analysis</span>
 </h2>
-<p id="p-436">The procedure used for the static analysis of body systems consists of the following operations.</p>
+<p id="p-435">The procedure used for the static analysis of body systems consists of the following operations.</p>
 <ol class="decimal">
-<li id="li-136">Identification of the free body diagram for the system to be analyzed.</li>
-<li id="li-137">Writing of equilibrium equations that will be 3 times the number (\(N \)) of bodies that make up the system (\(n = 3 \, N \)).</li>
-<li id="li-138">Static classification of the given system.</li>
-<li id="li-139">Calculation, if possible, of the constraint reaction components which will be equal in number to the degrees of kinematic constraint (\(m \)) applied to the system.</li>
+<li id="li-138">Identification of the free body diagram for the system to be analyzed.</li>
+<li id="li-139">Writing of equilibrium equations that will be 3 times the number (\(N \)) of bodies that make up the system (\(n = 3 \, N \)).</li>
+<li id="li-140">Static classification of the given system.</li>
+<li id="li-141">Calculation, if possible, of the constraint reaction components which will be equal in number to the degrees of kinematic constraint (\(m \)) applied to the system.</li>
 </ol>
 <section class="subsection" id="subsection-110"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.5.1</span> <span class="title">static matrix</span>
 </h3>
-<p id="p-437">In static analysis the writing of equilibrium equations is the fundamental step which, in general terms, can be formalized in the following way. Consider a system characterized by \(n \) equilibrium conditions, subjected to an assigned force system and \(m \) constraining reaction components. The equilibrium conditions can be formulated through a linear system of the following type</p>
+<p id="p-436">In static analysis the writing of equilibrium equations is the fundamental step which, in general terms, can be formalized in the following way. Consider a system characterized by \(n \) equilibrium conditions, subjected to an assigned force system and \(m \) constraining reaction components. The equilibrium conditions can be formulated through a linear system of the following type</p>
 <div class="displaymath">
 \begin{equation}
 \sum_{j=1}^m B_{ij}  r_j + f_i = 0 \qquad (i=1 \dots n).\tag{5.5.1}
 \end{equation}
 </div>
-<p data-braille="continuation">Where \(r_j \) is the generic constraint reaction component (force or torque), \(f_i \) is the force or torque component that acts on the equilibrium condition \(i\)-th and \(B_{ij} \) is the contribution provided, for a unit value of the reaction \(r_j \text{,}\) on the equilibrium condition \(i \)-th. In matrix terms the system can be rewritten as follows:</p>
+<p class="continuation">Where \(r_j \) is the generic constraint reaction component (force or torque), \(f_i \) is the force or torque component that acts on the equilibrium condition \(i\)-th and \(B_{ij} \) is the contribution provided, for a unit value of the reaction \(r_j \text{,}\) on the equilibrium condition \(i \)-th. In matrix terms the system can be rewritten as follows:</p>
 <div class="displaymath">
 \begin{equation}
 \mat{B} \vec{r} + \vec{f} = \vec0,\label{rb_balance_eq}\tag{5.5.2}
 \end{equation}
 </div>
-<p data-braille="continuation">where \(\mat{B}, \) sized \(n \ times m \text{,}\) is called <em class="emphasis">static matrix</em> of the system, \(\vec{r} \text{,}\) sizeed \(m \times 1 \text{,}\) is the vector that collects the constraint reaction components (the unknowns of the system) and \(\vec{f} \) , sized \(n \times 1 \text{,}\) is the vector of the assigned external actions.</p></section><section class="subsection" id="subsection-111"><h3 class="heading hide-type">
+<p class="continuation">where \(\mat{B}, \) sized \(n \ times m \text{,}\) is called <em class="emphasis">static matrix</em> of the system, \(\vec{r} \text{,}\) sizeed \(m \times 1 \text{,}\) is the vector that collects the constraint reaction components (the unknowns of the system) and \(\vec{f} \) , sized \(n \times 1 \text{,}\) is the vector of the assigned external actions.</p></section><section class="subsection" id="subsection-111"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.5.2</span> <span class="title">static classification</span>
 </h3>
-<p id="p-438">The typical use of the <a class="xref" data-knowl="./knowl/rb_balance_eq.html" title="Equation 5.5.2">(5.5.2)</a> system is the calculation of the \(\vec{r} \) constraint reactions. But even in this case, as already done for the kinematic matrix, it is instructive to discuss the solution conditions of the system in order to derive mechanical considerations. Let \(p = \text{min} (n, m) \text{,}\) then the following cases may occur.</p>
+<p id="p-437">The typical use of the <a class="xref" data-knowl="./knowl/rb_balance_eq.html" title="Equation 5.5.2">(5.5.2)</a> system is the calculation of the \(\vec{r} \) constraint reactions. But even in this case, as already done for the kinematic matrix, it is instructive to discuss the solution conditions of the system in order to derive mechanical considerations. Let \(p = \text{min} (n, m) \text{,}\) then the following cases may occur.</p>
 <ul class="disc">
-<li id="li-140">\(\text{rank}\mat{B} == p\)<ul class="circle">
-<li id="li-141">\(n==m\text{:}\) <em class="alert">isostatic system</em>, the system admits a unique solution;</li>
-<li id="li-142">\(n&lt;m\text{:}\) <em class="alert">hyperstatic system</em>, the system admits infinite solutions;</li>
-<li id="li-143">\(n&gt;m\text{:}\) <em class="alert">impossibile system</em>, the system admits no solution.</li>
+<li id="li-142">\(\text{rank}\mat{B} == p\)<ul class="circle">
+<li id="li-143">\(n==m\text{:}\) <em class="alert">isostatic system</em>, the system admits a unique solution;</li>
+<li id="li-144">\(n&lt;m\text{:}\) <em class="alert">hyperstatic system</em>, the system admits infinite solutions;</li>
+<li id="li-145">\(n&gt;m\text{:}\) <em class="alert">impossibile system</em>, the system admits no solution.</li>
 </ul>
 </li>
-<li id="li-144">\(\text{rank}\mat{A} &lt; p\)<ul class="circle"><li id="li-145">
+<li id="li-146">\(\text{rank}\mat{A} &lt; p\)<ul class="circle"><li id="li-147">
 <em class="alert">degenerate system</em>.</li></ul>
 </li>
 </ul></section></section></div></main>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-02T11:40:24+02:00       *-->
+<!--*       on 2021-04-20T14:29:54+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -17,56 +17,63 @@
 <article class="insight remark-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
 <span class="type">Insight</span><span class="space"> </span><span class="codenumber">1.8.5</span><span class="period">.</span><span class="space"> </span><span class="title">meaning of the components of \(\tens{C}\).</span>
 </h6>
-<p>The generic component of the tensor \(\tens{C}\) can be expressed as follows</p>
+<p>Let's apply to the gradient of the transformation \(\tens{F}\) what has been said in <a href="transformations_sec_strain_chap_en.html" class="internal" title="Section 1.2: transformations">Section 1.2</a> about the meaning of the matrices associated with linear transformations. That is, we express the matrix associated with \(\tens{F}\) as follows</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-C_{ij} = \vec{e}_i \cdot \tens{C}\vec{e}_j\,.
+\mat{F}=\left[\begin{array}{ccc} \tens{F}\vec{e}_1 \amp \tens{F}\vec{e}_2 \amp \tens{F}\vec{e}_3 \end{array}\right]\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">Consider first the case \(i=j\) regarding the components of the tensor located on the main diagonal. By performing the following manipulations</p>
+<p class="continuation">where the transformed basis vectors appear in the columns of \(\mat{F}\text{.}\) We then evaluate the matrix associated with the tensor \(\tens{C} \) on the basis of the definition <a class="xref" data-knowl="./knowl/strain_C_eq.html" title="Equation 1.8.1">(1.8.1)</a></p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\mat{C}=\transp{\mat{F}}\mat{F}=
+\left[\begin{array}{c} \transp{(\tens{F}\vec{e}_1)} \\ \transp{(\tens{F}\vec{e}_2)} \\ \transp{(\tens{F}\vec{e}_3)} \end{array}\right]
+\left[\begin{array}{ccc} \tens{F}\vec{e}_1 \amp \tens{F}\vec{e}_2 \amp \tens{F}\vec{e}_3 \end{array}\right]\,,
+\end{equation*}
+</div>
+<p class="continuation">which gives</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\mat{C}=\left[\begin{array}{ccc}
+\transp{(\tens{F}\vec{e}_1)}\tens{F}\vec{e}_1 \amp \transp{(\tens{F}\vec{e}_1)}\tens{F}\vec{e}_2 \amp \transp{(\tens{F}\vec{e}_1)}\tens{F}\vec{e}_3 \\
+\transp{(\tens{F}\vec{e}_2)}\tens{F}\vec{e}_1 \amp \transp{(\tens{F}\vec{e}_2)}\tens{F}\vec{e}_2 \amp \transp{(\tens{F}\vec{e}_2)}\tens{F}\vec{e}_3 \\
+\transp{(\tens{F}\vec{e}_3)}\tens{F}\vec{e}_1 \amp \transp{(\tens{F}\vec{e}_3)}\tens{F}\vec{e}_2 \amp \transp{(\tens{F}\vec{e}_3)}\tens{F}\vec{e}_3 
+\end{array}\right]\,.
+\end{equation*}
+</div>
+<p class="continuation">This result allows us to establish the following for the coefficients of \(\mat{C}\)</p>
+<ul class="disc">
+<li>For the generic coefficient of \(\mat{C}\) placed on the main diagonal, \(C_{ii}\text{,}\) we have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation}
-C_{ii} = \vec{e}_i \cdot \tens{C}\vec{e}_i = \vec{e}_i \cdot \transp{\tens{F}}\tens{F}\vec{e}_i = \tens{F}\vec{e}_i \cdot \tens{F}\vec{e}_i = \| \tens{F}\vec{e}_i\|^2\,,\tag{1.8.3}
+C_{ii} = \transp{(\tens{F}\vec{e}_i)}\tens{F}\vec{e}_i = \tens{F}\vec{e}_i \cdot \tens{F}\vec{e}_i = \| \tens{F}\vec{e}_i\|^2\,.\tag{1.8.3}
 \end{equation}
-</div>
-<p data-braille="continuation">it can be seen that the component \(ii\) on the main diagonal represents the square of the norm of the transformed vector. Since the vector \(\vec{e}_i \) is of unit length, the component \(C_{ii}\) is therefore the square of the stretch along the \(\vec{e}_i\) direction. So what follows can be established</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</div>It can therefore be seen that the generic component \(ii\) on the main diagonal represents the square of the norm of the transformed vector \(\tens{F}\vec{e}_i \text{.}\) Since the vector \(\vec{e}_i\) is of unit length, the component \(C_{ii}\) is therefore the square of the stretch along direction \(\vec{e}_i\text{.}\) Then the following can be established<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation}
-C_{ii} = \vec{e}_i \cdot \tens{C}\vec{e}_i = \func{\lambda}{\vec{e}_i}^2\,,\tag{1.8.4}
+C_{ii} = \| \tens{F}\vec{e}_i\|^2 = \func{\lambda}{\vec{e}_i}^2\,,\tag{1.8.4}
 \end{equation}
-</div>
-<p data-braille="continuation">where \(\func{\lambda}{\vec{e}_i}\) indicates the <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">stretch along the \(\vec{e}_i\) direction</em>. Obviously in the case of diagonal shape of the tensor \(\tens{C} \) this stretch coincides with the corresponding principal stretch or eigenvalue of \(\tens{U}\text{.}\)</p>
-<p>For the off-diagonal components it can be obtained what follows</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</div>where \(\func{\lambda}{\vec{e}_i}\) is the <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">stretch along the direction \(\vec{e}_i \)</em>. In the case of the diagonal form for the tensor \(\tens{C} \) this stretch coincides with the corresponding principal stretch or eigenvalue of \(\tens{U}\text{.}\)</li>
+<li>For the components outside the main diagonal it is obtained instead<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-C_{ij} = \vec{e}_i \cdot \tens{C}\vec{e}_j = \vec{e}_i \cdot \transp{\tens{F}}\tens{F}\vec{e}_j = \tens{F}\vec{e}_i \cdot \tens{F}\vec{e}_j = \cos{\func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}} \| \tens{F}\vec{e}_i\|\, \| \tens{F}\vec{e}_j\|\,,
+C_{ij} = \transp{(\tens{F}\vec{e}_i)}\tens{F}\vec{e}_j = \tens{F}\vec{e}_i \cdot \tens{F}\vec{e}_j = \cos{\func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}} \| \tens{F}\vec{e}_i\|\, \| \tens{F}\vec{e}_j\|\,,
 \end{equation*}
-</div>
-<p data-braille="continuation">where \(\func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}\) is the angle between the directions \(\vec{e}_i\) and \(\vec{e}_j\) after the trasnformation. The latter relationship, by using <a class="xref" data-knowl="./knowl/Cii_pre_eq.html" title="Equation 1.8.3">(1.8.3)</a>, becomes</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</div>where \(\func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}\) is the angle between \(\tens{F}\vec{e}_i\) and \(\tens{F}\vec{e}_j\text{.}\) By using <a class="xref" data-knowl="./knowl/Cii_eq.html" title="Equation 1.8.4">(1.8.4)</a>, the following result can be obtained<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-C_{ij} = \cos{\func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}} \sqrt{\vec{e}_i \cdot \tens{C}\vec{e}_i} \, \sqrt{\vec{e}_j \cdot \tens{C}\vec{e}_j}\,.
+C_{ij} = \cos{\func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}} \, \func{\lambda}{\vec{e}_i} \, \func{\lambda}{\vec{e}_j}\,,
 \end{equation*}
-</div>
-<p data-braille="continuation">Then the generic component \(C_{ij}\) depends, as well as on the stretches along the \(\vec{e}_i\) and \(\vec{e}_j\) directions, on the angle formed by the transforms of these vectors. By introducing the angle</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</div>such a result shows the the generic component \(C_{ij}\) depends on stretches along \(\vec{e}_i\) and \(\vec{e}_j\) but, mainly, on the angle between the trasformed basis vectors \(\tens{F}\vec{e}_i\) and \(\tens{F}\vec{e}_j\text{.}\) By introducing the angle<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation}
 \func{\gamma}{\vec{e}_i,\vec{e}_j} = \func{\Theta}{\vec{e}_i,\vec{e}_j} - \func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j} = \frac{\pi}{2} - \func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}\,,\tag{1.8.5}
 \end{equation}
-</div>
-<p data-braille="continuation">which measures the difference between the angles formed by \(\vec{e}_i\) and \(\vec{e}_j\) before and after the transformation, the off-diagonal component can be expressed as</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</div>that is the angle given by the difference between the angles formed by \(\vec{e}_i\) and \(\vec{e}_j \) before and after the transformation, \(C_{ij}\) can be rewritten as follows<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-C_{ij} \amp = \cos{\left(\frac{\pi}{2} - \func{\gamma}{\vec{e}_i,\vec{e}_j}\right)} \sqrt{\vec{e}_i \cdot \tens{C}\vec{e}_i} \, \sqrt{\vec{e}_j \cdot \tens{C}\vec{e}_j}\,,\\
-\amp = \sin{\func{\gamma}{\vec{e}_i,\vec{e}_j}} \sqrt{\vec{e}_i \cdot \tens{C}\vec{e}_i} \, \sqrt{\vec{e}_j \cdot \tens{C}\vec{e}_j}\,,
+C_{ij} \amp = \cos{\left(\frac{\pi}{2} - \func{\gamma}{\vec{e}_i,\vec{e}_j}\right)} \, \func{\lambda}{\vec{e}_i} \, \func{\lambda}{\vec{e}_j}\,,\\
+\amp = \sin{\func{\gamma}{\vec{e}_i,\vec{e}_j}} \, \func{\lambda}{\vec{e}_i} \, \func{\lambda}{\vec{e}_j}\,,
 \end{align*}
-</div>
-<p data-braille="continuation">which, using la <a class="xref" data-knowl="./knowl/Cii_eq.html" title="Equation 1.8.4">(1.8.4)</a>, can be rewritten as</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</div>and then<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation}
 C_{ij} = \sin{\func{\gamma}{\vec{e}_i,\vec{e}_j}}\, \func{\lambda}{\vec{e}_i} \, \func{\lambda}{\vec{e}_j}\,.\tag{1.8.6}
 \end{equation}
-</div>
-<p data-braille="continuation">The quantity \(\func{\gamma}{\vec{e}_i,\vec{e}_j}\) is called <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">shear angle</em> or <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">shear</em>. When \(\func{\gamma}{\vec{e}_i,\vec{e}_j}\) is zero, i.e. when the angle between \(\vec{e}_i\) and \(\vec{e}_j\) directions does not change, the \(C_{ij}\) component is zero.</p></article><span class="incontext"><a href="measures_sec_strain_chap_en.html#insight-2">in-context</a></span>
+</div>The quantity \(\func{\gamma}{\vec{e}_i,\vec{e}_j}\) is called <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">shear angle</em> or <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">shear</em>. When \(\func{\gamma}{\vec{e}_i,\vec{e}_j}\) is zero, i.e. when the angle between \(\vec{e}_i\) and \(\vec{e}_j\) directions does not change, the \(C_{ij}\) component is zero.</li>
+</ul></article><span class="incontext"><a href="measures_sec_strain_chap_en.html#insight-2">in-context</a></span>
 </body>
 </html>

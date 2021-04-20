@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-02T11:40:27+02:00       *-->
+<!--*       on 2021-04-20T14:29:57+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,18 +15,46 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>It is evident from the diagram that the values assumed by the section forces for \(x = 0 \) are</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-N(0) = F\,,\quad T(0) = F\,,\quad  M(0) = -F l\,.
-\end{equation*}
-</div>
-<p data-braille="continuation">Using the general integrals, we obtain the following expressions of the generalized section forces as a function of the abscissa \(x \) placed along the axis of the beam</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-N(x) = F\,,\quad T(x) = F\,,\quad  M(x) = -F l + F\,x\,.
-\end{equation*}
-</div>
+<p xmlns:svg="http://www.w3.org/2000/svg">The latter results can be plotted using the following MATLAB® instructions. <figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>% axial force diagram
+syms N(x, F);
+N(x,F) = F;
+
+np = 100;
+Xv = 0:1/np:1;
+Nv = N(Xv, 1);
+Beam = zeros(1, np+1);
+
+plot(Xv,Nv,'g',Xv,Beam,'k','LineWidth',2)
+set(gca, 'Ylim', [-1 1])
+
+
+% shear force diagram
+syms T(x,F);
+T(x,F) = F;
+
+np = 100;
+Xv = 0:1/np:1;
+Tv = T(Xv, 1);
+Beam = zeros(1, np+1);
+
+plot(Xv,Tv,'b',Xv,Beam,'k','LineWidth',2)
+set(gca, 'Ylim', [-1 1])
+
+
+% bending moment diagram
+syms M(x,F,l);
+M(x,F,l) = -F*l + F*x;
+
+np = 100;
+Xv = 0:1/np:1;
+Mv = M(Xv, 1, 1);
+Beam = zeros(1, np+1);
+
+plot(Xv,Mv,'r',Xv,Beam,'k','LineWidth',2)
+set(gca, 'Ylim', [-1 1])
+set(gca, 'YDir','reverse')
+</b></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.9.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <span class="incontext"><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en.html#p-472">in-context</a></span>
 </body>
 </html>

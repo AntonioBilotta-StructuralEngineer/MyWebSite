@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-03T08:24:07+01:00       *-->
+<!--*       on 2021-04-20T14:29:28+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,16 +15,28 @@
 </head>
 <body>
 <article class="li"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Articolo</span><span class="period">.</span>
-</h6>La parte emisimmetrica, \(\text{skew}\tens{\nabla u}\text{,}\) che in forma matriciale è esprimibile come<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<span class="type">Punto</span><span class="period">.</span>
+</h6>Per le componenti fuori dalla diagonale principale si ottiene invece<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+C_{ij} = \transp{(\tens{F}\vec{e}_i)}\tens{F}\vec{e}_j = \tens{F}\vec{e}_i \cdot \tens{F}\vec{e}_j = \cos{\func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}} \| \tens{F}\vec{e}_i\|\, \| \tens{F}\vec{e}_j\|\,,
+\end{equation*}
+</div>dove \(\func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}\) rappresenta l'angolo formato dai vettori \(\tens{F}\vec{e}_i\) e \(\tens{F}\vec{e}_j\text{.}\) Tale relazione, utilizzando la <a class="xref" data-knowl="./knowl/Cii_eq.html" title="Equazione 1.8.4">(1.8.4)</a>, diventa<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+C_{ij} = \cos{\func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}} \, \func{\lambda}{\vec{e}_i} \, \func{\lambda}{\vec{e}_j}\,,
+\end{equation*}
+</div>risultato che mostra come la generica componente \(C_{ij}\) dipenda, oltre che dagli allungamenti lungo le direzioni \(\vec{e}_i\) ed \(\vec{e}_j\text{,}\) principalmente dall'angolo formato dai trasformati dei vettori. Tale dipendenza, introducendo l'angolo<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation}
-\text{skew}\mat{\nabla u}=
-\left[\begin{array}{ccc}
-0 \amp \frac{1}{2}\left(\regulardiff{u_1}{X_2}-\regulardiff{u_2}{X_1}\right) \amp \frac{1}{2}\left(\regulardiff{u_1}{X_3}-\regulardiff{u_3}{X_1}\right)\\
-\frac{1}{2}\left(\regulardiff{u_2}{X_1}-\regulardiff{u_1}{X_2}\right) \amp 0 \amp  \frac{1}{2}\left(\regulardiff{u_2}{X_3}-\regulardiff{u_3}{X_2}\right)\\
-\frac{1}{2}\left(\regulardiff{u_3}{X_1}-\regulardiff{u_1}{X_3}\right) \amp \frac{1}{2}\left(\regulardiff{u_3}{X_2}-\regulardiff{u_2}{X_3}\right) \amp 0
-\end{array}\right]\,,\tag{1.9.6}
+\func{\gamma}{\vec{e}_i,\vec{e}_j} = \func{\Theta}{\vec{e}_i,\vec{e}_j} - \func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j} = \frac{\pi}{2} - \func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}\,,\tag{1.8.5}
 \end{equation}
-</div>fornisce il <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">tensore della rotazione infinitesima</em>.</article><span class="incontext"><a href="infinitesimal_sec_strain_chap_it.html#li-25">in-context</a></span>
+</div>ovvero l'angolo dato dalla differenza fra gli angoli formati da \(\vec{e}_i\) ed \(\vec{e}_j\) prima e dopo la trasformazione, può essere riformulata come segue<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+C_{ij} \amp = \cos{\left(\frac{\pi}{2} - \func{\gamma}{\vec{e}_i,\vec{e}_j}\right)} \, \func{\lambda}{\vec{e}_i} \, \func{\lambda}{\vec{e}_j}\,,\\
+\amp = \sin{\func{\gamma}{\vec{e}_i,\vec{e}_j}} \, \func{\lambda}{\vec{e}_i} \, \func{\lambda}{\vec{e}_j}\,,
+\end{align*}
+</div>da cui<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+C_{ij} = \sin{\func{\gamma}{\vec{e}_i,\vec{e}_j}}\, \func{\lambda}{\vec{e}_i} \, \func{\lambda}{\vec{e}_j}\,.\tag{1.8.6}
+\end{equation}
+</div>La quantità \(\func{\gamma}{\vec{e}_i,\vec{e}_j}\) prende il nome di <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">angolo di taglio</em> o, più semplicemente, <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">taglio</em>. Nei casi in cui \(\func{\gamma}{\vec{e}_i,\vec{e}_j}\) è nullo, ovvero l'angolo formato dalle direzioni \(\vec{e}_i\) ed \(\vec{e}_j\) non varia, la componente fuori diagonale \(C_{ij}\) è nulla.</article><span class="incontext"><a href="measures_sec_strain_chap_it.html#li-25">Contesto</a></span>
 </body>
 </html>

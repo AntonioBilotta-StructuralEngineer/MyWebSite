@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-02T11:40:26+02:00       *-->
+<!--*       on 2021-04-20T14:29:56+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,25 +15,25 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>The presence of the increase in temperature determines an elongation of the beam equal to</p>
+<p>The applied load condition can be expressed as</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\Delta l_T = \alpha \Delta T \,l\,,
+\func{p}{x} = \bar{p}\,\sin\left(\frac{2\pi\,x}{l}\right)
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(\alpha \) represents the thermal expansion coefficient of the material. This elongation is however prevented by the presence of the constraints therefore the beam will also be subjected to an axial force calculable by the following equation</p>
+<p class="continuation">which, through Equation <a class="xref" data-knowl="./knowl/stretched_beam_navier.html" title="Equation 3.5.21">(3.5.21)</a>, gives</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\Delta l_T + \Delta l_N = \alpha \Delta T \,l + \frac{N}{EA} \,l = 0\,,
+EA\,\frac{d^2u}{dx^2} + \bar{p}\,\sin\left(\frac{2\pi\,x}{l}\right) = 0
 \end{equation*}
 </div>
-<p data-braille="continuation">which furnishes</p>
+<p class="continuation">to be satisfied in each point of the beam. The boundary conditions are</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-N = - EA \,\alpha \Delta T\,,
-\end{equation*}
+\begin{align*}
+\amp \func{u}{0} = 0\,,\\
+\amp \func{u}{l} = 0\,.
+\end{align*}
 </div>
-<p data-braille="continuation">solution showing the state of compression determined by the elongation which is not allowed. The solution in terms of displacement is identically zero along its entire beam length.</p>
 <span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_en.html#p-333">in-context</a></span>
 </body>
 </html>

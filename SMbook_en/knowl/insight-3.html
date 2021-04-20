@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-02T11:40:24+02:00       *-->
+<!--*       on 2021-04-20T14:29:54+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -23,13 +23,13 @@
 \tens{C} = \tens{I}+ \tens{\nabla u} + \transp{\tens{\nabla u}} +  \transp{\tens{\nabla u}}\,\tens{\nabla u}\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">from which, making the calculations, for example with the following MATLAB® instructions</p>
-<figure class="listing figure-like"><pre class="console"><b>syms u1_X1 u1_X2 u1_X3 u2_X1 u2_X2 u2_X3 u3_X1 u3_X2 u3_X3
+<p class="continuation">from which, making the calculations, for example with the following MATLAB® instructions</p>
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre xmlns:svg="http://www.w3.org/2000/svg" class="console"><b>syms u1_X1 u1_X2 u1_X3 u2_X1 u2_X2 u2_X3 u3_X1 u3_X2 u3_X3
 Du = [u1_X1 u1_X2 u1_X3;u2_X1 u2_X2 u2_X3; u3_X1 u3_X2 u3_X3]
 C = diag([1 1 1]) + Du + transpose(Du) + transpose(Du)*Du
 C(1,1)
 C(1,2)
-</b></pre>
+</b></pre></div>
 <figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.9.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p>the expressions of a component on the main diagonal and one outside can be obtained, i.e.</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
@@ -37,26 +37,26 @@ C_{11} \amp = \left( 1 + \frac{\partial u_1}{\partial X_1} \right)^2 + \left(\fr
 C_{12} \amp = \frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1} + \frac{\partial u_1}{\partial X_1}\frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1}\frac{\partial u_2}{\partial X_2} + \frac{\partial u_3}{\partial X_1}\frac{\partial u_3}{\partial X_2} \,.
 \end{align*}
 </div>
-<p data-braille="continuation">For the diagonal component, using the <a class="xref" data-knowl="./knowl/Cii_eq.html" title="Equation 1.8.4">(1.8.4)</a> result obtained for the \(\tens{C}\) diagonal component, it is possible to write</p>
+<p class="continuation">For the diagonal component, using the <a class="xref" data-knowl="./knowl/Cii_eq.html" title="Equation 1.8.4">(1.8.4)</a> result obtained for the \(\tens{C}\) diagonal component, it is possible to write</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
 \func{\lambda}{\vec{e}_1}^2 =  \left( 1 + \underbrace{\frac{\partial u_1}{\partial X_1}}_{\varepsilon_{11}} \right)^2 + \underbrace{\left(\frac{\partial u_1}{\partial X_2}\right)^2 + \left(\frac{\partial u_1}{\partial X_3}\right)^2}_{\text{trascurabili nel caso infinitesimo}}\,.
 \end{equation*}
 </div>
-<p data-braille="continuation">From which</p>
+<p class="continuation">From which</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation}
 \varepsilon_{11} \approx \func{\lambda}{\vec{e}_1} - 1\,.\tag{1.9.9}
 \end{equation}
 </div>
-<p data-braille="continuation">A similar result is valid for the other components of \(\tens{\varepsilon}\) belonging to the main diagonal.</p>
+<p class="continuation">A similar result is valid for the other components of \(\tens{\varepsilon}\) belonging to the main diagonal.</p>
 <p>For the off-diagonal component, by using <a class="xref" data-knowl="./knowl/Cij_eq.html" title="Equation 1.8.6">(1.8.6)</a>, it can be obtained</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
 \sin{\func{\gamma}{\vec{e}_1,\vec{e}_2}}\, \underbrace{\func{\lambda}{\vec{e}_1} \, \func{\lambda}{\vec{e}_2}}_{\approx 1} = \underbrace{\frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1}}_{2\,\varepsilon_{12}} + \underbrace{\frac{\partial u_1}{\partial X_1}\frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1}\frac{\partial u_2}{\partial X_2} + \frac{\partial u_3}{\partial X_1}\frac{\partial u_3}{\partial X_2}}_{\text{trascurabili nel caso infinitesimo}}\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">and then</p>
+<p class="continuation">and then</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation}
 \varepsilon_{12} \approx \frac{1}{2}\, \sin{\func{\gamma}{\vec{e}_1,\vec{e}_2}} \approx  \frac{1}{2}\, \func{\gamma}{\vec{e}_1,\vec{e}_2}\,.\tag{1.9.10}

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-02T11:40:25+02:00       *-->
+<!--*       on 2021-04-20T14:29:55+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,29 +15,34 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Also in this case it is possible to proceed by assuming an attempt solution for the stress tensor and then verifying the satisfaction of the equations of equilibrium and of the boundary conditions. In particular for \(\tens{\sigma} \) the following form is assumed</p>
+<p>Retracing the same steps taken in  <a href="motivations_sec_elasticity_chap_en.html#motivation_static_subsubsec" class="internal" title="Subsubsection 3.1.1.1: stress field assumption and solution">Subsubsection 3.1.1.1</a> for the simply stretched solid, we consider the verification or imposition of the boundary conditions. In particular, the satisfaction of Eq. <a class="xref" data-knowl="./knowl/motiv_bc3_eq.html" title="Equation 3.1.6">(3.1.6)</a> is easily verified, in fact</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\mat{\sigma} =
+\begin{equation*}
 \left[\begin{array}{ccc}
 0 \amp 0 \amp 0\\
 0 \amp 0 \amp 0\\
 0 \amp 0 \amp \kappa\,X_2
-\end{array}\right]\tag{3.4.16}
-\end{equation}
-</div>
-<p data-braille="continuation">valid on the whole domain and with \(\kappa \) a generic constant. With such an assumption the writing of balance equations provides</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\begin{array}{l}
-\frac{\partial\, 0}{\partial\, X_1} + \frac{\partial\, 0}{\partial\, X_2} + \frac{\partial\, 0}{\partial\, X_3} = 0\\
-\frac{\partial\, 0}{\partial\, X_1} + \frac{\partial\, 0}{\partial\, X_2} + \frac{\partial\, 0}{\partial\, X_3} = 0\\
-\frac{\partial\, 0}{\partial\, X_1} + \frac{\partial\, 0}{\partial\, X_2} + \frac{\partial\, (\kappa\,X_2)}{\partial\, X_3} = 0
-\end{array}
-\quad\;\text{in}\;\body_0\,,
+\end{array}\right]
+\left[\begin{array}{r}n_1\\n_2\\0\end{array}\right] =
+\left[\begin{array}{r}0\\0\\0\end{array}\right] \,.
 \end{equation*}
 </div>
-<p data-braille="continuation">which shows their satisfaction.</p>
+<p class="continuation">Condition <a class="xref" data-knowl="./knowl/motiv_bc1_eq.html" title="Equation 3.1.4">(3.1.4)</a> gives</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\left[\begin{array}{ccc}
+0 \amp 0 \amp 0\\
+0 \amp 0 \amp 0\\
+0 \amp 0 \amp \kappa\,X2
+\end{array}\right]
+\left[\begin{array}{r}0 \\ 0\\-1\end{array}\right] =
+\left[\begin{array}{c}0\\0\\-\frac{\bar{t}}{H/2}\,X_2\end{array}\right]
+\quad \rightarrow \quad
+\kappa = \frac{\bar{t}}{H/2}
+\,.
+\end{equation*}
+</div>
+<p class="continuation">The same result should be obtained through condition  <a class="xref" data-knowl="./knowl/motiv_bc2_eq.html" title="Equation 3.1.5">(3.1.5)</a>.</p>
 <span class="incontext"><a href="problem_sec_elasticity_chap_en.html#p-291">in-context</a></span>
 </body>
 </html>

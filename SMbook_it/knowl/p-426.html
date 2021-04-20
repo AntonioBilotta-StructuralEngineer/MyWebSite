@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-03T08:24:10+01:00       *-->
+<!--*       on 2021-04-20T14:29:30+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,17 +14,51 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p>Se si considera il caso in cui siano soltanto due le componenti non nulle delle forze applicate e delle posizioni dei punti dello spazio, l'equazione vettoriale <a class="xref" data-knowl="./knowl/rb_statics1_eq.html" title="Equazione 5.1.7">(5.1.7)</a> è esprimibile solo mediante due equazioni scalari e l'equazione vettoriale <a class="xref" data-knowl="./knowl/rb_statics2_eq.html" title="Equazione 5.1.8">(5.1.8)</a> si riduce ad una sola equazione scalare. Ovvero</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{gather}
-\sum_{i=1}^N F_{1i} = 0\,,\tag{5.2.1}\\
-\sum_{i=1}^N F_{2i} = 0\,,\tag{5.2.2}\\
-\sum_{i=1}^N \left(  \left( X_{1i} - X_{1o}\right) F_{2i} - \left( X_{2i} - X_{2o}\right) F_{1i} \right) = 0\,.\tag{5.2.3}
-\end{gather}
-</div>
-<p data-braille="continuation">La condizione <a class="xref" data-knowl="./knowl/rb_plane_statics1_eq.html" title="Equazione 5.2.1">(5.2.1)</a> esprime l'annullamento della somma di tutte le forze orizzontali applicate, ovvero le componenti lungo l'asse 1 delle forze applicate. La condizione <a class="xref" data-knowl="./knowl/rb_plane_statics2_eq.html" title="Equazione 5.2.2">(5.2.2)</a> impone l'annullamento della somma di tutte le forze verticali applicate, ovvero le componenti lungo l'asse 2 delle forze applicate. La condizione <a class="xref" data-knowl="./knowl/rb_plane_statics3_eq.html" title="Equazione 5.2.3">(5.2.3)</a> esprime l'annullamento della somma dei momenti esercitati dalle forze orizzontali e verticali rispetto al punto scelto come polo. La seguente figura illustra per il caso di una singola forza il significato dei termini presenti nelle equazioni. <figure class="figure figure-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="image-box" style="width: 55%; margin-left: 22.5%; margin-right: 22.5%;"><img src="images/statica2D.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.2.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<span class="incontext"><a href="planecase_sec_rigid_body_statics_chap_it.html#p-426">in-context</a></span>
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
+<p xmlns:svg="http://www.w3.org/2000/svg">Le seguenti istruzioni MATLAB® consentono di valutare le risultanti delle forze orizzontali, delle forze verticali e dei momenti a partire dai carichi applicati sui singoli punti di un corpo rigido. <figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>% vettore delle risultanti =
+% [orizzontale; verticale; momento]
+R = zeros(3,1);
+
+% funzione per il calcolo del momento
+momento = @(X0, X, Carico)...
+    -Carico(1)*(X(2)-X0(2))+Carico(2)*(X(1)-X0(1));
+
+% coordinate dei punti sui quali sono applicati i carichi
+syms L;
+
+A = [0; 0];
+B = [L; 0];
+C = [L; L/2];
+
+% scelta del polo
+POLO = A;
+
+% per ogni punto si assegna il vettore Carico = [F1; F2; M]
+% e si sommano i contributi alla risultante
+syms F;
+
+CaricoA = [F; F; 0];
+R = R + CaricoA;
+R(3) = R(3) + momento(POLO, A, CaricoA);
+R
+
+CaricoB = [-F; -F; 0];
+R = R + CaricoB;
+R(3) = R(3) + momento(POLO, B, CaricoB);
+R
+
+CaricoC = [-F; 2*F; F*L];
+R = R + CaricoC;
+R(3) = R(3) + momento(POLO, C, CaricoC);
+R
+
+if and(and(R(1) == 0, R(2) == 0), R(3) == 0)
+    disp('Sistema equilibrato')
+else
+    disp('Sistema non equilibrato')
+end
+</b></pre></div>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">5.2.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<span class="incontext"><a href="planecase_sec_rigid_body_statics_chap_it.html#p-426">Contesto</a></span>
 </body>
 </html>

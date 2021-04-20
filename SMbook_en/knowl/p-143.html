@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-02T11:40:24+02:00       *-->
+<!--*       on 2021-04-20T14:29:54+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,38 +15,22 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>For the off-diagonal components it can be obtained what follows</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-C_{ij} = \vec{e}_i \cdot \tens{C}\vec{e}_j = \vec{e}_i \cdot \transp{\tens{F}}\tens{F}\vec{e}_j = \tens{F}\vec{e}_i \cdot \tens{F}\vec{e}_j = \cos{\func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}} \| \tens{F}\vec{e}_i\|\, \| \tens{F}\vec{e}_j\|\,,
-\end{equation*}
-</div>
-<p data-braille="continuation">where \(\func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}\) is the angle between the directions \(\vec{e}_i\) and \(\vec{e}_j\) after the trasnformation. The latter relationship, by using <a class="xref" data-knowl="./knowl/Cii_pre_eq.html" title="Equation 1.8.3">(1.8.3)</a>, becomes</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-C_{ij} = \cos{\func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}} \sqrt{\vec{e}_i \cdot \tens{C}\vec{e}_i} \, \sqrt{\vec{e}_j \cdot \tens{C}\vec{e}_j}\,.
-\end{equation*}
-</div>
-<p data-braille="continuation">Then the generic component \(C_{ij}\) depends, as well as on the stretches along the \(\vec{e}_i\) and \(\vec{e}_j\) directions, on the angle formed by the transforms of these vectors. By introducing the angle</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\func{\gamma}{\vec{e}_i,\vec{e}_j} = \func{\Theta}{\vec{e}_i,\vec{e}_j} - \func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j} = \frac{\pi}{2} - \func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}\,,\tag{1.8.5}
-\end{equation}
-</div>
-<p data-braille="continuation">which measures the difference between the angles formed by \(\vec{e}_i\) and \(\vec{e}_j\) before and after the transformation, the off-diagonal component can be expressed as</p>
+<p>A standard strain measure is based on the difference between the squared lengths in the current configuration and in the reference one. In particular what follows can be obtained</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-C_{ij} \amp = \cos{\left(\frac{\pi}{2} - \func{\gamma}{\vec{e}_i,\vec{e}_j}\right)} \sqrt{\vec{e}_i \cdot \tens{C}\vec{e}_i} \, \sqrt{\vec{e}_j \cdot \tens{C}\vec{e}_j}\,,\\
-\amp = \sin{\func{\gamma}{\vec{e}_i,\vec{e}_j}} \sqrt{\vec{e}_i \cdot \tens{C}\vec{e}_i} \, \sqrt{\vec{e}_j \cdot \tens{C}\vec{e}_j}\,,
+\frac{1}{2}\left(\|d\vec{x}\|^2 - \|d\vec{X}\|^2\right) \amp = \frac{1}{2}\left(d\vec{x}\cdot d\vec{x} - d\vec{X}\cdot d\vec{X}\right)\,,\\
+\amp = \frac{1}{2}\left( (\tens{F} d\vec{X})\cdot(\tens{F} d\vec{X}) - d\vec{X}\cdot d\vec{X}\right) \,,\\
+\amp = \frac{1}{2}\left( d\vec{X}\cdot(\transp{\tens{F}}\,\tens{F} d\vec{X}) - d\vec{X}\cdot(\tens{I}\, d\vec{X})\right) \,,\\
+\amp = d\vec{X}\cdot \frac{1}{2}\left( \transp{\tens{F}}\,\tens{F} - \tens{I}\right)d\vec{X}\,.
 \end{align*}
 </div>
-<p data-braille="continuation">which, using la <a class="xref" data-knowl="./knowl/Cii_eq.html" title="Equation 1.8.4">(1.8.4)</a>, can be rewritten as</p>
+<p class="continuation">The following tensor is so defined</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation}
-C_{ij} = \sin{\func{\gamma}{\vec{e}_i,\vec{e}_j}}\, \func{\lambda}{\vec{e}_i} \, \func{\lambda}{\vec{e}_j}\,.\tag{1.8.6}
+\tens{E} = \frac{1}{2}\left( \transp{\tens{F}}\,\tens{F} - \tens{I}\right) = \frac{1}{2}\left(\tens{C} - \tens{I}\right)\,.\tag{1.8.7}
 \end{equation}
 </div>
-<p data-braille="continuation">The quantity \(\func{\gamma}{\vec{e}_i,\vec{e}_j}\) is called <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">shear angle</em> or <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">shear</em>. When \(\func{\gamma}{\vec{e}_i,\vec{e}_j}\) is zero, i.e. when the angle between \(\vec{e}_i\) and \(\vec{e}_j\) directions does not change, the \(C_{ij}\) component is zero.</p>
+<p class="continuation">The name of the tensor is <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Green-Lagrange strain tensor</em> (the use of the \(\frac{1}{2} \) factor will become clear in the following). \(\tens{E}\) is symmetric but is not positive definite.</p>
 <span class="incontext"><a href="measures_sec_strain_chap_en.html#p-143">in-context</a></span>
 </body>
 </html>

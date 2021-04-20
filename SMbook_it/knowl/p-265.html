@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-03T08:24:08+01:00       *-->
+<!--*       on 2021-04-20T14:29:29+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,13 +14,41 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<ul class="disc">
-<li>La risposta del materiale inizialmente è lineare.</li>
-<li>Esiste un limite alla fase lineare (Proportional limit) superato il quale la risposta tende a mantenersi costante stazionando nella fase denominata di <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">snervamento</em> (Yield Point).</li>
-<li>Successivamente comincia la fase di <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">incrudimento</em> (Strain Hardening) che termina con il raggiungimento del <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">carico limite</em> (Ultimate Strength) del materiale.</li>
-<li>Superato il carico limite il <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">punto di rottura</em> (Fracture Point) del materiale è preceduto da una riduzione della tensione.</li>
-</ul>
-<span class="incontext"><a href="uniaxial_sec_elasticity_chap_it.html#p-265">in-context</a></span>
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
+<p>Il focus del presente capitolo è comunque soltanto la prima fase della risposta del materiale, fase che non solo è lineare ma anche elastica nel senso che è applicabile la legge di Hooke e quindi tra le uniche componenti di tensione e deformazione, \(\sigma\) e \(\varepsilon\text{,}\) presenti in una condizione uniassiale è legittimo assumere che intercorra il seguente legame proporzionale</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\sigma = E\,\varepsilon\,,\tag{3.2.2}
+\end{equation}
+</div>
+<p class="continuation">e che sia possibile definire un'energia elastica che agisce come potenziale per la tensione</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\Phi = \frac{1}{2} \sigma \varepsilon= \frac{1}{2}E\,\varepsilon^2 = \func{\Phi}{\varepsilon}
+\qquad\rightarrow\qquad
+\frac{d\func{\Phi}{\varepsilon}}{d\varepsilon} = E\,\varepsilon = \sigma\,,\tag{3.2.3}
+\end{equation}
+</div>
+<p class="continuation">inoltre</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\frac{d^2\func{\Phi}{\varepsilon}}{d\varepsilon^2} = E\,.\tag{3.2.4}
+\end{equation}
+</div>
+<p class="continuation">È possibile anche effettuare una formulazione <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">complementare</em> dell'energia elastica, ovvero esprimerla rispetto alla tensione</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\Phi = \frac{1}{2} \sigma \varepsilon= \frac{1}{2}\frac{\sigma^2}{E} = \func{\Phi}{\sigma}
+\qquad\rightarrow\qquad
+\frac{d\func{\Phi}{\sigma}}{d\sigma} = \frac{\sigma}{E} = \varepsilon\,,\tag{3.2.5}
+\end{equation}
+</div>
+<p class="continuation">da cui</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\frac{d^2\func{\Phi}{\sigma}}{d\sigma^2} = \frac{1}{E}\,.\tag{3.2.6}
+\end{equation}
+</div>
+<span class="incontext"><a href="uniaxial_sec_elasticity_chap_it.html#p-265">Contesto</a></span>
 </body>
 </html>

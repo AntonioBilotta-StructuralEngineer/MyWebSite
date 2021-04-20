@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-03T08:24:09+01:00       *-->
+<!--*       on 2021-04-20T14:29:30+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,8 +14,47 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Anche se non necessario - le componenti di spostamento variano da punto a punto sul corpo, ma la rotazione di un corpo rigido non varia da punto a punto - nelle applicazioni successive si tenderà a denotare anche la rotazione del corpo con un simbolo del tipo \(\varphi_o\) indicando quindi a pedice il polo preso come riferimento.</p>
-<span class="incontext"><a href="description_sec_rigid_body_kinematics_chap_it.html#p-369">in-context</a></span>
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
+<p xmlns:svg="http://www.w3.org/2000/svg">Le seguenti istruzioni MATLAB® definiscono una funzione per il calcolo dello spostamento rigido nel piano di un punto assegnato, X, rispetto ad un polo generico, X0, ed ai parametri che definiscono la traslazione e la rotazione di un corpo, u0 e phi0. Il corpo in questione è mondimensionale, quindi di tipo trave, ed è individuato da 2 o più punti. Nell'esempio si considera una trave definita da 3 punti e se ne calcola lo spostamento assumendo come polo ciascuno di questi 3 punti. <figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>% campo di spostamento generico nel piano
+rigidDispl = ...
+    @(u0, phi0, X0, X)...
+    [u0(1)-phi0*(X(2)-X0(2));...
+     u0(2)+phi0*(X(1)-X0(1))];
+
+% descrizione geometrica della trave 
+syms l;
+A = [0; 0];
+B = [l; 0];
+C = [l; l/2];
+
+% campo di spostamento assumendo come polo il punto A
+POLO = A;
+syms phiA;
+phi0 = phiA;
+u0 = sym('uA', [2 1]);
+uA = rigidDispl(u0, phi0, POLO, A);
+uB = rigidDispl(u0, phi0, POLO, B);
+uC = rigidDispl(u0, phi0, POLO, C);
+
+% campo di spostamento assumendo come polo il punto B
+POLO = B;
+syms phiB;
+phi0 = phiB;
+u0 = sym('uB', [2 1]);
+uA = rigidDispl(u0, phi0, POLO, A);
+uB = rigidDispl(u0, phi0, POLO, B);
+uC = rigidDispl(u0, phi0, POLO, C);
+
+% campo di spostamento assumendo come polo il punto C
+POLO = C;
+syms phiC;
+phi0 = phiC;
+u0 = sym('uC', [2 1]);
+uA = rigidDispl(u0, phi0, POLO, A);
+uB = rigidDispl(u0, phi0, POLO, B);
+uC = rigidDispl(u0, phi0, POLO, C);
+</b></pre></div>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">4.1.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<span class="incontext"><a href="description_sec_rigid_body_kinematics_chap_it.html#p-369">Contesto</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-02T11:40:27+02:00       *-->
+<!--*       on 2021-04-20T14:29:57+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,23 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let us consider a beam subjected to generic loading conditions, let us assume to isolate a portion of the beam with infinitesimal length  \(dx\text{.}\) The beam's portion thus identified is subjected to a series of actions shown in the figure and which, for clarity, are listed below:</p>
-<ul class="disc">
-<li>generalized section forces, \(N(x)\text{,}\) \(T(x)\) e \(M(x)\text{,}\) relative to point \(x\) along the beam axis;</li>
-<li>generalized section forces, \(N(x+dx)\text{,}\) \(T(x+dx)\) e \(M(x+dx)\text{,}\) relative to point \(x+dx\text{;}\)</li>
-<li>axial distributed load \(p(x)\text{;}\)</li>
-<li>transverse distributed load \(q(x)\text{.}\)</li>
-</ul>
+<p>The obtained scheme is essentially a free body diagram for which it is possible to impose the following equations of equilibrium (the pole used for the rotational equilibrium is placed at the abscissa \(x + dx \))</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align}
+-N(x) + N(x+dx) + p(x)dx \amp = 0\,,\tag{5.8.1}\\
+-T(x) + T(x+dx) + q(x)dx \amp = 0\,,\tag{5.8.2}\\
+-T(x)\,dx - M(x) + q(x)\frac{dx^2}{2} + M(x+dx) \amp = 0\,.\tag{5.8.3}
+\end{align}
+</div>
+<p class="continuation">The hypothesis of continuity of the one-dimensional solid and of the quantities defined on it, allows to use Taylor series truncated to the first order of the generalized section forces evaluated on the section \(x + dx \) and to obtain therefore</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align}
+-N(x) + \underbrace{N(x) + \frac{d N}{d x}\,dx}_{N(x+dx)} + p(x)dx \amp = 0\,,\tag{5.8.4}\\
+-T(x) + \underbrace{T(x) + \frac{d T}{d x}\,dx}_{T(x+dx)} + q(x)dx \amp = 0\,,\tag{5.8.5}\\
+-T(x)\,dx - M(x) + q(x)\frac{dx^2}{2} + \underbrace{M(x) + \frac{d M}{d x}\,dx}_{M(x+dx)} \amp = 0\,.\tag{5.8.6}
+\end{align}
+</div>
+<p class="continuation">where the quantities \(\frac{d N}{d x} \text{,}\) \(\frac{d T}{d x} \) and \(\frac{d M}{d x} \) denote the derivatives of the generalized section forces with respect to the abscissa \(x \text{.}\) Making the necessary simplifications and neglecting the term \(q(x)\frac{dx^2}{2} \) because of higher order than the first, we obtain the equilibrium differential equations for the 2D beam listed below .</p>
 <span class="incontext"><a href="indefinte_sec_rigid_body_statics_chap_en.html#p-462">in-context</a></span>
 </body>
 </html>

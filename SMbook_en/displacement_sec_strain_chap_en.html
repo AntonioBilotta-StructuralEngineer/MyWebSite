@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-02T11:40:20+02:00       *-->
+<!--*       on 2021-04-20T14:29:50+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -57,7 +57,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{{\not{\mid}}}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -194,7 +194,7 @@ MathJax.Hub.Config({
 \vec{u} = \vec{x} - \vec{X}\label{displ_eq}\tag{1.4.1}
 \end{equation}
 </div>
-<p data-braille="continuation">known as <em class="emphasis">displacement field</em>. The relative gradient, known as <em class="emphasis">displacement gradient</em> and indicated with the symbol \(\tens{\nabla u}\text{,}\) is obtained in a similar way to what has already been done for the deformation gradient. Given the field</p>
+<p class="continuation">known as <em class="emphasis">displacement field</em>. The relative gradient, known as <em class="emphasis">displacement gradient</em> and indicated with the symbol \(\tens{\nabla u}\text{,}\) is obtained in a similar way to what has already been done for the deformation gradient. Given the field</p>
 <div class="displaymath">
 \begin{align}
 u_1 \amp = \func{u_1}{X_1, X_2, X_3}\,,\tag{1.4.2}\\
@@ -202,7 +202,7 @@ u_2 \amp = \func{u_3}{X_1, X_2, X_3}\,,\tag{1.4.3}\\
 u_3 \amp = \func{u_3}{X_1, X_2, X_3}\,.\tag{1.4.4}
 \end{align}
 </div>
-<p data-braille="continuation">the following result can be obtained</p>
+<p class="continuation">the following result can be obtained</p>
 <div class="displaymath">
 \begin{equation}
 \mat{\nabla u} = \left[\begin{array}{ccc}
@@ -218,7 +218,7 @@ u_3 \amp = \func{u_3}{X_1, X_2, X_3}\,.\tag{1.4.4}
 \tens{\nabla u} = \tens{F} - \tens{I}\,,\tag{1.4.6}
 \end{equation}
 </div>
-<p data-braille="continuation">where \(\tens{I}\text{,}\) the identity tensor, is</p>
+<p class="continuation">where \(\tens{I}\text{,}\) the identity tensor, is</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{I} = \left[\begin{array}{ccc}
@@ -229,37 +229,37 @@ u_3 \amp = \func{u_3}{X_1, X_2, X_3}\,.\tag{1.4.4}
 \end{equation*}
 </div>
 <article class="assemblage assemblage-like" id="assemblage-7"><h6 class="heading"><span class="title">evaluation of the displacement field and its gradient.</span></h6>
-<p id="p-71">With regard to the Transformation 1 already used in the previous examples, the displacement field and its gradient can be evaluated on the basis of the following MATLAB® instructions. Bear in mind that, for the linearity of the transformations involved, the gradients are evaluated as the matrix associated to the transformation. <figure class="listing figure-like" id="listing-9"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
+<p id="p-71">With regard to the Transformation 1 already used in the previous examples, the displacement field and its gradient can be evaluated on the basis of the following MATLAB® instructions. Bear in mind that, for the linearity of the transformations involved, the gradients are evaluated as the matrix associated to the transformation. <figure class="listing figure-like" id="listing-9"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
 F = [T1([1; 0]) T1([0; 1])]
 Grad_u = F - diag([1 1])
 
 u1 = @(X) T1(X) - X;
 Grad_u = [u1([1; 0]) u1([0; 1])]
-</b></pre>
+</b></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.4.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<p id="p-72">MATLAB® instructions for Transformation 2. <figure class="listing figure-like" id="listing-10"><pre class="console"><b>T2 = @(X) [2*X(1); X(2)];
+<p id="p-72">MATLAB® instructions for Transformation 2. <figure class="listing figure-like" id="listing-10"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T2 = @(X) [2*X(1); X(2)];
 F = [T2([1; 0]) T2([0; 1])]
 Grad_u = F - diag([1 1])
 
 u2 = @(X) T2(X) - X;
 Grad_u = [u2([1; 0]) u2([0; 1])]
-</b></pre>
+</b></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.4.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<p id="p-73">MATLAB® instructions for Transformation 3. <figure class="listing figure-like" id="listing-11"><pre class="console"><b>T3 = @(X) [X(1); 1.5*X(2)];
+<p id="p-73">MATLAB® instructions for Transformation 3. <figure class="listing figure-like" id="listing-11"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T3 = @(X) [X(1); 1.5*X(2)];
 F = [T3([1; 0]) T3([0; 1])]
 Grad_u = F - diag([1 1])
 
 u3 = @(X) T3(X) - X;
 Grad_u = [u3([1; 0]) u3([0; 1])]
-</b></pre>
+</b></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.4.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<p id="p-74">MATLAB® instructions for Transformation 4. <figure class="listing figure-like" id="listing-12"><pre class="console"><b>T4 = @(X) [X(1)+X(2); X(2)];
+<p id="p-74">MATLAB® instructions for Transformation 4. <figure class="listing figure-like" id="listing-12"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T4 = @(X) [X(1)+X(2); X(2)];
 F = [T4([1; 0]) T4([0; 1])]
 Grad_u = F - diag([1 1])
 
 u4 = @(X) T4(X) - X;
 Grad_u = [u4([1; 0]) u4([0; 1])]
-</b></pre>
+</b></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.4.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></section></div></main>
 </div>
 </body>

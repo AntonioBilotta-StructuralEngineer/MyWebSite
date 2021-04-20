@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-03T08:24:07+01:00       *-->
+<!--*       on 2021-04-20T14:29:28+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,37 +15,37 @@
 </head>
 <body>
 <article class="assemblage assemblage-like"><h6 class="heading"><span class="title">valutazione del campo di spostamento e del relativo gradiente.</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">In merito alla Trasformazione 1 già utilizzata negli esempi precedenti, il campo di spostamento ed il relativo gradiente possono essere valutati sulla base delle seguenti istruzioni MATLAB®. Si tenga presente che, per la linearità delle trasformazioni coinvolte, i gradienti vengono valutati come matrice associata alla trasformazione. <figure class="listing figure-like"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
+<p xmlns:svg="http://www.w3.org/2000/svg">In merito alla Trasformazione 1 già utilizzata negli esempi precedenti, il campo di spostamento ed il relativo gradiente possono essere valutati sulla base delle seguenti istruzioni MATLAB®. Si tenga presente che, per la linearità delle trasformazioni coinvolte, i gradienti vengono valutati come matrice associata alla trasformazione. <figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
 F = [T1([1; 0]) T1([0; 1])]
 Grad_u = F - diag([1 1])
 
 u1 = @(X) T1(X) - X;
 Grad_u = [u1([1; 0]) u1([0; 1])]
-</b></pre>
+</b></pre></div>
 <figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.4.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<p xmlns:svg="http://www.w3.org/2000/svg">Istruzioni MATLAB® per la Trasformazione 2. <figure class="listing figure-like"><pre class="console"><b>T2 = @(X) [2*X(1); X(2)];
+<p xmlns:svg="http://www.w3.org/2000/svg">Istruzioni MATLAB® per la Trasformazione 2. <figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T2 = @(X) [2*X(1); X(2)];
 F = [T2([1; 0]) T2([0; 1])]
 Grad_u = F - diag([1 1])
 
 u2 = @(X) T2(X) - X;
 Grad_u = [u2([1; 0]) u2([0; 1])]
-</b></pre>
+</b></pre></div>
 <figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.4.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<p xmlns:svg="http://www.w3.org/2000/svg">Istruzioni MATLAB® per la Trasformazione 3. <figure class="listing figure-like"><pre class="console"><b>T3 = @(X) [X(1); 1.5*X(2)];
+<p xmlns:svg="http://www.w3.org/2000/svg">Istruzioni MATLAB® per la Trasformazione 3. <figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T3 = @(X) [X(1); 1.5*X(2)];
 F = [T3([1; 0]) T3([0; 1])]
 Grad_u = F - diag([1 1])
 
 u3 = @(X) T3(X) - X;
 Grad_u = [u3([1; 0]) u3([0; 1])]
-</b></pre>
+</b></pre></div>
 <figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.4.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<p xmlns:svg="http://www.w3.org/2000/svg">Istruzioni MATLAB® per la Trasformazione 4. <figure class="listing figure-like"><pre class="console"><b>T4 = @(X) [X(1)+X(2); X(2)];
+<p xmlns:svg="http://www.w3.org/2000/svg">Istruzioni MATLAB® per la Trasformazione 4. <figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T4 = @(X) [X(1)+X(2); X(2)];
 F = [T4([1; 0]) T4([0; 1])]
 Grad_u = F - diag([1 1])
 
 u4 = @(X) T4(X) - X;
 Grad_u = [u4([1; 0]) u4([0; 1])]
-</b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.4.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><span class="incontext"><a href="displacement_sec_strain_chap_it.html#assemblage-7">in-context</a></span>
+</b></pre></div>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.4.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><span class="incontext"><a href="displacement_sec_strain_chap_it.html#assemblage-7">Contesto</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-03T08:24:07+01:00       *-->
+<!--*       on 2021-04-20T14:29:28+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,7 @@
 </head>
 <body>
 <article class="remark remark-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Commento</span><span class="space"> </span><span class="codenumber">1.8.1</span><span class="period">.</span>
+<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">1.8.1</span><span class="period">.</span>
 </h6>
 <p xmlns:svg="http://www.w3.org/2000/svg">Si potrebbe pensare che, noto \(\tens{U}^2\text{,}\) la semplice operazione \(\tens{U}=\sqrt{\tens{C}}\) consenta la valutazione di \(\tens{U}\text{.}\) L'operazione è possibile ma non è banale perché richiede la valutazione degli autovalori e degli autovettori di \(\tens{C}\text{.}\) Per tale ragione nelle misure di deformazione si utilizza direttamente il tensore \(\tens{C}\) o altre grandezze derivate.</p>
 <article class="assemblage assemblage-like"><p>Al fine di illustrare comunque la procedura sopra descritta si consideri il seguente gradiente della trasformazione</p>
@@ -29,13 +29,13 @@
 \end{array}\right]\,.
 \end{equation*}
 </div>
-<p data-braille="continuation">A partire da tale espressione le seguenti istruzioni MATLAB® consentono di valutare gli autovettori e gli autovalori di \(\tens{U}^2\text{.}\)</p>
-<p xmlns:svg="http://www.w3.org/2000/svg"><figure class="listing figure-like"><pre class="console"><b>F = [4.4623   -3.2249   -0.4874;
+<p class="continuation">A partire da tale espressione le seguenti istruzioni MATLAB® consentono di valutare gli autovettori e gli autovalori di \(\tens{U}^2\text{.}\)</p>
+<p xmlns:svg="http://www.w3.org/2000/svg"><figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>F = [4.4623   -3.2249   -0.4874;
 2.9623    1.7249   -1.9874;
 -1.7500   -1.0607    5.2500];
 U2 = transpose(F)*F;
 [u, D2] = eig(U2)
-</b></pre>
+</b></pre></div>
 <figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.8.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <p>Le seguenti istruzioni invece, valutando gli allungamenti principali come</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
@@ -45,19 +45,19 @@ U2 = transpose(F)*F;
 \lambda_3 = \sqrt{D2(3,3)} = 7\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">e le direzioni principali estraendole dalle colonne della matrice degli autovettori restituita da MATLAB®, calcolano il tensore \(\tens{U}\) e quindi con la relazione</p>
+<p class="continuation">e le direzioni principali estraendole dalle colonne della matrice degli autovettori restituita da MATLAB®, calcolano il tensore \(\tens{U}\) e quindi con la relazione</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
 \tens{R} = \tens{F}\tens{U}^{-1}\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">anche la il tensore di rotazione associato alla decomposizione polare. Si valuta anche \(\tens{V}\) con la relazione</p>
+<p class="continuation">anche la il tensore di rotazione associato alla decomposizione polare. Si valuta anche \(\tens{V}\) con la relazione</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
 \tens{V} = \tens{F}\transp{\tens{R}}\,.
 \end{equation*}
 </div>
-<p xmlns:svg="http://www.w3.org/2000/svg"><figure class="listing figure-like"><pre class="console"><b>u1 = u(:,1);
+<p xmlns:svg="http://www.w3.org/2000/svg"><figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>u1 = u(:,1);
 u2 = u(:,2);
 u3 = u(:,3);
 lam1 = sqrt(D2(1,1));
@@ -66,7 +66,7 @@ lam3 = sqrt(D2(3,3));
 U = lam1*u1*transpose(u1)+lam2*u2*transpose(u2)+lam3*u3*transpose(u3)
 R = F*inv(U)
 V = F*transpose(R)
-</b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.8.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></article><span class="incontext"><a href="measures_sec_strain_chap_it.html#remark-8">in-context</a></span>
+</b></pre></div>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.8.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></article><span class="incontext"><a href="measures_sec_strain_chap_it.html#remark-8">Contesto</a></span>
 </body>
 </html>

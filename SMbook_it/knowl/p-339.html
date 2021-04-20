@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-03T08:24:09+01:00       *-->
+<!--*       on 2021-04-20T14:29:30+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,19 +14,22 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p>Si ottiene così la soluzione in termini di spostamento</p>
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
+<p>L'applicazione dell'equazione di equilibrio <a class="xref" data-knowl="./knowl/bent_beam_navier.html" title="Equazione 3.6.34">(3.6.34)</a> allo schema sopra riportato fornisce</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\func{u}{x} = \frac{\bar{p}}{EA} \frac{l^2}{4\pi^2} \sin\left(\frac{2\pi\,x}{l}\right)
+EJ\,\frac{d^4w}{dx^4} = 0\,.
 \end{equation*}
 </div>
-<p data-braille="continuation">e di sforzo normale</p>
+<p class="continuation">Equazione differenziale del 4\(^o\) ordine a cui occorre associare le condizioni al contorno che, nel caso in esame, sono di tipo cinematico all'estremo \(x=0\) e di tipo statico all'estremo \(x=l\text{:}\)</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\func{N}{x} = \bar{p} \frac{l}{2\pi} \cos\left(\frac{2\pi\,x}{l}\right)\,.
-\end{equation*}
+\begin{align*}
+\amp \func{w}{0} = 0\,,\\
+\amp \func{\frac{dw}{dx}}{0} = 0\,,\\
+\amp \func{\frac{d M}{dx}}{l} = \frac{d}{dx}\left(-EJ\,\func{\frac{d^2w}{dx^2}}{l}\right) = -EJ\,\func{\frac{d^3w}{dx^3}}{l}  = F\,,\\
+\amp \func{M}{l} = -EJ\,\func{\frac{d^2w}{dx^2}}{l} = 0\,.
+\end{align*}
 </div>
-<span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#p-339">in-context</a></span>
+<span class="incontext"><a href="bent_beam_applications_sec_elasticity_chap_it.html#p-339">Contesto</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-02T11:40:25+02:00       *-->
+<!--*       on 2021-04-20T14:29:55+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,22 +15,15 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Given a body subject to some applied loads, a necessary and sufficient condition for the body to be in equilibrium (satisfaction of Eqs. <a class="xref" data-knowl="./knowl/body_equilibrium_1.html" title="Equation 2.2.1">(2.2.1)</a> and <a class="xref" data-knowl="./knowl/body_equilibrium_2.html" title="Equation 2.2.2">(2.2.2)</a>) is that there is a tensor field \(\func{\tens{\sigma}}{\vec{x}} \) such that</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<ul class="disc">
+<li>The equations <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a> do not completely determine the Cauchy stress tensor field for a body in equilibrium. In particular, there are 3 differential equations to calculate, for the symmetry of the tensor, the \(6\) unknown components of \(\tens{\sigma} \text{.}\) As will be seen in the following, this drawback will be solved by characterizing the constitutive behavior of the material of which the body is composed. Behavior to be reconstructed experimentally and referring to the average of the quantities involved. Remember that the macroscopic approach is not based on a precise description of the internal micro-structure of matter.</li>
+<li>The boundary conditions to be associated with the differential equations <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a> will be determined by relating the unknown stress \(\tens{\sigma} \) to the tractions, \(\bar {\vec{t}} \text{,}\) assigned on the contour of the body \(\body \text{.}\) This relationship is established through the <a class="xref" data-knowl="./knowl/T_cauchy_stress_eq.html" title="Equation 2.3.9">(2.3.9)</a> which provides<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation}
-\func{\vec{t}}{\vec{x}, \vec{n}} =\func{\tens{\sigma}}{\vec{x}}\,\vec{n}\,,\tag{2.3.9}
+\tens{\sigma}\,\vec{n} = \bar{\vec{t}}\,, \text{su}\;\partial\body\,.\tag{2.3.12}
 \end{equation}
-</div>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\text{div}\tens{\sigma} + \vec{b} = \vec0\,,\tag{2.3.10}
-\end{equation}
-</div>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\transp{\tens{\sigma}}=\tens{\sigma}\,.\tag{2.3.11}
-\end{equation}
-</div>
+</div>These equations constitute the <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">boundary conditions</em> of the <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">natural</em> type for the differential problem <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a>.</li>
+<li>At the basis of the derivation of the equations <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a> there is the hypothesis of continuity of the vector field \(\vec{b} \) and the hypothesis of differentiability of the tensor field \(\tens{\sigma} \text{.}\) Hypotheses that allow, as seen, to pass from equations in integral form to equations in local form.</li>
+</ul>
 <span class="incontext"><a href="stress_sec_stress_chap_en.html#p-199">in-context</a></span>
 </body>
 </html>

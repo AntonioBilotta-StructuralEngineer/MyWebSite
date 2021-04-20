@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-03T08:24:09+01:00       *-->
+<!--*       on 2021-04-20T14:29:30+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,29 +14,23 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p>L'equazione di equilibrio, <a class="xref" data-knowl="./knowl/stretched_beam_navier.html" title="Equazione 3.5.21">(3.5.21)</a>, applicata ai due sottodomini della trave sono formulabili come segue</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\amp EA\,\frac{d^2u_a}{dx^2} = 0\,,\quad 0 \leq x \leq a\,,\\
-\amp EA\,\frac{d^2u_b}{dx^2} = 0\,,\quad a \leq x \leq l\,.
-\end{align*}
-</div>
-<p data-braille="continuation">Si ottiene quindi un sistema di 2 equazioni differenziali dove le incognite, \(u_a\) e \(u_b\text{,}\) sono disaccopiate. Incognite che comunque interagiscono nelle condizioni al contorno. In particolare tali condizioni sono espresse dalle seguenti equazioni</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\amp \func{u_a}{0} = 0\,,\\
-\amp \func{u_b}{l} = 0\,,\\
-\amp \func{u_a}{a} = \func{u_b}{a}\,,\\
-\amp EA\, \func{\frac{du_a}{dx}}{a} - EA\, \func{\frac{du_b}{dx}}{a} = F\,,
-\end{align*}
-</div>
-<p data-braille="continuation">dove l'ultima equazione deriva dalla condizione di tipo statico</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\func{N_a}{a} - \func{N_b}{a} = F\,.
-\end{equation*}
-</div>
-<span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#p-333">in-context</a></span>
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
+<p xmlns:svg="http://www.w3.org/2000/svg">Si riportano le istruzioni MATLAB® utilizzabili per la soluzione del sistema di equazioni differenziali. <figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms ua(x) ub(x) EA F l a;
+Dua = diff(ua);
+Dub = diff(ub);
+ode1 = EA*diff(ua,x,2) == 0;
+ode2 = EA*diff(ub,x,2) == 0;
+odes = [ode1; ode2];
+cond1 = ua(0) == 0;
+cond2 = ub(l) == 0;
+cond3 = ua(a) == ub(a);
+cond4 = EA*Dua(a) - EA*Dub(a) == F;
+conds = [cond1 cond2 cond3 cond4];
+sols = dsolve(odes,conds);
+sols.ua
+sols.ub
+</b></pre></div>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.7.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#p-333">Contesto</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-03T08:24:10+01:00       *-->
+<!--*       on 2021-04-20T14:29:31+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,8 +14,36 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Si consideri il seguente portale soggetto ad una forza verticale applicata nella mezzeria del traverso. I vincoli (\(m=3\)) sono applicati al piede dei ritti e la loro rimozione e la successiva applicazione delle componenti di reazione vincolare conduce al diagramma di corpo libero riportato in figura insieme allo schema assegnato.</p>
-<span class="incontext"><a href="analysis_examples_sec_rigid_body_statics_chap_it.html#p-450">in-context</a></span>
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
+<p>Le equazioni di equilibrio (\(n=3\)) sono</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+H_B \amp = 0\,,\\
+V_A  - F \amp = 0\,,\\
+\mathcal{M}_{A} - V_A l + F l/2 \amp = 0\,.
+\end{align*}
+</div>
+<p class="continuation">Equazioni che corrispondono alla seguente forma matriciale del sistema</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\underbrace{\left[\begin{array}{ccc}
+0 &amp; 0 &amp; 1\\
+1 &amp; 0 &amp; 0\\
+-l &amp; 1 &amp; 0
+\end{array}\right]}_{\mat{B}}
+\underbrace{\left[\begin{array}{c} V_A \\ \mathcal{M}_A \\ H_{B} \end{array}\right]}_{\vec{r}} +
+\underbrace{\left[\begin{array}{c} 0 \\ -F \\ F l/2 \end{array}\right]}_{\vec{f}} =
+\left[\begin{array}{c} 0 \\ 0 \\ 0 \end{array}\right]\,.
+\end{equation*}
+</div>
+<p class="continuation">Il sistema è isostatico e la soluzione del sistema lineare fornisce</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+V_{A} \amp= F\,,\\
+\mathcal{M}_A  \amp= F l/2\,,\\
+H_{B}  \amp= 0\,.
+\end{align*}
+</div>
+<span class="incontext"><a href="analysis_examples_sec_rigid_body_statics_chap_it.html#p-450">Contesto</a></span>
 </body>
 </html>

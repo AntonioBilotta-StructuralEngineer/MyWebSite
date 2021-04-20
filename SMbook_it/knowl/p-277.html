@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-03T08:24:08+01:00       *-->
+<!--*       on 2021-04-20T14:29:29+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,8 +14,56 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-14" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/HZMWSnDFnO0?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p>
-<span class="incontext"><a href="multiaxial_sec_elasticity_chap_it.html#p-277">in-context</a></span>
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
+<p>Il legame elastico per le conponenti di tipo normale può essere formulato come segue</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\begin{array}{rcrcrcr}
+\varepsilon_{11} = \amp + \amp \frac{\displaystyle\sigma_{11}}{\displaystyle E} \amp-\amp \nu\,\frac{\displaystyle\sigma_{22}}{\displaystyle E} \amp-\amp \nu\,\frac{\displaystyle \sigma_{33}}{\displaystyle E}\,,\\
+\varepsilon_{22} = \amp - \amp \nu\,\frac{\displaystyle \sigma_{11}}{\displaystyle E} \amp+\amp \frac{\displaystyle \sigma_{22}}{\displaystyle E} \amp-\amp \nu\,\frac{\displaystyle \sigma_{33}}{\displaystyle E}\,,\\
+\varepsilon_{33} = \amp - \amp \nu\,\frac{\displaystyle \sigma_{11}}{\displaystyle E} \amp-\amp \nu\,\frac{\displaystyle \sigma_{22}}{\displaystyle E} \amp+\amp \frac{\displaystyle \sigma_{33}}{\displaystyle E}\,.
+\end{array}\tag{3.3.11}
+\end{equation}
+</div>
+<p class="continuation">Si osserva come tale risultato costituisca la forma inversa del legame elastico per la parte relativa alle componenti normali. Per ottenere i coefficienti elastici che legano le componenti di tensione alle componenti di deformazione, conviene visualizzare il legame nella seguente forma matriciale</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\left[\begin{array}{c}\varepsilon_{11} \\ \varepsilon_{22} \\ \varepsilon_{33}\end{array}\right] =
+\left[\begin{array}{ccc}
+\frac{\displaystyle 1}{\displaystyle E} \amp -\frac{\displaystyle \nu}{\displaystyle E} \amp -\frac{\displaystyle \nu}{\displaystyle E} \\
+-\frac{\displaystyle \nu}{\displaystyle E} \amp \frac{\displaystyle 1}{\displaystyle E} \amp -\frac{\displaystyle \nu}{\displaystyle E} \\
+-\frac{\displaystyle \nu}{\displaystyle E} \amp -\frac{\displaystyle \nu}{\displaystyle E} \amp \frac{\displaystyle 1}{\displaystyle E}  \\
+\end{array}\right]
+\left[\begin{array}{c}\sigma_{11} \\ \sigma_{22} \\ \sigma_{33}\end{array}\right]
+\end{equation*}
+</div>
+<p class="continuation">ed utilizzare le seguenti istruzioni MATLAB® per invertire la matrice messa in evidenza. <figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre xmlns:svg="http://www.w3.org/2000/svg" class="console"><b>syms E ni;
+M = [1/E -ni/E -ni/E; -ni/E 1/E  -ni/E; -ni/E -ni/E 1/E]
+inv(M)
+</b></pre></div>
+<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.3.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Si ottiene quindi</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\left[\begin{array}{c}\sigma_{11} \\ \sigma_{22} \\ \sigma_{33}\end{array}\right] =
+\frac{E}{(1+\nu)(1-2\nu)}
+\left[\begin{array}{ccc}
+(1-\nu) \amp \nu \amp \nu \\
+\nu \amp (1-\nu) \amp \nu \\
+\nu \amp \nu \amp (1-\nu) 
+\end{array}\right]
+\left[\begin{array}{c}\varepsilon_{11} \\ \varepsilon_{22} \\ \varepsilon_{33}\end{array}\right]\,.\tag{3.3.12}
+\end{equation}
+</div>
+<p class="continuation">Risultato che consente di individuare i coefficienti costitutivi non nulli relativi alle componenti normali del tensore della tensione, ovvero</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{gather}
+\mathbb{C}_{1111} = \mathbb{C}_{2222} = \mathbb{C}_{3333} = \frac{E(1-\nu)}{(1+\nu)(1-2\nu)}\,,\tag{3.3.13}\\
+\mathbb{C}_{1122} = \mathbb{C}_{1133} = \mathbb{C}_{2233} = \frac{E\,\nu}{(1+\nu)(1-2\nu)}\,,\tag{3.3.14}\\
+\mathbb{C}_{2211} = \mathbb{C}_{1122}\,,\tag{3.3.15}\\
+\mathbb{C}_{3311} = \mathbb{C}_{1133}\,,\tag{3.3.16}\\
+\mathbb{C}_{3322} = \mathbb{C}_{2233}\,.\tag{3.3.17}
+\end{gather}
+</div>
+<span class="incontext"><a href="multiaxial_sec_elasticity_chap_it.html#p-277">Contesto</a></span>
 </body>
 </html>

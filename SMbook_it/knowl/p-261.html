@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-03T08:24:08+01:00       *-->
+<!--*       on 2021-04-20T14:29:29+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,14 +14,19 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p>L'andamento perfettamente oscillatario della soluzione sempre rispetto agli stessi estremi viene determinato della conservazione dell'<em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">energia potenziale totale</em></p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\Pi = \underbrace{\frac{1}{2}k\,x^2}_{\text{energia elastica}} + \underbrace{\frac{1}{2}m\,\left(\frac{dx}{dt}\right)^2}_{\text{energia cinetica}}
-\end{equation*}
-</div>
-<p data-braille="continuation">data dalla somma di <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">energia elastica</em> e <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">energia cinetica</em>. L'energia potenziale totale, in assenza di fenomeni dissipativi, si mantiene sempre costante.</p>
-<span class="incontext"><a href="uniaxial_sec_elasticity_chap_it.html#p-261">in-context</a></span>
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
+<p xmlns:svg="http://www.w3.org/2000/svg">La seguente figura <figure class="figure figure-like"><div class="image-box" style="width: 85%; margin-left: 7.5%; margin-right: 7.5%;"><img src="images/armonico_semplice.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">3.2.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure> ottenuta con le istruzioni MATLAB® <figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>Edef(t) = 1/2*om^2*m*u(t)^2;
+Ekin(t) = 1/2*m*diff(u,t)^2;
+
+dd=Edef(tt);
+kk=Ekin(tt);
+
+scale = 5*u0 / (Edef(0)+Ekin(0));
+plot(tt,uu,'k',tt,dd*scale,'r',tt,kk*scale,'b','LineWidth',2)
+legend('spost.','en. def.','en. cinet.')
+</b></pre></div>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.2.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure> evidenzia in forma grafica la continua trasformazione dell'energia di deformazione della molla in energia cinetica del corpo e viceversa. Energia di deformazione (colore rosso) che oscilla fra lo zero fra il valore massimo che si ha quando il valore assoluto dello spostamento (colore nero) è massimo, allo stesso istante la velocità è nulla. Al contrario l'energia cinetica (colore blu) è massima quando il valore assoluto dello velocità è massima, quando allo stesso istante lo spostamento è nullo.</p>
+<span class="incontext"><a href="uniaxial_sec_elasticity_chap_it.html#p-261">Contesto</a></span>
 </body>
 </html>

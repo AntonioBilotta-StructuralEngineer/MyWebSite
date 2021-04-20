@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-02T11:40:25+02:00       *-->
+<!--*       on 2021-04-20T14:29:55+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,45 +15,23 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Now the starting integral equation can be rewritten as follows</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\int_{\body} \left(\text{div}\left(\tens{\sigma}\vec{v}\right) - \tens{\sigma} : \tens{\nabla v} + \vec{b} \cdot \vec{v} \right)  \,dv= 0\,,\quad \forall\vec{v}\,.\tag{2.5.3}
-\end{equation}
-</div>
-<p data-braille="continuation">The first integral, by applying the divergence theorem and the Cauchy stress tensor theorem, can be written also as</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<ul class="disc">
+<li>The vector field \(\vec{v} \) can be interpreted both as a displacement field that the body actually undergoes under the action of the assigned loads and as a generic variation of the actual displacement field or as a <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">virtual displacement</em> field.</li>
+<li>The first member of the equality <a class="xref" data-knowl="./knowl/continuum_plv_eq.html" title="Equation 2.5.5">(2.5.5)</a> represents the work done by the surrounding environment on the body \(\body \text{,}\) that is the external work.</li>
+<li>The second member of the equality <a class="xref" data-knowl="./knowl/continuum_plv_eq.html" title="Equation 2.5.5">(2.5.5)</a> contains the internal work, that is the work carried out by the stress tensor \(\tens{\sigma} \text{.}\)</li>
+<li>Without the need to make any preliminary assumptions, we arrive at the definition of the kinematic counterpart \(\text{sym}\tens{\nabla v} \) on which the stress tensor \(\tens{\sigma} \) does work. Thus the meaning of the symmetric part of the gradient of the displacement is widened because it comprises, as already shown in the chapter about kinematics, also the definition of the infinitesimal strain tensor.</li>
+<li>A formal statement of the result obtained is as follows: "<em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Given a body, or any subset of a body, satisfying the equilibrium condition with respect to the applied loads, i.e Eq. <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a> is satisfied, then also Eq. <a class="xref" data-knowl="./knowl/continuum_plv_eq.html" title="Equation 2.5.5">(2.5.5)</a> is valid. This is the Principle of virtual work</em>". Moreover Eq. <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a> is not only a necessary condition but also is sufficient for satisfaction of Eq. <a class="xref" data-knowl="./knowl/continuum_plv_eq.html" title="Equation 2.5.5">(2.5.5)</a>, i.e. the statement can be reversed as follows: "<em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Given a body, or any subset of a body, satisfying the equivalence of the internal and external works, Eq. <a class="xref" data-knowl="./knowl/continuum_plv_eq.html" title="Equation 2.5.5">(2.5.5)</a>, then  Eq. <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a> is satisfied</em>".</li>
+<li>In the case of displacement field \(\vec{v} \) coincident with a rigid displacement field \(\vec{r} \text{,}\) then the condition \(\vec{v} = \vec{r} \) provides<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\int_{\body} \text{div}\left(\tens{\sigma}\vec{v}\right)\, dv = 
-\int_{\partial\body} \tens{\sigma}\vec{v} \cdot \vec{n}\,ds =
-\int_{\partial\body} \vec{v} \cdot \tens{\sigma}\vec{n}\,ds =
-\int_{\partial\body} \vec{t} \cdot \vec{v}\,ds \,.
+\text{sym}\tens{\nabla v} = \text{sym}\tens{\nabla r} = \tens{0} 
 \end{equation*}
-</div>
-<p data-braille="continuation">Then Eq. <a class="xref" data-knowl="./knowl/continuum_plv_2_eq.html" title="Equation 2.5.3">(2.5.3)</a> becomes</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</div>and then the Principle of virtual work redices to<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation}
-\int_{\partial\body} \vec{t} \cdot \vec{v}\,ds - \int_{\body} \tens{\sigma} : \tens{\nabla v}\,dv + \int_{\body}  \vec{b} \cdot \vec{v} \,dv = 0\,,\quad \forall\vec{v}\,.\tag{2.5.4}
+\int_{\partial\body} \vec{t} \cdot \vec{r}\,ds + \int_{\body}  \vec{b} \cdot \vec{r} \,dv = 0 \,,\quad \forall\vec{r}\,.\tag{2.5.6}
 \end{equation}
-</div>
-<p data-braille="continuation">Using decompostion of \(\tens{\nabla v}\)</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\tens{\nabla v} = \text{sym}\tens{\nabla v} + \text{skew}\tens{\nabla v}
-\end{equation*}
-</div>
-<p data-braille="continuation">and symmetry condition on \(\tens{\sigma}\text{,}\) the following result is obtained</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\tens{\sigma} : \tens{\nabla v} =  \tens{\sigma} : \text{sym}\tens{\nabla v}\,.
-\end{equation*}
-</div>
-<p data-braille="continuation">Finally the following expression of the integral form of the indefinite equations of equilibrium <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a> can be formulated:</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\int_{\partial\body} \vec{t} \cdot \vec{v}\,ds + \int_{\body}  \vec{b} \cdot \vec{v} \,dv = \int_{\body} \tens{\sigma} : \text{sym}\tens{\nabla v}\,dv \,,\quad \forall\vec{v}\,.\tag{2.5.5}
-\end{equation}
-</div>
+</div>This result establishes that the applied loads, if in equilibrium, perform zero work on any rigid motion.</li>
+<li>In the dynamic field the vector field \(\vec{v} \) is a velocity field. Therefore we will not speak of works but of external power and internal power. Furthermore, the external power will equal the sum of internal power and variation of kinetic energy.</li>
+</ul>
 <span class="incontext"><a href="plv_sec_stress_chap_en.html#p-224">in-context</a></span>
 </body>
 </html>

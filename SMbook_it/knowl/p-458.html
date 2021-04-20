@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-03T08:24:10+01:00       *-->
+<!--*       on 2021-04-20T14:29:31+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,18 +14,26 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p>fornisce infine l'unica soluzione possibile di seguito riportata.</p>
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
+<p>Lo stato di sforzo interno dei solidi mono-dimensionali, o travi, viene caratterizzato valutando in ogni punto le componenti della sollecitazione. Nel caso piano le componenti di sollecitazione sono tre: <em xmlns:svg="http://www.w3.org/2000/svg" class="alert">sforzo normale (\(N\))</em>, <em xmlns:svg="http://www.w3.org/2000/svg" class="alert">taglio (\(T\))</em> e <em xmlns:svg="http://www.w3.org/2000/svg" class="alert">momento flettente (\(M\))</em>. Al fine di arrivare in maniera semmplice ad una definizione delle sollecitazioni, si consideri il seguente diagramma di corpo libero relativo ad un sistema equilibrato di forze. <figure class="figure figure-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="image-box" style="width: 43%; margin-left: 28.5%; margin-right: 28.5%;"><img src="images/schema1.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.7.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Si immagini di separare il corpo in due parti mediante un piano passante per un generico punto \(s\) ottenendo i seguenti diagrammi di corpo libero <figure class="figure figure-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/schema2.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.7.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure> dove si è postulato che le due parti si scambino, attraverso la sezione di separazione, delle azioni uguali ed opposte. Tali azioni dovranno essere comunque tali da soddisfare le equazioni di equilibrio su ciascuna parte ottenuta. In particolare, se si considera il tratto di lunghezza \(s\) si ottengono le seguenti equazioni (polo per l'equilibrio alla rotazione posto nell'ascissa \(s\)):</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-H_{A} \amp= F\,,\\
-V_A  \amp= F/2\,,\\
-H_{B}  \amp= -F\,,\\
-V_B  \amp= F/2\,,\\
-H_{C} \amp= -2F\,,\\
-V_C  \amp= F/2\,.
+N - F \amp = 0\,,\\
+-T + F \amp = 0\,,\\
+M - F s + Fl \amp = 0\,.
 \end{align*}
 </div>
-<span class="incontext"><a href="analysis_examples_sec_rigid_body_statics_chap_it.html#p-458">in-context</a></span>
+<p class="continuation">Sistema che fornisce la seguente soluzione per le componenti, incognite, di sollecitazione</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+N \amp= F\,,\\
+T \amp= F \,,\\
+M \amp= -F(l - s)\,.
+\end{align*}
+</div>
+<p class="continuation">Lo stesso risultato si otterrebbe applicando le equazioni di equilibrio al tratto di lunghezza \((l-s)\text{.}\)</p>
+<span class="incontext"><a href="sollecitazioni_sec_rigid_body_statics_chap_it.html#p-458">Contesto</a></span>
 </body>
 </html>

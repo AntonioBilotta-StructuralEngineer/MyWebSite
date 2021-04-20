@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-02T11:40:25+02:00       *-->
+<!--*       on 2021-04-20T14:29:54+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,22 +15,19 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Consider the following displacement field</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-u_1 \amp= 3.5 \; 10^{-3} X_1 + 2.0 \; 10^{-3} X_2\,,\\
-u_2 \amp= 1.0 \; 10^{-3} X_1 - 0.5 \; 10^{-3} X_2\,,\\
-u_3 \amp= 0 \,.
-\end{align*}
-</div>
-<ol class="decimal">
-<li>Calculate the infinitesimal strain tensor \(\tens{\varepsilon}\text{.}\)</li>
-<li>Calculate the principal strains \(\varepsilon_i\) (\(i=1 \dots 3\)) and the principal directions of \(\tens{\varepsilon}\text{.}\)</li>
-<li>Calculate the principal stretches \(\lambda_i\) (\(i=1 \dots 3\)) and principal directions fo tensor \(\tens{U}\text{.}\)</li>
-<li>Compare \(\varepsilon_i\) and \(\lambda_i\) oon the basis of equation <a class="xref" data-knowl="./knowl/small_normal_strain_eq.html" title="Equation 1.9.9">(1.9.9)</a>.</li>
-<li>Compare the principal directions of \(\tens{\varepsilon}\) and the principal directions of \(\tens{U}\text{.}\)</li>
-<li>Repeat the previous evaluations with respect to the same displacement field but amplified with a factor of \(10^3\text{:}\) what considerations can be drawn?</li>
-</ol>
-<span class="incontext"><a href="exercises_sec_strain_chap_en.html#p-171">in-context</a></span>
+<p xmlns:svg="http://www.w3.org/2000/svg">Partial answer to exercise reported in <a href="exercises_sec_strain_chap_en.html#strain_ex_2" class="internal" title="Subsection 1.10.1">Subsection 1.10.1</a>. <figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>% third question
+T = @(X) [4-2*X(1)-X(2); 2+3/2*X(1)-X(2)/2];
+Square_0 = [0 1 1 0 0; 0 0 1 1 0];
+Square=[T(Square_0(:,1)) T(Square_0(:,2)) T(Square_0(:,3)) ...
+T(Square_0(:,4)) T(Square_0(:,5))];
+hold on
+plot(Square_0(1,:), Square_0(2,:), 'k-', "LineWidth", 4)
+plot(Square(1,:), Square(2,:), 'r-', "LineWidth", 2)
+ylim([0 4])
+pbaspect([1 1 1])
+</b></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.11.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure> <figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/strain_ex_2.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.11.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<span class="incontext"><a href="answers_sec_strain_chap_en.html#p-171">in-context</a></span>
 </body>
 </html>

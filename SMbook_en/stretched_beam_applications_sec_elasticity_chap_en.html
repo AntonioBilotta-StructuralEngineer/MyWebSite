@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-02T11:40:22+02:00       *-->
+<!--*       on 2021-04-20T14:29:52+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -57,7 +57,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{{\not{\mid}}}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -191,79 +191,79 @@ MathJax.Hub.Config({
 <section class="subsection" id="subsection-70"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.7.1</span> <span class="title">beam simply stretched</span>
 </h3>
-<p id="p-325">Using Equation <a class="xref" data-knowl="./knowl/stretched_beam_navier.html" title="Equation 3.5.21">(3.5.21)</a> calculate the elastic solution for the following scheme.</p>
+<p id="p-324">Using Equation <a class="xref" data-knowl="./knowl/stretched_beam_navier.html" title="Equation 3.5.21">(3.5.21)</a> calculate the elastic solution for the following scheme.</p>
 <figure class="figure figure-like" id="figure-37"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/trave_tesa_con_forza.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.7.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-326">Due to the absence of a distributed load, the equation to be solved becomes</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.7.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-325">Due to the absence of a distributed load, the equation to be solved becomes</p>
 <div class="displaymath">
 \begin{equation*}
 EA\,\frac{d^2u}{dx^2} = 0\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">whose general integral is</p>
+<p class="continuation">whose general integral is</p>
 <div class="displaymath">
 \begin{equation*}
 \func{u}{x} = c_0 + c_1 x\,.
 \end{equation*}
 </div>
-<p data-braille="continuation">The integration constants can be evaluated by imposing the boundary conditions</p>
+<p class="continuation">The integration constants can be evaluated by imposing the boundary conditions</p>
 <div class="displaymath">
 \begin{align*}
 \amp \func{u}{0} = 0\,,\\
 \amp \func{N}{l} = EA\, \func{\frac{du}{dx}}{l} = F\,.
 \end{align*}
 </div>
-<p data-braille="continuation">From which it can be obtained</p>
+<p class="continuation">From which it can be obtained</p>
 <div class="displaymath">
 \begin{equation*}
 c_0 = 0\,, \quad c_1 = \frac{F}{EA}\,.
 \end{equation*}
 </div>
-<p data-braille="continuation">Then the displacement field takes the following expression</p>
+<p class="continuation">Then the displacement field takes the following expression</p>
 <div class="displaymath">
 \begin{equation*}
 \func{u}{x} = \frac{F}{EA} x\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">which allows the evaluation of the axial force along the rod and, for example, the movement to the free end</p>
+<p class="continuation">which allows the evaluation of the axial force along the rod and, for example, the movement to the free end</p>
 <div class="displaymath">
 \begin{align*}
 \amp \func{N}{x} = EA \func{\frac{du}{dx}}{x} = F\,,\\
 \amp \func{u}{l} = \frac{F}{EA} l\,,
 \end{align*}
 </div>
-<p data-braille="continuation">the latter coincides with the total elongation of the beam, result which can also be obtained as follows</p>
+<p class="continuation">the latter coincides with the total elongation of the beam, result which can also be obtained as follows</p>
 <div class="displaymath">
 \begin{equation*}
 \Delta l = \int_l \varepsilon \,dx =  \int_l \frac{du}{dx} \,dx =  \int_l \frac{F}{EA} \,dx =  \frac{F}{EA} \int_l \,dx = \frac{F}{EA} l\,.
 \end{equation*}
 </div>
 <article class="assemblage assemblage-like" id="assemblage-22"><h6 class="heading"><span class="title">MATLAB® solution.</span></h6>
-<p id="p-327">The general integral can be calculated using the following instructions. <figure class="listing figure-like" id="listing-33"><pre class="console"><b>syms u(x) EA;
+<p id="p-326">The general integral can be calculated using the following instructions. <figure class="listing figure-like" id="listing-33"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms u(x) EA;
 ode = EA*diff(u,x,2) == 0
 dsolve(ode)
-</b></pre>
+</b></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.7.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<p id="p-328">The solution that also satisfies the assigned boundary conditions is obtained through the following instructions. <figure class="listing figure-like" id="listing-34"><pre class="console"><b>syms u(x) EA F l;
+<p id="p-327">The solution that also satisfies the assigned boundary conditions is obtained through the following instructions. <figure class="listing figure-like" id="listing-34"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms u(x) EA F l;
 Du = diff(u);
 ode = EA*diff(u,x,2) == 0;
 cond1 = u(0) == 0;
 cond2 = EA*Du(l) == F;
 conds = [cond1 cond2];
 dsolve(ode,conds)
-</b></pre>
+</b></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.7.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></section><section class="subsection" id="subsection-71"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.7.2</span> <span class="title">hyperstatic beam with discontinuity</span>
 </h3>
 <figure class="figure figure-like" id="figure-38"><div class="image-box" style="width: 38%; margin-left: 31%; margin-right: 31%;"><img src="images/trave_tesa_iperstatica.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.7.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-329">The assigned scheme differs from the scheme considered in the previous section because the elastic solution to be evaluated does not have a single valid expression on the whole domain of the beam. The force applied inside the extension of the beam determines a discontinuity in the solution and therefore the need to study the problem on the two subdomains, \(0 \leq x \leq a \) and \(a \leq x \leq l \text{,}\) highlighted in the figure. We then proceed by evaluating two different elastic solutions but connected by the necessary boundary conditions at the interface.</p>
-<p id="p-330">By applying the equilibrium equation <a class="xref" data-knowl="./knowl/stretched_beam_navier.html" title="Equation 3.5.21">(3.5.21)</a> to the two subdomains the following equations are obtained</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.7.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-328">The assigned scheme differs from the scheme considered in the previous section because the elastic solution to be evaluated does not have a single valid expression on the whole domain of the beam. The force applied inside the extension of the beam determines a discontinuity in the solution and therefore the need to study the problem on the two subdomains, \(0 \leq x \leq a \) and \(a \leq x \leq l \text{,}\) highlighted in the figure. We then proceed by evaluating two different elastic solutions but connected by the necessary boundary conditions at the interface.</p>
+<p id="p-329">By applying the equilibrium equation <a class="xref" data-knowl="./knowl/stretched_beam_navier.html" title="Equation 3.5.21">(3.5.21)</a> to the two subdomains the following equations are obtained</p>
 <div class="displaymath">
 \begin{align*}
 \amp EA\,\frac{d^2u_a}{dx^2} = 0\,,\quad 0 \leq x \leq a\,,\\
 \amp EA\,\frac{d^2u_b}{dx^2} = 0\,,\quad a \leq x \leq l\,.
 \end{align*}
 </div>
-<p data-braille="continuation">We thus obtain a system of 2 differential equations where the unknowns, \(u_a \) and \(u_b \text{,}\) are uncoupled. Unknowns that still interact in the boundary conditions. In particular, these conditions are expressed by the following equations</p>
+<p class="continuation">We thus obtain a system of 2 differential equations where the unknowns, \(u_a \) and \(u_b \text{,}\) are uncoupled. Unknowns that still interact in the boundary conditions. In particular, these conditions are expressed by the following equations</p>
 <div class="displaymath">
 \begin{align*}
 \amp \func{u_a}{0} = 0\,,\\
@@ -272,13 +272,13 @@ dsolve(ode,conds)
 \amp EA\, \func{\frac{du_a}{dx}}{a} - EA\, \func{\frac{du_b}{dx}}{a} = F\,,
 \end{align*}
 </div>
-<p data-braille="continuation">where the latter equation is given by the static condition</p>
+<p class="continuation">where the latter equation is given by the static condition</p>
 <div class="displaymath">
 \begin{equation*}
 \func{N_a}{a} - \func{N_b}{a} = F\,.
 \end{equation*}
 </div>
-<article class="assemblage assemblage-like" id="assemblage-23"><p id="p-331">The MATLAB® instructions that can be used for the solution of the system of differential equations are given. <figure class="listing figure-like" id="listing-35"><pre class="console"><b>syms ua(x) ub(x) EA F l a;
+<article class="assemblage assemblage-like" id="assemblage-23"><p id="p-330">The MATLAB® instructions that can be used for the solution of the system of differential equations are given. <figure class="listing figure-like" id="listing-35"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms ua(x) ub(x) EA F l a;
 Dua = diff(ua);
 Dub = diff(ub);
 ode1 = EA*diff(ua,x,2) == 0;
@@ -292,15 +292,15 @@ conds = [cond1 cond2 cond3 cond4];
 sols = dsolve(odes,conds);
 sols.ua
 sols.ub
-</b></pre>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.7.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-332">From which we obtain the following solution in terms of the unknown displacements</p>
+</b></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.7.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-331">From which we obtain the following solution in terms of the unknown displacements</p>
 <div class="displaymath">
 \begin{align*}
 u_a \amp= \frac{F}{EA}\frac{l-a}{l}\,x\,,\quad 0 \leq x \leq a\,,\\
 u_b \amp= \frac{F}{EA}\frac{l-x}{l}\,a\,,\quad a \leq x \leq l\,.
 \end{align*}
 </div>
-<p data-braille="continuation">By calculating the derivative of the obtained solutions, the axial force along the two subdomains takes the following expression</p>
+<p class="continuation">By calculating the derivative of the obtained solutions, the axial force along the two subdomains takes the following expression</p>
 <div class="displaymath">
 \begin{align*}
 N_a \amp= EA\, \frac{du_a}{dx} = F\,\frac{l-a}{l}\,,\quad 0 \leq x \leq a\,,\\
@@ -310,62 +310,62 @@ N_b \amp= EA\, \frac{du_b}{dx} = -F\,\frac{a}{l}\,,\quad a \leq x \leq l\,.
 <span class="type">Subsection</span> <span class="codenumber">3.7.3</span> <span class="title">hyperstatic beam subjected to an homogeneous termal increment</span>
 </h3>
 <figure class="figure figure-like" id="figure-39"><div class="image-box" style="width: 38%; margin-left: 31%; margin-right: 31%;"><img src="images/trave_tesa_iperstatica_conDeltaT.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.7.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-333">The presence of the increase in temperature determines an elongation of the beam equal to</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.7.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-332">The presence of the increase in temperature determines an elongation of the beam equal to</p>
 <div class="displaymath">
 \begin{equation*}
 \Delta l_T = \alpha \Delta T \,l\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(\alpha \) represents the thermal expansion coefficient of the material. This elongation is however prevented by the presence of the constraints therefore the beam will also be subjected to an axial force calculable by the following equation</p>
+<p class="continuation">where \(\alpha \) represents the thermal expansion coefficient of the material. This elongation is however prevented by the presence of the constraints therefore the beam will also be subjected to an axial force calculable by the following equation</p>
 <div class="displaymath">
 \begin{equation*}
 \Delta l_T + \Delta l_N = \alpha \Delta T \,l + \frac{N}{EA} \,l = 0\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">which furnishes</p>
+<p class="continuation">which furnishes</p>
 <div class="displaymath">
 \begin{equation*}
 N = - EA \,\alpha \Delta T\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">solution showing the state of compression determined by the elongation which is not allowed. The solution in terms of displacement is identically zero along its entire beam length.</p></section><section class="subsection" id="subsection-73"><h3 class="heading hide-type">
+<p class="continuation">solution showing the state of compression determined by the elongation which is not allowed. The solution in terms of displacement is identically zero along its entire beam length.</p></section><section class="subsection" id="subsection-73"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.7.4</span> <span class="title">hyperstatic beam subjected to a sinusoidal distributed load</span>
 </h3>
 <figure class="figure figure-like" id="figure-40"><div class="image-box" style="width: 42%; margin-left: 29%; margin-right: 29%;"><img src="images/trave_tesa_iperstatica_con_carico_sinusoidale.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.7.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-334">The applied load condition can be expressed as</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.7.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-333">The applied load condition can be expressed as</p>
 <div class="displaymath">
 \begin{equation*}
 \func{p}{x} = \bar{p}\,\sin\left(\frac{2\pi\,x}{l}\right)
 \end{equation*}
 </div>
-<p data-braille="continuation">which, through Equation <a class="xref" data-knowl="./knowl/stretched_beam_navier.html" title="Equation 3.5.21">(3.5.21)</a>, gives</p>
+<p class="continuation">which, through Equation <a class="xref" data-knowl="./knowl/stretched_beam_navier.html" title="Equation 3.5.21">(3.5.21)</a>, gives</p>
 <div class="displaymath">
 \begin{equation*}
 EA\,\frac{d^2u}{dx^2} + \bar{p}\,\sin\left(\frac{2\pi\,x}{l}\right) = 0
 \end{equation*}
 </div>
-<p data-braille="continuation">to be satisfied in each point of the beam. The boundary conditions are</p>
+<p class="continuation">to be satisfied in each point of the beam. The boundary conditions are</p>
 <div class="displaymath">
 \begin{align*}
 \amp \func{u}{0} = 0\,,\\
 \amp \func{u}{l} = 0\,.
 \end{align*}
 </div>
-<article class="assemblage assemblage-like" id="assemblage-24"><p id="p-335">MATLAB® instructions which can be used to calculate the solution \(\func{u}{x}\) are as follows. <figure class="listing figure-like" id="listing-36"><pre class="console"><b>syms u(x) EA p l;
+<article class="assemblage assemblage-like" id="assemblage-24"><p id="p-334">MATLAB® instructions which can be used to calculate the solution \(\func{u}{x}\) are as follows. <figure class="listing figure-like" id="listing-36"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms u(x) EA p l;
 ode = EA*diff(u,x,2) + p*sin(2*pi*x/l) == 0;
 cond1 = u(0) == 0;
 cond2 = u(l) == 0;
 conds = [cond1 cond2];
 sol = dsolve(ode,conds)
 N = EA*diff(sol,x)
-</b></pre>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.7.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-336">The displacement solution is</p>
+</b></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.7.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-335">The displacement solution is</p>
 <div class="displaymath">
 \begin{equation*}
 \func{u}{x} = \frac{\bar{p}}{EA} \frac{l^2}{4\pi^2} \sin\left(\frac{2\pi\,x}{l}\right)
 \end{equation*}
 </div>
-<p data-braille="continuation">and the axial force is</p>
+<p class="continuation">and the axial force is</p>
 <div class="displaymath">
 \begin{equation*}
 \func{N}{x} = \bar{p} \frac{l}{2\pi} \cos\left(\frac{2\pi\,x}{l}\right)\,.

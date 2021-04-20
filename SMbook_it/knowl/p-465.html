@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-03T08:24:10+01:00       *-->
+<!--*       on 2021-04-20T14:29:31+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,42 +14,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Nel seguito vengono riportate le istruzioni MATLAB® per il calcolo della risultante e del baricentro per alcune tipologie di carico ripartito. <figure class="listing figure-like"><pre class="console"><b>% carico ripartito costante
-syms q l x;
-carico(x, q) = q;
-np = 100;
-xv = 0:1/np:1;
-qv = carico(xv, 1);
-plot(xv,qv,'r','LineWidth',2)
-
-
-Rq = int(carico(x, q), x, 0, l)
-xq = int(carico(x, q)*x, x, 0, l)/Rq
-</b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">5.7.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure> <figure class="listing figure-like"><pre class="console"><b>% carico ripartito lineare
-syms q l x;
-carico(x, q, l) = q/l*x;
-np = 100;
-xv = 0:1/np:1;
-qv = carico(xv, 1, 1);
-plot(xv,qv,'r','LineWidth',2)
-
-Rq = int(carico(x, q, l), x, 0, l)
-xq = int(carico(x, q, l)*x, x, 0, l)/Rq
-</b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">5.7.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure> <figure class="listing figure-like"><pre class="console"><b>% carico ripartito parabolico
-syms q l x;
-carico(x, q, l) = q/l^2*x^2;
-np = 100;
-xv = 0:1/np:1;
-qv = carico(xv, 1, 1);
-plot(xv,qv,'r','LineWidth',2)
-
-Rq = int(carico(x, q, l), x, 0, l)
-xq = int(carico(x, q, l)*x, x, 0, l)/Rq
-</b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">5.7.9<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<span class="incontext"><a href="sollecitazioni_sec_rigid_body_statics_chap_it.html#p-465">in-context</a></span>
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
+<p xmlns:svg="http://www.w3.org/2000/svg">Le equazioni indefinite di equilibrio per la trave sono già state trattate nella <a href="stretched_beam_sec_elasticity_chap_it.html" class="internal" title="Paragrafo 3.5: modelli monodimensionali: trave tesa">Paragrafo 3.5</a> e nella <a href="bent_beam_sec_elasticity_chap_it.html" class="internal" title="Paragrafo 3.6: modelli monodimensionali: trave inflessa">Paragrafo 3.6</a> nel contesto più ampio che ha portato alla costruzione di un modello completo di trave piana elastica. In questa sede le equazioni vengono ricavate per altra via e l'unica differenza consiste nell'esplicitazione della componente di sollecitazione data dal taglio.</p>
+<span class="incontext"><a href="indefinte_sec_rigid_body_statics_chap_it.html#p-465">Contesto</a></span>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-02T11:40:22+02:00       *-->
+<!--*       on 2021-04-20T14:29:51+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -57,7 +57,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{{\not{\mid}}}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -188,46 +188,46 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="uniaxial_sec_elasticity_chap_en"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.2</span> <span class="title">uniaxial states</span>
 </h2>
-<p id="p-252">The elastic modeling of uniaxial states, i.e. states of tension and deformation in which only one stress component and the associated strain component are present, can be carried out through a direct application of Hooke's law.</p>
+<p id="p-251">The elastic modeling of uniaxial states, i.e. states of tension and deformation in which only one stress component and the associated strain component are present, can be carried out through a direct application of Hooke's law.</p>
 <article class="insight remark-like" id="insight-7"><h6 class="heading">
 <span class="type">Insight</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Hooke's law.</span>
 </h6>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
 <div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;">
-<p id="p-253">Hooke's law is a law of physics which states that the force \(F \) needed to extend or compress a spring by an amount \(x \) scales linearly with respect to that amount, i.e.</p>
+<p id="p-252">Hooke's law is a law of physics which states that the force \(F \) needed to extend or compress a spring by an amount \(x \) scales linearly with respect to that amount, i.e.</p>
 <div class="displaymath">
 \begin{equation}
 F = k\,x\,.\label{Hookes_eq}\tag{3.2.1}
 \end{equation}
 </div>
-<p data-braille="continuation">\(k\;\left[\frac{\text{N}}{\text{m}}\right]\) is known as <em class="alert">stiffness</em> and is a parameter, characteristic of the spring, constant and <em class="alert">positive</em>, \(x\;\left[\text{m}\right]\) is the elongation that the spring undergoes (in the case of a negative \(x\) the spring undergoes a shortening).</p>
+<p class="continuation">\(k\;\left[\frac{\text{N}}{\text{m}}\right]\) is known as <em class="alert">stiffness</em> and is a parameter, characteristic of the spring, constant and <em class="alert">positive</em>, \(x\;\left[\text{m}\right]\) is the elongation that the spring undergoes (in the case of a negative \(x\) the spring undergoes a shortening).</p>
 </div>
 <div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;"><figure class="figure figure-like" id="figure-23"><img src="images/Hookes-law-springs.png" style="width: 100%; height: auto;" alt=""><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></div>
 </div></div>
-<p id="p-254">The law is named after the 17th century British physicist Robert Hooke who first made the law public in 1676 as a Latin anagram. Subsequently, in 1678, he published the solution of his anagram as: <em class="emphasis">ut tensio, sic vis</em> (the extension is proportional to the force).</p>
-<p id="p-255">In order to highlight also the concept of <em class="alert">elastic energy</em> stored by the spring due to the effect of elongation \(x \text{,}\) consider the following mechanical scheme where all the forces acting have been highlighted (for simplicity let's suppose to carry out the experiment in the absence of gravity <a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-4" id="fn-4"><sup> 1 </sup></a> and dissipative forces) on a body of mass \(m \) and constrained by a stiffness spring \(k \text{.}\)</p>
+<p id="p-253">The law is named after the 17th century British physicist Robert Hooke who first made the law public in 1676 as a Latin anagram. Subsequently, in 1678, he published the solution of his anagram as: <em class="emphasis">ut tensio, sic vis</em> (the extension is proportional to the force).</p>
+<p id="p-254">In order to highlight also the concept of <em class="alert">elastic energy</em> stored by the spring due to the effect of elongation \(x \text{,}\) consider the following mechanical scheme where all the forces acting have been highlighted (for simplicity let's suppose to carry out the experiment in the absence of gravity <a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-4" id="fn-4"><sup> 1 </sup></a> and dissipative forces) on a body of mass \(m \) and constrained by a stiffness spring \(k \text{.}\)</p>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-4"><div class="fn">In fact if we also took gravity into account the nature of the resulting equation would not change.</div></div>
 <figure class="figure figure-like" id="figure-24"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/simple_oscillator.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-256">Due to the displacement \(x \) measured from the equilibrium position, the body is subject to the inertia force \(m \, \frac {d^2 x} {dt^2} \) and the elastic force \(k \, x \) directed as shown in the figure. For the balance of the system we have</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-255">Due to the displacement \(x \) measured from the equilibrium position, the body is subject to the inertia force \(m \, \frac {d^2 x} {dt^2} \) and the elastic force \(k \, x \) directed as shown in the figure. For the balance of the system we have</p>
 <div class="displaymath">
 \begin{equation*}
 -m\,\frac{d^2 x}{dt^2} - k\,x = 0\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">that is, introducing the quantity \(\omega = \sqrt{\frac{k}{m}}\text{,}\)</p>
+<p class="continuation">that is, introducing the quantity \(\omega = \sqrt{\frac{k}{m}}\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{d^2 x}{dt^2} + \omega^2\,x = 0\,.
 \end{equation*}
 </div>
-<p data-braille="continuation">The differential equation obtained characterizes a system which, in mechanics, is called <em class="emphasis">simple harmonic oscillator</em>. The solution of the differential equation is described by the function</p>
+<p class="continuation">The differential equation obtained characterizes a system which, in mechanics, is called <em class="emphasis">simple harmonic oscillator</em>. The solution of the differential equation is described by the function</p>
 <div class="displaymath">
 \begin{equation*}
 \func{x}{t} = \func{x}{0}\,\cos{(\omega\,t)} + \frac{1}{\omega}\func{\frac{dx}{dt}}{0}\,\sin{(\omega\,t)} \,,
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(\func{x}{0}\) and \(\func{\frac{dx}{dt}}{0}\) represent the initial positon and velocity. \(\omega \) is called pulsation and is measured in \(\left[\frac{\text{rad}}{\text{s}}\right]\text{.}\)</p>
-<article class="assemblage assemblage-like" id="assemblage-14"><p id="p-257">By way of example, the MATLAB® instructions that can be used for plotting the function on the basis of the following data are reported: \(\omega = 2\pi\;\left[\frac{\text{rad}}{\text{s}}\right]\text{,}\) \(m=10\;\left[\text{kg}\right]\text{,}\) \(\func{x}{0}= 1 \; \left[\text{m}\right]\) and \(\func{\frac{dx}{dt}}{0}= 10 \; \left[\frac{\text{m}}{\text{s}}\right]\text{.}\) <figure class="listing figure-like" id="listing-28"><pre class="console"><b>om = 2*pi;
+<p class="continuation">where \(\func{x}{0}\) and \(\func{\frac{dx}{dt}}{0}\) represent the initial positon and velocity. \(\omega \) is called pulsation and is measured in \(\left[\frac{\text{rad}}{\text{s}}\right]\text{.}\)</p>
+<article class="assemblage assemblage-like" id="assemblage-14"><p id="p-256">By way of example, the MATLAB® instructions that can be used for plotting the function on the basis of the following data are reported: \(\omega = 2\pi\;\left[\frac{\text{rad}}{\text{s}}\right]\text{,}\) \(m=10\;\left[\text{kg}\right]\text{,}\) \(\func{x}{0}= 1 \; \left[\text{m}\right]\) and \(\func{\frac{dx}{dt}}{0}= 10 \; \left[\frac{\text{m}}{\text{s}}\right]\text{.}\) <figure class="listing figure-like" id="listing-28"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>om = 2*pi;
 u0 = 1;
 v0 = 10;
 m = 10;
@@ -237,16 +237,16 @@ u(t) = u0*cos(om*t)+v0/om*sin(om*t);
 tt=linspace(0,3,201);
 uu=u(tt);
 plot(tt,uu,'k','LineWidth',2)
-</b></pre>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.2.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-258">The perfectly oscillating trend of the solution always with respect to the same extremes is determined by the conservation of <em class="emphasis">total potential energy</em></p>
+</b></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.2.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-257">The perfectly oscillating trend of the solution always with respect to the same extremes is determined by the conservation of <em class="emphasis">total potential energy</em></p>
 <div class="displaymath">
 \begin{equation*}
 \Pi = \underbrace{\frac{1}{2}k\,x^2}_{\text{energia elastica}} + \underbrace{\frac{1}{2}m\,\left(\frac{dx}{dt}\right)^2}_{\text{energia cinetica}}
 \end{equation*}
 </div>
-<p data-braille="continuation">given by the sum of <em class="emphasis">elastic energy</em> and <em class="emphasis">kinetic energy</em>. The total potential energy, in the absence of dissipative phenomena, always remains constant.</p>
-<article class="assemblage assemblage-like" id="assemblage-15"><p id="p-259">The following figure <figure class="figure figure-like" id="figure-25"><div class="image-box" style="width: 85%; margin-left: 7.5%; margin-right: 7.5%;"><img src="images/armonico_semplice.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure> is obtained with MATLAB® instructions <figure class="listing figure-like" id="listing-29"><pre class="console"><b>Edef(t) = 1/2*om^2*m*u(t)^2;
+<p class="continuation">given by the sum of <em class="emphasis">elastic energy</em> and <em class="emphasis">kinetic energy</em>. The total potential energy, in the absence of dissipative phenomena, always remains constant.</p>
+<article class="assemblage assemblage-like" id="assemblage-15"><p id="p-258">The following figure <figure class="figure figure-like" id="figure-25"><div class="image-box" style="width: 85%; margin-left: 7.5%; margin-right: 7.5%;"><img src="images/armonico_semplice.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure> is obtained with MATLAB® instructions <figure class="listing figure-like" id="listing-29"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>Edef(t) = 1/2*om^2*m*u(t)^2;
 Ekin(t) = 1/2*m*diff(u,t)^2;
 
 dd=Edef(tt);
@@ -255,8 +255,8 @@ kk=Ekin(tt);
 scale = 5*u0 / (Edef(0)+Ekin(0));
 plot(tt,uu,'k',tt,dd*scale,'r',tt,kk*scale,'b','LineWidth',2)
 legend('spost.','en. def.','en. cinet.')
-</b></pre>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.2.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure> and it shows, in graphic form, the continuous transformation of the elastic energy of the spring into kinetic energy of the body and vice versa. The elastic energy (red color) oscillates between zero and the maximum value that occurs when the absolute value of the displacement (black color) is maximum, at the same time the velocity is zero. On the contrary, the kinetic energy (blue color) is maximum when the absolute value of the velocity is maximum, when at the same instant the displacement is zero.</p></article><p id="p-260">To conclude, it is observed that the elastic energy acts as a potential for the elastic force of the spring as the latter can be obtained by deriving the energy, i.e.</p>
+</b></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.2.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure> and it shows, in graphic form, the continuous transformation of the elastic energy of the spring into kinetic energy of the body and vice versa. The elastic energy (red color) oscillates between zero and the maximum value that occurs when the absolute value of the displacement (black color) is maximum, at the same time the velocity is zero. On the contrary, the kinetic energy (blue color) is maximum when the absolute value of the velocity is maximum, when at the same instant the displacement is zero.</p></article><p id="p-259">To conclude, it is observed that the elastic energy acts as a potential for the elastic force of the spring as the latter can be obtained by deriving the energy, i.e.</p>
 <div class="displaymath">
 \begin{equation*}
 F = \frac{d}{dx}\left( \frac{1}{2}k\,x^2 \right) = k\, x\,.
@@ -264,21 +264,21 @@ F = \frac{d}{dx}\left( \frac{1}{2}k\,x^2 \right) = k\, x\,.
 </div></article><section class="subsection" id="subsection-49"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.2.1</span> <span class="title">uniaxial tensile or compressive test</span>
 </h3>
-<p id="p-261">The following figure illustrates the result of an uniaxial load test performed on a steel bar. The result of the test is the curve shown in the figure, a curve that represents the <em class="emphasis">mechanical response</em>, that is, the value of the stress in the material, as the applied deformation increases. It is evident how the response of the material is articulated and variable and how it is not trivial to identify a <em class="emphasis">mathematical / numerical model</em> capable of reproducing the result produced by the load test, a result that can be schematically summarized as follows (for steel, and in general for metallic materials, what is shown in the figure is generally assumed to be valid both under traction and compression).</p>
+<p id="p-260">The following figure illustrates the result of an uniaxial load test performed on a steel bar. The result of the test is the curve shown in the figure, a curve that represents the <em class="emphasis">mechanical response</em>, that is, the value of the stress in the material, as the applied deformation increases. It is evident how the response of the material is articulated and variable and how it is not trivial to identify a <em class="emphasis">mathematical / numerical model</em> capable of reproducing the result produced by the load test, a result that can be schematically summarized as follows (for steel, and in general for metallic materials, what is shown in the figure is generally assumed to be valid both under traction and compression).</p>
 <figure class="figure figure-like" id="figure-26"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="images/Hookes-law-stress-strain-curve.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure><ul id="p-262" class="disc">
-<li id="li-92">The response of the material is initially linear.</li>
-<li id="li-93">There is a limit to the linear phase (Proportional limit) beyond which the response tends to remain constant by staying in the phase called <em class="emphasis">yielding</em> (Yield Point).</li>
-<li id="li-94">Then begins the <em class="emphasis">strain hardening</em> phase which ends with the achievement of the <em class="emphasis">limit load</em> (Ultimate Strength) of the material.</li>
-<li id="li-95">Once the limit load has been exceeded, the <em class="emphasis">breaking point</em> (Fracture Point) of the material is preceded by a reduction of the stress.</li>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure><ul id="p-261" class="disc">
+<li id="li-94">The response of the material is initially linear.</li>
+<li id="li-95">There is a limit to the linear phase (Proportional limit) beyond which the response tends to remain constant by staying in the phase called <em class="emphasis">yielding</em> (Yield Point).</li>
+<li id="li-96">Then begins the <em class="emphasis">strain hardening</em> phase which ends with the achievement of the <em class="emphasis">limit load</em> (Ultimate Strength) of the material.</li>
+<li id="li-97">Once the limit load has been exceeded, the <em class="emphasis">breaking point</em> (Fracture Point) of the material is preceded by a reduction of the stress.</li>
 </ul>
-<p id="p-263">The focus of this chapter is however only the first phase of the response of the material, a phase that is not only linear but also elastic in the sense that Hooke's law is applicable and therefore among the only components of tension and deformation, \(\sigma \) and \(\varepsilon \text{,}\) present in an uniaxial condition, it is legitimate to assume that the following proportional relationship exists</p>
+<p id="p-262">The focus of this chapter is however only the first phase of the response of the material, a phase that is not only linear but also elastic in the sense that Hooke's law is applicable and therefore among the only components of tension and deformation, \(\sigma \) and \(\varepsilon \text{,}\) present in an uniaxial condition, it is legitimate to assume that the following proportional relationship exists</p>
 <div class="displaymath">
 \begin{equation}
 \sigma = E\,\varepsilon\,,\tag{3.2.2}
 \end{equation}
 </div>
-<p data-braille="continuation">and that it is possible to define an elastic energy that acts as a potential for tension</p>
+<p class="continuation">and that it is possible to define an elastic energy that acts as a potential for tension</p>
 <div class="displaymath">
 \begin{equation}
 \Phi = \frac{1}{2} \sigma \varepsilon= \frac{1}{2}E\,\varepsilon^2 = \func{\Phi}{\varepsilon}
@@ -286,13 +286,13 @@ F = \frac{d}{dx}\left( \frac{1}{2}k\,x^2 \right) = k\, x\,.
 \frac{d\func{\Phi}{\varepsilon}}{d\varepsilon} = E\,\varepsilon = \sigma\,,\tag{3.2.3}
 \end{equation}
 </div>
-<p data-braille="continuation">moreover</p>
+<p class="continuation">moreover</p>
 <div class="displaymath">
 \begin{equation}
 \frac{d^2\func{\Phi}{\varepsilon}}{d\varepsilon^2} = E\,.\tag{3.2.4}
 \end{equation}
 </div>
-<p data-braille="continuation">It is also possible to carry out a <em class="emphasis">complementary</em> formulation of elastic energy, i.e. to express it with respect to stress</p>
+<p class="continuation">It is also possible to carry out a <em class="emphasis">complementary</em> formulation of elastic energy, i.e. to express it with respect to stress</p>
 <div class="displaymath">
 \begin{equation}
 \Phi = \frac{1}{2} \sigma \varepsilon= \frac{1}{2}\frac{\sigma^2}{E} = \func{\Phi}{\sigma}
@@ -300,13 +300,13 @@ F = \frac{d}{dx}\left( \frac{1}{2}k\,x^2 \right) = k\, x\,.
 \frac{d\func{\Phi}{\sigma}}{d\sigma} = \frac{\sigma}{E} = \varepsilon\,,\tag{3.2.5}
 \end{equation}
 </div>
-<p data-braille="continuation">from which</p>
+<p class="continuation">from which</p>
 <div class="displaymath">
 \begin{equation}
 \frac{d^2\func{\Phi}{\sigma}}{d\sigma^2} = \frac{1}{E}\,.\tag{3.2.6}
 \end{equation}
 </div>
-<p id="p-264">The symbol \(E \) is used to denote the <em class="emphasis">Young's modulus</em> which is a specific characteristic of the material and is measurable with a load test of the type described above (trivially \(E \) is given by the slope that the response curve assumes in the elastic phase). Recalling that the deformation is dimensionless the unit of measurement used for \(E \) is identical to that used for the stress \(\ sigma \text{.}\) Some examples of units of measurement used are the following</p>
+<p id="p-263">The symbol \(E \) is used to denote the <em class="emphasis">Young's modulus</em> which is a specific characteristic of the material and is measurable with a load test of the type described above (trivially \(E \) is given by the slope that the response curve assumes in the elastic phase). Recalling that the deformation is dimensionless the unit of measurement used for \(E \) is identical to that used for the stress \(\ sigma \text{.}\) Some examples of units of measurement used are the following</p>
 <div class="displaymath">
 \begin{equation*}
 \left[ \frac{\text{N}}{\text{m}^{\text{2}}} \right]\,,\quad
@@ -315,116 +315,116 @@ F = \frac{d}{dx}\left( \frac{1}{2}k\,x^2 \right) = k\, x\,.
 \left[ \text{GPa} \right]\,.
 \end{equation*}
 </div>
-<p data-braille="continuation">The following table shows the value of Young's modulus for some materials used in engineering applications.</p>
-<figure class="table table-like" id="table-1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.2.8<span class="period">.</span></span><span class="space"> </span>Approximate values of Young's modulus for some materials</figcaption><table>
+<p class="continuation">The following table shows the value of Young's modulus for some materials used in engineering applications.</p>
+<figure class="table table-like" id="table-1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.2.8<span class="period">.</span></span><span class="space"> </span>Approximate values of Young's modulus for some materials</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b1 r0 l0 t0 lines">Material</td>
 <td class="l m b1 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b1 r0 l0 t0 lines" data-braille="last-cell">\(E\;\left[\text{GPa}\right]\)</td>
+<td class="l m b1 r0 l0 t0 lines">\(E\;\left[\text{GPa}\right]\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">rubber</td>
 <td class="l m b0 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(0.01-0.1\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(0.01-0.1\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">teflon</td>
 <td class="l m b0 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(0.5\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(0.5\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">PET</td>
 <td class="l m b0 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(2-2.7\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(2-2.7\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">wood</td>
 <td class="l m b0 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(11\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(11\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">human bones</td>
 <td class="l m b0 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(14\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(14\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">concrete</td>
 <td class="l m b0 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(15-30\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(15-30\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">glass</td>
 <td class="l m b0 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(50-90\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(50-90\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">aluminum</td>
 <td class="l m b0 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(70\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(70\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">steel</td>
 <td class="l m b0 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(200\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(200\)</td>
 </tr>
-</table></figure></section><section class="subsection" id="shear_subsecuniaxial_sec_elasticity_chap_en"><h3 class="heading hide-type">
+</table></div></figure></section><section class="subsection" id="shear_subsecuniaxial_sec_elasticity_chap_en"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.2.2</span> <span class="title">uniaxial shear test</span>
 </h3>
-<p id="p-265">What has been observed for the uniaxial tensile test also occurs in the uniaxial tests which involve tangential components of stress and strain. Again there is a first part of the response that can be described trough Hooke's law. However, the proportionality coefficient changes. In particular, the relationship between the tangential stress component \(\tau \) and the shear deformation component \(\gamma \)  (see <a class="xref" data-knowl="./knowl/small_shear_eq.html" title="Equation 1.9.10">(1.9.10)</a>) can be formulated as follows</p>
+<p id="p-264">What has been observed for the uniaxial tensile test also occurs in the uniaxial tests which involve tangential components of stress and strain. Again there is a first part of the response that can be described trough Hooke's law. However, the proportionality coefficient changes. In particular, the relationship between the tangential stress component \(\tau \) and the shear deformation component \(\gamma \)  (see <a class="xref" data-knowl="./knowl/small_shear_eq.html" title="Equation 1.9.10">(1.9.10)</a>) can be formulated as follows</p>
 <div class="displaymath">
 \begin{equation}
 \tau = G\,\gamma\,,\tag{3.2.7}
 \end{equation}
 </div>
-<p data-braille="continuation">where the symbol \(G\) is used to denote the <em class="emphasis">shear modulus</em>.</p>
-<p id="p-266">The following table shows the value of the shear modulus for some materials.</p>
-<figure class="table table-like" id="table-2"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.2.9<span class="period">.</span></span><span class="space"> </span>Approximate values of the shear modulus for some materials</figcaption><table>
+<p class="continuation">where the symbol \(G\) is used to denote the <em class="emphasis">shear modulus</em>.</p>
+<p id="p-265">The following table shows the value of the shear modulus for some materials.</p>
+<figure class="table table-like" id="table-2"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.2.9<span class="period">.</span></span><span class="space"> </span>Approximate values of the shear modulus for some materials</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b1 r0 l0 t0 lines">Material</td>
 <td class="l m b1 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b1 r0 l0 t0 lines" data-braille="last-cell">\(G\;\left[\text{GPa}\right]\)</td>
+<td class="l m b1 r0 l0 t0 lines">\(G\;\left[\text{GPa}\right]\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">rubber</td>
 <td class="l m b0 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(0.0006\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(0.0006\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">PET</td>
 <td class="l m b0 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(0.117\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(0.117\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">aluminum</td>
 <td class="l m b0 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(25\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(25\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">glass</td>
 <td class="l m b0 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(26\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(26\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">titanium</td>
 <td class="l m b0 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(41\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(41\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">iron</td>
 <td class="l m b0 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(52\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(52\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">steel</td>
 <td class="l m b0 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(79\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(79\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">diamond</td>
 <td class="l m b0 r0 l0 t0 lines">\(\quad\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(478\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(478\)</td>
 </tr>
-</table></figure></section></section></div></main>
+</table></div></figure></section></section></div></main>
 </div>
 </body>
 </html>

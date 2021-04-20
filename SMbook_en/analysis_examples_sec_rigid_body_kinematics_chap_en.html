@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-02T11:40:23+02:00       *-->
+<!--*       on 2021-04-20T14:29:53+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -57,7 +57,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{{\not{\mid}}}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -191,16 +191,16 @@ MathJax.Hub.Config({
 <section class="subsection" id="subsection-94"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.4.1</span> <span class="title">simply supported beam</span>
 </h3>
-<p id="p-382">Perform the kinematic analysis of the following beam of length equal to \(l\text{.}\) <figure class="figure figure-like" id="trave_appoggiata_cinematica_fig"><div class="image-box" style="width: 42%; margin-left: 29%; margin-right: 29%;"><img src="images/trave_appoggiata_cinematica.png" style="width: 100%; height: auto;" alt=""></div>
+<p id="p-381">Perform the kinematic analysis of the following beam of length equal to \(l\text{.}\) <figure class="figure figure-like" id="trave_appoggiata_cinematica_fig"><div class="image-box" style="width: 42%; margin-left: 29%; margin-right: 29%;"><img src="images/trave_appoggiata_cinematica.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.4.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<p id="p-383">By “reading” the applyed constraints the following equations can be written</p>
+<p id="p-382">By “reading” the applyed constraints the following equations can be written</p>
 <div class="displaymath">
 \begin{gather*}
 \vec{u}_A = \vec0\,,\\
 \vec{u}_B \cdot \vec{n}_B = 0\,,
 \end{gather*}
 </div>
-<p data-braille="continuation">where \(\vec{n}_B = \transp{[0 \; 1]}\text{.}\) Previous equations can be also expressed by the following 3 scalar equations (\(m=3\)):</p>
+<p class="continuation">where \(\vec{n}_B = \transp{[0 \; 1]}\text{.}\) Previous equations can be also expressed by the following 3 scalar equations (\(m=3\)):</p>
 <div class="displaymath">
 \begin{gather*}
 u_{1A} = 0\,,\\
@@ -208,7 +208,7 @@ u_{2A} = 0\,,\\
 u_{2B} = 0\,.
 \end{gather*}
 </div>
-<p id="p-384">For the only rigid body in question, choose point \(A \) as the pole, therefore the 3 Lagrangian parameters (\(n = 3 \)) that can be used for the kinematic description of the system are: <figure class="figure figure-like" id="trave_appoggiata_cinematica_parametri_lagrangiani_fig"><div class="image-box" style="width: 42%; margin-left: 29%; margin-right: 29%;"><img src="images/trave_appoggiata_cinematica_parametri_lagrangiani.png" style="width: 100%; height: auto;" alt=""></div>
+<p id="p-383">For the only rigid body in question, choose point \(A \) as the pole, therefore the 3 Lagrangian parameters (\(n = 3 \)) that can be used for the kinematic description of the system are: <figure class="figure figure-like" id="trave_appoggiata_cinematica_parametri_lagrangiani_fig"><div class="image-box" style="width: 42%; margin-left: 29%; margin-right: 29%;"><img src="images/trave_appoggiata_cinematica_parametri_lagrangiani.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.4.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Using the equation <a class="xref" data-knowl="./knowl/mat_small_rigid_u_eq.html" title="Equation 4.1.5">(4.1.5)</a> the constraint conditions can be expressed with respect to the chosen Lagrangian coordinates</p>
 <div class="displaymath">
 \begin{gather*}
@@ -217,7 +217,7 @@ u_{2A} = 0\,,\\
 u_{2A} + \varphi_{A} l = 0\,.
 \end{gather*}
 </div>
-<p data-braille="continuation">Conditions which give</p>
+<p class="continuation">Conditions which give</p>
 <div class="displaymath">
 \begin{equation*}
 \underbrace{\left[\begin{array}{ccc}
@@ -229,24 +229,24 @@ u_{2A} + \varphi_{A} l = 0\,.
 \underbrace{\left[\begin{array}{c} 0 \\ 0 \\ 0 \end{array}\right]}_{\vec{d}}.
 \end{equation*}
 </div>
-<article class="assemblage assemblage-like" id="assemblage-29"><p id="p-385">Before proceeding with the solution of the system, it is possible to classify the system by calculating the rank of the kinematic matrix using the following MATLAB® instructions. <figure class="listing figure-like" id="listing-43"><pre class="console"><b>syms l;
+<article class="assemblage assemblage-like" id="assemblage-29"><p id="p-384">Before proceeding with the solution of the system, it is possible to classify the system by calculating the rank of the kinematic matrix using the following MATLAB® instructions. <figure class="listing figure-like" id="listing-43"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms l;
 A = [1 0 0; 0 1 0; 0 1 l];
 rank(A)
-</b></pre>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">4.4.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-386">Since the \(\textrm{min} (m, n) = 3 == \text{rank} \ mat {A} \) and \(n == m \) then the system is kinematically determined. Finally, the solution of the linear system provides the values assumed by the Lagrangian parameters \(u_{1A} \text{,}\) \(u_{2A} \) and \(\varphi_{A} \) which, in this case, are identically null.</p>
-<article class="assemblage assemblage-like" id="assemblage-30"><p id="p-387"><figure class="listing figure-like" id="listing-44"><pre class="console"><b>syms l;
+</b></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">4.4.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-385">Since the \(\textrm{min} (m, n) = 3 == \text{rank} \ mat {A} \) and \(n == m \) then the system is kinematically determined. Finally, the solution of the linear system provides the values assumed by the Lagrangian parameters \(u_{1A} \text{,}\) \(u_{2A} \) and \(\varphi_{A} \) which, in this case, are identically null.</p>
+<article class="assemblage assemblage-like" id="assemblage-30"><p id="p-386"><figure class="listing figure-like" id="listing-44"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms l;
 A = [1 0 0; 0 1 0; 0 1 l];
 b = [0; 0; 0];
 linsolve(A,b)
-</b></pre>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">4.4.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-388">Let us assume to modify the assigned system as follows. <figure class="figure figure-like" id="trave_appoggiata_cinematica_bis_fig"><div class="image-box" style="width: 61%; margin-left: 19.5%; margin-right: 19.5%;"><img src="images/trave_appoggiata_cinematica_bis.png" style="width: 100%; height: auto;" alt=""></div>
+</b></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">4.4.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-387">Let us assume to modify the assigned system as follows. <figure class="figure figure-like" id="trave_appoggiata_cinematica_bis_fig"><div class="image-box" style="width: 61%; margin-left: 19.5%; margin-right: 19.5%;"><img src="images/trave_appoggiata_cinematica_bis.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.4.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure> In this case it is necessary to simply modify the constraint condition for the roller support placed in point \(B \text{,}\) that is</p>
 <div class="displaymath">
 \begin{equation*}
 u_{2B} = l/10\,.
 \end{equation*}
 </div>
-<p data-braille="continuation">Therefore on the system of equations to be analyzed, the only effect is constituted by the modification of the vector of the known terms and there is no effect on the classification of the system which always remains kinematically determined (the matrix \(A \) has not changed). Therefore the system of equations becomes</p>
+<p class="continuation">Therefore on the system of equations to be analyzed, the only effect is constituted by the modification of the vector of the known terms and there is no effect on the classification of the system which always remains kinematically determined (the matrix \(A \) has not changed). Therefore the system of equations becomes</p>
 <div class="displaymath">
 \begin{equation*}
 \underbrace{\left[\begin{array}{ccc}
@@ -258,19 +258,19 @@ u_{2B} = l/10\,.
 \underbrace{\left[\begin{array}{c} 0 \\ 0 \\ l/10 \end{array}\right]}_{\vec{d}}.
 \end{equation*}
 </div>
-<p data-braille="continuation">The solution of the linear system provides the new values assumed by the Lagrangian parameters \(u_{1A} \text{,}\) \(u_{2A} \) and \(\varphi_{A} \text{.}\)</p>
-<article class="assemblage assemblage-like" id="assemblage-31"><p id="p-389"><figure class="listing figure-like" id="listing-45"><pre class="console"><b>syms l;
+<p class="continuation">The solution of the linear system provides the new values assumed by the Lagrangian parameters \(u_{1A} \text{,}\) \(u_{2A} \) and \(\varphi_{A} \text{.}\)</p>
+<article class="assemblage assemblage-like" id="assemblage-31"><p id="p-388"><figure class="listing figure-like" id="listing-45"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms l;
 A = [1 0 0; 0 1 0; 0 1 l];
 b = [0; 0; l/10];
 linsolve(A,b)
-</b></pre>
+</b></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">4.4.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></section><section class="subsection" id="traveL_cinematica_sec"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.4.2</span> <span class="title">L shaped beam with 3 roller supports</span>
 </h3>
-<p id="p-390">The assigned system is shown in the figure below. <figure class="figure figure-like" id="traveL_cinematica_fig"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/traveL_cinematica.png" style="width: 100%; height: auto;" alt=""></div>
+<p id="p-389">The assigned system is shown in the figure below. <figure class="figure figure-like" id="traveL_cinematica_fig"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/traveL_cinematica.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.4.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<p id="p-391">The proposed scheme does not present any particular novelty with respect to the previous scheme and the following MATLAB® instructions allow to obtain the desired solution.</p>
-<article class="assemblage assemblage-like" id="assemblage-32"><p id="p-392"><figure class="listing figure-like" id="listing-46"><pre class="console"><b>% generic 2D displacement for a rigid body
+<p id="p-390">The proposed scheme does not present any particular novelty with respect to the previous scheme and the following MATLAB® instructions allow to obtain the desired solution.</p>
+<article class="assemblage assemblage-like" id="assemblage-32"><p id="p-391"><figure class="listing figure-like" id="listing-46"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>% generic 2D displacement for a rigid body
 rigidDispl = ...
     @(u0, phi0, X0, X)...
     [u0(1)-phi0*(X(2)-X0(2));...
@@ -312,13 +312,13 @@ r = rank(A);
 if and(r == min(m,n), m == n)
     x = linsolve(A,d);
 end
-</b></pre>
+</b></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">4.4.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></section><section class="subsection" id="subsection-96"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.4.3</span> <span class="title">system with three hinges</span>
 </h3>
-<p id="p-393">Perform the kinematic analysis of the following system. <figure class="figure figure-like" id="arcoatrecerniere_cinematica_fig"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="images/arcoatrecerniere_cinematica.png" style="width: 100%; height: auto;" alt=""></div>
+<p id="p-392">Perform the kinematic analysis of the following system. <figure class="figure figure-like" id="arcoatrecerniere_cinematica_fig"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="images/arcoatrecerniere_cinematica.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.4.9<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<p id="p-394">The “reading” of the assigned constraint conditions gives</p>
+<p id="p-393">The “reading” of the assigned constraint conditions gives</p>
 <div class="displaymath">
 \begin{gather*}
 \vec{u}_A = \vec{0}\,,\\
@@ -326,7 +326,7 @@ end
 \vec{u}_C = \vec0\,,
 \end{gather*}
 </div>
-<p data-braille="continuation">which can be also expressed by the following scalar equations (\(m=6\)):</p>
+<p class="continuation">which can be also expressed by the following scalar equations (\(m=6\)):</p>
 <div class="displaymath">
 \begin{gather*}
 u_{1A} = 0\,,\\
@@ -337,7 +337,7 @@ u_{1C} = 0\,,\\
 u_{2C} = 0\,.
 \end{gather*}
 </div>
-<p id="p-395">The rigid bodies under examination are two: for the body \(AB \) the point \(A \) is chosen as the pole and for the second body the point \(B'\) is chosen. Therefore the 6 Lagrangian parameters (\(n = 6 \)) adopted for the kinematic description of the system are: <figure class="figure figure-like" id="arcoatrecerniere_cinematica_parametri_lagrangiani_fig"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/arcoatrecerniere_cinematica_parametri_lagrangiani.png" style="width: 100%; height: auto;" alt=""></div>
+<p id="p-394">The rigid bodies under examination are two: for the body \(AB \) the point \(A \) is chosen as the pole and for the second body the point \(B'\) is chosen. Therefore the 6 Lagrangian parameters (\(n = 6 \)) adopted for the kinematic description of the system are: <figure class="figure figure-like" id="arcoatrecerniere_cinematica_parametri_lagrangiani_fig"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/arcoatrecerniere_cinematica_parametri_lagrangiani.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.4.10<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Using the equation <a class="xref" data-knowl="./knowl/mat_small_rigid_u_eq.html" title="Equation 4.1.5">(4.1.5)</a> the constraint conditions can be expressed with respect to the chosen Lagrangian coordinates, in particular:</p>
 <div class="displaymath">
 \begin{gather*}
@@ -349,7 +349,7 @@ u_{1B'} + \varphi_{B'} l = 0\,,\\
 u_{2B'} + \varphi_{B'} 2l = 0\,.
 \end{gather*}
 </div>
-<p data-braille="continuation">or, in matrix format,</p>
+<p class="continuation">or, in matrix format,</p>
 <div class="displaymath">
 \begin{equation*}
 \underbrace{\left[\begin{array}{cccccc}
@@ -364,7 +364,7 @@ u_{2B'} + \varphi_{B'} 2l = 0\,.
 \underbrace{\left[\begin{array}{c} 0 \\ 0 \\ 0 \\ 0 \\ 0 \\ 0 \end{array}\right]}_{\vec{d}}.
 \end{equation*}
 </div>
-<article class="assemblage assemblage-like" id="assemblage-33"><p id="p-396">In order to classify the system, the rank of the kinematic matrix is calculated. <figure class="listing figure-like" id="listing-47"><pre class="console"><b>syms l;
+<article class="assemblage assemblage-like" id="assemblage-33"><p id="p-395">In order to classify the system, the rank of the kinematic matrix is calculated. <figure class="listing figure-like" id="listing-47"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms l;
 A = [
 1 0 0 0 0 0; ... 
 0 1 0 0 0 0; ... 
@@ -374,9 +374,9 @@ A = [
 0 0 0 0 1 2*l ...
 ];
 rank(A)
-</b></pre>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">4.4.11<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-397">Since \(\textrm{min}(m,n) = 6 == \textrm{rango}\mat{A}\) and \(n == m\) then the system is kinematically determined. The solution of the linear system provides the values assumed by the Lagrangian parameters \(u_{1A}\text{,}\) \(u_{2A}\text{,}\) \(\varphi_{A}\text{,}\) \(u_{1B'}\text{,}\) \(u_{2B'}\text{,}\) \(\varphi_{B'}\text{.}\)</p>
-<article class="assemblage assemblage-like" id="assemblage-34"><p id="p-398"><figure class="listing figure-like" id="listing-48"><pre class="console"><b>syms l;
+</b></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">4.4.11<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-396">Since \(\textrm{min}(m,n) = 6 == \textrm{rango}\mat{A}\) and \(n == m\) then the system is kinematically determined. The solution of the linear system provides the values assumed by the Lagrangian parameters \(u_{1A}\text{,}\) \(u_{2A}\text{,}\) \(\varphi_{A}\text{,}\) \(u_{1B'}\text{,}\) \(u_{2B'}\text{,}\) \(\varphi_{B'}\text{.}\)</p>
+<article class="assemblage assemblage-like" id="assemblage-34"><p id="p-397"><figure class="listing figure-like" id="listing-48"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms l;
 A = [
 1 0 0 0 0 0; ... 
 0 1 0 0 0 0; ... 
@@ -387,9 +387,9 @@ A = [
 ];
 b = [0; 0; 0; 0; 0; 0];
 linsolve(A,b)
-</b></pre>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">4.4.12<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-399">Also in this case the solution of a kinematically determined system with respect to a vector of the known terms which is identically null still provides the trivial solution.</p>
-<p id="p-400">A more interesting result can be obtained by assuming an assigned non-zero displacement condition on one or more degrees of constraint. For example: <figure class="figure figure-like" id="arcoatrecerniere_cinematica_bis_fig"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="images/arcoatrecerniere_cinematica_bis.png" style="width: 100%; height: auto;" alt=""></div>
+</b></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">4.4.12<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-398">Also in this case the solution of a kinematically determined system with respect to a vector of the known terms which is identically null still provides the trivial solution.</p>
+<p id="p-399">A more interesting result can be obtained by assuming an assigned non-zero displacement condition on one or more degrees of constraint. For example: <figure class="figure figure-like" id="arcoatrecerniere_cinematica_bis_fig"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="images/arcoatrecerniere_cinematica_bis.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.4.13<span class="period">.</span></span><span class="space"> </span></figcaption></figure> In this case the matrix form of the constraint conditions provides</p>
 <div class="displaymath">
 \begin{equation*}
@@ -405,7 +405,7 @@ linsolve(A,b)
 \underbrace{\left[\begin{array}{c} l/4 \\ 0 \\ 0 \\ 0 \\ 0 \\ 0 \end{array}\right]}_{\vec{d}}\,.
 \end{equation*}
 </div>
-<article class="assemblage assemblage-like" id="assemblage-35"><p id="p-401">The solution can be calculated using the following MATLAB® instructions. <figure class="listing figure-like" id="listing-49"><pre class="console"><b>syms l;
+<article class="assemblage assemblage-like" id="assemblage-35"><p id="p-400">The solution can be calculated using the following MATLAB® instructions. <figure class="listing figure-like" id="listing-49"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms l;
 A = [
 1 0 0 0 0 0; ... 
 0 1 0 0 0 0; ... 
@@ -416,11 +416,11 @@ A = [
 ];
 b = [l/4; 0; 0; 0; 0; 0];
 linsolve(A,b)
-</b></pre>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">4.4.14<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-402">The graphical representation of the displacement field is obtained by evaluating the displacement of the end points of the straight parts of the beams, obtaining what follows. <figure class="figure figure-like" id="arcoatrecerniere_cinematica_bis_soluzione_fig"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="images/arcoatrecerniere_cinematica_bis_soluzione.png" style="width: 100%; height: auto;" alt=""></div>
+</b></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">4.4.14<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-401">The graphical representation of the displacement field is obtained by evaluating the displacement of the end points of the straight parts of the beams, obtaining what follows. <figure class="figure figure-like" id="arcoatrecerniere_cinematica_bis_soluzione_fig"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="images/arcoatrecerniere_cinematica_bis_soluzione.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.4.15<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<p id="p-403">The following MATLAB® instructions allow you to obtain a plot of the kinematics shown above.</p>
-<article class="assemblage assemblage-like" id="assemblage-36"><p id="p-404"><figure class="listing figure-like" id="listing-50"><pre class="console"><b>% geometric description
+<p id="p-402">The following MATLAB® instructions allow you to obtain a plot of the kinematics shown above.</p>
+<article class="assemblage assemblage-like" id="assemblage-36"><p id="p-403"><figure class="listing figure-like" id="listing-50"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>% geometric description
 L = 100;
 A = [0; 0];
 B = [2*L; 0];
@@ -472,20 +472,20 @@ line(x,y,'LineWidth',2,'Color','red')
 xlim([0 4*L])
 ylim([-L 0.5*L])
 pbaspect([2.667 1 1])
-</b></pre>
+</b></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">4.4.16<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></section><section class="subsection" id="subsection-97"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.4.4</span> <span class="title">mechanism example</span>
 </h3>
-<p id="p-405">Perform the kinematic analysis of the following system. <figure class="figure figure-like" id="arcoatrecerniere_labile_fig"><div class="image-box" style="width: 57%; margin-left: 21.5%; margin-right: 21.5%;"><img src="images/arcoatrecerniere_labile.png" style="width: 100%; height: auto;" alt=""></div>
+<p id="p-404">Perform the kinematic analysis of the following system. <figure class="figure figure-like" id="arcoatrecerniere_labile_fig"><div class="image-box" style="width: 57%; margin-left: 21.5%; margin-right: 21.5%;"><img src="images/arcoatrecerniere_labile.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.4.17<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<p id="p-406">The constraint conditions assigned can be expressed as follows</p>
+<p id="p-405">The constraint conditions assigned can be expressed as follows</p>
 <div class="displaymath">
 \begin{gather*}
 \vec{u}_A = \vec{0}\,,\\
 \vec{u}_C = \vec{u}_{C'}\,,
 \end{gather*}
 </div>
-<p data-braille="continuation">The corresponding set of scalar equations is (\(m=5\)):</p>
+<p class="continuation">The corresponding set of scalar equations is (\(m=5\)):</p>
 <div class="displaymath">
 \begin{gather*}
 u_{1A} = 0\,,\\
@@ -495,7 +495,7 @@ u_{2C} = u_{2C'}\,,\\
 u_{2E} = 0\,.
 \end{gather*}
 </div>
-<p id="p-407">For the two rigid bodies under examination, points B and D are chosen as poles, thus the kinematics is described through the following 6 Lagrangian parameters (\(n=6\)): <figure class="figure figure-like" id="arcoatrecerniere_labile_parametri_lagrangiani_fig"><div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="images/arcoatrecerniere_labile_parametri_lagrangiani.png" style="width: 100%; height: auto;" alt=""></div>
+<p id="p-406">For the two rigid bodies under examination, points B and D are chosen as poles, thus the kinematics is described through the following 6 Lagrangian parameters (\(n=6\)): <figure class="figure figure-like" id="arcoatrecerniere_labile_parametri_lagrangiani_fig"><div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="images/arcoatrecerniere_labile_parametri_lagrangiani.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.4.18<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Always using the plane motion model represented by the equation <a class="xref" data-knowl="./knowl/mat_small_rigid_u_eq.html" title="Equation 4.1.5">(4.1.5)</a> the constraint conditions can be expressed with respect to the chosen Lagrangian coordinates obtaining the following result,</p>
 <div class="displaymath">
 \begin{gather*}
@@ -506,7 +506,7 @@ u_{2B} + \varphi_{B} 2l = u_{2D}-\varphi_{D} l\,,\\
 u_{2D} = 0\,.
 \end{gather*}
 </div>
-<p data-braille="continuation">Using a matrix format, the system of constraint equations can be written as</p>
+<p class="continuation">Using a matrix format, the system of constraint equations can be written as</p>
 <div class="displaymath">
 \begin{equation*}
 \underbrace{\left[\begin{array}{cccccc}
@@ -520,7 +520,7 @@ u_{2D} = 0\,.
 \underbrace{\left[\begin{array}{c} 0 \\ 0 \\ 0 \\ 0 \\ 0 \end{array}\right]}_{\vec{d}}.
 \end{equation*}
 </div>
-<article class="assemblage assemblage-like" id="assemblage-37"><p id="p-408">It is possible to proceed with the calculation of the rank of the matrix as follows. <figure class="listing figure-like" id="listing-51"><pre class="console"><b>syms l;
+<article class="assemblage assemblage-like" id="assemblage-37"><p id="p-407">It is possible to proceed with the calculation of the rank of the matrix as follows. <figure class="listing figure-like" id="listing-51"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms l;
 A = [
 1 0 2*l 0 0 0; ... 
 0 1 0 0 0 0; ... 
@@ -529,8 +529,8 @@ A = [
 0 0 0 0 1 0; ...
 ];
 rank(A)
-</b></pre>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">4.4.19<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-409">In the present case \(\textrm{rango}\mat{A} == \textrm{min}(m,n) = 5\) and \(m &lt; n\) therefore the system is a mechanism and characterized by infinite solutions. To describe all possible solutions, choose the rotation \(\varphi_{B}\) as parameter to be eliminated from the group of unknowns. In this way the system can be rewritten as follows</p>
+</b></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">4.4.19<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-408">In the present case \(\textrm{rango}\mat{A} == \textrm{min}(m,n) = 5\) and \(m &lt; n\) therefore the system is a mechanism and characterized by infinite solutions. To describe all possible solutions, choose the rotation \(\varphi_{B}\) as parameter to be eliminated from the group of unknowns. In this way the system can be rewritten as follows</p>
 <div class="displaymath">
 \begin{equation*}
 \left[\begin{array}{ccccc}
@@ -544,7 +544,7 @@ rank(A)
 \left[\begin{array}{c} -2l\,\varphi_{B} \\ 0 \\ 0 \\ -2l\,\varphi_{B} \\ 0 \end{array}\right].
 \end{equation*}
 </div>
-<article class="assemblage assemblage-like" id="assemblage-38"><p id="p-410">The following MATLAB® instructions allow to calculate the solution we are looking for. <figure class="listing figure-like" id="listing-52"><pre class="console"><b>syms l k;
+<article class="assemblage assemblage-like" id="assemblage-38"><p id="p-409">The following MATLAB® instructions allow to calculate the solution we are looking for. <figure class="listing figure-like" id="listing-52"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms l k;
 A = [
 1 0 0 0 0; ... 
 0 1 0 0 0; ... 
@@ -554,8 +554,8 @@ A = [
 ];
 b = [-2*l*k; 0; 0; -2*l*k; 0];
 linsolve(A,b)
-</b></pre>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">4.4.20<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-411">The obtained infinite solutions are</p>
+</b></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">4.4.20<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-410">The obtained infinite solutions are</p>
 <div class="displaymath">
 \begin{gather*}
 u_{1B} = -\varphi_{B} 2l \,,\\
@@ -565,11 +565,11 @@ u_{2D} = 0\,,\\
 \varphi_{D} = - 2\varphi_{B} \,.
 \end{gather*}
 </div>
-<p data-braille="continuation">One of these can be represented as follows <figure class="figure figure-like" id="arcoatrecerniere_labile_soluzione_fig"><div class="image-box" style="width: 57%; margin-left: 21.5%; margin-right: 21.5%;"><img src="images/arcoatrecerniere_labile_soluzione.png" style="width: 100%; height: auto;" alt=""></div>
+<p class="continuation">One of these can be represented as follows <figure class="figure figure-like" id="arcoatrecerniere_labile_soluzione_fig"><div class="image-box" style="width: 57%; margin-left: 21.5%; margin-right: 21.5%;"><img src="images/arcoatrecerniere_labile_soluzione.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.4.21<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></section><section class="subsection" id="subsection-98"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.4.5</span> <span class="title">esercizi proposti</span>
 </h3>
-<p id="p-412">Perform the previous exercises by suitably modifying the MATLAB® code used for the example shown in <a href="analysis_examples_sec_rigid_body_kinematics_chap_en.html#traveL_cinematica_sec" class="internal" title="Subsection 4.4.2: L shaped beam with 3 roller supports">Subsection 4.4.2</a>.</p></section></section></div></main>
+<p id="p-411">Perform the previous exercises by suitably modifying the MATLAB® code used for the example shown in <a href="analysis_examples_sec_rigid_body_kinematics_chap_en.html#traveL_cinematica_sec" class="internal" title="Subsection 4.4.2: L shaped beam with 3 roller supports">Subsection 4.4.2</a>.</p></section></section></div></main>
 </div>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-02T11:40:20+02:00       *-->
+<!--*       on 2021-04-20T14:29:49+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -57,7 +57,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{{\not{\mid}}}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -195,26 +195,26 @@ MathJax.Hub.Config({
 \vec{x} = \func{\vec{\chi}}{\vec{X}}\,,\label{motion_eq}\tag{1.2.1}
 \end{equation}
 </div>
-<p data-braille="continuation">valid \(\forall\vec{X} \in \body_0\text{.}\) \(\vec{\chi}\) is a vector function which, given a position \(\vec{X}\) relative to the reference configuration, provides the new position \(\vec{x}\) relative to the current configuration. The dependence between \(\vec{x}\) and \(\vec{X}\) is sometimes indicated shortly as follows</p>
+<p class="continuation">valid \(\forall\vec{X} \in \body_0\text{.}\) \(\vec{\chi}\) is a vector function which, given a position \(\vec{X}\) relative to the reference configuration, provides the new position \(\vec{x}\) relative to the current configuration. The dependence between \(\vec{x}\) and \(\vec{X}\) is sometimes indicated shortly as follows</p>
 <div class="displaymath">
 \begin{equation}
 \vec{x} = \func{\vec{x}}{\vec{X}}\,,\tag{1.2.2}
 \end{equation}
 </div>
-<p data-braille="continuation">We assume \(\vec{\chi}\) sufficiently regular to allow derivation up to the desired order.</p>
+<p class="continuation">We assume \(\vec{\chi}\) sufficiently regular to allow derivation up to the desired order.</p>
 <p id="p-31">It is also assumed that the motion \(\vec{\chi} \) is uniquely invertible, i.e. it is possible to write</p>
 <div class="displaymath">
 \begin{equation}
 \vec{X} = \func{\vec{\chi}^{-1}}{\vec{x}}\,,\tag{1.2.3}
 \end{equation}
 </div>
-<p data-braille="continuation">or</p>
+<p class="continuation">or</p>
 <div class="displaymath">
 \begin{equation}
 \vec{X} = \func{\vec{X}}{\vec{x}}\,,\tag{1.2.4}
 \end{equation}
 </div>
-<p data-braille="continuation">where the symbol \(\vec{\chi}^{-1}\) indicates the inverse motion that associates the current position \(\vec{x}\) with the position \(\vec{X}\) in the reference configuration.</p>
+<p class="continuation">where the symbol \(\vec{\chi}^{-1}\) indicates the inverse motion that associates the current position \(\vec{x}\) with the position \(\vec{X}\) in the reference configuration.</p>
 <p id="p-32">In general the motion \(\vec{\chi}\) of a body will change the position, orientation and shape of the body. A body capable of modifying its shape will therefore be called <em class="emphasis">deformable</em>.</p>
 <article class="assemblage assemblage-like" id="assemblage-2"><h6 class="heading"><span class="title">some basic transformations.</span></h6>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:3.75%;margin-right:3.75%;">
@@ -230,11 +230,11 @@ MathJax.Hub.Config({
 </div>
 <div class="sbspanel" style="width:48.6486486486486%;justify-content:flex-start;"><img src="images/90degreesRotation.png" style="width: 100%; height: auto;" alt=""></div>
 </div></div>
-<p id="p-34">Instructions for the definition of a MATLAB® function associated with the assigned transformation and for its use. <figure class="listing figure-like" id="listing-3"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
+<p id="p-34">Instructions for the definition of a MATLAB® function associated with the assigned transformation and for its use. <figure class="listing figure-like" id="listing-3"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
 
 X = [1; 2];
 T1(X)
-</b></pre>
+</b></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.2.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:3.75%;margin-right:3.75%;">
 <div class="sbspanel" style="width:43.2432432432432%;justify-content:flex-start;">
@@ -249,11 +249,11 @@ T1(X)
 </div>
 <div class="sbspanel" style="width:48.6486486486486%;justify-content:flex-start;"><img src="images/RightExtension.png" style="width: 100%; height: auto;" alt=""></div>
 </div></div>
-<p id="p-36">MATLAB® instructions. <figure class="listing figure-like" id="listing-4"><pre class="console"><b>T2 = @(X) [2*X(1); X(2)];
+<p id="p-36">MATLAB® instructions. <figure class="listing figure-like" id="listing-4"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T2 = @(X) [2*X(1); X(2)];
 
 X = [1; -1];
 T2(X)
-</b></pre>
+</b></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.2.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:3.75%;margin-right:3.75%;">
 <div class="sbspanel" style="width:43.2432432432432%;justify-content:flex-start;">
@@ -268,11 +268,11 @@ T2(X)
 </div>
 <div class="sbspanel" style="width:48.6486486486486%;justify-content:flex-start;"><img src="images/UpExtension.png" style="width: 100%; height: auto;" alt=""></div>
 </div></div>
-<p id="p-38">MATLAB® instructions <figure class="listing figure-like" id="listing-5"><pre class="console"><b>T3 = @(X) [X(1); 1.5*X(2)];
+<p id="p-38">MATLAB® instructions <figure class="listing figure-like" id="listing-5"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T3 = @(X) [X(1); 1.5*X(2)];
 
 v = [4; 10];
 T3(v)
-</b></pre>
+</b></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.2.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:3.75%;margin-right:3.75%;">
 <div class="sbspanel" style="width:43.2432432432432%;justify-content:flex-start;">
@@ -287,11 +287,11 @@ T3(v)
 </div>
 <div class="sbspanel" style="width:48.6486486486486%;justify-content:flex-start;"><img src="images/RightShear.png" style="width: 100%; height: auto;" alt=""></div>
 </div></div>
-<p id="p-40">MATLAB® instructions <figure class="listing figure-like" id="listing-6"><pre class="console"><b>T4 = @(X) [X(1)+X(2); X(2)];
+<p id="p-40">MATLAB® instructions <figure class="listing figure-like" id="listing-6"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T4 = @(X) [X(1)+X(2); X(2)];
 
 u = [10; -1];
 T4(u)
-</b></pre>
+</b></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.2.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-41">The previous examples belong to a very important class of transformations in solid mechanics: <em class="alert">linear transformations</em>.</p>
 <p id="p-42"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-2" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/8qHrL4LR8HU?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p>
 <p id="p-43">As shown in previous video, in the case in which the transformation \(\vec{\chi}\) is linear its action on the vector \(\vec{X}\) can be transferred through the matrix \(\mat{M_{\chi}}\) defined as follows</p>
@@ -301,7 +301,7 @@ T4(u)
 \left[\begin{array}{ccc} \func{\vec{\chi}}{\vec{e}_1} \amp \func{\vec{\chi}}{\vec{e}_2} \amp \func{\vec{\chi}}{\vec{e}_3}  \end{array}\right]\,,\tag{1.2.5}
 \end{equation}
 </div>
-<p data-braille="continuation">where \(\func{\vec{\chi}}{\vec{e}_1}\text{,}\) \(\func{\vec{\chi}}{\vec{e}_2}\) and \(\func{\vec{\chi}}{\vec{e}_3}\) are the vectors obtained by the application of the trasformation \(\vec{\chi}\) to the vectors forming the reference basis. Therefore the transformation of any vector \(\vec{X}\) can be obtained in an equivalent way by applying the matrix \(\mat{M_{\chi}}\text{:}\)</p>
+<p class="continuation">where \(\func{\vec{\chi}}{\vec{e}_1}\text{,}\) \(\func{\vec{\chi}}{\vec{e}_2}\) and \(\func{\vec{\chi}}{\vec{e}_3}\) are the vectors obtained by the application of the trasformation \(\vec{\chi}\) to the vectors forming the reference basis. Therefore the transformation of any vector \(\vec{X}\) can be obtained in an equivalent way by applying the matrix \(\mat{M_{\chi}}\text{:}\)</p>
 <div class="displaymath">
 \begin{equation}
 \vec{x} = \func{\vec{\chi}}{\vec{X}} = \mat{M_{\chi}} \vec{X} \,.\tag{1.2.6}
@@ -349,7 +349,7 @@ T4(u)
 </div>
 </div>
 </div></div></p>
-<p id="p-51">MATLAB® instructions for the creation of the matrices associated with the given transformations. <figure class="listing figure-like" id="listing-7"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
+<p id="p-51">MATLAB® instructions for the creation of the matrices associated with the given transformations. <figure class="listing figure-like" id="listing-7"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
 T2 = @(X) [2*X(1); X(2)];
 T3 = @(X) [X(1); 1.5*X(2)];
 T4 = @(X) [X(1)+X(2); X(2)];
@@ -358,7 +358,7 @@ M1 = [T1([1; 0]) T1([0; 1])]
 M2 = [T2([1; 0]) T2([0; 1])]
 M3 = [T3([1; 0]) T3([0; 1])]
 M4 = [T4([1; 0]) T4([0; 1])]
-</b></pre>
+</b></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.2.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><article class="remark remark-like" id="remark-1"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.2.7</span><span class="period">.</span>
 </h6>

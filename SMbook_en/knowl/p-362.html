@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-02T11:40:26+02:00       *-->
+<!--*       on 2021-04-20T14:29:56+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,29 +15,64 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>As seen in the <a href="gradient_sec_strain_chap_en.html" class="internal" title="Section 1.3: deformation gradient">Section 1.3</a> the description of the motion of a body in its generic point involves the deformation gradient \(\tens{F} \text{.}\) In turn, the gradient, by the polar decomposition theorem (<a href="polar_sec_strain_chap_en.html" class="internal" title="Section 1.6: polar decomposition">Section 1.6</a>), admits the decomposition \(\tens{F} = \tens{R} \tens{U} \) . Assuming the hypothesis of <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">rigid body</em>, that is the invariance of the mutual distances of the points that make up the body, the body does not deform and therefore</p>
+<p>The generic rotation tensor has a representation of the type, see <a class="xref" data-knowl="./knowl/rotation_remark.html" title="Remark 1.6.3: rotation tensors">Remark 1.6.3</a>,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\mat{R} =
+\left[\begin{array}{cc}
+\cos{\varphi} \amp -\sin{\varphi} \\
+\sin{\varphi} \amp \cos{\varphi}
+\end{array}\right]\,.
+\end{equation*}
+</div>
+<p class="continuation">whose components depend nonlinearly on the rotation angle for the presence of the trigonometric functions. But it has also been seen that in the case of infinitesimal displacements, see the <a class="xref" data-knowl="./knowl/small_rotations_insight.html" title="Insight 1.9.3: infinitesimal rotations">Insight 1.9.3</a>, the rotation tensor takes the following expression</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\tens{R} \approx \tens{I} + \text{skew}\tens{\nabla u}\,,
+\end{equation*}
+</div>
+<p class="continuation">where, for 2D case,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\text{skew}\mat{\nabla u} \approx
+\left[\begin{array}{cc}
+0 \amp -\varphi \\
+\varphi \amp 0 
+\end{array}\right]\,.
+\end{equation*}
+</div>
+<p class="continuation">Therefore, in the case of infinitesimal displacements, the relationship <a class="xref" data-knowl="./knowl/rigid_u_eq.html" title="Equation 4.1.3">(4.1.3)</a> becomes</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\vec{u} \amp = \vec{u}_o + \left(\tens{R} - \tens{I}\right)\left(\vec{X}-\vec{X}_o\right)\\
+\amp = \vec{u}_o + \left(\tens{I} + \text{skew}\tens{\nabla u} - \tens{I}\right)\left(\vec{X}-\vec{X}_o\right)\\
+\amp = \vec{u}_o + \text{skew}\tens{\nabla u}\,\left(\vec{X}-\vec{X}_o\right)\,,
+\end{align*}
+</div>
+<p class="continuation">and then</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation}
-\tens{U} = \tens{I}\quad \Rightarrow \quad \tens{F} = \tens{R}\,.\tag{4.1.1}
+\vec{u} = \vec{u}_o + \text{skew}\tens{\nabla u}\,\left(\vec{X}-\vec{X}_o\right)\,.\tag{4.1.4}
 \end{equation}
 </div>
-<p data-braille="continuation">Furthermore, always for the rigidity hypothesis, the transformation \(\tens{F} \) does not apply only to a neighborhood of the point but is homogeneous and therefore assumes the same value on all points of the body. This further condition allows to express the link between infinitesimal increments \(d\vec{x} = \tens{F} \, d \vec{X} \) in finite terms, that is</p>
+<p class="continuation">A component-wise representation provides</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation}
-\vec{x} - \vec{x}_o = \tens{F}\left(\vec{X}-\vec{X}_o\right) = \tens{R}\left(\vec{X}-\vec{X}_o\right)\,,\tag{4.1.2}
+\left[\begin{array}{c}
+u_1 \\ u_2
+\end{array}\right] =
+\left[\begin{array}{c}
+{u_1}_o \\ {u_2}_o
+\end{array}\right] +
+\left[\begin{array}{cc}
+0 \amp -\varphi \\
+\varphi \amp 0 
+\end{array}\right]
+\left[\begin{array}{c}
+\left(X_1 - {X_1}_o\right) \\ \left(X_2 - {X_2}_o\right)
+\end{array}\right]\,.\tag{4.1.5}
 \end{equation}
 </div>
-<p data-braille="continuation">where \(\vec{X} \) refers to the generic point and \(\vec{X}_o \) assumes the particular meaning of <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">pole</em> of the rigid transformation. The choice of the pole is completely indifferent and any point, inside or outside the body, leads to the same results. If we introduce the \(\vec{x} = \vec{X} + \vec{u} \) in the <a class="xref" data-knowl="./knowl/rigid_x_eq.html" title="Equation 4.1.2">(4.1.2)</a> we get the description of the rigid motion in terms of the displacement field</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\vec{u} = \vec{u}_o + \left(\tens{R} - \tens{I}\right)\left(\vec{X}-\vec{X}_o\right)\,.\tag{4.1.3}
-\end{equation}
-</div>
-<p data-braille="continuation">The latter relationship highlights how the displacement field of a rigid body is definined by two contributions each characterized by <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">3 degrees of freedom</em>:</p>
-<ul class="disc">
-<li>a contribution due to pure translation (3 components) shared by all points of the body, contribution given by the displacement of the pole \(\vec{u}_o\text{;}\)</li>
-<li>a contribution due to rotation (3 components) which instead varies for each point with respect to the vector \(\left(\vec{X} - \vec{X}_o\right)\text{.}\)</li>
-</ul>
 <span class="incontext"><a href="description_sec_rigid_body_kinematics_chap_en.html#p-362">in-context</a></span>
 </body>
 </html>

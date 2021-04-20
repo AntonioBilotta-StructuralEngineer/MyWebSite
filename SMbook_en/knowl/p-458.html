@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-02T11:40:27+02:00       *-->
+<!--*       on 2021-04-20T14:29:57+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,35 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">In order to complete the kinds of loads applicable to beam systems and also to make it possible to have a general treatment of the equilibrium diffrential equations presented in the next section, the case of distributed loads is discussed. To this end, consider the following scheme.</p>
+<p>The scheme represents a cantilever beam subjected to a variable distributed load \(q (x) \text{.}\) The distributed load is measured as \(\left[\frac{F}{L} \right] \text{.}\) The free body diagram shown at the top right of the figure allows writing the three equilibrium equations (horizontal, vertical and rotation using point \(A \) as pole) providing:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+H_{A} \amp = 0\,,\\
+V_{A} -\int_0^l q(x) dx \amp = 0\,,\\
+\mathcal{M}_{A} - \int_0^l q(x) x dx \amp = 0\,.
+\end{align*}
+</div>
+<p class="continuation">It is easy to realize that the integrals present in the equations have the meaning of the resultant of the applied distributed load</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\int_0^l q(x) dx = R_q
+\end{equation*}
+</div>
+<p class="continuation">and static moment with respect to point \(A\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\int_0^l q(x)x dx = S_q = R_q x_q,
+\end{equation*}
+</div>
+<p class="continuation">where \(x_q \) represents the centroid of the load with respect to an axis passing through \(A \text{,}\) see the additional free body diagram shown at the bottom right of the figure. Therefore equilibrium equations can be rewritten as follows:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+H_{A} \amp = 0\,,\\
+V_{A} - R_q \amp = 0\,,\\
+\mathcal{M}_{A} - R_q x_q \amp = 0\,.
+\end{align*}
+</div>
+<p class="continuation">Therefore in systems subjected to distributed loads it is possible to replace the latter with the respective resultants positioned in their centroids. It is observed that this substitution is correct only for the calculation of the constraint reactions and not for the calculation of the generalized cross forces which will be better described later.</p>
 <span class="incontext"><a href="sollecitazioni_sec_rigid_body_statics_chap_en.html#p-458">in-context</a></span>
 </body>
 </html>

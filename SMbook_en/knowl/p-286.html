@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-02T11:40:25+02:00       *-->
+<!--*       on 2021-04-20T14:29:55+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,21 +15,29 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>The static solution already found, however correct because it satisfies the equations of equilibrium <a class="xref" data-knowl="./knowl/ep_1_eq.html" title="Equation 3.4.1">(3.4.1)</a> inside the solid and the static conditions on the contour <a class="xref" data-knowl="./knowl/ep_4_eq.html" title="Equation 3.4.4">(3.4.4)</a>, is</p>
+<p>The strain-displacement relationship <a class="xref" data-knowl="./knowl/ep_2_eq.html" title="Equation 3.4.2">(3.4.2)</a> allows the determination of the displacement field. An explicit writing of Eq. <a class="xref" data-knowl="./knowl/ep_2_eq.html" title="Equation 3.4.2">(3.4.2)</a>, see also <a class="xref" data-knowl="./knowl/mat_symDu_eq.html" title="Equation 1.9.4">(1.9.4)</a>, gives</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\sigma_{11} = \sigma_{22} = \sigma_{12} = \sigma_{13} = \sigma_{23} = 0\,\quad \sigma_{33} = \bar{t}\,.\tag{3.4.6}
-\end{equation}
+\begin{align*}
+\varepsilon_{11} = \frac{\partial u_1}{\partial X_1}\,,\amp\qquad \varepsilon_{23} = \frac{1}{2}\left(\frac{\partial u_2}{\partial X_3} + \frac{\partial u_3}{\partial X_2}\right)\,,\\
+\varepsilon_{22} = \frac{\partial u_2}{\partial X_2}\,,\amp\qquad \varepsilon_{31} = \frac{1}{2}\left(\frac{\partial u_3}{\partial X_1} + \frac{\partial u_1}{\partial X_3}\right)\,,\\
+\varepsilon_{33} = \frac{\partial u_3}{\partial X_3}\,,\amp\qquad \varepsilon_{12} = \frac{1}{2}\left(\frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1}\right)\,.
+\end{align*}
 </div>
-<p data-braille="continuation">On the basis of the isotropic elastic relationship <a class="xref" data-knowl="./knowl/isotropic_normal_eq.html" title="Equation 3.3.11">(3.3.11)</a>, it is now possible to calculate the strain tensor whose only non-null components are</p>
+<p class="continuation">By replacing the values of the strain components obtained in <a class="xref" data-knowl="./knowl/eps33_eq.html" title="Equation 3.4.7">(3.4.7)</a> - <a class="xref" data-knowl="./knowl/eps11_eq.html" title="Equation 3.4.9">(3.4.9)</a> by means of the elastic law we obtain</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align}
-\amp \varepsilon_{33} = \frac{\sigma_{33}}{E} = \frac{\bar{t}}{E}\,,\tag{3.4.7}\\
-\amp \varepsilon_{22} = -\nu\,\varepsilon_{33} = -\nu\,\frac{\bar{t}}{E}\,,\tag{3.4.8}\\
-\amp \varepsilon_{11} = -\nu\,\varepsilon_{33} = -\nu\,\frac{\bar{t}}{E}\,,\tag{3.4.9}
+-\nu\,\frac{\bar{t}}{E}\ = \frac{\partial u_1}{\partial X_1}\,,\amp\qquad 0 = \frac{1}{2}\left(\frac{\partial u_2}{\partial X_3} + \frac{\partial u_3}{\partial X_2}\right)\,,\tag{3.4.10}\\
+-\nu\,\frac{\bar{t}}{E}= \frac{\partial u_2}{\partial X_2}\,,\amp\qquad 0 = \frac{1}{2}\left(\frac{\partial u_3}{\partial X_1} + \frac{\partial u_1}{\partial X_3}\right)\,,\tag{3.4.11}\\
+\frac{\bar{t}}{E} = \frac{\partial u_3}{\partial X_3}\,,\amp\qquad 0 = \frac{1}{2}\left(\frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1}\right)\,.\tag{3.4.12}
 \end{align}
 </div>
-<p data-braille="continuation">therefore a constant and homogeneous strain field on the whole solid.</p>
+<p class="continuation">Equations for which it is easy to verify that a solution is given by</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+u_1 = -\nu\,\frac{\bar{t}}{E} \, X_1\,,\quad u_2 = -\nu\,\frac{\bar{t}}{E} \, X_2\,,\quad u_3 = \frac{\bar{t}}{E} \, X_3\,.\tag{3.4.13}
+\end{equation}
+</div>
+<p class="continuation">In this regard, it is observed that we say <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">a solution</em> since by adding to this displacement field all possible rigid motions, which in the assigned problem are not explicitly eliminated, we would always obtain the same solution in terms of stress and strain fields.</p>
 <span class="incontext"><a href="problem_sec_elasticity_chap_en.html#p-286">in-context</a></span>
 </body>
 </html>

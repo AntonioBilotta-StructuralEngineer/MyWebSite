@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-03T08:24:07+01:00       *-->
+<!--*       on 2021-04-20T14:29:28+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,39 +14,23 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p>Per le componenti fuori dalla diagonale principale si ottiene</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-C_{ij} = \vec{e}_i \cdot \tens{C}\vec{e}_j = \vec{e}_i \cdot \transp{\tens{F}}\tens{F}\vec{e}_j = \tens{F}\vec{e}_i \cdot \tens{F}\vec{e}_j = \cos{\func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}} \| \tens{F}\vec{e}_i\|\, \| \tens{F}\vec{e}_j\|\,,
-\end{equation*}
-</div>
-<p data-braille="continuation">dove \(\func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}\) rappresenta l'angolo formato dalla trasformata delle due direzioni \(\vec{e}_i\) e \(\vec{e}_j\text{.}\) Tale relazione, utilizzando la <a class="xref" data-knowl="./knowl/Cii_pre_eq.html" title="Equazione 1.8.3">(1.8.3)</a>, diventa</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-C_{ij} = \cos{\func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}} \sqrt{\vec{e}_i \cdot \tens{C}\vec{e}_i} \, \sqrt{\vec{e}_j \cdot \tens{C}\vec{e}_j}\,,
-\end{equation*}
-</div>
-<p data-braille="continuation">risultato che mostra come la generica componente \(C_{ij}\) dipenda, oltre che dagli allungamenti lungo le direzioni \(\vec{e}_i\) ed \(\vec{e}_j\text{,}\) principalmente dall'angolo formato dai trasformati dei vettori. Tale dipendenza, introducendo l'angolo</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\func{\gamma}{\vec{e}_i,\vec{e}_j} = \func{\Theta}{\vec{e}_i,\vec{e}_j} - \func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j} = \frac{\pi}{2} - \func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}\,,\tag{1.8.5}
-\end{equation}
-</div>
-<p data-braille="continuation">ovvero l'angolo dato dalla differenza fra gli angoli formati da \(\vec{e}_i\) ed \(\vec{e}_j\) prima e dopo la trasformazione, può essere riformulata come segue</p>
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
+<p>Una misura di deformazione molto utilizzata si basa sulla differenza dei quadrati delle lunghezze nella configurazione attuale ed in quella di riferimento. In particolare si ricava quanto segue</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-C_{ij} \amp = \cos{\left(\frac{\pi}{2} - \func{\gamma}{\vec{e}_i,\vec{e}_j}\right)} \sqrt{\vec{e}_i \cdot \tens{C}\vec{e}_i} \, \sqrt{\vec{e}_j \cdot \tens{C}\vec{e}_j}\,,\\
-\amp = \sin{\func{\gamma}{\vec{e}_i,\vec{e}_j}} \sqrt{\vec{e}_i \cdot \tens{C}\vec{e}_i} \, \sqrt{\vec{e}_j \cdot \tens{C}\vec{e}_j}\,,
+\frac{1}{2}\left(\|d\vec{x}\|^2 - \|d\vec{X}\|^2\right) \amp = \frac{1}{2}\left(d\vec{x}\cdot d\vec{x} - d\vec{X}\cdot d\vec{X}\right)\,,\\
+\amp = \frac{1}{2}\left( (\tens{F} d\vec{X})\cdot(\tens{F} d\vec{X}) - d\vec{X}\cdot d\vec{X}\right) \,,\\
+\amp = \frac{1}{2}\left( d\vec{X}\cdot(\transp{\tens{F}}\,\tens{F} d\vec{X}) - d\vec{X}\cdot(\tens{I}\, d\vec{X})\right) \,,\\
+\amp = d\vec{X}\cdot \frac{1}{2}\left( \transp{\tens{F}}\,\tens{F} - \tens{I}\right)d\vec{X}\,.
 \end{align*}
 </div>
-<p data-braille="continuation">da cui, per la <a class="xref" data-knowl="./knowl/Cii_eq.html" title="Equazione 1.8.4">(1.8.4)</a>, si ottiene</p>
+<p class="continuation">Si perviene alla definizione del seguente tensore</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation}
-C_{ij} = \sin{\func{\gamma}{\vec{e}_i,\vec{e}_j}}\, \func{\lambda}{\vec{e}_i} \, \func{\lambda}{\vec{e}_j}\,.\tag{1.8.6}
+\tens{E} = \frac{1}{2}\left( \transp{\tens{F}}\,\tens{F} - \tens{I}\right) = \frac{1}{2}\left(\tens{C} - \tens{I}\right)\tag{1.8.7}
 \end{equation}
 </div>
-<p data-braille="continuation">La quantità \(\func{\gamma}{\vec{e}_i,\vec{e}_j}\) prende il nome di <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">angolo di taglio</em> o, più semplicemente, <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">taglio</em>. Nei casi in cui \(\func{\gamma}{\vec{e}_i,\vec{e}_j}\) è nullo, ovvero l'angolo formato dalle direzioni \(\vec{e}_i\) ed \(\vec{e}_j\) non varia, la componente fuori diagonale \(C_{ij}\) è nulla.</p>
-<span class="incontext"><a href="measures_sec_strain_chap_it.html#p-142">in-context</a></span>
+<p class="continuation">noto come <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">tensore della deformazione di Green-Lagrange</em> (l'utilizzo del fattore \(\frac{1}{2}\) diverrà chiaro nel seguito). Il tensore \(\tens{E}\) è simmetrico ma non è definito positivo.</p>
+<span class="incontext"><a href="measures_sec_strain_chap_it.html#p-142">Contesto</a></span>
 </body>
 </html>

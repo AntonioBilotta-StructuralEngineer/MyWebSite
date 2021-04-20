@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-02T11:40:26+02:00       *-->
+<!--*       on 2021-04-20T14:29:56+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,21 +15,20 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Applying the equilibrium equation <a class="xref" data-knowl="./knowl/bent_beam_navier.html" title="Equation 3.6.34">(3.6.34)</a> to the above scheme provides</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-EJ\,\frac{d^4w}{dx^4} = 0\,.
-\end{equation*}
-</div>
-<p data-braille="continuation">A fourth order differential equation to be solved with respect to boundary conditions which, for the present case, are kinematic conditions at the end \(x=0\) and static conditions at the end \(x=l\)<a class="fn-knowl original" data-knowl="./knowl/fn-7-hidden.html" title="Footnote 3.8.1"><sup> 1 </sup></a>:</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\amp \func{w}{0} = 0\,,\\
-\amp \func{\frac{dw}{dx}}{0} = 0\,,\\
-\amp \func{\frac{d M}{dx}}{l} = \frac{d}{dx}\left(-EJ\,\func{\frac{d^2w}{dx^2}}{l}\right) = -EJ\,\func{\frac{d^3w}{dx^3}}{l}  = F\,,\\
-\amp \func{M}{l} = -EJ\,\func{\frac{d^2w}{dx^2}}{l} = 0\,.
-\end{align*}
-</div>
+<p xmlns:svg="http://www.w3.org/2000/svg">The following MATLAB® instructions allow the calculation of the solution \(\func{w}{x} \) and its bending moment \(\func{M}{x}\text{.}\) <figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms w(x) EJ F l;
+ode = EJ*diff(w,x,4) == 0;
+D1w = diff(w,x,1);
+D2w = diff(w,x,2);
+D3w = diff(w,x,3);
+cond1 = w(0) == 0;
+cond2 = D1w(0) == 0;
+cond3 = -EJ*D3w(l) == F;
+cond4 = -EJ*D2w(l) == 0;
+conds = [cond1 cond2 cond3 cond4];
+sol = dsolve(ode,conds)
+M = -EJ*diff(sol,x,2)
+</b></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.8.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <span class="incontext"><a href="bent_beam_applications_sec_elasticity_chap_en.html#p-337">in-context</a></span>
 </body>
 </html>

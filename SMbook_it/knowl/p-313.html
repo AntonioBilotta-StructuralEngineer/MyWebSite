@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-03T08:24:08+01:00       *-->
+<!--*       on 2021-04-20T14:29:30+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,44 +14,65 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p>A questo punto la definizione del modello è praticamente completa. Manca la definizione delle equazioni di equilibrio alle quali si può arrivare attraverso il principio dei lavori virtuali formulabile come segue</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
+<ul class="disc">
+<li>Carichi<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\func{p}{x}\quad H_0 \quad H_l
+\end{equation*}
+</div>
+</li>
+<li>Incognite<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\func{u}{x}\quad\func{\varepsilon}{x}\quad\func{N}{x}
+\end{equation*}
+</div>
+</li>
+<li>Lavoro interno<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation}
-\int_{l} N \delta\varepsilon \,dx = \int_{l} p\,\delta u\, dx + H_{0} \,\func{\delta u}{0} +  H_{l} \,\func{\delta u}{l}\,, \quad \forall\,\delta u \;\left(\delta\varepsilon = \frac{d\delta u}{d x}\right)\,.\tag{3.5.7}
+L_i = \int_{l} N \varepsilon \,dx\,.\tag{3.5.12}
 \end{equation}
 </div>
-<p data-braille="continuation">La relazione appena scritta, dove si è tralasciato di esplicitare le dipendenze dalla variabile \(x\text{,}\) può essere manipolata effettuando i seguenti passaggi</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\int_{l} N \delta\varepsilon \,dx \amp= \int_{l} p\,\delta u\, dx + H_{0} \,\func{\delta u}{0} +  H_{l} \,\func{\delta u}{l}\\
-\int_{l} N \frac{d\delta u}{d x} \,dx \amp= \int_{l} p\,\delta u\, dx + H_{0} \,\func{\delta u}{0} +  H_{l} \,\func{\delta u}{l}\\
-\left[N\,\delta u \right]_0^l - \int_{l}  \frac{dN}{d x}\delta u \,dx \amp= \int_{l} p\,\delta u\, dx + H_{0} \,\func{\delta u}{0} +  H_{l} \,\func{\delta u}{l}\\
-\int_{l}  \frac{dN}{d x}\delta u + \int_{l} p\,\delta u\, dx \,dx \amp= \left[N\,\delta u \right]_0^l - H_{0} \,\func{\delta u}{0} -  H_{l} \,\func{\delta u}{l}\\
-\int_{l} \left( \frac{dN}{d x} + p\right)\delta u\, dx \amp= \func{N}{l}\,\func{\delta u}{l} - \func{N}{0}\,\func{\delta u}{0} - H_{0} \,\func{\delta u}{0} -  H_{l} \,\func{\delta u}{l}\\
-\int_{l} \left( \frac{dN}{d x} + p\right)\delta u\, dx \amp= \left(\func{N}{l}-  H_{l}\right)\func{\delta u}{l} - \left(\func{N}{0} + H_{0} \right)\func{\delta u}{0} 
-\end{align*}
-</div>
-<p data-braille="continuation">E quindi si ottiene la seguente scrittura del principio dei lavori virtuali in termini di</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</li>
+<li>Lavoro esterno<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation}
-\int_{l} \left( \frac{dN}{d x} + p\right)\delta u\, dx = \left(\func{N}{l}-  H_{l}\right)\func{\delta u}{l} - \left(\func{N}{0} + H_{0} \right)\func{\delta u}{0}\,,\quad \forall\,\delta u\,.\tag{3.5.8}
+L_e = \int_{l} \func{p}{x}\,\func{u}{x}\, dx + H_{0} \,\func{u}{0} +  H_{l} \,\func{u}{l}\,.\tag{3.5.13}
 \end{equation}
 </div>
-<p data-braille="continuation">Il soddisfacimento di tale espressione per qualsiasi spostamento virtuale \(\delta u\) implica il soddisfacimento dell'equazione</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</li>
+<li>Legame spostamento-deformazione<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation}
-\frac{dN}{d x} + p = 0\,,\tag{3.5.9}
+\varepsilon = \frac{du}{dx}\tag{3.5.14}
 \end{equation}
 </div>
-<p data-braille="continuation">in ogni punto della linea d'asse e il soddisfacimento delle condizioni al contorno</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</li>
+<li>Legame elastico<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+N = EA\,\varepsilon\tag{3.5.15}
+\end{equation}
+</div>
+</li>
+<li>Equazioni di equilibrio<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\frac{dN}{d x} + p = 0\tag{3.5.16}
+\end{equation}
+</div>
+</li>
+<li>Eventuali condizioni al contorno di tipo statico<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align}
-\func{N}{0} \amp=  -H_{0}\,,\tag{3.5.10}\\
-\func{N}{l} \amp=  H_{l}\,,\tag{3.5.11}
+\func{N}{0} \amp=  -H_{0}\tag{3.5.17}\\
+\func{N}{l} \amp=  H_{l}\tag{3.5.18}
 \end{align}
 </div>
-<p data-braille="continuation">sugli estremi della linea d'asse.</p>
-<span class="incontext"><a href="stretched_beam_sec_elasticity_chap_it.html#p-313">in-context</a></span>
+</li>
+<li>Eventuali condizioni al contorno di tipo cinematico<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align}
+\func{u}{0} \amp=  \bar{u}_{0}\tag{3.5.19}\\
+\func{u}{l} \amp=  \bar{u}_{l}\tag{3.5.20}
+\end{align}
+</div>
+</li>
+</ul>
+<span class="incontext"><a href="stretched_beam_sec_elasticity_chap_it.html#p-313">Contesto</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-02T11:40:26+02:00       *-->
+<!--*       on 2021-04-20T14:29:56+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,12 +15,22 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>The constraint conditions can be expressed as follows</p>
+<p>Let us consider a system with \(n\) degrees of freedom and subjected to \(m\) constraint conditions. The equations expressing the prescribed constraint conditions can be written as</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation}
-\vec{u}_{A} = \vec{u}_{A'}\,.\tag{4.2.12}
+\sum_{j=1}^n A_{ij}  q_j = d_i \qquad (i=1 \dots m)\,.\tag{4.3.1}
 \end{equation}
 </div>
-<span class="incontext"><a href="constraints_sec_rigid_body_kinematics_chap_en.html#p-377">in-context</a></span>
+<p class="continuation">\(d_i\) is a generic <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">assigned displacement</em> on the \(i\)-th constraint, \(q_j\) is the \(j\)-th degree of freedom and \(A_{ij}\) is the unitary contribution to displacement give by \(q_j\) on \(i\)-th constraint. Using a matrix notation the constraint conditions can be also epxressed as follows</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\mat{A} \vec{q} = \vec{d},\tag{4.3.2}
+\end{equation}
+</div>
+<p class="continuation">where \(\mat{A}\) is the \(m \times n\) kinematic matrix of the system, \(\vec{q}\text{,}\) with \(n\) components, is the vector of the chosen degrees of freedom and \(\vec{d}\text{,}\) with \(m\) components, is the vector containing the assigned displacemnts. <article class="note remark-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">4.3.1</span><span class="period">.</span>
+</h6>
+<p xmlns:svg="http://www.w3.org/2000/svg">The components of the vector \(\vec{d} \) can indifferently assume null or non-null values. The most recurrent case is, however, a zero assignment for all components.</p></article></p>
+<span class="incontext"><a href="analysis_sec_rigid_body_kinematics_chap_en.html#p-377">in-context</a></span>
 </body>
 </html>

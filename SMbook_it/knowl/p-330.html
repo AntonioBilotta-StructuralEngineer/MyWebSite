@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-03T08:24:09+01:00       *-->
+<!--*       on 2021-04-20T14:29:30+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,12 +14,16 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">L'integrale generale può essere calcolato utilizzando le seguenti istruzioni. <figure class="listing figure-like"><pre class="console"><b>syms u(x) EA;
-ode = EA*diff(u,x,2) == 0
-dsolve(ode)
-</b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.7.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#p-330">in-context</a></span>
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
+<p xmlns:svg="http://www.w3.org/2000/svg">La soluzione che verifica anche le condizioni al contorno assegnate si ottiene invece con le seguenti istruzioni. <figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms u(x) EA F l;
+Du = diff(u);
+ode = EA*diff(u,x,2) == 0;
+cond1 = u(0) == 0;
+cond2 = EA*Du(l) == F;
+conds = [cond1 cond2];
+dsolve(ode,conds)
+</b></pre></div>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.7.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#p-330">Contesto</a></span>
 </body>
 </html>

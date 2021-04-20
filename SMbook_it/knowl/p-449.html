@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-03T08:24:10+01:00       *-->
+<!--*       on 2021-04-20T14:29:31+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,71 +14,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Si riportano le istruzioni MATLAB® utilizzabili per il calcolo delle reazioni vincolari incognite. <figure class="listing figure-like"><pre class="console"><b>% vettore delle risultanti =
-% [orizzontale; verticale; momento]
-R = zeros(3,1);
-
-% funzione per il calcolo del momento
-momento = @(X0, X, Carico)...
-    -Carico(1)*(X(2)-X0(2))+Carico(2)*(X(1)-X0(1));
-
-% coordinate dei punti sui quali sono applicati i carichi
-syms L;
-A = [0; 0];
-B = [L; 0];
-C = [L/2; 0];
-
-% scelta del polo
-POLO = A;
-
-% per ogni punto si assegna il vettore Carico = [F1; F2; M]
-% e si sommano i contributi alla risultante
-syms HA VA;
-CaricoA = [HA; VA; 0];
-R = R + CaricoA;
-R(3) = R(3) + momento(POLO, A, CaricoA);
-R
-
-syms VB;
-CaricoB = [0; VB; 0];
-R = R + CaricoB;
-R(3) = R(3) + momento(POLO, B, CaricoB);
-R
-
-syms F;
-CaricoC = [0; -F; 0];
-R = R + CaricoC;
-R(3) = R(3) + momento(POLO, C, CaricoC);
-R
-
-% equazioni di equilibrio
-eqns = [
-R(1) ==0,
-R(2) == 0,
-R(3)==0
-];
-
-% matrice statica e vettore dei carichi assegnati
-[B,b] = equationsToMatrix(eqns, [HA, VA, VB]);
-
-% gradi di libertà, n
-% gradi di vincolo, m
-[n,m] = size(B); 
-
-% calcolo del rango di B
-r = rank(B);
-
-% se il sistema è staticamente determinato si calcola la soluzione
-if and(r == min(m,n), m == n)
-    x = linsolve(B,b);
-end
-
-HA = x(1)
-VA = x(2)
-VB = x(3)
-</b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">5.6.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<span class="incontext"><a href="analysis_examples_sec_rigid_body_statics_chap_it.html#p-449">in-context</a></span>
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
+<p xmlns:svg="http://www.w3.org/2000/svg">Si consideri il seguente portale soggetto ad una forza verticale applicata nella mezzeria del traverso. I vincoli (\(m=3\)) sono applicati al piede dei ritti e la loro rimozione e la successiva applicazione delle componenti di reazione vincolare conduce al diagramma di corpo libero riportato in figura insieme allo schema assegnato.</p>
+<span class="incontext"><a href="analysis_examples_sec_rigid_body_statics_chap_it.html#p-449">Contesto</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-03T08:24:10+01:00       *-->
+<!--*       on 2021-04-20T14:29:31+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,24 +14,30 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p>Lo schema ottenuto è essenzialmente un diagramma di corpo libero per il quale è possibile imporre le seguenti equazioni di equilibrio (il polo utilizzato per l'equilibrio alla rotazione è posto all'ascissa \(x+dx\))</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align}
--N(x) + N(x+dx) + p(x)dx \amp = 0\,,\tag{5.8.1}\\
--T(x) + T(x+dx) + q(x)dx \amp = 0\,,\tag{5.8.2}\\
--T(x)\,dx - M(x) + q(x)\frac{dx^2}{2} + M(x+dx) \amp = 0\,.\tag{5.8.3}
-\end{align}
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
+<ul class="disc">
+<li>
+<em xmlns:svg="http://www.w3.org/2000/svg" class="alert">Equilibrio in direzione assiale:</em><div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\regulardiff{N}{x} + p(x) = 0\,.\tag{5.8.7}
+\end{equation}
 </div>
-<p data-braille="continuation">L'ipotesi di continuità del solido mono-dimensionale e delle grandezze su di esso definite, consente di effettuare uno sviluppo in serie di Taylor troncato al primo ordine delle sollecitazioni valutate sulla sezione \(x+dx\) e di ottenere quindi</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align}
--N(x) + \underbrace{N(x) + \regulardiff{N}{x}\,dx}_{N(x+dx)} + p(x)dx \amp = 0\,,\tag{5.8.4}\\
--T(x) + \underbrace{T(x) + \regulardiff{T}{x}\,dx}_{T(x+dx)} + q(x)dx \amp = 0\,,\tag{5.8.5}\\
--T(x)\,dx - M(x) + q(x)\frac{dx^2}{2} + \underbrace{M(x) + \regulardiff{M}{x}\,dx}_{M(x+dx)} \amp = 0\,.\tag{5.8.6}
-\end{align}
+</li>
+<li>
+<em xmlns:svg="http://www.w3.org/2000/svg" class="alert">Equilibrio in direzione trasversale:</em><div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\regulardiff{T}{x} + q(x) = 0\,.\tag{5.8.8}
+\end{equation}
 </div>
-<p data-braille="continuation">dove le quantità \(\regulardiff{N}{x}\text{,}\) \(\regulardiff{T}{x}\) e \(\regulardiff{M}{x}\) indicano le derivate delle sollecitazioni rispetto all'ascissa \(x\text{.}\) Facendo le dovute semplificazioni e trascurando il termine \(q(x)\frac{dx^2}{2}\) perché di ordine superiore al primo, si ottengono le equazioni indefinite di equilibrio per la trave piana di seguito elencate.</p>
-<span class="incontext"><a href="indefinte_sec_rigid_body_statics_chap_it.html#p-468">in-context</a></span>
+</li>
+<li>
+<em xmlns:svg="http://www.w3.org/2000/svg" class="alert">Equilibrio alla rotazione:</em><div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\regulardiff{M}{x} - T = 0\,.\tag{5.8.9}
+\end{equation}
+</div>
+</li>
+</ul>
+<span class="incontext"><a href="indefinte_sec_rigid_body_statics_chap_it.html#p-468">Contesto</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-02T11:40:26+02:00       *-->
+<!--*       on 2021-04-20T14:29:56+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,50 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">The proposed scheme does not present any particular novelty with respect to the previous scheme and the following MATLAB® instructions allow to obtain the desired solution.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg"><figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>% generic 2D displacement for a rigid body
+rigidDispl = ...
+    @(u0, phi0, X0, X)...
+    [u0(1)-phi0*(X(2)-X0(2));...
+     u0(2)+phi0*(X(1)-X0(1))];
+
+% geometric description of the beam
+syms l;
+A = [0; 0];
+B = [l; 0];
+C = [l; l/2];
+
+% displacement description by using the point A as pole
+POLE = A;
+syms phiA;
+phi0 = phiA;
+u0 = sym('uA', [2 1]);
+uA = rigidDispl(u0, phi0, POLE, A);
+uB = rigidDispl(u0, phi0, POLE, B);
+uC = rigidDispl(u0, phi0, POLE, C);
+
+% constraint equations
+eqns = [
+uA(2) == 0,
+uB(2) == 0,
+uC(1) == 0
+];
+
+% kinematic matrix and vector of the assigned displacements
+[A,d] = equationsToMatrix(eqns, [uA(1), uA(2), phiA]);
+
+% degrees of freedom, n
+% number of constrains, m
+[m,n] = size(A); 
+
+% rank of A
+r = rank(A);
+
+% if the system is kinematically determined the solution is calculated
+if and(r == min(m,n), m == n)
+    x = linsolve(A,d);
+end
+</b></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">4.4.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <span class="incontext"><a href="analysis_examples_sec_rigid_body_kinematics_chap_en.html#p-391">in-context</a></span>
 </body>
 </html>

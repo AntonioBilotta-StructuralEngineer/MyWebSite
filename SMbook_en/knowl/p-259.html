@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-02T11:40:25+02:00       *-->
+<!--*       on 2021-04-20T14:29:55+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,18 +15,12 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">The following figure <figure class="figure figure-like"><div class="image-box" style="width: 85%; margin-left: 7.5%; margin-right: 7.5%;"><img src="images/armonico_semplice.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure> is obtained with MATLAB® instructions <figure class="listing figure-like"><pre class="console"><b>Edef(t) = 1/2*om^2*m*u(t)^2;
-Ekin(t) = 1/2*m*diff(u,t)^2;
-
-dd=Edef(tt);
-kk=Ekin(tt);
-
-scale = 5*u0 / (Edef(0)+Ekin(0));
-plot(tt,uu,'k',tt,dd*scale,'r',tt,kk*scale,'b','LineWidth',2)
-legend('spost.','en. def.','en. cinet.')
-</b></pre>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.2.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure> and it shows, in graphic form, the continuous transformation of the elastic energy of the spring into kinetic energy of the body and vice versa. The elastic energy (red color) oscillates between zero and the maximum value that occurs when the absolute value of the displacement (black color) is maximum, at the same time the velocity is zero. On the contrary, the kinetic energy (blue color) is maximum when the absolute value of the velocity is maximum, when at the same instant the displacement is zero.</p>
+<p>To conclude, it is observed that the elastic energy acts as a potential for the elastic force of the spring as the latter can be obtained by deriving the energy, i.e.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+F = \frac{d}{dx}\left( \frac{1}{2}k\,x^2 \right) = k\, x\,.
+\end{equation*}
+</div>
 <span class="incontext"><a href="uniaxial_sec_elasticity_chap_en.html#p-259">in-context</a></span>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-02T11:40:21+02:00       *-->
+<!--*       on 2021-04-20T14:29:51+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -57,7 +57,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{{\not{\mid}}}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -188,23 +188,23 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="plv_sec_stress_chap_en"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.5</span> <span class="title">principle of virtual work</span>
 </h2>
-<p id="p-221">Starting from equilibrium equations <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a> it is possible to reach the definition of the work deriving from the surrounding environment, <em class="emphasis">external work</em>, and the work carried out by the forces inside the body, <em class="emphasis">internal work</em>. We obtain a principle stating the equality of these two works known as the <em class="emphasis">Principle of virtual work</em>. This result is obtained by reformulating the differential equations <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a> in an integral format. An operation that can be simply interpreted as an alternative reformulation of the starting differential equations but which also leads to a result that has the important mechanical interpretation mentioned above.</p>
+<p id="p-220">Starting from equilibrium equations <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a> it is possible to reach the definition of the work deriving from the surrounding environment, <em class="emphasis">external work</em>, and the work carried out by the forces inside the body, <em class="emphasis">internal work</em>. We obtain a principle stating the equality of these two works known as the <em class="emphasis">Principle of virtual work</em>. This result is obtained by reformulating the differential equations <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a> in an integral format. An operation that can be simply interpreted as an alternative reformulation of the starting differential equations but which also leads to a result that has the important mechanical interpretation mentioned above.</p>
 <section class="subsection" id="subsection-33"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.5.1</span> <span class="title">from the differential formulation to the integral formulation</span>
 </h3>
-<p id="p-222">Let us evaluate the scalar product between Eq. <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a> and a generic vector field \(\vec{v}\) and let us integrate the result over the assigned body \(\body\) (for continuity, this operation could be carried out on any subset of \(\body\)). Because Eq. <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a> must to be satisfied in each \(\vec{x}\) of \(\body\text{,}\) then</p>
+<p id="p-221">Let us evaluate the scalar product between Eq. <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a> and a generic vector field \(\vec{v}\) and let us integrate the result over the assigned body \(\body\) (for continuity, this operation could be carried out on any subset of \(\body\)). Because Eq. <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a> must to be satisfied in each \(\vec{x}\) of \(\body\text{,}\) then</p>
 <div class="displaymath">
 \begin{equation}
 \int_{\body} \left( \text{div}\tens{\sigma} + \vec{b} \right) \cdot \vec{v} \,dv = 0\,,\quad \forall\vec{v}\,,\label{continuum_plv_1_eq}\tag{2.5.1}
 \end{equation}
 </div>
-<p data-braille="continuation">where \(\vec{v} \) is a continuous and differentiable vector field defined on the body \(\body\text{.}\) As already shown in the previous video about divergence it is possible to write</p>
+<p class="continuation">where \(\vec{v} \) is a continuous and differentiable vector field defined on the body \(\body\text{.}\) As already shown in the previous video about divergence it is possible to write</p>
 <div class="displaymath">
 \begin{equation*}
 \text{div}\left(\tens{\sigma}\vec{v}\right) = \text{div}\tens{\sigma} \cdot \vec{v} + \tens{\sigma} : \tens{\nabla v}\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">from which</p>
+<p class="continuation">from which</p>
 <div class="displaymath">
 \begin{equation*}
 \text{div}\tens{\sigma} \cdot \vec{v} = \text{div}\left(\tens{\sigma}\vec{v}\right) - \tens{\sigma} : \tens{\nabla v} \,.
@@ -213,7 +213,7 @@ MathJax.Hub.Config({
 <article class="remark remark-like" id="remark-13"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.5.1</span><span class="period">.</span><span class="space"> </span><span class="title">important remark.</span>
 </h6>
-<p id="p-223">In the previous steps the derivatives are transferred from tensor \(\tens{\sigma} \)  to vector \(\vec{v} \text{.}\) The derivatives on \(\tens{\sigma} \) are made with respect to coordinates \(x_1 \text{,}\) \(x_2 \) and \(x_3 \) related to the current configuration, therefore in this context the gradient of the displacement is expressed by</p>
+<p id="p-222">In the previous steps the derivatives are transferred from tensor \(\tens{\sigma} \)  to vector \(\vec{v} \text{.}\) The derivatives on \(\tens{\sigma} \) are made with respect to coordinates \(x_1 \text{,}\) \(x_2 \) and \(x_3 \) related to the current configuration, therefore in this context the gradient of the displacement is expressed by</p>
 <div class="displaymath">
 \begin{equation}
 \mat{\nabla v} = \left[\begin{array}{ccc}
@@ -223,13 +223,13 @@ MathJax.Hub.Config({
 \end{array}\right]\,,\tag{2.5.2}
 \end{equation}
 </div>
-<p data-braille="continuation">expression to be not confused with similar Eq. <a class="xref" data-knowl="./knowl/Dipl_Grad_X_eq.html" title="Equation 1.4.5">(1.4.5)</a> where the derivatives are performed with respect to the position coordinates, \(X_1\text{,}\) \(X_2\text{,}\) \(X_3\text{,}\) of the reference configuration.</p></article><p id="p-224">Now the starting integral equation can be rewritten as follows</p>
+<p class="continuation">expression to be not confused with similar Eq. <a class="xref" data-knowl="./knowl/Dipl_Grad_X_eq.html" title="Equation 1.4.5">(1.4.5)</a> where the derivatives are performed with respect to the position coordinates, \(X_1\text{,}\) \(X_2\text{,}\) \(X_3\text{,}\) of the reference configuration.</p></article><p id="p-223">Now the starting integral equation can be rewritten as follows</p>
 <div class="displaymath">
 \begin{equation}
 \int_{\body} \left(\text{div}\left(\tens{\sigma}\vec{v}\right) - \tens{\sigma} : \tens{\nabla v} + \vec{b} \cdot \vec{v} \right)  \,dv= 0\,,\quad \forall\vec{v}\,.\label{continuum_plv_2_eq}\tag{2.5.3}
 \end{equation}
 </div>
-<p data-braille="continuation">The first integral, by applying the divergence theorem and the Cauchy stress tensor theorem, can be written also as</p>
+<p class="continuation">The first integral, by applying the divergence theorem and the Cauchy stress tensor theorem, can be written also as</p>
 <div class="displaymath">
 \begin{equation*}
 \int_{\body} \text{div}\left(\tens{\sigma}\vec{v}\right)\, dv = 
@@ -238,25 +238,25 @@ MathJax.Hub.Config({
 \int_{\partial\body} \vec{t} \cdot \vec{v}\,ds \,.
 \end{equation*}
 </div>
-<p data-braille="continuation">Then Eq. <a class="xref" data-knowl="./knowl/continuum_plv_2_eq.html" title="Equation 2.5.3">(2.5.3)</a> becomes</p>
+<p class="continuation">Then Eq. <a class="xref" data-knowl="./knowl/continuum_plv_2_eq.html" title="Equation 2.5.3">(2.5.3)</a> becomes</p>
 <div class="displaymath">
 \begin{equation}
 \int_{\partial\body} \vec{t} \cdot \vec{v}\,ds - \int_{\body} \tens{\sigma} : \tens{\nabla v}\,dv + \int_{\body}  \vec{b} \cdot \vec{v} \,dv = 0\,,\quad \forall\vec{v}\,.\label{continuum_plv_3_eq}\tag{2.5.4}
 \end{equation}
 </div>
-<p data-braille="continuation">Using decompostion of \(\tens{\nabla v}\)</p>
+<p class="continuation">Using decompostion of \(\tens{\nabla v}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \tens{\nabla v} = \text{sym}\tens{\nabla v} + \text{skew}\tens{\nabla v}
 \end{equation*}
 </div>
-<p data-braille="continuation">and symmetry condition on \(\tens{\sigma}\text{,}\) the following result is obtained</p>
+<p class="continuation">and symmetry condition on \(\tens{\sigma}\text{,}\) the following result is obtained</p>
 <div class="displaymath">
 \begin{equation*}
 \tens{\sigma} : \tens{\nabla v} =  \tens{\sigma} : \text{sym}\tens{\nabla v}\,.
 \end{equation*}
 </div>
-<p data-braille="continuation">Finally the following expression of the integral form of the indefinite equations of equilibrium <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a> can be formulated:</p>
+<p class="continuation">Finally the following expression of the integral form of the indefinite equations of equilibrium <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a> can be formulated:</p>
 <div class="displaymath">
 \begin{equation}
 \int_{\partial\body} \vec{t} \cdot \vec{v}\,ds + \int_{\body}  \vec{b} \cdot \vec{v} \,dv = \int_{\body} \tens{\sigma} : \text{sym}\tens{\nabla v}\,dv \,,\quad \forall\vec{v}\,.\label{continuum_plv_eq}\tag{2.5.5}
@@ -264,13 +264,13 @@ MathJax.Hub.Config({
 </div></section><section class="subsection" id="subsection-34"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.5.2</span> <span class="title">mechanical interpretation</span>
 </h3>
-<ul id="p-225" class="disc">
-<li id="li-69">The vector field \(\vec{v} \) can be interpreted both as a displacement field that the body actually undergoes under the action of the assigned loads and as a generic variation of the actual displacement field or as a <em class="emphasis">virtual displacement</em> field.</li>
-<li id="li-70">The first member of the equality <a class="xref" data-knowl="./knowl/continuum_plv_eq.html" title="Equation 2.5.5">(2.5.5)</a> represents the work done by the surrounding environment on the body \(\body \text{,}\) that is the external work.</li>
-<li id="li-71">The second member of the equality <a class="xref" data-knowl="./knowl/continuum_plv_eq.html" title="Equation 2.5.5">(2.5.5)</a> contains the internal work, that is the work carried out by the stress tensor \(\tens{\sigma} \text{.}\)</li>
-<li id="li-72">Without the need to make any preliminary assumptions, we arrive at the definition of the kinematic counterpart \(\text{sym}\tens{\nabla v} \) on which the stress tensor \(\tens{\sigma} \) does work. Thus the meaning of the symmetric part of the gradient of the displacement is widened because it comprises, as already shown in the chapter about kinematics, also the definition of the infinitesimal strain tensor.</li>
-<li id="li-73">A formal statement of the result obtained is as follows: "<em class="emphasis">Given a body, or any subset of a body, satisfying the equilibrium condition with respect to the applied loads, i.e Eq. <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a> is satisfied, then also Eq. <a class="xref" data-knowl="./knowl/continuum_plv_eq.html" title="Equation 2.5.5">(2.5.5)</a> is valid. This is the Principle of virtual work</em>". Moreover Eq. <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a> is not only a necessary condition but also is sufficient for satisfaction of Eq. <a class="xref" data-knowl="./knowl/continuum_plv_eq.html" title="Equation 2.5.5">(2.5.5)</a>, i.e. the statement can be reversed as follows: "<em class="emphasis">Given a body, or any subset of a body, satisfying the equivalence of the internal and external works, Eq. <a class="xref" data-knowl="./knowl/continuum_plv_eq.html" title="Equation 2.5.5">(2.5.5)</a>, then  Eq. <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a> is satisfied</em>".</li>
-<li id="li-74">In the case of displacement field \(\vec{v} \) coincident with a rigid displacement field \(\vec{r} \text{,}\) then the condition \(\vec{v} = \vec{r} \) provides<div class="displaymath">
+<ul id="p-224" class="disc">
+<li id="li-71">The vector field \(\vec{v} \) can be interpreted both as a displacement field that the body actually undergoes under the action of the assigned loads and as a generic variation of the actual displacement field or as a <em class="emphasis">virtual displacement</em> field.</li>
+<li id="li-72">The first member of the equality <a class="xref" data-knowl="./knowl/continuum_plv_eq.html" title="Equation 2.5.5">(2.5.5)</a> represents the work done by the surrounding environment on the body \(\body \text{,}\) that is the external work.</li>
+<li id="li-73">The second member of the equality <a class="xref" data-knowl="./knowl/continuum_plv_eq.html" title="Equation 2.5.5">(2.5.5)</a> contains the internal work, that is the work carried out by the stress tensor \(\tens{\sigma} \text{.}\)</li>
+<li id="li-74">Without the need to make any preliminary assumptions, we arrive at the definition of the kinematic counterpart \(\text{sym}\tens{\nabla v} \) on which the stress tensor \(\tens{\sigma} \) does work. Thus the meaning of the symmetric part of the gradient of the displacement is widened because it comprises, as already shown in the chapter about kinematics, also the definition of the infinitesimal strain tensor.</li>
+<li id="li-75">A formal statement of the result obtained is as follows: "<em class="emphasis">Given a body, or any subset of a body, satisfying the equilibrium condition with respect to the applied loads, i.e Eq. <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a> is satisfied, then also Eq. <a class="xref" data-knowl="./knowl/continuum_plv_eq.html" title="Equation 2.5.5">(2.5.5)</a> is valid. This is the Principle of virtual work</em>". Moreover Eq. <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a> is not only a necessary condition but also is sufficient for satisfaction of Eq. <a class="xref" data-knowl="./knowl/continuum_plv_eq.html" title="Equation 2.5.5">(2.5.5)</a>, i.e. the statement can be reversed as follows: "<em class="emphasis">Given a body, or any subset of a body, satisfying the equivalence of the internal and external works, Eq. <a class="xref" data-knowl="./knowl/continuum_plv_eq.html" title="Equation 2.5.5">(2.5.5)</a>, then  Eq. <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a> is satisfied</em>".</li>
+<li id="li-76">In the case of displacement field \(\vec{v} \) coincident with a rigid displacement field \(\vec{r} \text{,}\) then the condition \(\vec{v} = \vec{r} \) provides<div class="displaymath">
 \begin{equation*}
 \text{sym}\tens{\nabla v} = \text{sym}\tens{\nabla r} = \tens{0} 
 \end{equation*}
@@ -279,7 +279,7 @@ MathJax.Hub.Config({
 \int_{\partial\body} \vec{t} \cdot \vec{r}\,ds + \int_{\body}  \vec{b} \cdot \vec{r} \,dv = 0 \,,\quad \forall\vec{r}\,.\label{continuum_rigid_plv_eq}\tag{2.5.6}
 \end{equation}
 </div>This result establishes that the applied loads, if in equilibrium, perform zero work on any rigid motion.</li>
-<li id="li-75">In the dynamic field the vector field \(\vec{v} \) is a velocity field. Therefore we will not speak of works but of external power and internal power. Furthermore, the external power will equal the sum of internal power and variation of kinetic energy.</li>
+<li id="li-77">In the dynamic field the vector field \(\vec{v} \) is a velocity field. Therefore we will not speak of works but of external power and internal power. Furthermore, the external power will equal the sum of internal power and variation of kinetic energy.</li>
 </ul></section></section></div></main>
 </div>
 </body>

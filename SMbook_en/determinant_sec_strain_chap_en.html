@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-02T11:40:20+02:00       *-->
+<!--*       on 2021-04-20T14:29:50+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -57,7 +57,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{{\not{\mid}}}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -205,19 +205,19 @@ MathJax.Hub.Config({
 dv = \func{J}{\vec{X}}\,dV\,,\label{volume_change_eq}\tag{1.5.1}
 \end{equation}
 </div>
-<p data-braille="continuation">where</p>
+<p class="continuation">where</p>
 <div class="displaymath">
 \begin{equation}
 \func{J}{\vec{X}} = \det{\func{\mat{F}}{\vec{X}}} &gt; 0 \,.\tag{1.5.2}
 \end{equation}
 </div>
-<p data-braille="continuation">Inequality highlights compliance with the following conditions: <em class="emphasis">(i)</em> due to the impenetrability of matter, transformations characterized by \(\func{J}{\vec{X},t} &lt; 0\) are not admissible; <em class="emphasis">(ii)</em> the volumetric transformation ratio \(\func{J}{\vec{X}} = dv / dV \) cannot be null for any point \(\vec{X} \in \body_{0}\text{.}\) It is also possible to define the inverse volumetric ratio i.e.</p>
+<p class="continuation">Inequality highlights compliance with the following conditions: <em class="emphasis">(i)</em> due to the impenetrability of matter, transformations characterized by \(\func{J}{\vec{X},t} &lt; 0\) are not admissible; <em class="emphasis">(ii)</em> the volumetric transformation ratio \(\func{J}{\vec{X}} = dv / dV \) cannot be null for any point \(\vec{X} \in \body_{0}\text{.}\) It is also possible to define the inverse volumetric ratio i.e.</p>
 <div class="displaymath">
 \begin{equation}
 \func{J^{-1}}{\vec{x}} = \det{ \func{\mat{F}^{-1}}{\vec{x}} } &gt; 0\,,\tag{1.5.3}
 \end{equation}
 </div>
-<p data-braille="continuation">from which</p>
+<p class="continuation">from which</p>
 <div class="displaymath">
 \begin{equation}
 dV = \func{J^{-1}}{\vec{x}}\,dv\,.\label{inverse_volume_change_eq}\tag{1.5.4}
@@ -226,7 +226,7 @@ dV = \func{J^{-1}}{\vec{x}}\,dv\,.\label{inverse_volume_change_eq}\tag{1.5.4}
 <p id="p-79">Transformations characterized by \(J = 1 \) will be called <em class="emphasis">isochoric</em> transformations.</p>
 <article class="assemblage assemblage-like" id="assemblage-8"><h6 class="heading"><span class="title">calculation of the determinant of transformations and admissibility check.</span></h6>
 <p id="p-80">Considering the two-dimensional transformations considered in the previous examples, the following MATLAB® instructions are given to be used for the calculation of the determinant and for the verification of the admissibility of the transformation. The instructions for plotting the value of the determinant on the domain \(-5 &lt;  X_1 &lt; 5\text{,}\) \(-5 &lt;  X_2 &lt; 5\) are also given.</p>
-<p id="p-81">MATLAB® instructions for the Transformation 1. <figure class="listing figure-like" id="listing-13"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
+<p id="p-81">MATLAB® instructions for the Transformation 1. <figure class="listing figure-like" id="listing-13"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
 F = [T1([1; 0]) T1([0; 1])];
 syms detF(X1, X2);
 detF(X1, X2) = det(F);
@@ -236,10 +236,10 @@ y = linspace(-5, 5, 50);
 [X,Y] = meshgrid(x,y);
 
 surface(X,Y,detF(X,Y))
-</b></pre>
+</b></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.5.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <p id="p-82">Similar instructions can also be identified for Transformations 2, 3 and 4 which also verify the admissibility condition, being characterized by a determinant which is constant and greater than zero.</p>
-<p id="p-83">MATLAB® instructions for the transformation defined by \(x_1 = X_1^3\,,\; x_2 = X_2^3\text{.}\) <figure class="listing figure-like" id="listing-14"><pre class="console"><b>syms T1(X1, X2);
+<p id="p-83">MATLAB® instructions for the transformation defined by \(x_1 = X_1^3\,,\; x_2 = X_2^3\text{.}\) <figure class="listing figure-like" id="listing-14"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms T1(X1, X2);
 T1(X1, X2) = X1^3; 
 
 syms T2(X1, X2);
@@ -253,7 +253,7 @@ y = linspace(-5, 5, 50);
 [X,Y] = meshgrid(x,y);
 
 surface(X,Y,detF(X,Y))
-</b></pre>
+</b></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.5.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <p id="p-84">The result of the previous instructions provides the following plot <figure class="figure figure-like" id="figure-5"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="images/nolin_transf_det.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.5.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure> plotting which can be used to verify that along the coordinated axes \(X_1 = 0 \) and \(X_2 = 0 \) the transformation has zero determinant and therefore is not admissible (remember in this regard the presence of cusps in the plots shown in <a class="xref" data-knowl="./knowl/nolin_transf_example.html" title="Figure 1.3.4">Figure 1.3.4</a>).</p></article></section><section class="subsection" id="subsection-3"><h3 class="heading hide-type">
@@ -267,7 +267,7 @@ dv = J\, dV\\
 d\vec{s} \cdot d\vec{x} = J\, d\vec{S} \cdot d\vec{X}
 \end{gather*}
 </div>
-<p data-braille="continuation">where \(d\vec{s} = ds \vec{n}\) and \(d\vec{S} = dS \vec{N}\) represent vector elements relative to the infinitesimal areas in the current configuration and in the reference configuration, respectively. \(d\vec{x}\) is obtained by transforming the elementary segment \(d\vec{X}\text{.}\) By taking a few simple manipulations it is easy to obtain</p>
+<p class="continuation">where \(d\vec{s} = ds \vec{n}\) and \(d\vec{S} = dS \vec{N}\) represent vector elements relative to the infinitesimal areas in the current configuration and in the reference configuration, respectively. \(d\vec{x}\) is obtained by transforming the elementary segment \(d\vec{X}\text{.}\) By taking a few simple manipulations it is easy to obtain</p>
 <div class="displaymath">
 \begin{align*}
 d\vec{s} \cdot d\vec{x}  \amp = J\, d\vec{S} \cdot d\vec{X}\,,\\
@@ -276,13 +276,13 @@ d\vec{s} \cdot \tens{F}d\vec{X} \amp = J\, d\vec{S} \cdot d\vec{X} \,,\\
 d\vec{s} \cdot d\vec{X} \amp = \transpm{\tens{F}}J\, d\vec{S} \cdot d\vec{X}\,.
 \end{align*}
 </div>
-<p data-braille="continuation">Which gives</p>
+<p class="continuation">Which gives</p>
 <div class="displaymath">
 \begin{equation}
 d\vec{s} = J \transpm{\tens{F}}d\vec{S}\tag{1.5.5}
 \end{equation}
 </div>
-<p data-braille="continuation">expression known as <em class="emphasis">Nanson's formula</em> and which defines how the area element vector \(d\vec{s}\text{,}\) belonging to the current configuration \(\body\text{,}\) is related to area element vector \(d\vec{S}\)  belonging to the reference configuration \(\body_0\text{.}\)</p></section></section></div></main>
+<p class="continuation">expression known as <em class="emphasis">Nanson's formula</em> and which defines how the area element vector \(d\vec{s}\text{,}\) belonging to the current configuration \(\body\text{,}\) is related to area element vector \(d\vec{S}\)  belonging to the reference configuration \(\body_0\text{.}\)</p></section></section></div></main>
 </div>
 </body>
 </html>

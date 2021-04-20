@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-03T08:24:10+01:00       *-->
+<!--*       on 2021-04-20T14:29:30+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,33 +14,17 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p>Data una forza \(\vec{F}\) applicata al punto di coordinate \(\vec{X}\) e dato un polo individuato dalle coordinate \(\vec{X}_o\text{,}\) è possibile valutare il momento di \(\vec{F}\) rispetto al polo scelto calcolando il seguente prodotto vettoriale</p>
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
+<p>Se si considera il caso in cui siano soltanto due le componenti non nulle delle forze applicate e delle posizioni dei punti dello spazio, l'equazione vettoriale <a class="xref" data-knowl="./knowl/rb_statics1_eq.html" title="Equazione 5.1.7">(5.1.7)</a> è esprimibile solo mediante due equazioni scalari e l'equazione vettoriale <a class="xref" data-knowl="./knowl/rb_statics2_eq.html" title="Equazione 5.1.8">(5.1.8)</a> si riduce ad una sola equazione scalare. Ovvero</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\calvec{M}_o = \left( \vec{X} - \vec{X}_o\right) \times \vec{F}\,,\tag{5.1.9}
-\end{equation}
+\begin{gather}
+\sum_{i=1}^N F_{1i} = 0\,,\tag{5.2.1}\\
+\sum_{i=1}^N F_{2i} = 0\,,\tag{5.2.2}\\
+\sum_{i=1}^N \left(  \left( X_{1i} - X_{1o}\right) F_{2i} - \left( X_{2i} - X_{2o}\right) F_{1i} \right) = 0\,.\tag{5.2.3}
+\end{gather}
 </div>
-<p data-braille="continuation">dove \(\calvec{M}_o\) è un vettore ortogonale ad ambedue i vettori \(\left( \vec{X} - \vec{X}_o\right)\) e \(\vec{F}\) ed ha modulo</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\|\calvec{M}_o\| = \|\left( \vec{X} - \vec{X}_o\right)\| \|\vec{F}\| \sin{\theta}\,,\tag{5.1.10}
-\end{equation}
-</div>
-<p data-braille="continuation">essendo \(\theta\) l'angolo compreso fra i due vettori. La quantità</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-b = \|\left( \vec{X} - \vec{X}_o\right)\| \sin{\theta}\tag{5.1.11}
-\end{equation}
-</div>
-<p data-braille="continuation">prende il nome di <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">braccio</em> quantità che non cambia se la forza scorre lungo la sua retta di applicazione: <figure class="figure figure-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="image-box" style="width: 55%; margin-left: 22.5%; margin-right: 22.5%;"><img src="images/BraccioDiUnaForza.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.1.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-b = \|\left( \vec{X} - \vec{X}_o\right)\| \sin{\theta} = \|\left( \vec{X}' - \vec{X}_o\right)\| \sin{\theta'}\,.
-\end{equation*}
-</div>
-<p data-braille="continuation">Quindi \(b\) è la distanza fra il polo \(P_o\) e la retta di applicazione della forza \(\vec{F}\text{.}\) Si osserva anche che se \(\theta=0\) oppure \(\theta=\pi\text{,}\) ovvero i vettori \(\left( \vec{X} - \vec{X}_o\right)\) e \(\vec{F}\) sono paralleli, il momento \(\calvec{M}_o\) è nullo.</p>
-<span class="incontext"><a href="equilibrium_sec_rigid_body_statics_chap_it.html#p-425">in-context</a></span>
+<p class="continuation">La condizione <a class="xref" data-knowl="./knowl/rb_plane_statics1_eq.html" title="Equazione 5.2.1">(5.2.1)</a> esprime l'annullamento della somma di tutte le forze orizzontali applicate, ovvero le componenti lungo l'asse 1 delle forze applicate. La condizione <a class="xref" data-knowl="./knowl/rb_plane_statics2_eq.html" title="Equazione 5.2.2">(5.2.2)</a> impone l'annullamento della somma di tutte le forze verticali applicate, ovvero le componenti lungo l'asse 2 delle forze applicate. La condizione <a class="xref" data-knowl="./knowl/rb_plane_statics3_eq.html" title="Equazione 5.2.3">(5.2.3)</a> esprime l'annullamento della somma dei momenti esercitati dalle forze orizzontali e verticali rispetto al punto scelto come polo. La seguente figura illustra per il caso di una singola forza il significato dei termini presenti nelle equazioni. <figure class="figure figure-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="image-box" style="width: 55%; margin-left: 22.5%; margin-right: 22.5%;"><img src="images/statica2D.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.2.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<span class="incontext"><a href="planecase_sec_rigid_body_statics_chap_it.html#p-425">Contesto</a></span>
 </body>
 </html>

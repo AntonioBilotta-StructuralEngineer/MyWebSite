@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-02T11:40:26+02:00       *-->
+<!--*       on 2021-04-20T14:29:56+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,20 +15,18 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">the deformed configuration of the beam axis can be plotted by using the following MATLAB® instructions. <figure class="listing figure-like"><pre class="console"><b>syms w(x);
-EJ = 1;
-F = 1;
-l = 1;
-w(x)=F/6/EJ*(-x^3+3*l*x^2);
-
-np = 100;
-Xv = 0:1/np:1;
-wv = w(Xv);
-Beam = zeros(1, np+1);
-plot(Xv,wv,'r',Xv,Beam,'k','LineWidth',2)
-set(gca, 'YDir','reverse')
-</b></pre>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.8.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p>The expected cubic pattern is therefore obtained for the displacement</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\func{w}{x} = \frac{F}{6\,EJ}\left(-x^3+3l\,x^2\right)\,,
+\end{equation*}
+</div>
+<p class="continuation">and for the bending moment there is instead the following linear solution</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\func{M}{x} = F\left(x-l\right)\,.
+\end{equation*}
+</div>
 <span class="incontext"><a href="bent_beam_applications_sec_elasticity_chap_en.html#p-339">in-context</a></span>
 </body>
 </html>

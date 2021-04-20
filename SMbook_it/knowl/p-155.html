@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-03T08:24:07+01:00       *-->
+<!--*       on 2021-04-20T14:29:29+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,78 +14,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p>Dato un tensore \(\tens{W}\) emisimmetrico, la cui forma matriciale ad esso associata per definizione sarà</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\mat{W} =
-\left[\begin{array}{ccc}
-0 \amp W_{12} \amp W_{13}\\
--W_{12} \amp 0 \amp W_{23}\\
--W_{13} \amp -W_{23} \amp 0 
-\end{array}\right]\,,
-\end{equation*}
-</div>
-<p data-braille="continuation">si può verificare come la sua applicazione ad un vettore \(\vec{v}\)</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\left[\begin{array}{ccc}
-0 \amp W_{12} \amp W_{13}\\
--W_{12} \amp 0 \amp W_{23}\\
--W_{13} \amp -W_{23} \amp 0 
-\end{array}\right]
-\left[\begin{array}{c}
-v_1\\
-v_2\\
-v_3
-\end{array}\right]
-=
-\left[\begin{array}{c}
-W_{12}v_2 + W_{13}v_3 \\
--W_{12}v_1 + W_{23}v_3\\
--W_{13}v_1 -W_{23}v_2
-\end{array}\right]
-\end{equation*}
-</div>
-<p data-braille="continuation">equivalga a calcolare il seguente prodotto vettoriale</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\left[\begin{array}{c}
-\omega_1\\
-\omega_2\\
-\omega_3
-\end{array}\right]
-\times
-\left[\begin{array}{c}
-v_1\\
-v_2\\
-v_3
-\end{array}\right]
-=
-\left[\begin{array}{c}
-\omega_2 v_3 - \omega_3 v_2\\
-\omega_3 v_1 - \omega_1 v_3\\
-\omega_1 v_2 - \omega_2 v_1
-\end{array}\right]
-\end{equation*}
-</div>
-<p data-braille="continuation">dove le componenti di \(\vec{\omega}\) sono messe in corrispondenza con le componenti di \(\tens{W}\) nel modo seguente</p>
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
+<p>Pertanto si ha</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation}
-\omega_{1} = -W_{23}\,,\quad \omega_{2} = W_{13}\,,\quad \omega_{3} = -W_{12}\,.\tag{1.9.13}
+\tens{W}\vec{v} = \vec{\omega} \times \vec{v}\,,\tag{1.9.14}
 \end{equation}
 </div>
-<p data-braille="continuation">Quindi, noto \(\vec{\omega}\text{,}\) \(\tens{W}\) può essere espresso come segue</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\mat{W} =
-\left[\begin{array}{ccc}
-0 \amp -\omega_{3} \amp \omega_{2}\\
-\omega_{3} \amp 0 \amp -\omega_{1}\\
--\omega_{2} \amp \omega_{1} \amp 0 
-\end{array}\right]\,.
-\end{equation*}
-</div>
-<span class="incontext"><a href="infinitesimal_sec_strain_chap_it.html#p-155">in-context</a></span>
+<p class="continuation">e \(\omega\) è il vettore assiale associato al tensore emisimmetrico \(\tens{W}\text{.}\) L'aggettivo assiale deriva dal fatto che \(\omega\) individua l'asse di una rotazione intorno al quale si effettua la rotazione infinitesima.</p>
+<span class="incontext"><a href="infinitesimal_sec_strain_chap_it.html#p-155">Contesto</a></span>
 </body>
 </html>

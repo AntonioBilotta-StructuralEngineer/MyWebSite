@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-03T08:24:09+01:00       *-->
+<!--*       on 2021-04-20T14:29:30+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,40 +14,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Risposta all'esercizio riportato nella <a href="exercises_sec_elasticity_chap_it.html#elasticity_ex_1" class="internal" title="Sottosezione 3.9.3">Sottosezione 3.9.3</a>. <figure class="listing figure-like"><pre class="console"><b>% tensore della tensione che soddisfa le equazioni di equilibrio
-syms q 'real';
-sig = [0 0; 0 -q];
-
-% tensore della deformazione
-syms b s 'real';
-e11 = 2*s/(2*s+b);
-syms e22 'real';
-eps = [e11 0; 0 e22];
-
-% legame elastico
-syms E ni 'real';
-eq1 = sig(1,1)/E -ni*sig(2,2)/E == eps(1,1);
-eq2 = sig(2,2)/E -ni*sig(1,1)/E == eps(2,2);
-
-% equazioni che possono essere risolte rispetto alle incognite q e e22
-sol = solve([eq1 eq2],[q e22]);
-q = sol.q
-e22 = sol.e22
-
-% integrazione della componente veriticale di deformazione
-syms u_2 X_2 'real';
-syms u_2(X_2);
-ode = diff(u_2, X_2, 1) == e22;
-cond = u_2(0) == 0;
-sol = dsolve(ode,cond);
-u_2(X_2) = sol;
-
-% abbassamento verticale w
-syms h 'real';
-w = -u_2(h)
-</b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.10.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<span class="incontext"><a href="answers_sec_elasticity_chap_it.html#p-364">in-context</a></span>
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
+<p xmlns:svg="http://www.w3.org/2000/svg">Lo studio dei sistemi di travi rigide consente di applicare a contesti abbastanza semplici lo studio della cinematica dei corpi indipendentemente dalle cause che producono gli spostamenti. Quanto verrà esposto non vale soltanto per le travi, ovvero corpi con una dimensione predominante rispetto alle altre due, ma in generale per i tutti i corpi che si studiano assumendo l'ipotesi di <em class="emphasis">corpo rigido</em>.</p>
+<span class="incontext"><a href="rigid_body_kinematics_chap_it.html#p-364">Contesto</a></span>
 </body>
 </html>

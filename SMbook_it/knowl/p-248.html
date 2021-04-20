@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-03T08:24:08+01:00       *-->
+<!--*       on 2021-04-20T14:29:29+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,8 +14,40 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragrafo</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Per quanto riguarda la descrizione cinematica del problema non siamo in grado di aggiungere altro. Vediamo quindi se utilizzando un altro strumento introdotto nel <a href="stress_chap_it.html" class="internal" title="Capitolo 2: forze, equilibrio e tensione">Capitolo 2</a>, ovvero il Principio dei lavori virtuali, si riesce a ricavare qualche tipo di informazione sul parametro generico \(\lambda\text{.}\)</p>
-<span class="incontext"><a href="motivations_sec_elasticity_chap_it.html#p-248">in-context</a></span>
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
+<p>Sulla base del campo di spostamento adottato, i dati del problema in esame e l'assunzione di base <a class="xref" data-knowl="./knowl/elasticity_basic_assumption_eq.html" title="Equazione 3.1.1">(3.1.1)</a>, la scrittura del Principio dei lavori virtuali <a class="xref" data-knowl="./knowl/continuum_plv_eq.html" title="Equazione 2.5.5">(2.5.5)</a> assume la seguente espressione</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\underbrace{\int_{\Sigma_1} \vec{t}_1 \cdot \vec{u}_1\,dS + \int_{\Sigma_2} \vec{t}_2 \cdot \vec{u}_2\,dS}_{\text{L}_{\text{est}}} = \underbrace{\int_{\body_0} \tens{\sigma} : \text{sym}\tens{\nabla u}\,dV}_{\text{L}_{\text{int}}}\,,\tag{3.1.19}
+\end{equation}
+</div>
+<p class="continuation">dove, nel caso specifico,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\matWp{u}{1} = \left[\begin{array}{c}0\\0\\-(\lambda - 1)\frac{L}{2}\end{array}\right]\,,\;
+\matWp{u}{2} = \left[\begin{array}{c}0\\0\\(\lambda - 1)\frac{L}{2}\end{array}\right]\,,\;
+\text{sym}\tens{\nabla u} = \tens{\nabla u}\,.
+\end{equation*}
+</div>
+<p class="continuation">Introducendo quindi la soluzione statica già trovata e l'espressione sopra riportata del gradiente dello spostamento si ottiene</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\int_{\Sigma_1} \bar{t}\,(\lambda - 1)\frac{L}{2} \,dS + \int_{\Sigma_2} \bar{t}\,(\lambda - 1)\frac{L}{2} \,dS = \int_{\body_0} \bar{t}\,(\lambda - 1) \,dV\,.\tag{3.1.20}
+\end{equation}
+</div>
+<p class="continuation">Da cui, svolgendo gli integrali (tutti con argomento costante), si ricava</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\bar{t}\,(\lambda - 1)\frac{L}{2}\,S + \bar{t}\,(\lambda - 1)\frac{L}{2}\,S =  \bar{t}\,(\lambda - 1)\,\,S\,L\,,\tag{3.1.21}
+\end{equation}
+</div>
+<p class="continuation">ovvero</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\underbrace{\bar{t}\,(\lambda - 1)\,\,L\,S}_{\text{L}_{\text{est}}} = \underbrace{\bar{t}\,(\lambda - 1)\,\,S\,L}_{\text{L}_{\text{int}}}\,,\tag{3.1.22}
+\end{equation}
+</div>
+<p class="continuation">Pertanto si riesce anche a verificare l'uguaglianza fra lavoro esterno e lavoro interno ma non traiamo nessuna informazione ulteriore relativamente al parametro \(\lambda\text{.}\)</p>
+<span class="incontext"><a href="motivations_sec_elasticity_chap_it.html#p-248">Contesto</a></span>
 </body>
 </html>

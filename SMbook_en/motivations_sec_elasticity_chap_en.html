@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-02T11:40:21+02:00       *-->
+<!--*       on 2021-04-20T14:29:51+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -57,7 +57,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{{\not{\mid}}}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -188,33 +188,33 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="motivations_sec_elasticity_chap_en"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.1</span> <span class="title">motivation</span>
 </h2>
-<p id="p-236">In order to justify the need to introduce a <em class="emphasis">constitutive modeling</em> in our description of the mechanical behavior of solids under the action of the applied loads, we will consider a simple<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 1 </sup></a> case study and we will analyze it by using only what we have learned till now, i.e. <a href="strain_chap_en.html" class="internal" title="Chapter 1: bodies' kinematics">Chapter 1</a> about the kinematics and <a href="stress_chap_en.html" class="internal" title="Chapter 2: forces, equilibrium and stress">Chapter 2</a> about statics.</p>
+<p id="p-235">In order to justify the need to introduce a <em class="emphasis">constitutive modeling</em> in our description of the mechanical behavior of solids under the action of the applied loads, we will consider a simple<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 1 </sup></a> case study and we will analyze it by using only what we have learned till now, i.e. <a href="strain_chap_en.html" class="internal" title="Chapter 1: bodies' kinematics">Chapter 1</a> about the kinematics and <a href="stress_chap_en.html" class="internal" title="Chapter 2: forces, equilibrium and stress">Chapter 2</a> about statics.</p>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn">
 <em class="emphasis">simple</em> means only that the analytical difficulties of finding a static solution are practically non-existent but the validity of what will be discussed remains absolutely general</div></div>
 <section class="subsection" id="subsection-45"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.1.1</span> <span class="title">static analysis</span>
 </h3>
-<p id="p-237">Consider the following body with domain \(\body_0 \) delimited by the two end surfaces \(\Sigma_1 \) and \(\Sigma_2 \) and by the surface \(\Pi \) given by the other 4 faces of the prism. Let \(L \) be the length of the prism having a constant section along the axis and identified by the generic surface \(\Sigma \text{.}\) From a geometric point of view we will trivially have the following area and volume measurements</p>
+<p id="p-236">Consider the following body with domain \(\body_0 \) delimited by the two end surfaces \(\Sigma_1 \) and \(\Sigma_2 \) and by the surface \(\Pi \) given by the other 4 faces of the prism. Let \(L \) be the length of the prism having a constant section along the axis and identified by the generic surface \(\Sigma \text{.}\) From a geometric point of view we will trivially have the following area and volume measurements</p>
 <div class="displaymath">
 \begin{equation*}
 \func{A}{\Sigma} = \func{A}{\Sigma_1} = \func{A}{\Sigma_2} = S\,,\qquad
 \func{V}{\body_0} = L \, \func{A}{\Sigma} = L\, S\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">where  \(S\) is the area of surface \(\Sigma\) which identifies the generic section of the prism. The bulk load is zero, \(\vec{b} = \vec{0} \text{,}\) and suppose that the prism is subject only to the tractions shown in the figure, tractions which are equal and opposite.</p>
+<p class="continuation">where  \(S\) is the area of surface \(\Sigma\) which identifies the generic section of the prism. The bulk load is zero, \(\vec{b} = \vec{0} \text{,}\) and suppose that the prism is subject only to the tractions shown in the figure, tractions which are equal and opposite.</p>
 <figure class="figure figure-like" id="figure-21"><div class="image-box" style="width: 96%; margin-left: 2%; margin-right: 2%;"><img src="images/motivation_static_problem.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.1.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><article class="remark remark-like" id="remark-14"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">very important assumption.</span>
 </h6>
-<p id="p-238">The geometric description just given concerns only the reference configuration \(\body_0 \) to which the kinematic description of the bodies typically refers, as presented in the <a href="strain_chap_en.html" class="internal" title="Chapter 1: bodies' kinematics">Chapter 1</a>. The writing of equilibrium equations, see in this regard the <a href="stress_chap_en.html" class="internal" title="Chapter 2: forces, equilibrium and stress">Chapter 2</a>, is instead carried out with respect to the current configuration \(\body \text{.}\) The following discussion should therefore take account of this situation, also requiring the introduction of further concepts that are outside the present introductory discussion on Solid Mechanics.</p>
-<p id="p-239">Therefore we introduce the hypothesis behind a <em class="emphasis">linearized formulation of the elastic problem</em>, which is the final objective of this chapter, namely that equilibrium equations can be formulated assuming</p>
+<p id="p-237">The geometric description just given concerns only the reference configuration \(\body_0 \) to which the kinematic description of the bodies typically refers, as presented in the <a href="strain_chap_en.html" class="internal" title="Chapter 1: bodies' kinematics">Chapter 1</a>. The writing of equilibrium equations, see in this regard the <a href="stress_chap_en.html" class="internal" title="Chapter 2: forces, equilibrium and stress">Chapter 2</a>, is instead carried out with respect to the current configuration \(\body \text{.}\) The following discussion should therefore take account of this situation, also requiring the introduction of further concepts that are outside the present introductory discussion on Solid Mechanics.</p>
+<p id="p-238">Therefore we introduce the hypothesis behind a <em class="emphasis">linearized formulation of the elastic problem</em>, which is the final objective of this chapter, namely that equilibrium equations can be formulated assuming</p>
 <div class="displaymath">
 \begin{equation}
 \body \equiv \body_0 \label{elasticity_basic_assumption_eq}\tag{3.1.1}
 \end{equation}
-</div> given the smallness of the displacements and deformations involved in the problem. Consequently also all operations, for example derivation and integration, will be carried out with respect to the coordinates \(X_1 \text{,}\) \(X_2 \) and \(X_3 \) related to the configuration of reference, or undeformed configuration, of the body.</article><p id="p-240">Based on the data of the problem and the previous hypothesis, the static problem assumes the following formulation.</p>
+</div> given the smallness of the displacements and deformations involved in the problem. Consequently also all operations, for example derivation and integration, will be carried out with respect to the coordinates \(X_1 \text{,}\) \(X_2 \) and \(X_3 \) related to the configuration of reference, or undeformed configuration, of the body.</article><p id="p-239">Based on the data of the problem and the previous hypothesis, the static problem assumes the following formulation.</p>
 <ul class="disc">
-<li id="li-86">Equilibrium equations over the domain<div class="displaymath">
+<li id="li-88">Equilibrium equations over the domain<div class="displaymath">
 \begin{equation}
 \text{div}\tens{\sigma} = \vec{0}\quad\;\text{in}\;\body_0\,.\label{motiv_static_eq}\tag{3.1.2}
 \end{equation}
@@ -229,7 +229,7 @@ MathJax.Hub.Config({
 \end{equation}
 </div>
 </li>
-<li id="li-87">Static conditions on the boundary<div class="displaymath">
+<li id="li-89">Static conditions on the boundary<div class="displaymath">
 \begin{align}
 \amp \tens{\sigma}\vec{n}_1 = \vec{t}_1\quad\;\text{su}\;\Sigma_1 \,,\label{motiv_bc1_eq}\tag{3.1.4}\\
 \amp \tens{\sigma}\vec{n}_2 = \vec{t}_2\quad\;\text{su}\;\Sigma_2 \,,\label{motiv_bc2_eq}\tag{3.1.5}\\
@@ -247,7 +247,7 @@ MathJax.Hub.Config({
 <section class="subsubsection" id="motivation_static_subsubsec"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span> <span class="codenumber">3.1.1.1</span> <span class="title">stress field assumption and solution</span>
 </h4>
-<p id="p-241">In Eq. <a class="xref" data-knowl="./knowl/motiv_static_eq.html" title="Equation 3.1.2">(3.1.2)</a> the unknowns are the 6 independent components of the stress tensor while the equations available are only 3. Put in these terms the search for the solution would not even be possible. However, given the simplicity of the data of the problem, it is possible to assume a form the stress tensor field and check if  all equilibrium equations, over the domain and on the boundary, are satisfied. In particular, let us consider the following form for \(\tens{\sigma} \)</p>
+<p id="p-240">In Eq. <a class="xref" data-knowl="./knowl/motiv_static_eq.html" title="Equation 3.1.2">(3.1.2)</a> the unknowns are the 6 independent components of the stress tensor while the equations available are only 3. Put in these terms the search for the solution would not even be possible. However, given the simplicity of the data of the problem, it is possible to assume a form the stress tensor field and check if  all equilibrium equations, over the domain and on the boundary, are satisfied. In particular, let us consider the following form for \(\tens{\sigma} \)</p>
 <div class="displaymath">
 \begin{equation}
 \mat{\sigma} =
@@ -258,7 +258,7 @@ MathJax.Hub.Config({
 \end{array}\right]\tag{3.1.10}
 \end{equation}
 </div>
-<p data-braille="continuation">valid on the whole domain and with \(\kappa \) a generic constant. The satisfaction of Eq. <a class="xref" data-knowl="./knowl/motiv_static_components_eq.html" title="Equation 3.1.3">(3.1.3)</a> is easily verified:</p>
+<p class="continuation">valid on the whole domain and with \(\kappa \) a generic constant. The satisfaction of Eq. <a class="xref" data-knowl="./knowl/motiv_static_components_eq.html" title="Equation 3.1.3">(3.1.3)</a> is easily verified:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{l}
@@ -269,7 +269,7 @@ MathJax.Hub.Config({
 \quad\;\text{in}\;\body_0\,.
 \end{equation*}
 </div>
-<p data-braille="continuation">The satisfaction of Eq. <a class="xref" data-knowl="./knowl/motiv_bc3_eq.html" title="Equation 3.1.6">(3.1.6)</a> can be also easily verified:</p>
+<p class="continuation">The satisfaction of Eq. <a class="xref" data-knowl="./knowl/motiv_bc3_eq.html" title="Equation 3.1.6">(3.1.6)</a> can be also easily verified:</p>
 <div class="displaymath">
 \begin{equation*}
 \left[\begin{array}{ccc}
@@ -281,7 +281,7 @@ MathJax.Hub.Config({
 \left[\begin{array}{r}0\\0\\0\end{array}\right] \,.
 \end{equation*}
 </div>
-<p data-braille="continuation">While imposing Eq. <a class="xref" data-knowl="./knowl/motiv_bc1_eq.html" title="Equation 3.1.4">(3.1.4)</a>, or Eq. <a class="xref" data-knowl="./knowl/motiv_bc2_eq.html" title="Equation 3.1.5">(3.1.5)</a>, it can be obtained what follows</p>
+<p class="continuation">While imposing Eq. <a class="xref" data-knowl="./knowl/motiv_bc1_eq.html" title="Equation 3.1.4">(3.1.4)</a>, or Eq. <a class="xref" data-knowl="./knowl/motiv_bc2_eq.html" title="Equation 3.1.5">(3.1.5)</a>, it can be obtained what follows</p>
 <div class="displaymath">
 \begin{equation*}
 \left[\begin{array}{ccc}
@@ -296,7 +296,7 @@ MathJax.Hub.Config({
 \,.
 \end{equation*}
 </div>
-<p id="p-242">Ultimately the stress field which satisfies all equilibrium quations involved is</p>
+<p id="p-241">Ultimately the stress field which satisfies all equilibrium quations involved is</p>
 <div class="displaymath">
 \begin{equation}
 \mat{\sigma} =
@@ -307,12 +307,12 @@ MathJax.Hub.Config({
 \end{array}\right]\,.\label{motiv_static_solution_eq}\tag{3.1.11}
 \end{equation}
 </div>
-<p data-braille="continuation">Therefore the static solution is given by a state of pure traction along the \(X_3 \) axis distributed evenly over the whole body.</p></section></section><section class="subsection" id="subsection-46"><h3 class="heading hide-type">
+<p class="continuation">Therefore the static solution is given by a state of pure traction along the \(X_3 \) axis distributed evenly over the whole body.</p></section></section><section class="subsection" id="subsection-46"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.1.2</span> <span class="title">kinematic analysis</span>
 </h3>
-<p id="p-243">Based on what we learned in <a href="strain_chap_en.html" class="internal" title="Chapter 1: bodies' kinematics">Chapter 1</a> and what we got as a static solution, we are able to <em class="emphasis">speculate</em> a quite plausible kinematic transformation for the problem under consideration. For example, consider what is shown in the following figure.</p>
+<p id="p-242">Based on what we learned in <a href="strain_chap_en.html" class="internal" title="Chapter 1: bodies' kinematics">Chapter 1</a> and what we got as a static solution, we are able to <em class="emphasis">speculate</em> a quite plausible kinematic transformation for the problem under consideration. For example, consider what is shown in the following figure.</p>
 <figure class="figure figure-like" id="figure-22"><div class="image-box" style="width: 96%; margin-left: 2%; margin-right: 2%;"><img src="images/motivation_kinematik_problem.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.1.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-244">The represented trasnformation is</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.1.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-243">The represented trasnformation is</p>
 <div class="displaymath">
 \begin{align}
 x_1 \amp = \func{\chi_1}{X_1, X_2, X_3} = X_1\,,\label{motiv_kinematic_solution1_eq}\tag{3.1.12}\\
@@ -320,7 +320,7 @@ x_2 \amp = \func{\chi_3}{X_1, X_2, X_3} = X_2\,,\label{motiv_kinematic_solution2
 x_3 \amp = \func{\chi_3}{X_1, X_2, X_3} = \lambda\,X_3\,,\label{motiv_kinematic_solution3_eq}\tag{3.1.14}
 \end{align}
 </div>
-<p data-braille="continuation">where \(\lambda\) is a generic parameter to be determined. The displacement field  \(\vec{u}\) has the following components</p>
+<p class="continuation">where \(\lambda\) is a generic parameter to be determined. The displacement field  \(\vec{u}\) has the following components</p>
 <div class="displaymath">
 \begin{align}
 u_1 \amp = x_1 - X_1 = 0\,,\label{motiv_displ_solution1_eq}\tag{3.1.15}\\
@@ -328,7 +328,7 @@ u_2 \amp = x_2 - X_2 = 0\,,\label{motiv_displ_solution2_eq}\tag{3.1.16}\\
 u_3 \amp = x_3 - X_3 = (\lambda - 1)X_3\,,\label{motiv_displ_solution3_eq}\tag{3.1.17}
 \end{align}
 </div>
-<p data-braille="continuation">and its gradient is</p>
+<p class="continuation">and its gradient is</p>
 <div class="displaymath">
 \begin{equation}
 \mat{\nabla u} =
@@ -344,16 +344,16 @@ u_3 \amp = x_3 - X_3 = (\lambda - 1)X_3\,,\label{motiv_displ_solution3_eq}\tag{3
 \end{array}\right]\,.\tag{3.1.18}
 \end{equation}
 </div>
-<p id="p-245">As for the kinematic description of the problem, we are unable to add anything else. So let's see if using another tool introduced in <a href="stress_chap_en.html" class="internal" title="Chapter 2: forces, equilibrium and stress">Chapter 2</a>, the Principle of virtual work, it is possible to gain some kind of information on the generic parameter \(\lambda \text{.}\)</p></section><section class="subsection" id="subsection-47"><h3 class="heading hide-type">
+<p id="p-244">As for the kinematic description of the problem, we are unable to add anything else. So let's see if using another tool introduced in <a href="stress_chap_en.html" class="internal" title="Chapter 2: forces, equilibrium and stress">Chapter 2</a>, the Principle of virtual work, it is possible to gain some kind of information on the generic parameter \(\lambda \text{.}\)</p></section><section class="subsection" id="subsection-47"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.1.3</span> <span class="title">Principle of virtual work</span>
 </h3>
-<p id="p-246">On the basis of the displacement field adopted, the data of the problem under examination and the basic assumption <a class="xref" data-knowl="./knowl/elasticity_basic_assumption_eq.html" title="Equation 3.1.1">(3.1.1)</a>, the writing of the Principle of virtual work <a class="xref" data-knowl="./knowl/continuum_plv_eq.html" title="Equation 2.5.5">(2.5.5)</a> takes the following expression</p>
+<p id="p-245">On the basis of the displacement field adopted, the data of the problem under examination and the basic assumption <a class="xref" data-knowl="./knowl/elasticity_basic_assumption_eq.html" title="Equation 3.1.1">(3.1.1)</a>, the writing of the Principle of virtual work <a class="xref" data-knowl="./knowl/continuum_plv_eq.html" title="Equation 2.5.5">(2.5.5)</a> takes the following expression</p>
 <div class="displaymath">
 \begin{equation}
 \underbrace{\int_{\Sigma_1} \vec{t}_1 \cdot \vec{u}_1\,dS + \int_{\Sigma_2} \vec{t}_2 \cdot \vec{u}_2\,dS}_{\text{L}_{\text{est}}} = \underbrace{\int_{\body_0} \tens{\sigma} : \text{sym}\tens{\nabla u}\,dV}_{\text{L}_{\text{int}}}\,,\label{motiv_plv_eq}\tag{3.1.19}
 \end{equation}
 </div>
-<p data-braille="continuation">where, in particular,</p>
+<p class="continuation">where, in particular,</p>
 <div class="displaymath">
 \begin{equation*}
 \matWp{u}{1} = \left[\begin{array}{c}0\\0\\-(\lambda - 1)\frac{L}{2}\end{array}\right]\,,\;
@@ -361,46 +361,46 @@ u_3 \amp = x_3 - X_3 = (\lambda - 1)X_3\,,\label{motiv_displ_solution3_eq}\tag{3
 \text{sym}\tens{\nabla u} = \tens{\nabla u}\,.
 \end{equation*}
 </div>
-<p data-braille="continuation">Then introducing the static solution already found and the expression above reported of the gradient of the displacement the following result is obtained</p>
+<p class="continuation">Then introducing the static solution already found and the expression above reported of the gradient of the displacement the following result is obtained</p>
 <div class="displaymath">
 \begin{equation}
 \int_{\Sigma_1} \bar{t}\,(\lambda - 1)\frac{L}{2} \,dS + \int_{\Sigma_2} \bar{t}\,(\lambda - 1)\frac{L}{2} \,dS = \int_{\body_0} \bar{t}\,(\lambda - 1) \,dV\,.\tag{3.1.20}
 \end{equation}
 </div>
-<p data-braille="continuation">From which, evaluating the involved integrals (all with constant argument), it can be obtained what follows</p>
+<p class="continuation">From which, evaluating the involved integrals (all with constant argument), it can be obtained what follows</p>
 <div class="displaymath">
 \begin{equation}
 \bar{t}\,(\lambda - 1)\frac{L}{2}\,S + \bar{t}\,(\lambda - 1)\frac{L}{2}\,S =  \bar{t}\,(\lambda - 1)\,\,S\,L\,,\tag{3.1.21}
 \end{equation}
 </div>
-<p data-braille="continuation">i.e.</p>
+<p class="continuation">i.e.</p>
 <div class="displaymath">
 \begin{equation}
 \underbrace{\bar{t}\,(\lambda - 1)\,\,L\,S}_{\text{L}_{\text{est}}} = \underbrace{\bar{t}\,(\lambda - 1)\,\,S\,L}_{\text{L}_{\text{int}}}\,,\tag{3.1.22}
 \end{equation}
 </div>
-<p data-braille="continuation">Therefore it is also possible to verify the equality between external and internal work but we do not draw any further information regarding the \(\lambda \) parameter.</p></section><section class="subsection" id="subsection-48"><h3 class="heading hide-type">
+<p class="continuation">Therefore it is also possible to verify the equality between external and internal work but we do not draw any further information regarding the \(\lambda \) parameter.</p></section><section class="subsection" id="subsection-48"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.1.4</span> <span class="title">conclusions</span>
 </h3>
-<p id="p-247">Previous discussion allows to draw the following conclusions.</p>
-<ol id="p-248" class="decimal">
-<li id="li-88">It was possible to identify the tensor \(\sigma \) which satisfies the equilibrium equations. <a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 2 </sup></a>.</li>
-<li id="li-89">We have identified a displacement field parameterized with respect to the \(\lambda \) parameter, a <em class="emphasis">plausible</em> field and which also verifies the Principle of virtual work.</li>
-<li id="li-90">It is not possible, at least with the tools available so far, to find a significative value for \(\lambda \) from a mechanical point of view. This parameter remains completely generic and undefined.</li>
-<li id="li-91">Even the form assumed for the transformation <a class="xref" data-knowl="./knowl/motiv_kinematic_solution1_eq.html" title="Equation 3.1.12">(3.1.12)</a> - <a class="xref" data-knowl="./knowl/motiv_kinematic_solution3_eq.html" title="Equation 3.1.14">(3.1.14)</a> has not been subject to verification and at the moment remains completely arbitrary.</li>
+<p id="p-246">Previous discussion allows to draw the following conclusions.</p>
+<ol id="p-247" class="decimal">
+<li id="li-90">It was possible to identify the tensor \(\sigma \) which satisfies the equilibrium equations. <a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 2 </sup></a>.</li>
+<li id="li-91">We have identified a displacement field parameterized with respect to the \(\lambda \) parameter, a <em class="emphasis">plausible</em> field and which also verifies the Principle of virtual work.</li>
+<li id="li-92">It is not possible, at least with the tools available so far, to find a significative value for \(\lambda \) from a mechanical point of view. This parameter remains completely generic and undefined.</li>
+<li id="li-93">Even the form assumed for the transformation <a class="xref" data-knowl="./knowl/motiv_kinematic_solution1_eq.html" title="Equation 3.1.12">(3.1.12)</a> - <a class="xref" data-knowl="./knowl/motiv_kinematic_solution3_eq.html" title="Equation 3.1.14">(3.1.14)</a> has not been subject to verification and at the moment remains completely arbitrary.</li>
 </ol>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn">This result was made possible only by the problem under examination, a very particular problem which therefore does not constitute a typical situation. In general, equilibrium equations are not solvable with respect to the components of the stress tensor.</div></div>
-<p id="p-249">The problem highlighted depends on a lack of information in the mechanical model presented so far. The missing information is as follows</p>
+<p id="p-248">The problem highlighted depends on a lack of information in the mechanical model presented so far. The missing information is as follows</p>
 <article class="claim theorem-like" id="claim-1"><h6 class="heading">
 <span class="type">Claim</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="period">.</span>
 </h6>
-<p id="p-250"><em class="alert">What is the relationship between the deformation that the body undergoes and the stress state that arises inside it?</em></p></article><p id="p-251">In the following sections this problem is presented and discussed, not in the most general terms possible, but with respect to the context already largely used for the problem examined above. That is, in the context of small displacements and small strains also known as <em class="emphasis">infinitesimal displacements</em> context. Therefore a link will be established between the Cauchy stress tensor and the infinitesimal strain tensor:</p>
+<p id="p-249"><em class="alert">What is the relationship between the deformation that the body undergoes and the stress state that arises inside it?</em></p></article><p id="p-250">In the following sections this problem is presented and discussed, not in the most general terms possible, but with respect to the context already largely used for the problem examined above. That is, in the context of small displacements and small strains also known as <em class="emphasis">infinitesimal displacements</em> context. Therefore a link will be established between the Cauchy stress tensor and the infinitesimal strain tensor:</p>
 <div class="displaymath">
 \begin{equation}
 \tens{\sigma} = \func{\tens{\sigma}}{\tens{\varepsilon}}\,.\tag{3.1.23}
 \end{equation}
 </div>
-<p data-braille="continuation">It is useful to poit out that, in the case of infinitesimal displacements, the infinitesimal strain tensor constitutes an approximation of the Green-Lagrange strain tensor, see <a href="infinitesimal_sec_strain_chap_en.html" class="internal" title="Section 1.9: the infinitesimal strain tensor">Section 1.9</a>, and that in the calculation of internal work this tensor appears too. Indeed</p>
+<p class="continuation">It is useful to poit out that, in the case of infinitesimal displacements, the infinitesimal strain tensor constitutes an approximation of the Green-Lagrange strain tensor, see <a href="infinitesimal_sec_strain_chap_en.html" class="internal" title="Section 1.9: the infinitesimal strain tensor">Section 1.9</a>, and that in the calculation of internal work this tensor appears too. Indeed</p>
 <div class="displaymath">
 \begin{equation}
 \text{L}_{\text{int}} = \int_{\body_0} \tens{\sigma} : \text{sym}\tens{\nabla u}\,dV = \int_{\body_0} \tens{\sigma} : \tens{\varepsilon}\,dV\,.\tag{3.1.24}

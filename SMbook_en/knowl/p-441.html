@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-02T11:40:26+02:00       *-->
+<!--*       on 2021-04-20T14:29:56+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,35 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Consider a beam constrained in the manner shown in the figure and subjected to a vertical force in the middle. The same figure also shows the free body diagram obtained by removing the hinge and roller support and applying the related constraint reaction components (\(m = 3 \)).</p>
+<p>The presence of a single body determines the writing of 3 equations of equilibrium (\(n = 3 \)) for which the extreme \(A \) is assumed as pole for rotational equilibrium:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+H_A \amp = 0\,,\\
+V_A + V_B - F \amp = 0\,,\\
+V_{B} l - F l/2 \amp = 0\,.
+\end{align*}
+</div>
+<p class="continuation">Whose matrix form is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\underbrace{\left[\begin{array}{ccc}
+1 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 1\\
+0 &amp; 0 &amp; l
+\end{array}\right]}_{\mat{B}}
+\underbrace{\left[\begin{array}{c} H_A \\V_A \\ V_{B} \end{array}\right]}_{\vec{r}} +
+\underbrace{\left[\begin{array}{c} 0 \\ -F \\ -Fl/2 \end{array}\right]}_{\vec{f}} =
+\left[\begin{array}{c} 0 \\ 0 \\ 0 \end{array}\right]\,.
+\end{equation*}
+</div>
+<p class="continuation">Also in this case the simple inspection of the static matrix allows to establish the isostaticity of the system. The calculation of the constraint reaction components provides:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+H_{A} \amp= 0\,,\\
+V_{A}  \amp= F/2\,,\\
+V_{B}  \amp= F/2\,.
+\end{align*}
+</div>
 <span class="incontext"><a href="analysis_examples_sec_rigid_body_statics_chap_en.html#p-441">in-context</a></span>
 </body>
 </html>

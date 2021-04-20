@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-02T11:40:20+02:00       *-->
+<!--*       on 2021-04-20T14:29:50+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -57,7 +57,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{{\not{\mid}}}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -205,7 +205,7 @@ dy \amp = \func{f}{x+dx} - \func{f}{x}\\
 \amp =\frac{df}{dx}\,dx + \func{\omega}{dx}
 \end{align*}
 </div>
-<p data-braille="continuation">where \(\func{\omega}{dx}/dx \to 0\) if \(dx \to 0\text{,}\) then it is possible to state that</p>
+<p class="continuation">where \(\func{\omega}{dx}/dx \to 0\) if \(dx \to 0\text{,}\) then it is possible to state that</p>
 <div class="displaymath">
 \begin{equation}
 dy = \frac{df}{dx}\,dx\,.\label{df_eq}\tag{1.3.1}
@@ -220,7 +220,7 @@ x_2 \amp = \func{\chi_3}{X_1, X_2, X_3}\,,\tag{1.3.3}\\
 x_3 \amp = \func{\chi_3}{X_1, X_2, X_3}\,.\tag{1.3.4}
 \end{align}
 </div>
-<p data-braille="continuation">The seeken differential can formulated as follows</p>
+<p class="continuation">The seeken differential can formulated as follows</p>
 <div class="displaymath">
 \begin{gather}
 dx_1 = \regulardiff{\chi_1}{X_1}\,dX_1 + \regulardiff{\chi_1}{X_2}\,dX_2 + \regulardiff{\chi_1}{X_3}\,dX_3  \,,\tag{1.3.5}\\
@@ -228,7 +228,7 @@ dx_2 = \regulardiff{\chi_2}{X_1}\,dX_1 + \regulardiff{\chi_2}{X_2}\,dX_2 + \regu
 dx_3 = \regulardiff{\chi_3}{X_1}\,dX_1 + \regulardiff{\chi_3}{X_2}\,dX_2 + \regulardiff{\chi_3}{X_3}\,dX_3  \,.\tag{1.3.7}
 \end{gather}
 </div>
-<p data-braille="continuation">These are a set of equations which can be expressed as multiplication between a matrix and a vector, i.e.</p>
+<p class="continuation">These are a set of equations which can be expressed as multiplication between a matrix and a vector, i.e.</p>
 <div class="displaymath">
 \begin{equation}
 \left[\begin{array}{c}dx_1\\dx_2\\dx_3\end{array}\right] =
@@ -246,20 +246,20 @@ dx_3 = \regulardiff{\chi_3}{X_1}\,dX_1 + \regulardiff{\chi_3}{X_2}\,dX_2 + \regu
 d\vec{x} = \tens{F}\, d\vec{X}\,.\label{dX_to_dx_eq}\tag{1.3.9}
 \end{equation}
 </div>
-<p data-braille="continuation">Relationship that can be specified more precisely as follows</p>
+<p class="continuation">Relationship that can be specified more precisely as follows</p>
 <div class="displaymath">
 \begin{equation}
 d\vec{x} = \func{\tens{F}}{\vec{X}}\, d\vec{X}\,,\tag{1.3.10}
 \end{equation}
 </div>
-<p data-braille="continuation">where the dependence of \(\tens{F}\) on the point where the gradient is evaluated has been made explicit.</p>
+<p class="continuation">where the dependence of \(\tens{F}\) on the point where the gradient is evaluated has been made explicit.</p>
 <p id="p-59">What is obtained for the transformation \(\vec{\chi} \) is also valid for its inverse \(\vec{\chi}^{-1}\text{,}\) therefore the following inverse relationship can be established between the differentials \(d\vec{X}\) and \(d\vec{x}\)</p>
 <div class="displaymath">
 \begin{equation}
 d\vec{X} = \func{\tens{F}^{-1}}{\vec{x}}\, d\vec{x}\,.\tag{1.3.11}
 \end{equation}
 </div>
-<p data-braille="continuation">Typically the evaluation of the gradient of the inverse transformation does not pass through the explicit writing of \(\vec{\chi}^{- 1}\) but is done by calculating the inverse of \(\tens{F}\) for which invertibility must be ensured.</p>
+<p class="continuation">Typically the evaluation of the gradient of the inverse transformation does not pass through the explicit writing of \(\vec{\chi}^{- 1}\) but is done by calculating the inverse of \(\tens{F}\) for which invertibility must be ensured.</p>
 <figure class="figure figure-like" id="Kinematics_03_fig"><div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="images/Kinematics_03.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.3.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><article class="remark remark-like" id="remark-2"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.3.2</span><span class="period">.</span>
@@ -272,14 +272,14 @@ x_1 \amp = \func{\chi_1}{X_1, X_2} = -X_2\,,\\
 x_2 \amp = \func{\chi_2}{X_1, X_2} = X_1\,.
 \end{align*}
 </div>
-<p data-braille="continuation">From which the following partial derivatives are obtained</p>
+<p class="continuation">From which the following partial derivatives are obtained</p>
 <div class="displaymath">
 \begin{align*}
 \regulardiff{\chi_1}{X_1} = 0\,,\amp\quad \regulardiff{\chi_1}{X_2} = -1\,,\\
 \regulardiff{\chi_2}{X_1} = 1\,,\amp\quad \regulardiff{\chi_2}{X_2} = 0
 \end{align*}
 </div>
-<p data-braille="continuation">and therefore the deformation gradient</p>
+<p class="continuation">and therefore the deformation gradient</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{F} =
@@ -287,7 +287,7 @@ x_2 \amp = \func{\chi_2}{X_1, X_2} = X_1\,.
 \left[\begin{array}{cc} 0 \amp -1 \\ 1  \amp 0  \end{array}\right]
 \end{equation*}
 </div>
-<p data-braille="continuation">The fact that in this case we obtain a constant gradient equal to the matrix \(\mat{M_{\chi}}\) associated with the transformation is not accidental but depends on the linearity of the transformation under consideration: inevitably, its own linearization coincides with the given transformation. A similar result would also be obtained for the other linear transformations considered in the previous examples.</p></article><article class="assemblage assemblage-like" id="assemblage-6"><h6 class="heading"><span class="title">evaluation of the deformation gradient (nonlinear transformations).</span></h6>
+<p class="continuation">The fact that in this case we obtain a constant gradient equal to the matrix \(\mat{M_{\chi}}\) associated with the transformation is not accidental but depends on the linearity of the transformation under consideration: inevitably, its own linearization coincides with the given transformation. A similar result would also be obtained for the other linear transformations considered in the previous examples.</p></article><article class="assemblage assemblage-like" id="assemblage-6"><h6 class="heading"><span class="title">evaluation of the deformation gradient (nonlinear transformations).</span></h6>
 <p id="p-62">In the case of nonlinear transformations it is not possible to identify a matrix associated with the transformation but, locally, the gradient of the transformation behaves like a linear transformation. Consider thus, for example, the transformation defined as</p>
 <div class="displaymath">
 \begin{align*}
@@ -302,7 +302,7 @@ x_2 \amp = \func{\chi_2}{X_1, X_2} = X_2^3\,.
 \regulardiff{\chi_2}{X_1} = 0\,,\amp\regulardiff{\chi_2}{X_2} = 3\,X_2^2
 \end{align*}
 </div>
-<p data-braille="continuation">allowing the evaluation of the deformation gradient</p>
+<p class="continuation">allowing the evaluation of the deformation gradient</p>
 <div class="displaymath">
 \begin{equation*}
 \func{\mat{F}}{\vec{X}} =
@@ -310,7 +310,7 @@ x_2 \amp = \func{\chi_2}{X_1, X_2} = X_2^3\,.
 \left[\begin{array}{cc}  3\,X_1^2 \amp 0 \\ 0  \amp  3\,X_2^2  \end{array}\right]
 \end{equation*}
 </div>
-<p id="p-64">In order to visualize how the assigned transformation works let us consider, in the plane \((X_1, X_2)\text{,}\) three circumferences of radius \(0. \text{,}\) \(1.0\) and \(1.5\) and their configuratons obtained through the assigned nonlinear transformation. The MATLAB® instructions for the calculation and plotting of the circumferences in the reference configuration and in the current one are as reported below. <figure class="listing figure-like" id="listing-8"><pre class="console"><b>N=60;
+<p id="p-64">In order to visualize how the assigned transformation works let us consider, in the plane \((X_1, X_2)\text{,}\) three circumferences of radius \(0. \text{,}\) \(1.0\) and \(1.5\) and their configuratons obtained through the assigned nonlinear transformation. The MATLAB® instructions for the calculation and plotting of the circumferences in the reference configuration and in the current one are as reported below. <figure class="listing figure-like" id="listing-8"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>N=60;
 angle=linspace(0,2*pi,N);
 
 radius=1.0;
@@ -343,7 +343,7 @@ plot(c2x,c2y,'r-')
 % circumference (r=1.5), reference and deformed configurations
 plot(c3X,c3Y,'m-')
 plot(c3x,c3y,'m-')
-</b></pre>
+</b></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.3.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure> The previous instructions allow to obtain the following figure where the three circumferences, in the reference and current configurations, are represented with the colors red for the radius \(0.5\text{,}\) blue for the radius \(1.0\) and magenta for the radius \(1.5 \text{.}\) <figure class="figure figure-like" id="nolin_transf_example"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="images/nolin_grad1.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.3.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <p id="p-65">For exercise and to compare the nonlinear transformation examined with simpler linear transformations, it is suggested to perform the same calculations for the Transformations 2, 3 and 4 discussed in the previous sections.</p></article><article class="remark remark-like" id="remark-3"><h6 class="heading">
@@ -362,13 +362,13 @@ plot(c3x,c3y,'m-')
 \vec{v} = \tens{A}\vec{u}\tag{1.3.12}
 \end{equation}
 </div>
-<p data-braille="continuation">and its linearity implies that</p>
+<p class="continuation">and its linearity implies that</p>
 <div class="displaymath">
 \begin{equation}
 \tens{A}\left(\alpha\vec{u}+\vec{v}\right) = \alpha\tens{A}\vec{u} + \tens{A}\vec{v}\tag{1.3.13}
 \end{equation}
 </div>
-<p data-braille="continuation">for all vectors \(\vec{u}\text{,}\) \(\vec{v}\) and all scalars \(\alpha\text{.}\)</p></article></section></section></div></main>
+<p class="continuation">for all vectors \(\vec{u}\text{,}\) \(\vec{v}\) and all scalars \(\alpha\text{.}\)</p></article></section></section></div></main>
 </div>
 </body>
 </html>

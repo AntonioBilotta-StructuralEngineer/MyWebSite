@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-02T11:40:26+02:00       *-->
+<!--*       on 2021-04-20T14:29:56+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,15 +15,18 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">MATLAB® instructions which can be used to calculate the solution \(\func{u}{x}\) are as follows. <figure class="listing figure-like"><pre class="console"><b>syms u(x) EA p l;
-ode = EA*diff(u,x,2) + p*sin(2*pi*x/l) == 0;
-cond1 = u(0) == 0;
-cond2 = u(l) == 0;
-conds = [cond1 cond2];
-sol = dsolve(ode,conds)
-N = EA*diff(sol,x)
-</b></pre>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.7.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p>The displacement solution is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\func{u}{x} = \frac{\bar{p}}{EA} \frac{l^2}{4\pi^2} \sin\left(\frac{2\pi\,x}{l}\right)
+\end{equation*}
+</div>
+<p class="continuation">and the axial force is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\func{N}{x} = \bar{p} \frac{l}{2\pi} \cos\left(\frac{2\pi\,x}{l}\right)\,.
+\end{equation*}
+</div>
 <span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_en.html#p-335">in-context</a></span>
 </body>
 </html>

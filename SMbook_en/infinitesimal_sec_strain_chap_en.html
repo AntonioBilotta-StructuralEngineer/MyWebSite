@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-02T11:40:20+02:00       *-->
+<!--*       on 2021-04-20T14:29:50+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -57,7 +57,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{{\not{\mid}}}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -188,13 +188,13 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="infinitesimal_sec_strain_chap_en"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.9</span> <span class="title">the infinitesimal strain tensor</span>
 </h2>
-<p id="p-148">It often happens in applications that the norm of the displacement gradient is small. In these cases the contribution \(\transp{\tens{\nabla u}} \, \tens{\nabla u} \) appearing  in the expressions of the tensor \(\tens{E}\) and tensor \(\tens{C}\) becomes negligible. Therefore the Green-Lagrange strain tensor will be coincident with the <em class="emphasis">infinitesimal strain tensor</em> \(\tens{\varepsilon}\text{,}\) i.e.</p>
+<p id="p-147">It often happens in applications that the norm of the displacement gradient is small. In these cases the contribution \(\transp{\tens{\nabla u}} \, \tens{\nabla u} \) appearing  in the expressions of the tensor \(\tens{E}\) and tensor \(\tens{C}\) becomes negligible. Therefore the Green-Lagrange strain tensor will be coincident with the <em class="emphasis">infinitesimal strain tensor</em> \(\tens{\varepsilon}\text{,}\) i.e.</p>
 <div class="displaymath">
 \begin{equation}
 \lim_{\|\tens{\nabla u}\| \rightarrow 0} \tens{E} = \tens{\varepsilon} =  \frac{1}{2}\left(\tens{\nabla u} + \transp{\tens{\nabla u}}\right)\,,\label{infinitesima_1_eq}\tag{1.9.1}
 \end{equation}
 </div>
-<p data-braille="continuation">while Cauchy tensor can be written as</p>
+<p class="continuation">while Cauchy tensor can be written as</p>
 <div class="displaymath">
 \begin{equation}
 \lim_{\|\tens{\nabla u}\| \rightarrow 0} \tens{C} = \tens{I}+ \tens{\nabla u} + \transp{\tens{\nabla u}}\,.\label{infinitesima_2_eq}\tag{1.9.2}
@@ -203,7 +203,7 @@ MathJax.Hub.Config({
 <section class="subsection" id="subsection-12"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.9.1</span> <span class="title">infinitesimal motions</span>
 </h3>
-<p id="p-149">Let us start by recalling the explicit expression of the components of the displacement \(\vec{u}\)</p>
+<p id="p-148">Let us start by recalling the explicit expression of the components of the displacement \(\vec{u}\)</p>
 <div class="displaymath">
 \begin{gather*}
 \func{u_1}{X_1, X_2, X_3}\,,\\
@@ -211,7 +211,7 @@ MathJax.Hub.Config({
 \func{u_3}{X_1, X_2, X_3}\,,
 \end{gather*}
 </div>
-<p data-braille="continuation">and of its gradient \(\tens{\nabla u}\)</p>
+<p class="continuation">and of its gradient \(\tens{\nabla u}\)</p>
 <div class="displaymath">
 \begin{equation}
 \mat{\nabla u} =
@@ -222,15 +222,15 @@ MathJax.Hub.Config({
 \end{array}\right]\,.\tag{1.9.3}
 \end{equation}
 </div>
-<p data-braille="continuation">The following decomposition of \(\tens{\nabla u}\)</p>
+<p class="continuation">The following decomposition of \(\tens{\nabla u}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \tens{\nabla u} = \underbrace{\frac{1}{2}\left(\tens{\nabla u} + \transp{\tens{\nabla u}}\right)}_{\text{sym}\tens{\nabla u}} +  \underbrace{\frac{1}{2}\left(\tens{\nabla u} - \transp{\tens{\nabla u}}\right)}_{\text{skew}\tens{\nabla u}}\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">true for all tensor, allows to insert in a more general framework the tensor of the infinitesimal strain previously introduced and the role played by \(\tens{\nabla u}\) in the description of the infinitesimal motions. By infinitesimal motions we will therefore mean the motions characterized by the condition \(\|\tens{\nabla u}\| \rightarrow 0\text{.}\)</p>
+<p class="continuation">true for all tensor, allows to insert in a more general framework the tensor of the infinitesimal strain previously introduced and the role played by \(\tens{\nabla u}\) in the description of the infinitesimal motions. By infinitesimal motions we will therefore mean the motions characterized by the condition \(\|\tens{\nabla u}\| \rightarrow 0\text{.}\)</p>
 <ul class="disc">
-<li id="li-24">The symmetric part, \(\text{sym}\tens{\nabla u}\text{,}\) whose matrix expression is<div class="displaymath">
+<li id="li-26">The symmetric part, \(\text{sym}\tens{\nabla u}\text{,}\) whose matrix expression is<div class="displaymath">
 \begin{equation}
 \mat{\varepsilon} = \text{sym}\mat{\nabla u}=
 \left[\begin{array}{ccc}
@@ -250,7 +250,7 @@ MathJax.Hub.Config({
 \end{equation}
 </div>
 </li>
-<li id="li-25">The skew part, \(\text{skew}\tens{\nabla u}\text{,}\) whose matrix expression is<div class="displaymath">
+<li id="li-27">The skew part, \(\text{skew}\tens{\nabla u}\text{,}\) whose matrix expression is<div class="displaymath">
 \begin{equation}
 \text{skew}\mat{\nabla u}=
 \left[\begin{array}{ccc}
@@ -260,13 +260,13 @@ MathJax.Hub.Config({
 \end{array}\right]\,,\tag{1.9.6}
 \end{equation}
 </div>represents the <em class="emphasis">infinitesimal rotation tensor</em>.</li>
-<li id="li-26">For a generic <em class="emphasis">infinitesimal motion</em> we have<div class="displaymath">
+<li id="li-28">For a generic <em class="emphasis">infinitesimal motion</em> we have<div class="displaymath">
 \begin{equation}
 \text{sym}\tens{\nabla u} \neq \tens{0}\,,\quad \text{skew}\tens{\nabla u} \neq \tens{0}.\tag{1.9.7}
 \end{equation}
 </div>
 </li>
-<li id="li-27">For a <em class="emphasis">rigid infinitesimal motion</em> we have<div class="displaymath">
+<li id="li-29">For a <em class="emphasis">rigid infinitesimal motion</em> we have<div class="displaymath">
 \begin{equation}
 \text{sym}\tens{\nabla u} = \tens{0}\,,\quad \text{skew}\tens{\nabla u} \neq \tens{0}.\tag{1.9.8}
 \end{equation}
@@ -275,46 +275,46 @@ MathJax.Hub.Config({
 </ul></section><article class="insight remark-like" id="insight-3"><h6 class="heading">
 <span class="type">Insight</span><span class="space"> </span><span class="codenumber">1.9.1</span><span class="period">.</span><span class="space"> </span><span class="title">meaning of the components of the infinitesimal strain tensor.</span>
 </h6>
-<p id="p-150">In order to identify the meaning of the components of the tensor \(\tens{\varepsilon} \) it is better to start with the expression of tensor \(\tens{C}\) with respect to the gradient of the displacement, that is</p>
+<p id="p-149">In order to identify the meaning of the components of the tensor \(\tens{\varepsilon} \) it is better to start with the expression of tensor \(\tens{C}\) with respect to the gradient of the displacement, that is</p>
 <div class="displaymath">
 \begin{equation*}
 \tens{C} = \tens{I}+ \tens{\nabla u} + \transp{\tens{\nabla u}} +  \transp{\tens{\nabla u}}\,\tens{\nabla u}\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">from which, making the calculations, for example with the following MATLAB® instructions</p>
-<figure class="listing figure-like" id="listing-22"><pre class="console"><b>syms u1_X1 u1_X2 u1_X3 u2_X1 u2_X2 u2_X3 u3_X1 u3_X2 u3_X3
+<p class="continuation">from which, making the calculations, for example with the following MATLAB® instructions</p>
+<figure class="listing figure-like" id="listing-22"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms u1_X1 u1_X2 u1_X3 u2_X1 u2_X2 u2_X3 u3_X1 u3_X2 u3_X3
 Du = [u1_X1 u1_X2 u1_X3;u2_X1 u2_X2 u2_X3; u3_X1 u3_X2 u3_X3]
 C = diag([1 1 1]) + Du + transpose(Du) + transpose(Du)*Du
 C(1,1)
 C(1,2)
-</b></pre>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.9.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-151">the expressions of a component on the main diagonal and one outside can be obtained, i.e.</p>
+</b></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.9.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-150">the expressions of a component on the main diagonal and one outside can be obtained, i.e.</p>
 <div class="displaymath">
 \begin{align*}
 C_{11} \amp = \left( 1 + \frac{\partial u_1}{\partial X_1} \right)^2 + \left(\frac{\partial u_1}{\partial X_2}\right)^2 + \left(\frac{\partial u_1}{\partial X_3}\right)^2\,,\\
 C_{12} \amp = \frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1} + \frac{\partial u_1}{\partial X_1}\frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1}\frac{\partial u_2}{\partial X_2} + \frac{\partial u_3}{\partial X_1}\frac{\partial u_3}{\partial X_2} \,.
 \end{align*}
 </div>
-<p data-braille="continuation">For the diagonal component, using the <a class="xref" data-knowl="./knowl/Cii_eq.html" title="Equation 1.8.4">(1.8.4)</a> result obtained for the \(\tens{C}\) diagonal component, it is possible to write</p>
+<p class="continuation">For the diagonal component, using the <a class="xref" data-knowl="./knowl/Cii_eq.html" title="Equation 1.8.4">(1.8.4)</a> result obtained for the \(\tens{C}\) diagonal component, it is possible to write</p>
 <div class="displaymath">
 \begin{equation*}
 \func{\lambda}{\vec{e}_1}^2 =  \left( 1 + \underbrace{\frac{\partial u_1}{\partial X_1}}_{\varepsilon_{11}} \right)^2 + \underbrace{\left(\frac{\partial u_1}{\partial X_2}\right)^2 + \left(\frac{\partial u_1}{\partial X_3}\right)^2}_{\text{trascurabili nel caso infinitesimo}}\,.
 \end{equation*}
 </div>
-<p data-braille="continuation">From which</p>
+<p class="continuation">From which</p>
 <div class="displaymath">
 \begin{equation}
 \varepsilon_{11} \approx \func{\lambda}{\vec{e}_1} - 1\,.\label{small_normal_strain_eq}\tag{1.9.9}
 \end{equation}
 </div>
-<p data-braille="continuation">A similar result is valid for the other components of \(\tens{\varepsilon}\) belonging to the main diagonal.</p>
-<p id="p-152">For the off-diagonal component, by using <a class="xref" data-knowl="./knowl/Cij_eq.html" title="Equation 1.8.6">(1.8.6)</a>, it can be obtained</p>
+<p class="continuation">A similar result is valid for the other components of \(\tens{\varepsilon}\) belonging to the main diagonal.</p>
+<p id="p-151">For the off-diagonal component, by using <a class="xref" data-knowl="./knowl/Cij_eq.html" title="Equation 1.8.6">(1.8.6)</a>, it can be obtained</p>
 <div class="displaymath">
 \begin{equation*}
 \sin{\func{\gamma}{\vec{e}_1,\vec{e}_2}}\, \underbrace{\func{\lambda}{\vec{e}_1} \, \func{\lambda}{\vec{e}_2}}_{\approx 1} = \underbrace{\frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1}}_{2\,\varepsilon_{12}} + \underbrace{\frac{\partial u_1}{\partial X_1}\frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1}\frac{\partial u_2}{\partial X_2} + \frac{\partial u_3}{\partial X_1}\frac{\partial u_3}{\partial X_2}}_{\text{trascurabili nel caso infinitesimo}}\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">and then</p>
+<p class="continuation">and then</p>
 <div class="displaymath">
 \begin{equation}
 \varepsilon_{12} \approx \frac{1}{2}\, \sin{\func{\gamma}{\vec{e}_1,\vec{e}_2}} \approx  \frac{1}{2}\, \func{\gamma}{\vec{e}_1,\vec{e}_2}\,.\label{small_shear_eq}\tag{1.9.10}
@@ -322,27 +322,27 @@ C_{12} \amp = \frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X
 </div></article><article class="insight remark-like" id="small_rotations_insight"><h6 class="heading">
 <span class="type">Insight</span><span class="space"> </span><span class="codenumber">1.9.3</span><span class="period">.</span><span class="space"> </span><span class="title">infinitesimal rotations.</span>
 </h6>
-<p id="p-153">To explain the denomination "infinitesimal rotation" that has been given to the skew part of the gradient of the displacement, it is convenient to discuss a transformation characterized only by a simple rotation. To this end, consider a rotation around the \(\vec{e}_3\) axis. The significant part of the transformation can be directly discussed in the plan as follows</p>
+<p id="p-152">To explain the denomination "infinitesimal rotation" that has been given to the skew part of the gradient of the displacement, it is convenient to discuss a transformation characterized only by a simple rotation. To this end, consider a rotation around the \(\vec{e}_3\) axis. The significant part of the transformation can be directly discussed in the plan as follows</p>
 <div class="displaymath">
 \begin{align*}
 x_1 \amp = X_1\cos{\alpha} - X_2\sin{\alpha}\,,\\
 x_2 \amp = X_1\sin{\alpha} + X_2\cos{\alpha}\,.
 \end{align*}
 </div>
-<p data-braille="continuation">The displacement field is</p>
+<p class="continuation">The displacement field is</p>
 <div class="displaymath">
 \begin{align*}
 u_1 = x_1 - X_1 \amp = (X_1\cos{\alpha} - X_2\sin{\alpha}) - X_1\,,\\
 u_2 = x_2 - X_2 \amp = (X_1\sin{\alpha} + X_2\cos{\alpha}) - X_2\,.
 \end{align*}
 </div>
-<p data-braille="continuation">With this information it is possible to calculate the deformation gradient which, in the specific case, is composed only of the rotation</p>
+<p class="continuation">With this information it is possible to calculate the deformation gradient which, in the specific case, is composed only of the rotation</p>
 <div class="displaymath">
 \begin{equation*}
 \tens{F} = \tens{R}\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">where, as already discussed before,</p>
+<p class="continuation">where, as already discussed before,</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{R} =
@@ -352,19 +352,19 @@ u_2 = x_2 - X_2 \amp = (X_1\sin{\alpha} + X_2\cos{\alpha}) - X_2\,.
 \end{array}\right]\,.
 \end{equation*}
 </div>
-<p data-braille="continuation">Moreover</p>
+<p class="continuation">Moreover</p>
 <div class="displaymath">
 \begin{equation*}
 \tens{F} = \tens{I} + \tens{\nabla u}\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">and then</p>
+<p class="continuation">and then</p>
 <div class="displaymath">
 \begin{equation}
 \tens{R} = \tens{I} + \tens{\nabla u} =  \tens{I} + \text{sym}\tens{\nabla u} + \text{skew}\tens{\nabla u}\,.\label{rotation_eq}\tag{1.9.11}
 \end{equation}
 </div>
-<p data-braille="continuation">Result that highlights the decomposition of the gradient of the displacement with</p>
+<p class="continuation">Result that highlights the decomposition of the gradient of the displacement with</p>
 <div class="displaymath">
 \begin{equation*}
 \text{sym}\mat{\nabla u} =
@@ -379,8 +379,8 @@ u_2 = x_2 - X_2 \amp = (X_1\sin{\alpha} + X_2\cos{\alpha}) - X_2\,.
 \end{array}\right]\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">decomposition that, for now, is generic because no reference to infinitesimal displacements has been introduced.</p>
-<p id="p-154">To assume infinitesimal displacements implies also very small values for the angle \(\alpha\text{,}\)\(\alpha \ll 1\text{,}\) i.e. \(\cos{\alpha}\approx 1\) and \(\sin{\alpha} \approx \alpha\text{.}\) From which</p>
+<p class="continuation">decomposition that, for now, is generic because no reference to infinitesimal displacements has been introduced.</p>
+<p id="p-153">To assume infinitesimal displacements implies also very small values for the angle \(\alpha\text{,}\)\(\alpha \ll 1\text{,}\) i.e. \(\cos{\alpha}\approx 1\) and \(\sin{\alpha} \approx \alpha\text{.}\) From which</p>
 <div class="displaymath">
 \begin{equation*}
 \text{sym}\mat{\nabla u} \approx \mat{0}
@@ -392,20 +392,20 @@ u_2 = x_2 - X_2 \amp = (X_1\sin{\alpha} + X_2\cos{\alpha}) - X_2\,.
 \end{array}\right]\,.
 \end{equation*}
 </div>
-<p data-braille="continuation">Therefore in the case of infinitesimal displacements expression <a class="xref" data-knowl="./knowl/rotation_eq.html" title="Equation 1.9.11">(1.9.11)</a> can be rewritten as follows</p>
+<p class="continuation">Therefore in the case of infinitesimal displacements expression <a class="xref" data-knowl="./knowl/rotation_eq.html" title="Equation 1.9.11">(1.9.11)</a> can be rewritten as follows</p>
 <div class="displaymath">
 \begin{equation}
 \tens{R} \approx \tens{I} + \text{skew}\tens{\nabla u}\,.\label{rotation_infinitesima_eq}\tag{1.9.12}
 \end{equation}
 </div>
 <figure class="figure figure-like" id="figure-8"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/infinitesimal_rotation.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.9.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-155">Above in the figure the obtained result is emphasized showing the difference between the vector obtained by applying \(\tens{R}\)</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.9.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-154">Above in the figure the obtained result is emphasized showing the difference between the vector obtained by applying \(\tens{R}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \tens{R}\vec{X}
 \end{equation*}
 </div>
-<p data-braille="continuation">and the vector obtained applying the approximation of \(\tens{R}\) given by \((\tens{I} + \text{skew}\tens{\nabla u})\)</p>
+<p class="continuation">and the vector obtained applying the approximation of \(\tens{R}\) given by \((\tens{I} + \text{skew}\tens{\nabla u})\)</p>
 <div class="displaymath">
 \begin{equation*}
 (\tens{I} + \text{skew}\tens{\nabla u})\vec{X} = \vec{X} + \text{skew}\tens{\nabla u}\,\vec{X}\,.
@@ -413,7 +413,7 @@ u_2 = x_2 - X_2 \amp = (X_1\sin{\alpha} + X_2\cos{\alpha}) - X_2\,.
 </div></article><article class="insight remark-like" id="skew_tensor_insight"><h6 class="heading">
 <span class="type">Insight</span><span class="space"> </span><span class="codenumber">1.9.5</span><span class="period">.</span>
 </h6>
-<p id="p-156">Given a skew tensor \(\tens{W}\) characterized by the following matrix form</p>
+<p id="p-155">Given a skew tensor \(\tens{W}\) characterized by the following matrix form</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{W} =
@@ -424,7 +424,7 @@ u_2 = x_2 - X_2 \amp = (X_1\sin{\alpha} + X_2\cos{\alpha}) - X_2\,.
 \end{array}\right]\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">it easy to verify that to apply \(\tens{W}\) to a vector \(\vec{v}\)</p>
+<p class="continuation">it easy to verify that to apply \(\tens{W}\) to a vector \(\vec{v}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \left[\begin{array}{ccc}
@@ -445,7 +445,7 @@ W_{12}v_2 + W_{13}v_3 \\
 \end{array}\right]
 \end{equation*}
 </div>
-<p data-braille="continuation">is equivalent to calculate the following vector or cross product</p>
+<p class="continuation">is equivalent to calculate the following vector or cross product</p>
 <div class="displaymath">
 \begin{equation*}
 \left[\begin{array}{c}
@@ -467,13 +467,13 @@ v_3
 \end{array}\right]
 \end{equation*}
 </div>
-<p data-braille="continuation">where the components of  \(\vec{\omega}\) are related to the components of \(\tens{W}\) as follows</p>
+<p class="continuation">where the components of  \(\vec{\omega}\) are related to the components of \(\tens{W}\) as follows</p>
 <div class="displaymath">
 \begin{equation}
 \omega_{1} = -W_{23}\,,\quad \omega_{2} = W_{13}\,,\quad \omega_{3} = -W_{12}\,.\tag{1.9.13}
 \end{equation}
 </div>
-<p data-braille="continuation">On the contrary, knowing \(\vec{\omega}\text{,}\) \(\tens{W}\) can be evaluated as follows</p>
+<p class="continuation">On the contrary, knowing \(\vec{\omega}\text{,}\) \(\tens{W}\) can be evaluated as follows</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{W} =
@@ -484,13 +484,13 @@ v_3
 \end{array}\right]\,.
 \end{equation*}
 </div>
-<p id="p-157">Eventually the following relationship can be stated</p>
+<p id="p-156">Eventually the following relationship can be stated</p>
 <div class="displaymath">
 \begin{equation}
 \tens{W}\vec{v} = \vec{\omega} \times \vec{v}\,,\tag{1.9.14}
 \end{equation}
 </div>
-<p data-braille="continuation">where \(\omega\) is the axial vector associated to the skew tensor \(\tens{W}\text{.}\) The adjective axial is used for the vector \(\omega\) because it represents the rotation axis of the infinitesimal rotation.</p></article></section></div></main>
+<p class="continuation">where \(\omega\) is the axial vector associated to the skew tensor \(\tens{W}\text{.}\) The adjective axial is used for the vector \(\omega\) because it represents the rotation axis of the infinitesimal rotation.</p></article></section></div></main>
 </div>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-02T11:40:26+02:00       *-->
+<!--*       on 2021-04-20T14:29:56+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,39 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Once the solution has been obtained, construct a graphical representation of the displacement \(\func{w}{x}\) the bending moment \(\func{M}{x} \text{.}\)</p>
-<span class="incontext"><a href="exercises_sec_elasticity_chap_en.html#p-360">in-context</a></span>
+<p xmlns:svg="http://www.w3.org/2000/svg">Answer to exercise of <a href="exercises_sec_elasticity_chap_en.html#elasticity_ex_1" class="internal" title="Subsection 3.9.3">Subsection 3.9.3</a>. <figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>% stress tensor which satisfies equilibrium conditions
+syms q 'real';
+sig = [0 0; 0 -q];
+
+% small strain tensor
+syms b s 'real';
+e11 = 2*s/(2*s+b);
+syms e22 'real';
+eps = [e11 0; 0 e22];
+
+% imposing elastic constitutive law
+syms E ni 'real';
+eq1 = sig(1,1)/E -ni*sig(2,2)/E == eps(1,1);
+eq2 = sig(2,2)/E -ni*sig(1,1)/E == eps(2,2);
+
+% the equations can be solved with respect the unknowns q and e22
+sol = solve([eq1 eq2],[q e22]);
+q = sol.q
+e22 = sol.e22
+
+% integration of the vertical strain component
+syms u_2 X_2 'real';
+syms u_2(X_2);
+ode = diff(u_2, X_2, 1) == e22;
+cond = u_2(0) == 0;
+sol = dsolve(ode,cond);
+u_2(X_2) = sol;
+
+% vertical lowering of the panel's top
+syms h 'real';
+w = -u_2(h)
+</b></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.10.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<span class="incontext"><a href="answers_sec_elasticity_chap_en.html#p-360">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-03T08:24:07+01:00       *-->
+<!--*       on 2021-04-20T14:29:28+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,7 @@
 </head>
 <body>
 <article class="insight remark-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Approfondimento</span><span class="space"> </span><span class="codenumber">1.7.8</span><span class="period">.</span><span class="space"> </span><span class="title">il polinomio caratteristico.</span>
+<span class="type">Intuizione</span><span class="space"> </span><span class="codenumber">1.7.8</span><span class="period">.</span><span class="space"> </span><span class="title">il polinomio caratteristico.</span>
 </h6>
 <p>La valutazione degli autovalori ed autovettori associati al tensore \(\tens{U}\) passa attraverso la soluzione della seguente equazione cubica</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
@@ -23,7 +23,7 @@
 -\lambda^3 + \func{I_1}{\tens{U}} \lambda^2 - \func{I_2}{\tens{U}} \lambda + \func{I_3}{\tens{U}} = 0\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">dove compare il polinomio caratteristico il quale dipendende da tre quantità che prendono il nome di <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">invarianti</em> del tensore \(\tens{U}\text{.}\) Il termine invariante sta ad indicare che tali valori non cambiano al variare del sistema di riferimento rispetto al quale viene rappresentato \(\tens{U}\text{.}\) Si riportano le espressioni da utilizzare per il calcolo degli invarianti nel caso il tensore \(\tens{U}\) sia espresso alle direzioni principali e nel caso generico.</p>
+<p class="continuation">dove compare il polinomio caratteristico il quale dipendende da tre quantità che prendono il nome di <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">invarianti</em> del tensore \(\tens{U}\text{.}\) Il termine invariante sta ad indicare che tali valori non cambiano al variare del sistema di riferimento rispetto al quale viene rappresentato \(\tens{U}\text{.}\) Si riportano le espressioni da utilizzare per il calcolo degli invarianti nel caso il tensore \(\tens{U}\) sia espresso alle direzioni principali e nel caso generico.</p>
 <ul class="disc">
 <li>
 <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Primo invariante</em><div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
@@ -57,7 +57,7 @@
 \end{array}\right]\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">e nella forma</p>
+<p class="continuation">e nella forma</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
 \mat{U} =
@@ -68,9 +68,9 @@
 \end{array}\right]\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">non cambiano.</p>
+<p class="continuation">non cambiano.</p>
 <p xmlns:svg="http://www.w3.org/2000/svg">Si riportano le istruzioni MATLAB® utilizzabili per la verifica.</p>
-<p xmlns:svg="http://www.w3.org/2000/svg"><figure class="listing figure-like"><pre class="console"><b>lam1 = 2;
+<p xmlns:svg="http://www.w3.org/2000/svg"><figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>lam1 = 2;
 lam2 = 5;
 lam3 = 7;
 I1 = lam1 + lam2 + lam3
@@ -83,7 +83,7 @@ U = ...
 I1 = trace(U)
 I2 = 1/2*(trace(U)^2 - trace(U*U))
 I3 = det(U)
-</b></pre>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.7.9<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></article><span class="incontext"><a href="principal_directions_sec_strain_chap_it.html#insight-1">in-context</a></span>
+</b></pre></div>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.7.9<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></article><span class="incontext"><a href="principal_directions_sec_strain_chap_it.html#insight-1">Contesto</a></span>
 </body>
 </html>

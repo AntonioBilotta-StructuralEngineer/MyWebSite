@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-02T11:40:24+02:00       *-->
+<!--*       on 2021-04-20T14:29:54+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,16 +15,75 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Above in the figure the obtained result is emphasized showing the difference between the vector obtained by applying \(\tens{R}\)</p>
+<p>Given a skew tensor \(\tens{W}\) characterized by the following matrix form</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\tens{R}\vec{X}
+\mat{W} =
+\left[\begin{array}{ccc}
+0 \amp W_{12} \amp W_{13}\\
+-W_{12} \amp 0 \amp W_{23}\\
+-W_{13} \amp -W_{23} \amp 0 
+\end{array}\right]\,,
 \end{equation*}
 </div>
-<p data-braille="continuation">and the vector obtained applying the approximation of \(\tens{R}\) given by \((\tens{I} + \text{skew}\tens{\nabla u})\)</p>
+<p class="continuation">it easy to verify that to apply \(\tens{W}\) to a vector \(\vec{v}\)</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-(\tens{I} + \text{skew}\tens{\nabla u})\vec{X} = \vec{X} + \text{skew}\tens{\nabla u}\,\vec{X}\,.
+\left[\begin{array}{ccc}
+0 \amp W_{12} \amp W_{13}\\
+-W_{12} \amp 0 \amp W_{23}\\
+-W_{13} \amp -W_{23} \amp 0 
+\end{array}\right]
+\left[\begin{array}{c}
+v_1\\
+v_2\\
+v_3
+\end{array}\right]
+=
+\left[\begin{array}{c}
+W_{12}v_2 + W_{13}v_3 \\
+-W_{12}v_1 + W_{23}v_3\\
+-W_{13}v_1 -W_{23}v_2
+\end{array}\right]
+\end{equation*}
+</div>
+<p class="continuation">is equivalent to calculate the following vector or cross product</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\left[\begin{array}{c}
+\omega_1\\
+\omega_2\\
+\omega_3
+\end{array}\right]
+\times
+\left[\begin{array}{c}
+v_1\\
+v_2\\
+v_3
+\end{array}\right]
+=
+\left[\begin{array}{c}
+\omega_2 v_3 - \omega_3 v_2\\
+\omega_3 v_1 - \omega_1 v_3\\
+\omega_1 v_2 - \omega_2 v_1
+\end{array}\right]
+\end{equation*}
+</div>
+<p class="continuation">where the components of  \(\vec{\omega}\) are related to the components of \(\tens{W}\) as follows</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\omega_{1} = -W_{23}\,,\quad \omega_{2} = W_{13}\,,\quad \omega_{3} = -W_{12}\,.\tag{1.9.13}
+\end{equation}
+</div>
+<p class="continuation">On the contrary, knowing \(\vec{\omega}\text{,}\) \(\tens{W}\) can be evaluated as follows</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\mat{W} =
+\left[\begin{array}{ccc}
+0 \amp -\omega_{3} \amp \omega_{2}\\
+\omega_{3} \amp 0 \amp -\omega_{1}\\
+-\omega_{2} \amp \omega_{1} \amp 0 
+\end{array}\right]\,.
 \end{equation*}
 </div>
 <span class="incontext"><a href="infinitesimal_sec_strain_chap_en.html#p-155">in-context</a></span>
