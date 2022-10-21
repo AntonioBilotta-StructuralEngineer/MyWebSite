@@ -3,7 +3,7 @@ let questions = [
     {
         numb: 1,
         question: "Il gradiente della trasformazione, F, è ... ",
-        answer: "",
+        answer: "una trasformazione lineare",
         options: [
             "una cosa strana",
             "una trasformazione lineare",

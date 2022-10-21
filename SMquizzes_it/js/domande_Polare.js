@@ -80,7 +80,7 @@ let questions = [
     {
         numb: 8,
         question: "Dati F=[1/4 -5/4; 2 1] e R = [0.3590 -0.9333; 0.9333 0.3590], calcolare la matrice A = transpose(F)*F utilizzando MATLAB, quindi scegliere quale delle seguenti affermazioni è corretta.",
-        answer: "",
+        answer: "A = U*U",
         options: [
             "A = R*R",
             "A = U*V",

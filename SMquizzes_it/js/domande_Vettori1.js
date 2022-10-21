@@ -3,10 +3,10 @@ let questions = [
     {
         numb: 1,
         question: "In Fisica e Matematica, cos'è un vettore?",
-        answer: "Un elemento di un spazio vettoriale",
+        answer: "Un elemento di uno spazio vettoriale",
         options: [
             "Un agente che trasporta e trasmette un agente patogeno infettivo in un altro organismo vivente",
-            "Un elemento di un spazio vettoriale",
+            "Un elemento di uno spazio vettoriale",
             "Uno dei primi produttori di microcomputer a 8 bit",
             "Imperatore bariano di Yu-Gi-Oh! Zexal"
         ]
