@@ -105,7 +105,6 @@ let questions = [
         options: [
             "Falso",
             "Vero",
-            "Opinabile",
             "Dipende"
         ]
     },
@@ -127,6 +126,7 @@ let questions = [
         options: [
             "Cerniera",
             "Carrello",
+            "Cingolato",
             "Bipendolo",
             "Incastro"
         ]
@@ -139,6 +139,7 @@ let questions = [
             "Bipendolo",
             "Carrello",
             "Incastro",
+            "Bipiedi",
             "Doppio bipendolo"
         ]
     },

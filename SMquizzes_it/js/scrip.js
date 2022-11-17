@@ -104,10 +104,10 @@ prev_btn.onclick = ()=>{
 function showQuestions(index){
     const que_text = document.querySelector(".que_text");
     let que_tag = '<span>'+ questions[index].numb + ". " + questions[index].question +'</span>';
-    let option_tag = '<div class="option"><span>'+ questions[index].options[0] +'</span></div>'
-                    + '<div class="option"><span>'+ questions[index].options[1] +'</span></div>'
-                    + '<div class="option"><span>'+ questions[index].options[2] +'</span></div>'
-                    + '<div class="option"><span>'+ questions[index].options[3] +'</span></div>';
+    let option_tag = '';
+    for (let i = 0; i < questions[index].options.length; i++) {
+        option_tag = option_tag + '<div class="option"><span>'+ questions[index].options[i] +'</span></div>'
+    }
     que_text.innerHTML = que_tag;
     option_list.innerHTML = option_tag;
     const option = option_list.querySelectorAll(".option");
