@@ -6,7 +6,8 @@
 }
 
 body {
-    background: #007bff;
+    /* background: #007bff; */
+    background-image: url("../img/pattern1inverted.jpg");
 }
 
 .start_btn,
@@ -17,6 +18,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    /* box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.2),
+                0px 6px 20px 0 rgba(0,0,0,0.19); */
     box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.2),
                 0px 6px 20px 0 rgba(0,0,0,0.19);
     transition: all 0.3s ease;
@@ -37,7 +40,9 @@ body {
 }
 
 .start_btn h1{
-    color:#b8daff;
+    /* color:#b8daff; */
+    color:rgb(150, 50, 150);
+    font-size: 48px;
 }
 
 .start_btn button {
@@ -54,7 +59,7 @@ body {
 
 .info_box {
     width: 540px;
-    background: #fff;
+    background: rgb(150, 50, 150);
     border-radius: 5px;
     opacity: 0;
     pointer-events: none;
@@ -128,7 +133,7 @@ body {
 
 .quiz_box {
     width: 550px;
-    background: #fff;
+    background: rgb(150, 50, 150);
     border-radius: 5px;
     opacity: 0;
     pointer-events: none;

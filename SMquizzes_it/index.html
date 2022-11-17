@@ -5,23 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz sulla meccanica dei solidi</title>
-    <style>li {font-size: 20px;} * {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;} a, a:visited {color: blue;} a:hover{color: red;}
+    <style>
 
+    body {background-image: url("./img/pattern1.jpg");}
+
+    li {font-size: 20px;}
+    * {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+    a, a:visited {color: blue;}
+    a:hover{color: rgb(150, 50, 150);}
+    
     footer {
         display: flex;
         justify-content: center;
         padding: 5px;
-        background-color: #007bff;
+        /* background-color: #007bff; */
+        background-color: rgb(150, 50, 150);
         color:#b8daff;
     }
     .course_header p {
         margin: 0;
     }
-    </style>
+    .course_header {
+        margin: 0px;
+        border: 5px 0;
+        padding: 1px 15px 15px 15px;
+        background-color: #b8daff;
+    }
+
+    .quizzes {
+        margin: 5px 0;
+        border: 0;
+        padding: 1px 15px 15px 15px;
+        background-color: #b8daff;
+    }
+
+</style>
 </head>
 <body>
-    <h1>Corso di Meccanica dei solidi</h1>
     <div class="course_header">
+        <h1>Corso di Meccanica dei solidi</h1>
         <p>        
             Anno accademico 2022-23
         </p>
@@ -33,30 +55,32 @@
         </p>    
     </div>
     
-    <h2>Lista dei quiz disponibili</h2>
-    <ul>
-        <li>
-            <a href="./quizVettori1.html" target="_blank">Vettori 1</a>, operazioni di base.
-        </li>
-        <li>
-            <a href="./quizVettori2.html" target="_blank">Vettori 2</a>, altre operazioni.
-        </li>
-        <li>
-            <a href="./quizTrasformazioni.html" target="_blank">Trasformazioni</a>, definizioni di base.
-        </li>
-        <li>
-            <a href="./quizGradiente.html" target="_blank">Gradiente della trasformazione</a>.
-        </li>
-        <li>
-            <a href="./quizPolare.html" target="_blank">Decomposizione polare</a>.
-        </li>
-        <li>
-            <a href="./quizCorpiRigidi.html" target="_blank">Cinematica dei corpi rigidi</a>.
-        </li>
-        <li>
-            <a href="./quizMisureDeformazione.html" target="_blank">Misure della deformazione</a>.
-        </li>
-    </ul>
+    <div class="quizzes">
+        <h2>Lista dei quiz disponibili</h2>
+        <ul>
+            <li>
+                <a href="./quizVettori1.html" target="_blank">Vettori 1</a>, operazioni di base.
+            </li>
+            <li>
+                <a href="./quizVettori2.html" target="_blank">Vettori 2</a>, altre operazioni.
+            </li>
+            <li>
+                <a href="./quizTrasformazioni.html" target="_blank">Trasformazioni</a>, definizioni di base.
+            </li>
+            <li>
+                <a href="./quizGradiente.html" target="_blank">Gradiente della trasformazione</a>.
+            </li>
+            <li>
+                <a href="./quizPolare.html" target="_blank">Decomposizione polare</a>.
+            </li>
+            <li>
+                <a href="./quizCorpiRigidi.html" target="_blank">Cinematica dei corpi rigidi</a>.
+            </li>
+            <li>
+                <a href="./quizMisureDeformazione.html" target="_blank">Misure della deformazione</a>.
+            </li>
+        </ul>
+    </div>
 
     <footer>
         <p>Ultimo aggiornamento: 17 Novembre 2022</p>
