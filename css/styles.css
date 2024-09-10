@@ -1,0 +1,198 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+header {
+  background: #0073e6;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: aquamarine;
+  line-height: 100%;
+  text-align: center;
+}
+
+/* Responsive Layout for Smaller Screens */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  header p {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .grid {
+    flex-direction: column;
+  }
+}
+
+/* Section Layout */
+section {
+  padding: 40px 0;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  line-height: 120%;
+  text-align: justify;
+}
+
+.highlight {
+  background-color: #eef7ff;
+}
+
+/* Grid Layout */
+.grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.project-card,
+.teaching-card,
+.paper-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex: 1;
+  text-align: center;
+}
+
+.project-card h3,
+.teaching-card h3,
+.paper-card h3 {
+  font-size: 1.5rem;
+  color: #0073e6;
+  margin-bottom: 10px;
+}
+
+.project-card p,
+.teaching-card p,
+.paper-card p {
+  color: #666;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 15px;
+}
+
+ul li a {
+  color: #0073e6;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+
+.project-image,
+.paper-image,
+.teaching-image {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  background-color: #0073e6;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #005bb5;
+}
+
+/* Language Switcher Styles */
+.language-switcher {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.language-btn {
+  background-color: #fff;
+  border: 2px solid #0073e6;
+  color: #0073e6;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.language-btn:hover {
+  background-color: #0073e6;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+footer p {
+  font-size: 0.9rem;
+  text-align: center;
+}
