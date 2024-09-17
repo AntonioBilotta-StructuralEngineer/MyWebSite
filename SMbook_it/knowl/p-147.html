@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:38:35+02:00       *-->
+<!--*       on 2024-09-17T15:55:29+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,76 +15,21 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
-<p>Come premessa si ricordano le espressione esplicite del campo di spostamento \(\vec{u}\)</p>
+<p>I modelli meccanici che verranno discussi durante il corso tipicamente vengono formulati utilizzando come ente cinematico il campo di spostamento che, si ricorda, è definito come \(\vec{u} = \vec{x}-\vec{X}\text{.}\) Da cui \(\tens{F} = \tens{I}+\tens{\nabla u}\text{.}\) Pertanto il tensore di Green-Lagrange è esprimibile come</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{gather*}
-\func{u_1}{X_1, X_2, X_3}\,,\\
-\func{u_2}{X_1, X_2, X_3}\,,\\
-\func{u_3}{X_1, X_2, X_3}\,,
-\end{gather*}
+\begin{align*}
+\tens{E} \amp = \frac{1}{2}\left( \transp{\tens{F}}\,\tens{F} - \tens{I}\right)\,,\\
+\amp = \frac{1}{2}\left( \transp{(\tens{I}+\tens{\nabla u})}\,(\tens{I}+\tens{\nabla u}) - \tens{I}\right)\,,\\
+\amp = \frac{1}{2}\left(\tens{I}+\tens{\nabla u} + \transp{\tens{\nabla u}} +  \transp{\tens{\nabla u}}\,\tens{\nabla u} - \tens{I}\right)\,,\\
+\amp = \frac{1}{2}\left(\tens{\nabla u} + \transp{\tens{\nabla u}}\right) + \frac{1}{2} \transp{\tens{\nabla u}}\,\tens{\nabla u} \,.
+\end{align*}
 </div>
-<p class="continuation">e del relativo gradiente \(\tens{\nabla u}\)</p>
+<p class="continuation">Pertanto, in termini di gradiente dello spostamento, il tensore della deformazione di Green-Lagrange ha la seguente espressione</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation}
-\mat{\nabla u} =
-\left[\begin{array}{ccc}
-\regulardiff{u_1}{X_1} \amp \regulardiff{u_1}{X_2} \amp \regulardiff{u_1}{X_3}\\
-\regulardiff{u_2}{X_1} \amp \regulardiff{u_2}{X_2} \amp \regulardiff{u_2}{X_3}\\
-\regulardiff{u_3}{X_1} \amp \regulardiff{u_3}{X_2} \amp \regulardiff{u_3}{X_3}
-\end{array}\right]\,.\tag{1.9.3}
+\tens{E} = \frac{1}{2}\left(\tens{\nabla u} + \transp{\tens{\nabla u}}\right) + \frac{1}{2} \transp{\tens{\nabla u}}\,\tens{\nabla u} \,.\tag{1.8.8}
 \end{equation}
 </div>
-<p class="continuation">La seguente decomposizione di \(\tens{\nabla u}\)</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\tens{\nabla u} = \underbrace{\frac{1}{2}\left(\tens{\nabla u} + \transp{\tens{\nabla u}}\right)}_{\text{sym}\tens{\nabla u}} +  \underbrace{\frac{1}{2}\left(\tens{\nabla u} - \transp{\tens{\nabla u}}\right)}_{\text{skew}\tens{\nabla u}}\,,
-\end{equation*}
-</div>
-<p class="continuation">in generale applicabile a tutti i tensori, consente di inserire in un quadro più generale il tensore della deformazione infinitesima prima introdotto ed il ruolo giocato da  \(\tens{\nabla u}\) nella descrizione dei moti infinitesimi. Per moti infinitesimi intenderemo quindi i moti caratterizzati dalla condizione \(\|\tens{\nabla u}\| \rightarrow 0\text{.}\)</p>
-<ul class="disc">
-<li>La parte simmetrica, \(\text{sym}\tens{\nabla u}\text{,}\) che in forma matriciale è esprimibile come<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\mat{\varepsilon} = \text{sym}\mat{\nabla u}=
-\left[\begin{array}{ccc}
-\regulardiff{u_1}{X_1} \amp \frac{1}{2}\left(\regulardiff{u_1}{X_2}+\regulardiff{u_2}{X_1}\right) \amp \frac{1}{2}\left(\regulardiff{u_1}{X_3}+\regulardiff{u_3}{X_1}\right)\\
-\frac{1}{2}\left(\regulardiff{u_2}{X_1}+\regulardiff{u_1}{X_2}\right) \amp \regulardiff{u_2}{X_2} \amp  \frac{1}{2}\left(\regulardiff{u_2}{X_3}+\regulardiff{u_3}{X_2}\right)\\
-\frac{1}{2}\left(\regulardiff{u_3}{X_1}+\regulardiff{u_1}{X_3}\right) \amp \frac{1}{2}\left(\regulardiff{u_3}{X_2}+\regulardiff{u_2}{X_3}\right) \amp \regulardiff{u_3}{X_3}
-\end{array}\right]\,,\tag{1.9.4}
-\end{equation}
-</div>fornisce il tensore della deformazione infinitesima \(\tens{\varepsilon}\text{.}\) La notazione utilizzata per le singole componenti del tensore è<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\mat{\varepsilon} = 
-\left[\begin{array}{ccc}
-\varepsilon_{11} \amp \varepsilon_{12} \amp \varepsilon_{13}\\
-\varepsilon_{21} \amp \varepsilon_{22} \amp \varepsilon_{23}\\
-\varepsilon_{31} \amp \varepsilon_{32} \amp \varepsilon_{33}
-\end{array}\right]\,.\tag{1.9.5}
-\end{equation}
-</div>
-</li>
-<li>La parte emisimmetrica, \(\text{skew}\tens{\nabla u}\text{,}\) che in forma matriciale è esprimibile come<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\text{skew}\mat{\nabla u}=
-\left[\begin{array}{ccc}
-0 \amp \frac{1}{2}\left(\regulardiff{u_1}{X_2}-\regulardiff{u_2}{X_1}\right) \amp \frac{1}{2}\left(\regulardiff{u_1}{X_3}-\regulardiff{u_3}{X_1}\right)\\
-\frac{1}{2}\left(\regulardiff{u_2}{X_1}-\regulardiff{u_1}{X_2}\right) \amp 0 \amp  \frac{1}{2}\left(\regulardiff{u_2}{X_3}-\regulardiff{u_3}{X_2}\right)\\
-\frac{1}{2}\left(\regulardiff{u_3}{X_1}-\regulardiff{u_1}{X_3}\right) \amp \frac{1}{2}\left(\regulardiff{u_3}{X_2}-\regulardiff{u_2}{X_3}\right) \amp 0
-\end{array}\right]\,,\tag{1.9.6}
-\end{equation}
-</div>fornisce il <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">tensore della rotazione infinitesima</em>.</li>
-<li>Nel caso di <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">moto infinitesimo</em> generico<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\text{sym}\tens{\nabla u} \neq \tens{0}\,,\quad \text{skew}\tens{\nabla u} \neq \tens{0}.\tag{1.9.7}
-\end{equation}
-</div>
-</li>
-<li>Nel caso di <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">moto rigido infinitesimo</em><div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\text{sym}\tens{\nabla u} = \tens{0}\,,\quad \text{skew}\tens{\nabla u} \neq \tens{0}.\tag{1.9.8}
-\end{equation}
-</div>
-</li>
-</ul>
-<span class="incontext"><a href="infinitesimal_sec_strain_chap_it.html#p-147">Contesto</a></span>
+<span class="incontext"><a href="measures_sec_strain_chap_it.html#p-147">Contesto</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:40:45+02:00       *-->
+<!--*       on 2024-09-17T16:03:32+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,17 +15,24 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>The displacement solution is</p>
+<p>The applied load condition can be expressed as</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\func{u}{x} = \frac{\bar{p}}{EA} \frac{l^2}{4\pi^2} \sin\left(\frac{2\pi\,x}{l}\right)
+\func{p}{x} = \bar{p}\,\sin\left(\frac{2\pi\,x}{l}\right)
 \end{equation*}
 </div>
-<p class="continuation">and the axial force is</p>
+<p class="continuation">which, through Equation <a class="xref" data-knowl="./knowl/stretched_beam_navier.html" title="Equation 3.5.21">(3.5.21)</a>, gives</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\func{N}{x} = \bar{p} \frac{l}{2\pi} \cos\left(\frac{2\pi\,x}{l}\right)\,.
+EA\,\frac{d^2u}{dx^2} + \bar{p}\,\sin\left(\frac{2\pi\,x}{l}\right) = 0
 \end{equation*}
+</div>
+<p class="continuation">to be satisfied in each point of the beam. The boundary conditions are</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\amp \func{u}{0} = 0\,,\\
+\amp \func{u}{l} = 0\,.
+\end{align*}
 </div>
 <span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_en.html#p-335">in-context</a></span>
 </body>

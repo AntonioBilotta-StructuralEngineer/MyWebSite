@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:40:45+02:00       *-->
+<!--*       on 2024-09-17T16:03:32+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,43 +15,13 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>At this point the definition of the model is practically complete. Only the definition of equilibrium equations, which can be obtained through the virtual work principle, is missing. The principle can be formulated as follows</p>
+<p>With the definition of the external loads admissible for the beam model, the choice is made instead of extending the use of the model also to cases that in general are not included in the solution of the simply stretched prismatic solid. In particular, as the following Figure shows, <figure class="figure figure-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/trave_tesa_carichi.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure> we introduce the load per unit of length \(\func{p}{x} \text{,}\) a generic function dependent on the abscissa \(x \text{,}\) and the concetrated end forces, however expected, are generally different. The external work therefore assumes the following expression</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation}
-\int_{l} N \delta\varepsilon \,dx = \int_{l} p\,\delta u\, dx + H_{0} \,\func{\delta u}{0} +  H_{l} \,\func{\delta u}{l}\,, \quad \forall\,\delta u \;\left(\delta\varepsilon = \frac{d\delta u}{d x}\right)\,.\tag{3.5.7}
+L_e = \int_{l} \func{p}{x}\,\func{u}{x}\, dx + H_{0} \,\func{u}{0} +  H_{l} \,\func{u}{l}\,.\tag{3.5.6}
 \end{equation}
 </div>
-<p class="continuation">The relationship just written, where we have neglected to make explicit the dependencies on the variable \(x \text{,}\) can be manipulated by carrying out the following steps</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\int_{l} N \delta\varepsilon \,dx \amp= \int_{l} p\,\delta u\, dx + H_{0} \,\func{\delta u}{0} +  H_{l} \,\func{\delta u}{l}\\
-\int_{l} N \frac{d\delta u}{d x} \,dx \amp= \int_{l} p\,\delta u\, dx + H_{0} \,\func{\delta u}{0} +  H_{l} \,\func{\delta u}{l}\\
-\left[N\,\delta u \right]_0^l - \int_{l}  \frac{dN}{d x}\delta u \,dx \amp= \int_{l} p\,\delta u\, dx + H_{0} \,\func{\delta u}{0} +  H_{l} \,\func{\delta u}{l}\\
-\int_{l}  \frac{dN}{d x}\delta u + \int_{l} p\,\delta u\, dx \,dx \amp= \left[N\,\delta u \right]_0^l - H_{0} \,\func{\delta u}{0} -  H_{l} \,\func{\delta u}{l}\\
-\int_{l} \left( \frac{dN}{d x} + p\right)\delta u\, dx \amp= \func{N}{l}\,\func{\delta u}{l} - \func{N}{0}\,\func{\delta u}{0} - H_{0} \,\func{\delta u}{0} -  H_{l} \,\func{\delta u}{l}\\
-\int_{l} \left( \frac{dN}{d x} + p\right)\delta u\, dx \amp= \left(\func{N}{l}-  H_{l}\right)\func{\delta u}{l} - \left(\func{N}{0} + H_{0} \right)\func{\delta u}{0} 
-\end{align*}
-</div>
-<p class="continuation">And then we get the following writing of the virtual work principle</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\int_{l} \left( \frac{dN}{d x} + p\right)\delta u\, dx = \left(\func{N}{l}-  H_{l}\right)\func{\delta u}{l} - \left(\func{N}{0} + H_{0} \right)\func{\delta u}{0}\,,\quad \forall\,\delta u\,.\tag{3.5.8}
-\end{equation}
-</div>
-<p class="continuation">The satisfaction of this expression for any virtual displacement \(\delta u \) implies the satisfaction of the equation</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\frac{dN}{d x} + p = 0\,,\tag{3.5.9}
-\end{equation}
-</div>
-<p class="continuation">at each point of the beam axis and the fulfillment of the boundary conditions</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align}
-\func{N}{0} \amp=  -H_{0}\,,\tag{3.5.10}\\
-\func{N}{l} \amp=  H_{l}\,,\tag{3.5.11}
-\end{align}
-</div>
-<p class="continuation">on the ends of the beam axis.</p>
 <span class="incontext"><a href="stretched_beam_sec_elasticity_chap_en.html#p-309">in-context</a></span>
 </body>
 </html>

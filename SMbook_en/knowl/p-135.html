@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:40:44+02:00       *-->
+<!--*       on 2024-09-17T16:03:31+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,21 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">One might think that, known \(\tens{U}^2 \text{,}\) the simple operation \(\tens{U} = \sqrt{\tens{C}}\) allows the evaluation of \(\tens{U}\text{.}\) The operation is possible but not trivial because it requires the evaluation of the eigenvalues and eigenvectors of \(\tens{C} \text{.}\) For this reason the tensor \(\tens{C} \) or other derived quantities are used directly in strain measurements.</p>
-<span class="incontext"><a href="measures_sec_strain_chap_en.html#p-135">in-context</a></span>
+<p xmlns:svg="http://www.w3.org/2000/svg"><figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>lam1 = 2;
+lam2 = 5;
+lam3 = 7;
+I1 = lam1 + lam2 + lam3
+I2 = lam1*lam2 + lam2*lam3 + lam3*lam1
+I3 = lam1*lam2*lam3
+U = ...
+[5.2500 -1.0607 -1.7500; ...
+-1.0607 3.5000 -1.0607; ...
+-1.7500 -1.0607 5.2500];
+I1 = trace(U)
+I2 = 1/2*(trace(U)^2 - trace(U*U))
+I3 = det(U)
+</b></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.7.9<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<span class="incontext"><a href="principal_directions_sec_strain_chap_en.html#p-135">in-context</a></span>
 </body>
 </html>

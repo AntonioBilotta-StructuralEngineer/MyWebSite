@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:38:37+02:00       *-->
+<!--*       on 2024-09-17T15:55:31+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,15 +15,16 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
-<p>Nel caso piano, in generale, un vincolo applicato può dar luogo a 3 componenti di reazione:</p>
+<p>Se si considera il caso in cui siano soltanto due le componenti non nulle delle forze applicate e delle posizioni dei punti dello spazio, l'equazione vettoriale <a class="xref" data-knowl="./knowl/rb_statics1_eq.html" title="Equazione 5.1.7">(5.1.7)</a> è esprimibile solo mediante due equazioni scalari e l'equazione vettoriale <a class="xref" data-knowl="./knowl/rb_statics2_eq.html" title="Equazione 5.1.8">(5.1.8)</a> si riduce ad una sola equazione scalare. Ovvero</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-H \amp\quad \text{componente orizzontale,}\\
-V \amp\quad \text{componente verticale,}\\
-\mathcal{M}\amp\quad \text{componente coppia.}
-\end{align*}
+\begin{gather}
+\sum_{i=1}^N F_{1i} = 0\,,\tag{5.2.1}\\
+\sum_{i=1}^N F_{2i} = 0\,,\tag{5.2.2}\\
+\sum_{i=1}^N \left(  \left( X_{1i} - X_{1o}\right) F_{2i} - \left( X_{2i} - X_{2o}\right) F_{1i} \right) = 0\,.\tag{5.2.3}
+\end{gather}
 </div>
-<p class="continuation">Dove \(H\) e \(V\) sono le componenti di una forza di reazione, \(\vec{R}\text{,}\) appartenente al piano di lavoro. La presenza, in un punto del corpo, di tutte e 3 le componenti o soltanto di alcune di queste dipende dal tipo di vincolo applicato.</p>
-<span class="incontext"><a href="constraints_sec_rigid_body_statics_chap_it.html#p-428">Contesto</a></span>
+<p class="continuation">La condizione <a class="xref" data-knowl="./knowl/rb_plane_statics1_eq.html" title="Equazione 5.2.1">(5.2.1)</a> esprime l'annullamento della somma di tutte le forze orizzontali applicate, ovvero le componenti lungo l'asse 1 delle forze applicate. La condizione <a class="xref" data-knowl="./knowl/rb_plane_statics2_eq.html" title="Equazione 5.2.2">(5.2.2)</a> impone l'annullamento della somma di tutte le forze verticali applicate, ovvero le componenti lungo l'asse 2 delle forze applicate. La condizione <a class="xref" data-knowl="./knowl/rb_plane_statics3_eq.html" title="Equazione 5.2.3">(5.2.3)</a> esprime l'annullamento della somma dei momenti esercitati dalle forze orizzontali e verticali rispetto al punto scelto come polo. La seguente figura illustra per il caso di una singola forza il significato dei termini presenti nelle equazioni. <figure class="figure figure-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="image-box" style="width: 55%; margin-left: 22.5%; margin-right: 22.5%;"><img src="images/statica2D.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.2.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<span class="incontext"><a href="planecase_sec_rigid_body_statics_chap_it.html#p-428">Contesto</a></span>
 </body>
 </html>

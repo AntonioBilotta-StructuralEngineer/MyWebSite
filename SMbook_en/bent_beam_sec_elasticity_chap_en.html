@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:40:42+02:00       *-->
+<!--*       on 2024-09-17T16:03:29+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -122,7 +122,8 @@ MathJax.Hub.Config({
 <li><a href="dedication_en.html" data-scroll="dedication_en">Dedication</a></li>
 <li><a href="acknowledgement_en.html" data-scroll="acknowledgement_en">Acknowledgements</a></li>
 <li><a href="preface_en.html" data-scroll="preface_en">Preface</a></li>
-<li><a href="references_frontmatter_en.html" data-scroll="references_frontmatter_en">using MATLAB®</a></li>
+<li><a href="MATLAB_references_frontmatter_en.html" data-scroll="MATLAB_references_frontmatter_en">using MATLAB®</a></li>
+<li><a href="SMcontents_references_frontmatter_en.html" data-scroll="SMcontents_references_frontmatter_en">Additional resources</a></li>
 </ul>
 </li>
 <li class="link part"><a href="continuum_mechanics_en.html" data-scroll="continuum_mechanics_en"><span class="codenumber">I</span> <span class="title">continuum mechanics</span></a></li>
@@ -197,11 +198,11 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="bent_beam_sec_elasticity_chap_en"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.6</span> <span class="title">one-dimensional models: bent beam</span>
 </h2>
-<p id="p-313">In describing the bent beam model, we will follow the same scheme adopted in the previous section for the stretched beam. The general premise, see <a href="stretched_beam_sec_elasticity_chap_en.html#premise_stretched_beam_sec_elasticity_chap" class="internal" title="Subsection 3.5.1: premise">Subsection 3.5.1</a>, is always valid, therefore the considerations underlying the one-dimensional reduction and the observations made during the presentation of the model of the stretched beam always apply without any modification. In the following discussion we take as reference a different 3D solution, i.e. the solution found for the prismatic solid simply bent, see the <a href="problem_sec_elasticity_chap_en.html#bend_problem_sub" class="internal" title="Subsection 3.4.2: the prismatic solid simply bent">Subsection 3.4.2</a>.</p>
+<p id="p-315">In describing the bent beam model, we will follow the same scheme adopted in the previous section for the stretched beam. The general premise, see <a href="stretched_beam_sec_elasticity_chap_en.html#premise_stretched_beam_sec_elasticity_chap" class="internal" title="Subsection 3.5.1: premise">Subsection 3.5.1</a>, is always valid, therefore the considerations underlying the one-dimensional reduction and the observations made during the presentation of the model of the stretched beam always apply without any modification. In the following discussion we take as reference a different 3D solution, i.e. the solution found for the prismatic solid simply bent, see the <a href="problem_sec_elasticity_chap_en.html#bend_problem_sub" class="internal" title="Subsection 3.4.2: the prismatic solid simply bent">Subsection 3.4.2</a>.</p>
 <section class="subsection" id="subsection-64"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.6.1</span> <span class="title">the reference given by the beam axis</span>
 </h3>
-<p id="p-314">Evaluating the displacement field obtained for the prismatic solid simply bent, Eqs. <a class="xref" data-knowl="./knowl/bend_displ_1.html" title="Equation 3.4.25">(3.4.25)</a>, <a class="xref" data-knowl="./knowl/bend_displ_2.html" title="Equation 3.4.26">(3.4.26)</a> and <a class="xref" data-knowl="./knowl/bend_displ_3.html" title="Equation 3.4.27">(3.4.27)</a>, along the beam axis it gives</p>
+<p id="p-316">Evaluating the displacement field obtained for the prismatic solid simply bent, Eqs. <a class="xref" data-knowl="./knowl/bend_displ_1.html" title="Equation 3.4.25">(3.4.25)</a>, <a class="xref" data-knowl="./knowl/bend_displ_2.html" title="Equation 3.4.26">(3.4.26)</a> and <a class="xref" data-knowl="./knowl/bend_displ_3.html" title="Equation 3.4.27">(3.4.27)</a>, along the beam axis it gives</p>
 <div class="displaymath">
 \begin{align}
 u_{1} \amp = 0\,,\tag{3.6.1}\\
@@ -223,7 +224,7 @@ u_3 = \kappa\,X_2X_3/E = - X_2 \frac{d u_2}{d X_3}\,,\tag{3.6.4}
 \end{equation}
 </div>
 <p class="continuation">which shows also how \(\varepsilon_{33}\) depends on \(u_{2}\) component relative to beam axis.</p>
-<p id="p-315">What has been discussed can be reformulated on the basis of the notation currently used, see the figure below, in our model for a plane bent beam. <figure class="figure figure-like" id="figure-34"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/trave_inflessa_linea_asse_bis.png" style="width: 100%; height: auto;" alt=""></div>
+<p id="p-317">What has been discussed can be reformulated on the basis of the notation currently used, see the figure below, in our model for a plane bent beam. <figure class="figure figure-like" id="figure-34"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/trave_inflessa_linea_asse_bis.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.6.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Therefore the kinematic variable of the one-dimensional model is the transverse displacement \(\func{w}{x} \) of the beam axis and the only significant strain component for the model is</p>
 <div class="displaymath">
 \begin{equation}
@@ -232,7 +233,7 @@ u_3 = \kappa\,X_2X_3/E = - X_2 \frac{d u_2}{d X_3}\,,\tag{3.6.4}
 </div></section><section class="subsection" id="subsection-65"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.6.2</span> <span class="title">internal work</span>
 </h3>
-<p id="p-316">The one-dimensional formulation of the internal work <a class="xref" data-knowl="./knowl/beam_internal_work.html" title="Equation 3.5.1">(3.5.1)</a> becomes</p>
+<p id="p-318">The one-dimensional formulation of the internal work <a class="xref" data-knowl="./knowl/beam_internal_work.html" title="Equation 3.5.1">(3.5.1)</a> becomes</p>
 <div class="displaymath">
 \begin{align*}
 L_i \amp = \int_{\body} \sigma\varepsilon \, dV\\
@@ -263,7 +264,7 @@ M =\int_{A} \sigma\,y \, dS\,,\label{trave_inflessa_M}\tag{3.6.8}
 <p class="continuation">represents the <em class="emphasis">curvature</em>, the kinematic entity work-conjugate with \(M\text{.}\) The measure for \(M\) is \(\left[\text{F}\,\text{L}\right]\)  and for  \(\chi\) is \(\left[1/\text{L}\right]\text{.}\)</p></section><section class="subsection" id="subsection-66"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.6.3</span> <span class="title">elastic constitutive law</span>
 </h3>
-<p id="p-317">The definition of the elastic constitutive law for the one-dimensional model is obtained by reworking Eq. <a class="xref" data-knowl="./knowl/trave_inflessa_M.html" title="Equation 3.6.8">(3.6.8)</a> as follows</p>
+<p id="p-319">The definition of the elastic constitutive law for the one-dimensional model is obtained by reworking Eq. <a class="xref" data-knowl="./knowl/trave_inflessa_M.html" title="Equation 3.6.8">(3.6.8)</a> as follows</p>
 <div class="displaymath">
 \begin{align*}
 M \amp=\int_{A} \sigma\,y \, dS = \int_{A} E\varepsilon \,y \,dS  =  \int_{A} E\left(- y \frac{d^2 w}{dx^2} \right)  \,y \,dS\\
@@ -279,7 +280,7 @@ M = EJ\, \chi \,.\tag{3.6.10}
 <p class="continuation">Relationship that highlights how the proportionality coefficient that defines the link between \(M \) and \(\chi \) is given by the product between the Young's modulus of the material and the moment of inertia of the cross-section of the beam, \(J = \int_{A} y^2 \, dS \text{.}\)</p></section><section class="subsection" id="subsection-67"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.6.4</span> <span class="title">external work</span>
 </h3>
-<p id="p-318">Also for the bent beam, as already done for the stretched beam, the model does not limit itself to treating only the external loads, shown below, related to the 3D solution taken as a reference. <figure class="figure figure-like" id="figure-35"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/trave_inflessa_carichi_3D.png" style="width: 100%; height: auto;" alt=""></div>
+<p id="p-320">Also for the bent beam, as already done for the stretched beam, the model does not limit itself to treating only the external loads, shown below, related to the 3D solution taken as a reference. <figure class="figure figure-like" id="figure-35"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/trave_inflessa_carichi_3D.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.6.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Instead, an assignment of external loads of the type shown in the following figure is allowed. <figure class="figure figure-like" id="figure-36"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/trave_inflessa_carichi.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.6.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure> We then introduce the load per unit of length \(\ func {q} {x} \text{,}\) load transversal to the axis of the beam and directed as shown. On each end of the beam there is a concentrated moment and a vertical concentrated force. External work therefore takes on the following expression</p>
 <div class="displaymath">
@@ -299,10 +300,10 @@ L_e = \int_{l} \func{q}{x}\,\func{w}{x}\, dx + V_{0} \,\func{w}{0} +  V_{l} \,\f
 L_e = \int_{l} \func{q}{x}\,\func{w}{x}\, dx + V_{0} \,\func{w}{0} +  V_{l} \,\func{w}{l} - \mathcal{M}_{0} \,\func{\frac{dw}{dx}}{0} -  \mathcal{M}_{l} \,\func{\frac{dw}{dx}}{l}\,.
 \end{equation*}
 </div>
-<p id="p-319">As a consequence of this choice, the variability of \(\func{w}{x} \) is extended beyond the quadratic pattern, while bending moment and curvature, unlike the 3D solution from which we started, can be more than constant and described by generic functions \(\func{M}{x}\) and \(\func{\chi}{x}\text{.}\)</p></section><section class="subsection" id="subsection-68"><h3 class="heading hide-type">
+<p id="p-321">As a consequence of this choice, the variability of \(\func{w}{x} \) is extended beyond the quadratic pattern, while bending moment and curvature, unlike the 3D solution from which we started, can be more than constant and described by generic functions \(\func{M}{x}\) and \(\func{\chi}{x}\text{.}\)</p></section><section class="subsection" id="subsection-68"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.6.5</span> <span class="title">virtual work principle and equilibrium equations</span>
 </h3>
-<p id="p-320">With respect to our bent beam model the virtual work principle can be written as</p>
+<p id="p-322">With respect to our bent beam model the virtual work principle can be written as</p>
 <div class="displaymath">
 \begin{equation}
 \delta L_i =  \delta L_e\,,\quad \forall\,\delta w\,,\tag{3.6.12}
@@ -331,7 +332,7 @@ L_e = \int_{l} \func{q}{x}\,\func{w}{x}\, dx + V_{0} \,\func{w}{0} +  V_{l} \,\f
 \amp = -\func{M}{l} \func{\frac{d \delta w}{dx}}{l} + \func{M}{0} \func{\frac{d \delta w}{dx}}{0}  + \func{\frac{d M}{dx}}{l}\func{\delta w}{l} - \func{\frac{d M}{dx}}{0}  \func{\delta w}{0} - \int_{l} \frac{d^2 M}{dx^2}  \delta w \,dx\,. 
 \end{align*}
 </div>
-<p id="p-321">The equality between internal and external work therefore becomes</p>
+<p id="p-323">The equality between internal and external work therefore becomes</p>
 <div class="displaymath">
 \begin{equation}
 \begin{split}
@@ -352,26 +353,26 @@ L_e = \int_{l} \func{q}{x}\,\func{w}{x}\, dx + V_{0} \,\func{w}{0} +  V_{l} \,\f
 </div></section><section class="subsection" id="subsection-69"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.6.6</span> <span class="title">summary of the model</span>
 </h3>
-<article class="assemblage assemblage-like" id="assemblage-21"><ul id="p-322" class="disc">
-<li id="li-116">Loads<div class="displaymath">
+<article class="assemblage assemblage-like" id="assemblage-21"><ul id="p-324" class="disc">
+<li id="li-117">Loads<div class="displaymath">
 \begin{equation*}
 \func{q}{x}\quad \mathcal{M}_0 \quad \mathcal{M}_l \quad V_0 \quad V_l
 \end{equation*}
 </div>
 </li>
-<li id="li-117">Unknowns<div class="displaymath">
+<li id="li-118">Unknowns<div class="displaymath">
 \begin{equation*}
 \func{w}{x}\quad\func{\chi}{x}\quad\func{M}{x}
 \end{equation*}
 </div>
 </li>
-<li id="li-118">Internal work<div class="displaymath">
+<li id="li-119">Internal work<div class="displaymath">
 \begin{equation}
 L_i = \int_{l} M \chi \,dx\,.\tag{3.6.21}
 \end{equation}
 </div>
 </li>
-<li id="li-119">External work<div class="displaymath">
+<li id="li-120">External work<div class="displaymath">
 \begin{equation}
 \begin{split}
 L_e = \int_{l} \func{q}{x}\,\func{w}{x}\, dx + V_{0} \,\func{w}{0} +  V_{l} \,\func{w}{l} +\\ - \mathcal{M}_{0} \,\func{\frac{dw}{dx}}{0} -  \mathcal{M}_{l} \,\func{\frac{dw}{dx}}{l} \,.
@@ -379,25 +380,25 @@ L_e = \int_{l} \func{q}{x}\,\func{w}{x}\, dx + V_{0} \,\func{w}{0} +  V_{l} \,\f
 \end{equation}
 </div>
 </li>
-<li id="li-120">Strain-displacement relationship<div class="displaymath">
+<li id="li-121">Strain-displacement relationship<div class="displaymath">
 \begin{equation}
 \chi = - \frac{d^2 w}{dx^2}\tag{3.6.23}
 \end{equation}
 </div>
 </li>
-<li id="li-121">Elastic constitutive law<div class="displaymath">
+<li id="li-122">Elastic constitutive law<div class="displaymath">
 \begin{equation}
 M = EJ\,\chi\tag{3.6.24}
 \end{equation}
 </div>
 </li>
-<li id="li-122">Equilibrium equations<div class="displaymath">
+<li id="li-123">Equilibrium equations<div class="displaymath">
 \begin{equation}
 \frac{d^2 M}{dx^2}  + \func{q}{x} = 0\tag{3.6.25}
 \end{equation}
 </div>
 </li>
-<li id="li-123">Static boundary conditions<div class="displaymath">
+<li id="li-124">Static boundary conditions<div class="displaymath">
 \begin{align}
 \func{\frac{d M}{dx}}{0} \amp= -V_0\tag{3.6.26}\\
 \func{\frac{d M}{dx}}{l} \amp= V_l\tag{3.6.27}\\
@@ -406,7 +407,7 @@ M = EJ\,\chi\tag{3.6.24}
 \end{align}
 </div>
 </li>
-<li id="li-124">Kinematic boundary conditions<div class="displaymath">
+<li id="li-125">Kinematic boundary conditions<div class="displaymath">
 \begin{align}
 \func{w}{0} \amp=  \bar{w}_{0}\tag{3.6.30}\\
 \func{w}{l} \amp=  \bar{w}_{l}\tag{3.6.31}\\
@@ -415,7 +416,7 @@ M = EJ\,\chi\tag{3.6.24}
 \end{align}
 </div>
 </li>
-</ul></article><p id="p-323">Also for the bent beam model the equations of the model can be used to eliminate \(M \) and \(\chi \) from the unknowns and maintain only the displacement \(\func{w}{x} \text{.}\) The following steps show how to achieve this</p>
+</ul></article><p id="p-325">Also for the bent beam model the equations of the model can be used to eliminate \(M \) and \(\chi \) from the unknowns and maintain only the displacement \(\func{w}{x} \text{.}\) The following steps show how to achieve this</p>
 <div class="displaymath">
 \begin{align*}
 \frac{d^2 M}{dx^2}  + q \amp= 0\\

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:38:35+02:00       *-->
+<!--*       on 2024-09-17T15:55:29+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,19 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Alla base della <em class="emphasis">meccanica del continuo</em> vi è l'idea di studiare differenti fenomeni fisici senza una precisa conoscenza della micro-struttura interna della materia adottando il punto di vista, così detto, <em class="emphasis">macroscopico</em>. Ovvero si utilizzano una serie di quantità che rappresentano in forma <em class="emphasis">media</em> tutti i processi che avvengono a scala atomica o molecolare.</p>
-<span class="incontext"><a href="basics_sec_stress_chap_it.html#p-173">Contesto</a></span>
+<p xmlns:svg="http://www.w3.org/2000/svg">Risposta parziale all'esercizio della <a href="exercises_sec_strain_chap_it.html#strain_ex_2" class="internal" title="Sottoparagrafo 1.10.1">Sottoparagrafo 1.10.1</a>. <figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>% terzo quesito
+T = @(X) [4-2*X(1)-X(2); 2+3/2*X(1)-X(2)/2];
+Square_0 = [0 1 1 0 0; 0 0 1 1 0];
+Square=[T(Square_0(:,1)) T(Square_0(:,2)) T(Square_0(:,3)) ...
+T(Square_0(:,4)) T(Square_0(:,5))];
+hold on
+plot(Square_0(1,:), Square_0(2,:), 'k-', "LineWidth", 4)
+plot(Square(1,:), Square(2,:), 'r-', "LineWidth", 2)
+ylim([0 4])
+pbaspect([1 1 1])
+</b></pre></div>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.11.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure> <figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/strain_ex_2.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.11.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<span class="incontext"><a href="answers_sec_strain_chap_it.html#p-173">Contesto</a></span>
 </body>
 </html>

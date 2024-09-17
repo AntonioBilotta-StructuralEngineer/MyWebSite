@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:40:45+02:00       *-->
+<!--*       on 2024-09-17T16:03:32+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,11 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">The assigned scheme differs from the scheme considered in the previous section because the elastic solution to be evaluated does not have a single valid expression on the whole domain of the beam. The force applied inside the extension of the beam determines a discontinuity in the solution and therefore the need to study the problem on the two subdomains, \(0 \leq x \leq a \) and \(a \leq x \leq l \text{,}\) highlighted in the figure. We then proceed by evaluating two different elastic solutions but connected by the necessary boundary conditions at the interface.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">The general integral can be calculated using the following instructions. <figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms u(x) EA;
+ode = EA*diff(u,x,2) == 0
+dsolve(ode)
+</b></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.7.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_en.html#p-328">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:40:44+02:00       *-->
+<!--*       on 2024-09-17T16:03:31+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,22 +15,16 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>To assume infinitesimal displacements implies also very small values for the angle \(\alpha\text{,}\)\(\alpha \ll 1\text{,}\) i.e. \(\cos{\alpha}\approx 1\) and \(\sin{\alpha} \approx \alpha\text{.}\) From which</p>
+<p>For the off-diagonal component, by using <a class="xref" data-knowl="./knowl/Cij_eq.html" title="Equation 1.8.6">(1.8.6)</a>, it can be obtained</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\text{sym}\mat{\nabla u} \approx \mat{0}
-\,,\quad
-\text{skew}\mat{\nabla u} \approx
-\left[\begin{array}{cc}
-0 \amp -\alpha \\
-\alpha \amp 0 
-\end{array}\right]\,.
+\sin{\func{\gamma}{\vec{e}_1,\vec{e}_2}}\, \underbrace{\func{\lambda}{\vec{e}_1} \, \func{\lambda}{\vec{e}_2}}_{\approx 1} = \underbrace{\frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1}}_{2\,\varepsilon_{12}} + \underbrace{\frac{\partial u_1}{\partial X_1}\frac{\partial u_1}{\partial X_2} + \frac{\partial u_2}{\partial X_1}\frac{\partial u_2}{\partial X_2} + \frac{\partial u_3}{\partial X_1}\frac{\partial u_3}{\partial X_2}}_{\text{negligible in infinitesimal case}}\,,
 \end{equation*}
 </div>
-<p class="continuation">Therefore in the case of infinitesimal displacements expression <a class="xref" data-knowl="./knowl/rotation_eq.html" title="Equation 1.9.11">(1.9.11)</a> can be rewritten as follows</p>
+<p class="continuation">and then</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation}
-\tens{R} \approx \tens{I} + \text{skew}\tens{\nabla u}\,.\tag{1.9.12}
+\varepsilon_{12} \approx \frac{1}{2}\, \sin{\func{\gamma}{\vec{e}_1,\vec{e}_2}} \approx  \frac{1}{2}\, \func{\gamma}{\vec{e}_1,\vec{e}_2}\,.\tag{1.9.10}
 \end{equation}
 </div>
 <span class="incontext"><a href="infinitesimal_sec_strain_chap_en.html#p-153">in-context</a></span>

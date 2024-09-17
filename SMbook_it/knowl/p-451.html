@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:38:37+02:00       *-->
+<!--*       on 2024-09-17T15:55:31+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -26,22 +26,22 @@ momento = @(X0, X, Carico)...
 % coordinate dei punti sui quali sono applicati i carichi
 syms L;
 A = [0; 0];
-B = [L; L/2];
-C = [L/2; L];
+B = [L; 0];
+C = [L/2; 0];
 
 % scelta del polo
-POLO = C;
+POLO = A;
 
 % per ogni punto si assegna il vettore Carico = [F1; F2; M]
 % e si sommano i contributi alla risultante
-syms VA MA;
-CaricoA = [0; VA; MA];
+syms HA VA;
+CaricoA = [HA; VA; 0];
 R = R + CaricoA;
 R(3) = R(3) + momento(POLO, A, CaricoA);
 R
 
-syms HB;
-CaricoB = [HB; 0; 0];
+syms VB;
+CaricoB = [0; VB; 0];
 R = R + CaricoB;
 R(3) = R(3) + momento(POLO, B, CaricoB);
 R
@@ -60,7 +60,7 @@ R(3)==0
 ];
 
 % matrice statica e vettore dei carichi assegnati
-[B,b] = equationsToMatrix(eqns, [VA, MA, HB]);
+[B,b] = equationsToMatrix(eqns, [HA, VA, VB]);
 
 % gradi di libertà, n
 % gradi di vincolo, m
@@ -74,11 +74,11 @@ if and(r == min(m,n), m == n)
     x = linsolve(B,b);
 end
 
-VA = x(1)
-MA = x(2)
-HB = x(3)
+HA = x(1)
+VA = x(2)
+VB = x(3)
 </b></pre></div>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">5.6.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">5.6.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <span class="incontext"><a href="analysis_examples_sec_rigid_body_statics_chap_it.html#p-451">Contesto</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:40:43+02:00       *-->
+<!--*       on 2024-09-17T16:03:31+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,18 +15,30 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">The following MATLAB® instructions allow you to calculate what is required. <figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>R1 = [cos(pi/4) -sin(pi/4) 0; sin(pi/4) cos(pi/4) 0; 0 0 1];
-R2 = [cos(pi/4) 0 -sin(pi/4); 0 1 0; sin(pi/4) 0 cos(pi/4)];
-u1 = R2*R1*[1; 0; 0];
-u2 = R2*R1*[0; 1; 0];
-u3 = R2*R1*[0; 0; 1];
-lam1 = 2;
-lam2 = 5;
-lam3 = 7;
-U = lam1*u1*transpose(u1) + lam2*u2*transpose(u2) + ...
-lam3*u3*transpose(u3)
-</b></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.7.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p>Finally it is interesting to observe how the expression <a class="xref" data-knowl="./knowl/mat_spectral_U_eq.html" title="Equation 1.7.7">(1.7.7)</a> can be written in the following way</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\mat{U} =
+\left[\begin{array}{ccc}
+u_{11} \amp u_{12} \amp u_{13}\\
+u_{21} \amp u_{22} \amp u_{23}\\
+u_{31} \amp u_{32} \amp u_{33}
+\end{array}\right] 
+\left[\begin{array}{ccc}
+\lambda_1 \amp 0 \amp 0\\
+0 \amp \lambda_2 \amp 0\\
+0 \amp 0 \amp \lambda_3\\
+\end{array}\right]
+\transp{
+\left[\begin{array}{ccc}
+u_{11} \amp u_{12} \amp u_{13}\\
+u_{21} \amp u_{22} \amp u_{23}\\
+u_{31} \amp u_{32} \amp u_{33}
+\end{array}\right] 
+}\,,
+\end{equation*}
+</div>
+<p class="continuation">which is how the expression assumed by the tensor \(\tens{U} \) is evaluated when passing from the coordinate system consisting of the principal directions to the standard coordinate system \(\vec{e}_1 \text{,}\) \(\vec{e}_2 \) and \(\vec{e}_3 \text{.}\) The matrix used for the transformation is constructed by inserting in the columns the vectors \(\vec{u}_{1} \text{,}\) \(\vec{u}_{2} \) and \(\vec{u}_{3}\text{.}\)</p>
 <span class="incontext"><a href="principal_directions_sec_strain_chap_en.html#p-118">in-context</a></span>
 </body>
 </html>

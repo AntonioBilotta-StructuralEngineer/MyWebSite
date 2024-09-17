@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:40:43+02:00       *-->
+<!--*       on 2024-09-17T16:03:30+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -122,7 +122,8 @@ MathJax.Hub.Config({
 <li><a href="dedication_en.html" data-scroll="dedication_en">Dedication</a></li>
 <li><a href="acknowledgement_en.html" data-scroll="acknowledgement_en">Acknowledgements</a></li>
 <li><a href="preface_en.html" data-scroll="preface_en">Preface</a></li>
-<li><a href="references_frontmatter_en.html" data-scroll="references_frontmatter_en">using MATLAB®</a></li>
+<li><a href="MATLAB_references_frontmatter_en.html" data-scroll="MATLAB_references_frontmatter_en">using MATLAB®</a></li>
+<li><a href="SMcontents_references_frontmatter_en.html" data-scroll="SMcontents_references_frontmatter_en">Additional resources</a></li>
 </ul>
 </li>
 <li class="link part"><a href="continuum_mechanics_en.html" data-scroll="continuum_mechanics_en"><span class="codenumber">I</span> <span class="title">continuum mechanics</span></a></li>
@@ -197,7 +198,7 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="planecase_sec_rigid_body_statics_chap_en"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5.2</span> <span class="title">2D case</span>
 </h2>
-<p id="p-419">If we consider the case in which there are only two non-zero components of the applied forces and of the positions of the points of space, the vector equation <a class="xref" data-knowl="./knowl/rb_statics1_eq.html" title="Equation 5.1.7">(5.1.7)</a> can be expressed only by means of two scalar equations and the vector equation <a class="xref" data-knowl="./knowl/rb_statics2_eq.html" title="Equation 5.1.8">(5.1.8)</a> boils down to one scalar equation, i.e.</p>
+<p id="p-421">If we consider the case in which there are only two non-zero components of the applied forces and of the positions of the points of space, the vector equation <a class="xref" data-knowl="./knowl/rb_statics1_eq.html" title="Equation 5.1.7">(5.1.7)</a> can be expressed only by means of two scalar equations and the vector equation <a class="xref" data-knowl="./knowl/rb_statics2_eq.html" title="Equation 5.1.8">(5.1.8)</a> boils down to one scalar equation, i.e.</p>
 <div class="displaymath">
 \begin{gather}
 \sum_{i=1}^N F_{1i} = 0\,,\label{rb_plane_statics1_eq}\tag{5.2.1}\\
@@ -207,7 +208,7 @@ MathJax.Hub.Config({
 </div>
 <p class="continuation">The condition <a class="xref" data-knowl="./knowl/rb_plane_statics1_eq.html" title="Equation 5.2.1">(5.2.1)</a> expresses the cancellation of the sum of all the horizontal forces applied, that is the components along the axis 1 of the applied forces. The condition <a class="xref" data-knowl="./knowl/rb_plane_statics2_eq.html" title="Equation 5.2.2">(5.2.2)</a> requires the cancellation of the sum of all the vertical forces applied, that is the components along the axis 2 of the applied forces. The condition <a class="xref" data-knowl="./knowl/rb_plane_statics3_eq.html" title="Equation 5.2.3">(5.2.3)</a> expresses the cancellation of the sum of the moments exerted by the horizontal and vertical forces with respect to the point chosen as pole. The following figure illustrates for the case of a single force the meaning of the terms present in the equations. <figure class="figure figure-like" id="plane_statics_fig"><div class="image-box" style="width: 55%; margin-left: 22.5%; margin-right: 22.5%;"><img src="images/statica2D.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.2.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<article class="assemblage assemblage-like" id="assemblage-40"><p id="p-420">The following MATLAB® instructions allow to evaluate the resultants of horizontal forces, vertical forces and moments starting from the loads applied to the individual points of a rigid body. <figure class="listing figure-like" id="listing-53"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>% vector of resultants =
+<article class="assemblage assemblage-like" id="assemblage-40"><p id="p-422">The following MATLAB® instructions allow to evaluate the resultants of horizontal forces, vertical forces and moments starting from the loads applied to the individual points of a rigid body. <figure class="listing figure-like" id="listing-53"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>% vector of resultants =
 % [horizontal; vertical; moment]
 R = zeros(3,1);
 

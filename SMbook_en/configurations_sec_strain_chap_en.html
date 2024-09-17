@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:40:40+02:00       *-->
+<!--*       on 2024-09-17T16:03:27+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -122,7 +122,8 @@ MathJax.Hub.Config({
 <li><a href="dedication_en.html" data-scroll="dedication_en">Dedication</a></li>
 <li><a href="acknowledgement_en.html" data-scroll="acknowledgement_en">Acknowledgements</a></li>
 <li><a href="preface_en.html" data-scroll="preface_en">Preface</a></li>
-<li><a href="references_frontmatter_en.html" data-scroll="references_frontmatter_en">using MATLAB®</a></li>
+<li><a href="MATLAB_references_frontmatter_en.html" data-scroll="MATLAB_references_frontmatter_en">using MATLAB®</a></li>
+<li><a href="SMcontents_references_frontmatter_en.html" data-scroll="SMcontents_references_frontmatter_en">Additional resources</a></li>
 </ul>
 </li>
 <li class="link part"><a href="continuum_mechanics_en.html" data-scroll="continuum_mechanics_en"><span class="codenumber">I</span> <span class="title">continuum mechanics</span></a></li>
@@ -198,10 +199,10 @@ MathJax.Hub.Config({
 <span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title">configurations</span>
 </h2>
 <figure class="figure figure-like" id="Kinematics_01_fig"><div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="images/Kinematics_01.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-25">The object of the kinematic analysis is a continuous body which will be named with the symbol \(\body\text{.}\) Each point of the body occupies a position in space which, fixed an orthonormal reference triad \(\vec{e}_a\) (\(a = 1,2,3\)), is identified by a vector. In particular we will talk about two <em class="emphasis">configurations</em>:</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-27">The object of the kinematic analysis is a continuous body which will be named with the symbol \(\body\text{.}\) Each point of the body occupies a position in space which, fixed an orthonormal reference triad \(\vec{e}_a\) (\(a = 1,2,3\)), is identified by a vector. In particular we will talk about two <em class="emphasis">configurations</em>:</p>
 <ul class="disc">
-<li id="li-6">the <em class="emphasis">reference configuration</em> \(\body_0\text{,}\) which collects all the positions \(\vec{X}\) occupied by the points of the body before the motion;</li>
-<li id="li-7">the <em class="emphasis">current configuration</em> \(\body\text{,}\) which collects all the positions \(\vec{x}\) occupied by the points of the body after the motion.</li>
+<li id="li-7">the <em class="emphasis">reference configuration</em> \(\body_0\text{,}\) which collects all the positions \(\vec{X}\) occupied by the points of the body before the motion;</li>
+<li id="li-8">the <em class="emphasis">current configuration</em> \(\body\text{,}\) which collects all the positions \(\vec{x}\) occupied by the points of the body after the motion.</li>
 </ul>
 <p class="continuation">With respect to the chosen reference base, the positions \(\vec{X}\) and \(\vec{x}\) will be expressed using different types of notation.</p>
 <div class="displaymath">
@@ -213,9 +214,9 @@ x_1 \vec{e}_1 + x_2 \vec{e}_2 + x_3 \vec{e}_3\\
 X_a \vec{e}_a\,,\quad x_a \vec{e}_a\,.
 \end{gather*}
 </div>
-<p id="p-26"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-1" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/zJpxrEKcdVs?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p>
-<p id="p-27">Below are reported some examples of MATLAB® instructions that can be used to define and manipulate vectors.</p>
-<article class="assemblage assemblage-like" id="assemblage-1"><p id="p-28">Instructions for creating row vectors. <figure class="listing figure-like" id="listing-1"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>u = [1 2 3]
+<p id="p-28"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-1" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/zJpxrEKcdVs?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p>
+<p id="p-29">Below are reported some examples of MATLAB® instructions that can be used to define and manipulate vectors.</p>
+<article class="assemblage assemblage-like" id="assemblage-1"><p id="p-30">Instructions for creating row vectors. <figure class="listing figure-like" id="listing-1"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>u = [1 2 3]
 v = 4:6
 w = u + v
 x = 0.5
@@ -232,7 +233,7 @@ u(1,2)
 u(2,1)
 </b></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.1.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<p id="p-29">Instructions for creating column vectors (the format usually adopted to manipulate vectors in Mechanics). <figure class="listing figure-like" id="listing-2"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>u = [1; 2; 3]
+<p id="p-31">Instructions for creating column vectors (the format usually adopted to manipulate vectors in Mechanics). <figure class="listing figure-like" id="listing-2"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>u = [1; 2; 3]
 v = (linspace(4,6,3))'
 w = u + v
 x = 0.5

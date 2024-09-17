@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:38:34+02:00       *-->
+<!--*       on 2024-09-17T15:55:28+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -122,7 +122,8 @@ MathJax.Hub.Config({
 <li><a href="dedication_it.html" data-scroll="dedication_it">Dedica</a></li>
 <li><a href="acknowledgement_it.html" data-scroll="acknowledgement_it">Ringraziamenti</a></li>
 <li><a href="preface_it.html" data-scroll="preface_it">Prefazione</a></li>
-<li><a href="references_frontmatter_en.html" data-scroll="references_frontmatter_en">utilizzo di MATLAB®</a></li>
+<li><a href="MATLAB_references_frontmatter_it.html" data-scroll="MATLAB_references_frontmatter_it">utilizzo di MATLAB®</a></li>
+<li><a href="SMcontents_references_frontmatter_it.html" data-scroll="SMcontents_references_frontmatter_it">Risorse aggiuntive</a></li>
 </ul>
 </li>
 <li class="link part"><a href="continuum_mechanics_it.html" data-scroll="continuum_mechanics_it"><span class="codenumber">I</span> <span class="title">meccanica del continuo</span></a></li>
@@ -197,8 +198,8 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="constraints_sec_rigid_body_statics_chap_it"><h2 class="heading hide-type">
 <span class="type">Paragrafo</span> <span class="codenumber">5.3</span> <span class="title">vincoli</span>
 </h2>
-<p id="p-427">Un corpo o un sistema di corpi tipicamente è soggetto sia ai carichi applicati sia a delle assegnate condizioni di vincolo. Da un punto di vista statico i vincoli vengono trattati rappresentando l’azione esercitata dal vincolo in termini di forze o coppie denominate <em class="alert">reazioni vincolari</em>. Tale procedura, come vedremo, consente di ottenere il <em class="alert">diagramma di corpo libero</em> mediante il quale il corpo viene rappresentato sotto l'azione di due gruppi di enti statici: le azioni applicate e le reazioni vincolari.</p>
-<p id="p-428">Nel caso piano, in generale, un vincolo applicato può dar luogo a 3 componenti di reazione:</p>
+<p id="p-430">Un corpo o un sistema di corpi tipicamente è soggetto sia ai carichi applicati sia a delle assegnate condizioni di vincolo. Da un punto di vista statico i vincoli vengono trattati rappresentando l’azione esercitata dal vincolo in termini di forze o coppie denominate <em class="alert">reazioni vincolari</em>. Tale procedura, come vedremo, consente di ottenere il <em class="alert">diagramma di corpo libero</em> mediante il quale il corpo viene rappresentato sotto l'azione di due gruppi di enti statici: le azioni applicate e le reazioni vincolari.</p>
+<p id="p-431">Nel caso piano, in generale, un vincolo applicato può dar luogo a 3 componenti di reazione:</p>
 <div class="displaymath">
 \begin{align*}
 H \amp\quad \text{componente orizzontale,}\\
@@ -210,7 +211,7 @@ V \amp\quad \text{componente verticale,}\\
 <section class="subsection" id="subsection-103"><h3 class="heading hide-type">
 <span class="type">Sottoparagrafo</span> <span class="codenumber">5.3.1</span> <span class="title">assenza di vincolo</span>
 </h3>
-<p id="p-429">È il caso banale in cui in un punto non vi è alcun vincolo applicato, di conseguenza non sarà possibile l'insorgere di componenti di reazione differenti da zero:</p>
+<p id="p-432">È il caso banale in cui in un punto non vi è alcun vincolo applicato, di conseguenza non sarà possibile l'insorgere di componenti di reazione differenti da zero:</p>
 <div class="displaymath">
 \begin{equation}
 H=0 \,, \quad V=0 \,,\quad \mathcal{M} = 0\,.\tag{5.3.1}
@@ -222,7 +223,7 @@ H=0 \,, \quad V=0 \,,\quad \mathcal{M} = 0\,.\tag{5.3.1}
 <span class="type">Sotto-sottoparagrafo</span> <span class="codenumber">5.3.2.1</span> <span class="title">carrello</span>
 </h4>
 <figure class="figure figure-like" id="carrello_statica_fig"><div class="image-box" style="width: 52%; margin-left: 24%; margin-right: 24%;"><img src="images/vincolosemplice_carrello_statica.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.3.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-430">La presenza del carrello determina, dal punto di vista statico, soltanto una forza di reazione, \(\vec{R}\text{,}\) diretta secondo l'asse del carrello. Quindi delle tre componenti di reazione solo le prime due possono essere diverse da zero</p>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.3.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-433">La presenza del carrello determina, dal punto di vista statico, soltanto una forza di reazione, \(\vec{R}\text{,}\) diretta secondo l'asse del carrello. Quindi delle tre componenti di reazione solo le prime due possono essere diverse da zero</p>
 <div class="displaymath">
 \begin{equation}
 H \neq 0 \,, \quad V \neq 0 \,,\quad \mathcal{M} = 0\,.\tag{5.3.2}
@@ -234,7 +235,7 @@ H \neq 0 \,, \quad V \neq 0 \,,\quad \mathcal{M} = 0\,.\tag{5.3.2}
 \frac{V}{H} = \tan{\alpha}\,.\tag{5.3.3}
 \end{equation}
 </div>
-<p id="p-431">Ovviamente nel caso cui il carrello abbia asse orizzontale solo \(H\) può essere diversa da zero:</p>
+<p id="p-434">Ovviamente nel caso cui il carrello abbia asse orizzontale solo \(H\) può essere diversa da zero:</p>
 <div class="displaymath">
 \begin{equation}
 H \neq 0 \,, \quad V = 0 \,,\quad \mathcal{M} = 0\,.\tag{5.3.4}
@@ -249,7 +250,7 @@ H = 0 \,, \quad V \neq 0 \,,\quad \mathcal{M} = 0\,.\tag{5.3.5}
 <span class="type">Sotto-sottoparagrafo</span> <span class="codenumber">5.3.2.2</span> <span class="title">doppio bipendolo</span>
 </h4>
 <figure class="figure figure-like" id="doppiobipendolo_statica_fig"><div class="image-box" style="width: 52%; margin-left: 24%; margin-right: 24%;"><img src="images/vincolosemplice_doppiobipendolo_statica.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.3.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-432">Il doppio bipendolo vincola la rotazione di corpo rigido del corpo rendendo possibile, dal punto di vista statico, solo l'insorgere della componente coppia della reazione vincolare. Pertanto si avrà</p>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.3.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-435">Il doppio bipendolo vincola la rotazione di corpo rigido del corpo rendendo possibile, dal punto di vista statico, solo l'insorgere della componente coppia della reazione vincolare. Pertanto si avrà</p>
 <div class="displaymath">
 \begin{equation}
 H = 0 \,, \quad V = 0 \,,\quad \mathcal{M} \neq 0\,.\tag{5.3.6}
@@ -261,7 +262,7 @@ H = 0 \,, \quad V = 0 \,,\quad \mathcal{M} \neq 0\,.\tag{5.3.6}
 <span class="type">Sotto-sottoparagrafo</span> <span class="codenumber">5.3.3.1</span> <span class="title">cerniera</span>
 </h4>
 <figure class="figure figure-like" id="cerniera_statica_fig"><div class="image-box" style="width: 52%; margin-left: 24%; margin-right: 24%;"><img src="images/vincolodoppio_cerniera_statica.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.3.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-433">La presenza della cerniera rende possibile, come nel caso del carrello, la presenza di una forza di reazione, \(\vec{R}\text{,}\) la cui direzione non è nota a priori. Pertanto avremo le due componenti di reazione, orizzontale e verticale, eventualmente non nulle e indipendenti</p>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.3.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-436">La presenza della cerniera rende possibile, come nel caso del carrello, la presenza di una forza di reazione, \(\vec{R}\text{,}\) la cui direzione non è nota a priori. Pertanto avremo le due componenti di reazione, orizzontale e verticale, eventualmente non nulle e indipendenti</p>
 <div class="displaymath">
 \begin{equation}
 H \neq 0 \,, \quad V \neq 0 \,,\quad \mathcal{M} = 0\,.\tag{5.3.7}
@@ -270,7 +271,7 @@ H \neq 0 \,, \quad V \neq 0 \,,\quad \mathcal{M} = 0\,.\tag{5.3.7}
 <span class="type">Sotto-sottoparagrafo</span> <span class="codenumber">5.3.3.2</span> <span class="title">bipendolo</span>
 </h4>
 <figure class="figure figure-like" id="bipendolo_statica_fig"><div class="image-box" style="width: 52%; margin-left: 24%; margin-right: 24%;"><img src="images/vincolodoppio_bipendolo_statica.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.3.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-434">Il bipendolo per le componenti orizzontale e verticale si comporta come il carrello. Il vincolo ulteriore sulla rotazione determina anche la presenza della componte coppia. Pertanto si avrà</p>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.3.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-437">Il bipendolo per le componenti orizzontale e verticale si comporta come il carrello. Il vincolo ulteriore sulla rotazione determina anche la presenza della componte coppia. Pertanto si avrà</p>
 <div class="displaymath">
 \begin{equation}
 H \neq 0 \,, \quad V \neq 0 \,,\quad \mathcal{M} \neq 0\,,\tag{5.3.8}
@@ -282,7 +283,7 @@ H \neq 0 \,, \quad V \neq 0 \,,\quad \mathcal{M} \neq 0\,,\tag{5.3.8}
 \frac{V}{H} = \tan{\alpha}\,.\tag{5.3.9}
 \end{equation}
 </div>
-<p id="p-435">Anche per il bipendolo se l'asse è orizzontale solo \(H\) può essere diversa da zero:</p>
+<p id="p-438">Anche per il bipendolo se l'asse è orizzontale solo \(H\) può essere diversa da zero:</p>
 <div class="displaymath">
 \begin{equation}
 H \neq 0 \,, \quad V = 0 \,,\quad \mathcal{M} \neq 0\,.\tag{5.3.10}
@@ -300,7 +301,7 @@ H = 0 \,, \quad V \neq 0 \,,\quad \mathcal{M} \neq 0\,.\tag{5.3.11}
 <span class="type">Sotto-sottoparagrafo</span> <span class="codenumber">5.3.4.1</span> <span class="title">incastro</span>
 </h4>
 <figure class="figure figure-like" id="incastro_statica_fig"><div class="image-box" style="width: 52%; margin-left: 24%; margin-right: 24%;"><img src="images/vincolotriplo_incastro_statica.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.3.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-436">L'incastro determina l'insorgere di una reazione vicolare avente le 3 componenti tutte eventualmente non nulle e indipendenti</p>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.3.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-439">L'incastro determina l'insorgere di una reazione vicolare avente le 3 componenti tutte eventualmente non nulle e indipendenti</p>
 <div class="displaymath">
 \begin{equation}
 H \neq 0 \,, \quad V \neq 0 \,,\quad \mathcal{M} \neq 0\,.\tag{5.3.12}
@@ -308,7 +309,7 @@ H \neq 0 \,, \quad V \neq 0 \,,\quad \mathcal{M} \neq 0\,.\tag{5.3.12}
 </div></section></section><section class="subsection" id="subsection-107"><h3 class="heading hide-type">
 <span class="type">Sottoparagrafo</span> <span class="codenumber">5.3.5</span> <span class="title">riepilogo</span>
 </h3>
-<p id="p-437">Le figure successive illustrano per il caso piano la rappresentazione grafica dei vincoli e l'eventuale presenza delle componenti di reazione \(H\text{,}\) \(V\) e \(\mathcal{M}\text{.}\)</p>
+<p id="p-440">Le figure successive illustrano per il caso piano la rappresentazione grafica dei vincoli e l'eventuale presenza delle componenti di reazione \(H\text{,}\) \(V\) e \(\mathcal{M}\text{.}\)</p>
 <figure class="figure figure-like" id="statica_vicoli_semplici_fig"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/statica_vincoli_semplici.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.3.6<span class="period">.</span></span><span class="space"> </span>Vincoli semplici.</figcaption></figure><figure class="figure figure-like" id="statica_vicoli_doppi_fig"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/statica_vincoli_doppi.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.3.7<span class="period">.</span></span><span class="space"> </span>Vincoli doppi.</figcaption></figure><figure class="figure figure-like" id="statica_vicoli_tripli_fig"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/statica_vincoli_tripli.png" style="width: 100%; height: auto;" alt=""></div>
@@ -317,7 +318,7 @@ H \neq 0 \,, \quad V \neq 0 \,,\quad \mathcal{M} \neq 0\,.\tag{5.3.12}
 </h6>I vincoli "carrello" e "bipendolo" possono essere rappresentati mediante un'inclinazione differente da \(0\) e \(\pi/2\text{,}\) in tal caso la rotazione del simbolo ha anche un preciso significato meccanico in quanto la forza da essi esercitata è ruotata dello stesso angolo, dando luogo a componenti orizzontale e verticale eventualmente ambedue diverse da zero. Gli altri vincoli invece esercitano comunque le componenti di reazione indicate nelle figure indipendentemente da una eventuale rotazione applicata nella loro rappresentazione grafica.</article></section><section class="subsection" id="subsection-108"><h3 class="heading hide-type">
 <span class="type">Sottoparagrafo</span> <span class="codenumber">5.3.6</span> <span class="title">vincoli interni</span>
 </h3>
-<p id="p-438">I vincoli interni prescrivono, a differenza dai vincoli esterni, condizioni cinematiche nei punti di contatto tra uno o più corpi. Pertanto, da un punto di vista statico, vengono trattati in termini di reazioni vincolari scambiate dai corpi interessati dalla condizione di vincolo. In figura viene illustrato uno dei casi più ricorrenti, ovvero il caso della cerniera interna.</p>
+<p id="p-441">I vincoli interni prescrivono, a differenza dai vincoli esterni, condizioni cinematiche nei punti di contatto tra uno o più corpi. Pertanto, da un punto di vista statico, vengono trattati in termini di reazioni vincolari scambiate dai corpi interessati dalla condizione di vincolo. In figura viene illustrato uno dei casi più ricorrenti, ovvero il caso della cerniera interna.</p>
 <figure class="figure figure-like" id="statica_cerniera_interna_fig"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/cernierainterna.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.3.10<span class="period">.</span></span><span class="space"> </span></figcaption></figure></section></section></div></main>
 </div>

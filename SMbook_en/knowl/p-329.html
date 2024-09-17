@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:40:45+02:00       *-->
+<!--*       on 2024-09-17T16:03:32+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,28 +15,15 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>By applying the equilibrium equation <a class="xref" data-knowl="./knowl/stretched_beam_navier.html" title="Equation 3.5.21">(3.5.21)</a> to the two subdomains the following equations are obtained</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\amp EA\,\frac{d^2u_a}{dx^2} = 0\,,\quad 0 \leq x \leq a\,,\\
-\amp EA\,\frac{d^2u_b}{dx^2} = 0\,,\quad a \leq x \leq l\,.
-\end{align*}
-</div>
-<p class="continuation">We thus obtain a system of 2 differential equations where the unknowns, \(u_a \) and \(u_b \text{,}\) are uncoupled. Unknowns that still interact in the boundary conditions. In particular, these conditions are expressed by the following equations</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\amp \func{u_a}{0} = 0\,,\\
-\amp \func{u_b}{l} = 0\,,\\
-\amp \func{u_a}{a} = \func{u_b}{a}\,,\\
-\amp EA\, \func{\frac{du_a}{dx}}{a} - EA\, \func{\frac{du_b}{dx}}{a} = F\,,
-\end{align*}
-</div>
-<p class="continuation">where the latter equation is given by the static condition</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\func{N_a}{a} - \func{N_b}{a} = F\,.
-\end{equation*}
-</div>
+<p xmlns:svg="http://www.w3.org/2000/svg">The solution that also satisfies the assigned boundary conditions is obtained through the following instructions. <figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms u(x) EA F l;
+Du = diff(u);
+ode = EA*diff(u,x,2) == 0;
+cond1 = u(0) == 0;
+cond2 = EA*Du(l) == F;
+conds = [cond1 cond2];
+dsolve(ode,conds)
+</b></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.7.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_en.html#p-329">in-context</a></span>
 </body>
 </html>

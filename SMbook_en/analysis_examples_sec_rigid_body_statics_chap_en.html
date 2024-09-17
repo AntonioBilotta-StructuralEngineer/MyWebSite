@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:40:43+02:00       *-->
+<!--*       on 2024-09-17T16:03:30+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -122,7 +122,8 @@ MathJax.Hub.Config({
 <li><a href="dedication_en.html" data-scroll="dedication_en">Dedication</a></li>
 <li><a href="acknowledgement_en.html" data-scroll="acknowledgement_en">Acknowledgements</a></li>
 <li><a href="preface_en.html" data-scroll="preface_en">Preface</a></li>
-<li><a href="references_frontmatter_en.html" data-scroll="references_frontmatter_en">using MATLAB®</a></li>
+<li><a href="MATLAB_references_frontmatter_en.html" data-scroll="MATLAB_references_frontmatter_en">using MATLAB®</a></li>
+<li><a href="SMcontents_references_frontmatter_en.html" data-scroll="SMcontents_references_frontmatter_en">Additional resources</a></li>
 </ul>
 </li>
 <li class="link part"><a href="continuum_mechanics_en.html" data-scroll="continuum_mechanics_en"><span class="codenumber">I</span> <span class="title">continuum mechanics</span></a></li>
@@ -200,9 +201,9 @@ MathJax.Hub.Config({
 <section class="subsection" id="subsection-112"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.6.1</span> <span class="title">cantilever beam</span>
 </h3>
-<p id="p-438">Consider a simple beam fixed at one end and subjected to a vertical force at the free end. The following figure shows the starting scheme and the free body diagram obtained by removing the fixed support and applying the related constraint reaction components (\(m = 3 \)).</p>
+<p id="p-440">Consider a simple beam fixed at one end and subjected to a vertical force at the free end. The following figure shows the starting scheme and the free body diagram obtained by removing the fixed support and applying the related constraint reaction components (\(m = 3 \)).</p>
 <figure class="figure figure-like" id="statica_mensola_con_forza_fig"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="images/statica_mensola_con_forza.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.6.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-439">The analysis involves only one body, therefore it is possible to write 3 equilibrium equations (\(n = 3 \)) which, taking as pole the end \(A \) in the rotational equilibrium of the beam, can be expressed as follows</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.6.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-441">The analysis involves only one body, therefore it is possible to write 3 equilibrium equations (\(n = 3 \)) which, taking as pole the end \(A \) in the rotational equilibrium of the beam, can be expressed as follows</p>
 <div class="displaymath">
 \begin{align*}
 H_A \amp = 0\,,\\
@@ -233,9 +234,9 @@ V_{A}  \amp= F\,,\\
 </div></section><section class="subsection" id="subsection-113"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.6.2</span> <span class="title">supported beam</span>
 </h3>
-<p id="p-440">Consider a beam constrained in the manner shown in the figure and subjected to a vertical force in the middle. The same figure also shows the free body diagram obtained by removing the hinge and roller support and applying the related constraint reaction components (\(m = 3 \)).</p>
+<p id="p-442">Consider a beam constrained in the manner shown in the figure and subjected to a vertical force in the middle. The same figure also shows the free body diagram obtained by removing the hinge and roller support and applying the related constraint reaction components (\(m = 3 \)).</p>
 <figure class="figure figure-like" id="statica_appoggiata_con_forza_fig"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="images/statica_appoggiata_con_forza.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.6.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-441">The presence of a single body determines the writing of 3 equations of equilibrium (\(n = 3 \)) for which the extreme \(A \) is assumed as pole for rotational equilibrium:</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.6.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-443">The presence of a single body determines the writing of 3 equations of equilibrium (\(n = 3 \)) for which the extreme \(A \) is assumed as pole for rotational equilibrium:</p>
 <div class="displaymath">
 \begin{align*}
 H_A \amp = 0\,,\\
@@ -264,7 +265,7 @@ V_{A}  \amp= F/2\,,\\
 V_{B}  \amp= F/2\,.
 \end{align*}
 </div>
-<article class="assemblage assemblage-like" id="assemblage-41"><p id="p-442">The MATLAB® instructions that can be used for the calculation of unknown constraint reactions are reported below. <figure class="listing figure-like" id="listing-54"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>% resultants' vector =
+<article class="assemblage assemblage-like" id="assemblage-41"><p id="p-444">The MATLAB® instructions that can be used for the calculation of unknown constraint reactions are reported below. <figure class="listing figure-like" id="listing-54"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>% resultants' vector =
 % [horizontal; vertical; torque]
 R = zeros(3,1);
 
@@ -330,9 +331,9 @@ VB = x(3)
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.6.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></section><section class="subsection" id="subsection-114"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.6.3</span> <span class="title">simple frame</span>
 </h3>
-<p id="p-443">Consider the following simple frame subjected to a vertical force applied in the midle of the horizzontal beam. The constraints (\(m = 3 \)) are applied at the basis of the vertical beams and their removal and the subsequent application of the constraint reaction components leads to the free body diagram shown in the figure.</p>
+<p id="p-445">Consider the following simple frame subjected to a vertical force applied in the midle of the horizzontal beam. The constraints (\(m = 3 \)) are applied at the basis of the vertical beams and their removal and the subsequent application of the constraint reaction components leads to the free body diagram shown in the figure.</p>
 <figure class="figure figure-like" id="portale_isostatico_fig"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="images/portale_isostatico.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.6.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-444">Equilibrium equations (\(n=3\)) are</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.6.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-446">Equilibrium equations (\(n=3\)) are</p>
 <div class="displaymath">
 \begin{align*}
 H_B \amp = 0\,,\\
@@ -361,7 +362,7 @@ V_{A} \amp= F\,,\\
 H_{B}  \amp= 0\,.
 \end{align*}
 </div>
-<article class="assemblage assemblage-like" id="assemblage-42"><p id="p-445">The MATLAB® instructions that can be used for the calculation of unknown constraint reactions are as follows. <figure class="listing figure-like" id="listing-55"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>% resultants' vector =
+<article class="assemblage assemblage-like" id="assemblage-42"><p id="p-447">The MATLAB® instructions that can be used for the calculation of unknown constraint reactions are as follows. <figure class="listing figure-like" id="listing-55"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>% resultants' vector =
 % [horizontal; vertical; torque]
 R = zeros(3,1);
 
@@ -427,9 +428,9 @@ HB = x(3)
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.6.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></section><section class="subsection" id="subsection-115"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.6.4</span> <span class="title">two bodies system</span>
 </h3>
-<p id="p-446">Consider the following system consisting of two bodies connected by an internal hinge. The removal of all the degrees of constraint (\(m = 6 \)) and the subsequent application of the constraint reaction components leads to the free body diagram shown in the figure.</p>
+<p id="p-448">Consider the following system consisting of two bodies connected by an internal hinge. The removal of all the degrees of constraint (\(m = 6 \)) and the subsequent application of the constraint reaction components leads to the free body diagram shown in the figure.</p>
 <figure class="figure figure-like" id="statica_arcoatrecerniere_fig"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="images/statica_arcoatrecerniere.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.6.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-447">The system consists of two bodies (\(n = 6 \)), allowing the writing of two groups of equations: the equilibrium equations for the body \(AB \) (pole in \(A \))</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.6.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-449">The system consists of two bodies (\(n = 6 \)), allowing the writing of two groups of equations: the equilibrium equations for the body \(AB \) (pole in \(A \))</p>
 <div class="displaymath">
 \begin{align*}
 H_A + H_B \amp = 0\,,\\
@@ -461,7 +462,7 @@ H_{B} l + V_C 2l \amp = 0\,.
 \left[\begin{array}{c} 0 \\ 0 \\ 0 \\ 0 \\ 0 \\ 0 \end{array}\right]\,.
 \end{equation*}
 </div>
-<article class="assemblage assemblage-like" id="assemblage-43"><p id="p-448">The following MATLAB® instructions can be used to calculate the rank of the static matrix. <figure class="listing figure-like" id="listing-56"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms l
+<article class="assemblage assemblage-like" id="assemblage-43"><p id="p-450">The following MATLAB® instructions can be used to calculate the rank of the static matrix. <figure class="listing figure-like" id="listing-56"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms l
 B = [
 1 0 1 0 0 0;
 0 1 0 1 0 0;
@@ -472,8 +473,8 @@ B = [
 ]
 rango = rank(B)
 </b></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.6.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-449">The calculation provides a rank equal to \(r = 6 \) which verifies the condition \(\text{min}(n, m) = 6 \text{.}\) Being \(m == n \) the system is isostatic. The linear system solution calculable with MATLAB®</p>
-<article class="assemblage assemblage-like" id="assemblage-44"><p id="p-450"><figure class="listing figure-like" id="listing-57"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms l F
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.6.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-451">The calculation provides a rank equal to \(r = 6 \) which verifies the condition \(\text{min}(n, m) = 6 \text{.}\) Being \(m == n \) the system is isostatic. The linear system solution calculable with MATLAB®</p>
+<article class="assemblage assemblage-like" id="assemblage-44"><p id="p-452"><figure class="listing figure-like" id="listing-57"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms l F
 B = [
 1 0 1 0 0 0;
 0 1 0 1 0 0;
@@ -485,7 +486,7 @@ B = [
 f = [0; -F; -F*l; F; 0; 0]
 r = linsolve(B, -f)
 </b></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.6.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-451">furnishes the unique solution reported below</p>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.6.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-453">furnishes the unique solution reported below</p>
 <div class="displaymath">
 \begin{align*}
 H_{A} \amp= F\,,\\
@@ -496,7 +497,7 @@ H_{C} \amp= -2F\,,\\
 V_C  \amp= F/2\,.
 \end{align*}
 </div>
-<article class="assemblage assemblage-like" id="assemblage-45"><p id="p-452">The previous two bodies system can be solved by using the following MATLAB® instructions. <figure class="listing figure-like" id="listing-58"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>% resultants' vector =
+<article class="assemblage assemblage-like" id="assemblage-45"><p id="p-454">The previous two bodies system can be solved by using the following MATLAB® instructions. <figure class="listing figure-like" id="listing-58"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>% resultants' vector =
 % [horizontal; vertical; torque]
 % for the first body
 R1 = zeros(3,1);

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:40:44+02:00       *-->
+<!--*       on 2024-09-17T16:03:32+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,34 +15,14 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Retracing the same steps taken in  <a href="motivations_sec_elasticity_chap_en.html#motivation_static_subsubsec" class="internal" title="Subsubsection 3.1.1.1: stress field assumption and solution">Subsubsection 3.1.1.1</a> for the simply stretched solid, we consider the verification or imposition of the boundary conditions. In particular, the satisfaction of Eq. <a class="xref" data-knowl="./knowl/motiv_bc3_eq.html" title="Equation 3.1.6">(3.1.6)</a> is easily verified, in fact</p>
+<p>The formulation of the static part of the problem is identical to that made for the prismatic solid simply stretched except for the end faces of the solid on which the applied tractions assume the following expression</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\left[\begin{array}{ccc}
-0 \amp 0 \amp 0\\
-0 \amp 0 \amp 0\\
-0 \amp 0 \amp \kappa\,X_2
-\end{array}\right]
-\left[\begin{array}{r}n_1\\n_2\\0\end{array}\right] =
-\left[\begin{array}{r}0\\0\\0\end{array}\right] \,.
-\end{equation*}
+\begin{align}
+\Sigma_1:\amp\quad \matWp{t}{1} = \left[\begin{array}{c}0\\0\\-\frac{\bar{t}}{H/2}\,X_2\end{array}\right] \,,\tag{3.4.14}\\
+\Sigma_2:\amp\quad \matWp{t}{2} = \left[\begin{array}{c}0\\0\\\frac{\bar{t}}{H/2}\,X_2 \end{array}\right] \,,\tag{3.4.15}
+\end{align}
 </div>
-<p class="continuation">Condition <a class="xref" data-knowl="./knowl/motiv_bc1_eq.html" title="Equation 3.1.4">(3.1.4)</a> gives</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\left[\begin{array}{ccc}
-0 \amp 0 \amp 0\\
-0 \amp 0 \amp 0\\
-0 \amp 0 \amp \kappa\,X2
-\end{array}\right]
-\left[\begin{array}{r}0 \\ 0\\-1\end{array}\right] =
-\left[\begin{array}{c}0\\0\\-\frac{\bar{t}}{H/2}\,X_2\end{array}\right]
-\quad \rightarrow \quad
-\kappa = \frac{\bar{t}}{H/2}
-\,.
-\end{equation*}
-</div>
-<p class="continuation">The same result should be obtained through condition  <a class="xref" data-knowl="./knowl/motiv_bc2_eq.html" title="Equation 3.1.5">(3.1.5)</a>.</p>
+<p class="continuation">where \(H \) represents the height of the solid along the direction \(X_2 \) and \(\bar{t} \) is the maximum intensity of the applied tractions.</p>
 <span class="incontext"><a href="problem_sec_elasticity_chap_en.html#p-291">in-context</a></span>
 </body>
 </html>

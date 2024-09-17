@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:40:40+02:00       *-->
+<!--*       on 2024-09-17T16:03:27+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -122,7 +122,8 @@ MathJax.Hub.Config({
 <li><a href="dedication_en.html" data-scroll="dedication_en">Dedication</a></li>
 <li><a href="acknowledgement_en.html" data-scroll="acknowledgement_en">Acknowledgements</a></li>
 <li><a href="preface_en.html" data-scroll="preface_en">Preface</a></li>
-<li><a href="references_frontmatter_en.html" data-scroll="references_frontmatter_en">using MATLAB®</a></li>
+<li><a href="MATLAB_references_frontmatter_en.html" data-scroll="MATLAB_references_frontmatter_en">using MATLAB®</a></li>
+<li><a href="SMcontents_references_frontmatter_en.html" data-scroll="SMcontents_references_frontmatter_en">Additional resources</a></li>
 </ul>
 </li>
 <li class="link part"><a href="continuum_mechanics_en.html" data-scroll="continuum_mechanics_en"><span class="codenumber">I</span> <span class="title">continuum mechanics</span></a></li>
@@ -197,12 +198,12 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="gradient_sec_strain_chap_en"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.3</span> <span class="title">deformation gradient</span>
 </h2>
-<p id="p-53">The transformation \(\vec{\chi}\) that was introduced to describe the motion of a body is completely generic therefore it is not necessarily linear. But we will see how this feature, linearity, still plays a fundamental role because, even if generic, \(\vec{\chi}\) can be described <em class="emphasis">locally</em> through its linearization. This idea is based on the notion of <em class="emphasis">differential of a function</em>.</p>
-<p id="p-54">In order to recall, in a simple way, the idea behind the linearization operations, this process is illustrated in the following figure for a real function depending on a single variable.</p>
-<article class="assemblage assemblage-like" id="assemblage-4"><p id="p-55"><div class="sidebyside"><div class="sbsrow" style="margin-left:1.25%;margin-right:1.25%;">
+<p id="p-55">The transformation \(\vec{\chi}\) that was introduced to describe the motion of a body is completely generic therefore it is not necessarily linear. But we will see how this feature, linearity, still plays a fundamental role because, even if generic, \(\vec{\chi}\) can be described <em class="emphasis">locally</em> through its linearization. This idea is based on the notion of <em class="emphasis">differential of a function</em>.</p>
+<p id="p-56">In order to recall, in a simple way, the idea behind the linearization operations, this process is illustrated in the following figure for a real function depending on a single variable.</p>
+<article class="assemblage assemblage-like" id="assemblage-4"><p id="p-57"><div class="sidebyside"><div class="sbsrow" style="margin-left:1.25%;margin-right:1.25%;">
 <div class="sbspanel" style="width:51.2820512820513%;justify-content:center;"><img src="images/linearization.png" style="width: 100%; height: auto;" alt=""></div>
 <div class="sbspanel" style="width:46.1538461538462%;justify-content:center;">
-<div class="displaymath" id="p-56">
+<div class="displaymath" id="p-58">
 \begin{equation*}
 f \,:\, x \in \mathbb{R} \,\longmapsto\, y \in \mathbb{R}
 \end{equation*}
@@ -221,7 +222,7 @@ dy = \frac{df}{dx}\,dx\,.\label{df_eq}\tag{1.3.1}
 \end{equation}
 </div>
 </div>
-</div></div></p></article><p id="p-57">A rigorous generalization of the equation <a class="xref" data-knowl="./knowl/df_eq.html" title="Equation 1.3.1">(1.3.1)</a> would require additional instruments far beyond the introductory purposes of the present exposition. The final result is however given, result which provides the differential \(d\vec{x}\) relative to the current configuration as a function of the differential \(d\vec{X}\) relative to the reference configuration. For this purpose it si useful to write an expanded version of Equation <a class="xref" data-knowl="./knowl/motion_eq.html" title="Equation 1.2.1">(1.2.1)</a></p>
+</div></div></p></article><p id="p-59">A rigorous generalization of the equation <a class="xref" data-knowl="./knowl/df_eq.html" title="Equation 1.3.1">(1.3.1)</a> would require additional instruments far beyond the introductory purposes of the present exposition. The final result is however given, result which provides the differential \(d\vec{x}\) relative to the current configuration as a function of the differential \(d\vec{X}\) relative to the reference configuration. For this purpose it si useful to write an expanded version of Equation <a class="xref" data-knowl="./knowl/motion_eq.html" title="Equation 1.2.1">(1.2.1)</a></p>
 <div class="displaymath">
 \begin{align}
 x_1 \amp = \func{\chi_1}{X_1, X_2, X_3}\,,\tag{1.3.2}\\
@@ -249,7 +250,7 @@ dx_3 = \regulardiff{\chi_3}{X_1}\,dX_1 + \regulardiff{\chi_3}{X_2}\,dX_2 + \regu
 \left[\begin{array}{c}dX_1\\dX_2\\dX_3\end{array}\right]\,.\tag{1.3.8}
 \end{equation}
 </div>
-<p id="p-58">This result shows how the transition from \(d\vec{X}\) to \(d\vec{x}\) occurs through a linear transformation represented by the matrix \(\mat{F}\) which, for each point of the domain, contains all the information needed to characterize the deformation. \(\tens{F}\) is named as <em class="alert">deformation gradient</em>. On thsi basis the relationship between the differentials, \(d\vec{X}\) and \(d\vec{x}\text{,}\) can be expressed in compact form as</p>
+<p id="p-60">This result shows how the transition from \(d\vec{X}\) to \(d\vec{x}\) occurs through a linear transformation represented by the matrix \(\mat{F}\) which, for each point of the domain, contains all the information needed to characterize the deformation. \(\tens{F}\) is named as <em class="alert">deformation gradient</em>. On thsi basis the relationship between the differentials, \(d\vec{X}\) and \(d\vec{x}\text{,}\) can be expressed in compact form as</p>
 <div class="displaymath">
 \begin{equation}
 d\vec{x} = \tens{F}\, d\vec{X}\,.\label{dX_to_dx_eq}\tag{1.3.9}
@@ -262,7 +263,7 @@ d\vec{x} = \func{\tens{F}}{\vec{X}}\, d\vec{X}\,,\tag{1.3.10}
 \end{equation}
 </div>
 <p class="continuation">where the dependence of \(\tens{F}\) on the point where the gradient is evaluated has been made explicit.</p>
-<p id="p-59">What is obtained for the transformation \(\vec{\chi} \) is also valid for its inverse \(\vec{\chi}^{-1}\text{,}\) therefore the following inverse relationship can be established between the differentials \(d\vec{X}\) and \(d\vec{x}\)</p>
+<p id="p-61">What is obtained for the transformation \(\vec{\chi} \) is also valid for its inverse \(\vec{\chi}^{-1}\text{,}\) therefore the following inverse relationship can be established between the differentials \(d\vec{X}\) and \(d\vec{x}\)</p>
 <div class="displaymath">
 \begin{equation}
 d\vec{X} = \func{\tens{F}^{-1}}{\vec{x}}\, d\vec{x}\,.\tag{1.3.11}
@@ -273,8 +274,8 @@ d\vec{X} = \func{\tens{F}^{-1}}{\vec{x}}\, d\vec{x}\,.\tag{1.3.11}
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.3.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><article class="remark remark-like" id="remark-2"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.3.2</span><span class="period">.</span>
 </h6>
-<p id="p-60">It is instructive to compare this figure with the previous <a class="xref" data-knowl="./knowl/Kinematics_02_fig.html" title="Figure 1.2.1">Figure 1.2.1</a> in order to keep enough separate the meaning of trasformation \(\vec{\chi} \) from its local representation through the deformation gradient.</p></article><article class="assemblage assemblage-like" id="assemblage-5"><h6 class="heading"><span class="title">evaluation of the deformation gradient (linear transformations).</span></h6>
-<p id="p-61">In the case of Transformation 1 already discussed above, we make explicit the dependence of the individual components of \(\vec{x}\) on the components of \(\vec{X}\text{:}\)</p>
+<p id="p-62">It is instructive to compare this figure with the previous <a class="xref" data-knowl="./knowl/Kinematics_02_fig.html" title="Figure 1.2.1">Figure 1.2.1</a> in order to keep enough separate the meaning of trasformation \(\vec{\chi} \) from its local representation through the deformation gradient.</p></article><article class="assemblage assemblage-like" id="assemblage-5"><h6 class="heading"><span class="title">evaluation of the deformation gradient (linear transformations).</span></h6>
+<p id="p-63">In the case of Transformation 1 already discussed above, we make explicit the dependence of the individual components of \(\vec{x}\) on the components of \(\vec{X}\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
 x_1 \amp = \func{\chi_1}{X_1, X_2} = -X_2\,,\\
@@ -297,14 +298,14 @@ x_2 \amp = \func{\chi_2}{X_1, X_2} = X_1\,.
 \end{equation*}
 </div>
 <p class="continuation">The fact that in this case we obtain a constant gradient equal to the matrix \(\mat{M_{\chi}}\) associated with the transformation is not accidental but depends on the linearity of the transformation under consideration: inevitably, its own linearization coincides with the given transformation. A similar result would also be obtained for the other linear transformations considered in the previous examples.</p></article><article class="assemblage assemblage-like" id="assemblage-6"><h6 class="heading"><span class="title">evaluation of the deformation gradient (nonlinear transformations).</span></h6>
-<p id="p-62">In the case of nonlinear transformations it is not possible to identify a matrix associated with the transformation but, locally, the gradient of the transformation behaves like a linear transformation. Consider thus, for example, the transformation defined as</p>
+<p id="p-64">In the case of nonlinear transformations it is not possible to identify a matrix associated with the transformation but, locally, the gradient of the transformation behaves like a linear transformation. Consider thus, for example, the transformation defined as</p>
 <div class="displaymath">
 \begin{align*}
 x_1 \amp = \func{\chi_1}{X_1, X_2} = X_1^3\,,\\
 x_2 \amp = \func{\chi_2}{X_1, X_2} = X_2^3\,.
 \end{align*}
 </div>
-<p id="p-63">The calculation of the partial derivatives gives</p>
+<p id="p-65">The calculation of the partial derivatives gives</p>
 <div class="displaymath">
 \begin{align*}
 \regulardiff{\chi_1}{X_1} = 3\,X_1^2\,,\amp\regulardiff{\chi_1}{X_2} = 0\,,\\
@@ -319,7 +320,7 @@ x_2 \amp = \func{\chi_2}{X_1, X_2} = X_2^3\,.
 \left[\begin{array}{cc}  3\,X_1^2 \amp 0 \\ 0  \amp  3\,X_2^2  \end{array}\right]
 \end{equation*}
 </div>
-<p id="p-64">In order to visualize how the assigned transformation works let us consider, in the plane \((X_1, X_2)\text{,}\) three circumferences of radius \(0. \text{,}\) \(1.0\) and \(1.5\) and their configuratons obtained through the assigned nonlinear transformation. The MATLAB® instructions for the calculation and plotting of the circumferences in the reference configuration and in the current one are as reported below. <figure class="listing figure-like" id="listing-8"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>N=60;
+<p id="p-66">In order to visualize how the assigned transformation works let us consider, in the plane \((X_1, X_2)\text{,}\) three circumferences of radius \(0. \text{,}\) \(1.0\) and \(1.5\) and their configuratons obtained through the assigned nonlinear transformation. The MATLAB® instructions for the calculation and plotting of the circumferences in the reference configuration and in the current one are as reported below. <figure class="listing figure-like" id="listing-8"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>N=60;
 angle=linspace(0,2*pi,N);
 
 radius=1.0;
@@ -355,17 +356,17 @@ plot(c3x,c3y,'m-')
 </b></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.3.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure> The previous instructions allow to obtain the following figure where the three circumferences, in the reference and current configurations, are represented with the colors red for the radius \(0.5\text{,}\) blue for the radius \(1.0\) and magenta for the radius \(1.5 \text{.}\) <figure class="figure figure-like" id="nolin_transf_example"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="images/nolin_grad1.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.3.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<p id="p-65">For exercise and to compare the nonlinear transformation examined with simpler linear transformations, it is suggested to perform the same calculations for the Transformations 2, 3 and 4 discussed in the previous sections.</p></article><article class="remark remark-like" id="remark-3"><h6 class="heading">
+<p id="p-67">For exercise and to compare the nonlinear transformation examined with simpler linear transformations, it is suggested to perform the same calculations for the Transformations 2, 3 and 4 discussed in the previous sections.</p></article><article class="remark remark-like" id="remark-3"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.3.5</span><span class="period">.</span>
 </h6>
-<p id="p-66">In the previous example, the cusps on the configurations obtained by applying the transformation are worth to be discussed. Can anything be said about them? The evaluation of the gradient on the points of the circle that are mapped onto the apexes of the cusps would allow to make a hypothesis on what happens in these points. Anyway further insight on this aspect will be given in the following section regarding the determinant of the deformation gradient.</p></article><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
+<p id="p-68">In the previous example, the cusps on the configurations obtained by applying the transformation are worth to be discussed. Can anything be said about them? The evaluation of the gradient on the points of the circle that are mapped onto the apexes of the cusps would allow to make a hypothesis on what happens in these points. Anyway further insight on this aspect will be given in the following section regarding the determinant of the deformation gradient.</p></article><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.3.1</span> <span class="title">the notion of tensor</span>
 </h3>
-<p id="p-67">By introducing the deformation gradient \(\tens{F}\) we got acquainted with a category of mathematical objects which are called <em class="emphasis">second order tensors</em> or, simply, <em class="emphasis">tensors</em>, being superfluous to specify the order of the tensors that occur most often in solid mechanics. Certainly such an encounter can cause disorientation, especially if one is tempted to give a definition of the tensors in the most general form possible. Therefore, the most commonly used definition in <em class="emphasis">Solid mechanics</em> will be given, a definition which is also fairly obvious compared to what, regarding linear transformations, has been said so far.</p>
+<p id="p-69">By introducing the deformation gradient \(\tens{F}\) we got acquainted with a category of mathematical objects which are called <em class="emphasis">second order tensors</em> or, simply, <em class="emphasis">tensors</em>, being superfluous to specify the order of the tensors that occur most often in solid mechanics. Certainly such an encounter can cause disorientation, especially if one is tempted to give a definition of the tensors in the most general form possible. Therefore, the most commonly used definition in <em class="emphasis">Solid mechanics</em> will be given, a definition which is also fairly obvious compared to what, regarding linear transformations, has been said so far.</p>
 <article class="definition definition-like" id="definition-1"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.6</span><span class="period">.</span>
 </h6>
-<p id="p-68">A second order tensor, which we will usually indicate in capital and bold letters (e.g. \(\tens{A}\text{,}\) \(\tens{B}\text{,}\) \(\tens{C}\text{,}\) \(\dots\)), is a linear transformation that associates to a generic vector \(\vec{u}\) another vector \(\vec{v}\text{.}\) This mapping  is usually indicated as follows</p>
+<p id="p-70">A second order tensor, which we will usually indicate in capital and bold letters (e.g. \(\tens{A}\text{,}\) \(\tens{B}\text{,}\) \(\tens{C}\text{,}\) \(\dots\)), is a linear transformation that associates to a generic vector \(\vec{u}\) another vector \(\vec{v}\text{.}\) This mapping  is usually indicated as follows</p>
 <div class="displaymath">
 \begin{equation}
 \vec{v} = \tens{A}\vec{u}\tag{1.3.12}

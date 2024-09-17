@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:40:43+02:00       *-->
+<!--*       on 2024-09-17T16:03:30+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -122,7 +122,8 @@ MathJax.Hub.Config({
 <li><a href="dedication_en.html" data-scroll="dedication_en">Dedication</a></li>
 <li><a href="acknowledgement_en.html" data-scroll="acknowledgement_en">Acknowledgements</a></li>
 <li><a href="preface_en.html" data-scroll="preface_en">Preface</a></li>
-<li><a href="references_frontmatter_en.html" data-scroll="references_frontmatter_en">using MATLAB®</a></li>
+<li><a href="MATLAB_references_frontmatter_en.html" data-scroll="MATLAB_references_frontmatter_en">using MATLAB®</a></li>
+<li><a href="SMcontents_references_frontmatter_en.html" data-scroll="SMcontents_references_frontmatter_en">Additional resources</a></li>
 </ul>
 </li>
 <li class="link part"><a href="continuum_mechanics_en.html" data-scroll="continuum_mechanics_en"><span class="codenumber">I</span> <span class="title">continuum mechanics</span></a></li>
@@ -197,7 +198,7 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="sollecitazioni_sec_rigid_body_statics_chap_en"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5.7</span> <span class="title">generalized section forces</span>
 </h2>
-<p id="p-453">The state of internal stress of one-dimensional solids, or beams, is characterized by evaluating the <em class="alert">generalized section forces</em> at each point. In the plane case there are three components: <em class="alert">axial force (\(N \))</em>, <em class="alert">shear force (\(T \))</em> and <em class="alert">bending moment (\(M \))</em>. In order to come up to a simple definition of these three components, consider the following free body diagram regarding a balanced system of forces. <figure class="figure figure-like" id="schema1_fig"><div class="image-box" style="width: 43%; margin-left: 28.5%; margin-right: 28.5%;"><img src="images/schema1.png" style="width: 100%; height: auto;" alt=""></div>
+<p id="p-455">The state of internal stress of one-dimensional solids, or beams, is characterized by evaluating the <em class="alert">generalized section forces</em> at each point. In the plane case there are three components: <em class="alert">axial force (\(N \))</em>, <em class="alert">shear force (\(T \))</em> and <em class="alert">bending moment (\(M \))</em>. In order to come up to a simple definition of these three components, consider the following free body diagram regarding a balanced system of forces. <figure class="figure figure-like" id="schema1_fig"><div class="image-box" style="width: 43%; margin-left: 28.5%; margin-right: 28.5%;"><img src="images/schema1.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.7.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Suppose to separate the body into two parts by means of a plane passing through a generic point \(s \) obtaining the following free body diagrams <figure class="figure figure-like" id="schema2_fig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/schema2.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.7.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure> where it is postulated that the two parts exchange, through the separation section, equal and opposite actions. However, these actions must be such as to satisfy the equilibrium equations on each obtained part. In particular, if we consider the part of length \(s \) we obtain the following equations (pole for the rotation equilibrium placed in the abscissa \(s \)):</p>
 <div class="displaymath">
@@ -219,20 +220,20 @@ M \amp= -F(l - s)\,.
 <article class="remark remark-like" id="remark-21"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">5.7.3</span><span class="period">.</span>
 </h6>
-<p id="p-454">The separation process carried out can also be understood as the removal of the continuity constraint at point \(s \) and the application of the <em class="emphasis">"constraint reactions"</em> associated with the constraint, of degree 3, removed.</p></article><article class="remark remark-like" id="remark-22"><h6 class="heading">
+<p id="p-456">The separation process carried out can also be understood as the removal of the continuity constraint at point \(s \) and the application of the <em class="emphasis">"constraint reactions"</em> associated with the constraint, of degree 3, removed.</p></article><article class="remark remark-like" id="remark-22"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">5.7.4</span><span class="period">.</span>
 </h6>
-<p id="p-455">The single sectioning operation must make it possible to obtain two distinct free bodies. If for this purpose one or more sectionings happen to be necessary, the obtained separated parts would lead to the formulation of hyperstatic problems.</p></article><section class="subsection" id="subsection-116"><h3 class="heading hide-type">
+<p id="p-457">The single sectioning operation must make it possible to obtain two distinct free bodies. If for this purpose one or more sectionings happen to be necessary, the obtained separated parts would lead to the formulation of hyperstatic problems.</p></article><section class="subsection" id="subsection-116"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.7.1</span> <span class="title">generalized section forces sign convention</span>
 </h3>
-<p id="p-456">By applying the sectioning procedure twice in order to isolate a section of beam of infinitesimal length, it is possible to obtain the following diagram (where the height of the beam has also been made evident) useful for highlighting the convention currently used to define the positive sign for the generalized section forces (for clarity they are shown separately).</p>
+<p id="p-458">By applying the sectioning procedure twice in order to isolate a section of beam of infinitesimal length, it is possible to obtain the following diagram (where the height of the beam has also been made evident) useful for highlighting the convention currently used to define the positive sign for the generalized section forces (for clarity they are shown separately).</p>
 <figure class="figure figure-like" id="convenzione_sollecitazioni_fig"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/convenzione_sollecitazioni.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.7.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></section><section class="subsection" id="subsection-117"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.7.2</span> <span class="title">distributed loads</span>
 </h3>
-<p id="p-457">In order to complete the kinds of loads applicable to beam systems and also to make it possible to have a general treatment of the equilibrium diffrential equations presented in the next section, the case of distributed loads is discussed. To this end, consider the following scheme.</p>
+<p id="p-459">In order to complete the kinds of loads applicable to beam systems and also to make it possible to have a general treatment of the equilibrium diffrential equations presented in the next section, the case of distributed loads is discussed. To this end, consider the following scheme.</p>
 <figure class="figure figure-like" id="ripartiti_fig"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="images/ripartiti.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.7.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-458">The scheme represents a cantilever beam subjected to a variable distributed load \(q (x) \text{.}\) The distributed load is measured as \(\left[\frac{F}{L} \right] \text{.}\) The free body diagram shown at the top right of the figure allows writing the three equilibrium equations (horizontal, vertical and rotation using point \(A \) as pole) providing:</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.7.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-460">The scheme represents a cantilever beam subjected to a variable distributed load \(q (x) \text{.}\) The distributed load is measured as \(\left[\frac{F}{L} \right] \text{.}\) The free body diagram shown at the top right of the figure allows writing the three equilibrium equations (horizontal, vertical and rotation using point \(A \) as pole) providing:</p>
 <div class="displaymath">
 \begin{align*}
 H_{A} \amp = 0\,,\\
@@ -261,7 +262,7 @@ V_{A} - R_q \amp = 0\,,\\
 \end{align*}
 </div>
 <p class="continuation">Therefore in systems subjected to distributed loads it is possible to replace the latter with the respective resultants positioned in their centroids. It is observed that this substitution is correct only for the calculation of the constraint reactions and not for the calculation of the generalized cross forces which will be better described later.</p>
-<article class="assemblage assemblage-like" id="assemblage-46"><p id="p-459">Below are the MATLAB® instructions for calculating the resultant and the centroid for some types of distributed load. <figure class="listing figure-like" id="listing-59"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>% constant ditributed load
+<article class="assemblage assemblage-like" id="assemblage-46"><p id="p-461">Below are the MATLAB® instructions for calculating the resultant and the centroid for some types of distributed load. <figure class="listing figure-like" id="listing-59"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>% constant ditributed load
 syms q l x;
 load(x, q) = q;
 np = 100;

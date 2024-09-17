@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:40:42+02:00       *-->
+<!--*       on 2024-09-17T16:03:29+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -122,7 +122,8 @@ MathJax.Hub.Config({
 <li><a href="dedication_en.html" data-scroll="dedication_en">Dedication</a></li>
 <li><a href="acknowledgement_en.html" data-scroll="acknowledgement_en">Acknowledgements</a></li>
 <li><a href="preface_en.html" data-scroll="preface_en">Preface</a></li>
-<li><a href="references_frontmatter_en.html" data-scroll="references_frontmatter_en">using MATLAB®</a></li>
+<li><a href="MATLAB_references_frontmatter_en.html" data-scroll="MATLAB_references_frontmatter_en">using MATLAB®</a></li>
+<li><a href="SMcontents_references_frontmatter_en.html" data-scroll="SMcontents_references_frontmatter_en">Additional resources</a></li>
 </ul>
 </li>
 <li class="link part"><a href="continuum_mechanics_en.html" data-scroll="continuum_mechanics_en"><span class="codenumber">I</span> <span class="title">continuum mechanics</span></a></li>
@@ -197,42 +198,42 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="problem_sec_elasticity_chap_en"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.4</span> <span class="title">the elastic problem</span>
 </h2>
-<p id="p-279">The definition of the elastic law provided in the previous sections allows to formulate, in well-posed terms, the following problem known as <em class="emphasis">elastic problem</em>.</p>
-<p id="p-280"><em class="emphasis">Evaluation of the displacement, stress and strain fields, \(\vec{u}\text{,}\) \(\tens{\sigma}\) and \(\tens{\varepsilon}\text{,}\) caused by the assigned loading conditions on a body \(\body\) however constrained.</em></p>
+<p id="p-281">The definition of the elastic law provided in the previous sections allows to formulate, in well-posed terms, the following problem known as <em class="emphasis">elastic problem</em>.</p>
+<p id="p-282"><em class="emphasis">Evaluation of the displacement, stress and strain fields, \(\vec{u}\text{,}\) \(\tens{\sigma}\) and \(\tens{\varepsilon}\text{,}\) caused by the assigned loading conditions on a body \(\body\) however constrained.</em></p>
 <figure class="figure figure-like" id="figure-28"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="images/Elastic_Problem.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-281">Answering the question posed requires the simultaneous solution of the following equations defined on all points of the assigned body \(\body \text{.}\)</p>
-<article class="assemblage assemblage-like" id="assemblage-16"><ul id="p-282" class="disc">
-<li id="li-102">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-283">Answering the question posed requires the simultaneous solution of the following equations defined on all points of the assigned body \(\body \text{.}\)</p>
+<article class="assemblage assemblage-like" id="assemblage-16"><ul id="p-284" class="disc">
+<li id="li-103">
 <em class="alert">Equilibrium equations</em> (<a href="stress_chap_en.html" class="internal" title="Chapter 2: forces, equilibrium and stress">Chapter 2</a>)<div class="displaymath">
 \begin{equation}
 \text{div}\tens{\sigma} + \vec{b} = \vec0\,.\label{ep_1_eq}\tag{3.4.1}
 \end{equation}
 </div>
 </li>
-<li id="li-103">
+<li id="li-104">
 <em class="alert">Strain-displacement relationship</em> (<a href="strain_chap_en.html" class="internal" title="Chapter 1: bodies' kinematics">Chapter 1</a>)<div class="displaymath">
 \begin{equation}
 \tens{\varepsilon} = \text{sym}\tens{\nabla u}\,.\label{ep_2_eq}\tag{3.4.2}
 \end{equation}
 </div>
 </li>
-<li id="li-104">
+<li id="li-105">
 <em class="alert">Elastic constitutive law</em> (<a href="elasticity_chap_en.html" class="internal" title="Chapter 3: elasticity">Chapter 3</a>)<div class="displaymath">
 \begin{equation}
 \tens{\sigma} = \tensQ{C}:\tens{\varepsilon}\,.\label{ep_3_eq}\tag{3.4.3}
 \end{equation}
 </div>
 </li>
-</ul></article><p id="p-283">To complete the formulation of the problem it is also necessary to assign the boundary conditions which, in general, can be of two types: static type on the part of boundary \(\partial\body_{\vec{t}}\) and kinematic type on the part \(\partial\body_{\vec{u}}\text{.}\) Note \(\partial\body=\partial\body_{\vec{u}}+\partial\body_{\vec{t}}\text{.}\)</p>
+</ul></article><p id="p-285">To complete the formulation of the problem it is also necessary to assign the boundary conditions which, in general, can be of two types: static type on the part of boundary \(\partial\body_{\vec{t}}\) and kinematic type on the part \(\partial\body_{\vec{u}}\text{.}\) Note \(\partial\body=\partial\body_{\vec{u}}+\partial\body_{\vec{t}}\text{.}\)</p>
 <ul class="disc">
-<li id="li-105">
+<li id="li-106">
 <em class="alert">Static boundary conditions</em>, defined on \(\partial\body_{\vec{t}}\)<div class="displaymath">
 \begin{equation}
 \tens{\sigma}\,\vec{n} = \bar{\vec{t}}\,.\label{ep_4_eq}\tag{3.4.4}
 \end{equation}
 </div>
 </li>
-<li id="li-106">
+<li id="li-107">
 <em class="alert">Kinematic boundary conditions</em>, defined on \(\partial\body_{\vec{u}}\)<div class="displaymath">
 \begin{equation}
 \vec{u} = \bar{\vec{u}}\,.\label{ep_5_eq}\tag{3.4.5}
@@ -243,8 +244,8 @@ MathJax.Hub.Config({
 <section class="subsection" id="subsection-54"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.4.1</span> <span class="title">motivation (reprised): the prismatic solid simply stretched</span>
 </h3>
-<p id="p-284">It is now possible to consider again the prismatic solid simply stretched discussed in <a href="motivations_sec_elasticity_chap_en.html" class="internal" title="Section 3.1: motivation">Section 3.1</a> at the beginning of this chapter.</p>
-<p id="p-285">The static solution already found, however correct because it satisfies the equations of equilibrium <a class="xref" data-knowl="./knowl/ep_1_eq.html" title="Equation 3.4.1">(3.4.1)</a> inside the solid and the static conditions on the contour <a class="xref" data-knowl="./knowl/ep_4_eq.html" title="Equation 3.4.4">(3.4.4)</a>, is</p>
+<p id="p-286">It is now possible to consider again the prismatic solid simply stretched discussed in <a href="motivations_sec_elasticity_chap_en.html" class="internal" title="Section 3.1: motivation">Section 3.1</a> at the beginning of this chapter.</p>
+<p id="p-287">The static solution already found, however correct because it satisfies the equations of equilibrium <a class="xref" data-knowl="./knowl/ep_1_eq.html" title="Equation 3.4.1">(3.4.1)</a> inside the solid and the static conditions on the contour <a class="xref" data-knowl="./knowl/ep_4_eq.html" title="Equation 3.4.4">(3.4.4)</a>, is</p>
 <div class="displaymath">
 \begin{equation}
 \sigma_{11} = \sigma_{22} = \sigma_{12} = \sigma_{13} = \sigma_{23} = 0\,\quad \sigma_{33} = \bar{t}\,.\tag{3.4.6}
@@ -259,7 +260,7 @@ MathJax.Hub.Config({
 \end{align}
 </div>
 <p class="continuation">therefore a constant and homogeneous strain field on the whole solid.</p>
-<p id="p-286">The strain-displacement relationship <a class="xref" data-knowl="./knowl/ep_2_eq.html" title="Equation 3.4.2">(3.4.2)</a> allows the determination of the displacement field. An explicit writing of Eq. <a class="xref" data-knowl="./knowl/ep_2_eq.html" title="Equation 3.4.2">(3.4.2)</a>, see also <a class="xref" data-knowl="./knowl/mat_symDu_eq.html" title="Equation 1.9.4">(1.9.4)</a>, gives</p>
+<p id="p-288">The strain-displacement relationship <a class="xref" data-knowl="./knowl/ep_2_eq.html" title="Equation 3.4.2">(3.4.2)</a> allows the determination of the displacement field. An explicit writing of Eq. <a class="xref" data-knowl="./knowl/ep_2_eq.html" title="Equation 3.4.2">(3.4.2)</a>, see also <a class="xref" data-knowl="./knowl/mat_symDu_eq.html" title="Equation 1.9.4">(1.9.4)</a>, gives</p>
 <div class="displaymath">
 \begin{align*}
 \varepsilon_{11} = \frac{\partial u_1}{\partial X_1}\,,\amp\qquad \varepsilon_{23} = \frac{1}{2}\left(\frac{\partial u_2}{\partial X_3} + \frac{\partial u_3}{\partial X_2}\right)\,,\\
@@ -283,7 +284,7 @@ u_1 = -\nu\,\frac{\bar{t}}{E} \, X_1\,,\quad u_2 = -\nu\,\frac{\bar{t}}{E} \, X_
 </div>
 <p class="continuation">In this regard, it is observed that we say <em class="emphasis">a solution</em> since by adding to this displacement field all possible rigid motions, which in the assigned problem are not explicitly eliminated, we would always obtain the same solution in terms of stress and strain fields.</p>
 <article class="assemblage assemblage-like" id="assemblage-17"><h6 class="heading"><span class="title">check.</span></h6>
-<p id="p-287">Based on the displacement field defined by the <a class="xref" data-knowl="./knowl/motivation_displ_eq.html" title="Equation 3.4.13">(3.4.13)</a> use the following MATLAB® instructions to calculate the relative strain and stress fields. <figure class="listing figure-like" id="listing-31"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms t E ni;
+<p id="p-289">Based on the displacement field defined by the <a class="xref" data-knowl="./knowl/motivation_displ_eq.html" title="Equation 3.4.13">(3.4.13)</a> use the following MATLAB® instructions to calculate the relative strain and stress fields. <figure class="listing figure-like" id="listing-31"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms t E ni;
 X = sym('X', [1 3]);
 u = sym('u', [1 3]);
 u(1) = -ni*t/E * X(1);
@@ -311,12 +312,12 @@ simplify(Voigt_sig)
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.4.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></section><section class="subsection" id="bend_problem_sub"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.4.2</span> <span class="title">the prismatic solid simply bent</span>
 </h3>
-<p id="p-288">What has been obtained for the prismatic solid subject to uniform traction fields at the ends can be easily extended to the case in which the tractions applied to the ends have the linear trend shown in the following figure.</p>
+<p id="p-290">What has been obtained for the prismatic solid subject to uniform traction fields at the ends can be easily extended to the case in which the tractions applied to the ends have the linear trend shown in the following figure.</p>
 <figure class="figure figure-like" id="figure-29"><div class="image-box" style="width: 96%; margin-left: 2%; margin-right: 2%;"><img src="images/bend_problem.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure><section class="subsubsection" id="subsubsection-16"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span> <span class="codenumber">3.4.2.1</span> <span class="title">static analysis</span>
 </h4>
-<p id="p-289">The formulation of the static part of the problem is identical to that made for the prismatic solid simply stretched except for the end faces of the solid on which the applied tractions assume the following expression</p>
+<p id="p-291">The formulation of the static part of the problem is identical to that made for the prismatic solid simply stretched except for the end faces of the solid on which the applied tractions assume the following expression</p>
 <div class="displaymath">
 \begin{align}
 \Sigma_1:\amp\quad \matWp{t}{1} = \left[\begin{array}{c}0\\0\\-\frac{\bar{t}}{H/2}\,X_2\end{array}\right] \,,\tag{3.4.14}\\
@@ -324,7 +325,7 @@ simplify(Voigt_sig)
 \end{align}
 </div>
 <p class="continuation">where \(H \) represents the height of the solid along the direction \(X_2 \) and \(\bar{t} \) is the maximum intensity of the applied tractions.</p>
-<p id="p-290">Also in this case it is possible to proceed by assuming an attempt solution for the stress tensor and then verifying the satisfaction of the equations of equilibrium and of the boundary conditions. In particular for \(\tens{\sigma} \) the following form is assumed</p>
+<p id="p-292">Also in this case it is possible to proceed by assuming an attempt solution for the stress tensor and then verifying the satisfaction of the equations of equilibrium and of the boundary conditions. In particular for \(\tens{\sigma} \) the following form is assumed</p>
 <div class="displaymath">
 \begin{equation}
 \mat{\sigma} =
@@ -347,7 +348,7 @@ simplify(Voigt_sig)
 \end{equation*}
 </div>
 <p class="continuation">which shows their satisfaction.</p>
-<p id="p-291">Retracing the same steps taken in  <a href="motivations_sec_elasticity_chap_en.html#motivation_static_subsubsec" class="internal" title="Subsubsection 3.1.1.1: stress field assumption and solution">Subsubsection 3.1.1.1</a> for the simply stretched solid, we consider the verification or imposition of the boundary conditions. In particular, the satisfaction of Eq. <a class="xref" data-knowl="./knowl/motiv_bc3_eq.html" title="Equation 3.1.6">(3.1.6)</a> is easily verified, in fact</p>
+<p id="p-293">Retracing the same steps taken in  <a href="motivations_sec_elasticity_chap_en.html#motivation_static_subsubsec" class="internal" title="Subsubsection 3.1.1.1: stress field assumption and solution">Subsubsection 3.1.1.1</a> for the simply stretched solid, we consider the verification or imposition of the boundary conditions. In particular, the satisfaction of Eq. <a class="xref" data-knowl="./knowl/motiv_bc3_eq.html" title="Equation 3.1.6">(3.1.6)</a> is easily verified, in fact</p>
 <div class="displaymath">
 \begin{equation*}
 \left[\begin{array}{ccc}
@@ -375,7 +376,7 @@ simplify(Voigt_sig)
 \end{equation*}
 </div>
 <p class="continuation">The same result should be obtained through condition  <a class="xref" data-knowl="./knowl/motiv_bc2_eq.html" title="Equation 3.1.5">(3.1.5)</a>.</p>
-<p id="p-292">In conclusion, the stress field that satisfies all equilibrium equations involved is</p>
+<p id="p-294">In conclusion, the stress field that satisfies all equilibrium equations involved is</p>
 <div class="displaymath">
 \begin{equation}
 \mat{\sigma} =
@@ -390,10 +391,10 @@ simplify(Voigt_sig)
 <article class="remark remark-like" id="remark-15"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.4.4</span><span class="period">.</span>
 </h6>
-<p id="p-293">Similarly to the solid simply stretched, note how the solution obtained involves only the component \(\sigma_{33} \) of the tensor. The only difference is in the shape of the solution which instead of being constant is linear along the \(X_2 \) axis.</p></article></section><section class="subsubsection" id="subsubsection-17"><h4 class="heading hide-type">
+<p id="p-295">Similarly to the solid simply stretched, note how the solution obtained involves only the component \(\sigma_{33} \) of the tensor. The only difference is in the shape of the solution which instead of being constant is linear along the \(X_2 \) axis.</p></article></section><section class="subsubsection" id="subsubsection-17"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span> <span class="codenumber">3.4.2.2</span> <span class="title">from stress to displacement solution</span>
 </h4>
-<p id="p-294">To evaluate the solution in terms of displacements, the elastic constitutive law must first be used to compute the components of strain tensor and obtain the following</p>
+<p id="p-296">To evaluate the solution in terms of displacements, the elastic constitutive law must first be used to compute the components of strain tensor and obtain the following</p>
 <div class="displaymath">
 \begin{align}
 \amp \varepsilon_{33} = \frac{\sigma_{33}}{E} = \frac{\kappa\,X_2}{E}\,,\label{bend_eps33_eq}\tag{3.4.18}\\
@@ -414,7 +415,7 @@ u_{2} \amp = -\frac{\kappa}{2E}\left[X_3^2 +\nu\left(X_2^2 - X_1^2 \right)\right
 u_{3} \amp = \frac{\kappa}{E}\,X_2 X_3\,.\label{bend_displ_3}\tag{3.4.27}
 \end{align}
 </div></section><article class="assemblage assemblage-like" id="assemblage-18"><h6 class="heading"><span class="title">check.</span></h6>
-<p id="p-295">Based on the displacement field defined by the <a class="xref" data-knowl="./knowl/bend_displ_1.html" title="Equation 3.4.25">(3.4.25)</a>, <a class="xref" data-knowl="./knowl/bend_displ_2.html" title="Equation 3.4.26">(3.4.26)</a>, <a class="xref" data-knowl="./knowl/bend_displ_3.html" title="Equation 3.4.27">(3.4.27)</a> it is possible to check the result obtained by using the following MATLAB® instructions. <figure class="listing figure-like" id="listing-32"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms E ni k;
+<p id="p-297">Based on the displacement field defined by the <a class="xref" data-knowl="./knowl/bend_displ_1.html" title="Equation 3.4.25">(3.4.25)</a>, <a class="xref" data-knowl="./knowl/bend_displ_2.html" title="Equation 3.4.26">(3.4.26)</a>, <a class="xref" data-knowl="./knowl/bend_displ_3.html" title="Equation 3.4.27">(3.4.27)</a> it is possible to check the result obtained by using the following MATLAB® instructions. <figure class="listing figure-like" id="listing-32"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms E ni k;
 X = sym('X', [1 3]);
 u = sym('u', [1 3]);
 u(1) = -ni*k/E * X(1) * X(2);
@@ -442,8 +443,8 @@ simplify(Voigt_sig)
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.4.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></section><section class="subsection" id="subsection-56"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.4.3</span> <span class="title">summary</span>
 </h3>
-<p id="p-296">A summary of the solutions found for the prismatic solids simply stretched and simply bent is given in order to highlight analogies. For each field found, stress, strain and displacement, only the non-zero components are reported.</p>
-<article class="assemblage assemblage-like" id="assemblage-19"><p id="p-297"><figure class="table table-like" id="prismatic_solutions_tab"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.4.6<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<p id="p-298">A summary of the solutions found for the prismatic solids simply stretched and simply bent is given in order to highlight analogies. For each field found, stress, strain and displacement, only the non-zero components are reported.</p>
+<article class="assemblage assemblage-like" id="assemblage-19"><p id="p-299"><figure class="table table-like" id="prismatic_solutions_tab"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.4.6<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b1 r0 l0 t0 lines"></td>
 <td class="l m b1 r0 l0 t0 lines"></td>

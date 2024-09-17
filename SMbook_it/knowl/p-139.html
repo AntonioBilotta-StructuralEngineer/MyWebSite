@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:38:35+02:00       *-->
+<!--*       on 2024-09-17T15:55:29+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,18 +15,13 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
-<p>In maniera analoga si perviene al <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">tensore sinistro di Cauchy-Green</em>, ovvero</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\tens{F}\,\transp{\tens{F}} = \tens{V}\tens{R} \, \transp{\left(\tens{V}\tens{R}\right)} = \tens{V}\tens{R} \, \transp{\tens{R}} \transp{\tens{V}} = \tens{V}\,\tens{V} = \tens{V}^2\,,
-\end{equation*}
-</div>
-<p class="continuation">da cui</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\tens{B} = \tens{F}\,\transp{\tens{F}}\,.\tag{1.8.2}
-\end{equation}
-</div>
+<p xmlns:svg="http://www.w3.org/2000/svg"><figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>F = [4.4623   -3.2249   -0.4874;
+2.9623    1.7249   -1.9874;
+-1.7500   -1.0607    5.2500];
+U2 = transpose(F)*F;
+[u, D2] = eig(U2)
+</b></pre></div>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.8.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <span class="incontext"><a href="measures_sec_strain_chap_it.html#p-139">Contesto</a></span>
 </body>
 </html>

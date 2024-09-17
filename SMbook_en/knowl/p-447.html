@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:40:46+02:00       *-->
+<!--*       on 2024-09-17T16:03:33+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,38 +15,70 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>The system consists of two bodies (\(n = 6 \)), allowing the writing of two groups of equations: the equilibrium equations for the body \(AB \) (pole in \(A \))</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-H_A + H_B \amp = 0\,,\\
-V_A + V_B - F \amp = 0\,,\\
-V_{B} 2l - F l \amp = 0\,,
-\end{align*}
-</div>
-<p class="continuation">and those for the body \(BC\) (pole in \(D\))</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-H_C - H_B + F \amp = 0\,,\\
-V_C - V_B \amp = 0\,,\\
-H_{B} l + V_C 2l \amp = 0\,.
-\end{align*}
-</div>
-<p class="continuation">Equations that can be rewritten through the following matrix form</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\underbrace{\left[\begin{array}{ccccc}
-1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0\\
-0 &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 0\\
-0 &amp; 0 &amp; 0 &amp; 2l &amp; 0 &amp; 0\\
-0 &amp; 0 &amp; -1 &amp; 0 &amp; 1 &amp; 0\\
-0 &amp; 0 &amp; 0 &amp; -1 &amp; 0 &amp; 1\\
-0 &amp; 0 &amp; l &amp; 0 &amp; 0 &amp; 2l
-\end{array}\right]}_{\mat{B}}
-\underbrace{\left[\begin{array}{c} H_A \\ V_A \\ H_B \\ V_B \\ H_C \\ V_C  \end{array}\right]}_{\vec{r}} +
-\underbrace{\left[\begin{array}{c} 0 \\ -F \\ -Fl \\ F \\ 0 \\ 0 \end{array}\right]}_{\vec{f}} =
-\left[\begin{array}{c} 0 \\ 0 \\ 0 \\ 0 \\ 0 \\ 0 \end{array}\right]\,.
-\end{equation*}
-</div>
+<p xmlns:svg="http://www.w3.org/2000/svg">The MATLAB® instructions that can be used for the calculation of unknown constraint reactions are as follows. <figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>% resultants' vector =
+% [horizontal; vertical; torque]
+R = zeros(3,1);
+
+% function for the calculation of the moment
+moment = @(X0, X, Load)...
+    -Load(1)*(X(2)-X0(2))+Load(2)*(X(1)-X0(1));
+
+% coordinates of the points on which the loads are applied
+syms L;
+A = [0; 0];
+B = [L; L/2];
+C = [L/2; L];
+
+% pole chosen
+POLE = C;
+
+% for each point the vector Load = [F1; F2; M] is assigned
+% and all the contribuitions are summed to R
+syms VA MA;
+LoadA = [0; VA; MA];
+R = R + LoadA;
+R(3) = R(3) + moment(POLE, A, LoadA);
+R
+
+syms HB;
+LoadB = [HB; 0; 0];
+R = R + LoadB;
+R(3) = R(3) + moment(POLE, B, LoadB);
+R
+
+syms F;
+LoadC = [0; -F; 0];
+R = R + LoadC;
+R(3) = R(3) + moment(POLE, C, LoadC);
+R
+
+% equilibrium equations
+eqns = [
+R(1) ==0,
+R(2) == 0,
+R(3)==0
+];
+
+% static matrix and vector of the assigned loads
+[B,b] = equationsToMatrix(eqns, [VA, MA, HB]);
+
+% degrees of freedom, n
+% constraint degrees, m
+[n,m] = size(B); 
+
+% evaluation of the rank of B
+r = rank(B);
+
+% if the system is statically determined, the solution is calculated
+if and(r == min(m,n), m == n)
+    x = linsolve(B,b);
+end
+
+VA = x(1)
+MA = x(2)
+HB = x(3)
+</b></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.6.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <span class="incontext"><a href="analysis_examples_sec_rigid_body_statics_chap_en.html#p-447">in-context</a></span>
 </body>
 </html>

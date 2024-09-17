@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:38:35+02:00       *-->
+<!--*       on 2024-09-17T15:55:29+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,26 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Tra i due tensori di Cauchy-Green, \(\tens{C}\) è più utilizzato nella meccanica dei solidi perché agisce sulla posizione del punto espressa nella configurazione di riferimento.</p>
+<p>Le seguenti istruzioni invece, valutando gli allungamenti principali come</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\lambda_1 = \sqrt{D2(1,1)} = 2\,,\quad
+\lambda_2 = \sqrt{D2(2,2)} = 5\,,\quad
+\lambda_3 = \sqrt{D2(3,3)} = 7\,,
+\end{equation*}
+</div>
+<p class="continuation">e le direzioni principali estraendole dalle colonne della matrice degli autovettori restituita da MATLAB®, calcolano il tensore \(\tens{U}\) e quindi con la relazione</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\tens{R} = \tens{F}\tens{U}^{-1}\,,
+\end{equation*}
+</div>
+<p class="continuation">anche la il tensore di rotazione associato alla decomposizione polare. Si valuta anche \(\tens{V}\) con la relazione</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\tens{V} = \tens{F}\transp{\tens{R}}\,.
+\end{equation*}
+</div>
 <span class="incontext"><a href="measures_sec_strain_chap_it.html#p-140">Contesto</a></span>
 </body>
 </html>

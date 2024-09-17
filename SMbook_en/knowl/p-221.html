@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:40:44+02:00       *-->
+<!--*       on 2024-09-17T16:03:31+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,24 +15,29 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let us evaluate the scalar product between Eq. <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a> and a generic vector field \(\vec{v}\) and let us integrate the result over the assigned body \(\body\) (for continuity, this operation could be carried out on any subset of \(\body\)). Because Eq. <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a> must to be satisfied in each \(\vec{x}\) of \(\body\text{,}\) then</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\int_{\body} \left( \text{div}\tens{\sigma} + \vec{b} \right) \cdot \vec{v} \,dv = 0\,,\quad \forall\vec{v}\,,\tag{2.5.1}
-\end{equation}
-</div>
-<p class="continuation">where \(\vec{v} \) is a continuous and differentiable vector field defined on the body \(\body\text{.}\) As already shown in the previous video about divergence it is possible to write</p>
+<p>Also the following stress states</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\text{div}\left(\tens{\sigma}\vec{v}\right) = \text{div}\tens{\sigma} \cdot \vec{v} + \tens{\sigma} : \tens{\nabla v}\,,
+\mat{\sigma} =
+\left[\begin{array}{ccc}
+0 \amp 0  \amp \tau \\
+0 \amp 0 \amp 0 \\
+\tau \amp 0 \amp 0
+\end{array}\right]
 \end{equation*}
 </div>
-<p class="continuation">from which</p>
+<p class="continuation">and</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\text{div}\tens{\sigma} \cdot \vec{v} = \text{div}\left(\tens{\sigma}\vec{v}\right) - \tens{\sigma} : \tens{\nabla v} \,.
+\mat{\sigma} =
+\left[\begin{array}{ccc}
+0  \amp 0 \amp 0 \\
+0 \amp 0 \amp \tau \\
+0 \amp \tau \amp 0
+\end{array}\right]
 \end{equation*}
 </div>
-<span class="incontext"><a href="plv_sec_stress_chap_en.html#p-221">in-context</a></span>
+<p class="continuation">are states of “pure” shear and all the previous discussion also applies, with due clarifications, to them.</p>
+<span class="incontext"><a href="stress_analysis_sec_stress_chap_en.html#p-221">in-context</a></span>
 </body>
 </html>

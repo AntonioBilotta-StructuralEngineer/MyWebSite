@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:38:34+02:00       *-->
+<!--*       on 2024-09-17T15:55:28+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,17 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Al fine di richiamare, in maniera semplice, l'idea che sta alla base delle operazioni di linearizzazione, tale processo viene illustrato nello schema seguente per una funzione reale dipendendente da una sola variabile.</p>
-<span class="incontext"><a href="gradient_sec_strain_chap_it.html#p-54">Contesto</a></span>
+<p xmlns:svg="http://www.w3.org/2000/svg">Istruzioni MATLAB® per la costruzione delle matrici associate alle trasformazioni. <figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
+T2 = @(X) [2*X(1); X(2)];
+T3 = @(X) [X(1); 1.5*X(2)];
+T4 = @(X) [X(1)+X(2); X(2)];
+
+M1 = [T1([1; 0]) T1([0; 1])]
+M2 = [T2([1; 0]) T2([0; 1])]
+M3 = [T3([1; 0]) T3([0; 1])]
+M4 = [T4([1; 0]) T4([0; 1])]
+</b></pre></div>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.2.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<span class="incontext"><a href="transformations_sec_strain_chap_it.html#p-54">Contesto</a></span>
 </body>
 </html>

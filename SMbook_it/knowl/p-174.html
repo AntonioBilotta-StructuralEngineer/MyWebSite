@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:38:35+02:00       *-->
+<!--*       on 2024-09-17T15:55:29+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,44 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">I sistemi macroscopici così definiti possono essere descritti in maniera efficace utilizzando l'approccio continuo che assume, per il corpo in esame, una distribuzione della materia continua nel spazio e nel tempo. Il corpo è sempre visto come un assemblaggio di singole particelle o <em class="emphasis">punti</em> da non confondere però con i sistemi di masse puntuali della meccanica Newtoniana o i sistemi di particelle della teoria atomica. Tipicamente il punto di un corpo continuo al suo interno nasconde una struttura interna (un accumulo di molecole o atomi ovvero una composizione etrogenea di vari costituenti) di dimensioni sufficientemente piccole se confrontate con la scala del problema in esame. Il comportamento del punto o particella è conseguenza del comportamento collettivo di tutto ciò che, <em class="emphasis">al suo interno</em>, costituisce il punto del continuo.</p>
-<span class="incontext"><a href="basics_sec_stress_chap_it.html#p-174">Contesto</a></span>
+<p xmlns:svg="http://www.w3.org/2000/svg">Risposta all'esercizio della <a href="exercises_sec_strain_chap_it.html#strain_ex_1" class="internal" title="Sottoparagrafo 1.10.10">Sottoparagrafo 1.10.10</a>. <figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>X = sym('X', [3 1]);
+u = sym('u', [3 1]);
+u(1) = 3.5*10^(-3)*X(1) + 2.0*10^(-3)*X(2);
+u(2) = 1.0*10^(-3)*X(1) - 0.5*10^(-3)*X(2);
+u(3) = 0;
+
+Du1 = gradient(u(1), X);
+Du2 = gradient(u(2), X);
+Du3 = gradient(u(3), X);
+Du = [transpose(Du1); transpose(Du2); transpose(Du3)];
+
+% primo quesito
+eps = (Du + transpose(Du))/2
+
+% secondo quesito
+[epsV,epsD] = eig(eps);
+eps1 = eval(epsD(1,1));
+eps2 = eval(epsD(2,2));
+eps3 = eval(epsD(3,3));
+
+% terzo quesito
+I = diag([1 1 1]);
+C = I + Du + transpose(Du) + transpose(Du)*Du;
+[cV,cD] = eig(C);
+lam1 = eval(sqrt(cD(1,1)));
+lam2 = eval(sqrt(cD(2,2)));
+lam3 = eval(sqrt(cD(3,3)));
+
+% quarto quesito
+% verificare che eps1 è circa pari a lam1 - 1
+% verificare che eps2 è circa pari a lam2 - 1
+% verificare che eps3 è circa pari a lam3 - 1
+
+% quinto quesito (visualizzare gli autovettori)
+eval(epsV)
+eval(cV)
+</b></pre></div>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.11.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<span class="incontext"><a href="answers_sec_strain_chap_it.html#p-174">Contesto</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:40:44+02:00       *-->
+<!--*       on 2024-09-17T16:03:31+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,18 +15,32 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>In order to discuss the state of <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">“pure” shear</em> it is necessary to leave the point of view given by the main directions and speak directly of a stress state characterized by the following matrix form</p>
+<p>The adjective “pure” must not be misleading as it only applies to the arrangement of principal directions just described. In fact, it is sufficient to assume a different arrangement for the principal directions, for example obtained with a generic rotation around the axis \(\vec{e}_3 \text{,}\) to have</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\mat{\sigma} =
+\tens{\sigma} = \sigma \, \vec{s}_1 \otimes \vec{s}_1\,,
+\end{equation*}
+</div>
+<p class="continuation">with</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\matWp{s}{1} = 
+\left[\begin{array}{c}
+\cos{\alpha}\\\sin{\alpha}\\0
+\end{array}\right]\,.
+\end{equation*}
+</div>
+<p class="continuation">From which the following matrix form of the given stress tensor</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\mat{\sigma} = \sigma
 \left[\begin{array}{ccc}
-0  \amp \tau \amp 0 \\
-\tau \amp 0 \amp 0 \\
+\cos{\alpha}^2 \amp \cos{\alpha}\sin{\alpha} \amp 0 \\
+\sin{\alpha}\cos{\alpha} \amp \sin{\alpha}^2 \amp 0 \\
 0 \amp 0 \amp 0
 \end{array}\right]\,.
 \end{equation*}
 </div>
-<p class="continuation">In a such case and always with respect to the given reference triad \(\vec{e}_1\text{,}\) \(\vec{e}_2\text{,}\) \(\vec{e}_3\text{,}\) it is possible to talk of a state of “pure” shear because the only non zero component of the tensor is \(\sigma_{12}=\sigma_{21}=\tau\text{.}\)</p>
 <span class="incontext"><a href="stress_analysis_sec_stress_chap_en.html#p-215">in-context</a></span>
 </body>
 </html>

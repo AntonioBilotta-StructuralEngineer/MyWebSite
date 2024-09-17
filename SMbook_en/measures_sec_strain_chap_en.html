@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:40:41+02:00       *-->
+<!--*       on 2024-09-17T16:03:28+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -122,7 +122,8 @@ MathJax.Hub.Config({
 <li><a href="dedication_en.html" data-scroll="dedication_en">Dedication</a></li>
 <li><a href="acknowledgement_en.html" data-scroll="acknowledgement_en">Acknowledgements</a></li>
 <li><a href="preface_en.html" data-scroll="preface_en">Preface</a></li>
-<li><a href="references_frontmatter_en.html" data-scroll="references_frontmatter_en">using MATLAB®</a></li>
+<li><a href="MATLAB_references_frontmatter_en.html" data-scroll="MATLAB_references_frontmatter_en">using MATLAB®</a></li>
+<li><a href="SMcontents_references_frontmatter_en.html" data-scroll="SMcontents_references_frontmatter_en">Additional resources</a></li>
 </ul>
 </li>
 <li class="link part"><a href="continuum_mechanics_en.html" data-scroll="continuum_mechanics_en"><span class="codenumber">I</span> <span class="title">continuum mechanics</span></a></li>
@@ -200,7 +201,7 @@ MathJax.Hub.Config({
 <section class="subsection" id="subsection-9"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.8.1</span> <span class="title">Cauchy-Green strain tensor</span>
 </h3>
-<p id="p-134">Let us consider the following product</p>
+<p id="p-136">Let us consider the following product</p>
 <div class="displaymath">
 \begin{equation*}
 \transp{\tens{F}}\,\tens{F}\,.
@@ -222,8 +223,8 @@ MathJax.Hub.Config({
 <article class="remark remark-like" id="remark-9"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.8.1</span><span class="period">.</span>
 </h6>
-<p id="p-135">One might think that, known \(\tens{U}^2 \text{,}\) the simple operation \(\tens{U} = \sqrt{\tens{C}}\) allows the evaluation of \(\tens{U}\text{.}\) The operation is possible but not trivial because it requires the evaluation of the eigenvalues and eigenvectors of \(\tens{C} \text{.}\) For this reason the tensor \(\tens{C} \) or other derived quantities are used directly in strain measurements.</p>
-<article class="assemblage assemblage-like" id="assemblage-13"><p id="p-136">In order to illustrate the procedure described above, however, consider the following deformation gradient</p>
+<p id="p-137">One might think that, known \(\tens{U}^2 \text{,}\) the simple operation \(\tens{U} = \sqrt{\tens{C}}\) allows the evaluation of \(\tens{U}\text{.}\) The operation is possible but not trivial because it requires the evaluation of the eigenvalues and eigenvectors of \(\tens{C} \text{.}\) For this reason the tensor \(\tens{C} \) or other derived quantities are used directly in strain measurements.</p>
+<article class="assemblage assemblage-like" id="assemblage-13"><p id="p-138">In order to illustrate the procedure described above, however, consider the following deformation gradient</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{F}=
@@ -235,14 +236,14 @@ MathJax.Hub.Config({
 \end{equation*}
 </div>
 <p class="continuation">Starting from this expression, the following MATLAB® instructions allow you to evaluate the eigenvectors and eigenvalues of \(\tens{U}^2\text{.}\)</p>
-<p id="p-137"><figure class="listing figure-like" id="listing-20"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>F = [4.4623   -3.2249   -0.4874;
+<p id="p-139"><figure class="listing figure-like" id="listing-20"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>F = [4.4623   -3.2249   -0.4874;
 2.9623    1.7249   -1.9874;
 -1.7500   -1.0607    5.2500];
 U2 = transpose(F)*F;
 [u, D2] = eig(U2)
 </b></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.8.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<p id="p-138">The following instructions instead, evaluating the principal stretches as</p>
+<p id="p-140">The following instructions instead, evaluating the principal stretches as</p>
 <div class="displaymath">
 \begin{equation*}
 \lambda_1 = \sqrt{D2(1,1)} = 2\,,\quad
@@ -262,7 +263,7 @@ U2 = transpose(F)*F;
 \tens{V} = \tens{F}\transp{\tens{R}}\,.
 \end{equation*}
 </div>
-<p id="p-139"><figure class="listing figure-like" id="listing-21"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>u1 = u(:,1);
+<p id="p-141"><figure class="listing figure-like" id="listing-21"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>u1 = u(:,1);
 u2 = u(:,2);
 u3 = u(:,3);
 lam1 = sqrt(D2(1,1));
@@ -272,7 +273,7 @@ U = lam1*u1*transpose(u1)+lam2*u2*transpose(u2)+lam3*u3*transpose(u3)
 R = F*inv(U)
 V = F*transpose(R)
 </b></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.8.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></article><p id="p-140">In a similar way the <em class="emphasis">left Cauchy-Green tensor</em> can be obtained, i.e.</p>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.8.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></article><p id="p-142">In a similar way the <em class="emphasis">left Cauchy-Green tensor</em> can be obtained, i.e.</p>
 <div class="displaymath">
 \begin{equation*}
 \tens{F}\,\transp{\tens{F}} = \tens{V}\tens{R} \, \transp{\left(\tens{V}\tens{R}\right)} = \tens{V}\tens{R} \, \transp{\tens{R}} \transp{\tens{V}} = \tens{V}\,\tens{V} = \tens{V}^2\,,
@@ -287,10 +288,10 @@ V = F*transpose(R)
 <article class="remark remark-like" id="remark-10"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.8.4</span><span class="period">.</span>
 </h6>
-<p id="p-141">Between the two Cauchy-Green tensors, \(\tens{C}\) is most used in solid mechanics because it acts on the position of the point expressed in the reference configuration.</p></article><article class="insight remark-like" id="insight-2"><h6 class="heading">
+<p id="p-143">Between the two Cauchy-Green tensors, \(\tens{C}\) is most used in solid mechanics because it acts on the position of the point expressed in the reference configuration.</p></article><article class="insight remark-like" id="insight-2"><h6 class="heading">
 <span class="type">Insight</span><span class="space"> </span><span class="codenumber">1.8.5</span><span class="period">.</span><span class="space"> </span><span class="title">meaning of the components of \(\tens{C}\).</span>
 </h6>
-<p id="p-142">Let's apply to the gradient of the transformation \(\tens{F}\) what has been said in <a href="transformations_sec_strain_chap_en.html" class="internal" title="Section 1.2: transformations">Section 1.2</a> about the meaning of the matrices associated with linear transformations. That is, we express the matrix associated with \(\tens{F}\) as follows</p>
+<p id="p-144">Let's apply to the gradient of the transformation \(\tens{F}\) what has been said in <a href="transformations_sec_strain_chap_en.html" class="internal" title="Section 1.2: transformations">Section 1.2</a> about the meaning of the matrices associated with linear transformations. That is, we express the matrix associated with \(\tens{F}\) as follows</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{F}=\left[\begin{array}{ccc} \tens{F}\vec{e}_1 \amp \tens{F}\vec{e}_2 \amp \tens{F}\vec{e}_3 \end{array}\right]\,,
@@ -316,7 +317,7 @@ V = F*transpose(R)
 </div>
 <p class="continuation">This result allows us to establish the following for the coefficients of \(\mat{C}\)</p>
 <ul class="disc">
-<li id="li-24">For the generic coefficient of \(\mat{C}\) placed on the main diagonal, \(C_{ii}\text{,}\) we have<div class="displaymath">
+<li id="li-25">For the generic coefficient of \(\mat{C}\) placed on the main diagonal, \(C_{ii}\text{,}\) we have<div class="displaymath">
 \begin{equation}
 C_{ii} = \transp{(\tens{F}\vec{e}_i)}\tens{F}\vec{e}_i = \tens{F}\vec{e}_i \cdot \tens{F}\vec{e}_i = \| \tens{F}\vec{e}_i\|^2\,.\label{Cii_pre_eq}\tag{1.8.3}
 \end{equation}
@@ -325,7 +326,7 @@ C_{ii} = \transp{(\tens{F}\vec{e}_i)}\tens{F}\vec{e}_i = \tens{F}\vec{e}_i \cdot
 C_{ii} = \| \tens{F}\vec{e}_i\|^2 = \func{\lambda}{\vec{e}_i}^2\,,\label{Cii_eq}\tag{1.8.4}
 \end{equation}
 </div>where \(\func{\lambda}{\vec{e}_i}\) is the <em class="emphasis">stretch along the direction \(\vec{e}_i \)</em>. In the case of the diagonal form for the tensor \(\tens{C} \) this stretch coincides with the corresponding principal stretch or eigenvalue of \(\tens{U}\text{.}\)</li>
-<li id="li-25">For the components outside the main diagonal it is obtained instead<div class="displaymath">
+<li id="li-26">For the components outside the main diagonal it is obtained instead<div class="displaymath">
 \begin{equation*}
 C_{ij} = \transp{(\tens{F}\vec{e}_i)}\tens{F}\vec{e}_j = \tens{F}\vec{e}_i \cdot \tens{F}\vec{e}_j = \cos{\func{\theta}{\tens{F}\vec{e}_i,\tens{F}\vec{e}_j}} \| \tens{F}\vec{e}_i\|\, \| \tens{F}\vec{e}_j\|\,,
 \end{equation*}
@@ -350,7 +351,7 @@ C_{ij} = \sin{\func{\gamma}{\vec{e}_i,\vec{e}_j}}\, \func{\lambda}{\vec{e}_i} \,
 </ul></article></section><section class="subsection" id="subsection-10"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.8.2</span> <span class="title">Green-Lagrange strain tensor</span>
 </h3>
-<p id="p-143">A standard strain measure is based on the difference between the squared lengths in the current configuration and in the reference one. In particular what follows can be obtained</p>
+<p id="p-145">A standard strain measure is based on the difference between the squared lengths in the current configuration and in the reference one. In particular what follows can be obtained</p>
 <div class="displaymath">
 \begin{align*}
 \frac{1}{2}\left(\|d\vec{x}\|^2 - \|d\vec{X}\|^2\right) \amp = \frac{1}{2}\left(d\vec{x}\cdot d\vec{x} - d\vec{X}\cdot d\vec{X}\right)\,,\\
@@ -369,10 +370,10 @@ C_{ij} = \sin{\func{\gamma}{\vec{e}_i,\vec{e}_j}}\, \func{\lambda}{\vec{e}_i} \,
 <article class="remark remark-like" id="remark-11"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.8.6</span><span class="period">.</span>
 </h6>
-<p id="p-144">The tensor \(\tens{C} = \tens{U}^2 \) is positive definite as it is related to the square of the scale factor with which the length of the generic segment \(d\vec{X}\) is modified. In the field of admissible deformations, this scale factor, as for areas and volumes, cannot cancel. With the Green-Lagrange tensor a measure of the elongation of the segment \(d\vec{X} \) with respect to its initial size is introduced. This makes possible negative values of the Green-Lagrange measure when the segment shortens or null values when the segment length does not change.</p></article></section><section class="subsection" id="subsection-11"><h3 class="heading hide-type">
+<p id="p-146">The tensor \(\tens{C} = \tens{U}^2 \) is positive definite as it is related to the square of the scale factor with which the length of the generic segment \(d\vec{X}\) is modified. In the field of admissible deformations, this scale factor, as for areas and volumes, cannot cancel. With the Green-Lagrange tensor a measure of the elongation of the segment \(d\vec{X} \) with respect to its initial size is introduced. This makes possible negative values of the Green-Lagrange measure when the segment shortens or null values when the segment length does not change.</p></article></section><section class="subsection" id="subsection-11"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.8.3</span> <span class="title">strain tensors and displacement gradient</span>
 </h3>
-<p id="p-145">The mechanical models that will be discussed during the course are typically formulated using the displacement field as a kinematic entity which, remember, is defined as \(\vec{u} = \vec{x} - \vec{X}\text{.}\) Hence \(\tens{F} = \tens{I} + \tens{\nabla u} \text{.}\) Therefore the Green-Lagrange tensor can be expressed as</p>
+<p id="p-147">The mechanical models that will be discussed during the course are typically formulated using the displacement field as a kinematic entity which, remember, is defined as \(\vec{u} = \vec{x} - \vec{X}\text{.}\) Hence \(\tens{F} = \tens{I} + \tens{\nabla u} \text{.}\) Therefore the Green-Lagrange tensor can be expressed as</p>
 <div class="displaymath">
 \begin{align*}
 \tens{E} \amp = \frac{1}{2}\left( \transp{\tens{F}}\,\tens{F} - \tens{I}\right)\,,\\
@@ -387,7 +388,7 @@ C_{ij} = \sin{\func{\gamma}{\vec{e}_i,\vec{e}_j}}\, \func{\lambda}{\vec{e}_i} \,
 \tens{E} = \frac{1}{2}\left(\tens{\nabla u} + \transp{\tens{\nabla u}}\right) + \frac{1}{2} \transp{\tens{\nabla u}}\,\tens{\nabla u} \,.\tag{1.8.8}
 \end{equation}
 </div>
-<p id="p-146">Also \(\tens{C}\) can be reformulated as follows</p>
+<p id="p-148">Also \(\tens{C}\) can be reformulated as follows</p>
 <div class="displaymath">
 \begin{equation*}
 \tens{C} = \transp{\tens{F}}\tens{F} = \transp{(\tens{I}+\tens{\nabla u})} (\tens{I}+\tens{\nabla u})\,,

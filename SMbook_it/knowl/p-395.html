@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:38:36+02:00       *-->
+<!--*       on 2024-09-17T15:55:30+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,50 +15,12 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg"><figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>% campo di spostamento generico nel piano
-rigidDispl = ...
-    @(u0, phi0, X0, X)...
-    [u0(1)-phi0*(X(2)-X0(2));...
-     u0(2)+phi0*(X(1)-X0(1))];
-
-% descrizione geometrica della trave 
-syms l;
-A = [0; 0];
-B = [l; 0];
-C = [l; l/2];
-
-% campo di spostamento assumendo come polo il punto A
-POLO = A;
-syms phiA;
-phi0 = phiA;
-u0 = sym('uA', [2 1]);
-uA = rigidDispl(u0, phi0, POLO, A);
-uB = rigidDispl(u0, phi0, POLO, B);
-uC = rigidDispl(u0, phi0, POLO, C);
-
-% equazioni di vincolo
-eqns = [
-uA(2) == 0,
-uB(2) == 0,
-uC(1) == 0
-];
-
-% matrice cinematica e vettore degli spostamenti assegnati
-[A,d] = equationsToMatrix(eqns, [uA(1), uA(2), phiA]);
-
-% gradi di libertà, n
-% gradi di vincolo, m
-[m,n] = size(A); 
-
-% calcolo del rango di A
-r = rank(A);
-
-% se il sistema è cinematicamente determinato si calcola la soluzione
-if and(r == min(m,n), m == n)
-    x = linsolve(A,d);
-end
+<p xmlns:svg="http://www.w3.org/2000/svg">Le istruzioni MATLAB® utilizzabili in questo caso sono le seguenti. <figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms l;
+A = [1 0 0; 0 1 0; 0 1 l];
+b = [0; 0; l/10];
+linsolve(A,b)
 </b></pre></div>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">4.4.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">4.4.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <span class="incontext"><a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html#p-395">Contesto</a></span>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:38:34+02:00       *-->
+<!--*       on 2024-09-17T15:55:28+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -122,7 +122,8 @@ MathJax.Hub.Config({
 <li><a href="dedication_it.html" data-scroll="dedication_it">Dedica</a></li>
 <li><a href="acknowledgement_it.html" data-scroll="acknowledgement_it">Ringraziamenti</a></li>
 <li><a href="preface_it.html" data-scroll="preface_it">Prefazione</a></li>
-<li><a href="references_frontmatter_en.html" data-scroll="references_frontmatter_en">utilizzo di MATLAB®</a></li>
+<li><a href="MATLAB_references_frontmatter_it.html" data-scroll="MATLAB_references_frontmatter_it">utilizzo di MATLAB®</a></li>
+<li><a href="SMcontents_references_frontmatter_it.html" data-scroll="SMcontents_references_frontmatter_it">Risorse aggiuntive</a></li>
 </ul>
 </li>
 <li class="link part"><a href="continuum_mechanics_it.html" data-scroll="continuum_mechanics_it"><span class="codenumber">I</span> <span class="title">meccanica del continuo</span></a></li>
@@ -197,7 +198,7 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="planecase_sec_rigid_body_statics_chap_it"><h2 class="heading hide-type">
 <span class="type">Paragrafo</span> <span class="codenumber">5.2</span> <span class="title">il caso piano</span>
 </h2>
-<p id="p-425">Se si considera il caso in cui siano soltanto due le componenti non nulle delle forze applicate e delle posizioni dei punti dello spazio, l'equazione vettoriale <a class="xref" data-knowl="./knowl/rb_statics1_eq.html" title="Equazione 5.1.7">(5.1.7)</a> è esprimibile solo mediante due equazioni scalari e l'equazione vettoriale <a class="xref" data-knowl="./knowl/rb_statics2_eq.html" title="Equazione 5.1.8">(5.1.8)</a> si riduce ad una sola equazione scalare. Ovvero</p>
+<p id="p-428">Se si considera il caso in cui siano soltanto due le componenti non nulle delle forze applicate e delle posizioni dei punti dello spazio, l'equazione vettoriale <a class="xref" data-knowl="./knowl/rb_statics1_eq.html" title="Equazione 5.1.7">(5.1.7)</a> è esprimibile solo mediante due equazioni scalari e l'equazione vettoriale <a class="xref" data-knowl="./knowl/rb_statics2_eq.html" title="Equazione 5.1.8">(5.1.8)</a> si riduce ad una sola equazione scalare. Ovvero</p>
 <div class="displaymath">
 \begin{gather}
 \sum_{i=1}^N F_{1i} = 0\,,\label{rb_plane_statics1_eq}\tag{5.2.1}\\
@@ -207,7 +208,7 @@ MathJax.Hub.Config({
 </div>
 <p class="continuation">La condizione <a class="xref" data-knowl="./knowl/rb_plane_statics1_eq.html" title="Equazione 5.2.1">(5.2.1)</a> esprime l'annullamento della somma di tutte le forze orizzontali applicate, ovvero le componenti lungo l'asse 1 delle forze applicate. La condizione <a class="xref" data-knowl="./knowl/rb_plane_statics2_eq.html" title="Equazione 5.2.2">(5.2.2)</a> impone l'annullamento della somma di tutte le forze verticali applicate, ovvero le componenti lungo l'asse 2 delle forze applicate. La condizione <a class="xref" data-knowl="./knowl/rb_plane_statics3_eq.html" title="Equazione 5.2.3">(5.2.3)</a> esprime l'annullamento della somma dei momenti esercitati dalle forze orizzontali e verticali rispetto al punto scelto come polo. La seguente figura illustra per il caso di una singola forza il significato dei termini presenti nelle equazioni. <figure class="figure figure-like" id="plane_statics_fig"><div class="image-box" style="width: 55%; margin-left: 22.5%; margin-right: 22.5%;"><img src="images/statica2D.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.2.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<article class="assemblage assemblage-like" id="assemblage-40"><p id="p-426">Le seguenti istruzioni MATLAB® consentono di valutare le risultanti delle forze orizzontali, delle forze verticali e dei momenti a partire dai carichi applicati sui singoli punti di un corpo rigido. <figure class="listing figure-like" id="listing-53"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>% vettore delle risultanti =
+<article class="assemblage assemblage-like" id="assemblage-40"><p id="p-429">Le seguenti istruzioni MATLAB® consentono di valutare le risultanti delle forze orizzontali, delle forze verticali e dei momenti a partire dai carichi applicati sui singoli punti di un corpo rigido. <figure class="listing figure-like" id="listing-53"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>% vettore delle risultanti =
 % [orizzontale; verticale; momento]
 R = zeros(3,1);
 

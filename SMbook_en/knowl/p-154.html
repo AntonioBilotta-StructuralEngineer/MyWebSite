@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:40:44+02:00       *-->
+<!--*       on 2024-09-17T16:03:31+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,18 +15,64 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Above in the figure the obtained result is emphasized showing the difference between the vector obtained by applying \(\tens{R}\)</p>
+<p>To explain the denomination "infinitesimal rotation" that has been given to the skew part of the gradient of the displacement, it is convenient to discuss a transformation characterized only by a simple rotation. To this end, consider a rotation around the \(\vec{e}_3\) axis. The significant part of the transformation can be directly discussed in the plan as follows</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+x_1 \amp = X_1\cos{\alpha} - X_2\sin{\alpha}\,,\\
+x_2 \amp = X_1\sin{\alpha} + X_2\cos{\alpha}\,.
+\end{align*}
+</div>
+<p class="continuation">The displacement field is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+u_1 = x_1 - X_1 \amp = (X_1\cos{\alpha} - X_2\sin{\alpha}) - X_1\,,\\
+u_2 = x_2 - X_2 \amp = (X_1\sin{\alpha} + X_2\cos{\alpha}) - X_2\,.
+\end{align*}
+</div>
+<p class="continuation">With this information it is possible to calculate the deformation gradient which, in the specific case, is composed only of the rotation</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\tens{R}\vec{X}
+\tens{F} = \tens{R}\,,
 \end{equation*}
 </div>
-<p class="continuation">and the vector obtained applying the approximation of \(\tens{R}\) given by \((\tens{I} + \text{skew}\tens{\nabla u})\)</p>
+<p class="continuation">where, as already discussed before,</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-(\tens{I} + \text{skew}\tens{\nabla u})\vec{X} = \vec{X} + \text{skew}\tens{\nabla u}\,\vec{X}\,.
+\mat{R} =
+\left[\begin{array}{cc}
+\cos{\alpha} \amp -\sin{\alpha} \\
+\sin{\alpha} \amp \cos{\alpha}
+\end{array}\right]\,.
 \end{equation*}
 </div>
+<p class="continuation">Moreover</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\tens{F} = \tens{I} + \tens{\nabla u}\,,
+\end{equation*}
+</div>
+<p class="continuation">and then</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\tens{R} = \tens{I} + \tens{\nabla u} =  \tens{I} + \text{sym}\tens{\nabla u} + \text{skew}\tens{\nabla u}\,.\tag{1.9.11}
+\end{equation}
+</div>
+<p class="continuation">Result that highlights the decomposition of the gradient of the displacement with</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\text{sym}\mat{\nabla u} =
+\left[\begin{array}{cc}
+\cos{\alpha} - 1 \amp 0 \\
+0 \amp \cos{\alpha} - 1 
+\end{array}\right]\,,\quad
+\text{skew}\mat{\nabla u} =
+\left[\begin{array}{cc}
+0 \amp -\sin{\alpha} \\
+\sin{\alpha} \amp 0 
+\end{array}\right]\,,
+\end{equation*}
+</div>
+<p class="continuation">decomposition that, for now, is generic because no reference to infinitesimal displacements has been introduced.</p>
 <span class="incontext"><a href="infinitesimal_sec_strain_chap_en.html#p-154">in-context</a></span>
 </body>
 </html>

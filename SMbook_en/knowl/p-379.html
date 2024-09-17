@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:40:45+02:00       *-->
+<!--*       on 2024-09-17T16:03:32+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,17 +15,22 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>The linear system <a class="xref" data-knowl="./knowl/kinematik_system_eq.html" title="Equation 4.3.2">(4.3.2)</a> is used for the calculation of the Lagrangian parameters (chosen degrees of freedom) collected in vector \(\vec{q}\text{.}\) To this end, it is useful to define, on the basis of the solubility conditions of the system, a kinematic classification of the systems. Let \(p = \text{min}(n, m) \text{,}\) then the following cases may occur.</p>
-<ul class="disc">
-<li>\(\text{rank}\mat{A} == p\)<ul class="circle">
-<li>\(n==m\text{:}\) determinate system;</li>
-<li>\(n&gt;m\text{:}\) the system is a mechanism;</li>
-<li>\(n&lt;m\text{:}\) impossible system.</li>
-</ul>
-</li>
-<li>\(\text{rango}\mat{A} &lt; p\)<ul class="circle"><li>degenerate system.</li></ul>
-</li>
-</ul>
+<p>Let us consider a system with \(n\) degrees of freedom and subjected to \(m\) constraint conditions. The equations expressing the prescribed constraint conditions can be written as</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\sum_{j=1}^n A_{ij}  q_j = d_i \qquad (i=1 \dots m)\,.\tag{4.3.1}
+\end{equation}
+</div>
+<p class="continuation">\(d_i\) is a generic <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">assigned displacement</em> on the \(i\)-th constraint, \(q_j\) is the \(j\)-th degree of freedom and \(A_{ij}\) is the unitary contribution to displacement give by \(q_j\) on \(i\)-th constraint. Using a matrix notation the constraint conditions can be also epxressed as follows</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\mat{A} \vec{q} = \vec{d},\tag{4.3.2}
+\end{equation}
+</div>
+<p class="continuation">where \(\mat{A}\) is the \(m \times n\) kinematic matrix of the system, \(\vec{q}\text{,}\) with \(n\) components, is the vector of the chosen degrees of freedom and \(\vec{d}\text{,}\) with \(m\) components, is the vector containing the assigned displacemnts. <article class="note remark-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">4.3.1</span><span class="period">.</span>
+</h6>
+<p xmlns:svg="http://www.w3.org/2000/svg">The components of the vector \(\vec{d} \) can indifferently assume null or non-null values. The most recurrent case is, however, a zero assignment for all components.</p></article></p>
 <span class="incontext"><a href="analysis_sec_rigid_body_kinematics_chap_en.html#p-379">in-context</a></span>
 </body>
 </html>

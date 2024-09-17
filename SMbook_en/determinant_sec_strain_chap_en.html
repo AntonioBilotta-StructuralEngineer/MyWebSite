@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:40:40+02:00       *-->
+<!--*       on 2024-09-17T16:03:27+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -122,7 +122,8 @@ MathJax.Hub.Config({
 <li><a href="dedication_en.html" data-scroll="dedication_en">Dedication</a></li>
 <li><a href="acknowledgement_en.html" data-scroll="acknowledgement_en">Acknowledgements</a></li>
 <li><a href="preface_en.html" data-scroll="preface_en">Preface</a></li>
-<li><a href="references_frontmatter_en.html" data-scroll="references_frontmatter_en">using MATLAB®</a></li>
+<li><a href="MATLAB_references_frontmatter_en.html" data-scroll="MATLAB_references_frontmatter_en">using MATLAB®</a></li>
+<li><a href="SMcontents_references_frontmatter_en.html" data-scroll="SMcontents_references_frontmatter_en">Additional resources</a></li>
 </ul>
 </li>
 <li class="link part"><a href="continuum_mechanics_en.html" data-scroll="continuum_mechanics_en"><span class="codenumber">I</span> <span class="title">continuum mechanics</span></a></li>
@@ -197,18 +198,18 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="determinant_sec_strain_chap_en"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.5</span> <span class="title">determinant of the deformation gradient</span>
 </h2>
-<p id="p-75">In previous sections tensors have been introduced as <em class="emphasis">linear operators</em> associated with <em class="emphasis">linear transformations</em> defined in the usual space \(\mathbb{R}^3\text{.}\) The use of the denomination <em class="emphasis">linear operator</em> instead of <em class="emphasis">matrix</em> indicates a mathematical object with a broader meaning but, in any case, the tensors share with matrices all the basic algebraic properties and operations. Therefore, in the following, speaking of matrices, some properties and operations will be resumed, such as the calculation of the determinant, placing them in the realm of the kinematic description of the bodies.</p>
-<p id="p-76"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-3" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/fi2bq1MCvFE?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p>
-<p id="p-77">What is described in previous video lesson can be summarized as follows.</p>
+<p id="p-77">In previous sections tensors have been introduced as <em class="emphasis">linear operators</em> associated with <em class="emphasis">linear transformations</em> defined in the usual space \(\mathbb{R}^3\text{.}\) The use of the denomination <em class="emphasis">linear operator</em> instead of <em class="emphasis">matrix</em> indicates a mathematical object with a broader meaning but, in any case, the tensors share with matrices all the basic algebraic properties and operations. Therefore, in the following, speaking of matrices, some properties and operations will be resumed, such as the calculation of the determinant, placing them in the realm of the kinematic description of the bodies.</p>
+<p id="p-78"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-3" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/fi2bq1MCvFE?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p>
+<p id="p-79">What is described in previous video lesson can be summarized as follows.</p>
 <ul class="disc">
-<li id="li-8">The determinant is a real number which constitutes the scale factor of the areas, in the case of 2D transformations, or of the volumes, in the case of 3D transformations.</li>
-<li id="li-9">From this perspective a null determinant is associated with transformations that scale to zero areas or volumes described in the initial space to which the transformation is applied. For example in 2D, the determinant is zero if all the points of the starting space are mapped on a line or, in the most extreme case, on a single point. In the 3D case, a transformation has zero determinant if it maps the points in a plane, in a straight line or in a single point. In these cases the columns of the matrix associated with the transformation are linearly dependent.</li>
-<li id="li-10">The determinant can also be negative because it also carries information about a possible change of orientation of the area or of the starting volume. This occurs when the transformed vectors of the basis do not respect the right hand's rule.</li>
+<li id="li-9">The determinant is a real number which constitutes the scale factor of the areas, in the case of 2D transformations, or of the volumes, in the case of 3D transformations.</li>
+<li id="li-10">From this perspective a null determinant is associated with transformations that scale to zero areas or volumes described in the initial space to which the transformation is applied. For example in 2D, the determinant is zero if all the points of the starting space are mapped on a line or, in the most extreme case, on a single point. In the 3D case, a transformation has zero determinant if it maps the points in a plane, in a straight line or in a single point. In these cases the columns of the matrix associated with the transformation are linearly dependent.</li>
+<li id="li-11">The determinant can also be negative because it also carries information about a possible change of orientation of the area or of the starting volume. This occurs when the transformed vectors of the basis do not respect the right hand's rule.</li>
 </ul>
 <section class="subsection" id="subsection-2"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.5.1</span> <span class="title">transformation formula of volume elements</span>
 </h3>
-<p id="p-78">Given the volume element \(dV = dX_1 dX_2 dX_3\) belonging to the reference configuration \(\body_0\text{,}\) it is possible to evaluate the corresponding volume element \(dv = dx_1 dx_2 dx_3 \) relative to the current configuration \(\body\text{.}\) The formula is</p>
+<p id="p-80">Given the volume element \(dV = dX_1 dX_2 dX_3\) belonging to the reference configuration \(\body_0\text{,}\) it is possible to evaluate the corresponding volume element \(dv = dx_1 dx_2 dx_3 \) relative to the current configuration \(\body\text{.}\) The formula is</p>
 <div class="displaymath">
 \begin{equation}
 dv = \func{J}{\vec{X}}\,dV\,,\label{volume_change_eq}\tag{1.5.1}
@@ -232,10 +233,10 @@ dv = \func{J}{\vec{X}}\,dV\,,\label{volume_change_eq}\tag{1.5.1}
 dV = \func{J^{-1}}{\vec{x}}\,dv\,.\label{inverse_volume_change_eq}\tag{1.5.4}
 \end{equation}
 </div>
-<p id="p-79">Transformations characterized by \(J = 1 \) will be called <em class="emphasis">isochoric</em> transformations.</p>
+<p id="p-81">Transformations characterized by \(J = 1 \) will be called <em class="emphasis">isochoric</em> transformations.</p>
 <article class="assemblage assemblage-like" id="assemblage-8"><h6 class="heading"><span class="title">calculation of the determinant of transformations and admissibility check.</span></h6>
-<p id="p-80">Considering the two-dimensional transformations considered in the previous examples, the following MATLAB® instructions are given to be used for the calculation of the determinant and for the verification of the admissibility of the transformation. The instructions for plotting the value of the determinant on the domain \(-5 &lt;  X_1 &lt; 5\text{,}\) \(-5 &lt;  X_2 &lt; 5\) are also given.</p>
-<p id="p-81">MATLAB® instructions for the Transformation 1. <figure class="listing figure-like" id="listing-13"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
+<p id="p-82">Considering the two-dimensional transformations considered in the previous examples, the following MATLAB® instructions are given to be used for the calculation of the determinant and for the verification of the admissibility of the transformation. The instructions for plotting the value of the determinant on the domain \(-5 &lt;  X_1 &lt; 5\text{,}\) \(-5 &lt;  X_2 &lt; 5\) are also given.</p>
+<p id="p-83">MATLAB® instructions for the Transformation 1. <figure class="listing figure-like" id="listing-13"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
 F = [T1([1; 0]) T1([0; 1])];
 syms detF(X1, X2);
 detF(X1, X2) = det(F);
@@ -247,8 +248,8 @@ y = linspace(-5, 5, 50);
 surface(X,Y,detF(X,Y))
 </b></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.5.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<p id="p-82">Similar instructions can also be identified for Transformations 2, 3 and 4 which also verify the admissibility condition, being characterized by a determinant which is constant and greater than zero.</p>
-<p id="p-83">MATLAB® instructions for the transformation defined by \(x_1 = X_1^3\,,\; x_2 = X_2^3\text{.}\) <figure class="listing figure-like" id="listing-14"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms T1(X1, X2);
+<p id="p-84">Similar instructions can also be identified for Transformations 2, 3 and 4 which also verify the admissibility condition, being characterized by a determinant which is constant and greater than zero.</p>
+<p id="p-85">MATLAB® instructions for the transformation defined by \(x_1 = X_1^3\,,\; x_2 = X_2^3\text{.}\) <figure class="listing figure-like" id="listing-14"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms T1(X1, X2);
 T1(X1, X2) = X1^3; 
 
 syms T2(X1, X2);
@@ -264,12 +265,12 @@ y = linspace(-5, 5, 50);
 surface(X,Y,detF(X,Y))
 </b></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.5.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<p id="p-84">The result of the previous instructions provides the following plot <figure class="figure figure-like" id="figure-5"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="images/nolin_transf_det.png" style="width: 100%; height: auto;" alt=""></div>
+<p id="p-86">The result of the previous instructions provides the following plot <figure class="figure figure-like" id="figure-5"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="images/nolin_transf_det.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.5.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure> plotting which can be used to verify that along the coordinated axes \(X_1 = 0 \) and \(X_2 = 0 \) the transformation has zero determinant and therefore is not admissible (remember in this regard the presence of cusps in the plots shown in <a class="xref" data-knowl="./knowl/nolin_transf_example.html" title="Figure 1.3.4">Figure 1.3.4</a>).</p></article></section><section class="subsection" id="subsection-3"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.5.2</span> <span class="title">area element transformation</span>
 </h3>
-<p id="p-85"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-4" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/JVkE0EuiVik?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p>
-<p id="p-86">The volumetric transformation <a class="xref" data-knowl="./knowl/volume_change_eq.html" title="Equation 1.5.1">(1.5.1)</a> can be rewritten, remembering the meaning of the triple product presented in previous video, as follows</p>
+<p id="p-87"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-4" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/JVkE0EuiVik?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p>
+<p id="p-88">The volumetric transformation <a class="xref" data-knowl="./knowl/volume_change_eq.html" title="Equation 1.5.1">(1.5.1)</a> can be rewritten, remembering the meaning of the triple product presented in previous video, as follows</p>
 <div class="displaymath">
 \begin{gather*}
 dv = J\, dV\\

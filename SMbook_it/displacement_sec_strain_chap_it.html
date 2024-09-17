@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:38:31+02:00       *-->
+<!--*       on 2024-09-17T15:55:25+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -122,7 +122,8 @@ MathJax.Hub.Config({
 <li><a href="dedication_it.html" data-scroll="dedication_it">Dedica</a></li>
 <li><a href="acknowledgement_it.html" data-scroll="acknowledgement_it">Ringraziamenti</a></li>
 <li><a href="preface_it.html" data-scroll="preface_it">Prefazione</a></li>
-<li><a href="references_frontmatter_en.html" data-scroll="references_frontmatter_en">utilizzo di MATLAB®</a></li>
+<li><a href="MATLAB_references_frontmatter_it.html" data-scroll="MATLAB_references_frontmatter_it">utilizzo di MATLAB®</a></li>
+<li><a href="SMcontents_references_frontmatter_it.html" data-scroll="SMcontents_references_frontmatter_it">Risorse aggiuntive</a></li>
 </ul>
 </li>
 <li class="link part"><a href="continuum_mechanics_it.html" data-scroll="continuum_mechanics_it"><span class="codenumber">I</span> <span class="title">meccanica del continuo</span></a></li>
@@ -197,7 +198,7 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="displacement_sec_strain_chap_it"><h2 class="heading hide-type">
 <span class="type">Paragrafo</span> <span class="codenumber">1.4</span> <span class="title">il campo di spostamento</span>
 </h2>
-<p id="p-68">Un altra quantità molto utilizzata nella descrizione cinematica dei corpi è la differenza fra la posizione corrente la posizione di riferimento del generico punto</p>
+<p id="p-71">Un altra quantità molto utilizzata nella descrizione cinematica dei corpi è la differenza fra la posizione corrente la posizione di riferimento del generico punto</p>
 <div class="displaymath">
 \begin{equation}
 \vec{u} = \vec{x} - \vec{X}\label{displ_eq}\tag{1.4.1}
@@ -221,7 +222,7 @@ u_3 \amp = \func{u_3}{X_1, X_2, X_3}\,.\tag{1.4.4}
 \end{array}\right]\,.\label{Dipl_Grad_X_eq}\tag{1.4.5}
 \end{equation}
 </div>
-<p id="p-69">Dalla equazione <a class="xref" data-knowl="./knowl/displ_eq.html" title="Equazione 1.4.1">(1.4.1)</a> si ricava facilmente la relazione fra gradiente dello spostamento e gradiente della trasformazione</p>
+<p id="p-72">Dalla equazione <a class="xref" data-knowl="./knowl/displ_eq.html" title="Equazione 1.4.1">(1.4.1)</a> si ricava facilmente la relazione fra gradiente dello spostamento e gradiente della trasformazione</p>
 <div class="displaymath">
 \begin{equation}
 \tens{\nabla u} = \tens{F} - \tens{I}\,,\tag{1.4.6}
@@ -238,7 +239,7 @@ u_3 \amp = \func{u_3}{X_1, X_2, X_3}\,.\tag{1.4.4}
 \end{equation*}
 </div>
 <article class="assemblage assemblage-like" id="assemblage-7"><h6 class="heading"><span class="title">valutazione del campo di spostamento e del relativo gradiente.</span></h6>
-<p id="p-70">In merito alla Trasformazione 1 già utilizzata negli esempi precedenti, il campo di spostamento ed il relativo gradiente possono essere valutati sulla base delle seguenti istruzioni MATLAB®. Si tenga presente che, per la linearità delle trasformazioni coinvolte, i gradienti vengono valutati come matrice associata alla trasformazione. <figure class="listing figure-like" id="listing-9"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
+<p id="p-73">In merito alla Trasformazione 1 già utilizzata negli esempi precedenti, il campo di spostamento ed il relativo gradiente possono essere valutati sulla base delle seguenti istruzioni MATLAB®. Si tenga presente che, per la linearità delle trasformazioni coinvolte, i gradienti vengono valutati come matrice associata alla trasformazione. <figure class="listing figure-like" id="listing-9"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
 F = [T1([1; 0]) T1([0; 1])]
 Grad_u = F - diag([1 1])
 
@@ -246,7 +247,7 @@ u1 = @(X) T1(X) - X;
 Grad_u = [u1([1; 0]) u1([0; 1])]
 </b></pre></div>
 <figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.4.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<p id="p-71">Istruzioni MATLAB® per la Trasformazione 2. <figure class="listing figure-like" id="listing-10"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T2 = @(X) [2*X(1); X(2)];
+<p id="p-74">Istruzioni MATLAB® per la Trasformazione 2. <figure class="listing figure-like" id="listing-10"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T2 = @(X) [2*X(1); X(2)];
 F = [T2([1; 0]) T2([0; 1])]
 Grad_u = F - diag([1 1])
 
@@ -254,7 +255,7 @@ u2 = @(X) T2(X) - X;
 Grad_u = [u2([1; 0]) u2([0; 1])]
 </b></pre></div>
 <figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.4.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<p id="p-72">Istruzioni MATLAB® per la Trasformazione 3. <figure class="listing figure-like" id="listing-11"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T3 = @(X) [X(1); 1.5*X(2)];
+<p id="p-75">Istruzioni MATLAB® per la Trasformazione 3. <figure class="listing figure-like" id="listing-11"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T3 = @(X) [X(1); 1.5*X(2)];
 F = [T3([1; 0]) T3([0; 1])]
 Grad_u = F - diag([1 1])
 
@@ -262,7 +263,7 @@ u3 = @(X) T3(X) - X;
 Grad_u = [u3([1; 0]) u3([0; 1])]
 </b></pre></div>
 <figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.4.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<p id="p-73">Istruzioni MATLAB® per la Trasformazione 4. <figure class="listing figure-like" id="listing-12"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T4 = @(X) [X(1)+X(2); X(2)];
+<p id="p-76">Istruzioni MATLAB® per la Trasformazione 4. <figure class="listing figure-like" id="listing-12"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T4 = @(X) [X(1)+X(2); X(2)];
 F = [T4([1; 0]) T4([0; 1])]
 Grad_u = F - diag([1 1])
 

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:40:46+02:00       *-->
+<!--*       on 2024-09-17T16:03:33+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,41 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let us consider a beam subjected to generic loading conditions, let us assume to isolate a portion of the beam with infinitesimal length  \(dx\text{.}\) The beam's portion thus identified is subjected to a series of actions shown in the figure and which, for clarity, are listed below:</p>
-<ul class="disc">
-<li>generalized section forces, \(N(x)\text{,}\) \(T(x)\) e \(M(x)\text{,}\) relative to point \(x\) along the beam axis;</li>
-<li>generalized section forces, \(N(x+dx)\text{,}\) \(T(x+dx)\) e \(M(x+dx)\text{,}\) relative to point \(x+dx\text{;}\)</li>
-<li>axial distributed load \(p(x)\text{;}\)</li>
-<li>transverse distributed load \(q(x)\text{.}\)</li>
-</ul>
-<span class="incontext"><a href="indefinte_sec_rigid_body_statics_chap_en.html#p-461">in-context</a></span>
+<p xmlns:svg="http://www.w3.org/2000/svg">Below are the MATLAB® instructions for calculating the resultant and the centroid for some types of distributed load. <figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>% constant ditributed load
+syms q l x;
+load(x, q) = q;
+np = 100;
+xv = 0:1/np:1;
+qv = load(xv, 1);
+plot(xv,qv,'r','LineWidth',2)
+
+
+Rq = int(load(x, q), x, 0, l)
+xq = int(load(x, q)*x, x, 0, l)/Rq
+</b></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.7.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure> <figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>% linear ditributed load
+syms q l x;
+load(x, q, l) = q/l*x;
+np = 100;
+xv = 0:1/np:1;
+qv = load(xv, 1, 1);
+plot(xv,qv,'r','LineWidth',2)
+
+Rq = int(load(x, q, l), x, 0, l)
+xq = int(load(x, q, l)*x, x, 0, l)/Rq
+</b></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.7.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure> <figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>% quadratic ditributed load
+syms q l x;
+load(x, q, l) = q/l^2*x^2;
+np = 100;
+xv = 0:1/np:1;
+qv = load(xv, 1, 1);
+plot(xv,qv,'r','LineWidth',2)
+
+Rq = int(load(x, q, l), x, 0, l)
+xq = int(load(x, q, l)*x, x, 0, l)/Rq
+</b></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.7.9<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<span class="incontext"><a href="sollecitazioni_sec_rigid_body_statics_chap_en.html#p-461">in-context</a></span>
 </body>
 </html>

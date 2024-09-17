@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:38:34+02:00       *-->
+<!--*       on 2024-09-17T15:55:28+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,14 +15,22 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Istruzioni MATLAB® per la Trasformazione 3. <figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T3 = @(X) [X(1); 1.5*X(2)];
-F = [T3([1; 0]) T3([0; 1])]
-Grad_u = F - diag([1 1])
-
-u3 = @(X) T3(X) - X;
-Grad_u = [u3([1; 0]) u3([0; 1])]
-</b></pre></div>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.4.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p>Dalla equazione <a class="xref" data-knowl="./knowl/displ_eq.html" title="Equazione 1.4.1">(1.4.1)</a> si ricava facilmente la relazione fra gradiente dello spostamento e gradiente della trasformazione</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\tens{\nabla u} = \tens{F} - \tens{I}\,,\tag{1.4.6}
+\end{equation}
+</div>
+<p class="continuation">dove \(\tens{I}\) rappresenta il tensore identità</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\mat{I} = \left[\begin{array}{ccc}
+1 \amp 0 \amp 0\\
+0 \amp 1 \amp 0\\
+0 \amp 0 \amp 1
+\end{array}\right]\,.
+\end{equation*}
+</div>
 <span class="incontext"><a href="displacement_sec_strain_chap_it.html#p-72">Contesto</a></span>
 </body>
 </html>

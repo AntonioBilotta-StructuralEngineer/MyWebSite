@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:40:40+02:00       *-->
+<!--*       on 2024-09-17T16:03:27+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -122,7 +122,8 @@ MathJax.Hub.Config({
 <li><a href="dedication_en.html" data-scroll="dedication_en">Dedication</a></li>
 <li><a href="acknowledgement_en.html" data-scroll="acknowledgement_en">Acknowledgements</a></li>
 <li><a href="preface_en.html" data-scroll="preface_en">Preface</a></li>
-<li><a href="references_frontmatter_en.html" data-scroll="references_frontmatter_en">using MATLAB®</a></li>
+<li><a href="MATLAB_references_frontmatter_en.html" data-scroll="MATLAB_references_frontmatter_en">using MATLAB®</a></li>
+<li><a href="SMcontents_references_frontmatter_en.html" data-scroll="SMcontents_references_frontmatter_en">Additional resources</a></li>
 </ul>
 </li>
 <li class="link part"><a href="continuum_mechanics_en.html" data-scroll="continuum_mechanics_en"><span class="codenumber">I</span> <span class="title">continuum mechanics</span></a></li>
@@ -198,7 +199,7 @@ MathJax.Hub.Config({
 <span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">transformations</span>
 </h2>
 <figure class="figure figure-like" id="Kinematics_02_fig"><div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="images/Kinematics_02.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.2.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-30">We call <em class="emphasis">motion</em> the trasformation</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.2.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-32">We call <em class="emphasis">motion</em> the trasformation</p>
 <div class="displaymath">
 \begin{equation}
 \vec{x} = \func{\vec{\chi}}{\vec{X}}\,,\label{motion_eq}\tag{1.2.1}
@@ -211,7 +212,7 @@ MathJax.Hub.Config({
 \end{equation}
 </div>
 <p class="continuation">We assume \(\vec{\chi}\) sufficiently regular to allow derivation up to the desired order.</p>
-<p id="p-31">It is also assumed that the motion \(\vec{\chi} \) is uniquely invertible, i.e. it is possible to write</p>
+<p id="p-33">It is also assumed that the motion \(\vec{\chi} \) is uniquely invertible, i.e. it is possible to write</p>
 <div class="displaymath">
 \begin{equation}
 \vec{X} = \func{\vec{\chi}^{-1}}{\vec{x}}\,,\tag{1.2.3}
@@ -224,11 +225,11 @@ MathJax.Hub.Config({
 \end{equation}
 </div>
 <p class="continuation">where the symbol \(\vec{\chi}^{-1}\) indicates the inverse motion that associates the current position \(\vec{x}\) with the position \(\vec{X}\) in the reference configuration.</p>
-<p id="p-32">In general the motion \(\vec{\chi}\) of a body will change the position, orientation and shape of the body. A body capable of modifying its shape will therefore be called <em class="emphasis">deformable</em>.</p>
+<p id="p-34">In general the motion \(\vec{\chi}\) of a body will change the position, orientation and shape of the body. A body capable of modifying its shape will therefore be called <em class="emphasis">deformable</em>.</p>
 <article class="assemblage assemblage-like" id="assemblage-2"><h6 class="heading"><span class="title">some basic transformations.</span></h6>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:3.75%;margin-right:3.75%;">
 <div class="sbspanel" style="width:43.2432432432432%;justify-content:flex-start;">
-<p id="p-33">Transformation 1 (90 degrees counterclockwise rotation)</p>
+<p id="p-35">Transformation 1 (90 degrees counterclockwise rotation)</p>
 <div class="displaymath">
 \begin{equation*}
 \left[\begin{array}{c}x_1\\x_2\end{array}\right] =
@@ -239,7 +240,7 @@ MathJax.Hub.Config({
 </div>
 <div class="sbspanel" style="width:48.6486486486486%;justify-content:flex-start;"><img src="images/90degreesRotation.png" style="width: 100%; height: auto;" alt=""></div>
 </div></div>
-<p id="p-34">Instructions for the definition of a MATLAB® function associated with the assigned transformation and for its use. <figure class="listing figure-like" id="listing-3"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
+<p id="p-36">Instructions for the definition of a MATLAB® function associated with the assigned transformation and for its use. <figure class="listing figure-like" id="listing-3"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
 
 X = [1; 2];
 T1(X)
@@ -247,7 +248,7 @@ T1(X)
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.2.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:3.75%;margin-right:3.75%;">
 <div class="sbspanel" style="width:43.2432432432432%;justify-content:flex-start;">
-<p id="p-35">Transformation 2 (horizzontal extension)</p>
+<p id="p-37">Transformation 2 (horizzontal extension)</p>
 <div class="displaymath">
 \begin{equation*}
 \left[\begin{array}{c}x_1\\x_2\end{array}\right] =
@@ -258,7 +259,7 @@ T1(X)
 </div>
 <div class="sbspanel" style="width:48.6486486486486%;justify-content:flex-start;"><img src="images/RightExtension.png" style="width: 100%; height: auto;" alt=""></div>
 </div></div>
-<p id="p-36">MATLAB® instructions. <figure class="listing figure-like" id="listing-4"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T2 = @(X) [2*X(1); X(2)];
+<p id="p-38">MATLAB® instructions. <figure class="listing figure-like" id="listing-4"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T2 = @(X) [2*X(1); X(2)];
 
 X = [1; -1];
 T2(X)
@@ -266,7 +267,7 @@ T2(X)
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.2.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:3.75%;margin-right:3.75%;">
 <div class="sbspanel" style="width:43.2432432432432%;justify-content:flex-start;">
-<p id="p-37">Transformation 3 (vertical extension)</p>
+<p id="p-39">Transformation 3 (vertical extension)</p>
 <div class="displaymath">
 \begin{equation*}
 \left[\begin{array}{c}x_1\\x_2\end{array}\right] =
@@ -277,7 +278,7 @@ T2(X)
 </div>
 <div class="sbspanel" style="width:48.6486486486486%;justify-content:flex-start;"><img src="images/UpExtension.png" style="width: 100%; height: auto;" alt=""></div>
 </div></div>
-<p id="p-38">MATLAB® instructions <figure class="listing figure-like" id="listing-5"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T3 = @(X) [X(1); 1.5*X(2)];
+<p id="p-40">MATLAB® instructions <figure class="listing figure-like" id="listing-5"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T3 = @(X) [X(1); 1.5*X(2)];
 
 v = [4; 10];
 T3(v)
@@ -285,7 +286,7 @@ T3(v)
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.2.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:3.75%;margin-right:3.75%;">
 <div class="sbspanel" style="width:43.2432432432432%;justify-content:flex-start;">
-<p id="p-39">Transformation 4 (shear toward right)</p>
+<p id="p-41">Transformation 4 (shear toward right)</p>
 <div class="displaymath">
 \begin{equation*}
 \left[\begin{array}{c}x_1\\x_2\end{array}\right] =
@@ -296,14 +297,14 @@ T3(v)
 </div>
 <div class="sbspanel" style="width:48.6486486486486%;justify-content:flex-start;"><img src="images/RightShear.png" style="width: 100%; height: auto;" alt=""></div>
 </div></div>
-<p id="p-40">MATLAB® instructions <figure class="listing figure-like" id="listing-6"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T4 = @(X) [X(1)+X(2); X(2)];
+<p id="p-42">MATLAB® instructions <figure class="listing figure-like" id="listing-6"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T4 = @(X) [X(1)+X(2); X(2)];
 
 u = [10; -1];
 T4(u)
 </b></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.2.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-41">The previous examples belong to a very important class of transformations in solid mechanics: <em class="alert">linear transformations</em>.</p>
-<p id="p-42"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-2" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/8qHrL4LR8HU?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p>
-<p id="p-43">As shown in previous video, in the case in which the transformation \(\vec{\chi}\) is linear its action on the vector \(\vec{X}\) can be transferred through the matrix \(\mat{M_{\chi}}\) defined as follows</p>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.2.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-43">The previous examples belong to a very important class of transformations in solid mechanics: <em class="alert">linear transformations</em>.</p>
+<p id="p-44"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-2" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/8qHrL4LR8HU?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p>
+<p id="p-45">As shown in previous video, in the case in which the transformation \(\vec{\chi}\) is linear its action on the vector \(\vec{X}\) can be transferred through the matrix \(\mat{M_{\chi}}\) defined as follows</p>
 <div class="displaymath">
 \begin{equation}
 \mat{M_{\chi}} \equiv
@@ -317,10 +318,10 @@ T4(u)
 \end{equation}
 </div>
 <article class="assemblage assemblage-like" id="assemblage-3"><h6 class="heading"><span class="title">evaluation of the matrix \(\mat{M_{\chi}}\).</span></h6>
-<p id="p-44">In the case of the linear transformations already taken into consideration in the previous examples, it is easy to verify the following results.</p>
-<p id="p-45"><div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<p id="p-46">In the case of the linear transformations already taken into consideration in the previous examples, it is easy to verify the following results.</p>
+<p id="p-47"><div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
 <div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;">
-<p id="p-46">Transformation 1</p>
+<p id="p-48">Transformation 1</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{M_{\chi}} =
@@ -329,7 +330,7 @@ T4(u)
 </div>
 </div>
 <div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;">
-<p id="p-47">Transformation 2</p>
+<p id="p-49">Transformation 2</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{M_{\chi}} =
@@ -338,9 +339,9 @@ T4(u)
 </div>
 </div>
 </div></div></p>
-<p id="p-48"><div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<p id="p-50"><div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
 <div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;">
-<p id="p-49">Transformation 3</p>
+<p id="p-51">Transformation 3</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{M_{\chi}} =
@@ -349,7 +350,7 @@ T4(u)
 </div>
 </div>
 <div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;">
-<p id="p-50">Transformation 4</p>
+<p id="p-52">Transformation 4</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{M_{\chi}} =
@@ -358,7 +359,7 @@ T4(u)
 </div>
 </div>
 </div></div></p>
-<p id="p-51">MATLAB® instructions for the creation of the matrices associated with the given transformations. <figure class="listing figure-like" id="listing-7"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
+<p id="p-53">MATLAB® instructions for the creation of the matrices associated with the given transformations. <figure class="listing figure-like" id="listing-7"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>T1 = @(X) [-X(2); X(1)];
 T2 = @(X) [2*X(1); X(2)];
 T3 = @(X) [X(1); 1.5*X(2)];
 T4 = @(X) [X(1)+X(2); X(2)];
@@ -371,7 +372,7 @@ M4 = [T4([1; 0]) T4([0; 1])]
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.2.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><article class="remark remark-like" id="remark-1"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.2.7</span><span class="period">.</span>
 </h6>
-<p id="p-52">It is important to underline again that it is possible to identify the matrix \(\mat{M_{\chi}}\) only in the case of linear transformation. Furthermore, the reverse is also true, i.e. the existence of a matrix \(\mat{M_{\chi}}\) usable to represent a transformation implies the linearity of the transformation.</p></article></section></div></main>
+<p id="p-54">It is important to underline again that it is possible to identify the matrix \(\mat{M_{\chi}}\) only in the case of linear transformation. Furthermore, the reverse is also true, i.e. the existence of a matrix \(\mat{M_{\chi}}\) usable to represent a transformation implies the linearity of the transformation.</p></article></section></div></main>
 </div>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:38:35+02:00       *-->
+<!--*       on 2024-09-17T15:55:29+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,77 +15,64 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
-<p>Dato un tensore \(\tens{W}\) emisimmetrico, la cui forma matriciale ad esso associata per definizione sarà</p>
+<p>Per spiegare la denominazione "rotazione infinitesima" che è stata data alla parte emisimmetrica del gradiente dello spostamento conviene discutere in concreto una trasformazione caratterizzata solo da una semplice rotazione. A tal fine si consideri una rotazione intorno all'asse \(\vec{e}_3\text{.}\) La parte significativa della trasformazione può essere discussa direttamente nel piano con</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+x_1 \amp = X_1\cos{\alpha} - X_2\sin{\alpha}\,,\\
+x_2 \amp = X_1\sin{\alpha} + X_2\cos{\alpha}\,.
+\end{align*}
+</div>
+<p class="continuation">Il campo di spostamento associato è</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+u_1 = x_1 - X_1 \amp = (X_1\cos{\alpha} - X_2\sin{\alpha}) - X_1\,,\\
+u_2 = x_2 - X_2 \amp = (X_1\sin{\alpha} + X_2\cos{\alpha}) - X_2\,.
+\end{align*}
+</div>
+<p class="continuation">Con tali dati è possibile calcolare il gradiente della trasformazione che, nel caso specifico, è composto solo dalla rotazione</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\mat{W} =
-\left[\begin{array}{ccc}
-0 \amp W_{12} \amp W_{13}\\
--W_{12} \amp 0 \amp W_{23}\\
--W_{13} \amp -W_{23} \amp 0 
-\end{array}\right]\,,
+\tens{F} = \tens{R}\,,
 \end{equation*}
 </div>
-<p class="continuation">si può verificare come la sua applicazione ad un vettore \(\vec{v}\)</p>
+<p class="continuation">dove, come già discusso nelle sezioni precedenti,</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\left[\begin{array}{ccc}
-0 \amp W_{12} \amp W_{13}\\
--W_{12} \amp 0 \amp W_{23}\\
--W_{13} \amp -W_{23} \amp 0 
-\end{array}\right]
-\left[\begin{array}{c}
-v_1\\
-v_2\\
-v_3
-\end{array}\right]
-=
-\left[\begin{array}{c}
-W_{12}v_2 + W_{13}v_3 \\
--W_{12}v_1 + W_{23}v_3\\
--W_{13}v_1 -W_{23}v_2
-\end{array}\right]
-\end{equation*}
-</div>
-<p class="continuation">equivalga a calcolare il seguente prodotto vettoriale</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\left[\begin{array}{c}
-\omega_1\\
-\omega_2\\
-\omega_3
-\end{array}\right]
-\times
-\left[\begin{array}{c}
-v_1\\
-v_2\\
-v_3
-\end{array}\right]
-=
-\left[\begin{array}{c}
-\omega_2 v_3 - \omega_3 v_2\\
-\omega_3 v_1 - \omega_1 v_3\\
-\omega_1 v_2 - \omega_2 v_1
-\end{array}\right]
-\end{equation*}
-</div>
-<p class="continuation">dove le componenti di \(\vec{\omega}\) sono messe in corrispondenza con le componenti di \(\tens{W}\) nel modo seguente</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\omega_{1} = -W_{23}\,,\quad \omega_{2} = W_{13}\,,\quad \omega_{3} = -W_{12}\,.\tag{1.9.13}
-\end{equation}
-</div>
-<p class="continuation">Quindi, noto \(\vec{\omega}\text{,}\) \(\tens{W}\) può essere espresso come segue</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\mat{W} =
-\left[\begin{array}{ccc}
-0 \amp -\omega_{3} \amp \omega_{2}\\
-\omega_{3} \amp 0 \amp -\omega_{1}\\
--\omega_{2} \amp \omega_{1} \amp 0 
+\mat{R} =
+\left[\begin{array}{cc}
+\cos{\alpha} \amp -\sin{\alpha} \\
+\sin{\alpha} \amp \cos{\alpha}
 \end{array}\right]\,.
 \end{equation*}
 </div>
+<p class="continuation">Inoltre</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\tens{F} = \tens{I} + \tens{\nabla u}\,,
+\end{equation*}
+</div>
+<p class="continuation">e quindi</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\tens{R} = \tens{I} + \tens{\nabla u} =  \tens{I} + \text{sym}\tens{\nabla u} + \text{skew}\tens{\nabla u}\,.\tag{1.9.11}
+\end{equation}
+</div>
+<p class="continuation">Risultato che evidenzia la decomposizione del gradiente dello spostamento con</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\text{sym}\mat{\nabla u} =
+\left[\begin{array}{cc}
+\cos{\alpha} - 1 \amp 0 \\
+0 \amp \cos{\alpha} - 1 
+\end{array}\right]\,,\quad
+\text{skew}\mat{\nabla u} =
+\left[\begin{array}{cc}
+0 \amp -\sin{\alpha} \\
+\sin{\alpha} \amp 0 
+\end{array}\right]\,,
+\end{equation*}
+</div>
+<p class="continuation">ma ancora del tutto generico e che non fa riferimento agli spostamenti infinitesimi.</p>
 <span class="incontext"><a href="infinitesimal_sec_strain_chap_it.html#p-154">Contesto</a></span>
 </body>
 </html>

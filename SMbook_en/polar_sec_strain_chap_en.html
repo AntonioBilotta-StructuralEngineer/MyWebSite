@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:40:40+02:00       *-->
+<!--*       on 2024-09-17T16:03:28+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -122,7 +122,8 @@ MathJax.Hub.Config({
 <li><a href="dedication_en.html" data-scroll="dedication_en">Dedication</a></li>
 <li><a href="acknowledgement_en.html" data-scroll="acknowledgement_en">Acknowledgements</a></li>
 <li><a href="preface_en.html" data-scroll="preface_en">Preface</a></li>
-<li><a href="references_frontmatter_en.html" data-scroll="references_frontmatter_en">using MATLAB®</a></li>
+<li><a href="MATLAB_references_frontmatter_en.html" data-scroll="MATLAB_references_frontmatter_en">using MATLAB®</a></li>
+<li><a href="SMcontents_references_frontmatter_en.html" data-scroll="SMcontents_references_frontmatter_en">Additional resources</a></li>
 </ul>
 </li>
 <li class="link part"><a href="continuum_mechanics_en.html" data-scroll="continuum_mechanics_en"><span class="codenumber">I</span> <span class="title">continuum mechanics</span></a></li>
@@ -197,10 +198,10 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="polar_sec_strain_chap_en"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.6</span> <span class="title">polar decomposition</span>
 </h2>
-<p id="p-87"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-5" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/PkDI9mZLZMc?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p>
-<p id="p-88">The possibility that a given linear transformation may be the result of the composition of several linear transformations and the physical consideration that the motion of a body is made up of elementary transformations such as <em class="emphasis">rotation</em> and <em class="emphasis">pure deformation</em>, lead to the following fundamental result.</p>
+<p id="p-89"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-5" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/PkDI9mZLZMc?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p>
+<p id="p-90">The possibility that a given linear transformation may be the result of the composition of several linear transformations and the physical consideration that the motion of a body is made up of elementary transformations such as <em class="emphasis">rotation</em> and <em class="emphasis">pure deformation</em>, lead to the following fundamental result.</p>
 <article class="paragraphs" id="paragraphs-1"><h5 class="heading"><span class="title">polar decomposition theorem.</span></h5>
-<p id="p-89">Given the deformation gradient \(\func{\tens{F}}{\vec{X}}\text{,}\) there is a single <em class="emphasis">polar decomposition</em> at each point defined as follows</p>
+<p id="p-91">Given the deformation gradient \(\func{\tens{F}}{\vec{X}}\text{,}\) there is a single <em class="emphasis">polar decomposition</em> at each point defined as follows</p>
 <div class="displaymath">
 \begin{equation}
 \tens{F} = \tens{R}\tens{U} = \tens{V}\tens{R}.\label{polar_dec_eq}\tag{1.6.1}
@@ -227,7 +228,7 @@ MathJax.Hub.Config({
 </div></article><article class="remark remark-like" id="remark-4"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.6.1</span><span class="period">.</span>
 </h6>
-<p id="p-90">The application of the right polar decomposition to <a class="xref" data-knowl="./knowl/dX_to_dx_eq.html" title="Equation 1.3.9">(1.3.9)</a> furnishes</p>
+<p id="p-92">The application of the right polar decomposition to <a class="xref" data-knowl="./knowl/dX_to_dx_eq.html" title="Equation 1.3.9">(1.3.9)</a> furnishes</p>
 <div class="displaymath">
 \begin{equation}
 d\vec{x} = \tens{F}\, d\vec{X} = \tens{R}\, \left(\tens{U}\, d\vec{X}\right) \,,\tag{1.6.5}
@@ -241,10 +242,10 @@ d\vec{x} = \tens{F}\, d\vec{X} = \tens{V}\, \left(\tens{R}\, d\vec{X}\right) \,,
 </div>
 <p class="continuation">to be interpreted as a deformation sequence of \(d\vec{X}\) followed by a rotation. What has been said is illustrated by the following figure. <figure class="figure figure-like" id="figure-6"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/polar_dec.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.6.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure> In particular, we illustrate the case in which the right stretch tensor, \(\tens{U} \text{,}\) produces only an elongation in the horizontal direction and, subsequently, the tensor \(\tens{R} \) produces a rotation of 45 \(^o\text{.}\) It is evident that if the rotation is applied first, second and third transformation sequence in the figure, the stretch tensor cannot be the same but the left tensor must be different and equal to \(\tens{V}\) which allows to obtain the same final configuration.</p>
-<p id="p-91">The polar decomposition theorem therefore captures the elementary transformations, rotation and pure deformation, which make up \(\tens{F}\) and highlights the non-commutativity of the two transformations. Furthermore, if \(\tens{R} = \tens{I}\) and therefore \(\tens{F}=\tens{U} = \tens{V}\) the transformation, in the point considered, it is a <em class="emphasis">pure deformation</em>. Conversely, if \(\tens{U} = \tens{I} = \tens{V} \) and therefore \(\tens{F} = \tens{R}\text{,}\) the transformation it is a <em class="emphasis">rigid rotation</em> at the point considered.</p></article><article class="remark remark-like" id="rotation_remark"><h6 class="heading">
+<p id="p-93">The polar decomposition theorem therefore captures the elementary transformations, rotation and pure deformation, which make up \(\tens{F}\) and highlights the non-commutativity of the two transformations. Furthermore, if \(\tens{R} = \tens{I}\) and therefore \(\tens{F}=\tens{U} = \tens{V}\) the transformation, in the point considered, it is a <em class="emphasis">pure deformation</em>. Conversely, if \(\tens{U} = \tens{I} = \tens{V} \) and therefore \(\tens{F} = \tens{R}\text{,}\) the transformation it is a <em class="emphasis">rigid rotation</em> at the point considered.</p></article><article class="remark remark-like" id="rotation_remark"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.6.3</span><span class="period">.</span><span class="space"> </span><span class="title">rotation tensors.</span>
 </h6>
-<p id="p-92">We have already repeatedly encountered the 2D tensor related to a counterclockwise rotation of \(90^o\) which in matrix terms has the following expression</p>
+<p id="p-94">We have already repeatedly encountered the 2D tensor related to a counterclockwise rotation of \(90^o\) which in matrix terms has the following expression</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{R}_{90^o} = 
@@ -265,8 +266,8 @@ d\vec{x} = \tens{F}\, d\vec{X} = \tens{V}\, \left(\tens{R}\, d\vec{X}\right) \,,
 \end{equation*}
 </div>
 <p class="continuation">The listed properties are not specific to the particular tensor considered but are satisfied by all the rotation tensors, whatever the size of the rotation angle. In order to verify this, consider the linear transformation that rotates an assigned vector \(\vec{X}\) by a generic angle \(\theta\text{.}\)</p>
-<p id="p-93"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-6" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/JX_vFGh8GBo?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p>
-<p id="p-94">As shown in the previous video, the following result can be stated</p>
+<p id="p-95"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-6" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/JX_vFGh8GBo?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p>
+<p id="p-96">As shown in the previous video, the following result can be stated</p>
 <div class="displaymath">
 \begin{equation*}
 \vec{\chi}_{\theta}\left(\vec{X} \right) = 
@@ -303,14 +304,14 @@ X_1 \\ X_2
 </div></article><article class="remark remark-like" id="remark-6"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.6.4</span><span class="period">.</span><span class="space"> </span><span class="title">positive definite tensors.</span>
 </h6>
-<p id="p-95">If a symmetric tensor \(\tens{T}\) satisfies the condition</p>
+<p id="p-97">If a symmetric tensor \(\tens{T}\) satisfies the condition</p>
 <div class="displaymath">
 \begin{equation*}
 \vec{v} \cdot \tens{T} \vec{v} &gt; 0\,,\quad \forall \vec{v} \neq \vec0
 \end{equation*}
 </div>
 <p class="continuation">then we say the tensor positive definite. From a geometric point of view, this condition can be easily interpreted as follows: each time the linear transformation \(\tens{T} \) is applied to any non-zero vector, the vector \(\tens{T}\vec{v}\) obtained in this way forms  an angle lower than \(\pi/2 \) with respect the starting vector \(\vec{v}\text{,}\) a condition which has however very often a precise physical meaning.</p>
-<p id="p-96">On the condition of positivity, further information and insight will be provided when eigenvalues and eigenvectors will be discussed.</p></article></section></div></main>
+<p id="p-98">On the condition of positivity, further information and insight will be provided when eigenvalues and eigenvectors will be discussed.</p></article></section></div></main>
 </div>
 </body>
 </html>

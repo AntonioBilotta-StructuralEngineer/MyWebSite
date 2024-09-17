@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:40:45+02:00       *-->
+<!--*       on 2024-09-17T16:03:32+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,16 +15,21 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>The solution to the problem is obtained on the basis of the same equilibrium equation used in the previous example. It is only necessary to modify the boundary conditions which, for the supported beam, become</p>
+<p>In the present case differential equation <a class="xref" data-knowl="./knowl/bent_beam_navier.html" title="Equation 3.6.34">(3.6.34)</a> gives</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+-EJ\,\frac{d^4w}{dx^4} + q = 0\,,
+\end{equation*}
+</div>
+<p class="continuation">where the applied transversal distributed load is constant. Also in this case the boundary conditions are kinematic conditions at \(x=0\) and static conditions at \(x=l\text{:}\)</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
 \amp \func{w}{0} = 0\,,\\
-\amp \func{M}{0} = -EJ\,\func{\frac{d^2w}{dx^2}}{0} = 0\,.\\
-\amp \func{w}{l} = 0\,,\\
-\amp \func{M}{l} = -EJ\,\func{\frac{d^2w}{dx^2}}{l} = 0\,,
+\amp \func{\frac{dw}{dx}}{0} = 0\,,\\
+\amp \func{\frac{d M}{dx}}{l} = \frac{d}{dx}\left(-EJ\,\func{\frac{d^2w}{dx^2}}{l}\right) = -EJ\,\func{\frac{d^3w}{dx^3}}{l}  = 0\,,\\
+\amp \func{M}{l} = -EJ\,\func{\frac{d^2w}{dx^2}}{l} = 0\,.
 \end{align*}
 </div>
-<p class="continuation">where static and kinematic conditions are mixed at each beam end.</p>
 <span class="incontext"><a href="bent_beam_applications_sec_elasticity_chap_en.html#p-342">in-context</a></span>
 </body>
 </html>

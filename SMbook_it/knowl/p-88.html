@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:38:34+02:00       *-->
+<!--*       on 2024-09-17T15:55:28+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,31 +15,29 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
-<p>Dato il gradiente della deformazione \(\func{\tens{F}}{\vec{X}}\text{,}\) in ogni punto del corpo soggetto al moto esiste un'unica <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">decomposizione polare</em> definita come segue</p>
+<p>La trasformazione volumetrica <a class="xref" data-knowl="./knowl/volume_change_eq.html" title="Equazione 1.5.1">(1.5.1)</a> può essere riscritta, ricordando il significato del prodotto triplo, nel modo seguente</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{gather*}
+dv = J\, dV\\
+d\vec{s} \cdot d\vec{x} = J\, d\vec{S} \cdot d\vec{X}
+\end{gather*}
+</div>
+<p class="continuation">dove \(d\vec{s} = ds \vec{n}\) e \(d\vec{S} = dS \vec{N}\) rappresentano elementi vettoriali relativi a aree infinitesime, rispettivamente, nella configurazione corrente e in quella di riferimento. \(d\vec{x}\) è il trasformato del segmento elementare \(d\vec{X}\text{.}\) Effettuando alcuni semplici passaggi</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+d\vec{s} \cdot d\vec{x}  \amp = J\, d\vec{S} \cdot d\vec{X}\,,\\
+d\vec{s} \cdot \tens{F}d\vec{X} \amp = J\, d\vec{S} \cdot d\vec{X} \,,\\
+\transp{\tens{F}}d\vec{s} \cdot d\vec{X} \amp = J\, d\vec{S} \cdot d\vec{X}\,,\\
+d\vec{s} \cdot d\vec{X} \amp = \transpm{\tens{F}}J\, d\vec{S} \cdot d\vec{X}\,.
+\end{align*}
+</div>
+<p class="continuation">Da cui si ottiene</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation}
-\tens{F} = \tens{R}\tens{U} = \tens{V}\tens{R}.\tag{1.6.1}
+d\vec{s} = J \transpm{\tens{F}}d\vec{S}\tag{1.5.5}
 \end{equation}
 </div>
-<p class="continuation">\(\tens{R}\) è il <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">tensore di rotazione</em>, quindi un tensore ortogonale proprio, che soddisfa la relazione</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\transp{\tens{R}}\tens{R} = \tens{I}\,.\tag{1.6.2}
-\end{equation}
-</div>
-<p class="continuation">\(\tens{U}\) e \(\tens{V}\) sono, rispettivamente, il <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">tensore destro di deformazione</em> e il <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">tensore sinistro di deformazione</em>. Tali tensori sono <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">unici</em>, <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">definiti positivi</em> e <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">simmetrici</em>. Il fatto che \(\tens{U}\) e \(\tens{V}\) siano definiti positivi impone che per qualsiasi vettore \(\vec{v} \neq \vec0\) sia soddisfatta la proprietà</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\vec{v} \cdot \left(\tens{U} \vec{v} \right) &gt; 0 \,,\qquad
-\vec{v} \cdot \left(\tens{V} \vec{v} \right) &gt; 0\,,\tag{1.6.3}
-\end{equation}
-</div>
-<p class="continuation">mentre la simmetria impone che</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\tens{U} = \transp{\tens{U}}\,,\qquad \tens{V} = \transp{\tens{V}}\,.\tag{1.6.4}
-\end{equation}
-</div>
-<span class="incontext"><a href="polar_sec_strain_chap_it.html#p-88">Contesto</a></span>
+<p class="continuation">fomula nota come <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Formula di Nanson</em> e che lega l'elemento vettoriale di area \(d\vec{s}\) appartenente alla configurazione corrente \(\body\) al corrispettivo elemento vettoriale di area \(d\vec{S}\) appartenente alla configurazione di riferimento \(\body_0\text{.}\)</p>
+<span class="incontext"><a href="determinant_sec_strain_chap_it.html#p-88">Contesto</a></span>
 </body>
 </html>

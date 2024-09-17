@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:40:43+02:00       *-->
+<!--*       on 2024-09-17T16:03:31+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,35 +15,18 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>The evaluation of the eigenvalues and eigenvectors associated with the tensor \(\tens{U}\) passes through the solution of the following cubic equation</p>
+<p>Let us consider the expression of  \(\tens{U}\) obtained in previous example, i.e.</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
--\lambda^3 + \func{I_1}{\tens{U}} \lambda^2 - \func{I_2}{\tens{U}} \lambda + \func{I_3}{\tens{U}} = 0\,,
+\mat{U} =
+\left[\begin{array}{ccc}
+5.2500 \amp  -1.0607 \amp  -1.7500 \\
+-1.0607 \amp   3.5000 \amp  -1.0607 \\
+-1.7500 \amp  -1.0607  \amp  5.2500
+\end{array}\right]\,,
 \end{equation*}
 </div>
-<p class="continuation">where the characteristic polynomial appears. It depends on three quantities that are called <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">invariants</em> of the tensor \(\tens{U} \text{.}\) The term invariant indicates that these values do not change as the reference system, with respect to which \(\tens{U}\) is represented, changes. In the following the expressions to be used for the calculation of the invariants are reported for the case regarding the tensor \(\tens{U} \) expressed with respect to the principal directions and for the generic case.</p>
-<ul class="disc">
-<li>
-<em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">First invariant</em><div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\func{I_1}{\tens{U}} = \lambda_1 + \lambda_2 + \lambda_3 = \trace{\tens{U}}\,,\tag{1.7.8}
-\end{equation}
-</div>where the <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">trace</em> of the tensor, i.e. the sum of the coefficients belonging to the main diagonal, is used.</li>
-<li>
-<em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Second invariant</em><div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\func{I_2}{\tens{U}} = \lambda_1\, \lambda_2 + \lambda_2\, \lambda_3 + \lambda_3\, \lambda_1 = \frac{1}{2}\left[(\trace{\tens{U}})^2 - \trace{\tens{U}^2}\right]\,.\tag{1.7.9}
-\end{equation}
-</div>
-</li>
-<li>
-<em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Third invariant</em><div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\func{I_3}{\tens{U}} = \lambda_1\, \lambda_2\, \lambda_3 = \det{\tens{U}}\,.\tag{1.7.10}
-\end{equation}
-</div>
-</li>
-</ul>
+<p class="continuation">calculate eigenvalues and eigenvectors by using MATLAB®. The required instructions are as follows.</p>
 <span class="incontext"><a href="principal_directions_sec_strain_chap_en.html#p-130">in-context</a></span>
 </body>
 </html>

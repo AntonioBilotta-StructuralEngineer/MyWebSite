@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:40:44+02:00       *-->
+<!--*       on 2024-09-17T16:03:31+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,23 +15,23 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Given the following state of stress</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<ul class="disc">
+<li>The vector field \(\vec{v} \) can be interpreted both as a displacement field that the body actually undergoes under the action of the assigned loads and as a generic variation of the actual displacement field or as a <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">virtual displacement</em> field.</li>
+<li>The first member of the equality <a class="xref" data-knowl="./knowl/continuum_plv_eq.html" title="Equation 2.5.5">(2.5.5)</a> represents the work done by the surrounding environment on the body \(\body \text{,}\) that is the external work.</li>
+<li>The second member of the equality <a class="xref" data-knowl="./knowl/continuum_plv_eq.html" title="Equation 2.5.5">(2.5.5)</a> contains the internal work, that is the work carried out by the stress tensor \(\tens{\sigma} \text{.}\)</li>
+<li>Without the need to make any preliminary assumptions, we arrive at the definition of the kinematic counterpart \(\text{sym}\tens{\nabla v} \) on which the stress tensor \(\tens{\sigma} \) does work. Thus the meaning of the symmetric part of the gradient of the displacement is widened because it comprises, as already shown in the chapter about kinematics, also the definition of the infinitesimal strain tensor.</li>
+<li>A formal statement of the result obtained is as follows: "<em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Given a body, or any subset of a body, satisfying the equilibrium condition with respect to the applied loads, i.e Eq. <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a> is satisfied, then also Eq. <a class="xref" data-knowl="./knowl/continuum_plv_eq.html" title="Equation 2.5.5">(2.5.5)</a> is valid. This is the Principle of virtual work</em>". Moreover Eq. <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a> is not only a necessary condition but also is sufficient for satisfaction of Eq. <a class="xref" data-knowl="./knowl/continuum_plv_eq.html" title="Equation 2.5.5">(2.5.5)</a>, i.e. the statement can be reversed as follows: "<em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Given a body, or any subset of a body, satisfying the equivalence of the internal and external works, Eq. <a class="xref" data-knowl="./knowl/continuum_plv_eq.html" title="Equation 2.5.5">(2.5.5)</a>, then  Eq. <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a> is satisfied</em>".</li>
+<li>In the case of displacement field \(\vec{v} \) coincident with a rigid displacement field \(\vec{r} \text{,}\) then the condition \(\vec{v} = \vec{r} \) provides<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\mat{\sigma} = \left[\begin{array}{ccc}
-1 \amp 4 \amp -2 \\
-4 \amp 0 \amp 0 \\
--2 \amp 0 \amp 3
-\end{array}
-\right]\,,
+\text{sym}\tens{\nabla v} = \text{sym}\tens{\nabla r} = \tens{0} 
 \end{equation*}
-</div>
-<p class="continuation">calculate the following:</p>
-<ol class="decimal">
-<li>the components of the traction vector \(\vec{t}_{\vec{n}}\) relative to a plane through the plane passing through the given point and parallel to the plane \(2x_1 + 3x_2+x_3 = 5\text{;}\)</li>
-<li>the length of \(\vec{t}_{\vec{n}}\) and its angle with the normal to the plane;</li>
-<li>the components of the stress tensor \(\tilde{\vec{\sigma}}\) with respect to a new reference basis \(\{\tilde{\vec{e}}_a\}\text{,}\) \(a=1,2,3\text{,}\) obatined by rotating the initial reference triad by and angle of \(\pi/2\) around axis \(\vec{e}_3\text{.}\)</li>
-</ol>
-<span class="incontext"><a href="exercises_sec_stress_chap_en.html#p-226">in-context</a></span>
+</div>and then the Principle of virtual work redices to<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\int_{\partial\body} \vec{t} \cdot \vec{r}\,ds + \int_{\body}  \vec{b} \cdot \vec{r} \,dv = 0 \,,\quad \forall\vec{r}\,.\tag{2.5.6}
+\end{equation}
+</div>This result establishes that the applied loads, if in equilibrium, perform zero work on any rigid motion.</li>
+<li>In the dynamic field the vector field \(\vec{v} \) is a velocity field. Therefore we will not speak of works but of external power and internal power. Furthermore, the external power will equal the sum of internal power and variation of kinetic energy.</li>
+</ul>
+<span class="incontext"><a href="plv_sec_stress_chap_en.html#p-226">in-context</a></span>
 </body>
 </html>

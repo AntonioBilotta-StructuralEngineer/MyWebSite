@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:38:35+02:00       *-->
+<!--*       on 2024-09-17T15:55:29+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,19 +15,35 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
-<p>Il seguente stato tensionale</p>
+<p>Anche in questo caso, come già discusso nel capitolo dedicato alla cinematica, la soluzione del problema agli autovalori richiede la soluzione di una equazione cubica esprimibile come segue</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\tens{\sigma} = \sigma \, \vec{e}_1 \otimes \vec{e}_1\,,\quad
-\mat{\sigma} =
-\left[\begin{array}{ccc}
-\sigma \amp 0 \amp 0 \\
-0 \amp 0 \amp 0 \\
-0 \amp 0 \amp 0
-\end{array}\right]\,,
+-\sigma^3 + \func{I_1}{\tens{\sigma}} \sigma^2 - \func{I_2}{\tens{\sigma}} \sigma + \func{I_3}{\tens{\sigma}} = 0\,,
 \end{equation*}
 </div>
-<p class="continuation">caratterizzato quindi da tensioni principali pari a \(\sigma_1 = \sigma\text{,}\) \(\sigma_2 = 0\text{,}\) \(\sigma_3 = 0\) e direzioni principali individuate dall'asse \(\vec{e}_1\) e dal piano definito dalgi altri due assi della terna, viene di solito etichettato, in base al segno di \(\sigma\text{,}\) <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">stato di trazione o compressione “pura”</em>.</p>
+<p class="continuation">dove compaiono gli invarianti del tensore \(\tens{\sigma}\text{,}\) ovvero le quantità che sono indipendenti dal sistema di riferimento rispetto al quale viene rappresentato \(\tens{\sigma}\text{.}\) Gli invarianti di \(\tens{\sigma}\) sono calcolabili con le seguenti coppie di espressioni, dove ogni coppia contiene la formula da utilizzare nel caso in cui il tensore \(\tens{\sigma}\) sia espresso rispetto alle direzioni principali e la formula da utilizzare nel caso generico.</p>
+<ul class="disc">
+<li>
+<em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Primo invariante</em><div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\func{I_1}{\tens{\sigma}} = \sigma_1 + \sigma_2 + \sigma_3 = \trace{\tens{\sigma}}\,,\tag{2.4.4}
+\end{equation}
+</div>dove compare la <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">traccia</em> del tensore ovvero la somma dei coefficienti appartenenti alla diagonale principale.</li>
+<li>
+<em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Secondo invariante</em><div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\func{I_2}{\tens{\sigma}} = \sigma_1\, \sigma_2 + \sigma_2\, \sigma_3 + \sigma_3\, \sigma_1 = \frac{1}{2}\left[(\trace{\tens{\sigma}})^2 - \trace{\tens{\sigma}^2}\right]\,.\tag{2.4.5}
+\end{equation}
+</div>
+</li>
+<li>
+<em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Terzo invariante</em><div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\func{I_3}{\tens{\sigma}} = \sigma_1\, \sigma_2\, \sigma_3 = \det{\tens{\sigma}}\,.\tag{2.4.6}
+\end{equation}
+</div>
+</li>
+</ul>
 <span class="incontext"><a href="stress_analysis_sec_stress_chap_it.html#p-214">Contesto</a></span>
 </body>
 </html>

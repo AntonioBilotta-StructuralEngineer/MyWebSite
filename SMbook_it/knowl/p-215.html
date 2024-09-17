@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:38:35+02:00       *-->
+<!--*       on 2024-09-17T15:55:29+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,29 +15,32 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
-<p>L'aggetivazione  “pura” non deve trarre in inganno in quanto vale solo per la disposizione delle direzioni principali appena descritta. È sufficiente infatti assumere una disposizione differente per le direzioni principali, ad esempio ottenuta con una rotazione generica intorno all'asse \(\vec{e}_3\text{,}\) per avere</p>
+<p>Lo stato tensionale che mantiene sempre la stessa forma rispetto a qualsiasi sistema di riferimento è lo stato caratterizzato da tensioni principali che assumono lo stesso valore, ovvero \(\sigma_1 = \sigma_2 = \sigma_3 = p\text{.}\) In tal caso, utilizzando la  <a class="xref" data-knowl="./knowl/spectral_stress_eq.html" title="Equazione 2.4.3">(2.4.3)</a>, il tensore \(\tens{\sigma}\) assume la seguente forma</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\tens{\sigma} = \sigma \, \vec{s}_1 \otimes \vec{s}_1\,,
+\tens{\sigma} = p\,\vec{e}_1 \otimes \vec{e}_1 + p\,\vec{e}_2 \otimes \vec{e}_2 + p\,\vec{e}_3 \otimes \vec{e}_3\,,
 \end{equation*}
 </div>
-<p class="continuation">con</p>
+<p class="continuation">ovvero</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\matWp{s}{1} = 
-\left[\begin{array}{c}
-\cos{\alpha}\\\sin{\alpha}\\0
-\end{array}\right]\,.
+\tens{\sigma} = p \, \tens{I}\,.
 \end{equation*}
 </div>
-<p class="continuation">Da cui deriva, per il tensore \(\tens{\sigma}\text{,}\) la seguente rappresentazione per componenti</p>
+<p class="continuation">La rappresentazione per componenti fornisce anche</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\mat{\sigma} = \sigma
+\mat{\sigma} =
+p \left[\begin{array}{ccc}
+1 \amp 0 \amp 0 \\
+0 \amp 1 \amp 0 \\
+0 \amp 0 \amp 1
+\end{array}\right]
+=
 \left[\begin{array}{ccc}
-\cos{\alpha}^2 \amp \cos{\alpha}\sin{\alpha} \amp 0 \\
-\sin{\alpha}\cos{\alpha} \amp \sin{\alpha}^2 \amp 0 \\
-0 \amp 0 \amp 0
+p \amp 0 \amp 0 \\
+0 \amp p \amp 0 \\
+0 \amp 0 \amp p
 \end{array}\right]\,.
 \end{equation*}
 </div>

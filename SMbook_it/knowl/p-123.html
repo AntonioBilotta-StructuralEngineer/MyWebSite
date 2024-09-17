@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:38:35+02:00       *-->
+<!--*       on 2024-09-17T15:55:29+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,39 +15,8 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg"><figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>Q1 = [1 -1 -1 1 1; 1 1 -1 -1 1];
-Q2 = [1 0 -1 0 1; 0 1 0 -1 0];
-
-x = Q1(1,:);
-y = Q1(2,:);
-
-pbaspect([1 1 1])
-line(x,y,'Color','red','LineWidth',2)
-
-x = Q2(1,:);
-y = Q2(2,:);
-line(x,y,'Color','blue','LineWidth',2)
-
-
-u1 = [1/sqrt(2); 1/sqrt(2)];
-u2 = [-1/sqrt(2); 1/sqrt(2)];
-syms U(lam) 
-U(lam) = [u1 u2]*diag([1.2*lam lam])*transpose([u1 u2]);
-
-
-for v = 1.1:0.1:1.5
-  UQ1 = U(v)*Q1;
-  x = UQ1(1,:);
-  y = UQ1(2,:);
-  line(x,y,'Color','red','LineWidth',2)
-
-  UQ2 = U(v)*Q2;
-  x = UQ2(1,:);
-  y = UQ2(2,:);
-  line(x,y,'Color','blue','LineWidth',2)
-end
-</b></pre></div>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">1.7.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p xmlns:svg="http://www.w3.org/2000/svg"><figure class="figure figure-like"><div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="images/Squares.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.7.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <span class="incontext"><a href="principal_directions_sec_strain_chap_it.html#p-123">Contesto</a></span>
 </body>
 </html>

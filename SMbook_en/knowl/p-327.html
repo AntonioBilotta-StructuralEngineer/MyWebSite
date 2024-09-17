@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:40:45+02:00       *-->
+<!--*       on 2024-09-17T16:03:32+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,15 +15,50 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">The solution that also satisfies the assigned boundary conditions is obtained through the following instructions. <figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms u(x) EA F l;
-Du = diff(u);
-ode = EA*diff(u,x,2) == 0;
-cond1 = u(0) == 0;
-cond2 = EA*Du(l) == F;
-conds = [cond1 cond2];
-dsolve(ode,conds)
-</b></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.7.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p>Due to the absence of a distributed load, the equation to be solved becomes</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+EA\,\frac{d^2u}{dx^2} = 0\,,
+\end{equation*}
+</div>
+<p class="continuation">whose general integral is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\func{u}{x} = c_0 + c_1 x\,.
+\end{equation*}
+</div>
+<p class="continuation">The integration constants can be evaluated by imposing the boundary conditions</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\amp \func{u}{0} = 0\,,\\
+\amp \func{N}{l} = EA\, \func{\frac{du}{dx}}{l} = F\,.
+\end{align*}
+</div>
+<p class="continuation">From which it can be obtained</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+c_0 = 0\,, \quad c_1 = \frac{F}{EA}\,.
+\end{equation*}
+</div>
+<p class="continuation">Then the displacement field takes the following expression</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\func{u}{x} = \frac{F}{EA} x\,,
+\end{equation*}
+</div>
+<p class="continuation">which allows the evaluation of the axial force along the rod and, for example, the movement to the free end</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\amp \func{N}{x} = EA \func{\frac{du}{dx}}{x} = F\,,\\
+\amp \func{u}{l} = \frac{F}{EA} l\,,
+\end{align*}
+</div>
+<p class="continuation">the latter coincides with the total elongation of the beam, result which can also be obtained as follows</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\Delta l = \int_l \varepsilon \,dx =  \int_l \frac{du}{dx} \,dx =  \int_l \frac{F}{EA} \,dx =  \frac{F}{EA} \int_l \,dx = \frac{F}{EA} l\,.
+\end{equation*}
+</div>
 <span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_en.html#p-327">in-context</a></span>
 </body>
 </html>

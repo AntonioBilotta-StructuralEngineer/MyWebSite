@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:38:35+02:00       *-->
+<!--*       on 2024-09-17T15:55:29+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,32 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Il calcolo di direzioni principali e tensioni principali mostrerebbe che ci troviamo in un caso differente dai precedenti. Infatti il calcolo degli autovalori ed autovettori, effettuabile con le seguenti istruzioni MATLAB®</p>
+<p>L'aggetivazione  “pura” non deve trarre in inganno in quanto vale solo per la disposizione delle direzioni principali appena descritta. È sufficiente infatti assumere una disposizione differente per le direzioni principali, ad esempio ottenuta con una rotazione generica intorno all'asse \(\vec{e}_3\text{,}\) per avere</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\tens{\sigma} = \sigma \, \vec{s}_1 \otimes \vec{s}_1\,,
+\end{equation*}
+</div>
+<p class="continuation">con</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\matWp{s}{1} = 
+\left[\begin{array}{c}
+\cos{\alpha}\\\sin{\alpha}\\0
+\end{array}\right]\,.
+\end{equation*}
+</div>
+<p class="continuation">Da cui deriva, per il tensore \(\tens{\sigma}\text{,}\) la seguente rappresentazione per componenti</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\mat{\sigma} = \sigma
+\left[\begin{array}{ccc}
+\cos{\alpha}^2 \amp \cos{\alpha}\sin{\alpha} \amp 0 \\
+\sin{\alpha}\cos{\alpha} \amp \sin{\alpha}^2 \amp 0 \\
+0 \amp 0 \amp 0
+\end{array}\right]\,.
+\end{equation*}
+</div>
 <span class="incontext"><a href="stress_analysis_sec_stress_chap_it.html#p-218">Contesto</a></span>
 </body>
 </html>

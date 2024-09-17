@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:38:35+02:00       *-->
+<!--*       on 2024-09-17T15:55:28+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,46 +15,60 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
-<p>Si supponga adesso per \(\tens{U}\) sempre una forma diagonale ma con coefficienti non tutti uguali fra loro. In particolare si assuma</p>
+<p>Si supponga per \(\tens{U}\) la seguente forma diagonale</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation}
 \mat{U} =
 \left[\begin{array}{ccc}
-\lambda_1 \amp 0 \amp 0\\
-0 \amp \lambda_1 \amp 0\\
-0 \amp 0 \amp \lambda_2\\
-\end{array}\right]\,.\tag{1.7.3}
+\lambda \amp 0 \amp 0\\
+0 \amp \lambda \amp 0\\
+0 \amp 0 \amp \lambda\\
+\end{array}\right]\,.\tag{1.7.1}
 \end{equation}
 </div>
-<p class="continuation">Applicando \(\tens{U}\) ai seguenti tre vettori</p>
+<p class="continuation">Se si applica \(\tens{U}\) ad un generico vettore \(\vec{v}\) si ottiene</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\mat{U}\mat{v}
+=
+\left[\begin{array}{ccc}
+\lambda \amp 0 \amp 0\\
+0 \amp \lambda \amp 0\\
+0 \amp 0 \amp \lambda\\
+\end{array}\right]
+\left[\begin{array}{c}v_1\\v_2\\v_3\end{array}\right]
+=
+\lambda \left[\begin{array}{ccc}
+1 \amp 0 \amp 0\\
+0 \amp 1 \amp 0\\
+0 \amp 0 \amp 1\\
+\end{array}\right]
+\left[\begin{array}{c}v_1\\v_2\\v_3\end{array}\right]
+=
+\lambda \mat{I} \mat{v}
+=
+\lambda \mat{v}
+\,.\tag{1.7.2}
+\end{equation}
+</div>
+<p class="continuation">Risultato che mostra come in questo caso l'applicazione di \(\tens{U}\) a qualsiasi vettore determini soltanto una scalatura, proporzionale al fattore \(\lambda\text{,}\) della lunghezza del vettore che mantiene la direzione originaria. È facile verificare infatti che</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\mat{u} = \left[\begin{array}{c}u_1\\u_2\\0\end{array}\right]
-\,,\quad
-\mat{v} = \left[\begin{array}{c}0\\0\\v_3\end{array}\right]
-\,,\quad
-\mat{w} = \left[\begin{array}{c}w_1\\w_2\\w_3\end{array}\right]
-\,,
+\|\tens{U}\vec{v} \| = \|\lambda\vec{v} \| = |\lambda| \|\vec{v} \|\,.
 \end{equation*}
 </div>
-<p class="continuation">si ottiene</p>
+<p class="continuation">Inoltre dal momento che</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\mat{U}\mat{u} = \lambda_1\mat{u}
-\,,\quad
-\mat{U}\mat{v} = \lambda_2\mat{v}
-\,,\quad
-\mat{U}\mat{w} = \left[\begin{array}{c}\lambda_1\,w_1\\\lambda_1\,w_2\\\lambda_2\,w_3\end{array}\right]
-\,,\quad
+\det{\tens{F}} = \det{\tens{R}\tens{U}} = \det{\tens{U}} = \lambda^3 &gt; 0
 \end{equation*}
 </div>
-<p class="continuation">risultato che può essere commentato come segue.</p>
-<ul class="disc">
-<li>Tutti i vettori appartenenti a direzioni giacenti nel piano individuato dai i primi due assi di riferimento vengono semplicemente scalati dal fattore \(\lambda_1\text{.}\)</li>
-<li>Vettori paralleli al terzo asse di riferimento vengono semplicemente scalati dal fattore \(\lambda_2\text{.}\)</li>
-<li>Tutti gli altri vettori vengono sia scalati sia cambiano direzione e il fattore di scala dipende sia \(\lambda_1\) e sia da \(\lambda_2\text{.}\)</li>
-</ul>
-<p class="continuation">Quindi in questo caso le <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">direzioni principali</em> sono individuate da tutte le direzioni appartenenti al piano \(1-2\) e dall'asse \(3\text{.}\)</p>
+<p class="continuation">ne consegue che l'unico valore ammissibile per \(\lambda\) è</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\lambda &gt; 0\,.
+\end{equation*}
+</div>
 <span class="incontext"><a href="principal_directions_sec_strain_chap_it.html#p-102">Contesto</a></span>
 </body>
 </html>

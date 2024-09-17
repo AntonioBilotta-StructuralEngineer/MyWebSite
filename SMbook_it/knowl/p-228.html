@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:38:35+02:00       *-->
+<!--*       on 2024-09-17T15:55:29+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,23 +15,45 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
-<p>Dato il seguente stato di tensione</p>
+<p>La equazione integrale di partenza può quindi essere riscritta come segue</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\int_{\body} \left(\text{div}\left(\tens{\sigma}\vec{v}\right) - \tens{\sigma} : \tens{\nabla v} + \vec{b} \cdot \vec{v} \right)  \,dv= 0\,,\quad \forall\vec{v}\,.\tag{2.5.3}
+\end{equation}
+</div>
+<p class="continuation">Il primo integrale, applicando in successione Teorema della divergenza e Teorema della tensione di Cauchy, diventa</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\mat{\sigma} = \left[\begin{array}{ccc}
-1 \amp 4 \amp -2 \\
-4 \amp 0 \amp 0 \\
--2 \amp 0 \amp 3
-\end{array}
-\right]\,,
+\int_{\body} \text{div}\left(\tens{\sigma}\vec{v}\right)\, dv = 
+\int_{\partial\body} \tens{\sigma}\vec{v} \cdot \vec{n}\,ds =
+\int_{\partial\body} \vec{v} \cdot \tens{\sigma}\vec{n}\,ds =
+\int_{\partial\body} \vec{t} \cdot \vec{v}\,ds \,.
 \end{equation*}
 </div>
-<p class="continuation">si calcoli quanto segue:</p>
-<ol class="decimal">
-<li>le componenti del vettore di trazione \(\vec{t}_{\vec{n}}\) relativo un piano passante per il punto dato e parallelo al piano \(2x_1 + 3x_2+x_3 = 5\text{;}\)</li>
-<li>la lunghezza di \(\vec{t}_{\vec{n}}\) e l'angolo che forma con la normale al piano;</li>
-<li>le componenti del tensore di tensione \(\tilde{\vec{\sigma}}\) rispetto ad una nuova base ortonormale \(\{\tilde{\vec{e}}_a\}\text{,}\) \(a=1,2,3\text{,}\) ottenuta ruotando di \(\pi/2\) la base di partenza intorno all'asse \(\vec{e}_3\text{.}\)</li>
-</ol>
-<span class="incontext"><a href="exercises_sec_stress_chap_it.html#p-228">Contesto</a></span>
+<p class="continuation">Quindi l'equazione <a class="xref" data-knowl="./knowl/continuum_plv_2_eq.html" title="Equazione 2.5.3">(2.5.3)</a> diventa</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\int_{\partial\body} \vec{t} \cdot \vec{v}\,ds - \int_{\body} \tens{\sigma} : \tens{\nabla v}\,dv + \int_{\body}  \vec{b} \cdot \vec{v} \,dv = 0\,,\quad \forall\vec{v}\,.\tag{2.5.4}
+\end{equation}
+</div>
+<p class="continuation">Per la decomposizione di \(\tens{\nabla v}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\tens{\nabla v} = \text{sym}\tens{\nabla v} + \text{skew}\tens{\nabla v}
+\end{equation*}
+</div>
+<p class="continuation">e la simmetria di \(\tens{\sigma}\) si ha</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\tens{\sigma} : \tens{\nabla v} =  \tens{\sigma} : \text{sym}\tens{\nabla v}\,.
+\end{equation*}
+</div>
+<p class="continuation">Si arriva quindi alla seguente espressione finale della forma integrale delle equazioni indefinite di equilibrio <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equazione 2.3.10">(2.3.10)</a>:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\int_{\partial\body} \vec{t} \cdot \vec{v}\,ds + \int_{\body}  \vec{b} \cdot \vec{v} \,dv = \int_{\body} \tens{\sigma} : \text{sym}\tens{\nabla v}\,dv \,,\quad \forall\vec{v}\,.\tag{2.5.5}
+\end{equation}
+</div>
+<span class="incontext"><a href="plv_sec_stress_chap_it.html#p-228">Contesto</a></span>
 </body>
 </html>

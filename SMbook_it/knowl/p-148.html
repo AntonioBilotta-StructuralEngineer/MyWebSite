@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-04-03T12:38:35+02:00       *-->
+<!--*       on 2024-09-17T15:55:29+02:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,18 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
-<p>Al fine di individuare il significato delle componenti del tensore \(\tens{\varepsilon}\) conviene richiamare l'espressione del tensore \(\tens{C}\) rispetto al gradiente delo spostamento, ovvero</p>
+<p>Analogamente anche \(\tens{C}\) può essere espresso rispetto al gradiente dello spostamento, ovvero</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\tens{C} = \tens{I}+ \tens{\nabla u} + \transp{\tens{\nabla u}} +  \transp{\tens{\nabla u}}\,\tens{\nabla u}\,,
+\tens{C} = \transp{\tens{F}}\tens{F} = \transp{(\tens{I}+\tens{\nabla u})} (\tens{I}+\tens{\nabla u})\,,
 \end{equation*}
 </div>
-<p class="continuation">da cui, effettuando i calcoli, ad esempio con le seguenti istruzioni MATLAB®</p>
-<span class="incontext"><a href="infinitesimal_sec_strain_chap_it.html#p-148">Contesto</a></span>
+<p class="continuation">da cui si ottiene</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\tens{C} = \tens{I}+ \tens{\nabla u} + \transp{\tens{\nabla u}} +  \transp{\tens{\nabla u}}\,\tens{\nabla u}\,.\tag{1.8.9}
+\end{equation}
+</div>
+<span class="incontext"><a href="measures_sec_strain_chap_it.html#p-148">Contesto</a></span>
 </body>
 </html>
