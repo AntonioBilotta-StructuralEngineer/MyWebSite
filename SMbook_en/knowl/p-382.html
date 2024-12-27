@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-09-17T16:03:33+02:00       *-->
+<!--*       on 2024-12-27T15:49:38+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,22 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">In the case of a degenerate system, one or more lines of the matrix \(\mat{A} \) are a linear combination of the others. The elimination of the dependent lines leads to a system with a lower number of equations for which the solution can be carried out by falling into one of the three cases seen for the non-degenerate system. From a mechanical point of view, this situation is not necessarily a symptom of an error but can be determined by one or more constraint conditions that can be eliminated without changing the resulting kinematics of the system.</p>
+<p>Let us consider a system with \(n\) degrees of freedom and subjected to \(m\) constraint conditions. The equations expressing the prescribed constraint conditions can be written as</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\sum_{j=1}^n A_{ij}  q_j = d_i \qquad (i=1 \dots m)\,.\tag{4.3.1}
+\end{equation}
+</div>
+<p class="continuation">\(d_i\) is a generic <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">assigned displacement</em> on the \(i\)-th constraint, \(q_j\) is the \(j\)-th degree of freedom and \(A_{ij}\) is the unitary contribution to displacement give by \(q_j\) on \(i\)-th constraint. Using a matrix notation the constraint conditions can be also epxressed as follows</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\mat{A} \vec{q} = \vec{d},\tag{4.3.2}
+\end{equation}
+</div>
+<p class="continuation">where \(\mat{A}\) is the \(m \times n\) kinematic matrix of the system, \(\vec{q}\text{,}\) with \(n\) components, is the vector of the chosen degrees of freedom and \(\vec{d}\text{,}\) with \(m\) components, is the vector containing the assigned displacemnts. <article class="note remark-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">4.3.1</span><span class="period">.</span>
+</h6>
+<p xmlns:svg="http://www.w3.org/2000/svg">The components of the vector \(\vec{d} \) can indifferently assume null or non-null values. The most recurrent case is, however, a zero assignment for all components.</p></article></p>
 <span class="incontext"><a href="analysis_sec_rigid_body_kinematics_chap_en.html#p-382">in-context</a></span>
 </body>
 </html>

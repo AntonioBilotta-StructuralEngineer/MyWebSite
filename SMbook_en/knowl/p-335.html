@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-09-17T16:03:32+02:00       *-->
+<!--*       on 2024-12-27T15:49:38+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,23 +15,18 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>The applied load condition can be expressed as</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\func{p}{x} = \bar{p}\,\sin\left(\frac{2\pi\,x}{l}\right)
-\end{equation*}
-</div>
-<p class="continuation">which, through Equation <a class="xref" data-knowl="./knowl/stretched_beam_navier.html" title="Equation 3.5.21">(3.5.21)</a>, gives</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-EA\,\frac{d^2u}{dx^2} + \bar{p}\,\sin\left(\frac{2\pi\,x}{l}\right) = 0
-\end{equation*}
-</div>
-<p class="continuation">to be satisfied in each point of the beam. The boundary conditions are</p>
+<p>From which we obtain the following solution in terms of the unknown displacements</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-\amp \func{u}{0} = 0\,,\\
-\amp \func{u}{l} = 0\,.
+u_a \amp= \frac{F}{EA}\frac{l-a}{l}\,x\,,\quad 0 \leq x \leq a\,,\\
+u_b \amp= \frac{F}{EA}\frac{l-x}{l}\,a\,,\quad a \leq x \leq l\,.
+\end{align*}
+</div>
+<p class="continuation">By calculating the derivative of the obtained solutions, the axial force along the two subdomains takes the following expression</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+N_a \amp= EA\, \frac{du_a}{dx} = F\,\frac{l-a}{l}\,,\quad 0 \leq x \leq a\,,\\
+N_b \amp= EA\, \frac{du_b}{dx} = -F\,\frac{a}{l}\,,\quad a \leq x \leq l\,.
 \end{align*}
 </div>
 <span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_en.html#p-335">in-context</a></span>

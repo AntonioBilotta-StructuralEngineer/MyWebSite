@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-09-17T15:55:30+02:00       *-->
+<!--*       on 2024-12-27T15:52:28+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,18 +15,29 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
-<p>In conclusione il campo di tensione che soddisfa tutte le equazioni di equilibrio in gioco è</p>
+<p>Anche in questo caso si può procedere assumendo una soluzione di tentativo per il tensore della tensione per poi verificare il soddisfacimento delle equazioni di equilibrio e delle condizioni al contorno. In particolare per \(\tens{\sigma}\) si assume la seguente forma</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation}
 \mat{\sigma} =
 \left[\begin{array}{ccc}
 0 \amp 0 \amp 0\\
 0 \amp 0 \amp 0\\
-0 \amp 0 \amp \frac{\bar{t}}{H/2}\,X_2
-\end{array}\right]\,.\tag{3.4.17}
+0 \amp 0 \amp \kappa\,X_2
+\end{array}\right]\tag{3.4.16}
 \end{equation}
 </div>
-<p class="continuation">Quindi la soluzione statica è data da uno stato di trazione pura nella direzione \(X_3\) distribuito linearmente lungo l'asse \(X_2\text{.}\) Per maggiore comodità degli sviluppi successivi continueremo ad utilizzare l'espressione \(\sigma_{33}=\kappa\,X_2\) ricordando comunque che \(\kappa=\frac{\bar{t}}{H/2}\text{.}\)</p>
+<p class="continuation">valida su tutto il dominio e con \(\kappa\) una costante generica. Con tale assunzione la scrittura delle equazioni equilibrio fornisce</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\begin{array}{l}
+\frac{\partial\, 0}{\partial\, X_1} + \frac{\partial\, 0}{\partial\, X_2} + \frac{\partial\, 0}{\partial\, X_3} = 0\\
+\frac{\partial\, 0}{\partial\, X_1} + \frac{\partial\, 0}{\partial\, X_2} + \frac{\partial\, 0}{\partial\, X_3} = 0\\
+\frac{\partial\, 0}{\partial\, X_1} + \frac{\partial\, 0}{\partial\, X_2} + \frac{\partial\, (\kappa\,X_2)}{\partial\, X_3} = 0
+\end{array}
+\quad\;\text{in}\;\body_0\,,
+\end{equation*}
+</div>
+<p class="continuation">da cui si evince il loro soddisfacimento.</p>
 <span class="incontext"><a href="problem_sec_elasticity_chap_it.html#p-298">Contesto</a></span>
 </body>
 </html>

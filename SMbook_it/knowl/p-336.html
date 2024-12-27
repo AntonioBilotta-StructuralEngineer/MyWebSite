@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-09-17T15:55:30+02:00       *-->
+<!--*       on 2024-12-27T15:52:28+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,22 +15,7 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Si riportano le istruzioni MATLAB® utilizzabili per la soluzione del sistema di equazioni differenziali. <figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms ua(x) ub(x) EA F l a;
-Dua = diff(ua);
-Dub = diff(ub);
-ode1 = EA*diff(ua,x,2) == 0;
-ode2 = EA*diff(ub,x,2) == 0;
-odes = [ode1; ode2];
-cond1 = ua(0) == 0;
-cond2 = ub(l) == 0;
-cond3 = ua(a) == ub(a);
-cond4 = EA*Dua(a) - EA*Dub(a) == F;
-conds = [cond1 cond2 cond3 cond4];
-sols = dsolve(odes,conds);
-sols.ua
-sols.ub
-</b></pre></div>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.7.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Lo schema assegnato si differenzia dallo schema considerato nella sezione precedente perché la soluzione elastica da valutare non ha un'unica espressione valida sul tutto il dominio della trave. La forza applicata all'interno dell'estensione della trave determina una discontinuità nella soluzione e quindi la necessità di studiare il problema sui due sottodimini, \(0\leq x \leq a\) e \(a\leq x \leq l\text{,}\) evidenziati in Figura. Si procede quindi valutando due soluzioni elastiche differenti ma connesse dalle necessarie condizioni al contorno all'interfaccia.</p>
 <span class="incontext"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#p-336">Contesto</a></span>
 </body>
 </html>

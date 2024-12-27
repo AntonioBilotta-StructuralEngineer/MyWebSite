@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-09-17T15:55:29+02:00       *-->
+<!--*       on 2024-12-27T15:52:28+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,54 +15,11 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
-<p>Nell'equazione <a class="xref" data-knowl="./knowl/motiv_static_eq.html" title="Equazione 3.1.2">(3.1.2)</a> le incognite sono le 6 componenti indipendenti del tensore della tensione mentre le equazioni a disposizione sono soltanto 3. Posta in questi termini la ricerca della soluzione non sarebbe neanche proponibile. Comunque, data la semplicità dei dati del problema si può tentare la strada di assumere una forma per il tensore della tensione e verificare se si riescono a soddisfare tutte le equazioni di equilibrio, indefinite e sul contorno. In particolare si assuma per \(\tens{\sigma}\) la forma seguente</p>
+<p>Pertanto si introduce l'ipotesi alla base di una <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">formulazione linearizzata del problema elastico</em>, che è l'obiettivo finale del presente capitolo, ovvero che le equazioni di equilibrio possano essere formulate assumendo</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation}
-\mat{\sigma} =
-\left[\begin{array}{ccc}
-0 \amp 0 \amp 0\\
-0 \amp 0 \amp 0\\
-0 \amp 0 \amp \kappa
-\end{array}\right]\tag{3.1.10}
+\body \equiv \body_0 \tag{3.1.1}
 \end{equation}
-</div>
-<p class="continuation">valida su tutto il dominio e con \(\kappa\) una costante generica. Si verifica facilmente il soddisfacimento delle <a class="xref" data-knowl="./knowl/motiv_static_components_eq.html" title="Equazione 3.1.3">(3.1.3)</a>, infatti</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\begin{array}{l}
-\frac{\partial\, 0}{\partial\, X_1} + \frac{\partial\, 0}{\partial\, X_2} + \frac{\partial\, 0}{\partial\, X_3} = 0\\
-\frac{\partial\, 0}{\partial\, X_1} + \frac{\partial\, 0}{\partial\, X_2} + \frac{\partial\, 0}{\partial\, X_3} = 0\\
-\frac{\partial\, 0}{\partial\, X_1} + \frac{\partial\, 0}{\partial\, X_2} + \frac{\partial\, \kappa}{\partial\, X_3} = 0
-\end{array}
-\quad\;\text{in}\;\body_0\,.
-\end{equation*}
-</div>
-<p class="continuation">È verificato anche il soddisfacimento della <a class="xref" data-knowl="./knowl/motiv_bc3_eq.html" title="Equazione 3.1.6">(3.1.6)</a>, infatti</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\left[\begin{array}{ccc}
-0 \amp 0 \amp 0\\
-0 \amp 0 \amp 0\\
-0 \amp 0 \amp \kappa
-\end{array}\right]
-\left[\begin{array}{r}n_1\\n_2\\0\end{array}\right] =
-\left[\begin{array}{r}0\\0\\0\end{array}\right] \,.
-\end{equation*}
-</div>
-<p class="continuation">Mentre imponendo la <a class="xref" data-knowl="./knowl/motiv_bc1_eq.html" title="Equazione 3.1.4">(3.1.4)</a>, ugualmente con la  <a class="xref" data-knowl="./knowl/motiv_bc2_eq.html" title="Equazione 3.1.5">(3.1.5)</a>, si ottiene</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\left[\begin{array}{ccc}
-0 \amp 0 \amp 0\\
-0 \amp 0 \amp 0\\
-0 \amp 0 \amp \kappa
-\end{array}\right]
-\left[\begin{array}{r}0 \\ 0\\-1\end{array}\right] =
-\left[\begin{array}{r}0\\0\\-\bar{t}\end{array}\right]
-\quad \rightarrow \quad
-\kappa = \bar{t}
-\,.
-\end{equation*}
 </div>
 <span class="incontext"><a href="motivations_sec_elasticity_chap_it.html#p-246">Contesto</a></span>
 </body>

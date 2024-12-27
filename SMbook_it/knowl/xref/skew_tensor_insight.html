@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="it-IT" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="insight remark-like"><h3 class="heading">
+<span class="type">Intuizione</span><span class="space"> </span><span class="codenumber">1.9.5</span><span class="period">.</span>
+</h3>
+<div class="para logical">
+<div class="para">Dato un tensore <span class="process-math">\(\tens{W}\)</span> emisimmetrico, la cui forma matriciale ad esso associata per definizione sarà</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mat{W} =
+\left[\begin{array}{ccc}
+0 \amp W_{12} \amp W_{13}\\
+-W_{12} \amp 0 \amp W_{23}\\
+-W_{13} \amp -W_{23} \amp 0 
+\end{array}\right]\,,
+\end{equation*}
+</div>
+<div class="para">si può verificare come la sua applicazione ad un vettore <span class="process-math">\(\vec{v}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left[\begin{array}{ccc}
+0 \amp W_{12} \amp W_{13}\\
+-W_{12} \amp 0 \amp W_{23}\\
+-W_{13} \amp -W_{23} \amp 0 
+\end{array}\right]
+\left[\begin{array}{c}
+v_1\\
+v_2\\
+v_3
+\end{array}\right]
+=
+\left[\begin{array}{c}
+W_{12}v_2 + W_{13}v_3 \\
+-W_{12}v_1 + W_{23}v_3\\
+-W_{13}v_1 -W_{23}v_2
+\end{array}\right]
+\end{equation*}
+</div>
+<div class="para">equivalga a calcolare il seguente prodotto vettoriale</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left[\begin{array}{c}
+\omega_1\\
+\omega_2\\
+\omega_3
+\end{array}\right]
+\times
+\left[\begin{array}{c}
+v_1\\
+v_2\\
+v_3
+\end{array}\right]
+=
+\left[\begin{array}{c}
+\omega_2 v_3 - \omega_3 v_2\\
+\omega_3 v_1 - \omega_1 v_3\\
+\omega_1 v_2 - \omega_2 v_1
+\end{array}\right]
+\end{equation*}
+</div>
+<div class="para">dove le componenti di <span class="process-math">\(\vec{\omega}\)</span> sono messe in corrispondenza con le componenti di <span class="process-math">\(\tens{W}\)</span> nel modo seguente</div>
+<div class="displaymath process-math">
+\begin{equation}
+\omega_{1} = -W_{23}\,,\quad \omega_{2} = W_{13}\,,\quad \omega_{3} = -W_{12}\,.\tag{1.9.13}
+\end{equation}
+</div>
+<div class="para">Quindi, noto <span class="process-math">\(\vec{\omega}\text{,}\)</span> <span class="process-math">\(\tens{W}\)</span> può essere espresso come segue</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mat{W} =
+\left[\begin{array}{ccc}
+0 \amp -\omega_{3} \amp \omega_{2}\\
+\omega_{3} \amp 0 \amp -\omega_{1}\\
+-\omega_{2} \amp \omega_{1} \amp 0 
+\end{array}\right]\,.
+\end{equation*}
+</div>
+</div>
+<div class="para logical">
+<div class="para">Pertanto si ha</div>
+<div class="displaymath process-math">
+\begin{equation}
+\tens{W}\vec{v} = \vec{\omega} \times \vec{v}\,,\tag{1.9.14}
+\end{equation}
+</div>
+<div class="para">e <span class="process-math">\(\omega\)</span> è il vettore assiale associato al tensore emisimmetrico <span class="process-math">\(\tens{W}\text{.}\)</span> L’aggettivo assiale deriva dal fatto che <span class="process-math">\(\omega\)</span> individua l’asse di una rotazione intorno al quale si effettua la rotazione infinitesima.</div>
+</div></article><span class="incontext"><a class="internal" href="infinitesimal_sec_strain_chap_it.html#skew_tensor_insight">Nel contesto</a></span>
+</body>
+</html>

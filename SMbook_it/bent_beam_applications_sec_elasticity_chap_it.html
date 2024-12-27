@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-09-17T15:55:27+02:00       *-->
+<!--*       on 2024-12-27T15:52:27+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -177,6 +177,7 @@ MathJax.Hub.Config({
 <li><a href="constraints_sec_rigid_body_kinematics_chap_it.html" data-scroll="constraints_sec_rigid_body_kinematics_chap_it">vincoli</a></li>
 <li><a href="analysis_sec_rigid_body_kinematics_chap_it.html" data-scroll="analysis_sec_rigid_body_kinematics_chap_it">analisi cinematica</a></li>
 <li><a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html" data-scroll="analysis_examples_sec_rigid_body_kinematics_chap_it">applicazione dell'analisi cinematica ai sistemi di corpi rigidi</a></li>
+<li><a href="exercises_sec_rigid_body_kinematics_chap_it.html" data-scroll="exercises_sec_rigid_body_kinematics_chap_it">esercizi</a></li>
 <li><a href="refs_rigid_body_kinematics_chap_it.html" data-scroll="refs_rigid_body_kinematics_chap_it">riferimenti e letture suggerite</a></li>
 </ul>
 </li>
@@ -191,6 +192,7 @@ MathJax.Hub.Config({
 <li><a href="sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_it">sollecitazioni</a></li>
 <li><a href="indefinte_sec_rigid_body_statics_chap_it.html" data-scroll="indefinte_sec_rigid_body_statics_chap_it">equazioni indefinite di equilibrio per la trave piana</a></li>
 <li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it">calcolo e diagrammi delle sollecitazioni</a></li>
+<li><a href="exercises_sec_rigid_body_statics_chap_it.html" data-scroll="exercises_sec_rigid_body_statics_chap_it">esercizi</a></li>
 </ul>
 </li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Redatto in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
@@ -198,11 +200,11 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="bent_beam_applications_sec_elasticity_chap_it"><h2 class="heading hide-type">
 <span class="type">Paragrafo</span> <span class="codenumber">3.8</span> <span class="title">applicazioni del modello di trave inflessa</span>
 </h2>
-<section class="subsection" id="subsection-74"><h3 class="heading hide-type">
+<section class="subsection" id="subsection-76"><h3 class="heading hide-type">
 <span class="type">Sottoparagrafo</span> <span class="codenumber">3.8.1</span> <span class="title">mensola soggetta ad una forza all'estremità</span>
 </h3>
 <figure class="figure figure-like" id="figure-41"><div class="image-box" style="width: 36%; margin-left: 32%; margin-right: 32%;"><img src="images/mensola_con_forza.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">3.8.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-342">L'applicazione dell'equazione di equilibrio <a class="xref" data-knowl="./knowl/bent_beam_navier.html" title="Equazione 3.6.34">(3.6.34)</a> allo schema sopra riportato fornisce</p>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">3.8.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-344">L'applicazione dell'equazione di equilibrio <a class="xref" data-knowl="./knowl/bent_beam_navier.html" title="Equazione 3.6.34">(3.6.34)</a> allo schema sopra riportato fornisce</p>
 <div class="displaymath">
 \begin{equation*}
 EJ\,\frac{d^4w}{dx^4} = 0\,.
@@ -217,7 +219,7 @@ EJ\,\frac{d^4w}{dx^4} = 0\,.
 \amp \func{M}{l} = -EJ\,\func{\frac{d^2w}{dx^2}}{l} = 0\,.
 \end{align*}
 </div>
-<article class="assemblage assemblage-like" id="assemblage-25"><p id="p-343">Le seguenti istruzioni MATLAB® consentono il calcolo della soluzione \(\func{w}{x}\) e del relativo momento flettente  \(\func{M}{x}\text{.}\) <figure class="listing figure-like" id="listing-37"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms w(x) EJ F l;
+<article class="assemblage assemblage-like" id="assemblage-25"><p id="p-345">Le seguenti istruzioni MATLAB® consentono il calcolo della soluzione \(\func{w}{x}\) e del relativo momento flettente  \(\func{M}{x}\text{.}\) <figure class="listing figure-like" id="listing-37"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms w(x) EJ F l;
 ode = EJ*diff(w,x,4) == 0;
 D1w = diff(w,x,1);
 D2w = diff(w,x,2);
@@ -231,7 +233,7 @@ sol = dsolve(ode,conds)
 M = -EJ*diff(sol,x,2)
 </b></pre></div>
 <figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.8.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<p id="p-344">Lo spostamento dell'asse della trave può essere visualizzato con le seguenti istruzioni MATLAB®. <figure class="listing figure-like" id="listing-38"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms w(x);
+<p id="p-346">Lo spostamento dell'asse della trave può essere visualizzato con le seguenti istruzioni MATLAB®. <figure class="listing figure-like" id="listing-38"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms w(x);
 EJ = 1;
 F = 1;
 l = 1;
@@ -244,7 +246,7 @@ Beam = zeros(1, np+1);
 plot(Xv,wv,'r',Xv,Beam,'k','LineWidth',2)
 set(gca, 'YDir','reverse')
 </b></pre></div>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.8.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-345">Per lo spostamento si ottiene quindi l'atteso andamento cubico</p>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.8.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-347">Per lo spostamento si ottiene quindi l'atteso andamento cubico</p>
 <div class="displaymath">
 \begin{equation*}
 \func{w}{x} = \frac{F}{6\,EJ}\left(-x^3+3l\,x^2\right)\,,
@@ -255,11 +257,11 @@ set(gca, 'YDir','reverse')
 \begin{equation*}
 \func{M}{x} = F\left(x-l\right)\,.
 \end{equation*}
-</div></section><section class="subsection" id="subsection-75"><h3 class="heading hide-type">
+</div></section><section class="subsection" id="subsection-77"><h3 class="heading hide-type">
 <span class="type">Sottoparagrafo</span> <span class="codenumber">3.8.2</span> <span class="title">mensola soggetta a carico ripartito costante</span>
 </h3>
 <figure class="figure figure-like" id="figure-42"><div class="image-box" style="width: 36%; margin-left: 32%; margin-right: 32%;"><img src="images/mensola_con_carico_ripartito.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">3.8.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-346">Per lo schema assegnato l'equazione differenziale <a class="xref" data-knowl="./knowl/bent_beam_navier.html" title="Equazione 3.6.34">(3.6.34)</a> fornisce</p>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">3.8.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-348">Per lo schema assegnato l'equazione differenziale <a class="xref" data-knowl="./knowl/bent_beam_navier.html" title="Equazione 3.6.34">(3.6.34)</a> fornisce</p>
 <div class="displaymath">
 \begin{equation*}
 -EJ\,\frac{d^4w}{dx^4} + q = 0\,,
@@ -274,7 +276,7 @@ set(gca, 'YDir','reverse')
 \amp \func{M}{l} = -EJ\,\func{\frac{d^2w}{dx^2}}{l} = 0\,.
 \end{align*}
 </div>
-<article class="assemblage assemblage-like" id="assemblage-26"><p id="p-347">Le sopra elencate equazioni, di equilibrio e relative condizioni al contorno, sono formulabili in MATLAB® come segue consentendo il calcolo della soluzione \(\func{w}{x}\) e del relativo momento flettente  \(\func{M}{x}\text{.}\) Si forniscono anche le istruzioni per il plottaggio delle due funzioni. <figure class="listing figure-like" id="listing-39"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms w(x) EJ q l;
+<article class="assemblage assemblage-like" id="assemblage-26"><p id="p-349">Le sopra elencate equazioni, di equilibrio e relative condizioni al contorno, sono formulabili in MATLAB® come segue consentendo il calcolo della soluzione \(\func{w}{x}\) e del relativo momento flettente  \(\func{M}{x}\text{.}\) Si forniscono anche le istruzioni per il plottaggio delle due funzioni. <figure class="listing figure-like" id="listing-39"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms w(x) EJ q l;
 ode = -EJ*diff(w,x,4) + q == 0;
 D1w = diff(w,x,1);
 D2w = diff(w,x,2);
@@ -298,11 +300,11 @@ Mv = M(Xv,1,1,1);
 plot(Xv,Mv,'b',Xv,Beam,'k','LineWidth',2)
 set(gca, 'YDir','reverse')
 </b></pre></div>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.8.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></section><section class="subsection" id="subsection-76"><h3 class="heading hide-type">
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.8.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></section><section class="subsection" id="subsection-78"><h3 class="heading hide-type">
 <span class="type">Sottoparagrafo</span> <span class="codenumber">3.8.3</span> <span class="title">trave appoggiata soggetta a carico ripartito costante</span>
 </h3>
 <figure class="figure figure-like" id="figure-43"><div class="image-box" style="width: 36%; margin-left: 32%; margin-right: 32%;"><img src="images/trave_appoggiata_con_carico_ripartito.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">3.8.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-348">La soluzione del problema si ottiene sulla base della stessa equazione di equilibrio utilizzata nell'esempio precedente. Occore modificare soltanto le condizioni al contorno che per la trave appoggiata diventano</p>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">3.8.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-350">La soluzione del problema si ottiene sulla base della stessa equazione di equilibrio utilizzata nell'esempio precedente. Occore modificare soltanto le condizioni al contorno che per la trave appoggiata diventano</p>
 <div class="displaymath">
 \begin{align*}
 \amp \func{w}{0} = 0\,,\\
@@ -311,7 +313,7 @@ set(gca, 'YDir','reverse')
 \amp \func{M}{l} = -EJ\,\func{\frac{d^2w}{dx^2}}{l} = 0\,.
 \end{align*}
 </div>
-<article class="assemblage assemblage-like" id="assemblage-27"><p id="p-349">Analogamente anche le istruzioni MATLAB® per il calcolo della soluzione si modificano solo nella parte riguardante le condizioni al contorno. <figure class="listing figure-like" id="listing-40"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms w(x) EJ q l;
+<article class="assemblage assemblage-like" id="assemblage-27"><p id="p-351">Analogamente anche le istruzioni MATLAB® per il calcolo della soluzione si modificano solo nella parte riguardante le condizioni al contorno. <figure class="listing figure-like" id="listing-40"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms w(x) EJ q l;
 ode = -EJ*diff(w,x,4) + q == 0;
 D1w = diff(w,x,1);
 D2w = diff(w,x,2);

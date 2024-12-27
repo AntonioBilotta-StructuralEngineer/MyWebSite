@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-09-17T15:55:28+02:00       *-->
+<!--*       on 2024-12-27T15:52:27+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -177,6 +177,7 @@ MathJax.Hub.Config({
 <li><a href="constraints_sec_rigid_body_kinematics_chap_it.html" data-scroll="constraints_sec_rigid_body_kinematics_chap_it">vincoli</a></li>
 <li><a href="analysis_sec_rigid_body_kinematics_chap_it.html" data-scroll="analysis_sec_rigid_body_kinematics_chap_it">analisi cinematica</a></li>
 <li><a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html" data-scroll="analysis_examples_sec_rigid_body_kinematics_chap_it">applicazione dell'analisi cinematica ai sistemi di corpi rigidi</a></li>
+<li><a href="exercises_sec_rigid_body_kinematics_chap_it.html" data-scroll="exercises_sec_rigid_body_kinematics_chap_it">esercizi</a></li>
 <li><a href="refs_rigid_body_kinematics_chap_it.html" data-scroll="refs_rigid_body_kinematics_chap_it">riferimenti e letture suggerite</a></li>
 </ul>
 </li>
@@ -191,6 +192,7 @@ MathJax.Hub.Config({
 <li><a href="sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_it" class="active">sollecitazioni</a></li>
 <li><a href="indefinte_sec_rigid_body_statics_chap_it.html" data-scroll="indefinte_sec_rigid_body_statics_chap_it">equazioni indefinite di equilibrio per la trave piana</a></li>
 <li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it">calcolo e diagrammi delle sollecitazioni</a></li>
+<li><a href="exercises_sec_rigid_body_statics_chap_it.html" data-scroll="exercises_sec_rigid_body_statics_chap_it">esercizi</a></li>
 </ul>
 </li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Redatto in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
@@ -198,7 +200,7 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="sollecitazioni_sec_rigid_body_statics_chap_it"><h2 class="heading hide-type">
 <span class="type">Paragrafo</span> <span class="codenumber">5.7</span> <span class="title">sollecitazioni</span>
 </h2>
-<p id="p-461">Lo stato di sforzo interno dei solidi mono-dimensionali, o travi, viene caratterizzato valutando in ogni punto le componenti della sollecitazione. Nel caso piano le componenti di sollecitazione sono tre: <em class="alert">sforzo normale (\(N\))</em>, <em class="alert">taglio (\(T\))</em> e <em class="alert">momento flettente (\(M\))</em>. Al fine di arrivare in maniera semmplice ad una definizione delle sollecitazioni, si consideri il seguente diagramma di corpo libero relativo ad un sistema equilibrato di forze. <figure class="figure figure-like" id="schema1_fig"><div class="image-box" style="width: 43%; margin-left: 28.5%; margin-right: 28.5%;"><img src="images/schema1.png" style="width: 100%; height: auto;" alt=""></div>
+<p id="p-465">Lo stato di sforzo interno dei solidi mono-dimensionali, o travi, viene caratterizzato valutando in ogni punto le componenti della sollecitazione. Nel caso piano le componenti di sollecitazione sono tre: <em class="alert">sforzo normale (\(N\))</em>, <em class="alert">taglio (\(T\))</em> e <em class="alert">momento flettente (\(M\))</em>. Al fine di arrivare in maniera semmplice ad una definizione delle sollecitazioni, si consideri il seguente diagramma di corpo libero relativo ad un sistema equilibrato di forze. <figure class="figure figure-like" id="schema1_fig"><div class="image-box" style="width: 43%; margin-left: 28.5%; margin-right: 28.5%;"><img src="images/schema1.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.7.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Si immagini di separare il corpo in due parti mediante un piano passante per un generico punto \(s\) ottenendo i seguenti diagrammi di corpo libero <figure class="figure figure-like" id="schema2_fig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/schema2.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.7.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure> dove si è postulato che le due parti si scambino, attraverso la sezione di separazione, delle azioni uguali ed opposte. Tali azioni dovranno essere comunque tali da soddisfare le equazioni di equilibrio su ciascuna parte ottenuta. In particolare, se si considera il tratto di lunghezza \(s\) si ottengono le seguenti equazioni (polo per l'equilibrio alla rotazione posto nell'ascissa \(s\)):</p>
 <div class="displaymath">
@@ -220,20 +222,20 @@ M \amp= -F(l - s)\,.
 <article class="remark remark-like" id="remark-20"><h6 class="heading">
 <span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">5.7.3</span><span class="period">.</span>
 </h6>
-<p id="p-462">Il procedimento di separazione effetuato può anche essere inteso come la rimozione del vincolo di continuità nel punto \(s\) e l'applicazione delle <em class="emphasis">"reazioni vincolari"</em> associate al vincolo, di grado 3, rimosso.</p></article><article class="remark remark-like" id="remark-21"><h6 class="heading">
+<p id="p-466">Il procedimento di separazione effetuato può anche essere inteso come la rimozione del vincolo di continuità nel punto \(s\) e l'applicazione delle <em class="emphasis">"reazioni vincolari"</em> associate al vincolo, di grado 3, rimosso.</p></article><article class="remark remark-like" id="remark-21"><h6 class="heading">
 <span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">5.7.4</span><span class="period">.</span>
 </h6>
-<p id="p-463">La singola operazione di sezionamento deve consentire di ottenere due corpi liberi distinti. Se a tal fine fosse neccessario effettuare altri sezionamenti allora per le parti separate si otterrebbe un problema iperstatico.</p></article><section class="subsection" id="subsection-116"><h3 class="heading hide-type">
+<p id="p-467">La singola operazione di sezionamento deve consentire di ottenere due corpi liberi distinti. Se a tal fine fosse neccessario effettuare altri sezionamenti allora per le parti separate si otterrebbe un problema iperstatico.</p></article><section class="subsection" id="subsection-120"><h3 class="heading hide-type">
 <span class="type">Sottoparagrafo</span> <span class="codenumber">5.7.1</span> <span class="title">convenzione sul segno delle sollecitazioni</span>
 </h3>
-<p id="p-464">Applicando la procedura di sezionamento due volte al fine di isolare un tratto di trave di lunghezza infinitesima è possibile ottenere il seguente schema (dove è stato reso evidente anche l'altezza della trave) utile ad evidenziare la convenzione correntemente utilizzata per definire le sollecitazioni di segno positivo (per maggiore chiarezza le sollecitazioni sono raprresentate separatamente).</p>
+<p id="p-468">Applicando la procedura di sezionamento due volte al fine di isolare un tratto di trave di lunghezza infinitesima è possibile ottenere il seguente schema (dove è stato reso evidente anche l'altezza della trave) utile ad evidenziare la convenzione correntemente utilizzata per definire le sollecitazioni di segno positivo (per maggiore chiarezza le sollecitazioni sono raprresentate separatamente).</p>
 <figure class="figure figure-like" id="convenzione_sollecitazioni_fig"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/convenzione_sollecitazioni.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.7.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></section><section class="subsection" id="subsection-117"><h3 class="heading hide-type">
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.7.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></section><section class="subsection" id="subsection-121"><h3 class="heading hide-type">
 <span class="type">Sottoparagrafo</span> <span class="codenumber">5.7.2</span> <span class="title">carichi ripartiti</span>
 </h3>
-<p id="p-465">Al fine di completare la casistica dei carichi applicabili agli schemi di travi e di rendere anche possibile la trattazione generale delle equazioni indefinite di equilibrio presentate nella sezione successiva, viene discusso il caso dei carichi ripartiti. Al tal fine si consideri il seguente schema.</p>
+<p id="p-469">Al fine di completare la casistica dei carichi applicabili agli schemi di travi e di rendere anche possibile la trattazione generale delle equazioni indefinite di equilibrio presentate nella sezione successiva, viene discusso il caso dei carichi ripartiti. Al tal fine si consideri il seguente schema.</p>
 <figure class="figure figure-like" id="ripartiti_fig"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="images/ripartiti.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.7.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-466">Lo schema rappresenta una trave incastrata ad una estremità e soggetta ad un carico ripartito variabile \(q(x)\text{.}\) L'unità di misura del carico ripartito è \(\left[ \frac{F}{L} \right]\text{,}\) per cui si parlerà di carico ripartito per unità di lunghezza. Il diagramma di corpo libero riportato in alto a destra nella figura consente la scrittura delle tre equazioni di equilibrio (orizzontale, verticale e rotazione intorno al punto \(A\)) fornendo:</p>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">5.7.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-470">Lo schema rappresenta una trave incastrata ad una estremità e soggetta ad un carico ripartito variabile \(q(x)\text{.}\) L'unità di misura del carico ripartito è \(\left[ \frac{F}{L} \right]\text{,}\) per cui si parlerà di carico ripartito per unità di lunghezza. Il diagramma di corpo libero riportato in alto a destra nella figura consente la scrittura delle tre equazioni di equilibrio (orizzontale, verticale e rotazione intorno al punto \(A\)) fornendo:</p>
 <div class="displaymath">
 \begin{align*}
 H_{A} \amp = 0\,,\\
@@ -262,7 +264,7 @@ V_{A} - R_q \amp = 0\,,\\
 \end{align*}
 </div>
 <p class="continuation">Quindi nei sistemi soggetti a carichi ripartiti è possibile sostituire questi ultimi con le rispettive risultanti posizionate nei baricentri. Si osserva che tale sostituzione è corretta solo per il calcolo delle reazioni vincolari e non per il calcolo delle sollecitazioni che verrà meglio descritto in seguito.</p>
-<article class="assemblage assemblage-like" id="assemblage-45"><p id="p-467">Nel seguito vengono riportate le istruzioni MATLAB® per il calcolo della risultante e del baricentro per alcune tipologie di carico ripartito. <figure class="listing figure-like" id="listing-58"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>% carico ripartito costante
+<article class="assemblage assemblage-like" id="assemblage-45"><p id="p-471">Nel seguito vengono riportate le istruzioni MATLAB® per il calcolo della risultante e del baricentro per alcune tipologie di carico ripartito. <figure class="listing figure-like" id="listing-58"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>% carico ripartito costante
 syms q l x;
 carico(x, q) = q;
 np = 100;

@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-09-17T15:55:31+02:00       *-->
+<!--*       on 2024-12-27T15:52:29+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,23 +15,35 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
-<p>Lo schema ottenuto è essenzialmente un diagramma di corpo libero per il quale è possibile imporre le seguenti equazioni di equilibrio (il polo utilizzato per l'equilibrio alla rotazione è posto all'ascissa \(x+dx\))</p>
+<p>Lo schema rappresenta una trave incastrata ad una estremità e soggetta ad un carico ripartito variabile \(q(x)\text{.}\) L'unità di misura del carico ripartito è \(\left[ \frac{F}{L} \right]\text{,}\) per cui si parlerà di carico ripartito per unità di lunghezza. Il diagramma di corpo libero riportato in alto a destra nella figura consente la scrittura delle tre equazioni di equilibrio (orizzontale, verticale e rotazione intorno al punto \(A\)) fornendo:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align}
--N(x) + N(x+dx) + p(x)dx \amp = 0\,,\tag{5.8.1}\\
--T(x) + T(x+dx) + q(x)dx \amp = 0\,,\tag{5.8.2}\\
--T(x)\,dx - M(x) + q(x)\frac{dx^2}{2} + M(x+dx) \amp = 0\,.\tag{5.8.3}
-\end{align}
+\begin{align*}
+H_{A} \amp = 0\,,\\
+V_{A} -\int_0^l q(x) dx \amp = 0\,,\\
+\mathcal{M}_{A} - \int_0^l q(x) x dx \amp = 0\,.
+\end{align*}
 </div>
-<p class="continuation">L'ipotesi di continuità del solido mono-dimensionale e delle grandezze su di esso definite, consente di effettuare uno sviluppo in serie di Taylor troncato al primo ordine delle sollecitazioni valutate sulla sezione \(x+dx\) e di ottenere quindi</p>
+<p class="continuation">È facile rendersi conto che gli integrali presenti nelle equazioni hanno il significato di risultante del carico applicato</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align}
--N(x) + \underbrace{N(x) + \regulardiff{N}{x}\,dx}_{N(x+dx)} + p(x)dx \amp = 0\,,\tag{5.8.4}\\
--T(x) + \underbrace{T(x) + \regulardiff{T}{x}\,dx}_{T(x+dx)} + q(x)dx \amp = 0\,,\tag{5.8.5}\\
--T(x)\,dx - M(x) + q(x)\frac{dx^2}{2} + \underbrace{M(x) + \regulardiff{M}{x}\,dx}_{M(x+dx)} \amp = 0\,.\tag{5.8.6}
-\end{align}
+\begin{equation*}
+\int_0^l q(x) dx = R_q
+\end{equation*}
 </div>
-<p class="continuation">dove le quantità \(\regulardiff{N}{x}\text{,}\) \(\regulardiff{T}{x}\) e \(\regulardiff{M}{x}\) indicano le derivate delle sollecitazioni rispetto all'ascissa \(x\text{.}\) Facendo le dovute semplificazioni e trascurando il termine \(q(x)\frac{dx^2}{2}\) perché di ordine superiore al primo, si ottengono le equazioni indefinite di equilibrio per la trave piana di seguito elencate.</p>
-<span class="incontext"><a href="indefinte_sec_rigid_body_statics_chap_it.html#p-470">Contesto</a></span>
+<p class="continuation">e momento statico rispetto al punto \(A\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\int_0^l q(x)x dx = S_q = R_q x_q,
+\end{equation*}
+</div>
+<p class="continuation">dove \(x_q\) rappresenta il baricentro del carico rispetto ad un'asse passante per \(A\text{,}\) si veda l'ulteriore schema di corpo libero riportato in basso a destra nella figura. Pertanto le equazioni di equilibrio possono essere riscritte nel modo seguente:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+H_{A} \amp = 0\,,\\
+V_{A} - R_q \amp = 0\,,\\
+\mathcal{M}_{A} - R_q x_q \amp = 0\,.
+\end{align*}
+</div>
+<p class="continuation">Quindi nei sistemi soggetti a carichi ripartiti è possibile sostituire questi ultimi con le rispettive risultanti posizionate nei baricentri. Si osserva che tale sostituzione è corretta solo per il calcolo delle reazioni vincolari e non per il calcolo delle sollecitazioni che verrà meglio descritto in seguito.</p>
+<span class="incontext"><a href="sollecitazioni_sec_rigid_body_statics_chap_it.html#p-470">Contesto</a></span>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-09-17T15:55:27+02:00       *-->
+<!--*       on 2024-12-27T15:52:27+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -177,6 +177,7 @@ MathJax.Hub.Config({
 <li><a href="constraints_sec_rigid_body_kinematics_chap_it.html" data-scroll="constraints_sec_rigid_body_kinematics_chap_it">vincoli</a></li>
 <li><a href="analysis_sec_rigid_body_kinematics_chap_it.html" data-scroll="analysis_sec_rigid_body_kinematics_chap_it">analisi cinematica</a></li>
 <li><a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html" data-scroll="analysis_examples_sec_rigid_body_kinematics_chap_it">applicazione dell'analisi cinematica ai sistemi di corpi rigidi</a></li>
+<li><a href="exercises_sec_rigid_body_kinematics_chap_it.html" data-scroll="exercises_sec_rigid_body_kinematics_chap_it">esercizi</a></li>
 <li><a href="refs_rigid_body_kinematics_chap_it.html" data-scroll="refs_rigid_body_kinematics_chap_it">riferimenti e letture suggerite</a></li>
 </ul>
 </li>
@@ -191,6 +192,7 @@ MathJax.Hub.Config({
 <li><a href="sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_it">sollecitazioni</a></li>
 <li><a href="indefinte_sec_rigid_body_statics_chap_it.html" data-scroll="indefinte_sec_rigid_body_statics_chap_it">equazioni indefinite di equilibrio per la trave piana</a></li>
 <li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it">calcolo e diagrammi delle sollecitazioni</a></li>
+<li><a href="exercises_sec_rigid_body_statics_chap_it.html" data-scroll="exercises_sec_rigid_body_statics_chap_it">esercizi</a></li>
 </ul>
 </li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Redatto in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
@@ -198,12 +200,12 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="stretched_beam_applications_sec_elasticity_chap_it"><h2 class="heading hide-type">
 <span class="type">Paragrafo</span> <span class="codenumber">3.7</span> <span class="title">applicazioni del modello di trave tesa</span>
 </h2>
-<section class="subsection" id="subsection-70"><h3 class="heading hide-type">
+<section class="subsection" id="subsection-72"><h3 class="heading hide-type">
 <span class="type">Sottoparagrafo</span> <span class="codenumber">3.7.1</span> <span class="title">trave semplicemente tesa</span>
 </h3>
-<p id="p-330">Utilizzando l'equazione <a class="xref" data-knowl="./knowl/stretched_beam_navier.html" title="Equazione 3.5.21">(3.5.21)</a> si calcoli la soluzione elastica per il seguente schema.</p>
+<p id="p-332">Utilizzando l'equazione <a class="xref" data-knowl="./knowl/stretched_beam_navier.html" title="Equazione 3.5.21">(3.5.21)</a> si calcoli la soluzione elastica per il seguente schema.</p>
 <figure class="figure figure-like" id="figure-37"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/trave_tesa_con_forza.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">3.7.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-331">Per l'assenza di carico ripartito l'equazione da risolvere diventa</p>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">3.7.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-333">Per l'assenza di carico ripartito l'equazione da risolvere diventa</p>
 <div class="displaymath">
 \begin{equation*}
 EA\,\frac{d^2u}{dx^2} = 0\,,
@@ -248,12 +250,12 @@ c_0 = 0\,, \quad c_1 = \frac{F}{EA}\,.
 \end{equation*}
 </div>
 <article class="assemblage assemblage-like" id="assemblage-22"><h6 class="heading"><span class="title">soluzione tramite MATLAB®.</span></h6>
-<p id="p-332">L'integrale generale può essere calcolato utilizzando le seguenti istruzioni. <figure class="listing figure-like" id="listing-33"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms u(x) EA;
+<p id="p-334">L'integrale generale può essere calcolato utilizzando le seguenti istruzioni. <figure class="listing figure-like" id="listing-33"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms u(x) EA;
 ode = EA*diff(u,x,2) == 0
 dsolve(ode)
 </b></pre></div>
 <figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.7.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<p id="p-333">La soluzione che verifica anche le condizioni al contorno assegnate si ottiene invece con le seguenti istruzioni. <figure class="listing figure-like" id="listing-34"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms u(x) EA F l;
+<p id="p-335">La soluzione che verifica anche le condizioni al contorno assegnate si ottiene invece con le seguenti istruzioni. <figure class="listing figure-like" id="listing-34"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms u(x) EA F l;
 Du = diff(u);
 ode = EA*diff(u,x,2) == 0;
 cond1 = u(0) == 0;
@@ -261,12 +263,12 @@ cond2 = EA*Du(l) == F;
 conds = [cond1 cond2];
 dsolve(ode,conds)
 </b></pre></div>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.7.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></section><section class="subsection" id="subsection-71"><h3 class="heading hide-type">
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.7.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></section><section class="subsection" id="subsection-73"><h3 class="heading hide-type">
 <span class="type">Sottoparagrafo</span> <span class="codenumber">3.7.2</span> <span class="title">trave iperstatica con discontinuità</span>
 </h3>
 <figure class="figure figure-like" id="figure-38"><div class="image-box" style="width: 38%; margin-left: 31%; margin-right: 31%;"><img src="images/trave_tesa_iperstatica.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">3.7.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-334">Lo schema assegnato si differenzia dallo schema considerato nella sezione precedente perché la soluzione elastica da valutare non ha un'unica espressione valida sul tutto il dominio della trave. La forza applicata all'interno dell'estensione della trave determina una discontinuità nella soluzione e quindi la necessità di studiare il problema sui due sottodimini, \(0\leq x \leq a\) e \(a\leq x \leq l\text{,}\) evidenziati in Figura. Si procede quindi valutando due soluzioni elastiche differenti ma connesse dalle necessarie condizioni al contorno all'interfaccia.</p>
-<p id="p-335">L'equazione di equilibrio, <a class="xref" data-knowl="./knowl/stretched_beam_navier.html" title="Equazione 3.5.21">(3.5.21)</a>, applicata ai due sottodomini della trave sono formulabili come segue</p>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">3.7.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-336">Lo schema assegnato si differenzia dallo schema considerato nella sezione precedente perché la soluzione elastica da valutare non ha un'unica espressione valida sul tutto il dominio della trave. La forza applicata all'interno dell'estensione della trave determina una discontinuità nella soluzione e quindi la necessità di studiare il problema sui due sottodimini, \(0\leq x \leq a\) e \(a\leq x \leq l\text{,}\) evidenziati in Figura. Si procede quindi valutando due soluzioni elastiche differenti ma connesse dalle necessarie condizioni al contorno all'interfaccia.</p>
+<p id="p-337">L'equazione di equilibrio, <a class="xref" data-knowl="./knowl/stretched_beam_navier.html" title="Equazione 3.5.21">(3.5.21)</a>, applicata ai due sottodomini della trave sono formulabili come segue</p>
 <div class="displaymath">
 \begin{align*}
 \amp EA\,\frac{d^2u_a}{dx^2} = 0\,,\quad 0 \leq x \leq a\,,\\
@@ -288,7 +290,7 @@ dsolve(ode,conds)
 \func{N_a}{a} - \func{N_b}{a} = F\,.
 \end{equation*}
 </div>
-<article class="assemblage assemblage-like" id="assemblage-23"><p id="p-336">Si riportano le istruzioni MATLAB® utilizzabili per la soluzione del sistema di equazioni differenziali. <figure class="listing figure-like" id="listing-35"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms ua(x) ub(x) EA F l a;
+<article class="assemblage assemblage-like" id="assemblage-23"><p id="p-338">Si riportano le istruzioni MATLAB® utilizzabili per la soluzione del sistema di equazioni differenziali. <figure class="listing figure-like" id="listing-35"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms ua(x) ub(x) EA F l a;
 Dua = diff(ua);
 Dub = diff(ub);
 ode1 = EA*diff(ua,x,2) == 0;
@@ -303,7 +305,7 @@ sols = dsolve(odes,conds);
 sols.ua
 sols.ub
 </b></pre></div>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.7.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-337">Da cui si ottiene la seguente soluzione in termini di spostamenti incogniti</p>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.7.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-339">Da cui si ottiene la seguente soluzione in termini di spostamenti incogniti</p>
 <div class="displaymath">
 \begin{align*}
 u_a \amp= \frac{F}{EA}\frac{l-a}{l}\,x\,,\quad 0 \leq x \leq a\,,\\
@@ -316,11 +318,11 @@ u_b \amp= \frac{F}{EA}\frac{l-x}{l}\,a\,,\quad a \leq x \leq l\,.
 N_a \amp= EA\, \frac{du_a}{dx} = F\,\frac{l-a}{l}\,,\quad 0 \leq x \leq a\,,\\
 N_b \amp= EA\, \frac{du_b}{dx} = -F\,\frac{a}{l}\,,\quad a \leq x \leq l\,.
 \end{align*}
-</div></section><section class="subsection" id="subsection-72"><h3 class="heading hide-type">
+</div></section><section class="subsection" id="subsection-74"><h3 class="heading hide-type">
 <span class="type">Sottoparagrafo</span> <span class="codenumber">3.7.3</span> <span class="title">trave iperstatica soggetta ad un incremento termico omogeneo</span>
 </h3>
 <figure class="figure figure-like" id="figure-39"><div class="image-box" style="width: 38%; margin-left: 31%; margin-right: 31%;"><img src="images/trave_tesa_iperstatica_conDeltaT.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">3.7.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-338">La presenza dell'incremento di temperatura determina un allungamento della trave pari a</p>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">3.7.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-340">La presenza dell'incremento di temperatura determina un allungamento della trave pari a</p>
 <div class="displaymath">
 \begin{equation*}
 \Delta l_T = \alpha \Delta T \,l\,,
@@ -338,11 +340,11 @@ N_b \amp= EA\, \frac{du_b}{dx} = -F\,\frac{a}{l}\,,\quad a \leq x \leq l\,.
 N = - EA \,\alpha \Delta T\,,
 \end{equation*}
 </div>
-<p class="continuation">soluzione che mostra lo stato di compressione determinato dall'allungamento impedito. La soluzione in termini di spostamento è identicamente nulla su tutto la lunghezza.</p></section><section class="subsection" id="subsection-73"><h3 class="heading hide-type">
+<p class="continuation">soluzione che mostra lo stato di compressione determinato dall'allungamento impedito. La soluzione in termini di spostamento è identicamente nulla su tutto la lunghezza.</p></section><section class="subsection" id="subsection-75"><h3 class="heading hide-type">
 <span class="type">Sottoparagrafo</span> <span class="codenumber">3.7.4</span> <span class="title">trave iperstatica soggetta a carico ripartito sinusoidale</span>
 </h3>
 <figure class="figure figure-like" id="figure-40"><div class="image-box" style="width: 42%; margin-left: 29%; margin-right: 29%;"><img src="images/trave_tesa_iperstatica_con_carico_sinusoidale.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">3.7.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-339">La condizione di carico mostrata in Figura può essere descritta come segue</p>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">3.7.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-341">La condizione di carico mostrata in Figura può essere descritta come segue</p>
 <div class="displaymath">
 \begin{equation*}
 \func{p}{x} = \bar{p}\,\sin\left(\frac{2\pi\,x}{l}\right)
@@ -361,7 +363,7 @@ EA\,\frac{d^2u}{dx^2} + \bar{p}\,\sin\left(\frac{2\pi\,x}{l}\right) = 0
 \amp \func{u}{l} = 0\,.
 \end{align*}
 </div>
-<article class="assemblage assemblage-like" id="assemblage-24"><p id="p-340">Seguono le istruzione MATLAB® per il calcolo della soluzione \(\func{u}{x}\text{.}\) <figure class="listing figure-like" id="listing-36"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms u(x) EA p l;
+<article class="assemblage assemblage-like" id="assemblage-24"><p id="p-342">Seguono le istruzione MATLAB® per il calcolo della soluzione \(\func{u}{x}\text{.}\) <figure class="listing figure-like" id="listing-36"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms u(x) EA p l;
 ode = EA*diff(u,x,2) + p*sin(2*pi*x/l) == 0;
 cond1 = u(0) == 0;
 cond2 = u(l) == 0;
@@ -369,7 +371,7 @@ conds = [cond1 cond2];
 sol = dsolve(ode,conds)
 N = EA*diff(sol,x)
 </b></pre></div>
-<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.7.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-341">Si ottiene così la soluzione in termini di spostamento</p>
+<figcaption><span class="type">Listato</span><span class="space"> </span><span class="codenumber">3.7.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-343">Si ottiene così la soluzione in termini di spostamento</p>
 <div class="displaymath">
 \begin{equation*}
 \func{u}{x} = \frac{\bar{p}}{EA} \frac{l^2}{4\pi^2} \sin\left(\frac{2\pi\,x}{l}\right)

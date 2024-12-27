@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-09-17T15:55:31+02:00       *-->
+<!--*       on 2024-12-27T15:52:29+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,19 +15,22 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
-<p>In questo caso il \(\textrm{rango}\mat{A} == \textrm{min}(m,n) = 5\) e \(m &lt; n\) pertanto il sistema è labile e caratterizzato da infinite soluzioni. Per descrivere tutte le soluzioni possibili si scelga come parametro la rotazione \(\varphi_{B}\) che viene eliminata dal gruppo delle incognite da calcolare. In tal modo il sistema può essere riscritto come segue</p>
+<p>Le condizioni di vincolo assegnate sono esprimibili nel modo seguente</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\left[\begin{array}{ccccc}
-1 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
-0 &amp; 1 &amp; 0 &amp; 0 &amp; 0\\
-1 &amp; 0 &amp; -1 &amp; 0 &amp; 0\\
-0 &amp; 1 &amp; 0 &amp; -1 &amp; l\\
-0 &amp; 0 &amp; 0 &amp; 1 &amp; 0
-\end{array}\right]
-\left[\begin{array}{c} u_{1B} \\ u_{2B} \\ u_{1D} \\ u_{2D} \\ \varphi_{D} \end{array}\right] =
-\left[\begin{array}{c} -2l\,\varphi_{B} \\ 0 \\ 0 \\ -2l\,\varphi_{B} \\ 0 \end{array}\right].
-\end{equation*}
+\begin{gather*}
+\vec{u}_A = \vec{0}\,,\\
+\vec{u}_C = \vec{u}_{C'}\,,
+\end{gather*}
+</div>
+<p class="continuation">Le equazioni scalari deducibili sono (\(m=5\)):</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{gather*}
+u_{1A} = 0\,,\\
+u_{2A} = 0\,,\\
+u_{1C} = u_{1C'}\,,\\
+u_{2C} = u_{2C'}\,,\\
+u_{2E} = 0\,.
+\end{gather*}
 </div>
 <span class="incontext"><a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html#p-415">Contesto</a></span>
 </body>

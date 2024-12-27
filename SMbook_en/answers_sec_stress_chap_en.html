@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-09-17T16:03:28+02:00       *-->
+<!--*       on 2024-12-27T15:49:36+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -177,6 +177,7 @@ MathJax.Hub.Config({
 <li><a href="constraints_sec_rigid_body_kinematics_chap_en.html" data-scroll="constraints_sec_rigid_body_kinematics_chap_en">constraints</a></li>
 <li><a href="analysis_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_sec_rigid_body_kinematics_chap_en">kinematic analysis</a></li>
 <li><a href="analysis_examples_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_examples_sec_rigid_body_kinematics_chap_en">kinematic analysis of simple rigid body systems</a></li>
+<li><a href="exercises_sec_rigid_body_kinematics_chap_en.html" data-scroll="exercises_sec_rigid_body_kinematics_chap_en">exercises</a></li>
 <li><a href="refs_rigid_body_kinematics_chap_en.html" data-scroll="refs_rigid_body_kinematics_chap_en">references and suggested readings</a></li>
 </ul>
 </li>
@@ -191,6 +192,7 @@ MathJax.Hub.Config({
 <li><a href="sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces</a></li>
 <li><a href="indefinte_sec_rigid_body_statics_chap_en.html" data-scroll="indefinte_sec_rigid_body_statics_chap_en">2D beam equilibrium differential equations</a></li>
 <li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces calculation and diagrams</a></li>
+<li><a href="exercises_sec_rigid_body_statics_chap_en.html" data-scroll="exercises_sec_rigid_body_statics_chap_en">exercises</a></li>
 </ul>
 </li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
@@ -198,10 +200,10 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="answers_sec_stress_chap_en"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.7</span> <span class="title">answers to some of the proposed exercises</span>
 </h2>
-<section class="subsection" id="subsection-43"><h3 class="heading hide-type">
+<section class="subsection" id="subsection-45"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.7.1</span> <span class="title"></span>
 </h3>
-<p id="p-235">Anwer to <a href="exercises_sec_stress_chap_en.html#stress_ex_1" class="internal" title="Subsection 2.6.3">Subsection 2.6.3</a>. <figure class="listing figure-like" id="listing-26"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>sig = @(x) ...
+<p id="p-237">Anwer to <a href="exercises_sec_stress_chap_en.html#stress_ex_1" class="internal" title="Subsection 2.6.4">Subsection 2.6.4</a>. <figure class="listing figure-like" id="listing-26"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>sig = @(x) ...
 [5*x(2)*x(3) 3*x(2)^2 0;
 3*x(2)^2 0 -x(1);
 0 -x(1) 0];
@@ -213,10 +215,10 @@ n = @(x) ...
 
 t = sig([1/2; sqrt(3)/2; -1])*n([1/2; sqrt(3)/2; -1])
 </b></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">2.7.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure> It is noted that, as usual, the previous instructions are not the only possible way to obtain the required result.</p></section><section class="subsection" id="subsection-44"><h3 class="heading hide-type">
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">2.7.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure> It is noted that, as usual, the previous instructions are not the only possible way to obtain the required result.</p></section><section class="subsection" id="subsection-46"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.7.2</span> <span class="title"></span>
 </h3>
-<p id="p-236">Answer to <a href="exercises_sec_stress_chap_en.html#stress_ex_2" class="internal" title="Subsection 2.6.8">Subsection 2.6.8</a>. <figure class="listing figure-like" id="listing-27"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>x = sym('x', [3 1], 'real');
+<p id="p-238">Answer to <a href="exercises_sec_stress_chap_en.html#stress_ex_2" class="internal" title="Subsection 2.6.9">Subsection 2.6.9</a>. <figure class="listing figure-like" id="listing-27"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>x = sym('x', [3 1], 'real');
 syms rho g real
 sig = [x(2) x(3) 0;
 x(3) x(1) 0;

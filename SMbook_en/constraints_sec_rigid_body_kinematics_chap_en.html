@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-09-17T16:03:30+02:00       *-->
+<!--*       on 2024-12-27T15:49:37+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -177,6 +177,7 @@ MathJax.Hub.Config({
 <li><a href="constraints_sec_rigid_body_kinematics_chap_en.html" data-scroll="constraints_sec_rigid_body_kinematics_chap_en" class="active">constraints</a></li>
 <li><a href="analysis_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_sec_rigid_body_kinematics_chap_en">kinematic analysis</a></li>
 <li><a href="analysis_examples_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_examples_sec_rigid_body_kinematics_chap_en">kinematic analysis of simple rigid body systems</a></li>
+<li><a href="exercises_sec_rigid_body_kinematics_chap_en.html" data-scroll="exercises_sec_rigid_body_kinematics_chap_en">exercises</a></li>
 <li><a href="refs_rigid_body_kinematics_chap_en.html" data-scroll="refs_rigid_body_kinematics_chap_en">references and suggested readings</a></li>
 </ul>
 </li>
@@ -191,6 +192,7 @@ MathJax.Hub.Config({
 <li><a href="sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces</a></li>
 <li><a href="indefinte_sec_rigid_body_statics_chap_en.html" data-scroll="indefinte_sec_rigid_body_statics_chap_en">2D beam equilibrium differential equations</a></li>
 <li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces calculation and diagrams</a></li>
+<li><a href="exercises_sec_rigid_body_statics_chap_en.html" data-scroll="exercises_sec_rigid_body_statics_chap_en">exercises</a></li>
 </ul>
 </li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
@@ -198,28 +200,28 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="constraints_sec_rigid_body_kinematics_chap_en"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.2</span> <span class="title">constraints</span>
 </h2>
-<p id="p-369">The word <em class="emphasis">constraint</em> is used to indicate a device that limits the possibilities of movement of a system of bodies. A generic system, for example a system of rigid bodies, is described by \(n\) parameters, \(q_1, \dots q_n \text{,}\) which are called <em class="emphasis">Lagrangian coordinates</em> of the system or <em class="emphasis">degrees of freedom</em>. In these terms, the generic constraint condition is expressed, in the most generic form, in the following way:</p>
+<p id="p-372">The word <em class="emphasis">constraint</em> is used to indicate a device that limits the possibilities of movement of a system of bodies. A generic system, for example a system of rigid bodies, is described by \(n\) parameters, \(q_1, \dots q_n \text{,}\) which are called <em class="emphasis">Lagrangian coordinates</em> of the system or <em class="emphasis">degrees of freedom</em>. In these terms, the generic constraint condition is expressed, in the most generic form, in the following way:</p>
 <div class="displaymath">
 \begin{equation}
 f\left[q_1, \dots, q_n, \dot{q}_1, \dots, \dot{q}_n, t\right] \leq 0.\tag{4.2.1}
 \end{equation}
 </div>
 <p class="continuation">Where, in addition to the Lagrangian coordinates, their derivatives also appear, \(\dot{q}_1, \dots, \dot{q} _n \text{,}\) with respect to time.</p>
-<p id="p-370">For subsequent developments it will be sufficient to consider only <em class="emphasis">fixed</em> (time independent), <em class="emphasis">bilateral</em> (the constraint condition is expressed by the sign of equality), <em class="emphasis">holonomic</em> (independent of velocities) and <em class="emphasis">frictionless</em> (completely allow what they are not constrainig) constraints, that is</p>
+<p id="p-373">For subsequent developments it will be sufficient to consider only <em class="emphasis">fixed</em> (time independent), <em class="emphasis">bilateral</em> (the constraint condition is expressed by the sign of equality), <em class="emphasis">holonomic</em> (independent of velocities) and <em class="emphasis">frictionless</em> (completely allow what they are not constrainig) constraints, that is</p>
 <div class="displaymath">
 \begin{equation}
 f\left[q_1, q_2, \dots, q_n\right] = 0.\label{constraint_eq}\tag{4.2.2}
 \end{equation}
 </div>
 <p class="continuation">Previous equation is generally nonlinear. In the following, we will operate within the framework of 1st order kinematics, therefore we will always operate with linear constraint conditions as described below for the constraints most used in the applications.</p>
-<section class="subsection" id="subsection-88"><h3 class="heading hide-type">
+<section class="subsection" id="subsection-91"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.2.1</span> <span class="title">simple external constraints</span>
 </h3>
 <section class="subsubsection" id="subsubsection-18"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span> <span class="codenumber">4.2.1.1</span> <span class="title">roller support</span>
 </h4>
 <figure class="figure figure-like" id="carrello_fig"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/vincolosemplice_carrello.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-371">The roller support dictates that the displacement of the point where it is applied can only occur in the direction orthogonal to the axis of the roller support:</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-374">The roller support dictates that the displacement of the point where it is applied can only occur in the direction orthogonal to the axis of the roller support:</p>
 <div class="displaymath">
 \begin{equation}
 \vec{u}_A \cdot \vec{n} = 0\label{carrello_eq}\tag{4.2.3}
@@ -247,7 +249,7 @@ u_{2A}  = 0\,.\tag{4.2.5}
 <span class="type">Subsubsection</span> <span class="codenumber">4.2.1.2</span> <span class="title">rotation lock</span>
 </h4>
 <figure class="figure figure-like" id="doppiobipendolo_fig"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/vincolosemplice_doppiobipendolo.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-372">This kind of device prescribes the rotation of the application point, i.e.</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-375">This kind of device prescribes the rotation of the application point, i.e.</p>
 <div class="displaymath">
 \begin{equation}
 \varphi_{A}  = 0\,.\tag{4.2.6}
@@ -256,14 +258,14 @@ u_{2A}  = 0\,.\tag{4.2.5}
 <p class="continuation"><article class="warning remark-like" id="warning-1"><h6 class="heading">
 <span class="type">Warning</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="period">.</span>
 </h6>
-<p id="p-373">In the case of a rigid body, the rotation cannot vary from point to point and therefore blocking the rotation in one point means blocking it on the whole body. In other words, the point of application of the constraint has no relevance for rigid body kinematics. Anyway it is useful for subsequent developments to maintain the idea to constraint rotation in a particular point of a body.</p></article></p></section></section><section class="subsection" id="subsection-89"><h3 class="heading hide-type">
+<p id="p-376">In the case of a rigid body, the rotation cannot vary from point to point and therefore blocking the rotation in one point means blocking it on the whole body. In other words, the point of application of the constraint has no relevance for rigid body kinematics. Anyway it is useful for subsequent developments to maintain the idea to constraint rotation in a particular point of a body.</p></article></p></section></section><section class="subsection" id="subsection-92"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.2.2</span> <span class="title">double external constraints</span>
 </h3>
 <section class="subsubsection" id="subsubsection-20"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span> <span class="codenumber">4.2.2.1</span> <span class="title">pinned support</span>
 </h4>
 <figure class="figure figure-like" id="cerniera_fig"><div class="image-box" style="width: 43%; margin-left: 28.5%; margin-right: 28.5%;"><img src="images/vincolodoppio_cerniera.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-374">The pinned support dictates that the displacement of the application point is zero, i.e.</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-377">The pinned support dictates that the displacement of the application point is zero, i.e.</p>
 <div class="displaymath">
 \begin{equation}
 \vec{u}_A = \vec0\,.\tag{4.2.7}
@@ -272,7 +274,7 @@ u_{2A}  = 0\,.\tag{4.2.5}
 <span class="type">Subsubsection</span> <span class="codenumber">4.2.2.2</span> <span class="title">roller support with rotation lock</span>
 </h4>
 <figure class="figure figure-like" id="bipendolo_fig"><div class="image-box" style="width: 55%; margin-left: 22.5%; margin-right: 22.5%;"><img src="images/vincolodoppio_bipendolo.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-375">This kind of device dictates the following conditions</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-378">This kind of device dictates the following conditions</p>
 <div class="displaymath">
 \begin{equation}
 \begin{split}
@@ -298,14 +300,14 @@ u_{2A}  &amp;= 0 \,,\\
 \varphi_{A}  &amp;= 0\,.
 \end{split}\tag{4.2.10}
 \end{equation}
-</div></section></section><section class="subsection" id="subsection-90"><h3 class="heading hide-type">
+</div></section></section><section class="subsection" id="subsection-93"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.2.3</span> <span class="title">triple external constraints</span>
 </h3>
 <section class="subsubsection" id="subsubsection-22"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span> <span class="codenumber">4.2.3.1</span> <span class="title">fixed support</span>
 </h4>
 <figure class="figure figure-like" id="incastro_fig"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/vincolotriplo_incastro.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-376">Finally the fixed support dictates</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-379">Finally the fixed support dictates</p>
 <div class="displaymath">
 \begin{equation}
 \begin{split}
@@ -313,15 +315,15 @@ u_{2A}  &amp;= 0 \,,\\
 \varphi_{A}  &amp;= 0\,.
 \end{split}\tag{4.2.11}
 \end{equation}
-</div></section></section><section class="subsection" id="subsection-91"><h3 class="heading hide-type">
+</div></section></section><section class="subsection" id="subsection-94"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.2.4</span> <span class="title">internal constraints</span>
 </h3>
-<p id="p-377">The connection of two or more rigid bodies can be made by means of devices called internal constraints. By way of example, avoiding reviewing all possible cases, only one of the most recurrent cases is discussed.</p>
+<p id="p-380">The connection of two or more rigid bodies can be made by means of devices called internal constraints. By way of example, avoiding reviewing all possible cases, only one of the most recurrent cases is discussed.</p>
 <section class="subsubsection" id="subsubsection-23"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span> <span class="codenumber">4.2.4.1</span> <span class="title">internal hinge</span>
 </h4>
 <figure class="figure figure-like" id="cerniera_interna_fig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/vincolointerno_cerniera.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-378">The constraint conditions can be expressed as follows</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-381">The constraint conditions can be expressed as follows</p>
 <div class="displaymath">
 \begin{equation}
 \vec{u}_{A} = \vec{u}_{A'}\,.\tag{4.2.12}

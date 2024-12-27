@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-09-17T16:03:33+02:00       *-->
+<!--*       on 2024-12-27T15:49:38+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,20 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Perform the previous exercises by suitably modifying the MATLAB® code used for the example shown in <a href="analysis_examples_sec_rigid_body_kinematics_chap_en.html#traveL_cinematica_sec" class="internal" title="Subsection 4.4.2: L shaped beam with 3 roller supports">Subsection 4.4.2</a>.</p>
+<p>In the present case \(\textrm{rango}\mat{A} == \textrm{min}(m,n) = 5\) and \(m &lt; n\) therefore the system is a mechanism and characterized by infinite solutions. To describe all possible solutions, choose the rotation \(\varphi_{B}\) as parameter to be eliminated from the group of unknowns. In this way the system can be rewritten as follows</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\left[\begin{array}{ccccc}
+1 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; -1 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0 &amp; -1 &amp; l\\
+0 &amp; 0 &amp; 0 &amp; 1 &amp; 0
+\end{array}\right]
+\left[\begin{array}{c} u_{1B} \\ u_{2B} \\ u_{1D} \\ u_{2D} \\ \varphi_{D} \end{array}\right] =
+\left[\begin{array}{c} -2l\,\varphi_{B} \\ 0 \\ 0 \\ -2l\,\varphi_{B} \\ 0 \end{array}\right].
+\end{equation*}
+</div>
 <span class="incontext"><a href="analysis_examples_sec_rigid_body_kinematics_chap_en.html#p-413">in-context</a></span>
 </body>
 </html>

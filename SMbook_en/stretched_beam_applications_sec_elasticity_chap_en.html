@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-09-17T16:03:29+02:00       *-->
+<!--*       on 2024-12-27T15:49:37+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -177,6 +177,7 @@ MathJax.Hub.Config({
 <li><a href="constraints_sec_rigid_body_kinematics_chap_en.html" data-scroll="constraints_sec_rigid_body_kinematics_chap_en">constraints</a></li>
 <li><a href="analysis_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_sec_rigid_body_kinematics_chap_en">kinematic analysis</a></li>
 <li><a href="analysis_examples_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_examples_sec_rigid_body_kinematics_chap_en">kinematic analysis of simple rigid body systems</a></li>
+<li><a href="exercises_sec_rigid_body_kinematics_chap_en.html" data-scroll="exercises_sec_rigid_body_kinematics_chap_en">exercises</a></li>
 <li><a href="refs_rigid_body_kinematics_chap_en.html" data-scroll="refs_rigid_body_kinematics_chap_en">references and suggested readings</a></li>
 </ul>
 </li>
@@ -191,6 +192,7 @@ MathJax.Hub.Config({
 <li><a href="sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces</a></li>
 <li><a href="indefinte_sec_rigid_body_statics_chap_en.html" data-scroll="indefinte_sec_rigid_body_statics_chap_en">2D beam equilibrium differential equations</a></li>
 <li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces calculation and diagrams</a></li>
+<li><a href="exercises_sec_rigid_body_statics_chap_en.html" data-scroll="exercises_sec_rigid_body_statics_chap_en">exercises</a></li>
 </ul>
 </li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
@@ -198,12 +200,12 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="stretched_beam_applications_sec_elasticity_chap_en"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.7</span> <span class="title">applications of the stretched beam model</span>
 </h2>
-<section class="subsection" id="subsection-70"><h3 class="heading hide-type">
+<section class="subsection" id="subsection-72"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.7.1</span> <span class="title">beam simply stretched</span>
 </h3>
-<p id="p-326">Using Equation <a class="xref" data-knowl="./knowl/stretched_beam_navier.html" title="Equation 3.5.21">(3.5.21)</a> calculate the elastic solution for the following scheme.</p>
+<p id="p-328">Using Equation <a class="xref" data-knowl="./knowl/stretched_beam_navier.html" title="Equation 3.5.21">(3.5.21)</a> calculate the elastic solution for the following scheme.</p>
 <figure class="figure figure-like" id="figure-37"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/trave_tesa_con_forza.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.7.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-327">Due to the absence of a distributed load, the equation to be solved becomes</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.7.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-329">Due to the absence of a distributed load, the equation to be solved becomes</p>
 <div class="displaymath">
 \begin{equation*}
 EA\,\frac{d^2u}{dx^2} = 0\,,
@@ -248,12 +250,12 @@ c_0 = 0\,, \quad c_1 = \frac{F}{EA}\,.
 \end{equation*}
 </div>
 <article class="assemblage assemblage-like" id="assemblage-22"><h6 class="heading"><span class="title">MATLAB® solution.</span></h6>
-<p id="p-328">The general integral can be calculated using the following instructions. <figure class="listing figure-like" id="listing-33"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms u(x) EA;
+<p id="p-330">The general integral can be calculated using the following instructions. <figure class="listing figure-like" id="listing-33"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms u(x) EA;
 ode = EA*diff(u,x,2) == 0
 dsolve(ode)
 </b></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.7.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<p id="p-329">The solution that also satisfies the assigned boundary conditions is obtained through the following instructions. <figure class="listing figure-like" id="listing-34"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms u(x) EA F l;
+<p id="p-331">The solution that also satisfies the assigned boundary conditions is obtained through the following instructions. <figure class="listing figure-like" id="listing-34"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms u(x) EA F l;
 Du = diff(u);
 ode = EA*diff(u,x,2) == 0;
 cond1 = u(0) == 0;
@@ -261,12 +263,12 @@ cond2 = EA*Du(l) == F;
 conds = [cond1 cond2];
 dsolve(ode,conds)
 </b></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.7.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></section><section class="subsection" id="subsection-71"><h3 class="heading hide-type">
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.7.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></section><section class="subsection" id="subsection-73"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.7.2</span> <span class="title">hyperstatic beam with discontinuity</span>
 </h3>
 <figure class="figure figure-like" id="figure-38"><div class="image-box" style="width: 38%; margin-left: 31%; margin-right: 31%;"><img src="images/trave_tesa_iperstatica.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.7.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-330">The assigned scheme differs from the scheme considered in the previous section because the elastic solution to be evaluated does not have a single valid expression on the whole domain of the beam. The force applied inside the extension of the beam determines a discontinuity in the solution and therefore the need to study the problem on the two subdomains, \(0 \leq x \leq a \) and \(a \leq x \leq l \text{,}\) highlighted in the figure. We then proceed by evaluating two different elastic solutions but connected by the necessary boundary conditions at the interface.</p>
-<p id="p-331">By applying the equilibrium equation <a class="xref" data-knowl="./knowl/stretched_beam_navier.html" title="Equation 3.5.21">(3.5.21)</a> to the two subdomains the following equations are obtained</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.7.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-332">The assigned scheme differs from the scheme considered in the previous section because the elastic solution to be evaluated does not have a single valid expression on the whole domain of the beam. The force applied inside the extension of the beam determines a discontinuity in the solution and therefore the need to study the problem on the two subdomains, \(0 \leq x \leq a \) and \(a \leq x \leq l \text{,}\) highlighted in the figure. We then proceed by evaluating two different elastic solutions but connected by the necessary boundary conditions at the interface.</p>
+<p id="p-333">By applying the equilibrium equation <a class="xref" data-knowl="./knowl/stretched_beam_navier.html" title="Equation 3.5.21">(3.5.21)</a> to the two subdomains the following equations are obtained</p>
 <div class="displaymath">
 \begin{align*}
 \amp EA\,\frac{d^2u_a}{dx^2} = 0\,,\quad 0 \leq x \leq a\,,\\
@@ -288,7 +290,7 @@ dsolve(ode,conds)
 \func{N_a}{a} - \func{N_b}{a} = F\,.
 \end{equation*}
 </div>
-<article class="assemblage assemblage-like" id="assemblage-23"><p id="p-332">The MATLAB® instructions that can be used for the solution of the system of differential equations are given. <figure class="listing figure-like" id="listing-35"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms ua(x) ub(x) EA F l a;
+<article class="assemblage assemblage-like" id="assemblage-23"><p id="p-334">The MATLAB® instructions that can be used for the solution of the system of differential equations are given. <figure class="listing figure-like" id="listing-35"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms ua(x) ub(x) EA F l a;
 Dua = diff(ua);
 Dub = diff(ub);
 ode1 = EA*diff(ua,x,2) == 0;
@@ -303,7 +305,7 @@ sols = dsolve(odes,conds);
 sols.ua
 sols.ub
 </b></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.7.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-333">From which we obtain the following solution in terms of the unknown displacements</p>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.7.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-335">From which we obtain the following solution in terms of the unknown displacements</p>
 <div class="displaymath">
 \begin{align*}
 u_a \amp= \frac{F}{EA}\frac{l-a}{l}\,x\,,\quad 0 \leq x \leq a\,,\\
@@ -316,11 +318,11 @@ u_b \amp= \frac{F}{EA}\frac{l-x}{l}\,a\,,\quad a \leq x \leq l\,.
 N_a \amp= EA\, \frac{du_a}{dx} = F\,\frac{l-a}{l}\,,\quad 0 \leq x \leq a\,,\\
 N_b \amp= EA\, \frac{du_b}{dx} = -F\,\frac{a}{l}\,,\quad a \leq x \leq l\,.
 \end{align*}
-</div></section><section class="subsection" id="subsection-72"><h3 class="heading hide-type">
+</div></section><section class="subsection" id="subsection-74"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.7.3</span> <span class="title">hyperstatic beam subjected to an homogeneous termal increment</span>
 </h3>
 <figure class="figure figure-like" id="figure-39"><div class="image-box" style="width: 38%; margin-left: 31%; margin-right: 31%;"><img src="images/trave_tesa_iperstatica_conDeltaT.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.7.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-334">The presence of the increase in temperature determines an elongation of the beam equal to</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.7.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-336">The presence of the increase in temperature determines an elongation of the beam equal to</p>
 <div class="displaymath">
 \begin{equation*}
 \Delta l_T = \alpha \Delta T \,l\,,
@@ -338,11 +340,11 @@ N_b \amp= EA\, \frac{du_b}{dx} = -F\,\frac{a}{l}\,,\quad a \leq x \leq l\,.
 N = - EA \,\alpha \Delta T\,,
 \end{equation*}
 </div>
-<p class="continuation">solution showing the state of compression determined by the elongation which is not allowed. The solution in terms of displacement is identically zero along its entire beam length.</p></section><section class="subsection" id="subsection-73"><h3 class="heading hide-type">
+<p class="continuation">solution showing the state of compression determined by the elongation which is not allowed. The solution in terms of displacement is identically zero along its entire beam length.</p></section><section class="subsection" id="subsection-75"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.7.4</span> <span class="title">hyperstatic beam subjected to a sinusoidal distributed load</span>
 </h3>
 <figure class="figure figure-like" id="figure-40"><div class="image-box" style="width: 42%; margin-left: 29%; margin-right: 29%;"><img src="images/trave_tesa_iperstatica_con_carico_sinusoidale.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.7.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-335">The applied load condition can be expressed as</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.7.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-337">The applied load condition can be expressed as</p>
 <div class="displaymath">
 \begin{equation*}
 \func{p}{x} = \bar{p}\,\sin\left(\frac{2\pi\,x}{l}\right)
@@ -361,7 +363,7 @@ EA\,\frac{d^2u}{dx^2} + \bar{p}\,\sin\left(\frac{2\pi\,x}{l}\right) = 0
 \amp \func{u}{l} = 0\,.
 \end{align*}
 </div>
-<article class="assemblage assemblage-like" id="assemblage-24"><p id="p-336">MATLAB® instructions which can be used to calculate the solution \(\func{u}{x}\) are as follows. <figure class="listing figure-like" id="listing-36"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms u(x) EA p l;
+<article class="assemblage assemblage-like" id="assemblage-24"><p id="p-338">MATLAB® instructions which can be used to calculate the solution \(\func{u}{x}\) are as follows. <figure class="listing figure-like" id="listing-36"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms u(x) EA p l;
 ode = EA*diff(u,x,2) + p*sin(2*pi*x/l) == 0;
 cond1 = u(0) == 0;
 cond2 = u(l) == 0;
@@ -369,7 +371,7 @@ conds = [cond1 cond2];
 sol = dsolve(ode,conds)
 N = EA*diff(sol,x)
 </b></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.7.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-337">The displacement solution is</p>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.7.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-339">The displacement solution is</p>
 <div class="displaymath">
 \begin{equation*}
 \func{u}{x} = \frac{\bar{p}}{EA} \frac{l^2}{4\pi^2} \sin\left(\frac{2\pi\,x}{l}\right)

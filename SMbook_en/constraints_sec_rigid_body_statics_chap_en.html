@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-09-17T16:03:30+02:00       *-->
+<!--*       on 2024-12-27T15:49:37+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -177,6 +177,7 @@ MathJax.Hub.Config({
 <li><a href="constraints_sec_rigid_body_kinematics_chap_en.html" data-scroll="constraints_sec_rigid_body_kinematics_chap_en">constraints</a></li>
 <li><a href="analysis_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_sec_rigid_body_kinematics_chap_en">kinematic analysis</a></li>
 <li><a href="analysis_examples_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_examples_sec_rigid_body_kinematics_chap_en">kinematic analysis of simple rigid body systems</a></li>
+<li><a href="exercises_sec_rigid_body_kinematics_chap_en.html" data-scroll="exercises_sec_rigid_body_kinematics_chap_en">exercises</a></li>
 <li><a href="refs_rigid_body_kinematics_chap_en.html" data-scroll="refs_rigid_body_kinematics_chap_en">references and suggested readings</a></li>
 </ul>
 </li>
@@ -191,6 +192,7 @@ MathJax.Hub.Config({
 <li><a href="sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces</a></li>
 <li><a href="indefinte_sec_rigid_body_statics_chap_en.html" data-scroll="indefinte_sec_rigid_body_statics_chap_en">2D beam equilibrium differential equations</a></li>
 <li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces calculation and diagrams</a></li>
+<li><a href="exercises_sec_rigid_body_statics_chap_en.html" data-scroll="exercises_sec_rigid_body_statics_chap_en">exercises</a></li>
 </ul>
 </li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
@@ -198,8 +200,8 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="constraints_sec_rigid_body_statics_chap_en"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5.3</span> <span class="title">constraints</span>
 </h2>
-<p id="p-423">A body or system of bodies is typically subjected to both applied loads and assigned constraint conditions. From a static point of view, the constraints are treated by representing the action exerted by the constraint in terms of forces or torques called <em class="alert">constraint reactions</em>. This procedure, as we will see, allows to obtain the <em class="alert">free body diagram</em> through which the body is represented under the action of two groups of static entities: the applied actions and the constraint reactions.</p>
-<p id="p-424">In the 2D case, in general, an applied constraint can give rise to 3 reaction components:</p>
+<p id="p-427">A body or system of bodies is typically subjected to both applied loads and assigned constraint conditions. From a static point of view, the constraints are treated by representing the action exerted by the constraint in terms of forces or torques called <em class="alert">constraint reactions</em>. This procedure, as we will see, allows to obtain the <em class="alert">free body diagram</em> through which the body is represented under the action of two groups of static entities: the applied actions and the constraint reactions.</p>
+<p id="p-428">In the 2D case, in general, an applied constraint can give rise to 3 reaction components:</p>
 <div class="displaymath">
 \begin{align*}
 H \amp\quad \text{horizzontal component,}\\
@@ -208,22 +210,22 @@ V \amp\quad \text{vertical component,}\\
 \end{align*}
 </div>
 <p class="continuation">The presence, in a point of the body, of all 3 components or only some of them depends on the type of constraint applied.</p>
-<section class="subsection" id="subsection-103"><h3 class="heading hide-type">
+<section class="subsection" id="subsection-107"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.3.1</span> <span class="title">absence of constraint</span>
 </h3>
-<p id="p-425">It is the trivial case in which at a point there is no constraint applied, consequently it will not be possible to have any reaction component different than zero:</p>
+<p id="p-429">It is the trivial case in which at a point there is no constraint applied, consequently it will not be possible to have any reaction component different than zero:</p>
 <div class="displaymath">
 \begin{equation}
 H=0 \,, \quad V=0 \,,\quad \mathcal{M} = 0\,.\tag{5.3.1}
 \end{equation}
-</div></section><section class="subsection" id="subsection-104"><h3 class="heading hide-type">
+</div></section><section class="subsection" id="subsection-108"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.3.2</span> <span class="title">simple constraints</span>
 </h3>
 <section class="subsubsection" id="subsubsection-24"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span> <span class="codenumber">5.3.2.1</span> <span class="title">roller support</span>
 </h4>
 <figure class="figure figure-like" id="carrello_statica_fig"><div class="image-box" style="width: 52%; margin-left: 24%; margin-right: 24%;"><img src="images/vincolosemplice_carrello_statica.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-426">The presence of the roller support determines, from the static point of view, only a reaction force, \(\vec{R} \text{,}\) directed according to the axis of the roller support. Then, of the three reaction components, only the first two can be different from zero</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-430">The presence of the roller support determines, from the static point of view, only a reaction force, \(\vec{R} \text{,}\) directed according to the axis of the roller support. Then, of the three reaction components, only the first two can be different from zero</p>
 <div class="displaymath">
 \begin{equation}
 H \neq 0 \,, \quad V \neq 0 \,,\quad \mathcal{M} = 0\,.\tag{5.3.2}
@@ -235,7 +237,7 @@ H \neq 0 \,, \quad V \neq 0 \,,\quad \mathcal{M} = 0\,.\tag{5.3.2}
 \frac{V}{H} = \tan{\alpha}\,.\tag{5.3.3}
 \end{equation}
 </div>
-<p id="p-427">Obviously if the roller support has a horizontal axis only \(H \) can be different from zero:</p>
+<p id="p-431">Obviously if the roller support has a horizontal axis only \(H \) can be different from zero:</p>
 <div class="displaymath">
 \begin{equation}
 H \neq 0 \,, \quad V = 0 \,,\quad \mathcal{M} = 0\,.\tag{5.3.4}
@@ -250,19 +252,19 @@ H = 0 \,, \quad V \neq 0 \,,\quad \mathcal{M} = 0\,.\tag{5.3.5}
 <span class="type">Subsubsection</span> <span class="codenumber">5.3.2.2</span> <span class="title">rotation lock</span>
 </h4>
 <figure class="figure figure-like" id="doppiobipendolo_statica_fig"><div class="image-box" style="width: 52%; margin-left: 24%; margin-right: 24%;"><img src="images/vincolosemplice_doppiobipendolo_statica.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-428">This constraint blocks the rotation of the body making possible only a non zero torque component. Therefore in the point of application of the constraint it is possible to have</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-432">This constraint blocks the rotation of the body making possible only a non zero torque component. Therefore in the point of application of the constraint it is possible to have</p>
 <div class="displaymath">
 \begin{equation}
 H = 0 \,, \quad V = 0 \,,\quad \mathcal{M} \neq 0\,.\tag{5.3.6}
 \end{equation}
-</div></section></section><section class="subsection" id="subsection-105"><h3 class="heading hide-type">
+</div></section></section><section class="subsection" id="subsection-109"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.3.3</span> <span class="title">double constraints</span>
 </h3>
 <section class="subsubsection" id="subsubsection-26"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span> <span class="codenumber">5.3.3.1</span> <span class="title">hinge support</span>
 </h4>
 <figure class="figure figure-like" id="cerniera_statica_fig"><div class="image-box" style="width: 52%; margin-left: 24%; margin-right: 24%;"><img src="images/vincolodoppio_cerniera_statica.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-429">The presence of the hinge support can be read as a reaction force \(\vec{R} \) whose direction is not known a priori, as in the case of the roller support. Therefore we will have the two reaction components, horizontal and vertical, possibly non-zero and independent</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-433">The presence of the hinge support can be read as a reaction force \(\vec{R} \) whose direction is not known a priori, as in the case of the roller support. Therefore we will have the two reaction components, horizontal and vertical, possibly non-zero and independent</p>
 <div class="displaymath">
 \begin{equation}
 H \neq 0 \,, \quad V \neq 0 \,,\quad \mathcal{M} = 0\,.\tag{5.3.7}
@@ -271,7 +273,7 @@ H \neq 0 \,, \quad V \neq 0 \,,\quad \mathcal{M} = 0\,.\tag{5.3.7}
 <span class="type">Subsubsection</span> <span class="codenumber">5.3.3.2</span> <span class="title">roller support with rotation lock</span>
 </h4>
 <figure class="figure figure-like" id="bipendolo_statica_fig"><div class="image-box" style="width: 52%; margin-left: 24%; margin-right: 24%;"><img src="images/vincolodoppio_bipendolo_statica.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-430">This device acts like a roller support and also, because of the constrained rotation, exerts a torque. Therefore the reaction components can be described as follows</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-434">This device acts like a roller support and also, because of the constrained rotation, exerts a torque. Therefore the reaction components can be described as follows</p>
 <div class="displaymath">
 \begin{equation}
 H \neq 0 \,, \quad V \neq 0 \,,\quad \mathcal{M} \neq 0\,,\tag{5.3.8}
@@ -283,7 +285,7 @@ H \neq 0 \,, \quad V \neq 0 \,,\quad \mathcal{M} \neq 0\,,\tag{5.3.8}
 \frac{V}{H} = \tan{\alpha}\,.\tag{5.3.9}
 \end{equation}
 </div>
-<p id="p-431">Also for this device if the axis is horizontal only \(H \) can be different from zero:</p>
+<p id="p-435">Also for this device if the axis is horizontal only \(H \) can be different from zero:</p>
 <div class="displaymath">
 \begin{equation}
 H \neq 0 \,, \quad V = 0 \,,\quad \mathcal{M} \neq 0\,.\tag{5.3.10}
@@ -294,31 +296,31 @@ H \neq 0 \,, \quad V = 0 \,,\quad \mathcal{M} \neq 0\,.\tag{5.3.10}
 \begin{equation}
 H = 0 \,, \quad V \neq 0 \,,\quad \mathcal{M} \neq 0\,.\tag{5.3.11}
 \end{equation}
-</div></section></section><section class="subsection" id="subsection-106"><h3 class="heading hide-type">
+</div></section></section><section class="subsection" id="subsection-110"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.3.4</span> <span class="title">triple constraints</span>
 </h3>
 <section class="subsubsection" id="subsubsection-28"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span> <span class="codenumber">5.3.4.1</span> <span class="title">fixed support</span>
 </h4>
 <figure class="figure figure-like" id="incastro_statica_fig"><div class="image-box" style="width: 52%; margin-left: 24%; margin-right: 24%;"><img src="images/vincolotriplo_incastro_statica.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-432">With the fixed support the constraint can react through all the three components which are independent from each other</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-436">With the fixed support the constraint can react through all the three components which are independent from each other</p>
 <div class="displaymath">
 \begin{equation}
 H \neq 0 \,, \quad V \neq 0 \,,\quad \mathcal{M} \neq 0\,.\tag{5.3.12}
 \end{equation}
-</div></section></section><section class="subsection" id="subsection-107"><h3 class="heading hide-type">
+</div></section></section><section class="subsection" id="subsection-111"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.3.5</span> <span class="title">summary</span>
 </h3>
-<p id="p-433">The following figures illustrate for the 2D case the graphic representation of the constraints and the possible presence of the reaction components \(H \text{,}\) \(V \) and \(\mathcal{M} \text{.}\)</p>
+<p id="p-437">The following figures illustrate for the 2D case the graphic representation of the constraints and the possible presence of the reaction components \(H \text{,}\) \(V \) and \(\mathcal{M} \text{.}\)</p>
 <figure class="figure figure-like" id="statica_vicoli_semplici_fig"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/statica_vincoli_semplici_en.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.6<span class="period">.</span></span><span class="space"> </span>Simple constraints.</figcaption></figure><figure class="figure figure-like" id="statica_vicoli_doppi_fig"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/statica_vincoli_doppi_en.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.7<span class="period">.</span></span><span class="space"> </span>Double constraints.</figcaption></figure><figure class="figure figure-like" id="statica_vicoli_tripli_fig"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/statica_vincoli_tripli_en.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.8<span class="period">.</span></span><span class="space"> </span>Triple constraints.</figcaption></figure><article class="note remark-like" id="note-4"><h6 class="heading">
 <span class="type">Note</span><span class="space"> </span><span class="codenumber">5.3.9</span><span class="period">.</span>
-</h6>The roller support, with or without rotation lock, can be represented by an inclination different from \(0 \) and \(\pi/2 \text{,}\) in which case the rotation of the symbol also has a precise mechanical meaning in that the exerted reaction force is rotated by the same angle, giving rise to horizontal and vertical components, both possibly different from zero. The other constraints, however, give the reaction components indicated in previous figures regardless of any rotation applied in their graphic representation.</article></section><section class="subsection" id="subsection-108"><h3 class="heading hide-type">
+</h6>The roller support, with or without rotation lock, can be represented by an inclination different from \(0 \) and \(\pi/2 \text{,}\) in which case the rotation of the symbol also has a precise mechanical meaning in that the exerted reaction force is rotated by the same angle, giving rise to horizontal and vertical components, both possibly different from zero. The other constraints, however, give the reaction components indicated in previous figures regardless of any rotation applied in their graphic representation.</article></section><section class="subsection" id="subsection-112"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.3.6</span> <span class="title">internal constraints</span>
 </h3>
-<p id="p-434">Unlike external constraints, internal constraints prescribe kinematic conditions at the points of contact between one or more bodies. Therefore, from a static point of view, they are treated in terms of constraint reactions exchanged by the bodies affected by the constraint condition. The figure shows one of the most recurring cases, namely the case of the internal hinge.</p>
+<p id="p-438">Unlike external constraints, internal constraints prescribe kinematic conditions at the points of contact between one or more bodies. Therefore, from a static point of view, they are treated in terms of constraint reactions exchanged by the bodies affected by the constraint condition. The figure shows one of the most recurring cases, namely the case of the internal hinge.</p>
 <figure class="figure figure-like" id="statica_cerniera_interna_fig"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/cernierainterna.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.10<span class="period">.</span></span><span class="space"> </span></figcaption></figure></section></section></div></main>
 </div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-09-17T16:03:30+02:00       *-->
+<!--*       on 2024-12-27T15:49:37+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -177,6 +177,7 @@ MathJax.Hub.Config({
 <li><a href="constraints_sec_rigid_body_kinematics_chap_en.html" data-scroll="constraints_sec_rigid_body_kinematics_chap_en">constraints</a></li>
 <li><a href="analysis_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_sec_rigid_body_kinematics_chap_en">kinematic analysis</a></li>
 <li><a href="analysis_examples_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_examples_sec_rigid_body_kinematics_chap_en">kinematic analysis of simple rigid body systems</a></li>
+<li><a href="exercises_sec_rigid_body_kinematics_chap_en.html" data-scroll="exercises_sec_rigid_body_kinematics_chap_en">exercises</a></li>
 <li><a href="refs_rigid_body_kinematics_chap_en.html" data-scroll="refs_rigid_body_kinematics_chap_en">references and suggested readings</a></li>
 </ul>
 </li>
@@ -191,6 +192,7 @@ MathJax.Hub.Config({
 <li><a href="sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces</a></li>
 <li><a href="indefinte_sec_rigid_body_statics_chap_en.html" data-scroll="indefinte_sec_rigid_body_statics_chap_en">2D beam equilibrium differential equations</a></li>
 <li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces calculation and diagrams</a></li>
+<li><a href="exercises_sec_rigid_body_statics_chap_en.html" data-scroll="exercises_sec_rigid_body_statics_chap_en">exercises</a></li>
 </ul>
 </li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
@@ -198,17 +200,17 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="analysis_sec_rigid_body_statics_chap_en"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5.5</span> <span class="title">static analysis</span>
 </h2>
-<p id="p-437">The procedure used for the static analysis of body systems consists of the following operations.</p>
+<p id="p-441">The procedure used for the static analysis of body systems consists of the following operations.</p>
 <ol class="decimal">
 <li id="li-139">Identification of the free body diagram for the system to be analyzed.</li>
 <li id="li-140">Writing of equilibrium equations that will be 3 times the number (\(N \)) of bodies that make up the system (\(n = 3 \, N \)).</li>
 <li id="li-141">Static classification of the given system.</li>
 <li id="li-142">Calculation, if possible, of the constraint reaction components which will be equal in number to the degrees of kinematic constraint (\(m \)) applied to the system.</li>
 </ol>
-<section class="subsection" id="subsection-110"><h3 class="heading hide-type">
+<section class="subsection" id="subsection-114"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.5.1</span> <span class="title">static matrix</span>
 </h3>
-<p id="p-438">In static analysis the writing of equilibrium equations is the fundamental step which, in general terms, can be formalized in the following way. Consider a system characterized by \(n \) equilibrium conditions, subjected to an assigned force system and \(m \) constraining reaction components. The equilibrium conditions can be formulated through a linear system of the following type</p>
+<p id="p-442">In static analysis the writing of equilibrium equations is the fundamental step which, in general terms, can be formalized in the following way. Consider a system characterized by \(n \) equilibrium conditions, subjected to an assigned force system and \(m \) constraining reaction components. The equilibrium conditions can be formulated through a linear system of the following type</p>
 <div class="displaymath">
 \begin{equation}
 \sum_{j=1}^m B_{ij}  r_j + f_i = 0 \qquad (i=1 \dots n).\tag{5.5.1}
@@ -220,10 +222,10 @@ MathJax.Hub.Config({
 \mat{B} \vec{r} + \vec{f} = \vec0,\label{rb_balance_eq}\tag{5.5.2}
 \end{equation}
 </div>
-<p class="continuation">where \(\mat{B}, \) sized \(n \ times m \text{,}\) is called <em class="emphasis">static matrix</em> of the system, \(\vec{r} \text{,}\) sizeed \(m \times 1 \text{,}\) is the vector that collects the constraint reaction components (the unknowns of the system) and \(\vec{f} \) , sized \(n \times 1 \text{,}\) is the vector of the assigned external actions.</p></section><section class="subsection" id="subsection-111"><h3 class="heading hide-type">
+<p class="continuation">where \(\mat{B}, \) sized \(n \ times m \text{,}\) is called <em class="emphasis">static matrix</em> of the system, \(\vec{r} \text{,}\) sizeed \(m \times 1 \text{,}\) is the vector that collects the constraint reaction components (the unknowns of the system) and \(\vec{f} \) , sized \(n \times 1 \text{,}\) is the vector of the assigned external actions.</p></section><section class="subsection" id="subsection-115"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.5.2</span> <span class="title">static classification</span>
 </h3>
-<p id="p-439">The typical use of the <a class="xref" data-knowl="./knowl/rb_balance_eq.html" title="Equation 5.5.2">(5.5.2)</a> system is the calculation of the \(\vec{r} \) constraint reactions. But even in this case, as already done for the kinematic matrix, it is instructive to discuss the solution conditions of the system in order to derive mechanical considerations. Let \(p = \text{min} (n, m) \text{,}\) then the following cases may occur.</p>
+<p id="p-443">The typical use of the <a class="xref" data-knowl="./knowl/rb_balance_eq.html" title="Equation 5.5.2">(5.5.2)</a> system is the calculation of the \(\vec{r} \) constraint reactions. But even in this case, as already done for the kinematic matrix, it is instructive to discuss the solution conditions of the system in order to derive mechanical considerations. Let \(p = \text{min} (n, m) \text{,}\) then the following cases may occur.</p>
 <ul class="disc">
 <li id="li-143">\(\text{rank}\mat{B} == p\)<ul class="circle">
 <li id="li-144">\(n==m\text{:}\) <em class="alert">isostatic system</em>, the system admits a unique solution;</li>

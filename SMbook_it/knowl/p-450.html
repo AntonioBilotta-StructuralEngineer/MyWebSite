@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-09-17T15:55:31+02:00       *-->
+<!--*       on 2024-12-27T15:52:29+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,35 +15,18 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Capoverso</span></h6>
-<p>La presenza di un solo corpo rigido determina la scrittura di 3 equazioni di equilibrio (\(n=3\)) per le quali si assume l'estremo \(A\) come polo per l'equilibrio alla rotazione:</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-H_A \amp = 0\,,\\
-V_A + V_B - F \amp = 0\,,\\
-V_{B} l - F l/2 \amp = 0\,.
-\end{align*}
-</div>
-<p class="continuation">Condizioni esprimibili in forma matriciale come</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\underbrace{\left[\begin{array}{ccc}
-1 &amp; 0 &amp; 0\\
-0 &amp; 1 &amp; 1\\
-0 &amp; 0 &amp; l
-\end{array}\right]}_{\mat{B}}
-\underbrace{\left[\begin{array}{c} H_A \\V_A \\ V_{B} \end{array}\right]}_{\vec{r}} +
-\underbrace{\left[\begin{array}{c} 0 \\ -F \\ -Fl/2 \end{array}\right]}_{\vec{f}} =
-\left[\begin{array}{c} 0 \\ 0 \\ 0 \end{array}\right]\,.
-\end{equation*}
-</div>
-<p class="continuation">Anche in questo caso la semplice ispezione della matrice statica consente di stabilire l'isostaticità del sistema. Il calcolo delle componenti di reazione vincolare fornisce:</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-H_{A} \amp= 0\,,\\
-V_{A}  \amp= F/2\,,\\
-V_{B}  \amp= F/2\,.
-\end{align*}
-</div>
-<span class="incontext"><a href="analysis_examples_sec_rigid_body_statics_chap_it.html#p-450">Contesto</a></span>
+<p>L'utilizzo tipico del sistema <a class="xref" data-knowl="./knowl/rb_balance_eq.html" title="Equazione 5.5.2">(5.5.2)</a> è il calcolo delle reazioni vincolari \(\vec{r}\text{.}\) Ma anche in questo caso, come già fatto per la matrice cinematica, è istruttivo discutere la solvibilità del sistema per ricavarne considerazioni di tipo meccanico. Sia \(p=\text{min}(n, m)\text{,}\) allora possono verificarsi i seguenti casi.</p>
+<ul class="disc">
+<li>\(\text{rango}\mat{B} == p\)<ul class="circle">
+<li>\(n==m\text{:}\) <em xmlns:svg="http://www.w3.org/2000/svg" class="alert">sistema isostatico</em>, il sistema ammette una soluzione unica;</li>
+<li>\(n&lt;m\text{:}\) <em xmlns:svg="http://www.w3.org/2000/svg" class="alert">sistema iperstatico</em>, il sistema ammette infinite soluzioni;</li>
+<li>\(n&gt;m\text{:}\) <em xmlns:svg="http://www.w3.org/2000/svg" class="alert">sistema ipostatico o impossibile</em>, il sistema non ammette soluzioni.</li>
+</ul>
+</li>
+<li>\(\text{rango}\mat{B} &lt; p\)<ul class="circle"><li>
+<em xmlns:svg="http://www.w3.org/2000/svg" class="alert">sistema degenere</em>.</li></ul>
+</li>
+</ul>
+<span class="incontext"><a href="analysis_sec_rigid_body_statics_chap_it.html#p-450">Contesto</a></span>
 </body>
 </html>

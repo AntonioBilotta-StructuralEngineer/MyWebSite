@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-09-17T16:03:29+02:00       *-->
+<!--*       on 2024-12-27T15:49:37+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -177,6 +177,7 @@ MathJax.Hub.Config({
 <li><a href="constraints_sec_rigid_body_kinematics_chap_en.html" data-scroll="constraints_sec_rigid_body_kinematics_chap_en">constraints</a></li>
 <li><a href="analysis_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_sec_rigid_body_kinematics_chap_en">kinematic analysis</a></li>
 <li><a href="analysis_examples_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_examples_sec_rigid_body_kinematics_chap_en">kinematic analysis of simple rigid body systems</a></li>
+<li><a href="exercises_sec_rigid_body_kinematics_chap_en.html" data-scroll="exercises_sec_rigid_body_kinematics_chap_en">exercises</a></li>
 <li><a href="refs_rigid_body_kinematics_chap_en.html" data-scroll="refs_rigid_body_kinematics_chap_en">references and suggested readings</a></li>
 </ul>
 </li>
@@ -191,6 +192,7 @@ MathJax.Hub.Config({
 <li><a href="sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces</a></li>
 <li><a href="indefinte_sec_rigid_body_statics_chap_en.html" data-scroll="indefinte_sec_rigid_body_statics_chap_en">2D beam equilibrium differential equations</a></li>
 <li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces calculation and diagrams</a></li>
+<li><a href="exercises_sec_rigid_body_statics_chap_en.html" data-scroll="exercises_sec_rigid_body_statics_chap_en">exercises</a></li>
 </ul>
 </li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
@@ -198,11 +200,11 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="bent_beam_applications_sec_elasticity_chap_en"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.8</span> <span class="title">applications of the bent beam model</span>
 </h2>
-<section class="subsection" id="subsection-74"><h3 class="heading hide-type">
+<section class="subsection" id="subsection-76"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.8.1</span> <span class="title">cantilever beam subjected to a shear force at the free end</span>
 </h3>
 <figure class="figure figure-like" id="figure-41"><div class="image-box" style="width: 36%; margin-left: 32%; margin-right: 32%;"><img src="images/mensola_con_forza.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.8.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-338">Applying the equilibrium equation <a class="xref" data-knowl="./knowl/bent_beam_navier.html" title="Equation 3.6.34">(3.6.34)</a> to the above scheme provides</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.8.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-340">Applying the equilibrium equation <a class="xref" data-knowl="./knowl/bent_beam_navier.html" title="Equation 3.6.34">(3.6.34)</a> to the above scheme provides</p>
 <div class="displaymath">
 \begin{equation*}
 EJ\,\frac{d^4w}{dx^4} = 0\,.
@@ -218,7 +220,7 @@ EJ\,\frac{d^4w}{dx^4} = 0\,.
 \end{align*}
 </div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-7"><div class="fn">In general at one end the conditions can be also mixed, kinematic and static.</div></div>
-<article class="assemblage assemblage-like" id="assemblage-25"><p id="p-339">The following MATLAB® instructions allow the calculation of the solution \(\func{w}{x} \) and its bending moment \(\func{M}{x}\text{.}\) <figure class="listing figure-like" id="listing-37"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms w(x) EJ F l;
+<article class="assemblage assemblage-like" id="assemblage-25"><p id="p-341">The following MATLAB® instructions allow the calculation of the solution \(\func{w}{x} \) and its bending moment \(\func{M}{x}\text{.}\) <figure class="listing figure-like" id="listing-37"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms w(x) EJ F l;
 ode = EJ*diff(w,x,4) == 0;
 D1w = diff(w,x,1);
 D2w = diff(w,x,2);
@@ -232,7 +234,7 @@ sol = dsolve(ode,conds)
 M = -EJ*diff(sol,x,2)
 </b></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.8.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<p id="p-340">the deformed configuration of the beam axis can be plotted by using the following MATLAB® instructions. <figure class="listing figure-like" id="listing-38"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms w(x);
+<p id="p-342">the deformed configuration of the beam axis can be plotted by using the following MATLAB® instructions. <figure class="listing figure-like" id="listing-38"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms w(x);
 EJ = 1;
 F = 1;
 l = 1;
@@ -245,7 +247,7 @@ Beam = zeros(1, np+1);
 plot(Xv,wv,'r',Xv,Beam,'k','LineWidth',2)
 set(gca, 'YDir','reverse')
 </b></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.8.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-341">The expected cubic pattern is therefore obtained for the displacement</p>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.8.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article><p id="p-343">The expected cubic pattern is therefore obtained for the displacement</p>
 <div class="displaymath">
 \begin{equation*}
 \func{w}{x} = \frac{F}{6\,EJ}\left(-x^3+3l\,x^2\right)\,,
@@ -256,11 +258,11 @@ set(gca, 'YDir','reverse')
 \begin{equation*}
 \func{M}{x} = F\left(x-l\right)\,.
 \end{equation*}
-</div></section><section class="subsection" id="subsection-75"><h3 class="heading hide-type">
+</div></section><section class="subsection" id="subsection-77"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.8.2</span> <span class="title">cantilever beam subjected to a constant distributed load</span>
 </h3>
 <figure class="figure figure-like" id="figure-42"><div class="image-box" style="width: 36%; margin-left: 32%; margin-right: 32%;"><img src="images/mensola_con_carico_ripartito.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.8.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-342">In the present case differential equation <a class="xref" data-knowl="./knowl/bent_beam_navier.html" title="Equation 3.6.34">(3.6.34)</a> gives</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.8.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-344">In the present case differential equation <a class="xref" data-knowl="./knowl/bent_beam_navier.html" title="Equation 3.6.34">(3.6.34)</a> gives</p>
 <div class="displaymath">
 \begin{equation*}
 -EJ\,\frac{d^4w}{dx^4} + q = 0\,,
@@ -275,7 +277,7 @@ set(gca, 'YDir','reverse')
 \amp \func{M}{l} = -EJ\,\func{\frac{d^2w}{dx^2}}{l} = 0\,.
 \end{align*}
 </div>
-<article class="assemblage assemblage-like" id="assemblage-26"><p id="p-343">The above equations, equilibrium and related boundary conditions, can be formulated in MATLAB® as follows, allowing the calculation of the solution \(\func{w}{x} \) and of the relative bending moment \(\func{M}{x}\text{.}\) Instructions for plotting the two functions are also provided. funzioni. <figure class="listing figure-like" id="listing-39"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms w(x) EJ q l;
+<article class="assemblage assemblage-like" id="assemblage-26"><p id="p-345">The above equations, equilibrium and related boundary conditions, can be formulated in MATLAB® as follows, allowing the calculation of the solution \(\func{w}{x} \) and of the relative bending moment \(\func{M}{x}\text{.}\) Instructions for plotting the two functions are also provided. funzioni. <figure class="listing figure-like" id="listing-39"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms w(x) EJ q l;
 ode = -EJ*diff(w,x,4) + q == 0;
 D1w = diff(w,x,1);
 D2w = diff(w,x,2);
@@ -299,11 +301,11 @@ Mv = M(Xv,1,1,1);
 plot(Xv,Mv,'b',Xv,Beam,'k','LineWidth',2)
 set(gca, 'YDir','reverse')
 </b></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.8.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></section><section class="subsection" id="subsection-76"><h3 class="heading hide-type">
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.8.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article></section><section class="subsection" id="subsection-78"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.8.3</span> <span class="title">supported beam subjected to a constant distributed load</span>
 </h3>
 <figure class="figure figure-like" id="figure-43"><div class="image-box" style="width: 36%; margin-left: 32%; margin-right: 32%;"><img src="images/trave_appoggiata_con_carico_ripartito.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.8.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-344">The solution to the problem is obtained on the basis of the same equilibrium equation used in the previous example. It is only necessary to modify the boundary conditions which, for the supported beam, become</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.8.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-346">The solution to the problem is obtained on the basis of the same equilibrium equation used in the previous example. It is only necessary to modify the boundary conditions which, for the supported beam, become</p>
 <div class="displaymath">
 \begin{align*}
 \amp \func{w}{0} = 0\,,\\
@@ -313,7 +315,7 @@ set(gca, 'YDir','reverse')
 \end{align*}
 </div>
 <p class="continuation">where static and kinematic conditions are mixed at each beam end.</p>
-<article class="assemblage assemblage-like" id="assemblage-27"><p id="p-345">Similarly, the MATLAB® instructions for calculating the solution change only in the part concerning boundary conditions. <figure class="listing figure-like" id="listing-40"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms w(x) EJ q l;
+<article class="assemblage assemblage-like" id="assemblage-27"><p id="p-347">Similarly, the MATLAB® instructions for calculating the solution change only in the part concerning boundary conditions. <figure class="listing figure-like" id="listing-40"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>syms w(x) EJ q l;
 ode = -EJ*diff(w,x,4) + q == 0;
 D1w = diff(w,x,1);
 D2w = diff(w,x,2);

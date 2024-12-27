@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-09-17T16:03:28+02:00       *-->
+<!--*       on 2024-12-27T15:49:36+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -177,6 +177,7 @@ MathJax.Hub.Config({
 <li><a href="constraints_sec_rigid_body_kinematics_chap_en.html" data-scroll="constraints_sec_rigid_body_kinematics_chap_en">constraints</a></li>
 <li><a href="analysis_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_sec_rigid_body_kinematics_chap_en">kinematic analysis</a></li>
 <li><a href="analysis_examples_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_examples_sec_rigid_body_kinematics_chap_en">kinematic analysis of simple rigid body systems</a></li>
+<li><a href="exercises_sec_rigid_body_kinematics_chap_en.html" data-scroll="exercises_sec_rigid_body_kinematics_chap_en">exercises</a></li>
 <li><a href="refs_rigid_body_kinematics_chap_en.html" data-scroll="refs_rigid_body_kinematics_chap_en">references and suggested readings</a></li>
 </ul>
 </li>
@@ -191,6 +192,7 @@ MathJax.Hub.Config({
 <li><a href="sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces</a></li>
 <li><a href="indefinte_sec_rigid_body_statics_chap_en.html" data-scroll="indefinte_sec_rigid_body_statics_chap_en">2D beam equilibrium differential equations</a></li>
 <li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces calculation and diagrams</a></li>
+<li><a href="exercises_sec_rigid_body_statics_chap_en.html" data-scroll="exercises_sec_rigid_body_statics_chap_en">exercises</a></li>
 </ul>
 </li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
@@ -198,10 +200,10 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="stress_sec_stress_chap_en"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">Cauchy stress tensor tensor</span>
 </h2>
-<section class="subsection" id="subsection-28"><h3 class="heading hide-type">
+<section class="subsection" id="subsection-29"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.3.1</span> <span class="title">Cauchy's postulate</span>
 </h3>
-<p id="p-189">In previous sections, the traction \(\func{\vec{t}}{\vec{x}, \Gamma_{\delta}} \) was formulated with a very generic dependence on the surface \(\Gamma_{\delta}\) passing through the point \(\vec{x}\text{.}\) On the basis of Cauchy's postulate, fundamental for all subsequent developments, it is assumed instead</p>
+<p id="p-190">In previous sections, the traction \(\func{\vec{t}}{\vec{x}, \Gamma_{\delta}} \) was formulated with a very generic dependence on the surface \(\Gamma_{\delta}\) passing through the point \(\vec{x}\text{.}\) On the basis of Cauchy's postulate, fundamental for all subsequent developments, it is assumed instead</p>
 <div class="displaymath">
 \begin{equation}
 \func{\vec{t}}{\vec{x},\Gamma_{\delta}} = \func{\vec{t}}{\vec{x},\vec{n}}\,,\tag{2.3.1}
@@ -209,15 +211,15 @@ MathJax.Hub.Config({
 </div>
 <p class="continuation">where \(\vec{n}\) represents the normal direction to the surface identified by a vector of unit length. Therefore the absolute independence of the traction vector from other factors, such as the curvature of the surface passing through the point \(\vec{x}\text{,}\) is postulated. The figure below shows some surfaces passing through the point \(\vec{x}\) and sharing in this point the very same tangent to the surface and therefore the same normal direction.</p>
 <figure class="figure figure-like" id="surfaces_through_x_fig"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/surfaces_through_x.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.3.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure></section><section class="subsection" id="subsection-29"><h3 class="heading hide-type">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.3.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure></section><section class="subsection" id="subsection-30"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.3.2</span> <span class="title">Cauchy stress Theorem</span>
 </h3>
-<p id="p-190">A series of results are presented which, taken together, constitute the <em class="emphasis">Cauchy stress tensor Theorem</em>, the statement of which will be given at the end of the section.</p>
+<p id="p-191">A series of results are presented which, taken together, constitute the <em class="emphasis">Cauchy stress tensor Theorem</em>, the statement of which will be given at the end of the section.</p>
 <section class="subsubsection" id="subsubsection-3"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span> <span class="codenumber">2.3.2.1</span> <span class="title">equilibrium of Cauchy's tetrahedron</span>
 </h4>
-<p id="p-191"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-11" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/Irt6ogH1W4g?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p>
-<p id="p-192">The application of Eq. <a class="xref" data-knowl="./knowl/body_equilibrium_p1_1.html" title="Equation 2.2.3">(2.2.3)</a> assuming as subdomain \(\omega\) the Cauchy tetrahedron illustrated in the previous video provides</p>
+<p id="p-192"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-11" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/Irt6ogH1W4g?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p>
+<p id="p-193">The application of Eq. <a class="xref" data-knowl="./knowl/body_equilibrium_p1_1.html" title="Equation 2.2.3">(2.2.3)</a> assuming as subdomain \(\omega\) the Cauchy tetrahedron illustrated in the previous video provides</p>
 <div class="displaymath">
 \begin{equation*}
 \int_{\omega_{\delta}} \func{\vec{b}}{\vec{x}} \, dv + \int_{\partial\omega_{\delta}} \func{\vec{t}}{\vec{x}, \vec{n}} \, ds = \vec0\,.
@@ -243,7 +245,7 @@ MathJax.Hub.Config({
 </div></section><section class="subsubsection" id="subsubsection-4"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span> <span class="codenumber">2.3.2.2</span> <span class="title">principle of action and reaction</span>
 </h4>
-<p id="p-193">If in Eq. <a class="xref" data-knowl="./knowl/cauchy_tetrahedron_eq.html" title="Equation 2.3.2">(2.3.2)</a> \(\vec{n}=\vec{e}_1\) is assumed, the following raltionship is obtained</p>
+<p id="p-194">If in Eq. <a class="xref" data-knowl="./knowl/cauchy_tetrahedron_eq.html" title="Equation 2.3.2">(2.3.2)</a> \(\vec{n}=\vec{e}_1\) is assumed, the following raltionship is obtained</p>
 <div class="displaymath">
 \begin{equation}
 \func{\vec{t}}{\vec{x}, \vec{e_1}} = - \func{\vec{t}}{\vec{x}, -\vec{e}_1} \,.\label{cauchy_action_reaction_eq}\tag{2.3.3}
@@ -252,7 +254,7 @@ MathJax.Hub.Config({
 <p class="continuation">The very same condition is true for  \(\vec{n}=\vec{e}_2\) and \(\vec{n}=\vec{e}_3\text{.}\)</p></section><section class="subsubsection" id="subsubsection-5"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span> <span class="codenumber">2.3.2.3</span> <span class="title">the tensor</span>
 </h4>
-<p id="p-194">By using Eqs. <a class="xref" data-knowl="./knowl/cauchy_tetrahedron_eq.html" title="Equation 2.3.2">(2.3.2)</a> and <a class="xref" data-knowl="./knowl/cauchy_action_reaction_eq.html" title="Equation 2.3.3">(2.3.3)</a> the following result is obtained</p>
+<p id="p-195">By using Eqs. <a class="xref" data-knowl="./knowl/cauchy_tetrahedron_eq.html" title="Equation 2.3.2">(2.3.2)</a> and <a class="xref" data-knowl="./knowl/cauchy_action_reaction_eq.html" title="Equation 2.3.3">(2.3.3)</a> the following result is obtained</p>
 <div class="displaymath">
 \begin{equation}
 \func{\vec{t}}{\vec{x}, \vec{n}} =\func{\vec{t}}{\vec{x}, \vec{e}_1} \,n_1 + \func{\vec{t}}{\vec{x}, \vec{e}_2} \,n_2 +  \func{\vec{t}}{\vec{x}, \vec{e}_3} \,n_3 \,,\label{cauchy_lt_eq}\tag{2.3.4}
@@ -265,7 +267,7 @@ MathJax.Hub.Config({
 \end{equation}
 </div>
 <p class="continuation">\(\func{\tens{\sigma}}{\vec{x}}\) prende il nome di <em class="emphasis">tensore della tensione di Cauchy</em>.</p>
-<p id="p-195">The matrix form of previous relationship is</p>
+<p id="p-196">The matrix form of previous relationship is</p>
 <div class="displaymath">
 \begin{equation}
 \left[\begin{array}{c}t_1\\t_2\\t_3\end{array}\right] =
@@ -279,7 +281,7 @@ MathJax.Hub.Config({
 </div>
 <p class="continuation">where the 9 components of the stress tensor appear explicitly. These components can be visulized as follows,</p>
 <figure class="figure figure-like" id="stress_components_fig"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/cauchy_stress_components.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.3.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-196">i.e. each column of the matrix associated to the stress tensor,</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.3.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-197">i.e. each column of the matrix associated to the stress tensor,</p>
 <div class="displaymath">
 \begin{equation}
 \mat{\sigma} = 
@@ -289,8 +291,8 @@ MathJax.Hub.Config({
 <p class="continuation">collects the components of one of the three tractions relative to the planes identified by coordinate axes.</p></section><section class="subsubsection" id="subsubsection-6"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span> <span class="codenumber">2.3.2.4</span> <span class="title">differential form of equilibrium equations</span>
 </h4>
-<p id="p-197"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-12" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/Wy6ggwQttZ0?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p>
-<p id="p-198">Consider the cancellation condition of the resultant of the applied forces, equation <a class="xref" data-knowl="./knowl/body_equilibrium_p1_1.html" title="Equation 2.2.3">(2.2.3)</a>. This equation, thanks to the <a class="xref" data-knowl="./knowl/cauchy_stress_eq.html" title="Equation 2.3.5">(2.3.5)</a>, can be reformulated as follows</p>
+<p id="p-198"><div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-12" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/Wy6ggwQttZ0?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div></p>
+<p id="p-199">Consider the cancellation condition of the resultant of the applied forces, equation <a class="xref" data-knowl="./knowl/body_equilibrium_p1_1.html" title="Equation 2.2.3">(2.2.3)</a>. This equation, thanks to the <a class="xref" data-knowl="./knowl/cauchy_stress_eq.html" title="Equation 2.3.5">(2.3.5)</a>, can be reformulated as follows</p>
 <div class="displaymath">
 \begin{equation*}
 \int_{\omega} \vec{b} \, dv + \int_{\partial\omega} \tens{\sigma}\,\vec{n} \, ds = \vec0\,.
@@ -311,10 +313,10 @@ MathJax.Hub.Config({
 <p class="continuation">to be satisfied in every point of the body \(\body \text{.}\) This vector equation is called <em class="emphasis">indefinite equation of equilibrium</em> or, referring to the three scalar equations relative to the vector components, <em class="emphasis">indefinite equations of equilibrium</em>.</p></section><section class="subsubsection" id="subsubsection-7"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span> <span class="codenumber">2.3.2.5</span> <span class="title">symmetry of the tensor</span>
 </h4>
-<p id="p-199">The equilibrium condition regarding the resultant torque, equation <a class="xref" data-knowl="./knowl/body_equilibrium_p1_2.html" title="Equation 2.2.4">(2.2.4)</a>, allows to establish the symmetry of the stress tensor. However, its explicit derivation is not presented here. The interested reader can find more details in the reference given at the end of the chapter.</p></section><article class="theorem theorem-like" id="theorem-1"><h6 class="heading">
+<p id="p-200">The equilibrium condition regarding the resultant torque, equation <a class="xref" data-knowl="./knowl/body_equilibrium_p1_2.html" title="Equation 2.2.4">(2.2.4)</a>, allows to establish the symmetry of the stress tensor. However, its explicit derivation is not presented here. The interested reader can find more details in the reference given at the end of the chapter.</p></section><article class="theorem theorem-like" id="theorem-1"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="space"> </span><span class="creator">(A.-L. Cauchy)</span><span class="period">.</span>
 </h6>
-<p id="p-200">Given a body subject to some applied loads, a necessary and sufficient condition for the body to be in equilibrium (satisfaction of Eqs. <a class="xref" data-knowl="./knowl/body_equilibrium_1.html" title="Equation 2.2.1">(2.2.1)</a> and <a class="xref" data-knowl="./knowl/body_equilibrium_2.html" title="Equation 2.2.2">(2.2.2)</a>) is that there is a tensor field \(\func{\tens{\sigma}}{\vec{x}} \) such that</p>
+<p id="p-201">Given a body subject to some applied loads, a necessary and sufficient condition for the body to be in equilibrium (satisfaction of Eqs. <a class="xref" data-knowl="./knowl/body_equilibrium_1.html" title="Equation 2.2.1">(2.2.1)</a> and <a class="xref" data-knowl="./knowl/body_equilibrium_2.html" title="Equation 2.2.2">(2.2.2)</a>) is that there is a tensor field \(\func{\tens{\sigma}}{\vec{x}} \) such that</p>
 <div class="displaymath">
 \begin{equation}
 \func{\vec{t}}{\vec{x}, \vec{n}} =\func{\tens{\sigma}}{\vec{x}}\,\vec{n}\,,\label{T_cauchy_stress_eq}\tag{2.3.9}
@@ -332,7 +334,7 @@ MathJax.Hub.Config({
 </div></article><article class="remark remark-like" id="remark-12"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">observations about indefinite equations of equilibrium.</span>
 </h6>
-<ul id="p-201" class="disc">
+<ul id="p-202" class="disc">
 <li id="li-63">The equations <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a> do not completely determine the Cauchy stress tensor field for a body in equilibrium. In particular, there are 3 differential equations to calculate, for the symmetry of the tensor, the \(6\) unknown components of \(\tens{\sigma} \text{.}\) As will be seen in the following, this drawback will be solved by characterizing the constitutive behavior of the material of which the body is composed. Behavior to be reconstructed experimentally and referring to the average of the quantities involved. Remember that the macroscopic approach is not based on a precise description of the internal micro-structure of matter.</li>
 <li id="li-64">The boundary conditions to be associated with the differential equations <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equation 2.3.10">(2.3.10)</a> will be determined by relating the unknown stress \(\tens{\sigma} \) to the tractions, \(\bar {\vec{t}} \text{,}\) assigned on the contour of the body \(\body \text{.}\) This relationship is established through the <a class="xref" data-knowl="./knowl/T_cauchy_stress_eq.html" title="Equation 2.3.9">(2.3.9)</a> which provides<div class="displaymath">
 \begin{equation}

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-09-17T16:03:31+02:00       *-->
+<!--*       on 2024-12-27T15:49:38+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,22 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>In previous sections, the traction \(\func{\vec{t}}{\vec{x}, \Gamma_{\delta}} \) was formulated with a very generic dependence on the surface \(\Gamma_{\delta}\) passing through the point \(\vec{x}\text{.}\) On the basis of Cauchy's postulate, fundamental for all subsequent developments, it is assumed instead</p>
+<p>These conditions, for the assumption of continuity, do not apply only to the body \(\body \) under investigation but also to any subset extracted from the main body. <figure class="figure figure-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="images/continuo_in_due.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure> This separation, typical of solid mechanics, is performed using imaginary surfaces used to cut the starting body. In particular, see the figure above, for the two body parts thus obtained the following pairs of equations can be written</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\func{\vec{t}}{\vec{x},\Gamma_{\delta}} = \func{\vec{t}}{\vec{x},\vec{n}}\,,\tag{2.3.1}
-\end{equation}
+\begin{align}
+\int_{\omega} \vec{b} \, dv + \int_{\partial\omega} \vec{t}_{\omega} \, ds \amp = \vec0\,,\tag{2.2.3}\\
+\int_{\omega} \vec{x} \times \vec{b} \, dv + \int_{\partial\omega} \vec{x} \times \vec{t}_{\omega} \, ds \amp = \vec0 \,.\tag{2.2.4}
+\end{align}
 </div>
-<p class="continuation">where \(\vec{n}\) represents the normal direction to the surface identified by a vector of unit length. Therefore the absolute independence of the traction vector from other factors, such as the curvature of the surface passing through the point \(\vec{x}\text{,}\) is postulated. The figure below shows some surfaces passing through the point \(\vec{x}\) and sharing in this point the very same tangent to the surface and therefore the same normal direction.</p>
-<span class="incontext"><a href="stress_sec_stress_chap_en.html#p-189">in-context</a></span>
+<p class="continuation">and</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align}
+\int_{\bar{\omega}} \vec{b} \, dv + \int_{\partial\bar{\omega}} \vec{t}_{\bar{\omega}} \, ds  + \int_{\partial\body} \vec{t} \, ds \amp = \vec0\,,\tag{2.2.5}\\
+\int_{\bar{\omega}} \vec{x} \times \vec{b} \, dv + \int_{\partial\bar{\omega}} \vec{x} \times \vec{t}_{\bar{\omega}} \, ds + \int_{\partial\body} \vec{x} \times \vec{t} \, ds \amp = \vec0 \,.\tag{2.2.6}
+\end{align}
+</div>
+<p class="continuation">where \(\vec{t}_{\omega}\) is the action exerted on \(\omega\) by the other part of the domain \(\bar{\omega}\) and, on the contrary, \(\vec{t}_{\bar{\omega}}\) is the action exerted on \(\bar{\omega}\) by the other resulting part \(\omega\text{.}\)</p>
+<span class="incontext"><a href="equilibrium_sec_stress_chap_en.html#p-189">in-context</a></span>
 </body>
 </html>

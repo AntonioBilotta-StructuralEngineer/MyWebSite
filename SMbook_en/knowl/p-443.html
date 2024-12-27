@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-09-17T16:03:33+02:00       *-->
+<!--*       on 2024-12-27T15:49:38+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,35 +15,18 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>The presence of a single body determines the writing of 3 equations of equilibrium (\(n = 3 \)) for which the extreme \(A \) is assumed as pole for rotational equilibrium:</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-H_A \amp = 0\,,\\
-V_A + V_B - F \amp = 0\,,\\
-V_{B} l - F l/2 \amp = 0\,.
-\end{align*}
-</div>
-<p class="continuation">Whose matrix form is</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\underbrace{\left[\begin{array}{ccc}
-1 &amp; 0 &amp; 0\\
-0 &amp; 1 &amp; 1\\
-0 &amp; 0 &amp; l
-\end{array}\right]}_{\mat{B}}
-\underbrace{\left[\begin{array}{c} H_A \\V_A \\ V_{B} \end{array}\right]}_{\vec{r}} +
-\underbrace{\left[\begin{array}{c} 0 \\ -F \\ -Fl/2 \end{array}\right]}_{\vec{f}} =
-\left[\begin{array}{c} 0 \\ 0 \\ 0 \end{array}\right]\,.
-\end{equation*}
-</div>
-<p class="continuation">Also in this case the simple inspection of the static matrix allows to establish the isostaticity of the system. The calculation of the constraint reaction components provides:</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-H_{A} \amp= 0\,,\\
-V_{A}  \amp= F/2\,,\\
-V_{B}  \amp= F/2\,.
-\end{align*}
-</div>
-<span class="incontext"><a href="analysis_examples_sec_rigid_body_statics_chap_en.html#p-443">in-context</a></span>
+<p>The typical use of the <a class="xref" data-knowl="./knowl/rb_balance_eq.html" title="Equation 5.5.2">(5.5.2)</a> system is the calculation of the \(\vec{r} \) constraint reactions. But even in this case, as already done for the kinematic matrix, it is instructive to discuss the solution conditions of the system in order to derive mechanical considerations. Let \(p = \text{min} (n, m) \text{,}\) then the following cases may occur.</p>
+<ul class="disc">
+<li>\(\text{rank}\mat{B} == p\)<ul class="circle">
+<li>\(n==m\text{:}\) <em xmlns:svg="http://www.w3.org/2000/svg" class="alert">isostatic system</em>, the system admits a unique solution;</li>
+<li>\(n&lt;m\text{:}\) <em xmlns:svg="http://www.w3.org/2000/svg" class="alert">hyperstatic system</em>, the system admits infinite solutions;</li>
+<li>\(n&gt;m\text{:}\) <em xmlns:svg="http://www.w3.org/2000/svg" class="alert">impossibile system</em>, the system admits no solution.</li>
+</ul>
+</li>
+<li>\(\text{rank}\mat{B} &lt; p\)<ul class="circle"><li>
+<em xmlns:svg="http://www.w3.org/2000/svg" class="alert">degenerate system</em>.</li></ul>
+</li>
+</ul>
+<span class="incontext"><a href="analysis_sec_rigid_body_statics_chap_en.html#p-443">in-context</a></span>
 </body>
 </html>

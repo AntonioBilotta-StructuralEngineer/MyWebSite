@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-09-17T16:03:30+02:00       *-->
+<!--*       on 2024-12-27T15:49:37+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -177,6 +177,7 @@ MathJax.Hub.Config({
 <li><a href="constraints_sec_rigid_body_kinematics_chap_en.html" data-scroll="constraints_sec_rigid_body_kinematics_chap_en">constraints</a></li>
 <li><a href="analysis_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_sec_rigid_body_kinematics_chap_en">kinematic analysis</a></li>
 <li><a href="analysis_examples_sec_rigid_body_kinematics_chap_en.html" data-scroll="analysis_examples_sec_rigid_body_kinematics_chap_en">kinematic analysis of simple rigid body systems</a></li>
+<li><a href="exercises_sec_rigid_body_kinematics_chap_en.html" data-scroll="exercises_sec_rigid_body_kinematics_chap_en">exercises</a></li>
 <li><a href="refs_rigid_body_kinematics_chap_en.html" data-scroll="refs_rigid_body_kinematics_chap_en">references and suggested readings</a></li>
 </ul>
 </li>
@@ -191,6 +192,7 @@ MathJax.Hub.Config({
 <li><a href="sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces</a></li>
 <li><a href="indefinte_sec_rigid_body_statics_chap_en.html" data-scroll="indefinte_sec_rigid_body_statics_chap_en" class="active">2D beam equilibrium differential equations</a></li>
 <li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en">generalized section forces calculation and diagrams</a></li>
+<li><a href="exercises_sec_rigid_body_statics_chap_en.html" data-scroll="exercises_sec_rigid_body_statics_chap_en">exercises</a></li>
 </ul>
 </li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
@@ -198,21 +200,21 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="indefinte_sec_rigid_body_statics_chap_en"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5.8</span> <span class="title">2D beam equilibrium differential equations</span>
 </h2>
-<p id="p-462">The equilibrium equations for the beam have already been presented in <a href="stretched_beam_sec_elasticity_chap_en.html" class="internal" title="Section 3.5: one-dimensional models: stretched beam">Section 3.5</a> and <a href="bent_beam_sec_elasticity_chap_en.html" class="internal" title="Section 3.6: one-dimensional models: bent beam">Section 3.6</a> in the broader context which led to the construction of a complete 2D elastic beam model. Here the equations are obtained by other means, moreover the shear force is taken into account in a explict way.</p>
-<section class="subsection" id="subsection-118"><h3 class="heading hide-type">
+<p id="p-466">The equilibrium equations for the beam have already been presented in <a href="stretched_beam_sec_elasticity_chap_en.html" class="internal" title="Section 3.5: one-dimensional models: stretched beam">Section 3.5</a> and <a href="bent_beam_sec_elasticity_chap_en.html" class="internal" title="Section 3.6: one-dimensional models: bent beam">Section 3.6</a> in the broader context which led to the construction of a complete 2D elastic beam model. Here the equations are obtained by other means, moreover the shear force is taken into account in a explict way.</p>
+<section class="subsection" id="subsection-122"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.8.1</span> <span class="title">formulation of the problem</span>
 </h3>
 <figure class="figure figure-like" id="indefinite_trave_piana_fig"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/indefinite_trave_piana.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.8.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-463">Let us consider a beam subjected to generic loading conditions, let us assume to isolate a portion of the beam with infinitesimal length  \(dx\text{.}\) The beam's portion thus identified is subjected to a series of actions shown in the figure and which, for clarity, are listed below:</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.8.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-467">Let us consider a beam subjected to generic loading conditions, let us assume to isolate a portion of the beam with infinitesimal length  \(dx\text{.}\) The beam's portion thus identified is subjected to a series of actions shown in the figure and which, for clarity, are listed below:</p>
 <ul class="disc">
 <li id="li-149">generalized section forces, \(N(x)\text{,}\) \(T(x)\) e \(M(x)\text{,}\) relative to point \(x\) along the beam axis;</li>
 <li id="li-150">generalized section forces, \(N(x+dx)\text{,}\) \(T(x+dx)\) e \(M(x+dx)\text{,}\) relative to point \(x+dx\text{;}\)</li>
 <li id="li-151">axial distributed load \(p(x)\text{;}\)</li>
 <li id="li-152">transverse distributed load \(q(x)\text{.}\)</li>
-</ul></section><section class="subsection" id="subsection-119"><h3 class="heading hide-type">
+</ul></section><section class="subsection" id="subsection-123"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.8.2</span> <span class="title">equilibrium conditions</span>
 </h3>
-<p id="p-464">The obtained scheme is essentially a free body diagram for which it is possible to impose the following equations of equilibrium (the pole used for the rotational equilibrium is placed at the abscissa \(x + dx \))</p>
+<p id="p-468">The obtained scheme is essentially a free body diagram for which it is possible to impose the following equations of equilibrium (the pole used for the rotational equilibrium is placed at the abscissa \(x + dx \))</p>
 <div class="displaymath">
 \begin{align}
 -N(x) + N(x+dx) + p(x)dx \amp = 0\,,\tag{5.8.1}\\
@@ -229,7 +231,7 @@ MathJax.Hub.Config({
 \end{align}
 </div>
 <p class="continuation">where the quantities \(\frac{d N}{d x} \text{,}\) \(\frac{d T}{d x} \) and \(\frac{d M}{d x} \) denote the derivatives of the generalized section forces with respect to the abscissa \(x \text{.}\) Making the necessary simplifications and neglecting the term \(q(x)\frac{dx^2}{2} \) because of higher order than the first, we obtain the equilibrium differential equations for the 2D beam listed below .</p>
-<article class="assemblage assemblage-like" id="assemblage-47"><ul id="p-465" class="disc">
+<article class="assemblage assemblage-like" id="assemblage-47"><ul id="p-469" class="disc">
 <li id="li-153">
 <em class="alert">Axial direction equilibrium:</em><div class="displaymath">
 \begin{equation}
@@ -251,10 +253,10 @@ MathJax.Hub.Config({
 \end{equation}
 </div>
 </li>
-</ul></article></section><section class="subsection" id="subsection-120"><h3 class="heading hide-type">
+</ul></article></section><section class="subsection" id="subsection-124"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.8.3</span> <span class="title">general integrals</span>
 </h3>
-<p id="p-466">The integration of the equilibrium differential equations gives the following general integrals valid on portions of beam along which the generalized section forces are analytic in the variable \(x\text{:}\)</p>
+<p id="p-470">The integration of the equilibrium differential equations gives the following general integrals valid on portions of beam along which the generalized section forces are analytic in the variable \(x\text{:}\)</p>
 <div class="displaymath">
 \begin{align}
 N(x) \amp = -\int p(x) dx + a \,,\label{general_N_eq}\tag{5.8.10}\\
@@ -264,9 +266,9 @@ M(x) \amp = \int\left(-\int q(x) dx\right)dx + b\,x + c \,.\label{general_M_eq}\
 </div>
 <p class="continuation">The integration constants \(a \text{,}\) \(b \) and \(c \) are to be evaluated on the basis of the assigned boundary conditions.</p>
 <article class="assemblage assemblage-like" id="assemblage-48"><h6 class="heading"><span class="title">\(p(x)=0\) and \(q(x)=0\) case.</span></h6>
-<p id="p-467">In order to illustrate the evaluation of the integration constants, consider the following free body diagram. <figure class="figure figure-like" id="schema1bis_fig"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/schema1bis.png" style="width: 100%; height: auto;" alt=""></div>
+<p id="p-471">In order to illustrate the evaluation of the integration constants, consider the following free body diagram. <figure class="figure figure-like" id="schema1bis_fig"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/schema1bis.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.8.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
-<p id="p-468">For the absence of distributed loads the general integrals give</p>
+<p id="p-472">For the absence of distributed loads the general integrals give</p>
 <div class="displaymath">
 \begin{align*}
 N(x) \amp =  a \,,\\
@@ -299,11 +301,11 @@ M(x) \amp =  F\,x - Fl \,.
 \begin{equation*}
 N(l) = F\,,\quad T(l) = F\,, \quad M(l) = 0\,.
 \end{equation*}
-</div></article></section><section class="subsection" id="subsection-121"><h3 class="heading hide-type">
+</div></article></section><section class="subsection" id="subsection-125"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.8.4</span> <span class="title">general integrals for constant distributed loads</span>
 </h3>
 <figure class="figure figure-like" id="schema_generico_fig"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/schema_generico.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.8.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-469">The diagram shows the case of a beam of which the values of the stress components at the extreme \(x = 0 \) are known and is subjected to constant distributed loads. In this case the general integrals <a class="xref" data-knowl="./knowl/general_N_eq.html" title="Equation 5.8.10">(5.8.10)</a>, <a class="xref" data-knowl="./knowl/general_T_eq.html" title="Equation 5.8.11">(5.8.11)</a> and <a class="xref" data-knowl="./knowl/general_M_eq.html" title="Equation 5.8.12">(5.8.12)</a> take the following expressions</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.8.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-473">The diagram shows the case of a beam of which the values of the stress components at the extreme \(x = 0 \) are known and is subjected to constant distributed loads. In this case the general integrals <a class="xref" data-knowl="./knowl/general_N_eq.html" title="Equation 5.8.10">(5.8.10)</a>, <a class="xref" data-knowl="./knowl/general_T_eq.html" title="Equation 5.8.11">(5.8.11)</a> and <a class="xref" data-knowl="./knowl/general_M_eq.html" title="Equation 5.8.12">(5.8.12)</a> take the following expressions</p>
 <div class="displaymath">
 \begin{align}
 N(x) \amp = -p\,x + N(0) \,,\label{general_const_N_eq}\tag{5.8.13}\\

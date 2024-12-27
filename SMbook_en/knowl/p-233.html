@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-09-17T16:03:31+02:00       *-->
+<!--*       on 2024-12-27T15:49:38+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,17 +15,35 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Consider the body \(\mathcal{B} = \{\vec{x} \,:\; 0 \leq x_i \leq 1\}\text{,}\) subjected to the bulk load \(\vec{b} = \alpha x_3 \vec{e}_3\) and surface forces applied on \(\partial\mathcal{B}\) and defined by</p>
+<p>For a generic point \(\vec{x}\) of a body the following stress components hold</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\vec{t} =
-\left\{\begin{array}{ccl}
-x_1 x_2 (1-x_1)(1-x_2)\vec{e}_3, \amp\amp \text{sulla faccia}\; x_3 = 0,\\
-\vec{0} \amp\amp \text{su tutte le altre facce}.
-\end{array}\right.\,.
+\mat{\sigma} = \left[\begin{array}{ccc}
+5 \amp 3 \amp -3 \\
+3 \amp 0 \amp 2 \\
+-3 \amp 2 \amp 0
+\end{array}
+\right]\,.
 \end{equation*}
 </div>
-<p class="continuation">Calculate the value of \(\alpha\) which allows to obtain a zero value of the resultant of applied bulk and surface forces.</p>
+<p class="continuation">For the same point, consider also the two normals</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\vec{n} =
+\left[\begin{array}{c}
+0 \\ 1/\sqrt{2}\\1/\sqrt{2}
+\end{array}\right]\,,
+\quad
+\bar{\vec{n}} =
+\left[\begin{array}{c}
+1 \\ 0 \\ 0
+\end{array}\right]\,.
+\end{equation*}
+</div>
+<ol class="decimal">
+<li>Calculate the tractions \(\vec{t}_{\vec{n}}\) and \(\vec{t}_{\bar{\vec{n}}}\) and their normal and tangential components.</li>
+<li>Calculate the principal stress and principal directions verifying that \(\vec{n}\) is one of the principal directions.</li>
+</ol>
 <span class="incontext"><a href="exercises_sec_stress_chap_en.html#p-233">in-context</a></span>
 </body>
 </html>

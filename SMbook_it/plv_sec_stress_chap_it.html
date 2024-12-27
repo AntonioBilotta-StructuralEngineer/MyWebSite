@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-09-17T15:55:26+02:00       *-->
+<!--*       on 2024-12-27T15:52:26+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -177,6 +177,7 @@ MathJax.Hub.Config({
 <li><a href="constraints_sec_rigid_body_kinematics_chap_it.html" data-scroll="constraints_sec_rigid_body_kinematics_chap_it">vincoli</a></li>
 <li><a href="analysis_sec_rigid_body_kinematics_chap_it.html" data-scroll="analysis_sec_rigid_body_kinematics_chap_it">analisi cinematica</a></li>
 <li><a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html" data-scroll="analysis_examples_sec_rigid_body_kinematics_chap_it">applicazione dell'analisi cinematica ai sistemi di corpi rigidi</a></li>
+<li><a href="exercises_sec_rigid_body_kinematics_chap_it.html" data-scroll="exercises_sec_rigid_body_kinematics_chap_it">esercizi</a></li>
 <li><a href="refs_rigid_body_kinematics_chap_it.html" data-scroll="refs_rigid_body_kinematics_chap_it">riferimenti e letture suggerite</a></li>
 </ul>
 </li>
@@ -191,6 +192,7 @@ MathJax.Hub.Config({
 <li><a href="sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_it">sollecitazioni</a></li>
 <li><a href="indefinte_sec_rigid_body_statics_chap_it.html" data-scroll="indefinte_sec_rigid_body_statics_chap_it">equazioni indefinite di equilibrio per la trave piana</a></li>
 <li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it">calcolo e diagrammi delle sollecitazioni</a></li>
+<li><a href="exercises_sec_rigid_body_statics_chap_it.html" data-scroll="exercises_sec_rigid_body_statics_chap_it">esercizi</a></li>
 </ul>
 </li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Redatto in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
@@ -198,11 +200,11 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="plv_sec_stress_chap_it"><h2 class="heading hide-type">
 <span class="type">Paragrafo</span> <span class="codenumber">2.5</span> <span class="title">principio dei lavori virtuali</span>
 </h2>
-<p id="p-225">A partire delle equazioni indefinite di equilibrio <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equazione 2.3.10">(2.3.10)</a> è possibile pervenire alla definizione del lavoro derivante dall'ambiente circostante, <em class="emphasis">lavoro esterno</em>, ed il lavoro effettuato dalle forze interne al corpo, <em class="emphasis">lavoro interno</em>. Si ottiene un principio di uguaglianza dei due lavori effettuati noto come <em class="emphasis">Principio dei lavori virtuali</em>.  Tale risultato viene ottenuto riformulando le equazioni differenziali <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equazione 2.3.10">(2.3.10)</a> in un formato integrale. Operazione che può essere interpretata come una riformulazione alternativa delle equazioni differenziali di partenza ma che porta anche ad un risultato che ha l'importante interpretazione meccanica di cui si è detto.</p>
-<section class="subsection" id="subsection-33"><h3 class="heading hide-type">
+<p id="p-226">A partire delle equazioni indefinite di equilibrio <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equazione 2.3.10">(2.3.10)</a> è possibile pervenire alla definizione del lavoro derivante dall'ambiente circostante, <em class="emphasis">lavoro esterno</em>, ed il lavoro effettuato dalle forze interne al corpo, <em class="emphasis">lavoro interno</em>. Si ottiene un principio di uguaglianza dei due lavori effettuati noto come <em class="emphasis">Principio dei lavori virtuali</em>.  Tale risultato viene ottenuto riformulando le equazioni differenziali <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equazione 2.3.10">(2.3.10)</a> in un formato integrale. Operazione che può essere interpretata come una riformulazione alternativa delle equazioni differenziali di partenza ma che porta anche ad un risultato che ha l'importante interpretazione meccanica di cui si è detto.</p>
+<section class="subsection" id="subsection-34"><h3 class="heading hide-type">
 <span class="type">Sottoparagrafo</span> <span class="codenumber">2.5.1</span> <span class="title">dalla formulazione differenziale alla formulazione integrale</span>
 </h3>
-<p id="p-226">Si moltiplichi scalarmente l'equazione <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equazione 2.3.10">(2.3.10)</a> per un campo vettoriale generico \(\vec{v}\) e si integri sul corpo in esame \(\body\) (per la continuità tale operazione potrebbe essere effettuata su qualsiasi sottoinsieme di \(\body\)). Dal momento che l'equazione <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equazione 2.3.10">(2.3.10)</a> deve essere vera per qualsiasi \(\vec{x}\text{,}\) allora</p>
+<p id="p-227">Si moltiplichi scalarmente l'equazione <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equazione 2.3.10">(2.3.10)</a> per un campo vettoriale generico \(\vec{v}\) e si integri sul corpo in esame \(\body\) (per la continuità tale operazione potrebbe essere effettuata su qualsiasi sottoinsieme di \(\body\)). Dal momento che l'equazione <a class="xref" data-knowl="./knowl/T_cauchy_equilibrium_eq.html" title="Equazione 2.3.10">(2.3.10)</a> deve essere vera per qualsiasi \(\vec{x}\text{,}\) allora</p>
 <div class="displaymath">
 \begin{equation}
 \int_{\body} \left( \text{div}\tens{\sigma} + \vec{b} \right) \cdot \vec{v} \,dv = 0\,,\quad \forall\vec{v}\,,\label{continuum_plv_1_eq}\tag{2.5.1}
@@ -223,7 +225,7 @@ MathJax.Hub.Config({
 <article class="remark remark-like" id="remark-12"><h6 class="heading">
 <span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">2.5.1</span><span class="period">.</span><span class="space"> </span><span class="title">osservazione importante.</span>
 </h6>
-<p id="p-227">Nei passaggi precedenti vengono trasferite derivate dal tensore \(\tens{\sigma}\) al campo di spostamento \(\vec{v}\text{.}\) Le derivate su \(\tens{\sigma}\) sono effettuate rispetto alle coordinate \(x_1\text{,}\) \(x_2\) e \(x_3\) relative alla configurazione corrente, pertanto in tale contesto per gradiente dello spostamento si intende</p>
+<p id="p-228">Nei passaggi precedenti vengono trasferite derivate dal tensore \(\tens{\sigma}\) al campo di spostamento \(\vec{v}\text{.}\) Le derivate su \(\tens{\sigma}\) sono effettuate rispetto alle coordinate \(x_1\text{,}\) \(x_2\) e \(x_3\) relative alla configurazione corrente, pertanto in tale contesto per gradiente dello spostamento si intende</p>
 <div class="displaymath">
 \begin{equation}
 \mat{\nabla v} = \left[\begin{array}{ccc}
@@ -233,7 +235,7 @@ MathJax.Hub.Config({
 \end{array}\right]\,,\tag{2.5.2}
 \end{equation}
 </div>
-<p class="continuation">espressione da non confondere con l'equazione simile <a class="xref" data-knowl="./knowl/Dipl_Grad_X_eq.html" title="Equazione 1.4.5">(1.4.5)</a>.</p></article><p id="p-228">La equazione integrale di partenza può quindi essere riscritta come segue</p>
+<p class="continuation">espressione da non confondere con l'equazione simile <a class="xref" data-knowl="./knowl/Dipl_Grad_X_eq.html" title="Equazione 1.4.5">(1.4.5)</a>.</p></article><p id="p-229">La equazione integrale di partenza può quindi essere riscritta come segue</p>
 <div class="displaymath">
 \begin{equation}
 \int_{\body} \left(\text{div}\left(\tens{\sigma}\vec{v}\right) - \tens{\sigma} : \tens{\nabla v} + \vec{b} \cdot \vec{v} \right)  \,dv= 0\,,\quad \forall\vec{v}\,.\label{continuum_plv_2_eq}\tag{2.5.3}
@@ -271,10 +273,10 @@ MathJax.Hub.Config({
 \begin{equation}
 \int_{\partial\body} \vec{t} \cdot \vec{v}\,ds + \int_{\body}  \vec{b} \cdot \vec{v} \,dv = \int_{\body} \tens{\sigma} : \text{sym}\tens{\nabla v}\,dv \,,\quad \forall\vec{v}\,.\label{continuum_plv_eq}\tag{2.5.5}
 \end{equation}
-</div></section><section class="subsection" id="subsection-34"><h3 class="heading hide-type">
+</div></section><section class="subsection" id="subsection-35"><h3 class="heading hide-type">
 <span class="type">Sottoparagrafo</span> <span class="codenumber">2.5.2</span> <span class="title">interpretazione meccanica</span>
 </h3>
-<ul id="p-229" class="disc">
+<ul id="p-230" class="disc">
 <li id="li-69">Il campo vettoriale \(\vec{v}\) è interpretabile sia come campo di spostamento che subisce effettivamente il corpo sotto l'azione dei carichi assegnati sia come variazione generica del campo di spostamento effettivo ovvero come campo di <em class="emphasis">spostamento virtuale</em>.</li>
 <li id="li-70">Al primo membro dell'eguaglianza <a class="xref" data-knowl="./knowl/continuum_plv_eq.html" title="Equazione 2.5.5">(2.5.5)</a> compare il lavoro esercitato dall'ambiente circostante sul corpo \(\body\text{,}\) ovvero il lavoro esterno.</li>
 <li id="li-71">Al secondo membro dell'eguaglianza <a class="xref" data-knowl="./knowl/continuum_plv_eq.html" title="Equazione 2.5.5">(2.5.5)</a> compare il lavoro interno, ovvero il lavoro effettuato dal tensore della tensione \(\tens{\sigma}\text{.}\)</li>
