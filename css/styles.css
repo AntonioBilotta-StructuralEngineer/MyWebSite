@@ -90,7 +90,17 @@ p {
 }
 
 .project-card,
-.teaching-card,
+.teaching-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex: 1;
+  text-align: center;
+  min-width: 32%;
+  max-width: 32%;
+}
+
 .paper-card {
   background: #fff;
   border-radius: 8px;
@@ -98,6 +108,8 @@ p {
   padding: 20px;
   flex: 1;
   text-align: center;
+  min-width: 32%;
+  max-width: 32%;
 }
 
 .project-card h3,
