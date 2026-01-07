@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HE0W4VESL5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HE0W4VESL5');
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>multi-axial states</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="A first course on solid mechanics">
+<meta property="book:author" content="Antonio Bilotta">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.7';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.991c135ccf182bf5.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.c2757fc695bc848c.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.f4ab138da65f4203.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="changeme" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="solid_mechanics_book_en.html"><span class="title">A first course on solid mechanics</span></a></h1>
+<p class="byline">Antonio Bilotta</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="uniaxial_sec_elasticity_chap_en.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="elasticity_chap_en.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="problem_sec_elasticity_chap_en.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\( \newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+\newcommand{\tens}[1]{\boldsymbol{#1}}
+\newcommand{\mat}[1]{\left[\boldsymbol{#1}\right]}
+\newcommand{\matWp}[2]{\left[\boldsymbol{#1}_{#2}\right]}
+\newcommand{\tensQ}[1]{\pmb{\mathbb{#1}}}
+\newcommand{\tensQc}[1]{\mathbb{#1}}
+
+\newcommand{\transp}[1]{{#1}^{\textrm{T}}}
+\newcommand{\veczero}{\vec{0}}
+\newcommand{\body}{\Omega}
+\newcommand{\calvec}[1]{\boldsymbol{\mathcal{#1}}}
+\newcommand{\commadiff}[2]{{#1,}_{#2}}
+\newcommand{\regulardiff}[2]{ \frac{\partial#1}{\partial#2} }
+\newcommand{\func}[2]{#1\left(#2\right)}
+\newcommand{\transp}[1]{{#1}^{\text{T}}}
+\newcommand{\transpm}[1]{{#1}^{-\text{T}}}
+\newcommand{\trace}[1]{\text{tr}#1}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter_en.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="dedication_en.html" class="internal"><span class="title">Dedication</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="acknowledgement_en.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface_en.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="strain_chap_en.html" class="internal"><span class="codenumber">1</span> <span class="title">bodies’ kinematics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="configurations_sec_strain_chap_en.html" class="internal"><span class="codenumber">1.1</span> <span class="title">configurations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="transformations_sec_strain_chap_en.html" class="internal"><span class="codenumber">1.2</span> <span class="title">transformations</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="gradient_sec_strain_chap_en.html" class="internal"><span class="codenumber">1.3</span> <span class="title">deformation gradient</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gradient_sec_strain_chap_en.html#gradient_sec_strain_chap_en-13" class="internal"><span class="codenumber">1.3.1</span> <span class="title">the notion of tensor</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="displacement_sec_strain_chap_en.html" class="internal"><span class="codenumber">1.4</span> <span class="title">displacement field</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="determinant_sec_strain_chap_en.html" class="internal"><span class="codenumber">1.5</span> <span class="title">determinant of the deformation gradient</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="determinant_sec_strain_chap_en.html#determinant_sec_strain_chap_en-5" class="internal"><span class="codenumber">1.5.1</span> <span class="title">transformation formula of volume elements</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="determinant_sec_strain_chap_en.html#determinant_sec_strain_chap_en-6" class="internal"><span class="codenumber">1.5.2</span> <span class="title">area element transformation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="polar_sec_strain_chap_en.html" class="internal"><span class="codenumber">1.6</span> <span class="title">polar decomposition</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="principal_directions_sec_strain_chap_en.html" class="internal"><span class="codenumber">1.7</span> <span class="title">stretch tensor <span class="process-math">\(\tens{U}\)</span> and principal directions (transformation of line elements)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="principal_directions_sec_strain_chap_en.html#principal_directions_sec_strain_chap_en-5" class="internal"><span class="codenumber">1.7.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="principal_directions_sec_strain_chap_en.html#principal_directions_sec_strain_chap_en-6" class="internal"><span class="codenumber">1.7.2</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="principal_directions_sec_strain_chap_en.html#principal_directions_sec_strain_chap_en-7" class="internal"><span class="codenumber">1.7.3</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="principal_directions_sec_strain_chap_en.html#principal_directions_sec_strain_chap_en-8" class="internal"><span class="codenumber">1.7.4</span> <span class="title">spectral decomposition of the stretch tensor</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="principal_directions_sec_strain_chap_en.html#principal_directions_sec_strain_chap_en-9" class="internal"><span class="codenumber">1.7.5</span> <span class="title">eigenvalues and eigenvectors</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="measures_sec_strain_chap_en.html" class="internal"><span class="codenumber">1.8</span> <span class="title">strain measures</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="measures_sec_strain_chap_en.html#measures_sec_strain_chap_en-2" class="internal"><span class="codenumber">1.8.1</span> <span class="title">Cauchy-Green strain tensor</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="measures_sec_strain_chap_en.html#measures_sec_strain_chap_en-3" class="internal"><span class="codenumber">1.8.2</span> <span class="title">Green-Lagrange strain tensor</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="measures_sec_strain_chap_en.html#measures_sec_strain_chap_en-4" class="internal"><span class="codenumber">1.8.3</span> <span class="title">strain tensors and displacement gradient</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="infinitesimal_sec_strain_chap_en.html" class="internal"><span class="codenumber">1.9</span> <span class="title">the infinitesimal strain tensor</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="infinitesimal_sec_strain_chap_en.html#infinitesimal_sec_strain_chap_en-3" class="internal"><span class="codenumber">1.9.1</span> <span class="title">infinitesimal motions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="exercises_sec_strain_chap_en.html" class="internal"><span class="codenumber">1.10</span> <span class="title">exercises</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_strain_chap_en.html#exercises_sec_strain_chap_en-2" class="internal"><span class="codenumber">1.10.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_strain_chap_en.html#strain_ex_2" class="internal"><span class="codenumber">1.10.2</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_strain_chap_en.html#strain_ex_3" class="internal"><span class="codenumber">1.10.3</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_strain_chap_en.html#exercises_sec_strain_chap_en-5" class="internal"><span class="codenumber">1.10.4</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_strain_chap_en.html#exercises_sec_strain_chap_en-6" class="internal"><span class="codenumber">1.10.5</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_strain_chap_en.html#exercises_sec_strain_chap_en-7" class="internal"><span class="codenumber">1.10.6</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_strain_chap_en.html#exercises_sec_strain_chap_en-8" class="internal"><span class="codenumber">1.10.7</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_strain_chap_en.html#exercises_sec_strain_chap_en-9" class="internal"><span class="codenumber">1.10.8</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_strain_chap_en.html#exercises_sec_strain_chap_en-10" class="internal"><span class="codenumber">1.10.9</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_strain_chap_en.html#exercises_sec_strain_chap_en-11" class="internal"><span class="codenumber">1.10.10</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_strain_chap_en.html#strain_ex_1" class="internal"><span class="codenumber">1.10.11</span> <span class="title"></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="answers_sec_strain_chap_en.html" class="internal"><span class="codenumber">1.11</span> <span class="title">answers to selected exercises</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="answers_sec_strain_chap_en.html#answers_sec_strain_chap_en-2" class="internal"><span class="codenumber">1.11.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="answers_sec_strain_chap_en.html#answers_sec_strain_chap_en-3" class="internal"><span class="codenumber">1.11.2</span> <span class="title"></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="refs_strain_chap_en.html" class="internal"><span class="codenumber">1.12</span> <span class="title">references and suggested readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="stress_chap_en.html" class="internal"><span class="codenumber">2</span> <span class="title">forces, equilibrium and stress</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="basics_sec_stress_chap_en.html" class="internal"><span class="codenumber">2.1</span> <span class="title">the continuity hypothesis</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics_sec_stress_chap_en.html#basics_sec_stress_chap_en-6" class="internal"><span class="codenumber">2.1.1</span> <span class="title">geometric description of the bodies</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics_sec_stress_chap_en.html#basics_sec_stress_chap_en-7" class="internal"><span class="codenumber">2.1.2</span> <span class="title">mass</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="basics_sec_stress_chap_en.html#basics_sec_stress_chap_en-8" class="internal"><span class="codenumber">2.1.3</span> <span class="title">forces</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="basics_sec_stress_chap_en.html#basics_sec_stress_chap_en-8-4" class="internal"><span class="codenumber">2.1.3.1</span> <span class="title">bulk force</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="basics_sec_stress_chap_en.html#basics_sec_stress_chap_en-8-5" class="internal"><span class="codenumber">2.1.3.2</span> <span class="title">traction</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="equilibrium_sec_stress_chap_en.html" class="internal"><span class="codenumber">2.2</span> <span class="title">equilibrium equations</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="stress_sec_stress_chap_en.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Cauchy stress tensor tensor</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="stress_sec_stress_chap_en.html#stress_sec_stress_chap_en-2" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Cauchy’s postulate</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="stress_sec_stress_chap_en.html#stress_sec_stress_chap_en-3" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Cauchy stress Theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="stress_sec_stress_chap_en.html#stress_sec_stress_chap_en-3-3" class="internal"><span class="codenumber">2.3.2.1</span> <span class="title">equilibrium of Cauchy’s tetrahedron</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="stress_sec_stress_chap_en.html#stress_sec_stress_chap_en-3-4" class="internal"><span class="codenumber">2.3.2.2</span> <span class="title">principle of action and reaction</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="stress_sec_stress_chap_en.html#stress_sec_stress_chap_en-3-5" class="internal"><span class="codenumber">2.3.2.3</span> <span class="title">the tensor</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="stress_sec_stress_chap_en.html#stress_sec_stress_chap_en-3-6" class="internal"><span class="codenumber">2.3.2.4</span> <span class="title">differential form of equilibrium equations</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="stress_sec_stress_chap_en.html#stress_sec_stress_chap_en-3-7" class="internal"><span class="codenumber">2.3.2.5</span> <span class="title">symmetry of the tensor</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="stress_analysis_sec_stress_chap_en.html" class="internal"><span class="codenumber">2.4</span> <span class="title">analisys of states of stress</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="stress_analysis_sec_stress_chap_en.html#stress_analysis_sec_stress_chap_en-2" class="internal"><span class="codenumber">2.4.1</span> <span class="title">convention and meaning of the components of stress tensor</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="stress_analysis_sec_stress_chap_en.html#stress_analysis_sec_stress_chap_en-3" class="internal"><span class="codenumber">2.4.2</span> <span class="title">principal stresses and principal directions</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="stress_analysis_sec_stress_chap_en.html#stress_analysis_sec_stress_chap_en-4" class="internal"><span class="codenumber">2.4.3</span> <span class="title">basic states of stress</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="stress_analysis_sec_stress_chap_en.html#stress_analysis_sec_stress_chap_en-4-2" class="internal"><span class="codenumber">2.4.3.1</span> <span class="title">spheric or hydrostatic state</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="stress_analysis_sec_stress_chap_en.html#stress_analysis_sec_stress_chap_en-4-3" class="internal"><span class="codenumber">2.4.3.2</span> <span class="title">state of “pure” traction or compression</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="stress_analysis_sec_stress_chap_en.html#stress_analysis_sec_stress_chap_en-4-4" class="internal"><span class="codenumber">2.4.3.3</span> <span class="title">state of “pure” shear</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="plv_sec_stress_chap_en.html" class="internal"><span class="codenumber">2.5</span> <span class="title">principle of virtual work</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="plv_sec_stress_chap_en.html#plv_sec_stress_chap_en-3" class="internal"><span class="codenumber">2.5.1</span> <span class="title">from the differential formulation to the integral formulation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="plv_sec_stress_chap_en.html#plv_sec_stress_chap_en-4" class="internal"><span class="codenumber">2.5.2</span> <span class="title">mechanical interpretation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="exercises_sec_stress_chap_en.html" class="internal"><span class="codenumber">2.6</span> <span class="title">exercises</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_stress_chap_en.html#exercises_sec_stress_chap_en-2" class="internal"><span class="codenumber">2.6.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_stress_chap_en.html#exercises_sec_stress_chap_en-3" class="internal"><span class="codenumber">2.6.2</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_stress_chap_en.html#exercises_sec_stress_chap_en-4" class="internal"><span class="codenumber">2.6.3</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_stress_chap_en.html#stress_ex_1" class="internal"><span class="codenumber">2.6.4</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_stress_chap_en.html#exercises_sec_stress_chap_en-6" class="internal"><span class="codenumber">2.6.5</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_stress_chap_en.html#exercises_sec_stress_chap_en-7" class="internal"><span class="codenumber">2.6.6</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_stress_chap_en.html#exercises_sec_stress_chap_en-8" class="internal"><span class="codenumber">2.6.7</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_stress_chap_en.html#exercises_sec_stress_chap_en-9" class="internal"><span class="codenumber">2.6.8</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_stress_chap_en.html#stress_ex_2" class="internal"><span class="codenumber">2.6.9</span> <span class="title"></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="answers_sec_stress_chap_en.html" class="internal"><span class="codenumber">2.7</span> <span class="title">answers to some of the proposed exercises</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="answers_sec_stress_chap_en.html#answers_sec_stress_chap_en-2" class="internal"><span class="codenumber">2.7.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="answers_sec_stress_chap_en.html#answers_sec_stress_chap_en-3" class="internal"><span class="codenumber">2.7.2</span> <span class="title"></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="refs_stress_chap_en.html" class="internal"><span class="codenumber">2.8</span> <span class="title">references and suggested readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="elasticity_chap_en.html" class="internal"><span class="codenumber">3</span> <span class="title">elasticity</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="motivations_sec_elasticity_chap_en.html" class="internal"><span class="codenumber">3.1</span> <span class="title">motivation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="motivations_sec_elasticity_chap_en.html#motivations_sec_elasticity_chap_en-3" class="internal"><span class="codenumber">3.1.1</span> <span class="title">static analysis</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="motivations_sec_elasticity_chap_en.html#motivation_static_subsubsec" class="internal"><span class="codenumber">3.1.1.1</span> <span class="title">stress field assumption and solution</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="motivations_sec_elasticity_chap_en.html#motivations_sec_elasticity_chap_en-4" class="internal"><span class="codenumber">3.1.2</span> <span class="title">kinematic analysis</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="motivations_sec_elasticity_chap_en.html#motivations_sec_elasticity_chap_en-5" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Principle of virtual work</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="motivations_sec_elasticity_chap_en.html#motivations_sec_elasticity_chap_en-6" class="internal"><span class="codenumber">3.1.4</span> <span class="title">conclusions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="uniaxial_sec_elasticity_chap_en.html" class="internal"><span class="codenumber">3.2</span> <span class="title">uniaxial states</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="uniaxial_sec_elasticity_chap_en.html#uniaxial_sec_elasticity_chap_en-4" class="internal"><span class="codenumber">3.2.1</span> <span class="title">uniaxial tensile or compressive test</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="uniaxial_sec_elasticity_chap_en.html#shear_subsecuniaxial_sec_elasticity_chap_en" class="internal"><span class="codenumber">3.2.2</span> <span class="title">uniaxial shear test</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="multiaxial_sec_elasticity_chap_en.html" class="internal"><span class="codenumber">3.3</span> <span class="title">multi-axial states</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="multiaxial_sec_elasticity_chap_en.html#multiaxial_sec_elasticity_chap_en-2" class="internal"><span class="codenumber">3.3.1</span> <span class="title">the model as a generalization of Hooke’s law</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="multiaxial_sec_elasticity_chap_en.html#multiaxial_sec_elasticity_chap_en-2-4" class="internal"><span class="codenumber">3.3.1.1</span> <span class="title">properties of the constitutive tensor</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="multiaxial_sec_elasticity_chap_en.html#multiaxial_sec_elasticity_chap_en-3" class="internal"><span class="codenumber">3.3.2</span> <span class="title">experimental observation</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="multiaxial_sec_elasticity_chap_en.html#multiaxial_sec_elasticity_chap_en-4" class="internal"><span class="codenumber">3.3.3</span> <span class="title">the isotropic case</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="multiaxial_sec_elasticity_chap_en.html#multiaxial_sec_elasticity_chap_en-4-4" class="internal"><span class="codenumber">3.3.3.1</span> <span class="title">normal components</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="multiaxial_sec_elasticity_chap_en.html#multiaxial_sec_elasticity_chap_en-4-5" class="internal"><span class="codenumber">3.3.3.2</span> <span class="title">tangential type components</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="multiaxial_sec_elasticity_chap_en.html#multiaxial_sec_elasticity_chap_en-4-6" class="internal"><span class="codenumber">3.3.3.3</span> <span class="title">summary and Voigt notation</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="problem_sec_elasticity_chap_en.html" class="internal"><span class="codenumber">3.4</span> <span class="title">the elastic problem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="problem_sec_elasticity_chap_en.html#problem_sec_elasticity_chap_en-8" class="internal"><span class="codenumber">3.4.1</span> <span class="title">motivation (reprised): the prismatic solid simply stretched</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="problem_sec_elasticity_chap_en.html#bend_problem_sub" class="internal"><span class="codenumber">3.4.2</span> <span class="title">the prismatic solid simply bent</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="problem_sec_elasticity_chap_en.html#bend_problem_sub-4" class="internal"><span class="codenumber">3.4.2.1</span> <span class="title">static analysis</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="problem_sec_elasticity_chap_en.html#bend_problem_sub-5" class="internal"><span class="codenumber">3.4.2.2</span> <span class="title">from stress to displacement solution</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="problem_sec_elasticity_chap_en.html#problem_sec_elasticity_chap_en-10" class="internal"><span class="codenumber">3.4.3</span> <span class="title">summary</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="stretched_beam_sec_elasticity_chap_en.html" class="internal"><span class="codenumber">3.5</span> <span class="title">one-dimensional models: stretched beam</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="stretched_beam_sec_elasticity_chap_en.html#premise_stretched_beam_sec_elasticity_chap" class="internal"><span class="codenumber">3.5.1</span> <span class="title">premise</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="stretched_beam_sec_elasticity_chap_en.html#stretched_beam_sec_elasticity_chap_en-3" class="internal"><span class="codenumber">3.5.2</span> <span class="title">the reference given by the beam axis</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="stretched_beam_sec_elasticity_chap_en.html#stretched_beam_sec_elasticity_chap_en-4" class="internal"><span class="codenumber">3.5.3</span> <span class="title">internal work</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="stretched_beam_sec_elasticity_chap_en.html#stretched_beam_sec_elasticity_chap_en-5" class="internal"><span class="codenumber">3.5.4</span> <span class="title">elastic constitutive law</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="stretched_beam_sec_elasticity_chap_en.html#stretched_beam_sec_elasticity_chap_en-6" class="internal"><span class="codenumber">3.5.5</span> <span class="title">external work</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="stretched_beam_sec_elasticity_chap_en.html#stretched_beam_sec_elasticity_chap_en-7" class="internal"><span class="codenumber">3.5.6</span> <span class="title">virtual work principle and equilibrium equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="stretched_beam_sec_elasticity_chap_en.html#stretched_beam_sec_elasticity_chap_en-8" class="internal"><span class="codenumber">3.5.7</span> <span class="title">summary of the model</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="bent_beam_sec_elasticity_chap_en.html" class="internal"><span class="codenumber">3.6</span> <span class="title">one-dimensional models: bent beam</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="bent_beam_sec_elasticity_chap_en.html#bent_beam_sec_elasticity_chap_en-3" class="internal"><span class="codenumber">3.6.1</span> <span class="title">the reference given by the beam axis</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="bent_beam_sec_elasticity_chap_en.html#bent_beam_sec_elasticity_chap_en-4" class="internal"><span class="codenumber">3.6.2</span> <span class="title">internal work</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="bent_beam_sec_elasticity_chap_en.html#bent_beam_sec_elasticity_chap_en-5" class="internal"><span class="codenumber">3.6.3</span> <span class="title">elastic constitutive law</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="bent_beam_sec_elasticity_chap_en.html#bent_beam_sec_elasticity_chap_en-6" class="internal"><span class="codenumber">3.6.4</span> <span class="title">external work</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="bent_beam_sec_elasticity_chap_en.html#bent_beam_sec_elasticity_chap_en-7" class="internal"><span class="codenumber">3.6.5</span> <span class="title">virtual work principle and equilibrium equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="bent_beam_sec_elasticity_chap_en.html#bent_beam_sec_elasticity_chap_en-8" class="internal"><span class="codenumber">3.6.6</span> <span class="title">summary of the model</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="stretched_beam_applications_sec_elasticity_chap_en.html" class="internal"><span class="codenumber">3.7</span> <span class="title">applications of the stretched beam model</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="stretched_beam_applications_sec_elasticity_chap_en.html#stretched_beam_applications_sec_elasticity_chap_en-2" class="internal"><span class="codenumber">3.7.1</span> <span class="title">beam simply stretched</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="stretched_beam_applications_sec_elasticity_chap_en.html#stretched_beam_applications_sec_elasticity_chap_en-3" class="internal"><span class="codenumber">3.7.2</span> <span class="title">hyperstatic beam with discontinuity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="stretched_beam_applications_sec_elasticity_chap_en.html#stretched_beam_applications_sec_elasticity_chap_en-4" class="internal"><span class="codenumber">3.7.3</span> <span class="title">hyperstatic beam subjected to an homogeneous termal increment</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="stretched_beam_applications_sec_elasticity_chap_en.html#stretched_beam_applications_sec_elasticity_chap_en-5" class="internal"><span class="codenumber">3.7.4</span> <span class="title">hyperstatic beam subjected to a sinusoidal distributed load</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="bent_beam_applications_sec_elasticity_chap_en.html" class="internal"><span class="codenumber">3.8</span> <span class="title">applications of the bent beam model</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="bent_beam_applications_sec_elasticity_chap_en.html#bent_beam_applications_sec_elasticity_chap_en-2" class="internal"><span class="codenumber">3.8.1</span> <span class="title">cantilever beam subjected to a shear force at the free end</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="bent_beam_applications_sec_elasticity_chap_en.html#bent_beam_applications_sec_elasticity_chap_en-3" class="internal"><span class="codenumber">3.8.2</span> <span class="title">cantilever beam subjected to a constant distributed load</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="bent_beam_applications_sec_elasticity_chap_en.html#bent_beam_applications_sec_elasticity_chap_en-4" class="internal"><span class="codenumber">3.8.3</span> <span class="title">supported beam subjected to a constant distributed load</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="exercises_sec_elasticity_chap_en.html" class="internal"><span class="codenumber">3.9</span> <span class="title">exercises</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_elasticity_chap_en.html#exercises_sec_elasticity_chap_en-2" class="internal"><span class="codenumber">3.9.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_elasticity_chap_en.html#exercises_sec_elasticity_chap_en-3" class="internal"><span class="codenumber">3.9.2</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_elasticity_chap_en.html#exercises_sec_elasticity_chap_en-4" class="internal"><span class="codenumber">3.9.3</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_elasticity_chap_en.html#elasticity_ex_1" class="internal"><span class="codenumber">3.9.4</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_elasticity_chap_en.html#exercises_sec_elasticity_chap_en-6" class="internal"><span class="codenumber">3.9.5</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_elasticity_chap_en.html#exercises_sec_elasticity_chap_en-7" class="internal"><span class="codenumber">3.9.6</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_elasticity_chap_en.html#exercises_sec_elasticity_chap_en-8" class="internal"><span class="codenumber">3.9.7</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_elasticity_chap_en.html#exercises_sec_elasticity_chap_en-9" class="internal"><span class="codenumber">3.9.8</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_elasticity_chap_en.html#exercises_sec_elasticity_chap_en-10" class="internal"><span class="codenumber">3.9.9</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_elasticity_chap_en.html#exercises_sec_elasticity_chap_en-11" class="internal"><span class="codenumber">3.9.10</span> <span class="title"></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="answers_sec_elasticity_chap_en.html" class="internal"><span class="codenumber">3.10</span> <span class="title">answers to selected exercises</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="answers_sec_elasticity_chap_en.html#answers_sec_elasticity_chap_en-2" class="internal"><span class="codenumber">3.10.1</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="refs_elasticity_chap_en.html" class="internal"><span class="codenumber">3.11</span> <span class="title">references and suggested readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="rigid_body_kinematics_chap_en.html" class="internal"><span class="codenumber">4</span> <span class="title">kinematics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="description_sec_rigid_body_kinematics_chap_en.html" class="internal"><span class="codenumber">4.1</span> <span class="title">basic kinematic description</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="description_sec_rigid_body_kinematics_chap_en.html#description_sec_rigid_body_kinematics_chap_en-3" class="internal"><span class="codenumber">4.1.1</span> <span class="title">linearization</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="constraints_sec_rigid_body_kinematics_chap_en.html" class="internal"><span class="codenumber">4.2</span> <span class="title">constraints</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="constraints_sec_rigid_body_kinematics_chap_en.html#constraints_sec_rigid_body_kinematics_chap_en-4" class="internal"><span class="codenumber">4.2.1</span> <span class="title">simple external constraints</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="constraints_sec_rigid_body_kinematics_chap_en.html#constraints_sec_rigid_body_kinematics_chap_en-4-2" class="internal"><span class="codenumber">4.2.1.1</span> <span class="title">roller support</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="constraints_sec_rigid_body_kinematics_chap_en.html#constraints_sec_rigid_body_kinematics_chap_en-4-3" class="internal"><span class="codenumber">4.2.1.2</span> <span class="title">rotation lock</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="constraints_sec_rigid_body_kinematics_chap_en.html#constraints_sec_rigid_body_kinematics_chap_en-5" class="internal"><span class="codenumber">4.2.2</span> <span class="title">double external constraints</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="constraints_sec_rigid_body_kinematics_chap_en.html#constraints_sec_rigid_body_kinematics_chap_en-5-2" class="internal"><span class="codenumber">4.2.2.1</span> <span class="title">pinned support</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="constraints_sec_rigid_body_kinematics_chap_en.html#constraints_sec_rigid_body_kinematics_chap_en-5-3" class="internal"><span class="codenumber">4.2.2.2</span> <span class="title">roller support with rotation lock</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="constraints_sec_rigid_body_kinematics_chap_en.html#constraints_sec_rigid_body_kinematics_chap_en-6" class="internal"><span class="codenumber">4.2.3</span> <span class="title">triple external constraints</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="constraints_sec_rigid_body_kinematics_chap_en.html#constraints_sec_rigid_body_kinematics_chap_en-6-2" class="internal"><span class="codenumber">4.2.3.1</span> <span class="title">fixed support</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="constraints_sec_rigid_body_kinematics_chap_en.html#constraints_sec_rigid_body_kinematics_chap_en-7" class="internal"><span class="codenumber">4.2.4</span> <span class="title">internal constraints</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="constraints_sec_rigid_body_kinematics_chap_en.html#constraints_sec_rigid_body_kinematics_chap_en-7-3" class="internal"><span class="codenumber">4.2.4.1</span> <span class="title">internal hinge</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="analysis_sec_rigid_body_kinematics_chap_en.html" class="internal"><span class="codenumber">4.3</span> <span class="title">kinematic analysis</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="analysis_sec_rigid_body_kinematics_chap_en.html#analysis_sec_rigid_body_kinematics_chap_en-2" class="internal"><span class="codenumber">4.3.1</span> <span class="title">kinematic matrix</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="analysis_sec_rigid_body_kinematics_chap_en.html#analysis_sec_rigid_body_kinematics_chap_en-3" class="internal"><span class="codenumber">4.3.2</span> <span class="title">kinematic classification</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="analysis_examples_sec_rigid_body_kinematics_chap_en.html" class="internal"><span class="codenumber">4.4</span> <span class="title">kinematic analysis of simple rigid body systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="analysis_examples_sec_rigid_body_kinematics_chap_en.html#analysis_examples_sec_rigid_body_kinematics_chap_en-2" class="internal"><span class="codenumber">4.4.1</span> <span class="title">simply supported beam</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="analysis_examples_sec_rigid_body_kinematics_chap_en.html#traveL_cinematica_sec" class="internal"><span class="codenumber">4.4.2</span> <span class="title">L shaped beam with 3 roller supports</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="analysis_examples_sec_rigid_body_kinematics_chap_en.html#analysis_examples_sec_rigid_body_kinematics_chap_en-4" class="internal"><span class="codenumber">4.4.3</span> <span class="title">system with three hinges</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="analysis_examples_sec_rigid_body_kinematics_chap_en.html#analysis_examples_sec_rigid_body_kinematics_chap_en-5" class="internal"><span class="codenumber">4.4.4</span> <span class="title">mechanism example</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="exercises_sec_rigid_body_kinematics_chap_en.html" class="internal"><span class="codenumber">4.5</span> <span class="title">exercises</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_rigid_body_kinematics_chap_en.html#exercises_sec_rigid_body_kinematics_chap_en-2" class="internal"><span class="codenumber">4.5.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_rigid_body_kinematics_chap_en.html#exercises_sec_rigid_body_kinematics_chap_en-3" class="internal"><span class="codenumber">4.5.2</span> <span class="title"></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="refs_rigid_body_kinematics_chap_en.html" class="internal"><span class="codenumber">4.6</span> <span class="title">references and suggested readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="rigid_body_statics_chap_en.html" class="internal"><span class="codenumber">5</span> <span class="title">statics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="equilibrium_sec_rigid_body_statics_chap_en.html" class="internal"><span class="codenumber">5.1</span> <span class="title">equilibrium equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="equilibrium_sec_rigid_body_statics_chap_en.html#equilibrium_sec_rigid_body_statics_chap_en-3" class="internal"><span class="codenumber">5.1.1</span> <span class="title">static equilibrium conditions for a point system</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="equilibrium_sec_rigid_body_statics_chap_en.html#equilibrium_sec_rigid_body_statics_chap_en-4" class="internal"><span class="codenumber">5.1.2</span> <span class="title">scalar form of equilibrium equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="equilibrium_sec_rigid_body_statics_chap_en.html#equilibrium_sec_rigid_body_statics_chap_en-5" class="internal"><span class="codenumber">5.1.3</span> <span class="title">introduction of rigid body kinematics</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="equilibrium_sec_rigid_body_statics_chap_en.html#equilibrium_sec_rigid_body_statics_chap_en-6" class="internal"><span class="codenumber">5.1.4</span> <span class="title">moment of a force</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="planecase_sec_rigid_body_statics_chap_en.html" class="internal"><span class="codenumber">5.2</span> <span class="title">2D case</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="constraints_sec_rigid_body_statics_chap_en.html" class="internal"><span class="codenumber">5.3</span> <span class="title">constraints</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="constraints_sec_rigid_body_statics_chap_en.html#constraints_sec_rigid_body_statics_chap_en-4" class="internal"><span class="codenumber">5.3.1</span> <span class="title">absence of constraint</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="constraints_sec_rigid_body_statics_chap_en.html#constraints_sec_rigid_body_statics_chap_en-5" class="internal"><span class="codenumber">5.3.2</span> <span class="title">simple constraints</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="constraints_sec_rigid_body_statics_chap_en.html#constraints_sec_rigid_body_statics_chap_en-5-2" class="internal"><span class="codenumber">5.3.2.1</span> <span class="title">roller support</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="constraints_sec_rigid_body_statics_chap_en.html#constraints_sec_rigid_body_statics_chap_en-5-3" class="internal"><span class="codenumber">5.3.2.2</span> <span class="title">rotation lock</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="constraints_sec_rigid_body_statics_chap_en.html#constraints_sec_rigid_body_statics_chap_en-6" class="internal"><span class="codenumber">5.3.3</span> <span class="title">double constraints</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="constraints_sec_rigid_body_statics_chap_en.html#constraints_sec_rigid_body_statics_chap_en-6-2" class="internal"><span class="codenumber">5.3.3.1</span> <span class="title">hinge support</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="constraints_sec_rigid_body_statics_chap_en.html#constraints_sec_rigid_body_statics_chap_en-6-3" class="internal"><span class="codenumber">5.3.3.2</span> <span class="title">roller support with rotation lock</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="constraints_sec_rigid_body_statics_chap_en.html#constraints_sec_rigid_body_statics_chap_en-7" class="internal"><span class="codenumber">5.3.4</span> <span class="title">triple constraints</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="constraints_sec_rigid_body_statics_chap_en.html#constraints_sec_rigid_body_statics_chap_en-7-2" class="internal"><span class="codenumber">5.3.4.1</span> <span class="title">fixed support</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="constraints_sec_rigid_body_statics_chap_en.html#constraints_sec_rigid_body_statics_chap_en-8" class="internal"><span class="codenumber">5.3.5</span> <span class="title">summary</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="constraints_sec_rigid_body_statics_chap_en.html#constraints_sec_rigid_body_statics_chap_en-9" class="internal"><span class="codenumber">5.3.6</span> <span class="title">internal constraints</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="free_body_sec_rigid_body_statics_chap_en.html" class="internal"><span class="codenumber">5.4</span> <span class="title">free body diagrams</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="free_body_sec_rigid_body_statics_chap_en.html#free_body_video_rigid_body_statics_chap_en" class="internal"><span class="codenumber">5.4.1</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="analysis_sec_rigid_body_statics_chap_en.html" class="internal"><span class="codenumber">5.5</span> <span class="title">static analysis</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="analysis_sec_rigid_body_statics_chap_en.html#analysis_sec_rigid_body_statics_chap_en-3" class="internal"><span class="codenumber">5.5.1</span> <span class="title">static matrix</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="analysis_sec_rigid_body_statics_chap_en.html#analysis_sec_rigid_body_statics_chap_en-4" class="internal"><span class="codenumber">5.5.2</span> <span class="title">static classification</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="analysis_examples_sec_rigid_body_statics_chap_en.html" class="internal"><span class="codenumber">5.6</span> <span class="title">application of static analysis to systems of bodies</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="analysis_examples_sec_rigid_body_statics_chap_en.html#analysis_examples_sec_rigid_body_statics_chap_en-2" class="internal"><span class="codenumber">5.6.1</span> <span class="title">cantilever beam</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="analysis_examples_sec_rigid_body_statics_chap_en.html#analysis_examples_sec_rigid_body_statics_chap_en-3" class="internal"><span class="codenumber">5.6.2</span> <span class="title">supported beam</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="analysis_examples_sec_rigid_body_statics_chap_en.html#analysis_examples_sec_rigid_body_statics_chap_en-4" class="internal"><span class="codenumber">5.6.3</span> <span class="title">simple frame</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="analysis_examples_sec_rigid_body_statics_chap_en.html#analysis_examples_sec_rigid_body_statics_chap_en-5" class="internal"><span class="codenumber">5.6.4</span> <span class="title">two bodies system</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sollecitazioni_sec_rigid_body_statics_chap_en.html" class="internal"><span class="codenumber">5.7</span> <span class="title">generalized section forces</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sollecitazioni_sec_rigid_body_statics_chap_en.html#sollecitazioni_sec_rigid_body_statics_chap_en-5" class="internal"><span class="codenumber">5.7.1</span> <span class="title">generalized section forces sign convention</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sollecitazioni_sec_rigid_body_statics_chap_en.html#sollecitazioni_sec_rigid_body_statics_chap_en-6" class="internal"><span class="codenumber">5.7.2</span> <span class="title">distributed loads</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="indefinte_sec_rigid_body_statics_chap_en.html" class="internal"><span class="codenumber">5.8</span> <span class="title">2D beam equilibrium differential equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="indefinte_sec_rigid_body_statics_chap_en.html#indefinte_sec_rigid_body_statics_chap_en-3" class="internal"><span class="codenumber">5.8.1</span> <span class="title">formulation of the problem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="indefinte_sec_rigid_body_statics_chap_en.html#indefinte_sec_rigid_body_statics_chap_en-4" class="internal"><span class="codenumber">5.8.2</span> <span class="title">equilibrium conditions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="indefinte_sec_rigid_body_statics_chap_en.html#indefinte_sec_rigid_body_statics_chap_en-5" class="internal"><span class="codenumber">5.8.3</span> <span class="title">general integrals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="indefinte_sec_rigid_body_statics_chap_en.html#indefinte_sec_rigid_body_statics_chap_en-6" class="internal"><span class="codenumber">5.8.4</span> <span class="title">general integrals for constant distributed loads</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en.html" class="internal"><span class="codenumber">5.9</span> <span class="title">generalized section forces calculation and diagrams</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en.html#calcolo_sollecitazioni_sec_rigid_body_statics_chap_en-4" class="internal"><span class="codenumber">5.9.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en.html#calcolo_sollecitazioni_sec_rigid_body_statics_chap_en-5" class="internal"><span class="codenumber">5.9.2</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en.html#calcolo_sollecitazioni_sec_rigid_body_statics_chap_en-6" class="internal"><span class="codenumber">5.9.3</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_en.html#calcolo_sollecitazioni_sec_rigid_body_statics_chap_en-7" class="internal"><span class="codenumber">5.9.4</span> <span class="title"></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="exercises_sec_rigid_body_statics_chap_en.html" class="internal"><span class="codenumber">5.10</span> <span class="title">exercises</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_rigid_body_statics_chap_en.html#exercises_sec_rigid_body_statics_chap_en-2" class="internal"><span class="codenumber">5.10.1</span> <span class="title"></span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="multiaxial_sec_elasticity_chap_en"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">multi-axial states</span>
+</h2>
+<section class="subsection" id="multiaxial_sec_elasticity_chap_en-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">the model as a generalization of Hooke’s law</span>
+</h3>
+<div class="para logical" id="multiaxial_sec_elasticity_chap_en-2-2">
+<div class="para">The uniaxial states of traction/compression and shear highlighted two different experimental parameters, the Young <span class="process-math">\(E \)</span> modulus and the shear modulus <span class="process-math">\(G \text{,}\)</span> usable as proportionality coefficients in the definition of the elastic relationship existing between the stress component and its strain component. In order to extend this approach to multi-axial states, the definition of elastic relationships has to be capable to describe more complex situations in which the stress components, in general, do not depend only on the corresponding strain components. Therefore the following proportionality coefficients are introduced <figure class="figure figure-like" id="multiaxial_sec_elasticity_chap_en-2-2-3"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/C_ijhk_en.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" data-description="Figure 3.3.1"><a href="#multiaxial_sec_elasticity_chap_en-2-2-3" title="Copy heading and permalink for Figure 3.3.1" aria-label="Copy heading and permalink for Figure 3.3.1">🔗</a></div></figcaption></figure> between the generic stress component <span class="process-math">\(\sigma_{ij} \)</span> and the generic strain component <span class="process-math">\(\varepsilon_ {hk} \text{.}\)</span> So for each of the 9 stress components (<span class="process-math">\(i, \, j = 1 \dots 3 \)</span>) it will be necessary to define as many coefficients of proportionality as the strain components, which are also 9 (<span class="process-math">\(h, \, k = 1 \dots 3 \)</span>). Each contribution given by the generic strain component can be added together by providing</div>
+<div class="displaymath process-math" id="multiaxial_sec_elasticity_chap_en-2-2-8">
+\begin{align*}
+\sigma_{ij} \amp = \mathbb{C}_{ij11}\,\varepsilon_{11} + \mathbb{C}_{ij12}\,\varepsilon_{12} + \mathbb{C}_{ij13}\,\varepsilon_{13} \,+ \\
+\amp + \mathbb{C}_{ij21}\,\varepsilon_{21} + \mathbb{C}_{ij22}\,\varepsilon_{22} + \mathbb{C}_{ij23}\,\varepsilon_{23} \,+ \\
+\amp + \mathbb{C}_{ij31}\,\varepsilon_{31} + \mathbb{C}_{ij32}\,\varepsilon_{32} + \mathbb{C}_{ij33}\,\varepsilon_{33}\,. 
+\end{align*}
+</div>
+<div class="para">There are therefore 9 proportionality coefficients for each of the 9 stress components for a total of 81 coefficients. This relationship can be expressed in compact form as like</div>
+<div class="displaymath process-math" id="components_costitutivo_continuo_eq">
+\begin{equation}
+\sigma_{ij} = \sum_{h,k=1 \dots 3}\mathbb{C}_{ijhk}\varepsilon_{hk} \tag{3.3.1}
+\end{equation}
+</div>
+<div class="para">or, in tensorial form, by writing</div>
+<div class="displaymath process-math" id="costitutivo_continuo_eq">
+\begin{equation}
+\tens{\sigma} = \tensQ{C}:\tens{\varepsilon} \tag{3.3.2}
+\end{equation}
+</div>
+<div class="para">relationship that highlights a new type of linear transformation that associates the generic strain tensor with the corresponding stress tensor. In this case, the linear operator involved is given by the 4th order tensor <span class="process-math">\(\tensQ{C} \text{,}\)</span> the tensor which internally contains the above 81 coefficients.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#multiaxial_sec_elasticity_chap_en-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="multiaxial_sec_elasticity_chap_en-2-3">
+<div class="para">It is also assumed the possibility of defining elastic energy for multi-axial states as follows</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/costitutivo_continuo_eq.html" id="multiaxial_sec_elasticity_chap_en-2-3-1">
+\begin{equation}
+\Phi = \frac{1}{2} \tens{\sigma}:\tens{\varepsilon}\,,\tag{3.3.3}
+\end{equation}
+</div>
+<div class="para">quantity which, as for the uniaxial case, represents half of the internal work, that is the work carried out by the stress on the strain. Elastic energy, on the basis of the constitutive relationship <a href="multiaxial_sec_elasticity_chap_en.html#costitutivo_continuo_eq" class="xref" data-knowl="./knowl/xref/costitutivo_continuo_eq.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.2">(3.3.2)</a>, can be rewritten as follows</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/costitutivo_continuo_eq.html" id="energia_continuo_eq">
+\begin{equation}
+\Phi = \frac{1}{2} \left( \tensQ{C}:\tens{\varepsilon} \right):\tens{\varepsilon}\,.\tag{3.3.4}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#multiaxial_sec_elasticity_chap_en-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="subsubsection" id="multiaxial_sec_elasticity_chap_en-2-4"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">properties of the constitutive tensor</span>
+</h4>
+<ul class="disc" id="multiaxial_sec_elasticity_chap_en-2-4-2">
+<li id="multiaxial_sec_elasticity_chap_en-2-4-2-1">
+<div class="para" id="p-derived-multiaxial_sec_elasticity_chap_en-2-4-2-1">The definition of energy, Eq. <a href="multiaxial_sec_elasticity_chap_en.html#energia_continuo_eq" class="xref" data-knowl="./knowl/xref/energia_continuo_eq.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.4">(3.3.4)</a>, and the condition of non-negativity of internal work imply that the constitutive tensor must necessarily be <em class="alert">defined positive</em>, that is<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/energia_continuo_eq.html" id="multiaxial_sec_elasticity_chap_en-2-4-2-1-3">
+\begin{equation*}
+\left(\tensQ{C}:\tens{\varepsilon}\right):\tens{\varepsilon} \geq 0
+\end{equation*}
+</div>and the only case which is null occurs when <span class="process-math">\(\tens{\varepsilon} = \tens{0} \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#multiaxial_sec_elasticity_chap_en-2-4-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="multiaxial_sec_elasticity_chap_en-2-4-2-2">
+<div class="para" id="p-derived-multiaxial_sec_elasticity_chap_en-2-4-2-2">By definition of elastic potential, the relationship between generic stress component <span class="process-math">\(\sigma_{ij} \)</span> and elastic energy can be written as<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/components_costitutivo_continuo_eq.html" id="multiaxial_sec_elasticity_chap_en-2-4-2-2-2">
+\begin{equation}
+\sigma_{ij} = \frac{\partial \Phi}{\partial \varepsilon_{ij}}\,.\tag{3.3.5}
+\end{equation}
+</div>Further deriving this relationship and using relationship <a href="multiaxial_sec_elasticity_chap_en.html#components_costitutivo_continuo_eq" class="xref" data-knowl="./knowl/xref/components_costitutivo_continuo_eq.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.1">(3.3.1)</a> we obtain<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/components_costitutivo_continuo_eq.html" id="multiaxial_sec_elasticity_chap_en-2-4-2-2-4">
+\begin{equation*}
+\frac{\partial}{\partial \varepsilon_{hk}} \left(\frac{\partial \Phi}{\partial \varepsilon_{ij}}\right) =
+\frac{\partial}{\partial \varepsilon_{hk}} \left(\sigma_{ij}\right) =
+\frac{\partial}{\partial \varepsilon_{hk}} \left(\sum_{h,k=1 \dots 3}\mathbb{C}_{ijhk}\varepsilon_{hk} \right) =
+\mathbb{C}_{ijhk} 
+\,.
+\end{equation*}
+</div>Therefore the generic coefficient of the constitutive tensor is related to the elastic energy through relationship<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/components_costitutivo_continuo_eq.html" id="multiaxial_sec_elasticity_chap_en-2-4-2-2-5">
+\begin{equation}
+\mathbb{C}_{ijhk} = \frac{\partial}{\partial \varepsilon_{hk}} \left(\frac{\partial \Phi}{\partial \varepsilon_{ij}}\right)\,.\tag{3.3.6}
+\end{equation}
+</div>Observing that by swapping the derivation order the result does not change<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/components_costitutivo_continuo_eq.html" id="multiaxial_sec_elasticity_chap_en-2-4-2-2-6">
+\begin{equation*}
+\mathbb{C}_{ijhk}
+= \frac{\partial}{\partial \varepsilon_{hk}} \left(\frac{\partial \Phi}{\partial \varepsilon_{ij}}\right)
+= \frac{\partial}{\partial \varepsilon_{ij}} \left(\frac{\partial \Phi}{\partial \varepsilon_{hk}}\right)
+= \frac{\partial}{\partial \varepsilon_{ij}} \left(\sigma_{hk} \right)
+= \mathbb{C}_{hkij}\,,
+\end{equation*}
+</div>followin condition is fulfilled<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/components_costitutivo_continuo_eq.html" id="multiaxial_sec_elasticity_chap_en-2-4-2-2-7">
+\begin{equation}
+\mathbb{C}_{ijhk} = \mathbb{C}_{hkij}\tag{3.3.7}
+\end{equation}
+</div>known as <em class="alert">major symmetry</em> of the constitutive tensor <span class="process-math">\(\tensQ{C} \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#multiaxial_sec_elasticity_chap_en-2-4-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="multiaxial_sec_elasticity_chap_en-2-4-2-3">
+<div class="para" id="p-derived-multiaxial_sec_elasticity_chap_en-2-4-2-3">The symmetry of the stress components allows to write<div class="displaymath process-math" id="multiaxial_sec_elasticity_chap_en-2-4-2-3-1">
+\begin{equation}
+\mathbb{C}_{ijhk} = \mathbb{C}_{jihk}\,,\tag{3.3.8}
+\end{equation}
+</div>while the symmetry condition of the strain components provides<div class="displaymath process-math" id="multiaxial_sec_elasticity_chap_en-2-4-2-3-2">
+\begin{equation}
+\mathbb{C}_{ijhk} = \mathbb{C}_{ijkh}\,.\tag{3.3.9}
+\end{equation}
+</div>These conditions are called <em class="alert">minor symmetries</em> of the tensor <span class="process-math">\(\tensQ{C} \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#multiaxial_sec_elasticity_chap_en-2-4-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="multiaxial_sec_elasticity_chap_en-2-4-2-4">
+<div class="para" id="p-derived-multiaxial_sec_elasticity_chap_en-2-4-2-4">The symmetry conditions described above reduce the number of effectively independent coefficients necessary to define a generic elastic tensor from 81 to 21.</div>
+<div class="autopermalink" data-description="Item"><a href="#multiaxial_sec_elasticity_chap_en-2-4-2-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Subsubsection 3.3.1.1: properties of the constitutive tensor"><a href="#multiaxial_sec_elasticity_chap_en-2-4" title="Copy heading and permalink for Subsubsection 3.3.1.1: properties of the constitutive tensor" aria-label="Copy heading and permalink for Subsubsection 3.3.1.1: properties of the constitutive tensor">🔗</a></div></section><div class="autopermalink" data-description="Subsection 3.3.1: the model as a generalization of Hooke’s law"><a href="#multiaxial_sec_elasticity_chap_en-2" title="Copy heading and permalink for Subsection 3.3.1: the model as a generalization of Hooke’s law" aria-label="Copy heading and permalink for Subsection 3.3.1: the model as a generalization of Hooke’s law">🔗</a></div></section><section class="subsection" id="multiaxial_sec_elasticity_chap_en-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">experimental observation</span>
+</h3>
+<div class="para" id="multiaxial_sec_elasticity_chap_en-3-2">The main phenomenon highlighted by the experimental observation of multiaxial stress / strain states is that the application of a load in an assigned direction determines not only a deformation along that direction but also along the directions transverse to it. This phenomenon, as shown also in the following animation, is observed in particular for the states of traction or compression and is called <em class="alert">Poisson effect</em>.<div class="autopermalink" data-description="Paragraph"><a href="#multiaxial_sec_elasticity_chap_en-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="multiaxial_sec_elasticity_chap_en-3-3">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/guKqTXOLUyc?&amp;modestbranding=1&amp;rel=0" id="multiaxial_sec_elasticity_chap_en-3-3-1-1"></iframe></div></div></div></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#multiaxial_sec_elasticity_chap_en-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="multiaxial_sec_elasticity_chap_en-3-4">
+<div class="para">For simpler materials Poisson effect is modeled through the introduction of a single characteristic parameter of the material, known as the <em class="emphasis">Poisson coefficient</em>, which links the generic transverse strain to the strain relative to the direction of the applied load. For example, if a stress <span class="process-math">\(\sigma_{11} \)</span> is applied, the strain along the direction of the load will take on a generic value</div>
+<div class="displaymath process-math" id="multiaxial_sec_elasticity_chap_en-3-4-3">
+\begin{equation*}
+\varepsilon_{11}\,,
+\end{equation*}
+</div>
+<div class="para">while the strains in the transverse directions will be</div>
+<div class="displaymath process-math" id="multiaxial_sec_elasticity_chap_en-3-4-4">
+\begin{equation*}
+\varepsilon_{22} = -\nu\,\varepsilon_{11}\,,\qquad
+\varepsilon_{33} = -\nu\,\varepsilon_{11}\,,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\nu\)</span> is precisely the Poisson coefficient.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#multiaxial_sec_elasticity_chap_en-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 3.3.2: experimental observation"><a href="#multiaxial_sec_elasticity_chap_en-3" title="Copy heading and permalink for Subsection 3.3.2: experimental observation" aria-label="Copy heading and permalink for Subsection 3.3.2: experimental observation">🔗</a></div></section><section class="subsection" id="multiaxial_sec_elasticity_chap_en-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">the isotropic case</span>
+</h3>
+<div class="para" id="multiaxial_sec_elasticity_chap_en-4-2">The experimental parameters encountered so far are Young’s modulus, <span class="process-math">\(E \text{,}\)</span> the shear modulus, <span class="process-math">\(G \)</span> and the Poisson’s ratio, <span class="process-math">\(\ nu \)</span> . It has also been said, see previous section, that the number of coefficients strictly necessary to define the constitutive tensor is equal to 21. It therefore seems that the experimental results discussed so far are very insufficient to reach a complete definition of the elastic relationship. Fortunately, most of the materials used in the usual engineering applications are <em class="emphasis">isotropic</em>. That is, they have the property that, given a block of material and any direction is chosen to <em class="emphasis">cross it</em> by means of experimental tests, the same mechanical response is always detected. For this class of materials, applicable to metals, glass, polymers, soils and, in some ways, even cement or bituminous conglomerates, the constitutive characterization can be carried out by <em class="alert">only 2 experimental parameters</em>.<div class="autopermalink" data-description="Paragraph"><a href="#multiaxial_sec_elasticity_chap_en-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="multiaxial_sec_elasticity_chap_en-4-3">
+<div class="para">A couple of experimental parameters, although not the only pair, is given by the pair formed by Young’s modulus parameters, <span class="process-math">\(E \)</span> and Poisson’s ratio, <span class="process-math">\(\nu \text{.}\)</span> The shear modulus <span class="process-math">\(G \)</span> depends in fact on <span class="process-math">\(E \)</span> and <span class="process-math">\(\nu \)</span> according to the following formula</div>
+<div class="displaymath process-math" id="multiaxial_sec_elasticity_chap_en-4-3-6">
+\begin{equation}
+G = \frac{E}{2\left(1+\nu\right)}\,.\tag{3.3.10}
+\end{equation}
+</div>
+<div class="para">Given this, it is convenient to discuss the elastic and isotropic material behavior by keeping the strain/stress components of the normal type and the tangential type components separate since, for isotropic materials, there is no coupling and therefore the coefficients of the type</div>
+<div class="displaymath process-math" id="multiaxial_sec_elasticity_chap_en-4-3-7">
+\begin{equation*}
+\mathbb{C}_{iihk}\;\text{con}\; h \neq k
+\end{equation*}
+</div>
+<div class="para">are however null.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#multiaxial_sec_elasticity_chap_en-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="subsubsection" id="multiaxial_sec_elasticity_chap_en-4-4"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">normal components</span>
+</h4>
+<div class="para" id="multiaxial_sec_elasticity_chap_en-4-4-2">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12%;margin-right:12%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/u9K_lV-aW2Y?&amp;modestbranding=1&amp;rel=0" id="multiaxial_sec_elasticity_chap_en-4-4-2-1-1"></iframe></div></div></div></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#multiaxial_sec_elasticity_chap_en-4-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="multiaxial_sec_elasticity_chap_en-4-4-3">
+<div class="para">The elastic relationship for normal components can be formulated as follows</div>
+<div class="displaymath process-math" id="isotropic_normal_eq">
+\begin{equation}
+\begin{array}{rcrcrcr}
+\varepsilon_{11} = \amp + \amp \frac{\displaystyle\sigma_{11}}{\displaystyle E} \amp-\amp \nu\,\frac{\displaystyle\sigma_{22}}{\displaystyle E} \amp-\amp \nu\,\frac{\displaystyle \sigma_{33}}{\displaystyle E}\,,\\
+\varepsilon_{22} = \amp - \amp \nu\,\frac{\displaystyle \sigma_{11}}{\displaystyle E} \amp+\amp \frac{\displaystyle \sigma_{22}}{\displaystyle E} \amp-\amp \nu\,\frac{\displaystyle \sigma_{33}}{\displaystyle E}\,,\\
+\varepsilon_{33} = \amp - \amp \nu\,\frac{\displaystyle \sigma_{11}}{\displaystyle E} \amp-\amp \nu\,\frac{\displaystyle \sigma_{22}}{\displaystyle E} \amp+\amp \frac{\displaystyle \sigma_{33}}{\displaystyle E}\,.
+\end{array}\tag{3.3.11}
+\end{equation}
+</div>
+<div class="para">It is observed that this result constitutes the inverse form of the elastic relationship for the part relating to the normal components. To obtain the elastic coefficients that proportionally correlate the stress components to the strain components, it is better to visualize the relationship in the following matrix form</div>
+<div class="displaymath process-math" id="multiaxial_sec_elasticity_chap_en-4-4-3-2">
+\begin{equation*}
+\left[\begin{array}{c}\varepsilon_{11} \\ \varepsilon_{22} \\ \varepsilon_{33}\end{array}\right] =
+\left[\begin{array}{ccc}
+\frac{\displaystyle 1}{\displaystyle E} \amp -\frac{\displaystyle \nu}{\displaystyle E} \amp -\frac{\displaystyle \nu}{\displaystyle E} \\
+-\frac{\displaystyle \nu}{\displaystyle E} \amp \frac{\displaystyle 1}{\displaystyle E} \amp -\frac{\displaystyle \nu}{\displaystyle E} \\
+-\frac{\displaystyle \nu}{\displaystyle E} \amp -\frac{\displaystyle \nu}{\displaystyle E} \amp \frac{\displaystyle 1}{\displaystyle E}  \\
+\end{array}\right]
+\left[\begin{array}{c}\sigma_{11} \\ \sigma_{22} \\ \sigma_{33}\end{array}\right]
+\end{equation*}
+</div>
+<div class="para">and use the following MATLAB® instructions to invert the highlighted matrix. <figure class="listing figure-like" id="multiaxial_sec_elasticity_chap_en-4-4-3-4"><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" data-description="Listing 3.3.2"><a href="#multiaxial_sec_elasticity_chap_en-4-4-3-4" title="Copy heading and permalink for Listing 3.3.2" aria-label="Copy heading and permalink for Listing 3.3.2">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="console clipboardable"><span class="prompt unselectable">$ </span><b>syms E ni;
+M = [1/E -ni/E -ni/E; -ni/E 1/E  -ni/E; -ni/E -ni/E 1/E]
+inv(M)
+</b></pre></div></div></figure> So we get</div>
+<div class="displaymath process-math" id="multiaxial_sec_elasticity_chap_en-4-4-3-5">
+\begin{equation}
+\left[\begin{array}{c}\sigma_{11} \\ \sigma_{22} \\ \sigma_{33}\end{array}\right] =
+\frac{E}{(1+\nu)(1-2\nu)}
+\left[\begin{array}{ccc}
+(1-\nu) \amp \nu \amp \nu \\
+\nu \amp (1-\nu) \amp \nu \\
+\nu \amp \nu \amp (1-\nu) 
+\end{array}\right]
+\left[\begin{array}{c}\varepsilon_{11} \\ \varepsilon_{22} \\ \varepsilon_{33}\end{array}\right]\,.\tag{3.3.12}
+\end{equation}
+</div>
+<div class="para">Result that allows to identify the non-zero constitutive coefficients relative to the normal components of the stress tensor, that is</div>
+<div class="displaymath process-math" id="multiaxial_sec_elasticity_chap_en-4-4-3-6">
+\begin{gather}
+\mathbb{C}_{1111} = \mathbb{C}_{2222} = \mathbb{C}_{3333} = \frac{E(1-\nu)}{(1+\nu)(1-2\nu)}\,,\tag{3.3.13}\\
+\mathbb{C}_{1122} = \mathbb{C}_{1133} = \mathbb{C}_{2233} = \frac{E\,\nu}{(1+\nu)(1-2\nu)}\,,\tag{3.3.14}\\
+\mathbb{C}_{2211} = \mathbb{C}_{1122}\,,\tag{3.3.15}\\
+\mathbb{C}_{3311} = \mathbb{C}_{1133}\,,\tag{3.3.16}\\
+\mathbb{C}_{3322} = \mathbb{C}_{2233}\,.\tag{3.3.17}
+\end{gather}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#multiaxial_sec_elasticity_chap_en-4-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsubsection 3.3.3.1: normal components"><a href="#multiaxial_sec_elasticity_chap_en-4-4" title="Copy heading and permalink for Subsubsection 3.3.3.1: normal components" aria-label="Copy heading and permalink for Subsubsection 3.3.3.1: normal components">🔗</a></div></section><section class="subsubsection" id="multiaxial_sec_elasticity_chap_en-4-5"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.3.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">tangential type components</span>
+</h4>
+<div class="para logical" id="multiaxial_sec_elasticity_chap_en-4-5-2">
+<div class="para">For tangential components, in addition to the absence of coupling with normal components, it is not necessary to model any reciprocal coupling, therefore for all tangential components the uniaxial law already seen in <a href="uniaxial_sec_elasticity_chap_en.html#shear_subsecuniaxial_sec_elasticity_chap_en" class="internal" title="Subsection 3.2.2: uniaxial shear test">Subsection 3.2.2</a> can be assumed</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/shear_subsecuniaxial_sec_elasticity_chap_en.html" id="multiaxial_sec_elasticity_chap_en-4-5-2-2">
+\begin{equation}
+\begin{array}{rr}
+\gamma_{23} = 2\,\varepsilon_{23} = \amp \frac{\displaystyle \sigma_{23}}{\displaystyle G}\,,\\ 
+\gamma_{31} = 2\,\varepsilon_{31} = \amp \frac{\displaystyle \sigma_{31}}{\displaystyle G}\,,\\ 
+\gamma_{12} = 2\,\varepsilon_{12} = \amp \frac{\displaystyle \sigma_{12}}{\displaystyle G}\,.
+\end{array}\tag{3.3.18}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#multiaxial_sec_elasticity_chap_en-4-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/shear_subsecuniaxial_sec_elasticity_chap_en.html" id="multiaxial_sec_elasticity_chap_en-4-5-3">
+\begin{equation}
+\sigma_{23} = 2\,G\,\varepsilon_{23}\,,\quad
+\sigma_{31} = 2\,G\,\varepsilon_{31}\,,\quad
+\sigma_{12} = 2\,G\,\varepsilon_{12}\,,\tag{3.3.19}
+\end{equation}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/shear_subsecuniaxial_sec_elasticity_chap_en.html" id="multiaxial_sec_elasticity_chap_en-4-5-4">
+\begin{equation}
+\mathbb{C}_{2323} = \mathbb{C}_{3131} = \mathbb{C}_{1212} = 2\,G\,.\tag{3.3.20}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Subsubsection 3.3.3.2: tangential type components"><a href="#multiaxial_sec_elasticity_chap_en-4-5" title="Copy heading and permalink for Subsubsection 3.3.3.2: tangential type components" aria-label="Copy heading and permalink for Subsubsection 3.3.3.2: tangential type components">🔗</a></div></section><section class="subsubsection" id="multiaxial_sec_elasticity_chap_en-4-6"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.3.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">summary and Voigt notation</span>
+</h4>
+<div class="para" id="multiaxial_sec_elasticity_chap_en-4-6-2">In the previous discussion, the elastic law was presented keeping the description of the part concerning the normal components separate from that relating to the tangential components. This certainly to better highlight the lack of certain couplings between stress components and strain components, but also for the impossibility of representing in a compact way the components of a 4th tensor such as the constitutive tensor. In fact, while for the tensors of the 2nd order the representation of all the components is realized through the associated matrix, for a 4th tensor there is no similar representation.<div class="autopermalink" data-description="Paragraph"><a href="#multiaxial_sec_elasticity_chap_en-4-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="multiaxial_sec_elasticity_chap_en-4-6-3">
+<div class="para">A summary of what described above can be obtained using the <em class="emphasis">Voigt notation</em> which uses 6-component vectors to represent 2nd order symmetric tensors, while for the corresponding 4th order tensors<details class="ptx-footnote" aria-live="polite" id="multiaxial_sec_elasticity_chap_en-4-6-3-2"><summary class="ptx-footnote__number" title="Footnote 3.3.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="multiaxial_sec_elasticity_chap_en-4-6-3-2">Corresponding in the sense of 4th order tensors which map 2nd symmetric tensors into 2nd order symmetric tensors.</div></details> 6<span class="process-math">\(\times\)</span>6 matrices. Therefore the constitutive elastic law can be written as follows</div>
+<div class="displaymath process-math" id="multiaxial_sec_elasticity_chap_en-4-6-3-4">
+\begin{equation}
+\left[\begin{array}{c}\sigma_{11} \\ \sigma_{22} \\ \sigma_{33} \\ \sigma_{23} \\ \sigma_{31} \\ \sigma_{12}\end{array}\right] =
+\frac{E}{(1+\nu)(1-2\nu)}
+\left[\begin{array}{cccccc}
+(1-\nu) \amp \nu \amp \nu \amp 0 \amp 0 \amp 0\\
+\nu \amp (1-\nu) \amp \nu \amp 0 \amp 0 \amp 0\\
+\nu \amp \nu \amp (1-\nu) \amp 0 \amp 0 \amp 0\\
+0 \amp 0 \amp 0 \amp (1-2\nu)/2 \amp 0 \amp 0 \\
+0 \amp 0 \amp 0 \amp 0 \amp (1-2\nu)/2 \amp 0 \\
+0 \amp 0 \amp 0 \amp 0 \amp 0 \amp (1-2\nu)/2
+\end{array}\right]
+\left[\begin{array}{c}\varepsilon_{11} \\ \varepsilon_{22} \\ \varepsilon_{33} \\  2\,\varepsilon_{23} \\  2\,\varepsilon_{31} \\  2\,\varepsilon_{12}\end{array}\right]\,.\tag{3.3.21}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#multiaxial_sec_elasticity_chap_en-4-6-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="multiaxial_sec_elasticity_chap_en-4-6-4">
+<div class="para">For completeness, a summary of the elastic and isotropic law is also provided using the tensor format.</div>
+<div class="displaymath process-math" id="multiaxial_sec_elasticity_chap_en-4-6-4-1">
+\begin{equation}
+\tens{\sigma} = \tensQ{C}:\tens{\varepsilon} \tag{3.3.22}
+\end{equation}
+</div>
+<div class="para">where the non-zero components of tensor <span class="process-math">\(\tensQ{C}\)</span> are</div>
+<div class="displaymath process-math" id="multiaxial_sec_elasticity_chap_en-4-6-4-3">
+\begin{align}
+\amp\mathbb{C}_{1111} = \mathbb{C}_{2222} = \mathbb{C}_{3333} = \frac{E(1-\nu)}{(1+\nu)(1-2\nu)}\,,\tag{3.3.23}\\
+\amp\mathbb{C}_{1122} = \mathbb{C}_{1133} = \mathbb{C}_{2233} =\tag{3.3.24}\\
+\amp\mathbb{C}_{2211} = \mathbb{C}_{3311} = \mathbb{C}_{3322} = \frac{E\,\nu}{(1+\nu)(1-2\nu)}\,,\tag{3.3.25}\\
+\amp\mathbb{C}_{2323} = \mathbb{C}_{3131} = \mathbb{C}_{1212} = 2\,G\,.\tag{3.3.26}
+\end{align}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#multiaxial_sec_elasticity_chap_en-4-6-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsubsection 3.3.3.3: summary and Voigt notation"><a href="#multiaxial_sec_elasticity_chap_en-4-6" title="Copy heading and permalink for Subsubsection 3.3.3.3: summary and Voigt notation" aria-label="Copy heading and permalink for Subsubsection 3.3.3.3: summary and Voigt notation">🔗</a></div></section><div class="autopermalink" data-description="Subsection 3.3.3: the isotropic case"><a href="#multiaxial_sec_elasticity_chap_en-4" title="Copy heading and permalink for Subsection 3.3.3: the isotropic case" aria-label="Copy heading and permalink for Subsection 3.3.3: the isotropic case">🔗</a></div></section><div class="autopermalink" data-description="Section 3.3: multi-axial states"><a href="#multiaxial_sec_elasticity_chap_en" title="Copy heading and permalink for Section 3.3: multi-axial states" aria-label="Copy heading and permalink for Section 3.3: multi-axial states">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="uniaxial_sec_elasticity_chap_en.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="problem_sec_elasticity_chap_en.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
+
