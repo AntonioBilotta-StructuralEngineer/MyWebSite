@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2024-12-27T15:52:27+01:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="it-IT">
-<head>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HE0W4VESL5"></script>
 <script>
@@ -20,53 +23,123 @@
   gtag('config', 'G-HE0W4VESL5');
 </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Solid Mechanics - modelli monodimensionali: trave tesa</title>
-<meta name="Keywords" content="Authored in PreTeXt">
+<title>modelli monodimensionali: trave tesa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
-    },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Calcola (Sage)';
-</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduzione alla meccanica dei solidi">
+<meta property="book:author" content="Antonio Bilotta">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.7';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.991c135ccf182bf5.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.c2757fc695bc848c.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.f4ab138da65f4203.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
 </head>
-<body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Vai all'indice generale</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<body id="changeme" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="solid_mechanics_book_it.html"><span class="title">Introduzione alla meccanica dei solidi</span></a></h1>
+<p class="byline">Antonio Bilotta</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="problem_sec_elasticity_chap_it.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="elasticity_chap_it.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="bent_beam_sec_elasticity_chap_it.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\( \newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{{\not{\mid}}}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -98,142 +171,483 @@ MathJax.Hub.Config({
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\)</div>
-<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="" target="_blank"><img src="./images/sm_logo.png" alt="Logo image"></a><div class="title-container">
-<h1 class="heading"><a href="solid_mechanics_book_it.html"><span class="title">Introduzione alla meccanica dei solidi</span></a></h1>
-<p class="byline">Antonio Bilotta</p>
-</div>
-</div></div>
-<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
-<div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Indice</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="problem_sec_elasticity_chap_it.html" title="Precedente">Prec</a><a id="upbutton" class="up-button button toolbar-item" href="elasticity_chap_it.html" title="Su">Su</a><a id="nextbutton" class="next-button button toolbar-item" href="bent_beam_sec_elasticity_chap_it.html" title="Successivo">Succ</a></span></div>
-</div>
-<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Indice</button><a class="previous-button toolbar-item button" href="problem_sec_elasticity_chap_it.html" title="Precedente">Prec</a><a class="up-button button toolbar-item" href="elasticity_chap_it.html" title="Su">Su</a><a class="next-button button toolbar-item" href="bent_beam_sec_elasticity_chap_it.html" title="Successivo">Succ</a>
-</div>
-</div></nav></header><div class="page">
-<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><ul>
-<li class="link frontmatter">
-<a href="front_matter_it.html" data-scroll="front_matter_it"><span class="title">Materiale iniziale</span></a><ul>
-<li><a href="front_colophon_it.html" data-scroll="front_colophon_it">Colophon</a></li>
-<li><a href="author_bio_it.html" data-scroll="author_bio_it">Biografia dell'autore</a></li>
-<li><a href="dedication_it.html" data-scroll="dedication_it">Dedica</a></li>
-<li><a href="acknowledgement_it.html" data-scroll="acknowledgement_it">Ringraziamenti</a></li>
-<li><a href="preface_it.html" data-scroll="preface_it">Prefazione</a></li>
-<li><a href="MATLAB_references_frontmatter_it.html" data-scroll="MATLAB_references_frontmatter_it">utilizzo di MATLAB®</a></li>
-<li><a href="SMcontents_references_frontmatter_it.html" data-scroll="SMcontents_references_frontmatter_it">Risorse aggiuntive</a></li>
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter_it.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="dedication_it.html" class="internal"><span class="title">Dedication</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="acknowledgement_it.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface_it.html" class="internal"><span class="title">Preface</span></a></div></li>
 </ul>
 </li>
-<li class="link part"><a href="continuum_mechanics_it.html" data-scroll="continuum_mechanics_it"><span class="codenumber">I</span> <span class="title">meccanica del continuo</span></a></li>
-<li class="link">
-<a href="strain_chap_it.html" data-scroll="strain_chap_it"><span class="codenumber">1</span> <span class="title">cinematica dei corpi</span></a><ul>
-<li><a href="configurations_sec_strain_chap_it.html" data-scroll="configurations_sec_strain_chap_it">configurazioni</a></li>
-<li><a href="transformations_sec_strain_chap_it.html" data-scroll="transformations_sec_strain_chap_it">trasformazioni</a></li>
-<li><a href="gradient_sec_strain_chap_it.html" data-scroll="gradient_sec_strain_chap_it">gradiente della trasformazione</a></li>
-<li><a href="displacement_sec_strain_chap_it.html" data-scroll="displacement_sec_strain_chap_it">il campo di spostamento</a></li>
-<li><a href="determinant_sec_strain_chap_it.html" data-scroll="determinant_sec_strain_chap_it">determinante del gradiente della trasformazione</a></li>
-<li><a href="polar_sec_strain_chap_it.html" data-scroll="polar_sec_strain_chap_it">decomposizione polare</a></li>
-<li><a href="principal_directions_sec_strain_chap_it.html" data-scroll="principal_directions_sec_strain_chap_it">tensore di deformazione \(\tens{U}\) e direzioni principali (trasformazione degli elementi di linea)</a></li>
-<li><a href="measures_sec_strain_chap_it.html" data-scroll="measures_sec_strain_chap_it">misure di deformazione</a></li>
-<li><a href="infinitesimal_sec_strain_chap_it.html" data-scroll="infinitesimal_sec_strain_chap_it">tensore della deformazione infinitesima</a></li>
-<li><a href="exercises_sec_strain_chap_it.html" data-scroll="exercises_sec_strain_chap_it">esercizi</a></li>
-<li><a href="answers_sec_strain_chap_it.html" data-scroll="answers_sec_strain_chap_it">risposte ad alcuni degli esercizi proposti</a></li>
-<li><a href="refs_strain_chap_it.html" data-scroll="refs_strain_chap_it">riferimenti e letture suggerite</a></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="strain_chap_it.html" class="internal"><span class="codenumber">1</span> <span class="title">cinematica dei corpi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="configurations_sec_strain_chap_it.html" class="internal"><span class="codenumber">1.1</span> <span class="title">configurazioni</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="transformations_sec_strain_chap_it.html" class="internal"><span class="codenumber">1.2</span> <span class="title">trasformazioni</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="gradient_sec_strain_chap_it.html" class="internal"><span class="codenumber">1.3</span> <span class="title">gradiente della trasformazione</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gradient_sec_strain_chap_it.html#tens_sub_gradient_sec_strain_chap_it" class="internal"><span class="codenumber">1.3.1</span> <span class="title">la nozione di tensore</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="displacement_sec_strain_chap_it.html" class="internal"><span class="codenumber">1.4</span> <span class="title">il campo di spostamento</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="determinant_sec_strain_chap_it.html" class="internal"><span class="codenumber">1.5</span> <span class="title">determinante del gradiente della trasformazione</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="determinant_sec_strain_chap_it.html#vol_sub_determinant_sec_strain_chap_it" class="internal"><span class="codenumber">1.5.1</span> <span class="title">formula di trasformazione di elementi di volume</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="determinant_sec_strain_chap_it.html#area_sub_determinant_sec_strain_chap_it" class="internal"><span class="codenumber">1.5.2</span> <span class="title">formula di trasformazione di elementi di area</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="stress_chap_it.html" data-scroll="stress_chap_it"><span class="codenumber">2</span> <span class="title">forze, equilibrio e tensione</span></a><ul>
-<li><a href="basics_sec_stress_chap_it.html" data-scroll="basics_sec_stress_chap_it">l'ipotesi di continuità</a></li>
-<li><a href="equilibrium_sec_stress_chap_it.html" data-scroll="equilibrium_sec_stress_chap_it">equazioni di equilibrio</a></li>
-<li><a href="stress_sec_stress_chap_it.html" data-scroll="stress_sec_stress_chap_it">il tensore della tensione di Cauchy</a></li>
-<li><a href="stress_analysis_sec_stress_chap_it.html" data-scroll="stress_analysis_sec_stress_chap_it">analisi dello stato di tensione</a></li>
-<li><a href="plv_sec_stress_chap_it.html" data-scroll="plv_sec_stress_chap_it">principio dei lavori virtuali</a></li>
-<li><a href="exercises_sec_stress_chap_it.html" data-scroll="exercises_sec_stress_chap_it">esercizi</a></li>
-<li><a href="answers_sec_stress_chap_it.html" data-scroll="answers_sec_stress_chap_it">risposte ad alcuni degli esercizi proposti</a></li>
-<li><a href="refs_stress_chap_it.html" data-scroll="refs_stress_chap_it">riferimenti e letture suggerite</a></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="polar_sec_strain_chap_it.html" class="internal"><span class="codenumber">1.6</span> <span class="title">decomposizione polare</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="principal_directions_sec_strain_chap_it.html" class="internal"><span class="codenumber">1.7</span> <span class="title">tensore di deformazione <span class="process-math">\(\tens{U}\)</span> e direzioni principali (trasformazione degli elementi di linea)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="principal_directions_sec_strain_chap_it.html#principal_directions_sec_strain_chap_it-5" class="internal"><span class="codenumber">1.7.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="principal_directions_sec_strain_chap_it.html#principal_directions_sec_strain_chap_it-6" class="internal"><span class="codenumber">1.7.2</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="principal_directions_sec_strain_chap_it.html#principal_directions_sec_strain_chap_it-7" class="internal"><span class="codenumber">1.7.3</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="principal_directions_sec_strain_chap_it.html#principal_directions_sec_strain_chap_it-8" class="internal"><span class="codenumber">1.7.4</span> <span class="title">forma spettrale del tensore di deformazione</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="principal_directions_sec_strain_chap_it.html#principal_directions_sec_strain_chap_it-9" class="internal"><span class="codenumber">1.7.5</span> <span class="title">autovalori ed autovettori</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="elasticity_chap_it.html" data-scroll="elasticity_chap_it"><span class="codenumber">3</span> <span class="title">comportamento elastico</span></a><ul>
-<li><a href="motivations_sec_elasticity_chap_it.html" data-scroll="motivations_sec_elasticity_chap_it">motivazione</a></li>
-<li><a href="uniaxial_sec_elasticity_chap_it.html" data-scroll="uniaxial_sec_elasticity_chap_it">stati uniassiali</a></li>
-<li><a href="multiaxial_sec_elasticity_chap_it.html" data-scroll="multiaxial_sec_elasticity_chap_it">stati pluriassiali</a></li>
-<li><a href="problem_sec_elasticity_chap_it.html" data-scroll="problem_sec_elasticity_chap_it">il problema elastico</a></li>
-<li><a href="stretched_beam_sec_elasticity_chap_it.html" data-scroll="stretched_beam_sec_elasticity_chap_it" class="active">modelli monodimensionali: trave tesa</a></li>
-<li><a href="bent_beam_sec_elasticity_chap_it.html" data-scroll="bent_beam_sec_elasticity_chap_it">modelli monodimensionali: trave inflessa</a></li>
-<li><a href="stretched_beam_applications_sec_elasticity_chap_it.html" data-scroll="stretched_beam_applications_sec_elasticity_chap_it">applicazioni del modello di trave tesa</a></li>
-<li><a href="bent_beam_applications_sec_elasticity_chap_it.html" data-scroll="bent_beam_applications_sec_elasticity_chap_it">applicazioni del modello di trave inflessa</a></li>
-<li><a href="exercises_sec_elasticity_chap_it.html" data-scroll="exercises_sec_elasticity_chap_it">esercizi</a></li>
-<li><a href="answers_sec_elasticity_chap_it.html" data-scroll="answers_sec_elasticity_chap_it">risposte ad alcuni degli esercizi proposti</a></li>
-<li><a href="refs_elasticity_chap_it.html" data-scroll="refs_elasticity_chap_it">riferimenti e letture suggerite</a></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="measures_sec_strain_chap_it.html" class="internal"><span class="codenumber">1.8</span> <span class="title">misure di deformazione</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="measures_sec_strain_chap_it.html#measures_sec_strain_chap_it-2" class="internal"><span class="codenumber">1.8.1</span> <span class="title">tensore di deformazione di Cauchy-Green</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="measures_sec_strain_chap_it.html#measures_sec_strain_chap_it-3" class="internal"><span class="codenumber">1.8.2</span> <span class="title">tensore della deformazione di Green-Lagrange</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="measures_sec_strain_chap_it.html#measures_sec_strain_chap_it-4" class="internal"><span class="codenumber">1.8.3</span> <span class="title">tensori della deformazione e gradiente del campo di spostamento</span></a></div></li>
 </ul>
 </li>
-<li class="link part"><a href="beams_systems_it.html" data-scroll="beams_systems_it"><span class="codenumber">II</span> <span class="title">sistemi rigidi</span></a></li>
-<li class="link">
-<a href="rigid_body_kinematics_chap_it.html" data-scroll="rigid_body_kinematics_chap_it"><span class="codenumber">4</span> <span class="title">cinematica</span></a><ul>
-<li><a href="description_sec_rigid_body_kinematics_chap_it.html" data-scroll="description_sec_rigid_body_kinematics_chap_it">descrizione cinematica di base</a></li>
-<li><a href="constraints_sec_rigid_body_kinematics_chap_it.html" data-scroll="constraints_sec_rigid_body_kinematics_chap_it">vincoli</a></li>
-<li><a href="analysis_sec_rigid_body_kinematics_chap_it.html" data-scroll="analysis_sec_rigid_body_kinematics_chap_it">analisi cinematica</a></li>
-<li><a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html" data-scroll="analysis_examples_sec_rigid_body_kinematics_chap_it">applicazione dell'analisi cinematica ai sistemi di corpi rigidi</a></li>
-<li><a href="exercises_sec_rigid_body_kinematics_chap_it.html" data-scroll="exercises_sec_rigid_body_kinematics_chap_it">esercizi</a></li>
-<li><a href="refs_rigid_body_kinematics_chap_it.html" data-scroll="refs_rigid_body_kinematics_chap_it">riferimenti e letture suggerite</a></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="infinitesimal_sec_strain_chap_it.html" class="internal"><span class="codenumber">1.9</span> <span class="title">tensore della deformazione infinitesima</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="infinitesimal_sec_strain_chap_it.html#infinitesimal_sec_strain_chap_it-3" class="internal"><span class="codenumber">1.9.1</span> <span class="title">moti infinitesimi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="exercises_sec_strain_chap_it.html" class="internal"><span class="codenumber">1.10</span> <span class="title">esercizi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_strain_chap_it.html#exercises_sec_strain_chap_it-2" class="internal"><span class="codenumber">1.10.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_strain_chap_it.html#strain_ex_2" class="internal"><span class="codenumber">1.10.2</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_strain_chap_it.html#strain_ex_3" class="internal"><span class="codenumber">1.10.3</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_strain_chap_it.html#exercises_sec_strain_chap_it-5" class="internal"><span class="codenumber">1.10.4</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_strain_chap_it.html#exercises_sec_strain_chap_it-6" class="internal"><span class="codenumber">1.10.5</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_strain_chap_it.html#exercises_sec_strain_chap_it-7" class="internal"><span class="codenumber">1.10.6</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_strain_chap_it.html#exercises_sec_strain_chap_it-8" class="internal"><span class="codenumber">1.10.7</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_strain_chap_it.html#exercises_sec_strain_chap_it-9" class="internal"><span class="codenumber">1.10.8</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_strain_chap_it.html#exercises_sec_strain_chap_it-10" class="internal"><span class="codenumber">1.10.9</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_strain_chap_it.html#exercises_sec_strain_chap_it-11" class="internal"><span class="codenumber">1.10.10</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_strain_chap_it.html#strain_ex_1" class="internal"><span class="codenumber">1.10.11</span> <span class="title"></span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="rigid_body_statics_chap_it.html" data-scroll="rigid_body_statics_chap_it"><span class="codenumber">5</span> <span class="title">statica</span></a><ul>
-<li><a href="equilibrium_sec_rigid_body_statics_chap_it.html" data-scroll="equilibrium_sec_rigid_body_statics_chap_it">equazioni di equilibrio</a></li>
-<li><a href="planecase_sec_rigid_body_statics_chap_it.html" data-scroll="planecase_sec_rigid_body_statics_chap_it">il caso piano</a></li>
-<li><a href="constraints_sec_rigid_body_statics_chap_it.html" data-scroll="constraints_sec_rigid_body_statics_chap_it">vincoli</a></li>
-<li><a href="free_body_sec_rigid_body_statics_chap_it.html" data-scroll="free_body_sec_rigid_body_statics_chap_it">diagrammi di corpo libero</a></li>
-<li><a href="analysis_sec_rigid_body_statics_chap_it.html" data-scroll="analysis_sec_rigid_body_statics_chap_it">analisi statica</a></li>
-<li><a href="analysis_examples_sec_rigid_body_statics_chap_it.html" data-scroll="analysis_examples_sec_rigid_body_statics_chap_it">applicazione dell'analisi statica ai sistemi di corpi</a></li>
-<li><a href="sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="sollecitazioni_sec_rigid_body_statics_chap_it">sollecitazioni</a></li>
-<li><a href="indefinte_sec_rigid_body_statics_chap_it.html" data-scroll="indefinte_sec_rigid_body_statics_chap_it">equazioni indefinite di equilibrio per la trave piana</a></li>
-<li><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html" data-scroll="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it">calcolo e diagrammi delle sollecitazioni</a></li>
-<li><a href="exercises_sec_rigid_body_statics_chap_it.html" data-scroll="exercises_sec_rigid_body_statics_chap_it">esercizi</a></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="answers_sec_strain_chap_it.html" class="internal"><span class="codenumber">1.11</span> <span class="title">risposte ad alcuni degli esercizi proposti</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="answers_sec_strain_chap_it.html#answers_sec_strain_chap_it-2" class="internal"><span class="codenumber">1.11.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="answers_sec_strain_chap_it.html#answers_sec_strain_chap_it-3" class="internal"><span class="codenumber">1.11.2</span> <span class="title"></span></a></div></li>
 </ul>
 </li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Redatto in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
-</div></div>
-<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="stretched_beam_sec_elasticity_chap_it"><h2 class="heading hide-type">
-<span class="type">Paragrafo</span> <span class="codenumber">3.5</span> <span class="title">modelli monodimensionali: trave tesa</span>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="refs_strain_chap_it.html" class="internal"><span class="codenumber">1.12</span> <span class="title">riferimenti e letture suggerite</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="stress_chap_it.html" class="internal"><span class="codenumber">2</span> <span class="title">forze, equilibrio e tensione</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="basics_sec_stress_chap_it.html" class="internal"><span class="codenumber">2.1</span> <span class="title">l’ipotesi di continuità</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics_sec_stress_chap_it.html#basics_sec_stress_chap_it-8" class="internal"><span class="codenumber">2.1.1</span> <span class="title">descrizione geometrica dei corpi</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics_sec_stress_chap_it.html#basics_sec_stress_chap_it-9" class="internal"><span class="codenumber">2.1.2</span> <span class="title">massa</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="basics_sec_stress_chap_it.html#basics_sec_stress_chap_it-10" class="internal"><span class="codenumber">2.1.3</span> <span class="title">forze</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="basics_sec_stress_chap_it.html#basics_sec_stress_chap_it-10-4" class="internal"><span class="codenumber">2.1.3.1</span> <span class="title">forza di volume</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="basics_sec_stress_chap_it.html#basics_sec_stress_chap_it-10-5" class="internal"><span class="codenumber">2.1.3.2</span> <span class="title">trazione</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="equilibrium_sec_stress_chap_it.html" class="internal"><span class="codenumber">2.2</span> <span class="title">equazioni di equilibrio</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="stress_sec_stress_chap_it.html" class="internal"><span class="codenumber">2.3</span> <span class="title">il tensore della tensione di Cauchy</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="stress_sec_stress_chap_it.html#stress_sec_stress_chap_it-2" class="internal"><span class="codenumber">2.3.1</span> <span class="title">postulato di Cauchy</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="stress_sec_stress_chap_it.html#stress_sec_stress_chap_it-3" class="internal"><span class="codenumber">2.3.2</span> <span class="title">il Teorema della tensione di Cauchy</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="stress_sec_stress_chap_it.html#stress_sec_stress_chap_it-3-3" class="internal"><span class="codenumber">2.3.2.1</span> <span class="title">l’equilibrio sul tetraedro di Cauchy</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="stress_sec_stress_chap_it.html#stress_sec_stress_chap_it-3-4" class="internal"><span class="codenumber">2.3.2.2</span> <span class="title">principio di azione e reazione</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="stress_sec_stress_chap_it.html#stress_sec_stress_chap_it-3-5" class="internal"><span class="codenumber">2.3.2.3</span> <span class="title">il tensore</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="stress_sec_stress_chap_it.html#stress_sec_stress_chap_it-3-6" class="internal"><span class="codenumber">2.3.2.4</span> <span class="title">forma differenziale delle equazioni di equilibrio</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="stress_sec_stress_chap_it.html#stress_sec_stress_chap_it-3-7" class="internal"><span class="codenumber">2.3.2.5</span> <span class="title">simmetria del tensore</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="stress_analysis_sec_stress_chap_it.html" class="internal"><span class="codenumber">2.4</span> <span class="title">analisi dello stato di tensione</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="stress_analysis_sec_stress_chap_it.html#stress_analysis_sec_stress_chap_it-2" class="internal"><span class="codenumber">2.4.1</span> <span class="title">convenzione e significato delle componenti del tensore</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="stress_analysis_sec_stress_chap_it.html#stress_analysis_sec_stress_chap_it-3" class="internal"><span class="codenumber">2.4.2</span> <span class="title">tensioni principali e direzioni principali</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="stress_analysis_sec_stress_chap_it.html#stress_analysis_sec_stress_chap_it-4" class="internal"><span class="codenumber">2.4.3</span> <span class="title">stati tensionali di base</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="stress_analysis_sec_stress_chap_it.html#stress_analysis_sec_stress_chap_it-4-2" class="internal"><span class="codenumber">2.4.3.1</span> <span class="title">stato sferico o idrostatico</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="stress_analysis_sec_stress_chap_it.html#stress_analysis_sec_stress_chap_it-4-3" class="internal"><span class="codenumber">2.4.3.2</span> <span class="title">stato di trazione o compressione “pura”</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="stress_analysis_sec_stress_chap_it.html#stress_analysis_sec_stress_chap_it-4-4" class="internal"><span class="codenumber">2.4.3.3</span> <span class="title">stato di taglio “puro”</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="plv_sec_stress_chap_it.html" class="internal"><span class="codenumber">2.5</span> <span class="title">principio dei lavori virtuali</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="plv_sec_stress_chap_it.html#plv_sec_stress_chap_it-3" class="internal"><span class="codenumber">2.5.1</span> <span class="title">dalla formulazione differenziale alla formulazione integrale</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="plv_sec_stress_chap_it.html#plv_sec_stress_chap_it-4" class="internal"><span class="codenumber">2.5.2</span> <span class="title">interpretazione meccanica</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="exercises_sec_stress_chap_it.html" class="internal"><span class="codenumber">2.6</span> <span class="title">esercizi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_stress_chap_it.html#exercises_sec_stress_chap_it-2" class="internal"><span class="codenumber">2.6.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_stress_chap_it.html#exercises_sec_stress_chap_it-3" class="internal"><span class="codenumber">2.6.2</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_stress_chap_it.html#exercises_sec_stress_chap_it-4" class="internal"><span class="codenumber">2.6.3</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_stress_chap_it.html#stress_ex_1" class="internal"><span class="codenumber">2.6.4</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_stress_chap_it.html#exercises_sec_stress_chap_it-6" class="internal"><span class="codenumber">2.6.5</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_stress_chap_it.html#exercises_sec_stress_chap_it-7" class="internal"><span class="codenumber">2.6.6</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_stress_chap_it.html#exercises_sec_stress_chap_it-8" class="internal"><span class="codenumber">2.6.7</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_stress_chap_it.html#exercises_sec_stress_chap_it-9" class="internal"><span class="codenumber">2.6.8</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_stress_chap_it.html#stress_ex_2" class="internal"><span class="codenumber">2.6.9</span> <span class="title"></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="answers_sec_stress_chap_it.html" class="internal"><span class="codenumber">2.7</span> <span class="title">risposte ad alcuni degli esercizi proposti</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="answers_sec_stress_chap_it.html#answers_sec_stress_chap_it-2" class="internal"><span class="codenumber">2.7.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="answers_sec_stress_chap_it.html#answers_sec_stress_chap_it-3" class="internal"><span class="codenumber">2.7.2</span> <span class="title"></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="refs_stress_chap_it.html" class="internal"><span class="codenumber">2.8</span> <span class="title">riferimenti e letture suggerite</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="elasticity_chap_it.html" class="internal"><span class="codenumber">3</span> <span class="title">comportamento elastico</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="motivations_sec_elasticity_chap_it.html" class="internal"><span class="codenumber">3.1</span> <span class="title">motivazione</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="motivations_sec_elasticity_chap_it.html#motivations_sec_elasticity_chap_it-3" class="internal"><span class="codenumber">3.1.1</span> <span class="title">analisi statica</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="motivations_sec_elasticity_chap_it.html#motivation_static_subsubsec" class="internal"><span class="codenumber">3.1.1.1</span> <span class="title">assunzione sul campo di tensione e soluzione</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="motivations_sec_elasticity_chap_it.html#motivations_sec_elasticity_chap_it-4" class="internal"><span class="codenumber">3.1.2</span> <span class="title">analisi cinematica</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="motivations_sec_elasticity_chap_it.html#motivations_sec_elasticity_chap_it-5" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Principio dei lavori virtuali</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="motivations_sec_elasticity_chap_it.html#motivations_sec_elasticity_chap_it-6" class="internal"><span class="codenumber">3.1.4</span> <span class="title">considerazioni conclusive</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="uniaxial_sec_elasticity_chap_it.html" class="internal"><span class="codenumber">3.2</span> <span class="title">stati uniassiali</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="uniaxial_sec_elasticity_chap_it.html#uniaxial_sec_elasticity_chap_it-4" class="internal"><span class="codenumber">3.2.1</span> <span class="title">prova uniassiale a trazione o compressione</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="uniaxial_sec_elasticity_chap_it.html#shear_subsecuniaxial_sec_elasticity_chap_it" class="internal"><span class="codenumber">3.2.2</span> <span class="title">prova uniassiale a taglio</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="multiaxial_sec_elasticity_chap_it.html" class="internal"><span class="codenumber">3.3</span> <span class="title">stati pluriassiali</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="multiaxial_sec_elasticity_chap_it.html#multiaxial_sec_elasticity_chap_it-2" class="internal"><span class="codenumber">3.3.1</span> <span class="title">il modello come generalizzazione della legge di Hooke</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="multiaxial_sec_elasticity_chap_it.html#multiaxial_sec_elasticity_chap_it-2-4" class="internal"><span class="codenumber">3.3.1.1</span> <span class="title">le proprietà del tensore costitutivo</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="multiaxial_sec_elasticity_chap_it.html#multiaxial_sec_elasticity_chap_it-3" class="internal"><span class="codenumber">3.3.2</span> <span class="title">l’osservazione sperimentale</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="multiaxial_sec_elasticity_chap_it.html#multiaxial_sec_elasticity_chap_it-4" class="internal"><span class="codenumber">3.3.3</span> <span class="title">il caso isotropo</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="multiaxial_sec_elasticity_chap_it.html#multiaxial_sec_elasticity_chap_it-4-4" class="internal"><span class="codenumber">3.3.3.1</span> <span class="title">componenti di tipo normale</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="multiaxial_sec_elasticity_chap_it.html#multiaxial_sec_elasticity_chap_it-4-5" class="internal"><span class="codenumber">3.3.3.2</span> <span class="title">componenti di tipo tangenziale</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="multiaxial_sec_elasticity_chap_it.html#multiaxial_sec_elasticity_chap_it-4-6" class="internal"><span class="codenumber">3.3.3.3</span> <span class="title">riepilogo e notazione di Voigt</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="problem_sec_elasticity_chap_it.html" class="internal"><span class="codenumber">3.4</span> <span class="title">il problema elastico</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="problem_sec_elasticity_chap_it.html#problem_sec_elasticity_chap_it-8" class="internal"><span class="codenumber">3.4.1</span> <span class="title">motivazione di inizio capitolo: il solido prismatico semplicemente teso</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="problem_sec_elasticity_chap_it.html#bend_problem_sub" class="internal"><span class="codenumber">3.4.2</span> <span class="title">il solido prismatico semplicemente inflesso</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="problem_sec_elasticity_chap_it.html#bend_problem_sub-4" class="internal"><span class="codenumber">3.4.2.1</span> <span class="title">analisi statica</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="problem_sec_elasticity_chap_it.html#bend_problem_sub-5" class="internal"><span class="codenumber">3.4.2.2</span> <span class="title">dalla tensione agli spostamenti</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="problem_sec_elasticity_chap_it.html#problem_sec_elasticity_chap_it-10" class="internal"><span class="codenumber">3.4.3</span> <span class="title">riepilogo</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="stretched_beam_sec_elasticity_chap_it.html" class="internal"><span class="codenumber">3.5</span> <span class="title">modelli monodimensionali: trave tesa</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="stretched_beam_sec_elasticity_chap_it.html#stretched_beam_sec_elasticity_chap_it-2" class="internal"><span class="codenumber">3.5.1</span> <span class="title">premessa</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="stretched_beam_sec_elasticity_chap_it.html#stretched_beam_sec_elasticity_chap_it-3" class="internal"><span class="codenumber">3.5.2</span> <span class="title">il riferimento dato dalla linea d’asse</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="stretched_beam_sec_elasticity_chap_it.html#stretched_beam_sec_elasticity_chap_it-4" class="internal"><span class="codenumber">3.5.3</span> <span class="title">il lavoro interno</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="stretched_beam_sec_elasticity_chap_it.html#stretched_beam_sec_elasticity_chap_it-5" class="internal"><span class="codenumber">3.5.4</span> <span class="title">il legame elastico</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="stretched_beam_sec_elasticity_chap_it.html#stretched_beam_sec_elasticity_chap_it-6" class="internal"><span class="codenumber">3.5.5</span> <span class="title">il lavoro esterno</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="stretched_beam_sec_elasticity_chap_it.html#stretched_beam_sec_elasticity_chap_it-7" class="internal"><span class="codenumber">3.5.6</span> <span class="title">principio dei lavori virtuali ed equazioni di equilibrio</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="stretched_beam_sec_elasticity_chap_it.html#stretched_beam_sec_elasticity_chap_it-8" class="internal"><span class="codenumber">3.5.7</span> <span class="title">riepilogo del modello</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="bent_beam_sec_elasticity_chap_it.html" class="internal"><span class="codenumber">3.6</span> <span class="title">modelli monodimensionali: trave inflessa</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="bent_beam_sec_elasticity_chap_it.html#bent_beam_sec_elasticity_chap_it-3" class="internal"><span class="codenumber">3.6.1</span> <span class="title">il riferimento dato dalla linea d’asse</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="bent_beam_sec_elasticity_chap_it.html#bent_beam_sec_elasticity_chap_it-4" class="internal"><span class="codenumber">3.6.2</span> <span class="title">il lavoro interno</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="bent_beam_sec_elasticity_chap_it.html#bent_beam_sec_elasticity_chap_it-5" class="internal"><span class="codenumber">3.6.3</span> <span class="title">il legame elastico</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="bent_beam_sec_elasticity_chap_it.html#bent_beam_sec_elasticity_chap_it-6" class="internal"><span class="codenumber">3.6.4</span> <span class="title">il lavoro esterno</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="bent_beam_sec_elasticity_chap_it.html#bent_beam_sec_elasticity_chap_it-7" class="internal"><span class="codenumber">3.6.5</span> <span class="title">principio dei lavori virtuali ed equazioni di equilibrio</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="bent_beam_sec_elasticity_chap_it.html#bent_beam_sec_elasticity_chap_it-8" class="internal"><span class="codenumber">3.6.6</span> <span class="title">riepilogo del modello</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="stretched_beam_applications_sec_elasticity_chap_it.html" class="internal"><span class="codenumber">3.7</span> <span class="title">applicazioni del modello di trave tesa</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#stretched_beam_applications_sec_elasticity_chap_it-2" class="internal"><span class="codenumber">3.7.1</span> <span class="title">trave semplicemente tesa</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#stretched_beam_applications_sec_elasticity_chap_it-3" class="internal"><span class="codenumber">3.7.2</span> <span class="title">trave iperstatica con discontinuità</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#stretched_beam_applications_sec_elasticity_chap_it-4" class="internal"><span class="codenumber">3.7.3</span> <span class="title">trave iperstatica soggetta ad un incremento termico omogeneo</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="stretched_beam_applications_sec_elasticity_chap_it.html#stretched_beam_applications_sec_elasticity_chap_it-5" class="internal"><span class="codenumber">3.7.4</span> <span class="title">trave iperstatica soggetta a carico ripartito sinusoidale</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="bent_beam_applications_sec_elasticity_chap_it.html" class="internal"><span class="codenumber">3.8</span> <span class="title">applicazioni del modello di trave inflessa</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="bent_beam_applications_sec_elasticity_chap_it.html#bent_beam_applications_sec_elasticity_chap_it-2" class="internal"><span class="codenumber">3.8.1</span> <span class="title">mensola soggetta ad una forza all’estremità</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="bent_beam_applications_sec_elasticity_chap_it.html#bent_beam_applications_sec_elasticity_chap_it-3" class="internal"><span class="codenumber">3.8.2</span> <span class="title">mensola soggetta a carico ripartito costante</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="bent_beam_applications_sec_elasticity_chap_it.html#bent_beam_applications_sec_elasticity_chap_it-4" class="internal"><span class="codenumber">3.8.3</span> <span class="title">trave appoggiata soggetta a carico ripartito costante</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="exercises_sec_elasticity_chap_it.html" class="internal"><span class="codenumber">3.9</span> <span class="title">esercizi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_elasticity_chap_it.html#exercises_sec_elasticity_chap_it-2" class="internal"><span class="codenumber">3.9.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_elasticity_chap_it.html#exercises_sec_elasticity_chap_it-3" class="internal"><span class="codenumber">3.9.2</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_elasticity_chap_it.html#exercises_sec_elasticity_chap_it-4" class="internal"><span class="codenumber">3.9.3</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_elasticity_chap_it.html#elasticity_ex_1" class="internal"><span class="codenumber">3.9.4</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_elasticity_chap_it.html#exercises_sec_elasticity_chap_it-6" class="internal"><span class="codenumber">3.9.5</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_elasticity_chap_it.html#exercises_sec_elasticity_chap_it-7" class="internal"><span class="codenumber">3.9.6</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_elasticity_chap_it.html#exercises_sec_elasticity_chap_it-8" class="internal"><span class="codenumber">3.9.7</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_elasticity_chap_it.html#exercises_sec_elasticity_chap_it-9" class="internal"><span class="codenumber">3.9.8</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_elasticity_chap_it.html#exercises_sec_elasticity_chap_it-10" class="internal"><span class="codenumber">3.9.9</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_elasticity_chap_it.html#exercises_sec_elasticity_chap_it-11" class="internal"><span class="codenumber">3.9.10</span> <span class="title"></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="answers_sec_elasticity_chap_it.html" class="internal"><span class="codenumber">3.10</span> <span class="title">risposte ad alcuni degli esercizi proposti</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="answers_sec_elasticity_chap_it.html#answers_sec_elasticity_chap_it-2" class="internal"><span class="codenumber">3.10.1</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="refs_elasticity_chap_it.html" class="internal"><span class="codenumber">3.11</span> <span class="title">riferimenti e letture suggerite</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="rigid_body_kinematics_chap_it.html" class="internal"><span class="codenumber">4</span> <span class="title">cinematica dei corpi rigidi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="description_sec_rigid_body_kinematics_chap_it.html" class="internal"><span class="codenumber">4.1</span> <span class="title">descrizione cinematica di base</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="description_sec_rigid_body_kinematics_chap_it.html#description_sec_rigid_body_kinematics_chap_it-3" class="internal"><span class="codenumber">4.1.1</span> <span class="title">linearizzazione</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="constraints_sec_rigid_body_kinematics_chap_it.html" class="internal"><span class="codenumber">4.2</span> <span class="title">vincoli</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="constraints_sec_rigid_body_kinematics_chap_it.html#constraints_sec_rigid_body_kinematics_chap_it-4" class="internal"><span class="codenumber">4.2.1</span> <span class="title">vincoli esterni semplici</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="constraints_sec_rigid_body_kinematics_chap_it.html#constraints_sec_rigid_body_kinematics_chap_it-4-2" class="internal"><span class="codenumber">4.2.1.1</span> <span class="title">carrello</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="constraints_sec_rigid_body_kinematics_chap_it.html#constraints_sec_rigid_body_kinematics_chap_it-4-3" class="internal"><span class="codenumber">4.2.1.2</span> <span class="title">doppio bipendolo</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="constraints_sec_rigid_body_kinematics_chap_it.html#constraints_sec_rigid_body_kinematics_chap_it-5" class="internal"><span class="codenumber">4.2.2</span> <span class="title">vincoli esterni doppi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="constraints_sec_rigid_body_kinematics_chap_it.html#constraints_sec_rigid_body_kinematics_chap_it-5-2" class="internal"><span class="codenumber">4.2.2.1</span> <span class="title">cerniera o appoggio</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="constraints_sec_rigid_body_kinematics_chap_it.html#constraints_sec_rigid_body_kinematics_chap_it-5-3" class="internal"><span class="codenumber">4.2.2.2</span> <span class="title">bipendolo</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="constraints_sec_rigid_body_kinematics_chap_it.html#constraints_sec_rigid_body_kinematics_chap_it-6" class="internal"><span class="codenumber">4.2.3</span> <span class="title">vincoli esterni tripli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="constraints_sec_rigid_body_kinematics_chap_it.html#constraints_sec_rigid_body_kinematics_chap_it-6-2" class="internal"><span class="codenumber">4.2.3.1</span> <span class="title">incastro</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="constraints_sec_rigid_body_kinematics_chap_it.html#constraints_sec_rigid_body_kinematics_chap_it-7" class="internal"><span class="codenumber">4.2.4</span> <span class="title">vincoli interni</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="constraints_sec_rigid_body_kinematics_chap_it.html#constraints_sec_rigid_body_kinematics_chap_it-7-3" class="internal"><span class="codenumber">4.2.4.1</span> <span class="title">cerniera interna</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="analysis_sec_rigid_body_kinematics_chap_it.html" class="internal"><span class="codenumber">4.3</span> <span class="title">analisi cinematica</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="analysis_sec_rigid_body_kinematics_chap_it.html#analysis_sec_rigid_body_kinematics_chap_it-2" class="internal"><span class="codenumber">4.3.1</span> <span class="title">matrice cinematica</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="analysis_sec_rigid_body_kinematics_chap_it.html#analysis_sec_rigid_body_kinematics_chap_it-3" class="internal"><span class="codenumber">4.3.2</span> <span class="title">classificazione cinematica</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html" class="internal"><span class="codenumber">4.4</span> <span class="title">applicazione dell’analisi cinematica ai sistemi di corpi rigidi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html#analysis_examples_sec_rigid_body_kinematics_chap_it-2" class="internal"><span class="codenumber">4.4.1</span> <span class="title">trave appoggiata</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html#traveL_cinematica_sec" class="internal"><span class="codenumber">4.4.2</span> <span class="title">trave ad L "appoggiata"</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html#analysis_examples_sec_rigid_body_kinematics_chap_it-4" class="internal"><span class="codenumber">4.4.3</span> <span class="title">arco a tre cerniere</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="analysis_examples_sec_rigid_body_kinematics_chap_it.html#analysis_examples_sec_rigid_body_kinematics_chap_it-5" class="internal"><span class="codenumber">4.4.4</span> <span class="title">esempio di schema labile</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="exercises_sec_rigid_body_kinematics_chap_it.html" class="internal"><span class="codenumber">4.5</span> <span class="title">esercizi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_rigid_body_kinematics_chap_it.html#exercises_sec_rigid_body_kinematics_chap_it-2" class="internal"><span class="codenumber">4.5.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_rigid_body_kinematics_chap_it.html#exercises_sec_rigid_body_kinematics_chap_it-3" class="internal"><span class="codenumber">4.5.2</span> <span class="title"></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="refs_rigid_body_kinematics_chap_it.html" class="internal"><span class="codenumber">4.6</span> <span class="title">riferimenti e letture suggerite</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="rigid_body_statics_chap_it.html" class="internal"><span class="codenumber">5</span> <span class="title">statica</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="equilibrium_sec_rigid_body_statics_chap_it.html" class="internal"><span class="codenumber">5.1</span> <span class="title">equazioni di equilibrio</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="equilibrium_sec_rigid_body_statics_chap_it.html#equilibrium_sec_rigid_body_statics_chap_it-3" class="internal"><span class="codenumber">5.1.1</span> <span class="title">condizioni di equilibrio statico per un sistema di punti</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="equilibrium_sec_rigid_body_statics_chap_it.html#equilibrium_sec_rigid_body_statics_chap_it-4" class="internal"><span class="codenumber">5.1.2</span> <span class="title">forma scalare delle equazioni di equilibrio</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="equilibrium_sec_rigid_body_statics_chap_it.html#equilibrium_sec_rigid_body_statics_chap_it-5" class="internal"><span class="codenumber">5.1.3</span> <span class="title">introduzione della cinematica di corpo rigido</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="equilibrium_sec_rigid_body_statics_chap_it.html#equilibrium_sec_rigid_body_statics_chap_it-6" class="internal"><span class="codenumber">5.1.4</span> <span class="title">momento di una forza</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="planecase_sec_rigid_body_statics_chap_it.html" class="internal"><span class="codenumber">5.2</span> <span class="title">il caso piano</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="constraints_sec_rigid_body_statics_chap_it.html" class="internal"><span class="codenumber">5.3</span> <span class="title">vincoli</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="constraints_sec_rigid_body_statics_chap_it.html#constraints_sec_rigid_body_statics_chap_it-4" class="internal"><span class="codenumber">5.3.1</span> <span class="title">assenza di vincolo</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="constraints_sec_rigid_body_statics_chap_it.html#constraints_sec_rigid_body_statics_chap_it-5" class="internal"><span class="codenumber">5.3.2</span> <span class="title">vincoli semplici</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="constraints_sec_rigid_body_statics_chap_it.html#constraints_sec_rigid_body_statics_chap_it-5-2" class="internal"><span class="codenumber">5.3.2.1</span> <span class="title">carrello</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="constraints_sec_rigid_body_statics_chap_it.html#constraints_sec_rigid_body_statics_chap_it-5-3" class="internal"><span class="codenumber">5.3.2.2</span> <span class="title">doppio bipendolo</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="constraints_sec_rigid_body_statics_chap_it.html#constraints_sec_rigid_body_statics_chap_it-6" class="internal"><span class="codenumber">5.3.3</span> <span class="title">vincoli doppi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="constraints_sec_rigid_body_statics_chap_it.html#constraints_sec_rigid_body_statics_chap_it-6-2" class="internal"><span class="codenumber">5.3.3.1</span> <span class="title">cerniera</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="constraints_sec_rigid_body_statics_chap_it.html#constraints_sec_rigid_body_statics_chap_it-6-3" class="internal"><span class="codenumber">5.3.3.2</span> <span class="title">bipendolo</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="constraints_sec_rigid_body_statics_chap_it.html#constraints_sec_rigid_body_statics_chap_it-7" class="internal"><span class="codenumber">5.3.4</span> <span class="title">vincoli tripli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="constraints_sec_rigid_body_statics_chap_it.html#constraints_sec_rigid_body_statics_chap_it-7-2" class="internal"><span class="codenumber">5.3.4.1</span> <span class="title">incastro</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="constraints_sec_rigid_body_statics_chap_it.html#constraints_sec_rigid_body_statics_chap_it-8" class="internal"><span class="codenumber">5.3.5</span> <span class="title">riepilogo</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="constraints_sec_rigid_body_statics_chap_it.html#constraints_sec_rigid_body_statics_chap_it-9" class="internal"><span class="codenumber">5.3.6</span> <span class="title">vincoli interni</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="free_body_sec_rigid_body_statics_chap_it.html" class="internal"><span class="codenumber">5.4</span> <span class="title">diagrammi di corpo libero</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="free_body_sec_rigid_body_statics_chap_it.html#free_body_video_rigid_body_statics_chap_it" class="internal"><span class="codenumber">5.4.1</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="analysis_sec_rigid_body_statics_chap_it.html" class="internal"><span class="codenumber">5.5</span> <span class="title">analisi statica</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="analysis_sec_rigid_body_statics_chap_it.html#analysis_sec_rigid_body_statics_chap_it-3" class="internal"><span class="codenumber">5.5.1</span> <span class="title">matrice statica</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="analysis_sec_rigid_body_statics_chap_it.html#analysis_sec_rigid_body_statics_chap_it-4" class="internal"><span class="codenumber">5.5.2</span> <span class="title">classificazione statica</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="analysis_examples_sec_rigid_body_statics_chap_it.html" class="internal"><span class="codenumber">5.6</span> <span class="title">applicazione dell’analisi statica ai sistemi di corpi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="analysis_examples_sec_rigid_body_statics_chap_it.html#analysis_examples_sec_rigid_body_statics_chap_it-2" class="internal"><span class="codenumber">5.6.1</span> <span class="title">mensola</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="analysis_examples_sec_rigid_body_statics_chap_it.html#analysis_examples_sec_rigid_body_statics_chap_it-3" class="internal"><span class="codenumber">5.6.2</span> <span class="title">trave appoggiata</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="analysis_examples_sec_rigid_body_statics_chap_it.html#analysis_examples_sec_rigid_body_statics_chap_it-4" class="internal"><span class="codenumber">5.6.3</span> <span class="title">portale</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="analysis_examples_sec_rigid_body_statics_chap_it.html#analysis_examples_sec_rigid_body_statics_chap_it-5" class="internal"><span class="codenumber">5.6.4</span> <span class="title">sistema a due corpi</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sollecitazioni_sec_rigid_body_statics_chap_it.html" class="internal"><span class="codenumber">5.7</span> <span class="title">sollecitazioni</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sollecitazioni_sec_rigid_body_statics_chap_it.html#sollecitazioni_sec_rigid_body_statics_chap_it-5" class="internal"><span class="codenumber">5.7.1</span> <span class="title">convenzione sul segno delle sollecitazioni</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sollecitazioni_sec_rigid_body_statics_chap_it.html#sollecitazioni_sec_rigid_body_statics_chap_it-6" class="internal"><span class="codenumber">5.7.2</span> <span class="title">carichi ripartiti</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="indefinte_sec_rigid_body_statics_chap_it.html" class="internal"><span class="codenumber">5.8</span> <span class="title">equazioni indefinite di equilibrio per la trave piana</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="indefinte_sec_rigid_body_statics_chap_it.html#indefinte_sec_rigid_body_statics_chap_it-3" class="internal"><span class="codenumber">5.8.1</span> <span class="title">formulazione del problema</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="indefinte_sec_rigid_body_statics_chap_it.html#indefinte_sec_rigid_body_statics_chap_it-4" class="internal"><span class="codenumber">5.8.2</span> <span class="title">condizioni di equilibrio</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="indefinte_sec_rigid_body_statics_chap_it.html#indefinte_sec_rigid_body_statics_chap_it-5" class="internal"><span class="codenumber">5.8.3</span> <span class="title">integrali generali</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="indefinte_sec_rigid_body_statics_chap_it.html#indefinte_sec_rigid_body_statics_chap_it-6" class="internal"><span class="codenumber">5.8.4</span> <span class="title">integrali generali per carichi ripartiti costanti</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html" class="internal"><span class="codenumber">5.9</span> <span class="title">calcolo e diagrammi delle sollecitazioni</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html#calcolo_sollecitazioni_sec_rigid_body_statics_chap_it-4" class="internal"><span class="codenumber">5.9.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html#calcolo_sollecitazioni_sec_rigid_body_statics_chap_it-5" class="internal"><span class="codenumber">5.9.2</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html#calcolo_sollecitazioni_sec_rigid_body_statics_chap_it-6" class="internal"><span class="codenumber">5.9.3</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="calcolo_sollecitazioni_sec_rigid_body_statics_chap_it.html#calcolo_sollecitazioni_sec_rigid_body_statics_chap_it-7" class="internal"><span class="codenumber">5.9.4</span> <span class="title"></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="exercises_sec_rigid_body_statics_chap_it.html" class="internal"><span class="codenumber">5.10</span> <span class="title">esercizi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exercises_sec_rigid_body_statics_chap_it.html#exercises_sec_rigid_body_statics_chap_it-2" class="internal"><span class="codenumber">5.10.1</span> <span class="title"></span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="stretched_beam_sec_elasticity_chap_it"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">modelli monodimensionali: trave tesa</span>
 </h2>
-<section class="subsection" id="subsection-59"><h3 class="heading hide-type">
-<span class="type">Sottoparagrafo</span> <span class="codenumber">3.5.1</span> <span class="title">premessa</span>
+<section class="subsection" id="stretched_beam_sec_elasticity_chap_it-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">premessa</span>
 </h3>
-<p id="p-306">La soluzione del problema elastico sotto condizioni del tutto generiche pone difficoltà difficilmente sormontabili. Soltanto effettuando opportune semplificazioni, come ad esempio fatto per i solidi prismatici (geometrie semplici) e sotto l'azione di carichi di tipo ben preciso, si riesce ad ottenere una soluzione analitica del problema assegnato.</p>
-<p id="p-307">Le considerazioni precedenti e la necessità di affrontare ingegneristicamente problematiche strutturali riguardanti solidi che dal punto di vista geometrico sono modellabili mediante descrizioni monodimensionali o bidimensionali, hanno portato allo sviluppo di svariati modelli strutturali. Tali modelli consentono di risolvere con un grado di approssimazione accettabile diverse problematiche altrimenti non affrontabili mediante strumenti sia analitici e sia numerici.</p>
-<p id="p-308">Nel seguito vengono presentati due modelli di trave, teso ed inflesso, che costituiscono una riduzione al monodimensionale delle soluzioni trovate per i solidi prismatici semplicemte teso ed inflesso, <a class="xref" data-knowl="./knowl/prismatic_solutions_tab.html" title="Tabella 3.4.6">Tabella 3.4.6</a>. In particolare si procederà mostrando come sia possibile descrivere la componente significativa della deformazione, la \(\varepsilon_{33}\text{,}\) riferendosi solo alla linea d'asse della trave. La componente  \(\varepsilon_{33}\) è quella significativa perché costituisce l'unica componente di deformazione che determina il valore del lavoro interno del solido prismatico, infatti nei due casi esaminati si ha che</p>
-<div class="displaymath">
+<div class="para" id="stretched_beam_sec_elasticity_chap_it-2-2">La soluzione del problema elastico sotto condizioni del tutto generiche pone difficoltà difficilmente sormontabili. Soltanto effettuando opportune semplificazioni, come ad esempio fatto per i solidi prismatici (geometrie semplici) e sotto l’azione di carichi di tipo ben preciso, si riesce ad ottenere una soluzione analitica del problema assegnato.<div class="autopermalink" data-description="Paragraph"><a href="#stretched_beam_sec_elasticity_chap_it-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="stretched_beam_sec_elasticity_chap_it-2-3">Le considerazioni precedenti e la necessità di affrontare ingegneristicamente problematiche strutturali riguardanti solidi che dal punto di vista geometrico sono modellabili mediante descrizioni monodimensionali o bidimensionali, hanno portato allo sviluppo di svariati modelli strutturali. Tali modelli consentono di risolvere con un grado di approssimazione accettabile diverse problematiche altrimenti non affrontabili mediante strumenti sia analitici e sia numerici.<div class="autopermalink" data-description="Paragraph"><a href="#stretched_beam_sec_elasticity_chap_it-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="stretched_beam_sec_elasticity_chap_it-2-4">
+<div class="para">Nel seguito vengono presentati due modelli di trave, teso ed inflesso, che costituiscono una riduzione al monodimensionale delle soluzioni trovate per i solidi prismatici semplicemte teso ed inflesso, <a href="problem_sec_elasticity_chap_it.html#prismatic_solutions_tab" class="xref" data-knowl="./knowl/xref/prismatic_solutions_tab.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 3.4.6">Table 3.4.6</a>. In particolare si procederà mostrando come sia possibile descrivere la componente significativa della deformazione, la <span class="process-math">\(\varepsilon_{33}\text{,}\)</span> riferendosi solo alla linea d’asse della trave. La componente  <span class="process-math">\(\varepsilon_{33}\)</span> è quella significativa perché costituisce l’unica componente di deformazione che determina il valore del lavoro interno del solido prismatico, infatti nei due casi esaminati si ha che</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prismatic_solutions_tab.html" id="stretched_beam_sec_elasticity_chap_it-2-4-4">
 \begin{equation*}
 L_i = \int_{\body} \sigma_{33}\varepsilon_{33} \, dV\,,
 \end{equation*}
 </div>
-<p class="continuation">quantità che indicheremo scrivendo semplicemente</p>
-<div class="displaymath">
+<div class="para">quantità che indicheremo scrivendo semplicemente</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prismatic_solutions_tab.html" id="beam_internal_work">
 \begin{equation}
-L_i = \int_{\body} \sigma\varepsilon \, dV\,,\label{beam_internal_work}\tag{3.5.1}
+L_i = \int_{\body} \sigma\varepsilon \, dV\,,\tag{3.5.1}
 \end{equation}
 </div>
-<p class="continuation">essendo chiaro a quali componenti ci si riferisce. Quindi la finalità principale è ottenere <em class="alert">una descrizione dell'energia interna del modello monodimensionale equivalente all'energia interna del soluzione 3D assunta come riferimento</em>.</p>
-<p id="p-309">Inoltre per i problemi esaminati l'asse della trave si muove rimanendo nel piano individuato dagli assi \(X_3\) ed \(X_2\) e per tale motivo la trattazione può essere effettuata nel piano e si parlerà di modelli di trave piana.</p></section><section class="subsection" id="subsection-60"><h3 class="heading hide-type">
-<span class="type">Sottoparagrafo</span> <span class="codenumber">3.5.2</span> <span class="title">il riferimento dato dalla linea d'asse</span>
+<div class="para">essendo chiaro a quali componenti ci si riferisce. Quindi la finalità principale è ottenere <em class="alert">una descrizione dell’energia interna del modello monodimensionale equivalente all’energia interna del soluzione 3D assunta come riferimento</em>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#stretched_beam_sec_elasticity_chap_it-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="stretched_beam_sec_elasticity_chap_it-2-5">Inoltre per i problemi esaminati l’asse della trave si muove rimanendo nel piano individuato dagli assi <span class="process-math">\(X_3\)</span> ed <span class="process-math">\(X_2\)</span> e per tale motivo la trattazione può essere effettuata nel piano e si parlerà di modelli di trave piana.<div class="autopermalink" data-description="Paragraph"><a href="#stretched_beam_sec_elasticity_chap_it-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 3.5.1: premessa"><a href="#stretched_beam_sec_elasticity_chap_it-2" title="Copy heading and permalink for Subsection 3.5.1: premessa" aria-label="Copy heading and permalink for Subsection 3.5.1: premessa">🔗</a></div></section><section class="subsection" id="stretched_beam_sec_elasticity_chap_it-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">il riferimento dato dalla linea d’asse</span>
 </h3>
-<p id="p-310">Nel caso del solido prismatico semplicemente teso l'asse della trave si deforma come indicato in Figura, ovvero subisce un semplice allungamento o accorciamento. In Figura viene anche evidenziata la notazione che correntemente si utilizza per tale modello monodimensionale.</p>
-<figure class="figure figure-like" id="figure-30"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/trave_tesa_linea_asse.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">3.5.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-311">Prendendo quindi come riferimento l'asse della trave potremo calcolare la componente di deformazione \(\varepsilon_{33}\text{,}\) qui indicata semplicemente come  \(\varepsilon\text{,}\) derivando semplicemente la variabile di spostamento lungo l'asse</p>
-<div class="displaymath">
+<div class="para" id="stretched_beam_sec_elasticity_chap_it-3-2">Nel caso del solido prismatico semplicemente teso l’asse della trave si deforma come indicato in Figura, ovvero subisce un semplice allungamento o accorciamento. In Figura viene anche evidenziata la notazione che correntemente si utilizza per tale modello monodimensionale.<div class="autopermalink" data-description="Paragraph"><a href="#stretched_beam_sec_elasticity_chap_it-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="stretched_beam_sec_elasticity_chap_it-3-3"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="external/trave_tesa_linea_asse.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" data-description="Figure 3.5.1"><a href="#stretched_beam_sec_elasticity_chap_it-3-3" title="Copy heading and permalink for Figure 3.5.1" aria-label="Copy heading and permalink for Figure 3.5.1">🔗</a></div></figcaption></figure><div class="para logical" id="stretched_beam_sec_elasticity_chap_it-3-4">
+<div class="para">Prendendo quindi come riferimento l’asse della trave potremo calcolare la componente di deformazione <span class="process-math">\(\varepsilon_{33}\text{,}\)</span> qui indicata semplicemente come  <span class="process-math">\(\varepsilon\text{,}\)</span> derivando semplicemente la variabile di spostamento lungo l’asse</div>
+<div class="displaymath process-math" id="stretched_beam_sec_elasticity_chap_it-3-4-3">
 \begin{equation}
 \varepsilon = \frac{du}{dx}\,.\tag{3.5.2}
 \end{equation}
 </div>
-<p class="continuation">Al momento, come nella soluzione 3D di riferimento, \(u\) è variabile lungo l'asse e la deformazione \(\varepsilon\) è costante.</p></section><section class="subsection" id="subsection-61"><h3 class="heading hide-type">
-<span class="type">Sottoparagrafo</span> <span class="codenumber">3.5.3</span> <span class="title">il lavoro interno</span>
+<div class="para">Al momento, come nella soluzione 3D di riferimento, <span class="process-math">\(u\)</span> è variabile lungo l’asse e la deformazione <span class="process-math">\(\varepsilon\)</span> è costante.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#stretched_beam_sec_elasticity_chap_it-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 3.5.2: il riferimento dato dalla linea d’asse"><a href="#stretched_beam_sec_elasticity_chap_it-3" title="Copy heading and permalink for Subsection 3.5.2: il riferimento dato dalla linea d’asse" aria-label="Copy heading and permalink for Subsection 3.5.2: il riferimento dato dalla linea d’asse">🔗</a></div></section><section class="subsection" id="stretched_beam_sec_elasticity_chap_it-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">il lavoro interno</span>
 </h3>
-<p id="p-312">Si può adesso riscrivere l'espressione del lavoro interno <a class="xref" data-knowl="./knowl/beam_internal_work.html" title="Equazione 3.5.1">(3.5.1)</a> in un formato che si riferisce solo alla linea d'asse della trave, ovvero</p>
-<div class="displaymath">
+<div class="para logical" id="stretched_beam_sec_elasticity_chap_it-4-2">
+<div class="para">Si può adesso riscrivere l’espressione del lavoro interno <a href="stretched_beam_sec_elasticity_chap_it.html#beam_internal_work" class="xref" data-knowl="./knowl/xref/beam_internal_work.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.1">(3.5.1)</a> in un formato che si riferisce solo alla linea d’asse della trave, ovvero</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/beam_internal_work.html" id="stretched_beam_sec_elasticity_chap_it-4-2-2">
 \begin{align*}
 L_i \amp = \int_{\body} \sigma\varepsilon \, dV\\
 \amp = \int_{l}\int_{A} \sigma\varepsilon \, dS \,dx\\
@@ -241,50 +655,65 @@ L_i \amp = \int_{\body} \sigma\varepsilon \, dV\\
 \amp = \int_{l} N \varepsilon \,dx\,,
 \end{align*}
 </div>
-<p class="continuation">e quindi</p>
-<div class="displaymath">
+<div class="para">e quindi</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/beam_internal_work.html" id="stretched_beam_sec_elasticity_chap_it-4-2-3">
 \begin{equation}
 L_i = \int_{l} N \varepsilon \,dx\,.\tag{3.5.3}
 \end{equation}
 </div>
-<p class="continuation">La quantità introdotta</p>
-<div class="displaymath">
+<div class="para">La quantità introdotta</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/beam_internal_work.html" id="trave_tesa_N">
 \begin{equation}
-N =\int_{A} \sigma \, dS\,,\label{trave_tesa_N}\tag{3.5.4}
+N =\int_{A} \sigma \, dS\,,\tag{3.5.4}
 \end{equation}
 </div>
-<p class="continuation">è l'ente statico che nella riduzione monondimensionale compie lavoro sulla deformazione. \(N\) viene denonominata <em class="emphasis">sforzo normale</em> ed ha le dimensioni di una forza, \(\left[\text{F}\right]\text{.}\)</p></section><section class="subsection" id="subsection-62"><h3 class="heading hide-type">
-<span class="type">Sottoparagrafo</span> <span class="codenumber">3.5.4</span> <span class="title">il legame elastico</span>
+<div class="para">è l’ente statico che nella riduzione monondimensionale compie lavoro sulla deformazione. <span class="process-math">\(N\)</span> viene denonominata <em class="emphasis">sforzo normale</em> ed ha le dimensioni di una forza, <span class="process-math">\(\left[\text{F}\right]\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#stretched_beam_sec_elasticity_chap_it-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 3.5.3: il lavoro interno"><a href="#stretched_beam_sec_elasticity_chap_it-4" title="Copy heading and permalink for Subsection 3.5.3: il lavoro interno" aria-label="Copy heading and permalink for Subsection 3.5.3: il lavoro interno">🔗</a></div></section><section class="subsection" id="stretched_beam_sec_elasticity_chap_it-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">il legame elastico</span>
 </h3>
-<p id="p-313">La definizione del legame elastico per il modello monodimensionale si ottiene rielaborando la <a class="xref" data-knowl="./knowl/trave_tesa_N.html" title="Equazione 3.5.4">(3.5.4)</a> come segue</p>
-<div class="displaymath">
+<div class="para logical" id="stretched_beam_sec_elasticity_chap_it-5-2">
+<div class="para">La definizione del legame elastico per il modello monodimensionale si ottiene rielaborando la <a href="stretched_beam_sec_elasticity_chap_it.html#trave_tesa_N" class="xref" data-knowl="./knowl/xref/trave_tesa_N.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.4">(3.5.4)</a> come segue</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/trave_tesa_N.html" id="stretched_beam_sec_elasticity_chap_it-5-2-2">
 \begin{equation}
 N =\int_{A} \sigma \, dS = \int_{A} E\varepsilon \, dS  = E\, \int_{A}  dS \,\varepsilon = EA\,\varepsilon\,.\tag{3.5.5}
 \end{equation}
 </div>
-<p class="continuation">Relazione che evidenzia come il coefficiente di proporzionalità che definisce il legame fra \(N\) ed \(\varepsilon\) sia dato dal prodotto fra il modulo di Young del materiale e l'area della sezione della trave.</p></section><section class="subsection" id="subsection-63"><h3 class="heading hide-type">
-<span class="type">Sottoparagrafo</span> <span class="codenumber">3.5.5</span> <span class="title">il lavoro esterno</span>
+<div class="para">Relazione che evidenzia come il coefficiente di proporzionalità che definisce il legame fra <span class="process-math">\(N\)</span> ed <span class="process-math">\(\varepsilon\)</span> sia dato dal prodotto fra il modulo di Young del materiale e l’area della sezione della trave.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#stretched_beam_sec_elasticity_chap_it-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 3.5.4: il legame elastico"><a href="#stretched_beam_sec_elasticity_chap_it-5" title="Copy heading and permalink for Subsection 3.5.4: il legame elastico" aria-label="Copy heading and permalink for Subsection 3.5.4: il legame elastico">🔗</a></div></section><section class="subsection" id="stretched_beam_sec_elasticity_chap_it-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">il lavoro esterno</span>
 </h3>
-<p id="p-314">Fino a questo punto la riduzione al monodimensionale è rimasta strettamente aderente alla soluzione 3d da cui si è partiti. Se si continuasse sulla stessa falsa riga anche per i carichi esterni si otterrebbe la seguente situazione <figure class="figure figure-like" id="figure-31"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/trave_tesa_carichi_da_3D.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">3.5.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure> cioè una trave semplicemente soggetta a due forze di estremità uguali ed opposte.</p>
-<p id="p-315">Con la definizione dei carichi esterni ammissibili per il modello di trave si fa la scelta invece di ampliare l'utilizzo del modello anche a casi che in generale non sono compresi nella soluzione del solido prismatico semplicemente teso. In particolare, come mostra la Figura seguente, <figure class="figure figure-like" id="figure-32"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/trave_tesa_carichi.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">3.5.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure> si introduce il carico per unità di lughezza \(\func{p}{x}\text{,}\) funzione generica dipendente dall'ascissa \(x\text{,}\) e le forze concetrate di estremità, comunque attese, sono in generale differenti. Il lavoro esterno assume quindi la seguente epsressione</p>
-<div class="displaymath">
+<div class="para" id="stretched_beam_sec_elasticity_chap_it-6-2">Fino a questo punto la riduzione al monodimensionale è rimasta strettamente aderente alla soluzione 3d da cui si è partiti. Se si continuasse sulla stessa falsa riga anche per i carichi esterni si otterrebbe la seguente situazione <figure class="figure figure-like" id="stretched_beam_sec_elasticity_chap_it-6-2-1"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/trave_tesa_carichi_da_3D.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" data-description="Figure 3.5.2"><a href="#stretched_beam_sec_elasticity_chap_it-6-2-1" title="Copy heading and permalink for Figure 3.5.2" aria-label="Copy heading and permalink for Figure 3.5.2">🔗</a></div></figcaption></figure> cioè una trave semplicemente soggetta a due forze di estremità uguali ed opposte.<div class="autopermalink" data-description="Paragraph"><a href="#stretched_beam_sec_elasticity_chap_it-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="stretched_beam_sec_elasticity_chap_it-6-3">
+<div class="para">Con la definizione dei carichi esterni ammissibili per il modello di trave si fa la scelta invece di ampliare l’utilizzo del modello anche a casi che in generale non sono compresi nella soluzione del solido prismatico semplicemente teso. In particolare, come mostra la Figura seguente, <figure class="figure figure-like" id="stretched_beam_sec_elasticity_chap_it-6-3-1"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/trave_tesa_carichi.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" data-description="Figure 3.5.3"><a href="#stretched_beam_sec_elasticity_chap_it-6-3-1" title="Copy heading and permalink for Figure 3.5.3" aria-label="Copy heading and permalink for Figure 3.5.3">🔗</a></div></figcaption></figure> si introduce il carico per unità di lughezza <span class="process-math">\(\func{p}{x}\text{,}\)</span> funzione generica dipendente dall’ascissa <span class="process-math">\(x\text{,}\)</span> e le forze concetrate di estremità, comunque attese, sono in generale differenti. Il lavoro esterno assume quindi la seguente epsressione</div>
+<div class="displaymath process-math" id="stretched_beam_sec_elasticity_chap_it-6-3-4">
 \begin{equation}
 L_e = \int_{l} \func{p}{x}\,\func{u}{x}\, dx + H_{0} \,\func{u}{0} +  H_{l} \,\func{u}{l}\,.\tag{3.5.6}
 \end{equation}
 </div>
-<p id="p-316">Inoltre, a differenza della soluzione 3d di riferimento, la scelta dei carichi ammissibili determina per \(\func{u}{x}\) un andamento non non più limitato alla sola variabilità lineare. Anche lo sforzo normale e la deformazione assiale, costanti nella soluzione di riferimento, diventano anch'essi funzioni generiche del tipo \(\func{N}{x}\) e \(\func{\varepsilon}{x}\text{.}\)</p></section><section class="subsection" id="subsection-64"><h3 class="heading hide-type">
-<span class="type">Sottoparagrafo</span> <span class="codenumber">3.5.6</span> <span class="title">principio dei lavori virtuali ed equazioni di equilibrio</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#stretched_beam_sec_elasticity_chap_it-6-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="stretched_beam_sec_elasticity_chap_it-6-4">Inoltre, a differenza della soluzione 3d di riferimento, la scelta dei carichi ammissibili determina per <span class="process-math">\(\func{u}{x}\)</span> un andamento non non più limitato alla sola variabilità lineare. Anche lo sforzo normale e la deformazione assiale, costanti nella soluzione di riferimento, diventano anch’essi funzioni generiche del tipo <span class="process-math">\(\func{N}{x}\)</span> e <span class="process-math">\(\func{\varepsilon}{x}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#stretched_beam_sec_elasticity_chap_it-6-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 3.5.5: il lavoro esterno"><a href="#stretched_beam_sec_elasticity_chap_it-6" title="Copy heading and permalink for Subsection 3.5.5: il lavoro esterno" aria-label="Copy heading and permalink for Subsection 3.5.5: il lavoro esterno">🔗</a></div></section><section class="subsection" id="stretched_beam_sec_elasticity_chap_it-7"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">principio dei lavori virtuali ed equazioni di equilibrio</span>
 </h3>
-<p id="p-317">A questo punto la definizione del modello è praticamente completa. Manca la definizione delle equazioni di equilibrio alle quali si può arrivare attraverso il principio dei lavori virtuali formulabile come segue</p>
-<div class="displaymath">
+<div class="para logical" id="stretched_beam_sec_elasticity_chap_it-7-2">
+<div class="para">A questo punto la definizione del modello è praticamente completa. Manca la definizione delle equazioni di equilibrio alle quali si può arrivare attraverso il principio dei lavori virtuali formulabile come segue</div>
+<div class="displaymath process-math" id="stretched_beam_sec_elasticity_chap_it-7-2-1">
 \begin{equation}
 \int_{l} N \delta\varepsilon \,dx = \int_{l} p\,\delta u\, dx + H_{0} \,\func{\delta u}{0} +  H_{l} \,\func{\delta u}{l}\,, \quad \forall\,\delta u \;\left(\delta\varepsilon = \frac{d\delta u}{d x}\right)\,.\tag{3.5.7}
 \end{equation}
 </div>
-<p class="continuation">La relazione appena scritta, dove si è tralasciato di esplicitare le dipendenze dalla variabile \(x\text{,}\) può essere manipolata effettuando i seguenti passaggi</p>
-<div class="displaymath">
+<div class="para">La relazione appena scritta, dove si è tralasciato di esplicitare le dipendenze dalla variabile <span class="process-math">\(x\text{,}\)</span> può essere manipolata effettuando i seguenti passaggi</div>
+<div class="displaymath process-math" id="stretched_beam_sec_elasticity_chap_it-7-2-3">
 \begin{align*}
 \int_{l} N \delta\varepsilon \,dx \amp= \int_{l} p\,\delta u\, dx + H_{0} \,\func{\delta u}{0} +  H_{l} \,\func{\delta u}{l}\\
 \int_{l} N \frac{d\delta u}{d x} \,dx \amp= \int_{l} p\,\delta u\, dx + H_{0} \,\func{\delta u}{0} +  H_{l} \,\func{\delta u}{l}\\
@@ -294,101 +723,147 @@ L_e = \int_{l} \func{p}{x}\,\func{u}{x}\, dx + H_{0} \,\func{u}{0} +  H_{l} \,\f
 \int_{l} \left( \frac{dN}{d x} + p\right)\delta u\, dx \amp= \left(\func{N}{l}-  H_{l}\right)\func{\delta u}{l} - \left(\func{N}{0} + H_{0} \right)\func{\delta u}{0} 
 \end{align*}
 </div>
-<p class="continuation">E quindi si ottiene la seguente scrittura del principio dei lavori virtuali in termini di</p>
-<div class="displaymath">
+<div class="para">E quindi si ottiene la seguente scrittura del principio dei lavori virtuali in termini di</div>
+<div class="displaymath process-math" id="stretched_beam_sec_elasticity_chap_it-7-2-4">
 \begin{equation}
 \int_{l} \left( \frac{dN}{d x} + p\right)\delta u\, dx = \left(\func{N}{l}-  H_{l}\right)\func{\delta u}{l} - \left(\func{N}{0} + H_{0} \right)\func{\delta u}{0}\,,\quad \forall\,\delta u\,.\tag{3.5.8}
 \end{equation}
 </div>
-<p class="continuation">Il soddisfacimento di tale espressione per qualsiasi spostamento virtuale \(\delta u\) implica il soddisfacimento dell'equazione</p>
-<div class="displaymath">
+<div class="para">Il soddisfacimento di tale espressione per qualsiasi spostamento virtuale <span class="process-math">\(\delta u\)</span> implica il soddisfacimento dell’equazione</div>
+<div class="displaymath process-math" id="stretched_beam_sec_elasticity_chap_it-7-2-6">
 \begin{equation}
 \frac{dN}{d x} + p = 0\,,\tag{3.5.9}
 \end{equation}
 </div>
-<p class="continuation">in ogni punto della linea d'asse e il soddisfacimento delle condizioni al contorno</p>
-<div class="displaymath">
+<div class="para">in ogni punto della linea d’asse e il soddisfacimento delle condizioni al contorno</div>
+<div class="displaymath process-math" id="stretched_beam_sec_elasticity_chap_it-7-2-7">
 \begin{align}
 \func{N}{0} \amp=  -H_{0}\,,\tag{3.5.10}\\
 \func{N}{l} \amp=  H_{l}\,,\tag{3.5.11}
 \end{align}
 </div>
-<p class="continuation">sugli estremi della linea d'asse.</p></section><section class="subsection" id="subsection-65"><h3 class="heading hide-type">
-<span class="type">Sottoparagrafo</span> <span class="codenumber">3.5.7</span> <span class="title">riepilogo del modello</span>
+<div class="para">sugli estremi della linea d’asse.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#stretched_beam_sec_elasticity_chap_it-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 3.5.6: principio dei lavori virtuali ed equazioni di equilibrio"><a href="#stretched_beam_sec_elasticity_chap_it-7" title="Copy heading and permalink for Subsection 3.5.6: principio dei lavori virtuali ed equazioni di equilibrio" aria-label="Copy heading and permalink for Subsection 3.5.6: principio dei lavori virtuali ed equazioni di equilibrio">🔗</a></div></section><section class="subsection" id="stretched_beam_sec_elasticity_chap_it-8"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">riepilogo del modello</span>
 </h3>
-<article class="assemblage assemblage-like" id="assemblage-20"><ul id="p-318" class="disc">
-<li id="li-105">Carichi<div class="displaymath">
+<article class="assemblage assemblage-like" id="stretched_beam_sec_elasticity_chap_it-8-2"><div class="para logical" id="stretched_beam_sec_elasticity_chap_it-8-2-1">
+<ul class="disc" id="stretched_beam_sec_elasticity_chap_it-8-2-1-1">
+<li id="stretched_beam_sec_elasticity_chap_it-8-2-1-1-1">
+<div class="para" id="p-derived-stretched_beam_sec_elasticity_chap_it-8-2-1-1-1">Carichi<div class="displaymath process-math" id="stretched_beam_sec_elasticity_chap_it-8-2-1-1-1-1">
 \begin{equation*}
 \func{p}{x}\quad H_0 \quad H_l
 \end{equation*}
 </div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#stretched_beam_sec_elasticity_chap_it-8-2-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="li-106">Incognite<div class="displaymath">
+<li id="stretched_beam_sec_elasticity_chap_it-8-2-1-1-2">
+<div class="para" id="p-derived-stretched_beam_sec_elasticity_chap_it-8-2-1-1-2">Incognite<div class="displaymath process-math" id="stretched_beam_sec_elasticity_chap_it-8-2-1-1-2-1">
 \begin{equation*}
 \func{u}{x}\quad\func{\varepsilon}{x}\quad\func{N}{x}
 \end{equation*}
 </div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#stretched_beam_sec_elasticity_chap_it-8-2-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="li-107">Lavoro interno<div class="displaymath">
+<li id="stretched_beam_sec_elasticity_chap_it-8-2-1-1-3">
+<div class="para" id="p-derived-stretched_beam_sec_elasticity_chap_it-8-2-1-1-3">Lavoro interno<div class="displaymath process-math" id="stretched_beam_sec_elasticity_chap_it-8-2-1-1-3-1">
 \begin{equation}
 L_i = \int_{l} N \varepsilon \,dx\,.\tag{3.5.12}
 \end{equation}
 </div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#stretched_beam_sec_elasticity_chap_it-8-2-1-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="li-108">Lavoro esterno<div class="displaymath">
+<li id="stretched_beam_sec_elasticity_chap_it-8-2-1-1-4">
+<div class="para" id="p-derived-stretched_beam_sec_elasticity_chap_it-8-2-1-1-4">Lavoro esterno<div class="displaymath process-math" id="stretched_beam_sec_elasticity_chap_it-8-2-1-1-4-1">
 \begin{equation}
 L_e = \int_{l} \func{p}{x}\,\func{u}{x}\, dx + H_{0} \,\func{u}{0} +  H_{l} \,\func{u}{l}\,.\tag{3.5.13}
 \end{equation}
 </div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#stretched_beam_sec_elasticity_chap_it-8-2-1-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="li-109">Legame spostamento-deformazione<div class="displaymath">
+<li id="stretched_beam_sec_elasticity_chap_it-8-2-1-1-5">
+<div class="para" id="p-derived-stretched_beam_sec_elasticity_chap_it-8-2-1-1-5">Legame spostamento-deformazione<div class="displaymath process-math" id="stretched_beam_sec_elasticity_chap_it-8-2-1-1-5-1">
 \begin{equation}
 \varepsilon = \frac{du}{dx}\tag{3.5.14}
 \end{equation}
 </div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#stretched_beam_sec_elasticity_chap_it-8-2-1-1-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="li-110">Legame elastico<div class="displaymath">
+<li id="stretched_beam_sec_elasticity_chap_it-8-2-1-1-6">
+<div class="para" id="p-derived-stretched_beam_sec_elasticity_chap_it-8-2-1-1-6">Legame elastico<div class="displaymath process-math" id="stretched_beam_sec_elasticity_chap_it-8-2-1-1-6-1">
 \begin{equation}
 N = EA\,\varepsilon\tag{3.5.15}
 \end{equation}
 </div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#stretched_beam_sec_elasticity_chap_it-8-2-1-1-6" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="li-111">Equazioni di equilibrio<div class="displaymath">
+<li id="stretched_beam_sec_elasticity_chap_it-8-2-1-1-7">
+<div class="para" id="p-derived-stretched_beam_sec_elasticity_chap_it-8-2-1-1-7">Equazioni di equilibrio<div class="displaymath process-math" id="stretched_beam_sec_elasticity_chap_it-8-2-1-1-7-1">
 \begin{equation}
 \frac{dN}{d x} + p = 0\tag{3.5.16}
 \end{equation}
 </div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#stretched_beam_sec_elasticity_chap_it-8-2-1-1-7" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="li-112">Eventuali condizioni al contorno di tipo statico<div class="displaymath">
+<li id="stretched_beam_sec_elasticity_chap_it-8-2-1-1-8">
+<div class="para" id="p-derived-stretched_beam_sec_elasticity_chap_it-8-2-1-1-8">Eventuali condizioni al contorno di tipo statico<div class="displaymath process-math" id="stretched_beam_sec_elasticity_chap_it-8-2-1-1-8-1">
 \begin{align}
 \func{N}{0} \amp=  -H_{0}\tag{3.5.17}\\
 \func{N}{l} \amp=  H_{l}\tag{3.5.18}
 \end{align}
 </div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#stretched_beam_sec_elasticity_chap_it-8-2-1-1-8" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="li-113">Eventuali condizioni al contorno di tipo cinematico<div class="displaymath">
+<li id="stretched_beam_sec_elasticity_chap_it-8-2-1-1-9">
+<div class="para" id="p-derived-stretched_beam_sec_elasticity_chap_it-8-2-1-1-9">Eventuali condizioni al contorno di tipo cinematico<div class="displaymath process-math" id="stretched_beam_sec_elasticity_chap_it-8-2-1-1-9-1">
 \begin{align}
 \func{u}{0} \amp=  \bar{u}_{0}\tag{3.5.19}\\
 \func{u}{l} \amp=  \bar{u}_{l}\tag{3.5.20}
 \end{align}
 </div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#stretched_beam_sec_elasticity_chap_it-8-2-1-1-9" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-</ul></article><p id="p-319">Per quanto riguarda le condizioni al contorno si precisa che su ogni estremo si può assegnare o una condizione di tipo statico o una di tipo cinematico.</p>
-<p id="p-320">Le equazioni di equilibrio possono essere manipolate al fine di ottenere un'espressione in cui compaia direttamente lo spostamento \(\func{u}{x}\) come incognita. In particolare effettuando i seguenti passaggi</p>
-<div class="displaymath">
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#stretched_beam_sec_elasticity_chap_it-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage"><a href="#stretched_beam_sec_elasticity_chap_it-8-2" title="Copy heading and permalink for Assemblage" aria-label="Copy heading and permalink for Assemblage">🔗</a></div></article><div class="para" id="stretched_beam_sec_elasticity_chap_it-8-3">Per quanto riguarda le condizioni al contorno si precisa che su ogni estremo si può assegnare o una condizione di tipo statico o una di tipo cinematico.<div class="autopermalink" data-description="Paragraph"><a href="#stretched_beam_sec_elasticity_chap_it-8-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="stretched_beam_sec_elasticity_chap_it-8-4">
+<div class="para">Le equazioni di equilibrio possono essere manipolate al fine di ottenere un’espressione in cui compaia direttamente lo spostamento <span class="process-math">\(\func{u}{x}\)</span> come incognita. In particolare effettuando i seguenti passaggi</div>
+<div class="displaymath process-math" id="stretched_beam_sec_elasticity_chap_it-8-4-2">
 \begin{align*}
 \frac{dN}{d x} + p \amp= 0\\
 \frac{d}{d x}\left(EA\,\varepsilon\right) + p \amp= 0\\
 \frac{d}{d x}\left(EA\,\frac{du}{dx}\right) + p \amp= 0
 \end{align*}
 </div>
-<p class="continuation">si ottiene</p>
-<div class="displaymath">
+<div class="para">si ottiene</div>
+<div class="displaymath process-math" id="stretched_beam_navier">
 \begin{equation}
-EA\,\frac{d^2u}{dx^2} + p = 0\,.\label{stretched_beam_navier}\tag{3.5.21}
+EA\,\frac{d^2u}{dx^2} + p = 0\,.\tag{3.5.21}
 \end{equation}
-</div></section></section></div></main>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#stretched_beam_sec_elasticity_chap_it-8-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 3.5.7: riepilogo del modello"><a href="#stretched_beam_sec_elasticity_chap_it-8" title="Copy heading and permalink for Subsection 3.5.7: riepilogo del modello" aria-label="Copy heading and permalink for Subsection 3.5.7: riepilogo del modello">🔗</a></div></section><div class="autopermalink" data-description="Section 3.5: modelli monodimensionali: trave tesa"><a href="#stretched_beam_sec_elasticity_chap_it" title="Copy heading and permalink for Section 3.5: modelli monodimensionali: trave tesa" aria-label="Copy heading and permalink for Section 3.5: modelli monodimensionali: trave tesa">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="problem_sec_elasticity_chap_it.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="bent_beam_sec_elasticity_chap_it.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
 </body>
 </html>
+
 
