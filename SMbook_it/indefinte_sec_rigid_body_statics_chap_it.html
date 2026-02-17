@@ -13,15 +13,6 @@
 <!--*  Palette:                              *-->
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HE0W4VESL5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-HE0W4VESL5');
-</script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>equazioni indefinite di equilibrio per la trave piana</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -110,14 +101,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.13';
+eBookConfig.runestone_version = '7.11.14';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.0d5f811896ddeac1.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.e2abc79debce15fd.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.d892923478694492.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1d6e4aba17c2c7f2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -642,7 +633,7 @@ eBookConfig.enable_chatcodes =  false;
 \begin{align}
 -N(x) + N(x+dx) + p(x)dx \amp = 0\,,\tag{5.8.1}\\
 -T(x) + T(x+dx) + q(x)dx \amp = 0\,,\tag{5.8.2}\\
--T(x)\,dx - M(x) + q(x)\frac{dx^2}{2} + M(x+dx) \amp = 0\,.\tag{5.8.3}
+T(x)\,dx + M(x) - q(x)\frac{dx^2}{2} - M(x+dx) \amp = 0\,.\tag{5.8.3}
 \end{align}
 </div>
 <div class="para">L’ipotesi di continuità del solido mono-dimensionale e delle grandezze su di esso definite, consente di effettuare uno sviluppo in serie di Taylor troncato al primo ordine delle sollecitazioni valutate sulla sezione <span class="process-math">\(x+dx\)</span> e di ottenere quindi</div>
@@ -650,7 +641,7 @@ eBookConfig.enable_chatcodes =  false;
 \begin{align}
 -N(x) + \underbrace{N(x) + \regulardiff{N}{x}\,dx}_{N(x+dx)} + p(x)dx \amp = 0\,,\tag{5.8.4}\\
 -T(x) + \underbrace{T(x) + \regulardiff{T}{x}\,dx}_{T(x+dx)} + q(x)dx \amp = 0\,,\tag{5.8.5}\\
--T(x)\,dx - M(x) + q(x)\frac{dx^2}{2} + \underbrace{M(x) + \regulardiff{M}{x}\,dx}_{M(x+dx)} \amp = 0\,.\tag{5.8.6}
+T(x)\,dx + M(x) - q(x)\frac{dx^2}{2} - \underbrace{(M(x) + \regulardiff{M}{x}\,dx)}_{M(x+dx)} \amp = 0\,.\tag{5.8.6}
 \end{align}
 </div>
 <div class="para">dove le quantità <span class="process-math">\(\regulardiff{N}{x}\text{,}\)</span> <span class="process-math">\(\regulardiff{T}{x}\)</span> e <span class="process-math">\(\regulardiff{M}{x}\)</span> indicano le derivate delle sollecitazioni rispetto all’ascissa <span class="process-math">\(x\text{.}\)</span> Facendo le dovute semplificazioni e trascurando il termine <span class="process-math">\(q(x)\frac{dx^2}{2}\)</span> perché di ordine superiore al primo, si ottengono le equazioni indefinite di equilibrio per la trave piana di seguito elencate.</div>
@@ -723,27 +714,27 @@ M(x) \amp =  b\,x + c \,.
 <div class="para">Quindi si ha un andamento costante per <span class="process-math">\(N\)</span> e <span class="process-math">\(T\)</span> e lineare per <span class="process-math">\(M\text{.}\)</span> Imponendo le condizioni al contorno</div>
 <div class="displaymath process-math" id="indefinte_sec_rigid_body_statics_chap_it-5-3-3-5">
 \begin{equation*}
-N(0) = F\,,\quad T(0) = F\,, \quad M(0) = -Fl\,,
+N(0) = F\,,\quad T(0) = -F\,, \quad M(0) = Fl\,,
 \end{equation*}
 </div>
 <div class="para">si ottiene</div>
 <div class="displaymath process-math" id="indefinte_sec_rigid_body_statics_chap_it-5-3-3-6">
 \begin{equation*}
-a = F\,,\quad b = F\,, \quad c = -Fl\,.
+a = F\,,\quad b = -F\,, \quad c = Fl\,.
 \end{equation*}
 </div>
 <div class="para">Quindi l’espressione analitica delle componenti di sollecitazione diventa</div>
 <div class="displaymath process-math" id="indefinte_sec_rigid_body_statics_chap_it-5-3-3-7">
 \begin{align*}
 N(x) \amp =  F \,,\\
-T(x) \amp =  F \,,\\
-M(x) \amp =  F\,x - Fl \,.
+T(x) \amp =  -F \,,\\
+M(x) \amp =  -F\,x + Fl \,.
 \end{align*}
 </div>
 <div class="para">Si sarebbe ottenuto lo stesso risultato utilizzando le condizioni al contorno</div>
 <div class="displaymath process-math" id="indefinte_sec_rigid_body_statics_chap_it-5-3-3-8">
 \begin{equation*}
-N(l) = F\,,\quad T(l) = F\,, \quad M(l) = 0\,.
+N(l) = F\,,\quad T(l) = -F\,, \quad M(l) = 0\,.
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#indefinte_sec_rigid_body_statics_chap_it-5-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
