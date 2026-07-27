@@ -98,7 +98,7 @@ p {
   flex: 1;
   text-align: center;
   min-width: 32%;
-  max-width: 32%;
+  max-width: 100%;
 }
 
 .paper-card {
@@ -109,7 +109,7 @@ p {
   flex: 1;
   text-align: center;
   min-width: 32%;
-  max-width: 32%;
+  max-width: 100%;
 }
 
 .project-card h3,
