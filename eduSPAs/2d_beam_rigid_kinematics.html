@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Single Body Rigid Displacement - 2D Beam</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    .mono-font {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    /* Custom scrollbars */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 h-screen w-screen flex flex-col overflow-hidden">
+
+  <header class="h-16 bg-white border-b border-slate-200 px-6 flex items-center justify-between shrink-0 z-20 shadow-xs">
+    <div class="flex items-center space-x-3">
+      <div class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold text-lg shadow-sm">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+        </svg>
+      </div>
+      <div>
+        <h1 class="text-xl font-bold text-slate-900 tracking-tight">Single body rigid displacement</h1>
+        <p class="text-xs text-slate-500 font-medium">Engineering Structural Mechanics • 2D Kinematics Analysis</p>
+      </div>
+    </div>
+
+    <!-- Right-hand action buttons -->
+    <div class="flex items-center space-x-3">
+      <!-- Export MATLAB Script Button -->
+      <button id="btn-export-m" class="flex items-center space-x-2 px-5 py-2 bg-emerald-600 hover:bg-emerald-700 active:scale-98 text-white rounded-full font-medium text-sm transition shadow-sm hover:shadow">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+        </svg>
+        <span>Export .m script</span>
+      </button>
+
+      <!-- Center View Button -->
+      <button id="btn-center-view" title="Center View" class="w-10 h-10 rounded-full border border-slate-300 hover:border-slate-400 bg-white hover:bg-slate-50 text-slate-700 flex items-center justify-center transition shadow-2xs">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="9"/>
+          <line x1="12" y1="3" x2="12" y2="7"/>
+          <line x1="12" y1="17" x2="12" y2="21"/>
+          <line x1="3" y1="12" x2="7" y2="12"/>
+          <line x1="17" y1="12" x2="21" y2="12"/>
+        </svg>
+      </button>
+
+      <!-- Zoom Out Button -->
+      <button id="btn-zoom-out" title="Zoom Out" class="w-10 h-10 rounded-full border border-slate-300 hover:border-slate-400 bg-white hover:bg-slate-50 text-slate-700 flex items-center justify-center transition shadow-2xs">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          <line x1="8" y1="11" x2="14" y2="11"/>
+        </svg>
+      </button>
+
+      <!-- Zoom In Button -->
+      <button id="btn-zoom-in" title="Zoom In" class="w-10 h-10 rounded-full border border-slate-300 hover:border-slate-400 bg-white hover:bg-slate-50 text-slate-700 flex items-center justify-center transition shadow-2xs">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          <line x1="11" y1="8" x2="11" y2="14"/>
+          <line x1="8" y1="11" x2="14" y2="11"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="flex-1 flex overflow-hidden relative">
+
+    <!-- Left Controls Sidebar -->
+    <aside class="w-80 bg-white border-r border-slate-200 p-5 flex flex-col space-y-6 overflow-y-auto shrink-0 shadow-xs z-10">
+      
+      <!-- Workflow Mode Section -->
+      <div>
+        <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2.5">Workflow Mode</h2>
+        <div class="space-y-2">
+          <button id="btn-mode-modify" class="w-full py-2.5 px-4 rounded-lg font-medium text-sm transition flex items-center justify-center border-2 border-blue-600 bg-blue-50 text-blue-700">
+            <span>Modify the scheme</span>
+          </button>
+          <button id="btn-mode-draw" class="w-full py-2.5 px-4 rounded-lg font-medium text-sm transition flex items-center justify-center border border-slate-300 bg-white hover:bg-slate-50 text-slate-700">
+            <span>Draw a new scheme</span>
+          </button>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2.5">CAD Aids & Snapping</h2>
+        <div class="space-y-2.5 bg-slate-50 p-3 rounded-xl border border-slate-200">
+          <label class="flex items-center justify-between cursor-pointer group">
+            <span class="flex items-center text-sm font-medium text-slate-700 group-hover:text-slate-900">
+              <svg class="w-4 h-4 mr-2 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16M6 4v16M12 4v16M18 4v16"/>
+              </svg>
+              Grid Snap (1 meter)
+            </span>
+            <input type="checkbox" id="chk-grid-snap" checked class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500 border-slate-300">
+          </label>
+
+          <label class="flex items-center justify-between cursor-pointer group">
+            <span class="flex items-center text-sm font-medium text-slate-700 group-hover:text-slate-900">
+              <svg class="w-4 h-4 mr-2 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
+              </svg>
+              Show Dimensions
+            </span>
+            <input type="checkbox" id="chk-show-dims" checked class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500 border-slate-300">
+          </label>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2.5">Applied Displ. Param</h2>
+        <div class="space-y-3 bg-slate-50 p-4 rounded-xl border border-slate-200">
+          <!-- Uo Parameter -->
+          <div class="flex items-center space-x-3">
+            <span class="text-sm font-semibold text-slate-700 w-8">U₀</span>
+            <div class="relative flex-1">
+              <input type="number" id="input-u0" step="0.1" value="0" class="w-full text-center font-bold text-slate-800 bg-white border border-slate-300 rounded-lg py-1.5 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <span class="absolute right-2.5 top-2 text-xs text-slate-400 font-medium pointer-events-none">m</span>
+            </div>
+            <input type="checkbox" id="chk-u0" checked class="w-5 h-5 text-blue-600 rounded focus:ring-blue-500 border-slate-300 cursor-pointer">
+          </div>
+
+          <!-- Vo Parameter -->
+          <div class="flex items-center space-x-3">
+            <span class="text-sm font-semibold text-slate-700 w-8">V₀</span>
+            <div class="relative flex-1">
+              <input type="number" id="input-v0" step="0.1" value="0" class="w-full text-center font-bold text-slate-800 bg-white border border-slate-300 rounded-lg py-1.5 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <span class="absolute right-2.5 top-2 text-xs text-slate-400 font-medium pointer-events-none">m</span>
+            </div>
+            <input type="checkbox" id="chk-v0" checked class="w-5 h-5 text-blue-600 rounded focus:ring-blue-500 border-slate-300 cursor-pointer">
+          </div>
+
+          <!-- phi0 (Fo) Parameter -->
+          <div class="flex items-center space-x-3">
+            <span class="text-sm font-semibold text-slate-700 w-8">φ₀</span>
+            <div class="relative flex-1">
+              <input type="number" id="input-phi0" step="1" value="0" class="w-full text-center font-bold text-slate-800 bg-white border border-slate-300 rounded-lg py-1.5 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <span class="absolute right-2.5 top-2 text-xs text-slate-400 font-medium pointer-events-none">°</span>
+            </div>
+            <input type="checkbox" id="chk-phi0" checked class="w-5 h-5 text-blue-600 rounded focus:ring-blue-500 border-slate-300 cursor-pointer">
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2.5">Shown Kinematics</h2>
+        <div class="space-y-3 bg-slate-50 p-4 rounded-xl border border-slate-200">
+          <label class="flex items-center justify-between cursor-pointer">
+            <div class="flex items-center space-x-2.5">
+              <div class="w-3.5 h-3.5 rounded-full bg-red-600"></div>
+              <span class="text-sm font-bold tracking-wide text-slate-800">EXACT</span>
+            </div>
+            <input type="checkbox" id="chk-exact" checked class="w-5 h-5 text-red-600 rounded focus:ring-red-500 border-slate-300 cursor-pointer">
+          </label>
+
+          <label class="flex items-center justify-between cursor-pointer">
+            <div class="flex items-center space-x-2.5">
+              <div class="w-3.5 h-3.5 rounded-full bg-purple-600"></div>
+              <span class="text-sm font-bold tracking-wide text-slate-800">APPROXIMATED</span>
+            </div>
+            <input type="checkbox" id="chk-approx" checked class="w-5 h-5 text-purple-600 rounded focus:ring-purple-500 border-slate-300 cursor-pointer">
+          </label>
+        </div>
+      </div>
+
+      <!-- Instruction / Status card -->
+      <div id="status-card" class="mt-auto bg-blue-50/70 border border-blue-200 rounded-xl p-3.5 text-xs text-blue-900 leading-relaxed">
+        <span class="font-bold flex items-center mb-1">
+          <svg class="w-3.5 h-3.5 mr-1.5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          Interactive Guide
+        </span>
+        <span id="status-text">Drag vertices (O, P1, P2...) to modify beam geometry. Pan by dragging with right mouse or middle mouse button.</span>
+      </div>
+    </aside>
+
+    <main class="flex-1 relative bg-white overflow-hidden">
+      <!-- Drawing Canvas -->
+      <canvas id="canvas" class="w-full h-full block cursor-crosshair"></canvas>
+
+      <!-- Draw Mode Banner Bar (shows during drawing mode) -->
+      <div id="draw-banner" class="hidden absolute top-4 left-1/2 -translate-x-1/2 bg-slate-900/90 text-white backdrop-blur-md px-6 py-2.5 rounded-full shadow-lg flex items-center space-x-4 text-sm font-medium z-30 transition-all">
+        <span class="flex items-center text-emerald-400">
+          <span class="w-2.5 h-2.5 bg-emerald-400 rounded-full animate-ping mr-2"></span>
+          Drawing Mode Active
+        </span>
+        <span class="text-slate-300">Click to place points. Press <kbd class="px-2 py-0.5 bg-slate-700 rounded text-white font-mono text-xs">Enter</kbd> or click:</span>
+        <button id="btn-finish-drawing" class="px-3 py-1 bg-emerald-600 hover:bg-emerald-500 text-white rounded-full text-xs font-semibold shadow transition">
+          Finish Beam
+        </button>
+        <button id="btn-cancel-drawing" class="px-3 py-1 bg-slate-700 hover:bg-slate-600 text-slate-200 rounded-full text-xs transition">
+          Cancel
+        </button>
+      </div>
+
+      <!-- Bottom Right Coordinates Badge -->
+      <div class="absolute bottom-5 right-6 bg-white/95 backdrop-blur-sm border border-slate-200 shadow-md rounded-2xl px-5 py-2.5 flex items-center space-x-3 pointer-events-none select-none z-10">
+        <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Cursor</span>
+        <div class="mono-font text-sm font-bold text-slate-800 flex items-center space-x-2">
+          <span id="coord-x">X: 0.0 m</span>
+          <span class="text-slate-300">•</span>
+          <span id="coord-y">Y: 0.0 m</span>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div id="modal-export" class="fixed inset-0 bg-slate-900/50 backdrop-blur-xs flex items-center justify-center z-50 hidden p-4">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-xl w-full border border-slate-200 flex flex-col overflow-hidden max-h-[90vh]">
+      <div class="px-6 py-4 border-b border-slate-100 flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+          <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+          <h3 class="font-bold text-slate-900">Generated MATLAB (.m) Script</h3>
+        </div>
+        <button id="btn-close-modal" class="text-slate-400 hover:text-slate-600 p-1 rounded-lg">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="p-6 overflow-y-auto flex-1 bg-slate-900">
+        <pre id="m-script-content" class="text-emerald-400 font-mono text-sm leading-relaxed overflow-x-auto whitespace-pre"></pre>
+      </div>
+      <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
+        <span id="copy-feedback" class="text-xs font-semibold text-emerald-600 opacity-0 transition-opacity">Copied to clipboard!</span>
+        <div class="flex space-x-3">
+          <button id="btn-copy-script" class="px-4 py-2 border border-slate-300 bg-white hover:bg-slate-50 text-slate-700 font-medium text-sm rounded-lg shadow-2xs transition">
+            Copy Code
+          </button>
+          <button id="btn-download-script" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-medium text-sm rounded-lg shadow-sm transition">
+            Download .m file
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Default Scheme coordinates from prompt:
+    // O = [0, 0], P1 = [4, 0], P2 = [4, 3], P = [6, 3]
+    const state = {
+      mode: 'modify', // 'modify' | 'draw'
+      points: [
+        { x: 0, y: 0 },
+        { x: 4, y: 0 },
+        { x: 4, y: 3 },
+        { x: 6, y: 3 }
+      ],
+      drawTempPoints: [],
+      drawPreviewPoint: null,
+      
+      // View transform
+      panX: 0,
+      panY: 0,
+      scale: 50, // Pixels per meter
+      
+      // Interaction state
+      draggingPointIdx: null,
+      isPanning: false,
+      panStartX: 0,
+      panStartY: 0,
+      hoverPointIdx: null,
+      mouseMeters: { x: 0, y: 0 },
+
+      // CAD & Kinematics settings
+      gridSnap: true,
+      showDimensions: true,
+      u0: 0,
+      u0Active: true,
+      v0: 0,
+      v0Active: true,
+      phi0Deg: 0,
+      phi0Active: true,
+      showExact: true,
+      showApprox: true
+    };
+
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    const coordXEl = document.getElementById('coord-x');
+    const coordYEl = document.getElementById('coord-y');
+    const statusTextEl = document.getElementById('status-text');
+    const drawBannerEl = document.getElementById('draw-banner');
+
+    // Controls
+    const btnModeModify = document.getElementById('btn-mode-modify');
+    const btnModeDraw = document.getElementById('btn-mode-draw');
+    const btnFinishDrawing = document.getElementById('btn-finish-drawing');
+    const btnCancelDrawing = document.getElementById('btn-cancel-drawing');
+    
+    const chkGridSnap = document.getElementById('chk-grid-snap');
+    const chkShowDims = document.getElementById('chk-show-dims');
+    
+    const inputU0 = document.getElementById('input-u0');
+    const chkU0 = document.getElementById('chk-u0');
+    const inputV0 = document.getElementById('input-v0');
+    const chkV0 = document.getElementById('chk-v0');
+    const inputPhi0 = document.getElementById('input-phi0');
+    const chkPhi0 = document.getElementById('chk-phi0');
+
+    const chkExact = document.getElementById('chk-exact');
+    const chkApprox = document.getElementById('chk-approx');
+
+    const btnExportM = document.getElementById('btn-export-m');
+    const btnCenterView = document.getElementById('btn-center-view');
+    const btnZoomIn = document.getElementById('btn-zoom-in');
+    const btnZoomOut = document.getElementById('btn-zoom-out');
+
+    // Modal
+    const modalExport = document.getElementById('modal-export');
+    const mScriptContent = document.getElementById('m-script-content');
+    const btnCloseModal = document.getElementById('btn-close-modal');
+    const btnCopyScript = document.getElementById('btn-copy-script');
+    const btnDownloadScript = document.getElementById('btn-download-script');
+    const copyFeedback = document.getElementById('copy-feedback');
+
+    function resizeCanvas() {
+      const rect = canvas.parentElement.getBoundingClientRect();
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = rect.width * dpr;
+      canvas.height = rect.height * dpr;
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
+      ctx.scale(dpr, dpr);
+      render();
+    }
+
+    // World to Screen (Engineering standard: +X is right, +Y is UP)
+    function worldToScreen(wx, wy) {
+      const sx = canvas.clientWidth / 2 + state.panX + wx * state.scale;
+      const sy = canvas.clientHeight / 2 + state.panY - wy * state.scale;
+      return { x: sx, y: sy };
+    }
+
+    // Screen to World
+    function screenToWorld(sx, sy) {
+      const wx = (sx - (canvas.clientWidth / 2 + state.panX)) / state.scale;
+      const wy = ((canvas.clientHeight / 2 + state.panY) - sy) / state.scale;
+      return { x: wx, y: wy };
+    }
+
+    function centerView() {
+      const pts = state.mode === 'draw' && state.drawTempPoints.length > 0
+        ? state.drawTempPoints
+        : state.points;
+
+      if (!pts || pts.length === 0) {
+        state.panX = 0;
+        state.panY = 0;
+        state.scale = 55;
+        render();
+        return;
+      }
+
+      let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+      pts.forEach(p => {
+        minX = Math.min(minX, p.x);
+        maxX = Math.max(maxX, p.x);
+        minY = Math.min(minY, p.y);
+        maxY = Math.max(maxY, p.y);
+      });
+
+      // Include kinematic deformed points if active
+      if (state.showExact || state.showApprox) {
+        const exact = computeKinematics(pts, 'exact');
+        const approx = computeKinematics(pts, 'approx');
+        if (state.showExact) {
+          exact.forEach(p => {
+            minX = Math.min(minX, p.x);
+            maxX = Math.max(maxX, p.x);
+            minY = Math.min(minY, p.y);
+            maxY = Math.max(maxY, p.y);
+          });
+        }
+        if (state.showApprox) {
+          approx.forEach(p => {
+            minX = Math.min(minX, p.x);
+            maxX = Math.max(maxX, p.x);
+            minY = Math.min(minY, p.y);
+            maxY = Math.max(maxY, p.y);
+          });
+        }
+      }
+
+      // Add margins (minimum 3 meters span)
+      const spanX = Math.max(maxX - minX + 4, 6);
+      const spanY = Math.max(maxY - minY + 4, 6);
+
+      const targetCenterX = (minX + maxX) / 2;
+      const targetCenterY = (minY + maxY) / 2;
+
+      const availW = canvas.clientWidth * 0.75;
+      const availH = canvas.clientHeight * 0.75;
+
+      const scaleX = availW / spanX;
+      const scaleY = availH / spanY;
+      state.scale = Math.min(Math.max(Math.min(scaleX, scaleY), 25), 120);
+
+      // Pan so center of bounds is at center of screen
+      state.panX = -targetCenterX * state.scale;
+      state.panY = targetCenterY * state.scale;
+
+      render();
+    }
+
+    function computeKinematics(pts, type) {
+      if (!pts || pts.length === 0) return [];
+      
+      const origin = pts[0]; // Point 'O'
+      const u0 = state.u0Active ? state.u0 : 0;
+      const v0 = state.v0Active ? state.v0 : 0;
+      const phiDeg = state.phi0Active ? state.phi0Deg : 0;
+      const phiRad = (phiDeg * Math.PI) / 180;
+
+      return pts.map(p => {
+        const dx = p.x - origin.x;
+        const dy = p.y - origin.y;
+        
+        let ux = u0;
+        let uy = v0;
+
+        if (type === 'exact') {
+          // Exact rotation: R = [cos(phi)-1, -sin(phi); sin(phi), cos(phi)-1]
+          const r11 = Math.cos(phiRad) - 1;
+          const r12 = -Math.sin(phiRad);
+          const r21 = Math.sin(phiRad);
+          const r22 = Math.cos(phiRad) - 1;
+
+          ux += r11 * dx + r12 * dy;
+          uy += r21 * dx + r22 * dy;
+        } else {
+          // Approximated rotation: A = [0, -phi; phi, 0] with phi in radians
+          const a11 = 0;
+          const a12 = -phiRad;
+          const a21 = phiRad;
+          const a22 = 0;
+
+          ux += a11 * dx + a12 * dy;
+          uy += a21 * dx + a22 * dy;
+        }
+
+        return {
+          x: p.x + ux,
+          y: p.y + uy
+        };
+      });
+    }
+
+    function drawGrid() {
+      const w = canvas.clientWidth;
+      const h = canvas.clientHeight;
+
+      const topLeft = screenToWorld(0, 0);
+      const bottomRight = screenToWorld(w, h);
+
+      const startX = Math.floor(topLeft.x) - 1;
+      const endX = Math.ceil(bottomRight.x) + 1;
+      const startY = Math.floor(bottomRight.y) - 1;
+      const endY = Math.ceil(topLeft.y) + 1;
+
+      ctx.save();
+      // Draw 1-meter grid dots as in engineering CAD and user interface screenshot
+      ctx.fillStyle = '#94a3b8';
+      for (let x = startX; x <= endX; x++) {
+        for (let y = startY; y <= endY; y++) {
+          const s = worldToScreen(x, y);
+          ctx.beginPath();
+          // Slightly emphasize the (0, 0) origin dot
+          if (x === 0 && y === 0) {
+            ctx.fillStyle = '#3b82f6';
+            ctx.arc(s.x, s.y, 3, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.fillStyle = '#94a3b8';
+          } else {
+            ctx.arc(s.x, s.y, 1.8, 0, Math.PI * 2);
+            ctx.fill();
+          }
+        }
+      }
+      ctx.restore();
+    }
+
+    function getNodeLabel(index, total) {
+      if (index === 0) return 'O';
+      if (index === total - 1 && total > 1) return 'P';
+      return `P${index}`;
+    }
+
+    function drawBeamDimensions(points) {
+      if (!state.showDimensions || points.length < 2) return;
+
+      ctx.save();
+      ctx.strokeStyle = '#0f172a';
+      ctx.lineWidth = 1;
+      ctx.fillStyle = '#0f172a';
+      ctx.font = '500 13px Inter, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+
+      const tickSize = 7;
+      const offsetDist = 26; // Distance offset from the beam line
+
+      for (let i = 0; i < points.length - 1; i++) {
+        const p1 = points[i];
+        const p2 = points[i + 1];
+
+        const s1 = worldToScreen(p1.x, p1.y);
+        const s2 = worldToScreen(p2.x, p2.y);
+
+        const dx = s2.x - s1.x;
+        const dy = s2.y - s1.y;
+        const lengthPx = Math.hypot(dx, dy);
+        if (lengthPx < 10) continue;
+
+        // Unit normal vector (pointing to CAD side)
+        let nx = -dy / lengthPx;
+        let ny = dx / lengthPx;
+
+        // Consistent offset direction matching engineering drawing practice
+        const isHorizontal = Math.abs(dy) < Math.abs(dx);
+        if (isHorizontal) {
+          // Horizontal segments: place dimension underneath or above
+          if (ny < 0) { nx = -nx; ny = -ny; }
+        } else {
+          // Vertical segments: place dimension to the left
+          if (nx > 0) { nx = -nx; ny = -ny; }
+        }
+
+        const o1x = s1.x + nx * offsetDist;
+        const o1y = s1.y + ny * offsetDist;
+        const o2x = s2.x + nx * offsetDist;
+        const o2y = s2.y + ny * offsetDist;
+
+        // Extension witness lines
+        ctx.beginPath();
+        ctx.moveTo(s1.x + nx * 4, s1.y + ny * 4);
+        ctx.lineTo(s1.x + nx * (offsetDist + 4), s1.y + ny * (offsetDist + 4));
+        ctx.moveTo(s2.x + nx * 4, s2.y + ny * 4);
+        ctx.lineTo(s2.x + nx * (offsetDist + 4), s2.y + ny * (offsetDist + 4));
+        ctx.stroke();
+
+        // Main dimension line
+        ctx.beginPath();
+        ctx.moveTo(o1x, o1y);
+        ctx.lineTo(o2x, o2y);
+        ctx.stroke();
+
+        // End tick markers (45 deg or perpendicular architectural ticks)
+        const perpX = -ny;
+        const perpY = nx;
+
+        ctx.beginPath();
+        ctx.moveTo(o1x - perpX * tickSize, o1y - perpY * tickSize);
+        ctx.lineTo(o1x + perpX * tickSize, o1y + perpY * tickSize);
+        ctx.moveTo(o2x - perpX * tickSize, o2y - perpY * tickSize);
+        ctx.lineTo(o2x + perpX * tickSize, o2y + perpY * tickSize);
+        ctx.stroke();
+
+        // Length calculation in meters
+        const lengthMeters = Math.hypot(p2.x - p1.x, p2.y - p1.y);
+        const labelText = Number.isInteger(lengthMeters) ? lengthMeters.toString() : lengthMeters.toFixed(2);
+
+        // Center text on dimension line
+        const midX = (o1x + o2x) / 2;
+        const midY = (o1y + o2y) / 2;
+
+        // Dimension text background box to keep dimension legible
+        const textMetrics = ctx.measureText(labelText);
+        const padding = 3;
+        ctx.save();
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(
+          midX - textMetrics.width / 2 - padding,
+          midY - 8 - padding,
+          textMetrics.width + padding * 2,
+          16 + padding * 2
+        );
+        ctx.restore();
+
+        ctx.fillText(labelText, midX, midY);
+      }
+      ctx.restore();
+    }
+
+    function drawBeamPolyline(pts, color, lineWidth, lineDash = [], isBase = false) {
+      if (pts.length < 1) return;
+
+      ctx.save();
+      ctx.strokeStyle = color;
+      ctx.lineWidth = lineWidth;
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
+      ctx.setLineDash(lineDash);
+
+      // Draw segments
+      if (pts.length > 1) {
+        ctx.beginPath();
+        const start = worldToScreen(pts[0].x, pts[0].y);
+        ctx.moveTo(start.x, start.y);
+        for (let i = 1; i < pts.length; i++) {
+          const s = worldToScreen(pts[i].x, pts[i].y);
+          ctx.lineTo(s.x, s.y);
+        }
+        ctx.stroke();
+      }
+      ctx.setLineDash([]);
+
+      // Draw Joint points and labels
+      const total = pts.length;
+      pts.forEach((p, idx) => {
+        const s = worldToScreen(p.x, p.y);
+        const label = getNodeLabel(idx, total);
+
+        if (isBase) {
+          // Base scheme vertices
+          const isHovered = state.mode === 'modify' && state.hoverPointIdx === idx;
+          const isDragging = state.draggingPointIdx === idx;
+
+          // Vertex Handle
+          ctx.beginPath();
+          ctx.arc(s.x, s.y, isHovered || isDragging ? 7.5 : 5, 0, Math.PI * 2);
+          ctx.fillStyle = isDragging ? '#2563eb' : (isHovered ? '#3b82f6' : '#0f172a');
+          ctx.fill();
+          ctx.strokeStyle = '#ffffff';
+          ctx.lineWidth = 2;
+          ctx.stroke();
+
+          // Node Text Label
+          ctx.font = '700 16px Inter, sans-serif';
+          ctx.fillStyle = '#0f172a';
+          ctx.textAlign = 'left';
+          ctx.textBaseline = 'middle';
+
+          // Placement offset based on node position to mimic CAD screenshot
+          let offX = 12;
+          let offY = 14;
+          if (idx === 0) {
+            offX = -20;
+            offY = 16;
+          } else if (idx === 1) {
+            offX = 12;
+            offY = 14;
+          } else if (idx === 2) {
+            offX = 12;
+            offY = 14;
+          } else {
+            offX = 12;
+            offY = 12;
+          }
+
+          ctx.fillText(label, s.x + offX, s.y + offY);
+        } else {
+          // Kinematic nodes (Exact / Approx)
+          ctx.beginPath();
+          ctx.arc(s.x, s.y, 4, 0, Math.PI * 2);
+          ctx.fillStyle = color;
+          ctx.fill();
+
+          // Small subscript label
+          ctx.font = '600 12px Inter, sans-serif';
+          ctx.fillStyle = color;
+          ctx.textAlign = 'left';
+          ctx.fillText(`${label}'`, s.x + 8, s.y - 8);
+        }
+      });
+
+      ctx.restore();
+    }
+
+    function drawCreationMode() {
+      if (state.mode !== 'draw') return;
+
+      const pts = state.drawTempPoints;
+      ctx.save();
+
+      // Draw placed segments so far
+      if (pts.length > 0) {
+        ctx.strokeStyle = '#2563eb';
+        ctx.lineWidth = 4;
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+        ctx.beginPath();
+        const start = worldToScreen(pts[0].x, pts[0].y);
+        ctx.moveTo(start.x, start.y);
+        for (let i = 1; i < pts.length; i++) {
+          const s = worldToScreen(pts[i].x, pts[i].y);
+          ctx.lineTo(s.x, s.y);
+        }
+
+        // Draw preview line to mouse
+        if (state.drawPreviewPoint) {
+          const prev = worldToScreen(state.drawPreviewPoint.x, state.drawPreviewPoint.y);
+          ctx.lineTo(prev.x, prev.y);
+        }
+        ctx.stroke();
+
+        // Draw placed nodes
+        pts.forEach((p, idx) => {
+          const s = worldToScreen(p.x, p.y);
+          ctx.beginPath();
+          ctx.arc(s.x, s.y, 5, 0, Math.PI * 2);
+          ctx.fillStyle = '#2563eb';
+          ctx.fill();
+          ctx.strokeStyle = '#ffffff';
+          ctx.lineWidth = 2;
+          ctx.stroke();
+
+          ctx.font = '700 14px Inter, sans-serif';
+          ctx.fillStyle = '#1e3a8a';
+          ctx.fillText(idx === 0 ? 'O' : `P${idx}`, s.x + 10, s.y + 12);
+        });
+      }
+
+      // Draw preview cursor point
+      if (state.drawPreviewPoint) {
+        const ps = worldToScreen(state.drawPreviewPoint.x, state.drawPreviewPoint.y);
+        ctx.beginPath();
+        ctx.arc(ps.x, ps.y, 5, 0, Math.PI * 2);
+        ctx.fillStyle = '#3b82f6';
+        ctx.fill();
+        ctx.strokeStyle = '#ffffff';
+        ctx.lineWidth = 1.5;
+        ctx.stroke();
+      }
+
+      ctx.restore();
+    }
+
+    function render() {
+      ctx.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight);
+
+      // 1. Draw dot grid
+      drawGrid();
+
+      if (state.mode === 'draw') {
+        // Draw in-progress points
+        drawCreationMode();
+        return;
+      }
+
+      // 2. Draw Kinematics schemes if enabled
+      const hasDisplacement = (state.u0Active && state.u0 !== 0) ||
+                             (state.v0Active && state.v0 !== 0) ||
+                             (state.phi0Active && state.phi0Deg !== 0);
+
+      if (hasDisplacement) {
+        // Approximate kinematics (Purple - solid line)
+        if (state.showApprox) {
+          const approxPts = computeKinematics(state.points, 'approx');
+          drawBeamPolyline(approxPts, '#9333ea', 3.5, []); // Solid purple line
+        }
+
+        // Exact kinematics (Red - solid line)
+        if (state.showExact) {
+          const exactPts = computeKinematics(state.points, 'exact');
+          drawBeamPolyline(exactPts, '#dc2626', 3.5, []); // Solid vibrant red line
+        }
+      }
+
+      // 3. Draw Base Initial Beam (Thick black as in screenshot)
+      drawBeamPolyline(state.points, '#000000', 6, [], true);
+
+      // 4. Draw CAD Dimensions on base beam
+      drawBeamDimensions(state.points);
+    }
+
+    function snapPoint(worldPt) {
+      if (state.gridSnap) {
+        return {
+          x: Math.round(worldPt.x),
+          y: Math.round(worldPt.y)
+        };
+      }
+      // Round to 2 decimals when not snapped
+      return {
+        x: Math.round(worldPt.x * 100) / 100,
+        y: Math.round(worldPt.y * 100) / 100
+      };
+    }
+
+    function findNodeAt(screenX, screenY) {
+      if (state.mode !== 'modify') return -1;
+      const hitRadius = 14; // Pixels
+      for (let i = 0; i < state.points.length; i++) {
+        const s = worldToScreen(state.points[i].x, state.points[i].y);
+        const dist = Math.hypot(s.x - screenX, s.y - screenY);
+        if (dist <= hitRadius) return i;
+      }
+      return -1;
+    }
+
+    canvas.addEventListener('mousedown', (e) => {
+      const rect = canvas.getBoundingClientRect();
+      const sx = e.clientX - rect.left;
+      const sy = e.clientY - rect.top;
+      const world = screenToWorld(sx, sy);
+
+      // Middle click or right-click: Initiate Pan
+      if (e.button === 1 || e.button === 2) {
+        state.isPanning = true;
+        state.panStartX = sx - state.panX;
+        state.panStartY = sy - state.panY;
+        canvas.style.cursor = 'grabbing';
+        return;
+      }
+
+      // Left click
+      if (e.button === 0) {
+        if (state.mode === 'modify') {
+          const hitIdx = findNodeAt(sx, sy);
+          if (hitIdx !== -1) {
+            state.draggingPointIdx = hitIdx;
+            canvas.style.cursor = 'grabbing';
+            render();
+          } else {
+            // Click outside nodes initiates canvas panning
+            state.isPanning = true;
+            state.panStartX = sx - state.panX;
+            state.panStartY = sy - state.panY;
+            canvas.style.cursor = 'grabbing';
+          }
+        } else if (state.mode === 'draw') {
+          // Place point
+          const targetPt = snapPoint(world);
+          
+          // First point must be (0, 0) for point O if close, or default
+          if (state.drawTempPoints.length === 0) {
+            state.drawTempPoints.push({ x: targetPt.x, y: targetPt.y });
+          } else {
+            // Avoid duplicate coincident points
+            const last = state.drawTempPoints[state.drawTempPoints.length - 1];
+            if (last.x !== targetPt.x || last.y !== targetPt.y) {
+              state.drawTempPoints.push({ x: targetPt.x, y: targetPt.y });
+            }
+          }
+          render();
+        }
+      }
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      const rect = canvas.getBoundingClientRect();
+      const sx = e.clientX - rect.left;
+      const sy = e.clientY - rect.top;
+
+      // Update world coordinates badge
+      const world = screenToWorld(sx, sy);
+      state.mouseMeters = world;
+      coordXEl.textContent = `X: ${world.x.toFixed(1)} m`;
+      coordYEl.textContent = `Y: ${world.y.toFixed(1)} m`;
+
+      // Handle Pan
+      if (state.isPanning) {
+        state.panX = sx - state.panStartX;
+        state.panY = sy - state.panStartY;
+        render();
+        return;
+      }
+
+      // Handle Dragging Beam Node in Modify mode
+      if (state.mode === 'modify') {
+        if (state.draggingPointIdx !== null) {
+          const snapped = snapPoint(world);
+          state.points[state.draggingPointIdx].x = snapped.x;
+          state.points[state.draggingPointIdx].y = snapped.y;
+          render();
+        } else {
+          // Hover check
+          const hitIdx = findNodeAt(sx, sy);
+          state.hoverPointIdx = hitIdx;
+          if (hitIdx !== -1) {
+            canvas.style.cursor = 'grab';
+          } else {
+            canvas.style.cursor = 'crosshair';
+          }
+          render();
+        }
+      } else if (state.mode === 'draw') {
+        canvas.style.cursor = 'crosshair';
+        state.drawPreviewPoint = snapPoint(world);
+        render();
+      }
+    });
+
+    window.addEventListener('mouseup', () => {
+      if (state.isPanning) {
+        state.isPanning = false;
+        canvas.style.cursor = state.hoverPointIdx !== -1 ? 'grab' : 'crosshair';
+      }
+      if (state.draggingPointIdx !== null) {
+        state.draggingPointIdx = null;
+        canvas.style.cursor = state.hoverPointIdx !== -1 ? 'grab' : 'crosshair';
+        render();
+      }
+    });
+
+    // Zoom on wheel
+    canvas.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      const zoomFactor = e.deltaY < 0 ? 1.12 : 0.89;
+      
+      const rect = canvas.getBoundingClientRect();
+      const sx = e.clientX - rect.left;
+      const sy = e.clientY - rect.top;
+      
+      const before = screenToWorld(sx, sy);
+      state.scale = Math.max(15, Math.min(300, state.scale * zoomFactor));
+      const after = screenToWorld(sx, sy);
+
+      state.panX += (after.x - before.x) * state.scale;
+      state.panY -= (after.y - before.y) * state.scale;
+
+      render();
+    }, { passive: false });
+
+    // Prevent default context menu on canvas
+    canvas.addEventListener('contextmenu', (e) => e.preventDefault());
+
+    function finishDrawing() {
+      if (state.drawTempPoints.length >= 2) {
+        state.points = [...state.drawTempPoints];
+      }
+      setMode('modify');
+    }
+
+    function cancelDrawing() {
+      setMode('modify');
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (state.mode === 'draw' && (e.key === 'Enter' || e.keyCode === 13)) {
+        finishDrawing();
+      }
+      if (state.mode === 'draw' && (e.key === 'Escape' || e.keyCode === 27)) {
+        cancelDrawing();
+      }
+    });
+
+    btnFinishDrawing.addEventListener('click', finishDrawing);
+    btnCancelDrawing.addEventListener('click', cancelDrawing);
+
+    function setMode(newMode) {
+      state.mode = newMode;
+      if (newMode === 'modify') {
+        btnModeModify.className = "w-full py-2.5 px-4 rounded-lg font-medium text-sm transition flex items-center justify-center border-2 border-blue-600 bg-blue-50 text-blue-700 shadow-xs";
+        btnModeDraw.className = "w-full py-2.5 px-4 rounded-lg font-medium text-sm transition flex items-center justify-center border border-slate-300 bg-white hover:bg-slate-50 text-slate-700";
+        drawBannerEl.classList.add('hidden');
+        statusTextEl.textContent = "Drag terminal vertices (O, P1, P2...) to modify beam geometry. Pan using right or middle mouse drag.";
+      } else {
+        btnModeDraw.className = "w-full py-2.5 px-4 rounded-lg font-medium text-sm transition flex items-center justify-center border-2 border-blue-600 bg-blue-50 text-blue-700 shadow-xs";
+        btnModeModify.className = "w-full py-2.5 px-4 rounded-lg font-medium text-sm transition flex items-center justify-center border border-slate-300 bg-white hover:bg-slate-50 text-slate-700";
+        drawBannerEl.classList.remove('hidden');
+        state.drawTempPoints = [{ x: 0, y: 0 }]; // Always start with point O at (0, 0)
+        state.drawPreviewPoint = null;
+        statusTextEl.textContent = "Click to define each straight segment point starting from O(0,0). Press Enter to finish.";
+      }
+      render();
+    }
+
+    btnModeModify.addEventListener('click', () => setMode('modify'));
+    btnModeDraw.addEventListener('click', () => setMode('draw'));
+
+    chkGridSnap.addEventListener('change', (e) => {
+      state.gridSnap = e.target.checked;
+    });
+
+    chkShowDims.addEventListener('change', (e) => {
+      state.showDimensions = e.target.checked;
+      render();
+    });
+
+    // Uo inputs
+    inputU0.addEventListener('input', (e) => {
+      state.u0 = parseFloat(e.target.value) || 0;
+      render();
+    });
+    chkU0.addEventListener('change', (e) => {
+      state.u0Active = e.target.checked;
+      render();
+    });
+
+    // Vo inputs
+    inputV0.addEventListener('input', (e) => {
+      state.v0 = parseFloat(e.target.value) || 0;
+      render();
+    });
+    chkV0.addEventListener('change', (e) => {
+      state.v0Active = e.target.checked;
+      render();
+    });
+
+    // phi0 inputs
+    inputPhi0.addEventListener('input', (e) => {
+      state.phi0Deg = parseFloat(e.target.value) || 0;
+      render();
+    });
+    chkPhi0.addEventListener('change', (e) => {
+      state.phi0Active = e.target.checked;
+      render();
+    });
+
+    // Kinematics checkboxes
+    chkExact.addEventListener('change', (e) => {
+      state.showExact = e.target.checked;
+      render();
+    });
+
+    chkApprox.addEventListener('change', (e) => {
+      state.showApprox = e.target.checked;
+      render();
+    });
+
+    // View buttons
+    btnCenterView.addEventListener('click', centerView);
+    btnZoomIn.addEventListener('click', () => {
+      state.scale = Math.min(300, state.scale * 1.25);
+      render();
+    });
+    btnZoomOut.addEventListener('click', () => {
+      state.scale = Math.max(15, state.scale * 0.8);
+      render();
+    });
+
+    function generateMatlabScript() {
+      const pts = state.points;
+      const total = pts.length;
+      
+      // Calculate displaced configuration (using Exact kinematics as reference)
+      const deformedPts = computeKinematics(pts, 'exact');
+
+      // Calculate displaced configuration (using Exact kinematics as reference)
+      const deformedPts_ = computeKinematics(pts, 'approx');
+
+      let script = `% =========================================================\n`;
+      script += `% Single Body 2D Beam Rigid Kinematics Analysis\n`;
+      script += `% Generated by Structural Mechanics 2D Beam App\n`;
+      script += `% Applied Displacements: U0 = ${state.u0Active ? state.u0 : 0} m, V0 = ${state.v0Active ? state.v0 : 0} m, phi0 = ${state.phi0Active ? state.phi0Deg : 0} deg\n`;
+      script += `% =========================================================\n\n`;
+
+      script += `% Initial configuration\n`;
+      pts.forEach((p, idx) => {
+        const name = getNodeLabel(idx, total);
+        script += `${name} = [${p.x}; ${p.y}];\n`;
+      });
+
+      script += `\n% New exact configuration\n`;
+      deformedPts.forEach((p, idx) => {
+        const name = getNodeLabel(idx, total);
+        // Format to clean decimals
+        const px = Number.isInteger(p.x) ? p.x.toString() : p.x.toFixed(4);
+        const py = Number.isInteger(p.y) ? p.y.toString() : p.y.toFixed(4);
+        script += `${name} = [${px}; ${py}];\n`;
+      });
+
+      script += `\n% New approximate configuration\n`;
+      deformedPts_.forEach((p, idx) => {
+        const name = getNodeLabel(idx, total);
+        // Format to clean decimals
+        const px = Number.isInteger(p.x) ? p.x.toString() : p.x.toFixed(4);
+        const py = Number.isInteger(p.y) ? p.y.toString() : p.y.toFixed(4);
+        script += `${name} = [${px}; ${py}];\n`;
+      });
+
+      return script;
+    }
+
+    btnExportM.addEventListener('click', () => {
+      const code = generateMatlabScript();
+      mScriptContent.textContent = code;
+      modalExport.classList.remove('hidden');
+    });
+
+    btnCloseModal.addEventListener('click', () => {
+      modalExport.classList.add('hidden');
+    });
+
+    btnCopyScript.addEventListener('click', () => {
+      const code = generateMatlabScript();
+      const tempTextArea = document.createElement('textarea');
+      tempTextArea.value = code;
+      document.body.appendChild(tempTextArea);
+      tempTextArea.select();
+      try {
+        document.execCommand('copy');
+        copyFeedback.style.opacity = '1';
+        setTimeout(() => { copyFeedback.style.opacity = '0'; }, 2200);
+      } catch (err) {
+        console.error('Copy command failed', err);
+      }
+      document.body.removeChild(tempTextArea);
+    });
+
+    btnDownloadScript.addEventListener('click', () => {
+      const code = generateMatlabScript();
+      const blob = new Blob([code], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'beam_rigid_displacement.m';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    });
+
+    window.addEventListener('resize', resizeCanvas);
+
+    window.addEventListener('load', () => {
+      resizeCanvas();
+      centerView();
+    });
+  </script>
+</body>
+</html>

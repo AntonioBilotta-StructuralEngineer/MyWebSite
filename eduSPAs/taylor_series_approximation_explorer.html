@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taylor Series Approximation Explorer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=KaTeX_Main:ital,wght@0,400;0,700;1,400&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    .math-font {
+      font-family: 'KaTeX_Main', 'Times New Roman', serif;
+    }
+    .custom-radio-input {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #1f2937;
+      border-radius: 50%;
+      outline: none;
+      cursor: pointer;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s ease-in-out;
+      background-color: #ffffff;
+      flex-shrink: 0;
+    }
+    .custom-radio-input:checked::after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background-color: #111827;
+      border-radius: 50%;
+      position: absolute;
+    }
+    .custom-radio-input:hover {
+      border-color: #000000;
+      transform: scale(1.05);
+    }
+    /* Toolbar button styling */
+    .tool-btn {
+      width: 42px;
+      height: 42px;
+      border: 2px solid #1f2937;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+    }
+    .tool-btn:hover {
+      background-color: #f3f4f6;
+      transform: translateY(-1px);
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+    .tool-btn:active {
+      transform: translateY(1px);
+      background-color: #e5e7eb;
+    }
+    canvas {
+      touch-action: none;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 min-h-screen text-gray-900 flex items-center justify-center p-2 sm:p-4 md:p-6">
+
+  <div class="w-full max-w-7xl bg-white border-2 border-black rounded-lg shadow-xl overflow-hidden flex flex-col">
+    
+    <!-- Top toolbar / Header container -->
+    <div class="px-6 pt-4 pb-2 flex justify-between items-center border-b border-gray-100">
+      <div class="flex items-center gap-3">
+        <span class="text-xs font-semibold uppercase tracking-wider text-gray-400">Interactive Simulation</span>
+        <span class="text-xs px-2 py-0.5 rounded bg-gray-100 text-gray-600 font-mono">Taylor Series Expansion</span>
+      </div>
+
+      <!-- Top Right Controls: Center, Zoom Out, Zoom In -->
+      <div class="flex items-center gap-3">
+        <!-- Center / Reset button (Target Crosshair icon) -->
+        <button id="btnCenter" class="tool-btn" title="Center / Reset Initial View [-2π, 2π] × [-3, 3]" aria-label="Center view">
+          <svg class="w-6 h-6 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="12" cy="12" r="9" />
+            <line x1="12" y1="3" x2="12" y2="7" />
+            <line x1="12" y1="17" x2="12" y2="21" />
+            <line x1="3" y1="12" x2="7" y2="12" />
+            <line x1="17" y1="12" x2="21" y2="12" />
+          </svg>
+        </button>
+
+        <!-- Zoom Out button (Magnifying glass with minus) -->
+        <button id="btnZoomOut" class="tool-btn" title="Zoom Out" aria-label="Zoom out">
+          <svg class="w-6 h-6 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="11" cy="11" r="7" />
+            <line x1="16" y1="16" x2="21" y2="21" stroke-linecap="round" />
+            <line x1="8" y1="11" x2="14" y2="11" />
+          </svg>
+        </button>
+
+        <!-- Zoom In button (Magnifying glass with plus) -->
+        <button id="btnZoomIn" class="tool-btn" title="Zoom In" aria-label="Zoom in">
+          <svg class="w-6 h-6 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="11" cy="11" r="7" />
+            <line x1="16" y1="16" x2="21" y2="21" stroke-linecap="round" />
+            <line x1="8" y1="11" x2="14" y2="11" />
+            <line x1="11" y1="8" x2="11" y2="14" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="flex flex-col lg:flex-row flex-1 p-4 sm:p-6 gap-6">
+      
+      <!-- Left Panel: Function selection & Approximation order -->
+      <div class="w-full lg:w-[360px] flex-shrink-0 flex flex-col justify-between py-2 pr-0 lg:pr-4 select-none">
+        
+        <!-- SECTION 1: Function selector -->
+        <div class="mb-8">
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-black mb-6">Choose function of x</h2>
+          
+          <div class="grid grid-cols-2 gap-x-8 gap-y-4 max-w-xs">
+            <!-- Row 1: cos & cosh -->
+            <label class="flex items-center justify-between cursor-pointer group py-1">
+              <span class="text-xl sm:text-2xl font-serif text-gray-900 group-hover:text-black">cos</span>
+              <input type="radio" name="func" value="cos" class="custom-radio-input">
+            </label>
+            <label class="flex items-center justify-between cursor-pointer group py-1">
+              <span class="text-xl sm:text-2xl font-serif text-gray-900 group-hover:text-black">cosh</span>
+              <input type="radio" name="func" value="cosh" class="custom-radio-input">
+            </label>
+
+            <!-- Row 2: sin & sinh -->
+            <label class="flex items-center justify-between cursor-pointer group py-1">
+              <span class="text-xl sm:text-2xl font-serif text-gray-900 group-hover:text-black">sin</span>
+              <input type="radio" name="func" value="sin" checked class="custom-radio-input">
+            </label>
+            <label class="flex items-center justify-between cursor-pointer group py-1">
+              <span class="text-xl sm:text-2xl font-serif text-gray-900 group-hover:text-black">sinh</span>
+              <input type="radio" name="func" value="sinh" class="custom-radio-input">
+            </label>
+
+            <!-- Row 3: tan & tanh -->
+            <label class="flex items-center justify-between cursor-pointer group py-1">
+              <span class="text-xl sm:text-2xl font-serif text-gray-900 group-hover:text-black">tan</span>
+              <input type="radio" name="func" value="tan" class="custom-radio-input">
+            </label>
+            <label class="flex items-center justify-between cursor-pointer group py-1">
+              <span class="text-xl sm:text-2xl font-serif text-gray-900 group-hover:text-black">tanh</span>
+              <input type="radio" name="func" value="tanh" class="custom-radio-input">
+            </label>
+
+            <!-- Row 4: ctan & ctanh -->
+            <label class="flex items-center justify-between cursor-pointer group py-1">
+              <span class="text-xl sm:text-2xl font-serif text-gray-900 group-hover:text-black">ctan</span>
+              <input type="radio" name="func" value="ctan" class="custom-radio-input">
+            </label>
+            <label class="flex items-center justify-between cursor-pointer group py-1">
+              <span class="text-xl sm:text-2xl font-serif text-gray-900 group-hover:text-black">ctanh</span>
+              <input type="radio" name="func" value="ctanh" class="custom-radio-input">
+            </label>
+          </div>
+        </div>
+
+        <!-- SECTION 2: Order of Taylor approximation -->
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-black mb-6">Choose approx. order</h2>
+          
+          <div class="grid grid-cols-2 gap-x-8 gap-y-4 max-w-xs">
+            <!-- Row 1: 1 (order 0) & x^3 (order 3) -->
+            <label class="flex items-center justify-between cursor-pointer group py-1">
+              <span class="text-xl sm:text-2xl font-serif text-gray-900 group-hover:text-black">1</span>
+              <input type="radio" name="order" value="0" class="custom-radio-input">
+            </label>
+            <label class="flex items-center justify-between cursor-pointer group py-1">
+              <span class="text-xl sm:text-2xl font-serif text-gray-900 group-hover:text-black">x^3</span>
+              <input type="radio" name="order" value="3" class="custom-radio-input">
+            </label>
+
+            <!-- Row 2: x (order 1) & x^4 (order 4) -->
+            <label class="flex items-center justify-between cursor-pointer group py-1">
+              <span class="text-xl sm:text-2xl font-serif text-gray-900 group-hover:text-black">x</span>
+              <input type="radio" name="order" value="1" class="custom-radio-input">
+            </label>
+            <label class="flex items-center justify-between cursor-pointer group py-1">
+              <span class="text-xl sm:text-2xl font-serif text-gray-900 group-hover:text-black">x^4</span>
+              <input type="radio" name="order" value="4" checked class="custom-radio-input">
+            </label>
+
+            <!-- Row 3: x^2 (order 2) & x^5 (order 5) -->
+            <label class="flex items-center justify-between cursor-pointer group py-1">
+              <span class="text-xl sm:text-2xl font-serif text-gray-900 group-hover:text-black">x^2</span>
+              <input type="radio" name="order" value="2" class="custom-radio-input">
+            </label>
+            <label class="flex items-center justify-between cursor-pointer group py-1">
+              <span class="text-xl sm:text-2xl font-serif text-gray-900 group-hover:text-black">x^5</span>
+              <input type="radio" name="order" value="5" class="custom-radio-input">
+            </label>
+          </div>
+        </div>
+
+        <div class="mt-6 pt-4 border-t border-gray-200">
+          <div class="text-xs text-gray-500 font-semibold uppercase tracking-wider mb-1">Expansion Center & Value</div>
+          <div class="flex items-center justify-between text-sm font-mono bg-gray-50 border border-gray-200 rounded px-3 py-1.5">
+            <label class="flex items-center gap-1 cursor-text">
+              <span class="text-gray-700">x₀ =</span>
+              <input
+                id="inputX0"
+                type="number"
+                step="any"
+                value="1.400"
+                title="Enter custom x₀ value"
+                class="w-20 px-1 py-0.5 font-bold font-mono text-red-600 bg-white border border-red-300 rounded shadow-sm focus:outline-none focus:ring-1 focus:ring-red-500 text-sm"
+              />
+            </label>
+            <span>f(x₀) = <strong id="valFX0" class="text-black font-bold">0.985</strong></span>
+          </div>
+          <div class="text-[11px] text-gray-500 mt-2 flex items-center gap-1.5">
+            <span class="inline-block w-2.5 h-2.5 rounded-full bg-black"></span> Function f(x)
+            <span class="inline-block w-2.5 h-2.5 rounded-full bg-red-600 ml-2"></span> Taylor Pₙ(x)
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Panel: Interactive Canvas Plotting Area -->
+      <div class="flex-1 min-h-[460px] md:min-h-[520px] relative bg-white border border-gray-300 rounded flex flex-col overflow-hidden">
+        <canvas id="plotCanvas" class="w-full h-full block cursor-grab active:cursor-grabbing"></canvas>
+
+        <!-- Tooltip overlay for triangle dragging -->
+        <div id="dragTooltip" class="absolute pointer-events-none hidden bg-black/85 text-white text-xs px-2.5 py-1 rounded shadow-lg transition-opacity duration-75">
+          x₀ = <span id="tooltipVal">0.00</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="bg-gray-50 px-6 py-2.5 border-t border-gray-200 text-xs text-gray-500 flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="font-semibold text-gray-700">Interactions:</span>
+        <span>• Drag anywhere to pan</span>
+        <span>• Drag <span class="text-red-600 font-bold">▲</span> red triangle to adjust x₀</span>
+        <span>• Mouse wheel / buttons to zoom</span>
+      </div>
+      <div>
+        <span>Initial x: [-2π, 2π] • y: [-3, 3]</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // DOM elements
+    const canvas = document.getElementById('plotCanvas');
+    const ctx = canvas.getContext('2d');
+    const btnCenter = document.getElementById('btnCenter');
+    const btnZoomIn = document.getElementById('btnZoomIn');
+    const btnZoomOut = document.getElementById('btnZoomOut');
+    const inputX0 = document.getElementById('inputX0');
+    const valFX0Display = document.getElementById('valFX0');
+    const dragTooltip = document.getElementById('dragTooltip');
+    const tooltipVal = document.getElementById('tooltipVal');
+
+    // Default intervals from specifications
+    const DEFAULT_X_MIN = -2 * Math.PI;
+    const DEFAULT_X_MAX = 2 * Math.PI;
+    const DEFAULT_Y_MIN = -3.0;
+    const DEFAULT_Y_MAX = 3.0;
+
+    // Viewport boundaries
+    let xMin = DEFAULT_X_MIN;
+    let xMax = DEFAULT_X_MAX;
+    let yMin = DEFAULT_Y_MIN;
+    let yMax = DEFAULT_Y_MAX;
+
+    // Initial Taylor center point x0 matching the user's diagram (~1.4)
+    let x0 = 1.4;
+    let currentFunc = 'sin';
+    let currentOrder = 4;
+
+    // Plot margin in CSS pixels for labels, ticks, and borders
+    const MARGIN = {
+      top: 30,
+      right: 30,
+      bottom: 40,
+      left: 45
+    };
+
+    // Triangle dimensions
+    const TRIANGLE_HALF_WIDTH = 9;
+    const TRIANGLE_HEIGHT = 14;
+
+    // Exact analytical derivatives for all 8 functions up to order 5
+    const Functions = {
+      cos: {
+        f: (x) => Math.cos(x),
+        derivatives: (x0) => {
+          const c = Math.cos(x0);
+          const s = Math.sin(x0);
+          return [c, -s, -c, s, c, -s];
+        }
+      },
+      sin: {
+        f: (x) => Math.sin(x),
+        derivatives: (x0) => {
+          const s = Math.sin(x0);
+          const c = Math.cos(x0);
+          return [s, c, -s, -c, s, c];
+        }
+      },
+      tan: {
+        f: (x) => Math.tan(x),
+        derivatives: (x0) => {
+          const t = Math.tan(x0);
+          const t2 = t * t;
+          const t3 = t2 * t;
+          const t4 = t2 * t2;
+          const t5 = t4 * t;
+          const t6 = t3 * t3;
+          return [
+            t,
+            1 + t2,
+            2 * t + 2 * t3,
+            2 + 8 * t2 + 6 * t4,
+            16 * t + 40 * t3 + 24 * t5,
+            16 + 136 * t2 + 240 * t4 + 120 * t6
+          ];
+        }
+      },
+      ctan: {
+        // cot(x)
+        f: (x) => 1 / Math.tan(x),
+        derivatives: (x0) => {
+          const u = 1 / Math.tan(x0);
+          const u2 = u * u;
+          const u3 = u2 * u;
+          const u4 = u2 * u2;
+          const u5 = u4 * u;
+          const u6 = u3 * u3;
+          return [
+            u,
+            -(1 + u2),
+            2 * u + 2 * u3,
+            -(2 + 8 * u2 + 6 * u4),
+            16 * u + 40 * u3 + 24 * u5,
+            -(16 + 136 * u2 + 240 * u4 + 120 * u6)
+          ];
+        }
+      },
+      cosh: {
+        f: (x) => Math.cosh(x),
+        derivatives: (x0) => {
+          const ch = Math.cosh(x0);
+          const sh = Math.sinh(x0);
+          return [ch, sh, ch, sh, ch, sh];
+        }
+      },
+      sinh: {
+        f: (x) => Math.sinh(x),
+        derivatives: (x0) => {
+          const sh = Math.sinh(x0);
+          const ch = Math.cosh(x0);
+          return [sh, ch, sh, ch, sh, ch];
+        }
+      },
+      tanh: {
+        f: (x) => Math.tanh(x),
+        derivatives: (x0) => {
+          const w = Math.tanh(x0);
+          const w2 = w * w;
+          const w3 = w2 * w;
+          const w4 = w2 * w2;
+          const w5 = w4 * w;
+          const w6 = w3 * w3;
+          return [
+            w,
+            1 - w2,
+            -2 * w + 2 * w3,
+            -2 + 8 * w2 - 6 * w4,
+            16 * w - 40 * w3 + 24 * w5,
+            16 - 136 * w2 + 240 * w4 - 120 * w6
+          ];
+        }
+      },
+      ctanh: {
+        // coth(x)
+        f: (x) => 1 / Math.tanh(x),
+        derivatives: (x0) => {
+          const v = 1 / Math.tanh(x0);
+          const v2 = v * v;
+          const v3 = v2 * v;
+          const v4 = v2 * v2;
+          const v5 = v4 * v;
+          const v6 = v3 * v3;
+          return [
+            v,
+            1 - v2,
+            -2 * v + 2 * v3,
+            -2 + 8 * v2 - 6 * v4,
+            16 * v - 40 * v3 + 24 * v5,
+            16 - 136 * v2 + 240 * v4 - 120 * v6
+          ];
+        }
+      }
+    };
+
+    const factorials = [1, 1, 2, 6, 24, 120];
+
+    // Evaluates Taylor series: sum_{k=0}^{order} (f^(k)(x0) / k!) * (x - x0)^k
+    function evalTaylor(x, x0, order, derivatives) {
+      const dx = x - x0;
+      let sum = 0;
+      let dxPow = 1;
+      for (let k = 0; k <= order; k++) {
+        const coef = derivatives[k] / factorials[k];
+        if (Number.isFinite(coef)) {
+          sum += coef * dxPow;
+        }
+        dxPow *= dx;
+      }
+      return sum;
+    }
+
+    let plotWidth = 0;
+    let plotHeight = 0;
+    let cssWidth = 0;
+    let cssHeight = 0;
+
+    function resizeCanvas() {
+      const rect = canvas.getBoundingClientRect();
+      const dpr = window.devicePixelRatio || 1;
+      cssWidth = rect.width;
+      cssHeight = rect.height;
+      canvas.width = Math.floor(cssWidth * dpr);
+      canvas.height = Math.floor(cssHeight * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+      plotWidth = cssWidth - MARGIN.left - MARGIN.right;
+      plotHeight = cssHeight - MARGIN.top - MARGIN.bottom;
+      draw();
+    }
+
+    // World to Screen
+    function toScreenX(x) {
+      return MARGIN.left + ((x - xMin) / (xMax - xMin)) * plotWidth;
+    }
+
+    function toScreenY(y) {
+      return MARGIN.top + ((yMax - y) / (yMax - yMin)) * plotHeight;
+    }
+
+    // Screen to World
+    function toWorldX(sx) {
+      return xMin + ((sx - MARGIN.left) / plotWidth) * (xMax - xMin);
+    }
+
+    function toWorldY(sy) {
+      return yMax - ((sy - MARGIN.top) / plotHeight) * (yMax - yMin);
+    }
+
+    function getNiceStep(range, targetSteps) {
+      const rawStep = range / targetSteps;
+      const mag = Math.pow(10, Math.floor(Math.log10(rawStep)));
+      const residual = rawStep / mag;
+      let niceResidual;
+      if (residual < 1.5) niceResidual = 1;
+      else if (residual < 3.5) niceResidual = 2;
+      else if (residual < 7.5) niceResidual = 5;
+      else niceResidual = 10;
+      return niceResidual * mag;
+    }
+
+    function drawGridAndAxes() {
+      // Background within plot boundary
+      ctx.save();
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(MARGIN.left, MARGIN.top, plotWidth, plotHeight);
+
+      // Grid lines
+      ctx.lineWidth = 1;
+      ctx.strokeStyle = '#f0f0f0';
+
+      const xRange = xMax - xMin;
+      const yRange = yMax - yMin;
+
+      // Determine step sizes
+      const targetStepsX = Math.max(4, Math.floor(plotWidth / 80));
+      const targetStepsY = Math.max(4, Math.floor(plotHeight / 60));
+      const stepX = getNiceStep(xRange, targetStepsX);
+      const stepY = getNiceStep(yRange, targetStepsY);
+
+      // Vertical Grid Lines
+      const firstX = Math.ceil(xMin / stepX) * stepX;
+      for (let x = firstX; x <= xMax + 1e-9; x += stepX) {
+        const sx = toScreenX(x);
+        if (sx >= MARGIN.left && sx <= MARGIN.left + plotWidth) {
+          ctx.beginPath();
+          ctx.moveTo(sx, MARGIN.top);
+          ctx.lineTo(sx, MARGIN.top + plotHeight);
+          ctx.stroke();
+        }
+      }
+
+      // Horizontal Grid Lines
+      const firstY = Math.ceil(yMin / stepY) * stepY;
+      for (let y = firstY; y <= yMax + 1e-9; y += stepY) {
+        const sy = toScreenY(y);
+        if (sy >= MARGIN.top && sy <= MARGIN.top + plotHeight) {
+          ctx.beginPath();
+          ctx.moveTo(MARGIN.left, sy);
+          ctx.lineTo(MARGIN.left + plotWidth, sy);
+          ctx.stroke();
+        }
+      }
+
+      // Main Zero Axes (x = 0 and y = 0)
+      ctx.strokeStyle = '#b0b5be';
+      ctx.lineWidth = 1.25;
+
+      // y = 0 axis
+      if (yMin <= 0 && yMax >= 0) {
+        const zeroY = toScreenY(0);
+        ctx.beginPath();
+        ctx.moveTo(MARGIN.left, zeroY);
+        ctx.lineTo(MARGIN.left + plotWidth, zeroY);
+        ctx.stroke();
+      }
+
+      // x = 0 axis
+      if (xMin <= 0 && xMax >= 0) {
+        const zeroX = toScreenX(0);
+        ctx.beginPath();
+        ctx.moveTo(zeroX, MARGIN.top);
+        ctx.lineTo(zeroX, MARGIN.top + plotHeight);
+        ctx.stroke();
+      }
+
+      // Bounding box frame (as shown in the scheme)
+      ctx.strokeStyle = '#6b7280';
+      ctx.lineWidth = 1;
+      ctx.strokeRect(MARGIN.left, MARGIN.top, plotWidth, plotHeight);
+
+      // Ticks and Labels
+      ctx.fillStyle = '#1f2937';
+      ctx.font = '11px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'top';
+
+      // X-axis tick marks
+      for (let x = firstX; x <= xMax + 1e-9; x += stepX) {
+        const sx = toScreenX(x);
+        if (sx >= MARGIN.left - 1 && sx <= MARGIN.left + plotWidth + 1) {
+          // Bottom tick
+          ctx.beginPath();
+          ctx.moveTo(sx, MARGIN.top + plotHeight);
+          ctx.lineTo(sx, MARGIN.top + plotHeight + 5);
+          ctx.stroke();
+
+          // Top tick (Matlab box style)
+          ctx.beginPath();
+          ctx.moveTo(sx, MARGIN.top);
+          ctx.lineTo(sx, MARGIN.top - 5);
+          ctx.stroke();
+
+          // Label
+          const label = Math.abs(x) < 1e-9 ? '0' : (Math.round(x * 100) / 100).toString();
+          ctx.fillText(label, sx, MARGIN.top + plotHeight + 7);
+        }
+      }
+
+      // Y-axis tick marks
+      ctx.textAlign = 'right';
+      ctx.textBaseline = 'middle';
+      for (let y = firstY; y <= yMax + 1e-9; y += stepY) {
+        const sy = toScreenY(y);
+        if (sy >= MARGIN.top - 1 && sy <= MARGIN.top + plotHeight + 1) {
+          // Left tick
+          ctx.beginPath();
+          ctx.moveTo(MARGIN.left, sy);
+          ctx.lineTo(MARGIN.left - 5, sy);
+          ctx.stroke();
+
+          // Right tick
+          ctx.beginPath();
+          ctx.moveTo(MARGIN.left + plotWidth, sy);
+          ctx.lineTo(MARGIN.left + plotWidth + 5, sy);
+          ctx.stroke();
+
+          // Label
+          const label = Math.abs(y) < 1e-9 ? '0' : (Math.round(y * 100) / 100).toString();
+          ctx.fillText(label, MARGIN.left - 7, sy);
+        }
+      }
+
+      ctx.restore();
+    }
+
+    function drawPlotCurves() {
+      const fnObj = Functions[currentFunc];
+      if (!fnObj) return;
+
+      const derivatives = fnObj.derivatives(x0);
+
+      // Clip curves to plot area
+      ctx.save();
+      ctx.beginPath();
+      ctx.rect(MARGIN.left, MARGIN.top, plotWidth, plotHeight);
+      ctx.clip();
+
+      const numSamples = Math.max(300, Math.floor(plotWidth * 2));
+      const dxScreen = plotWidth / numSamples;
+
+      // 1. PLOT APPROXIMATING FUNCTION (RED CURVE)
+      ctx.beginPath();
+      ctx.strokeStyle = '#dc2626'; // vibrant red
+      ctx.lineWidth = 2.4;
+      ctx.lineJoin = 'round';
+      ctx.lineCap = 'round';
+
+      let startedRed = false;
+      for (let i = 0; i <= numSamples; i++) {
+        const sx = MARGIN.left + i * dxScreen;
+        const wx = toWorldX(sx);
+        const wy = evalTaylor(wx, x0, currentOrder, derivatives);
+
+        if (Number.isFinite(wy)) {
+          // Clamp y within generous bounds to prevent canvas overflow artifacts
+          const clampedWy = Math.max(yMin - (yMax - yMin) * 2, Math.min(yMax + (yMax - yMin) * 2, wy));
+          const sy = toScreenY(clampedWy);
+          if (!startedRed) {
+            ctx.moveTo(sx, sy);
+            startedRed = true;
+          } else {
+            ctx.lineTo(sx, sy);
+          }
+        } else {
+          startedRed = false;
+        }
+      }
+      ctx.stroke();
+
+      // 2. PLOT BASE FUNCTION (BLACK CURVE)
+      ctx.beginPath();
+      ctx.strokeStyle = '#000000';
+      ctx.lineWidth = 2.4;
+      ctx.lineJoin = 'round';
+      ctx.lineCap = 'round';
+
+      let startedBlack = false;
+      let prevWy = null;
+
+      for (let i = 0; i <= numSamples; i++) {
+        const sx = MARGIN.left + i * dxScreen;
+        const wx = toWorldX(sx);
+        let wy;
+        try {
+          wy = fnObj.f(wx);
+        } catch {
+          wy = NaN;
+        }
+
+        // Asymptote detection for tan, cot, ctanh
+        const hasAsymptoteJump = prevWy !== null && Number.isFinite(prevWy) && Number.isFinite(wy) &&
+          Math.abs(wy - prevWy) > (yMax - yMin) * 0.8 && (wy * prevWy < 0);
+
+        if (Number.isFinite(wy) && !hasAsymptoteJump) {
+          const clampedWy = Math.max(yMin - (yMax - yMin) * 2, Math.min(yMax + (yMax - yMin) * 2, wy));
+          const sy = toScreenY(clampedWy);
+          if (!startedBlack) {
+            ctx.moveTo(sx, sy);
+            startedBlack = true;
+          } else {
+            ctx.lineTo(sx, sy);
+          }
+        } else {
+          startedBlack = false;
+        }
+        prevWy = wy;
+      }
+      ctx.stroke();
+
+      ctx.restore();
+
+      // 3. DRAW VERTICAL DASHED LINE FROM RED TRIANGLE TO f(x0)
+      const sx0 = toScreenX(x0);
+      const sy0 = toScreenY(0);
+      let fx0 = fnObj.f(x0);
+      const sfx0 = toScreenY(fx0);
+
+      // Update values in panel (only update input if user is not actively typing in it)
+      if (document.activeElement !== inputX0) {
+        inputX0.value = x0.toFixed(3);
+      }
+      valFX0Display.textContent = Number.isFinite(fx0) ? fx0.toFixed(3) : 'undefined';
+
+      // Clip dashed line and markers within the horizontal boundary
+      if (sx0 >= MARGIN.left && sx0 <= MARGIN.left + plotWidth) {
+        ctx.save();
+        ctx.beginPath();
+        ctx.rect(MARGIN.left, MARGIN.top, plotWidth, plotHeight);
+        ctx.clip();
+
+        // Dashed connector
+        ctx.beginPath();
+        ctx.strokeStyle = '#111827';
+        ctx.lineWidth = 1.4;
+        ctx.setLineDash([4, 4]);
+        ctx.moveTo(sx0, sy0);
+        ctx.lineTo(sx0, sfx0);
+        ctx.stroke();
+        ctx.setLineDash([]); // reset
+
+        // Marker on the function curve at (x0, f(x0))
+        if (sfx0 >= MARGIN.top && sfx0 <= MARGIN.top + plotHeight) {
+          ctx.beginPath();
+          ctx.arc(sx0, sfx0, 3.5, 0, Math.PI * 2);
+          ctx.fillStyle = '#dc2626';
+          ctx.fill();
+          ctx.strokeStyle = '#000000';
+          ctx.lineWidth = 1.2;
+          ctx.stroke();
+        }
+
+        ctx.restore();
+
+        // Red triangle on the x-axis at (x0, 0)
+        // Upward pointing triangle with upper vertex coincident with x-axis (y = 0)
+        const triangleTopY = Math.min(Math.max(sy0, MARGIN.top), MARGIN.top + plotHeight);
+
+        ctx.save();
+        ctx.beginPath();
+        // Upper vertex coincident with x-axis line
+        ctx.moveTo(sx0, triangleTopY);
+        ctx.lineTo(sx0 - TRIANGLE_HALF_WIDTH, triangleTopY + TRIANGLE_HEIGHT);
+        ctx.lineTo(sx0 + TRIANGLE_HALF_WIDTH, triangleTopY + TRIANGLE_HEIGHT);
+        ctx.closePath();
+
+        ctx.fillStyle = '#dc2626'; // Red fill
+        ctx.fill();
+        ctx.lineWidth = 1.5;
+        ctx.strokeStyle = '#111827'; // Dark boundary
+        ctx.stroke();
+        ctx.restore();
+      }
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, cssWidth, cssHeight);
+      drawGridAndAxes();
+      drawPlotCurves();
+    }
+
+    function isInsideTriangle(sx, sy) {
+      const sx0 = toScreenX(x0);
+      const sy0 = toScreenY(0);
+      const triangleTopY = Math.min(Math.max(sy0, MARGIN.top), MARGIN.top + plotHeight);
+      const baseY = triangleTopY + TRIANGLE_HEIGHT;
+
+      // Generous hit test padding (+6px) for ease of dragging on mobile and mouse
+      const pad = 6;
+      if (sy < triangleTopY - pad || sy > baseY + pad) return false;
+      if (sx < sx0 - TRIANGLE_HALF_WIDTH - pad || sx > sx0 + TRIANGLE_HALF_WIDTH + pad) return false;
+
+      return true;
+    }
+
+    let isDraggingTriangle = false;
+    let isPanning = false;
+    let dragStartX = 0;
+    let dragStartY = 0;
+    let panOrigXMin = 0;
+    let panOrigXMax = 0;
+    let panOrigYMin = 0;
+    let panOrigYMax = 0;
+
+    function getEventPos(e) {
+      const rect = canvas.getBoundingClientRect();
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+      return {
+        x: clientX - rect.left,
+        y: clientY - rect.top,
+        clientX,
+        clientY
+      };
+    }
+
+    function onPointerDown(e) {
+      const pos = getEventPos(e);
+
+      // Check if clicked inside the red triangle
+      if (isInsideTriangle(pos.x, pos.y)) {
+        isDraggingTriangle = true;
+        canvas.style.cursor = 'ew-resize';
+        showTooltip(pos.clientX, pos.clientY, x0);
+      } else {
+        // Otherwise: rule 7 - Pan the view by clicking and dragging anywhere
+        isPanning = true;
+        dragStartX = pos.x;
+        dragStartY = pos.y;
+        panOrigXMin = xMin;
+        panOrigXMax = xMax;
+        panOrigYMin = yMin;
+        panOrigYMax = yMax;
+        canvas.style.cursor = 'grabbing';
+      }
+    }
+
+    function onPointerMove(e) {
+      const pos = getEventPos(e);
+
+      if (isDraggingTriangle) {
+        // Move triangle horizontally
+        const newWorldX = toWorldX(pos.x);
+        x0 = newWorldX;
+        showTooltip(pos.clientX, pos.clientY, x0);
+        draw();
+      } else if (isPanning) {
+        // Compute delta in world coordinates
+        const dxPixels = pos.x - dragStartX;
+        const dyPixels = pos.y - dragStartY;
+
+        const worldWidth = panOrigXMax - panOrigXMin;
+        const worldHeight = panOrigYMax - panOrigYMin;
+
+        const dxWorld = (dxPixels / plotWidth) * worldWidth;
+        const dyWorld = (dyPixels / plotHeight) * worldHeight;
+
+        xMin = panOrigXMin - dxWorld;
+        xMax = panOrigXMax - dxWorld;
+        yMin = panOrigYMin + dyWorld;
+        yMax = panOrigYMax + dyWorld;
+        draw();
+      } else {
+        // Hover state cursor update
+        if (isInsideTriangle(pos.x, pos.y)) {
+          canvas.style.cursor = 'ew-resize';
+        } else {
+          canvas.style.cursor = 'grab';
+        }
+      }
+    }
+
+    function onPointerUp() {
+      if (isDraggingTriangle || isPanning) {
+        isDraggingTriangle = false;
+        isPanning = false;
+        canvas.style.cursor = 'grab';
+        hideTooltip();
+      }
+    }
+
+    function showTooltip(clientX, clientY, val) {
+      tooltipVal.textContent = val.toFixed(3);
+      dragTooltip.style.left = `${clientX + 12}px`;
+      dragTooltip.style.top = `${clientY - 28}px`;
+      dragTooltip.classList.remove('hidden');
+    }
+
+    function hideTooltip() {
+      dragTooltip.classList.add('hidden');
+    }
+
+    function zoom(factor, centerX, centerY) {
+      if (centerX === undefined) centerX = (xMin + xMax) / 2;
+      if (centerY === undefined) centerY = (yMin + yMax) / 2;
+
+      const currentXSpan = xMax - xMin;
+      const currentYSpan = yMax - yMin;
+
+      const newXSpan = currentXSpan * factor;
+      const newYSpan = currentYSpan * factor;
+
+      // Fraction of center in span
+      const xRatio = (centerX - xMin) / currentXSpan;
+      const yRatio = (centerY - yMin) / currentYSpan;
+
+      xMin = centerX - xRatio * newXSpan;
+      xMax = xMin + newXSpan;
+      yMin = centerY - yRatio * newYSpan;
+      yMax = yMin + newYSpan;
+
+      draw();
+    }
+
+    function centerReset() {
+      xMin = DEFAULT_X_MIN;
+      xMax = DEFAULT_X_MAX;
+      yMin = DEFAULT_Y_MIN;
+      yMax = DEFAULT_Y_MAX;
+      draw();
+    }
+
+    // Zoom buttons: factor 0.8 to zoom in, 1.25 to zoom out
+    btnZoomIn.addEventListener('click', () => zoom(0.8));
+    btnZoomOut.addEventListener('click', () => zoom(1.25));
+    btnCenter.addEventListener('click', centerReset);
+
+    // Mouse wheel zoom centered on cursor
+    canvas.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      const pos = getEventPos(e);
+      const cursorWorldX = toWorldX(pos.x);
+      const cursorWorldY = toWorldY(pos.y);
+      const factor = e.deltaY > 0 ? 1.15 : 0.87;
+      zoom(factor, cursorWorldX, cursorWorldY);
+    }, { passive: false });
+
+    // Pointer events for panning and dragging
+    canvas.addEventListener('mousedown', onPointerDown);
+    window.addEventListener('mousemove', onPointerMove);
+    window.addEventListener('mouseup', onPointerUp);
+
+    // Touch events for mobile compatibility
+    canvas.addEventListener('touchstart', (e) => {
+      onPointerDown(e);
+    }, { passive: true });
+    window.addEventListener('touchmove', (e) => {
+      if (isDraggingTriangle || isPanning) {
+        onPointerMove(e);
+      }
+    }, { passive: true });
+    window.addEventListener('touchend', onPointerUp);
+
+    // Radio button changes: Functions
+    document.querySelectorAll('input[name="func"]').forEach((radio) => {
+      radio.addEventListener('change', (e) => {
+        currentFunc = e.target.value;
+        draw();
+      });
+    });
+
+    // Radio button changes: Approximation Order
+    document.querySelectorAll('input[name="order"]').forEach((radio) => {
+      radio.addEventListener('change', (e) => {
+        currentOrder = parseInt(e.target.value, 10);
+        draw();
+      });
+    });
+
+    // Keyboard input for x0
+    function updateX0FromInput() {
+      const val = parseFloat(inputX0.value);
+      if (!Number.isNaN(val) && Number.isFinite(val)) {
+        x0 = val;
+        draw();
+      }
+    }
+
+    inputX0.addEventListener('input', updateX0FromInput);
+    inputX0.addEventListener('change', () => {
+      const val = parseFloat(inputX0.value);
+      if (!Number.isNaN(val) && Number.isFinite(val)) {
+        x0 = val;
+        inputX0.value = x0.toFixed(3);
+        draw();
+      } else {
+        inputX0.value = x0.toFixed(3);
+      }
+    });
+
+    inputX0.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        inputX0.blur();
+      }
+    });
+
+    // Window resize handling
+    window.addEventListener('resize', resizeCanvas);
+
+    // Initial boot
+    window.addEventListener('load', () => {
+      resizeCanvas();
+    });
+  </script>
+</body>
+</html>
